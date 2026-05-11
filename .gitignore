@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+
+# Playwright
+playwright/.cache/
+.playwright/
+playwright-report/
+test-results/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (in case you add a build step later)
+node_modules/
+
+# Local secrets / per-machine config
+.env
+.env.local
+*.local
+
+# Backup files
+*.bak
+*.tmp
+
+# Scraper artifacts
+scraper.log
+debug-*.png
+debug-*.html
+
+# Generated dashboard backups
+dashboard.*.md.bak
