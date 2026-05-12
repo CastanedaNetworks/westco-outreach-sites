@@ -232,6 +232,222 @@ CONTENT = {
             "i'm in west covina, easy drive to pomona if you'd rather meet in person."
         ),
     },
+
+    # ============ 4. Taperjes Barber Shop (El Monte) ============
+    "taperjes-barber-shop-el-monte": {
+        "template": "landing-barbershop.html",
+        "meta_description": "Taperjes Barber Shop — Jes has been cutting hair on Valley Blvd in El Monte for years. 4.7 across 115 Google reviews. Walk-ins welcome.",
+        "brand": {
+            "50":  "#f1f2f5",
+            "100": "#d8dade",
+            "500": "#c0c5cc",
+            "600": "#989aa3",
+            "700": "#6e7077",
+            "900": "#1a1b1e",
+        },
+        "trust_badge": "4.7 · 115 Google reviews",
+        "eyebrow_kicker":      "12220 Valley Blvd · El Monte, CA · Jes since",
+        "hero_headline_part_1": "JES.",
+        "hero_headline_part_2": "EL MONTE'S BARBER.",
+        "about_kicker":        "115 reviews. one says it best.",
+        "pull_quote_text":     "Been going to Jes since I was in elementary school. Refuse to let anyone else cut my hair to this day.",
+        "pull_quote_author":   "Jason Duran",
+        "marquee_text":        "TAPERJES BARBER SHOP · EL MONTE · 12220 VALLEY BLVD · ONE CHAIR · IN AND OUT IN 20 · WALK-INS WELCOME · 4.7 ★ 115 GOOGLE REVIEWS",
+        "barbers_lineup":      "JES",
+        "visit_heading":       "On Valley Blvd. Park anywhere.",
+        "gallery_heading":     "Recent cuts.",
+        "gallery_caption":     "Photos · from the shop",
+        "gallery_label_1":     "Fade",
+        "gallery_label_2":     "Line-up",
+        "gallery_label_3":     "Beard",
+        "gallery_label_4":     "Kids' cut",
+        "gallery_label_5":     "Trim",
+        "gallery_label_6":     "Walk-in",
+        "hero_headline":       "Jes on Valley Blvd.",
+        "hero_subhead":        "One chair, one barber. Most regulars have been coming for years — some since elementary school.",
+        "value_props": [
+            ("One chair, no rotation",  "Jes cuts every head himself. Same hands every visit."),
+            ("In and out in 20",        "Most cuts run twenty minutes. That's the formula."),
+            ("Generational regulars",   "Some clients have been booking with Jes since they were kids."),
+        ],
+        "about_heading":       "On Valley Blvd. Years of regulars.",
+        "about_paragraph":     "Jes has been cutting hair on Valley Blvd long enough that some of his regulars first sat in the chair as kids. Jason Duran's been coming since elementary school. David Alvarado started before Jes had his own shop. Most customers stay forever.",
+        "about_paragraph_2":   "Jason now drives in from Ontario for his cuts. Sparta Chris calls it one of the best shops in SoCal. The reviews don't lead with the cut quality — they lead with the years.",
+        "services_heading":    "Cuts.",
+        "services_intro":      "One chair. Walk-ins fine most weekdays. Saturdays book up fast — call ahead.",
+        "services": [
+            ("Signature fade",  "Skin, low, mid, or high. Lined up clean."),
+            ("Line-up",         "Tight edges, no fuss."),
+            ("Kids' cuts",      "First haircut or fifth. Patient, no rush."),
+            ("Beard",           "Shape and clean up. Quick."),
+            ("Walk-in cut",     "In and out in 20 minutes most visits."),
+        ],
+        "reviews_heading":     "115 reviews. The years keep stacking.",
+        "visit_paragraph":     "12220 Valley Blvd, El Monte. One chair, easy in and out. Park anywhere on the block.",
+        "hours": {
+            "mon": "Closed",
+            "tue": "9:00 AM – 7:00 PM",
+            "wed": "9:00 AM – 7:00 PM",
+            "thu": "9:00 AM – 7:00 PM",
+            "fri": "9:00 AM – 7:00 PM",
+            "sat": "9:00 AM – 5:00 PM",
+            "sun": "By appointment",
+        },
+        "cta_heading":         "Pull up.",
+        "cta_body":            "Walk in any weekday. Or call (626) 582-8441 to lock a Saturday slot with Jes.",
+        "email_subject":       "built Taperjes Barber Shop a website preview",
+        "email_body": (
+            "jason's review where he said he's been getting cuts from jes since elementary school stuck with me — and that he still drives back from ontario for them. that's the whole pitch.\n\n"
+            "you're 4.7 stars across 115 Google reviews but anyone who searches Taperjes on their phone just hits a maps pin, no website.\n\n"
+            "built you a preview using your real reviews — leaning into the years-with-regulars thing: {preview_url}\n\n"
+            "if you want it live this week, i can have it up for $1,497 — text or call me at (213) 522-9136.\n\n"
+            "i'm in west covina, 15 min from el monte if you'd rather meet."
+        ),
+    },
+
+    # ============ 5. SN Barbershop (El Monte) ============
+    "sn-barbershop-el-monte": {
+        "template": "landing-barbershop.html",
+        "meta_description": "SN Barbershop on Peck Rd, El Monte. Second-generation family shop with Jesse and Julian on the chairs. 4.7 across 101 Google reviews. Cash only.",
+        "brand": {
+            "50":  "#f1f2f5",
+            "100": "#d8dade",
+            "500": "#c0c5cc",
+            "600": "#989aa3",
+            "700": "#6e7077",
+            "900": "#1a1b1e",
+        },
+        "trust_badge": "4.7 · 101 Google reviews",
+        "eyebrow_kicker":      "4705 Peck Rd · El Monte · cash only (ATM inside)",
+        "hero_headline_part_1": "JESSE. JULIAN.",
+        "hero_headline_part_2": "PECK ROAD CHAIRS.",
+        "about_kicker":        "101 reviews. one says it well.",
+        "pull_quote_text":     "Julian made my hair look even better than imagined. I wasn't sure what cut to go with so he helped me decide. It came out looking amazing.",
+        "pull_quote_author":   "Gordon Hebert",
+        "marquee_text":        "SN BARBERSHOP · EL MONTE · 4705 PECK RD · JESSE & JULIAN · CASH ONLY · ATM INSIDE · WALK-INS + APPOINTMENTS · 4.7 ★ 101 GOOGLE REVIEWS",
+        "barbers_lineup":      "JESSE · JULIAN",
+        "visit_heading":       "On Peck Road. Cash only.",
+        "gallery_heading":     "Recent cuts.",
+        "gallery_caption":     "Photos · from the shop",
+        "gallery_label_1":     "Fade",
+        "gallery_label_2":     "Line-up",
+        "gallery_label_3":     "Beard",
+        "gallery_label_4":     "Kids' cut",
+        "gallery_label_5":     "Style",
+        "gallery_label_6":     "Walk-in",
+        "hero_headline":       "SN Barbershop on Peck Rd.",
+        "hero_subhead":        "Two chairs on Peck Road. Cash only — there's an ATM in the shop. Walk in most days, or call to set a weekend slot.",
+        "value_props": [
+            ("Family business, gen two", "Started by the founder, run by his son. Same chairs, same standards."),
+            ("Two named barbers",        "Jesse and Julian both have regulars who book by name."),
+            ("Cash only, no friction",   "ATM in the shop if you forgot. No app, no card fee."),
+        ],
+        "about_heading":       "Same chairs. New generation.",
+        "about_paragraph":     "SN Barbershop's been on Peck Road for years. The founder started it, and after he passed his son kept the chairs running with the same standards. Jesse and Julian handle most of the walk-ins.",
+        "about_paragraph_2":   "Art Mendoza summed it up in his review: the son cuts just as professionally as his late father did. New regulars walk in for Julian, longtime ones stay for the continuity.",
+        "services_heading":    "Cuts.",
+        "services_intro":      "Two chairs. Walk-ins welcome most days. Weekend appointments fill fast — call Friday for Saturday.",
+        "services": [
+            ("Fade",            "Skin, low, mid, or high. Clean lines."),
+            ("Line-up",         "Hair or beard, dialed in."),
+            ("Kids' cuts",      "Patient with first timers."),
+            ("Style cut",       "Tell us what you want or ask — Julian's good with suggestions."),
+            ("Walk-in",         "Most days, no wait. Cash only — ATM in the shop."),
+        ],
+        "reviews_heading":     "101 reviews. Five stars from regulars.",
+        "visit_paragraph":     "4705 Peck Rd, El Monte. Cash only — there's an ATM inside if you forgot. Walk in most days, or call to set a weekend slot.",
+        "hours": {
+            "mon": "Closed",
+            "tue": "10:00 AM – 7:00 PM",
+            "wed": "10:00 AM – 7:00 PM",
+            "thu": "10:00 AM – 7:00 PM",
+            "fri": "10:00 AM – 7:00 PM",
+            "sat": "9:00 AM – 6:00 PM",
+            "sun": "10:00 AM – 3:00 PM",
+        },
+        "cta_heading":         "Stop by.",
+        "cta_body":            "Walk in most days. Or call (626) 454-2393 and ask for Jesse or Julian by name.",
+        "email_subject":       "built SN Barbershop a website preview",
+        "email_body": (
+            "gordon's review where he said julian made his hair look better than he imagined stuck with me — that's exactly what every guy who doesn't know what to ask for is searching for.\n\n"
+            "you're 4.7 stars across 101 Google reviews but anyone who searches SN Barbershop on their phone just hits a maps pin, no website.\n\n"
+            "built you a preview using your real reviews — kept the family-shop story front and center: {preview_url}\n\n"
+            "if you want it live this week, i can have it up for $1,497 — text or call me at (213) 522-9136.\n\n"
+            "i'm in west covina, 15 min from el monte if you'd rather meet."
+        ),
+    },
+
+    # ============ 6. Oscar Barber shop (El Monte) ============
+    "oscar-barber-shop-el-monte": {
+        "template": "landing-barbershop.html",
+        "meta_description": "Oscar Barber shop on Peck Rd, El Monte. Oscar and Gloria on the chairs — fast fades, 20-minute walk-ins. 4.7 across 79 Google reviews.",
+        "brand": {
+            "50":  "#f1f2f5",
+            "100": "#d8dade",
+            "500": "#c0c5cc",
+            "600": "#989aa3",
+            "700": "#6e7077",
+            "900": "#1a1b1e",
+        },
+        "trust_badge": "4.7 · 79 Google reviews",
+        "eyebrow_kicker":      "4356 Peck Rd · El Monte, CA · fast walk-ins",
+        "hero_headline_part_1": "FADES IN 20.",
+        "hero_headline_part_2": "OSCAR ON PECK ROAD.",
+        "about_kicker":        "79 reviews. one was specific.",
+        "pull_quote_text":     "Im in and out within 20 minutes, ready for another 10,000 miles. No time wasted. Thank you Oscar.",
+        "pull_quote_author":   "BL UE",
+        "marquee_text":        "OSCAR BARBER SHOP · EL MONTE · 4356 PECK RD · OSCAR + GLORIA · FAST WALK-INS · FADES IN 20 · 4.7 ★ 79 GOOGLE REVIEWS",
+        "barbers_lineup":      "OSCAR · GLORIA",
+        "visit_heading":       "On Peck Road. Walk in.",
+        "gallery_heading":     "Recent cuts.",
+        "gallery_caption":     "Photos · from the shop",
+        "gallery_label_1":     "Fade",
+        "gallery_label_2":     "Line-up",
+        "gallery_label_3":     "Beard",
+        "gallery_label_4":     "Kids' cut",
+        "gallery_label_5":     "Quick cut",
+        "gallery_label_6":     "Walk-in",
+        "hero_headline":       "Fades in 20 — Oscar on Peck Road.",
+        "hero_subhead":        "Two chairs on Peck Road. Walk in any weekday, in and out in twenty minutes, ready for the rest of your week.",
+        "value_props": [
+            ("In and out in 20",        "Most cuts run twenty minutes. No appointment usually needed."),
+            ("Oscar and Gloria",        "Two barbers, both regulars favorites. Mister Felix drives back from out of the area for his cuts."),
+            ("Rock-bottom prices",      "Reviews mention it more than the cuts themselves."),
+        ],
+        "about_heading":       "Two chairs. Twenty minutes.",
+        "about_paragraph":     "Oscar runs the shop on Peck Road. Gloria's there most days too, on the second chair. Most cuts wrap in twenty minutes start to finish.",
+        "about_paragraph_2":   "Mister Felix moved out of the area years ago and still drives back for his cuts. The reviews mention the speed as often as the quality — that's the brand.",
+        "services_heading":    "Cuts.",
+        "services_intro":      "Two chairs, fast turnover. Walk in any weekday. Call to check weekend hours.",
+        "services": [
+            ("Fade",            "Skin to high. Quick clean work."),
+            ("Line-up",         "Sharp edges, no waiting."),
+            ("Kids' cuts",      "In and out. Easy for first-timers."),
+            ("Beard",           "Shape, line up, done."),
+            ("Walk-in cut",     "Twenty minutes start to finish, most visits."),
+        ],
+        "reviews_heading":     "79 reviews. Most say one thing — fast.",
+        "visit_paragraph":     "4356 Peck Rd, El Monte. Two chairs, walk in any weekday. Parking out front, in and out in twenty.",
+        "hours": {
+            "mon": "Closed",
+            "tue": "9:00 AM – 6:00 PM",
+            "wed": "9:00 AM – 6:00 PM",
+            "thu": "9:00 AM – 6:00 PM",
+            "fri": "9:00 AM – 6:00 PM",
+            "sat": "9:00 AM – 5:00 PM",
+            "sun": "Closed",
+        },
+        "cta_heading":         "Walk in.",
+        "cta_body":            "Pull up any weekday. Or call (626) 221-2140 to confirm weekend hours.",
+        "email_subject":       "built Oscar Barber shop a website preview",
+        "email_body": (
+            "the review from bl ue where they said they're 'in and out in 20 minutes, ready for another 10,000 miles' — that's such a specific way to describe the shop, it made me want to drive over.\n\n"
+            "you're 4.7 stars across 79 Google reviews but anyone who searches Oscar Barber shop on their phone just hits a maps pin, no website.\n\n"
+            "built you a preview using your real reviews — leaned into the fast-cuts thing: {preview_url}\n\n"
+            "if you want it live this week, i can have it up for $1,497 — text or call me at (213) 522-9136.\n\n"
+            "i'm in west covina, 15 min from el monte if you'd rather meet."
+        ),
+    },
 }
 
 
