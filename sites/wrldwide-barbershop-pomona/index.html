@@ -4,17 +4,17 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>WRLDWIDE BARBERSHOP — Pomona, CA</title>
-<meta name="description" content="WRLDWIDE BARBERSHOP — Pomona's most-booked chair. 5.0 stars across 443 reviews. Walk-ins welcome, sharp fades, family vibes on Indian Hill Blvd." />
+<meta name="description" content="WRLDWIDE BARBERSHOP — Pomona's most-booked chair. 5.0 stars across 443 reviews. Open 7 days. Walk-ins + appointments on Indian Hill Blvd." />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/wrldwide-barbershop-pomona/" />
 
 <meta property="og:title" content="WRLDWIDE BARBERSHOP" />
-<meta property="og:description" content="WRLDWIDE BARBERSHOP — Pomona's most-booked chair. 5.0 stars across 443 reviews. Walk-ins welcome, sharp fades, family vibes on Indian Hill Blvd." />
+<meta property="og:description" content="WRLDWIDE BARBERSHOP — Pomona's most-booked chair. 5.0 stars across 443 reviews. Open 7 days. Walk-ins + appointments on Indian Hill Blvd." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://castanedanetworks.github.io/westco-outreach-sites/sites/wrldwide-barbershop-pomona/" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -23,7 +23,7 @@
       extend: {
         fontFamily: {
           sans:    ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+          display: ['"Big Shoulders Display"', 'Impact', '"Arial Narrow"', 'sans-serif'],
           mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
         },
         colors: {
@@ -47,15 +47,16 @@
 
 <style>
   :root {
-    --brand-50:  #fef2f2;
-    --brand-100: #fde6e7;
-    --brand-500: #dc2626;
-    --brand-600: #b91c1c;
-    --brand-700: #991b1b;
-    --brand-900: #450a0a;
+    --brand-50:  #f5f3ff;
+    --brand-100: #ede9fe;
+    --brand-500: #8b5cf6;
+    --brand-600: #7c3aed;
+    --brand-700: #6d28d9;
+    --brand-900: #2e1065;
   }
   html { scroll-behavior: smooth; background: #0a0a0a; }
   body { background: #0a0a0a; color: #f4f1ea; overflow-x: hidden; }
+  .font-display { font-weight: 800; }   /* Big Shoulders Display needs an explicit heavy weight */
 
   /* Subtle film-grain texture overlay */
   .grain::before {
@@ -103,10 +104,11 @@
   /* Editorial pull quote — oversized opening glyph */
   .pull-quote::before {
     content: "“";
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Big Shoulders Display', Impact, sans-serif;
+    font-weight: 900;
     color: var(--brand-500);
-    font-size: 4.5rem; line-height: 0.5;
-    display: block; margin-bottom: 0.75rem;
+    font-size: 4.5rem; line-height: 0.6;
+    display: block; margin-bottom: 0.5rem;
   }
   @media (min-width: 640px) {
     .pull-quote::before { font-size: 7rem; margin-bottom: 1rem; }
@@ -130,8 +132,8 @@
 <!-- ============ Top marquee ticker ============ -->
 <div class="border-b border-chalk/10 bg-night overflow-hidden">
   <div class="marquee-track py-3 font-mono text-[11px] uppercase tracking-[0.25em] text-chalk/55">
-    <span>SHARP FADES · LINE-UPS · BEARDS · KIDS' CUTS · HOT TOWEL SHAVES · WALK-INS WELCOME · POMONA, CA · INDIAN HILL BLVD · 5.0 ★ ON GOOGLE</span>
-    <span aria-hidden="true">SHARP FADES · LINE-UPS · BEARDS · KIDS' CUTS · HOT TOWEL SHAVES · WALK-INS WELCOME · POMONA, CA · INDIAN HILL BLVD · 5.0 ★ ON GOOGLE</span>
+    <span>WRLDWIDE BARBERSHOP · POMONA · @WRLDWIDEBARBERSHOP · OPEN 7 DAYS · WALK-INS + APPOINTMENTS · SHARP FADES · LINE-UPS · BEARDS · KIDS' CUTS · 5.0 ★ ON GOOGLE</span>
+    <span aria-hidden="true">WRLDWIDE BARBERSHOP · POMONA · @WRLDWIDEBARBERSHOP · OPEN 7 DAYS · WALK-INS + APPOINTMENTS · SHARP FADES · LINE-UPS · BEARDS · KIDS' CUTS · 5.0 ★ ON GOOGLE</span>
   </div>
 </div>
 
@@ -139,11 +141,30 @@
 <header class="sticky top-0 z-40 backdrop-blur bg-night/85 border-b border-chalk/10">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
     <a href="#top" class="flex items-center gap-3">
-      <!-- Barber-pole mark -->
-      <span class="relative inline-block w-3 h-7 rounded-sm overflow-hidden ring-1 ring-chalk/20">
-        <span class="absolute inset-0" style="background: repeating-linear-gradient(135deg, #c2342f 0 6px, #f4f1ea 6px 12px, #1d4ed8 12px 18px);"></span>
-      </span>
-      <span class="font-display text-xl tracking-[0.05em]">WRLDWIDE BARBERSHOP</span>
+      <!-- Circular emblem — text-on-path wordmark + globe -->
+      <svg viewBox="0 0 200 200" class="w-9 h-9 text-chalk" aria-hidden="true">
+        <defs>
+          <path id="emblemTop"    d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
+          <path id="emblemBottom" d="M 28,100 A 72,72 0 0,0 172,100" fill="none"/>
+        </defs>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+        <text font-family="'Big Shoulders Display', Impact, sans-serif" font-weight="900" font-size="22" letter-spacing="3.5" fill="currentColor">
+          <textPath href="#emblemTop" startOffset="50%" text-anchor="middle">WRLDWIDE BARBERSHOP</textPath>
+        </text>
+        <text font-family="'Big Shoulders Display', Impact, sans-serif" font-weight="700" font-size="15" letter-spacing="6" fill="currentColor">
+          <textPath href="#emblemBottom" startOffset="50%" text-anchor="middle">★ POMONA · CA ★</textPath>
+        </text>
+        <!-- Globe in center -->
+        <g transform="translate(100,100)" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+          <circle r="26"/>
+          <ellipse rx="26" ry="10"/>
+          <line x1="-26" y1="0" x2="26" y2="0"/>
+          <path d="M -22,-14 Q 0,-30 22,-14"/>
+          <path d="M -22, 14 Q 0, 30 22, 14"/>
+        </g>
+      </svg>
+      <span class="font-display font-extrabold text-xl tracking-[0.04em] uppercase">WRLDWIDE BARBERSHOP</span>
     </a>
     <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-chalk/65 font-medium">
       <a href="#about"    class="hover:text-chalk transition">The shop</a>
@@ -168,7 +189,7 @@
 
   <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-20 sm:pt-28 sm:pb-32">
     <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500 mb-7">
-      Est. Indian Hill Blvd · Pomona, CA
+      @wrldwidebarbershop · Indian Hill Blvd · Pomona, CA
     </p>
 
     <h1 class="font-display tracking-[0.01em] leading-[0.88] sm:leading-[0.86] text-[clamp(2.4rem,10vw,9.5rem)] break-words">
@@ -239,7 +260,7 @@
         <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">The cuts</p>
         <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">What we do.</h2>
       </div>
-      <p class="max-w-sm text-chalk/55 text-sm leading-relaxed">Five chairs running most of the week. Walk-ins are fine, but Saturdays book up — call ahead if you want a specific barber.</p>
+      <p class="max-w-sm text-chalk/55 text-sm leading-relaxed">Open 7 days, walk-ins welcome. Saturdays book up early — call ahead if you want a specific barber.</p>
     </div>
 
     <ul class="pricelist text-xl sm:text-3xl font-display tracking-[0.01em]">
@@ -437,7 +458,7 @@
     <div class="lg:col-span-7">
       <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">Visit</p>
       <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">On Indian Hill. Next to Tierra Mia.</h2>
-      <p class="mt-8 text-chalk/70 text-lg leading-relaxed max-w-xl">Indian Hill Blvd in Pomona, right next to Tierra Mia. Easy parking out front, easy in and out.</p>
+      <p class="mt-8 text-chalk/70 text-lg leading-relaxed max-w-xl">Indian Hill Blvd in Pomona, right next to Tierra Mia. Open 7 days — walk-ins and appointments both welcome.</p>
 
       <div class="mt-10 grid sm:grid-cols-2 gap-8">
         <div>
@@ -456,7 +477,7 @@
       <div class="border border-chalk/15 rounded-sm p-7">
         <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45 mb-5">Hours</p>
         <dl class="space-y-2.5 font-display text-xl tracking-[0.02em]">
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Mon</dt><dd>Closed</dd></div>
+          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Mon</dt><dd>10:00 AM – 7:00 PM</dd></div>
           <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Tue</dt><dd>10:00 AM – 7:00 PM</dd></div>
           <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Wed</dt><dd>10:00 AM – 7:00 PM</dd></div>
           <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Thu</dt><dd>10:00 AM – 7:00 PM</dd></div>
