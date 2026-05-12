@@ -58,8 +58,8 @@ CONTENT = {
         "trust_badge": "5.0 · 443 Google reviews",
         # barbershop template — split hero, kickers, pull quote, marquee, barbers
         "eyebrow_kicker":      "@wrldwidebarbershop · 596 Indian Hill Blvd · Pomona, CA",
-        "hero_headline_part_1": "ALEX. ERIK. CHUY.",
-        "hero_headline_part_2": "POMONA'S CHAIR.",
+        "hero_headline_part_1": "SHARP FADES.",
+        "hero_headline_part_2": "REAL FAMILY ENERGY.",
         "about_kicker":        "443 reviews. one stuck out.",
         "pull_quote_text":     "Fire cuts, real family energy in the shop, and a perfect spot right next to Tierra Mia. Easily the best barbershop in Pomona.",
         "pull_quote_author":   "Owen Brown",
