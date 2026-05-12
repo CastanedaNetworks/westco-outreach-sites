@@ -55,8 +55,9 @@ while IFS= read -r line; do
 done < <(git status --porcelain --untracked-files=all sites/ | awk '/^(\?\?|A )/ {sub("^.. ", "", $0); print}' \
          | awk -F/ '/^sites\// && $2 != "" {print $2}' | sort -u)
 
-# Stage
-git add sites/ data/prospects.csv dashboard.md 2>/dev/null || true
+# Stage. We include templates/ and scripts/ so iterative design + scraper work
+# doesn't sit untracked across deploys (this hit us once already).
+git add sites/ data/prospects.csv dashboard.md templates/ scripts/ docs/ 2>/dev/null || true
 
 if git diff --cached --quiet; then
   echo "Nothing to deploy — no staged changes."

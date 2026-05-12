@@ -67,8 +67,9 @@ foreach ($line in $statusLines) {
 }
 $newSites = $newSites | Sort-Object -Unique
 
-# Stage
-& git add sites/ data/prospects.csv dashboard.md 2>$null | Out-Null
+# Stage. We include templates/ and scripts/ so iterative design + scraper work
+# doesn't sit untracked across deploys (this hit us once already).
+& git add sites/ data/prospects.csv dashboard.md templates/ scripts/ docs/ 2>$null | Out-Null
 
 # Bail out if nothing staged
 $cached = & git diff --cached --name-only
