@@ -47,16 +47,25 @@
 
 <style>
   :root {
-    --brand-50:  #f5f3ff;
-    --brand-100: #ede9fe;
-    --brand-500: #8b5cf6;
-    --brand-600: #7c3aed;
-    --brand-700: #6d28d9;
-    --brand-900: #2e1065;
+    --brand-50:  #f1f2f5;
+    --brand-100: #d8dade;
+    --brand-500: #c0c5cc;
+    --brand-600: #989aa3;
+    --brand-700: #6e7077;
+    --brand-900: #1a1b1e;
   }
   html { scroll-behavior: smooth; background: #0a0a0a; }
   body { background: #0a0a0a; color: #f4f1ea; overflow-x: hidden; }
   .font-display { font-weight: 800; }   /* Big Shoulders Display needs an explicit heavy weight */
+
+  /* Brushed-chrome effect for display headlines — pulls light/shadow across the type */
+  .chrome {
+    background: linear-gradient(180deg, #f6f6f9 0%, #c8ccd3 38%, #6e7077 52%, #b0b4bc 64%, #f6f6f9 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 
   /* Subtle film-grain texture overlay */
   .grain::before {
@@ -173,7 +182,7 @@
       <a href="#visit"    class="hover:text-chalk transition">Visit</a>
     </nav>
     <a href="tel:+19097668039"
-       class="inline-flex items-center gap-2 rounded-sm bg-brand-600 text-chalk text-xs uppercase tracking-[0.18em] font-semibold px-4 py-2.5 hover:bg-brand-700 transition">
+       class="inline-flex items-center gap-2 rounded-sm bg-chalk text-night text-xs uppercase tracking-[0.2em] font-bold px-4 py-2.5 hover:bg-brand-700 hover:text-chalk transition">
       <span class="hidden sm:inline">Book a chair</span>
       <span class="sm:hidden">Call</span>
     </a>
@@ -194,7 +203,7 @@
 
     <h1 class="font-display tracking-[0.01em] leading-[0.88] sm:leading-[0.86] text-[clamp(2.4rem,10vw,9.5rem)] break-words">
       SHARP FADES.<br/>
-      <span style="color: var(--brand-500);">REAL FAMILY ENERGY.</span>
+      <span class="chrome">REAL FAMILY ENERGY.</span>
     </h1>
 
     <div class="mt-10 grid lg:grid-cols-12 gap-10 items-end">
@@ -317,7 +326,7 @@
 
       <figure class="relative aspect-square overflow-hidden border border-chalk/12">
         <div class="absolute inset-0 bg-gradient-to-br from-coal to-night"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(220,38,38,0.06) 0 6px, transparent 6px 14px);"></div>
+        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(200,205,215,0.07) 0 6px, transparent 6px 14px);"></div>
         <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
         <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">01</span>
         <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
@@ -328,7 +337,7 @@
 
       <figure class="relative aspect-square overflow-hidden border border-chalk/12">
         <div class="absolute inset-0 bg-gradient-to-tr from-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(220,38,38,0.05) 0 6px, transparent 6px 14px);"></div>
+        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(200,205,215,0.06) 0 6px, transparent 6px 14px);"></div>
         <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
         <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">02</span>
         <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
@@ -339,7 +348,7 @@
 
       <figure class="relative aspect-square overflow-hidden border border-chalk/12">
         <div class="absolute inset-0 bg-gradient-to-bl from-coal via-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(220,38,38,0.07) 0 6px, transparent 6px 14px);"></div>
+        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(200,205,215,0.08) 0 6px, transparent 6px 14px);"></div>
         <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
         <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">03</span>
         <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
@@ -350,7 +359,7 @@
 
       <figure class="relative aspect-square overflow-hidden border border-chalk/12">
         <div class="absolute inset-0 bg-gradient-to-tl from-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(220,38,38,0.05) 0 6px, transparent 6px 14px);"></div>
+        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(200,205,215,0.06) 0 6px, transparent 6px 14px);"></div>
         <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
         <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">04</span>
         <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
@@ -361,7 +370,7 @@
 
       <figure class="relative aspect-square overflow-hidden border border-chalk/12">
         <div class="absolute inset-0 bg-gradient-to-br from-coal to-night"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(220,38,38,0.06) 0 6px, transparent 6px 14px);"></div>
+        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(200,205,215,0.07) 0 6px, transparent 6px 14px);"></div>
         <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
         <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">05</span>
         <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
@@ -372,7 +381,7 @@
 
       <figure class="relative aspect-square overflow-hidden border border-chalk/12">
         <div class="absolute inset-0 bg-gradient-to-tr from-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(220,38,38,0.07) 0 6px, transparent 6px 14px);"></div>
+        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(200,205,215,0.07) 0 6px, transparent 6px 14px);"></div>
         <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
         <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">06</span>
         <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
