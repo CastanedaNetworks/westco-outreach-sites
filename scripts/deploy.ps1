@@ -48,16 +48,19 @@ if ($ghUser -and $ghRepo) {
     }
 }
 
-# Detect newly added site subdirectories from git status (untracked or added)
+# Detect newly added site subdirectories. `git status --porcelain` collapses
+# untracked directories to the parent, so we ask for --untracked-files=all to
+# recurse into them. We then keep only entries whose second path segment is
+# non-empty (skips the bare `sites/` parent).
 $newSites = @()
-$statusLines = & git status --porcelain sites/ 2>$null
+$statusLines = & git status --porcelain --untracked-files=all sites/ 2>$null
 foreach ($line in $statusLines) {
     if (-not $line) { continue }
     $code = $line.Substring(0, 2)
     $path = $line.Substring(3)
     if ($code -match '^\?\?' -or $code -match '^A ') {
         $parts = $path -split '/'
-        if ($parts.Length -ge 2 -and $parts[0] -eq 'sites') {
+        if ($parts.Length -ge 2 -and $parts[0] -eq 'sites' -and $parts[1]) {
             $newSites += $parts[1]
         }
     }

@@ -45,12 +45,15 @@ if [[ -n "$GH_USER" && -n "$GH_REPO" ]]; then
 fi
 
 # Find new site dirs (untracked or added since last commit on this branch).
+# --untracked-files=all forces git to recurse into new directories instead of
+# collapsing them to the bare `sites/` parent; the trailing awk filter then
+# rejects empty slugs.
 NEW_SITES=()
 while IFS= read -r line; do
   [[ -z "$line" ]] && continue
   NEW_SITES+=("$line")
-done < <(git status --porcelain sites/ | awk '/^(\?\?|A )/ {sub("^.. ", "", $0); print}' \
-         | awk -F/ '/^sites\// {print $2}' | sort -u)
+done < <(git status --porcelain --untracked-files=all sites/ | awk '/^(\?\?|A )/ {sub("^.. ", "", $0); print}' \
+         | awk -F/ '/^sites\// && $2 != "" {print $2}' | sort -u)
 
 # Stage
 git add sites/ data/prospects.csv dashboard.md 2>/dev/null || true
