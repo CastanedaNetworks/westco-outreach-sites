@@ -234,47 +234,51 @@ CONTENT = {
     },
 
     # ============ 4. Taperjes Barber Shop (El Monte) ============
+    # Per Jes's IG (@taperjesbarbershop, 9.7K followers): bright red walls in
+    # the shop, red capes printed with the wordmark, "Best of El Monte
+    # Barber Shop 2025" via BusinessRate, $35 appointments, open all 7 days.
     "taperjes-barber-shop-el-monte": {
         "template": "landing-barbershop.html",
-        "meta_description": "Taperjes Barber Shop — Jes has been cutting hair on Valley Blvd in El Monte for years. 4.7 across 115 Google reviews. Walk-ins welcome.",
+        "meta_description": "Taper Jes Barber Shop — Best of El Monte 2025. $35 appointments, walk-ins welcome, open every day on Valley Blvd. 4.7 across 115 Google reviews.",
         "brand": {
-            "50":  "#f1f2f5",
-            "100": "#d8dade",
-            "500": "#c0c5cc",
-            "600": "#989aa3",
-            "700": "#6e7077",
-            "900": "#1a1b1e",
+            # Red walls + red capes — pulled from his IG. Saturated, warm.
+            "50":  "#fdf2f3",
+            "100": "#fbe0e2",
+            "500": "#c8252a",
+            "600": "#a01d22",
+            "700": "#7c1418",
+            "900": "#380a0c",
         },
-        "trust_badge": "4.7 · 115 Google reviews",
-        "eyebrow_kicker":      "12220 Valley Blvd · El Monte, CA · Jes since",
-        "hero_headline_part_1": "JES.",
-        "hero_headline_part_2": "EL MONTE'S BARBER.",
-        "about_kicker":        "115 reviews. one says it best.",
+        "trust_badge":         "4.7 · 115 Google · Best of El Monte 2025",
+        "eyebrow_kicker":      "@taperjesbarbershop · 12220 Valley Blvd · $35 appointments · open daily",
+        "hero_headline_part_1": "RED WALLS.",
+        "hero_headline_part_2": "JES'S CHAIR.",
+        "about_kicker":        "Best of El Monte Barber Shop · 2025",
         "pull_quote_text":     "Been going to Jes since I was in elementary school. Refuse to let anyone else cut my hair to this day.",
         "pull_quote_author":   "Jason Duran",
-        "marquee_text":        "TAPERJES BARBER SHOP · EL MONTE · 12220 VALLEY BLVD · ONE CHAIR · IN AND OUT IN 20 · WALK-INS WELCOME · 4.7 ★ 115 GOOGLE REVIEWS",
+        "marquee_text":        "TAPER JES BARBER SHOP · EL MONTE · @TAPERJESBARBERSHOP · BEST OF EL MONTE 2025 · $35 APPOINTMENTS · 12220 VALLEY BLVD · OPEN EVERY DAY · 4.7 ★ 115 GOOGLE",
         "barbers_lineup":      "JES",
-        "visit_heading":       "On Valley Blvd. Park anywhere.",
+        "visit_heading":       "Valley Blvd. You can't miss the red walls.",
         "gallery_heading":     "Recent cuts.",
-        "gallery_caption":     "Photos · from the shop",
+        "gallery_caption":     "Photos · @taperjesbarbershop",
         "gallery_label_1":     "Fade",
         "gallery_label_2":     "Line-up",
         "gallery_label_3":     "Beard",
         "gallery_label_4":     "Kids' cut",
         "gallery_label_5":     "Trim",
         "gallery_label_6":     "Walk-in",
-        "hero_headline":       "Jes on Valley Blvd.",
-        "hero_subhead":        "One chair, one barber. Most regulars have been coming for years — some since elementary school.",
+        "hero_headline":       "Red walls. Jes's chair.",
+        "hero_subhead":        "Red walls, red capes, one barber. $35 appointments, walk-ins welcome, open every day on Valley Blvd. Voted Best of El Monte Barber Shop 2025.",
         "value_props": [
-            ("One chair, no rotation",  "Jes cuts every head himself. Same hands every visit."),
-            ("In and out in 20",        "Most cuts run twenty minutes. That's the formula."),
-            ("Generational regulars",   "Some clients have been booking with Jes since they were kids."),
+            ("Best of El Monte 2025",     "Voted top barber shop in El Monte by BusinessRate — and the regulars predicted it for years."),
+            ("$35 appointments",          "Set the time, walk in, walk out. Flat pricing, no surprises."),
+            ("Generational regulars",     "Jason Duran's been coming since elementary school. David Alvarado started before Jes had his own shop."),
         ],
-        "about_heading":       "On Valley Blvd. Years of regulars.",
-        "about_paragraph":     "Jes has been cutting hair on Valley Blvd long enough that some of his regulars first sat in the chair as kids. Jason Duran's been coming since elementary school. David Alvarado started before Jes had his own shop. Most customers stay forever.",
-        "about_paragraph_2":   "Jason now drives in from Ontario for his cuts. Sparta Chris calls it one of the best shops in SoCal. The reviews don't lead with the cut quality — they lead with the years.",
+        "about_heading":       "Red walls. Years of regulars.",
+        "about_paragraph":     "Jes has been cutting hair on Valley Blvd long enough that some of his regulars first sat in the chair as kids. Jason Duran's been coming since elementary school. David Alvarado started before Jes had his own shop. Now Jason drives in from Ontario for his cuts.",
+        "about_paragraph_2":   "BusinessRate named Taper Jes the Best of El Monte Barber Shop for 2025. The reviews don't lead with the cut quality — they lead with the years.",
         "services_heading":    "Cuts.",
-        "services_intro":      "One chair. Walk-ins fine most weekdays. Saturdays book up fast — call ahead.",
+        "services_intro":      "One chair. $35 appointments, walk-ins fine most weekdays. Open every day — Saturdays and Sundays start at 7 AM.",
         "services": [
             ("Signature fade",  "Skin, low, mid, or high. Lined up clean."),
             ("Line-up",         "Tight edges, no fuss."),
@@ -282,24 +286,25 @@ CONTENT = {
             ("Beard",           "Shape and clean up. Quick."),
             ("Walk-in cut",     "In and out in 20 minutes most visits."),
         ],
-        "reviews_heading":     "115 reviews. The years keep stacking.",
-        "visit_paragraph":     "12220 Valley Blvd, El Monte. One chair, easy in and out. Park anywhere on the block.",
+        "reviews_heading":     "115 reviews. Years of regulars.",
+        "visit_paragraph":     "12220 Valley Blvd, El Monte — the red walls and red capes mean you can't miss it. Open every day. Walk in any time, or text to lock an appointment.",
         "hours": {
-            "mon": "Closed",
-            "tue": "9:00 AM – 7:00 PM",
-            "wed": "9:00 AM – 7:00 PM",
-            "thu": "9:00 AM – 7:00 PM",
-            "fri": "9:00 AM – 7:00 PM",
-            "sat": "9:00 AM – 5:00 PM",
-            "sun": "By appointment",
+            # Real hours pulled from his IG bio
+            "mon": "8:00 AM – 7:00 PM",
+            "tue": "8:00 AM – 7:00 PM",
+            "wed": "8:00 AM – 7:00 PM",
+            "thu": "8:00 AM – 7:00 PM",
+            "fri": "8:00 AM – 7:00 PM",
+            "sat": "7:00 AM – 7:00 PM",
+            "sun": "7:00 AM – 4:00 PM",
         },
         "cta_heading":         "Pull up.",
-        "cta_body":            "Walk in any weekday. Or call (626) 582-8441 to lock a Saturday slot with Jes.",
-        "email_subject":       "built Taperjes Barber Shop a website preview",
+        "cta_body":            "Walk in any day, or text (626) 582-8441 to lock a $35 appointment with Jes.",
+        "email_subject":       "built Taper Jes Barber Shop a website preview",
         "email_body": (
-            "jason's review where he said he's been getting cuts from jes since elementary school stuck with me — and that he still drives back from ontario for them. that's the whole pitch.\n\n"
-            "you're 4.7 stars across 115 Google reviews but anyone who searches Taperjes on their phone just hits a maps pin, no website.\n\n"
-            "built you a preview using your real reviews — leaning into the years-with-regulars thing: {preview_url}\n\n"
+            "jason's review where he said he's been getting cuts from jes since elementary school stuck with me — and that he still drives back from ontario for them. that kind of loyalty is the whole pitch.\n\n"
+            "you're 4.7 stars and Best of El Monte 2025 but anyone who searches Taper Jes on their phone just hits a maps pin, no website. your instagram does the heavy lifting alone.\n\n"
+            "built you a preview using your real reviews and the red-walls vibe from your feed: {preview_url}\n\n"
             "if you want it live this week, i can have it up for $1,497 — text or call me at (213) 522-9136.\n\n"
             "i'm in west covina, 15 min from el monte if you'd rather meet."
         ),

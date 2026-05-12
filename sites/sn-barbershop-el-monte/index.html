@@ -58,9 +58,16 @@
   body { background: #0a0a0a; color: #f4f1ea; overflow-x: hidden; }
   .font-display { font-weight: 800; }   /* Big Shoulders Display needs an explicit heavy weight */
 
-  /* Brushed-chrome effect for display headlines — pulls light/shadow across the type */
+  /* Brushed effect for display headlines — pulls light/shadow across the type.
+     Driven by brand-* vars so each prospect's palette colors the gradient
+     (silver palette → chrome; red palette → enamel-red; etc.) */
   .chrome {
-    background: linear-gradient(180deg, #f6f6f9 0%, #c8ccd3 38%, #6e7077 52%, #b0b4bc 64%, #f6f6f9 100%);
+    background: linear-gradient(180deg,
+      var(--brand-50)  0%,
+      var(--brand-500) 38%,
+      var(--brand-700) 52%,
+      var(--brand-500) 64%,
+      var(--brand-50)  100%);
     -webkit-background-clip: text;
             background-clip: text;
     color: transparent;
