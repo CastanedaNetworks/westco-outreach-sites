@@ -7,26 +7,24 @@
 <meta name="description" content="serenity pet grooming — Pomona dog and pet grooming on Phillips Blvd. 4.8 stars on Google, gentle with anxious dogs, next-day appointments available." />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/serenity-pet-grooming-pomona/" />
 
-<!-- Open Graph -->
 <meta property="og:title" content="serenity pet grooming" />
 <meta property="og:description" content="serenity pet grooming — Pomona dog and pet grooming on Phillips Blvd. 4.8 stars on Google, gentle with anxious dogs, next-day appointments available." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://castanedanetworks.github.io/westco-outreach-sites/sites/serenity-pet-grooming-pomona/" />
 
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
 
-<!-- Tailwind via CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
         fontFamily: {
-          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           display: ['Fraunces', 'Georgia', 'serif'],
+          hand: ['Caveat', 'Brush Script MT', 'cursive'],
         },
         colors: {
           brand: {
@@ -37,10 +35,10 @@
             700: 'var(--brand-700)',
             900: 'var(--brand-900)',
           },
-          ink: '#0b0d10',
-        },
-        boxShadow: {
-          card: '0 1px 2px rgba(11,13,16,.04), 0 12px 32px -16px rgba(11,13,16,.18)',
+          ink: '#2a2520',
+          paper: '#faf6f0',
+          paperDark: '#efe9dd',
+          terracotta: { 500: '#c97b5e', 700: '#a85a3d' },
         },
       },
     },
@@ -49,24 +47,85 @@
 
 <style>
   :root {
-    /* Accent color — override per-prospect by changing these six vars. */
-    --brand-50:  #ecfdf5;
-    --brand-100: #d1fae5;
-    --brand-500: #10b981;
-    --brand-600: #059669;
-    --brand-700: #047857;
-    --brand-900: #022c22;
+    --brand-50:  #eef3ed;
+    --brand-100: #dbe7d9;
+    --brand-500: #6b8f6b;
+    --brand-600: #557455;
+    --brand-700: #3f5a3f;
+    --brand-900: #1f2e1f;
   }
-  html { scroll-behavior: smooth; }
-  body { font-feature-settings: "ss01","cv11"; }
-  .grain {
-    background-image: radial-gradient(rgba(11,13,16,0.05) 1px, transparent 1px);
-    background-size: 3px 3px;
+  html { scroll-behavior: smooth; background: #faf6f0; }
+  body { font-feature-settings: "ss01","cv11"; background: #faf6f0; }
+
+  /* Subtle paw-print background, used in select sections */
+  .paws-bg {
+    background-color: #f4eede;
+    background-image:
+      radial-gradient(circle at 8% 22%, rgba(107,143,107,.12) 0 6px, transparent 7px),
+      radial-gradient(circle at 6% 18%, rgba(107,143,107,.12) 0 3px, transparent 4px),
+      radial-gradient(circle at 10% 18%, rgba(107,143,107,.12) 0 3px, transparent 4px),
+      radial-gradient(circle at 7% 26%, rgba(107,143,107,.12) 0 3px, transparent 4px),
+      radial-gradient(circle at 9% 26%, rgba(107,143,107,.12) 0 3px, transparent 4px),
+      radial-gradient(circle at 58% 72%, rgba(107,143,107,.10) 0 6px, transparent 7px),
+      radial-gradient(circle at 56% 68%, rgba(107,143,107,.10) 0 3px, transparent 4px),
+      radial-gradient(circle at 60% 68%, rgba(107,143,107,.10) 0 3px, transparent 4px),
+      radial-gradient(circle at 57% 76%, rgba(107,143,107,.10) 0 3px, transparent 4px),
+      radial-gradient(circle at 59% 76%, rgba(107,143,107,.10) 0 3px, transparent 4px);
+    background-size: 480px 360px;
   }
-  .ring-soft { box-shadow: inset 0 0 0 1px rgba(11,13,16,0.06); }
+
+  /* Polaroid (used for hero photo slot + review cards) */
+  .polaroid {
+    background: #ffffff;
+    padding: 14px 14px 56px 14px;
+    box-shadow:
+      0 1px 2px rgba(42,37,32,0.06),
+      0 18px 36px -20px rgba(42,37,32,0.30);
+    border: 1px solid rgba(42,37,32,0.06);
+  }
+  .polaroid .ph {
+    background:
+      repeating-linear-gradient(45deg, #f4eede 0 8px, #efe7d4 8px 16px);
+    aspect-ratio: 1 / 1;
+    display: flex; align-items: center; justify-content: center;
+    color: #6b8f6b;
+  }
+  .polaroid .ph .frame {
+    border: 1.5px dashed rgba(107,143,107,0.6);
+    border-radius: 4px;
+    padding: 26px 18px;
+    text-align: center;
+  }
+
+  /* Hand-drawn underline used for hero accent */
+  .underline-wobble {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 12'><path d='M2 8 Q 60 1, 118 7 T 238 6' fill='none' stroke='%236b8f6b' stroke-width='3' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 0.4em;
+    padding-bottom: 0.15em;
+  }
+
+  /* Ticket-stub CTA */
+  .ticket {
+    background: #ffffff;
+    border-radius: 18px;
+    position: relative;
+    box-shadow: 0 24px 60px -24px rgba(42,37,32,0.30);
+  }
+  .ticket::before, .ticket::after {
+    content: ""; position: absolute; top: 50%; transform: translateY(-50%);
+    width: 24px; height: 24px; border-radius: 50%;
+    background: #faf6f0;
+  }
+  .ticket::before { left: -12px; }
+  .ticket::after { right: -12px; }
+  .ticket-divider {
+    border-top: 2px dashed rgba(42,37,32,0.15);
+    margin: 0 28px;
+  }
 </style>
 
-<!-- GA4 (fill in {{ga4_id}} once, then reuse) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ga4_id}}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -76,26 +135,30 @@
 </script>
 </head>
 
-<body class="bg-white text-ink antialiased font-sans">
+<body class="bg-paper text-ink antialiased font-sans">
 
-<!-- ============ Sticky Nav ============ -->
-<header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-black/5">
+<!-- ============ Nav ============ -->
+<header class="sticky top-0 z-40 backdrop-blur bg-paper/85 border-b border-ink/5">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-    <a href="#top" class="flex items-center gap-2 font-display font-bold text-lg tracking-tight">
-      <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-600"></span>
+    <a href="#top" class="flex items-center gap-2.5 font-display font-bold text-lg tracking-tight">
+      <!-- Paw mark -->
+      <svg class="w-6 h-6 text-brand-600" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <ellipse cx="9" cy="11" rx="2.4" ry="3"/>
+        <ellipse cx="16" cy="8" rx="2.4" ry="3"/>
+        <ellipse cx="23" cy="11" rx="2.4" ry="3"/>
+        <ellipse cx="5" cy="17" rx="2" ry="2.6"/>
+        <path d="M16 14c-4.5 0-8 3.4-8 7.2 0 2.6 2 4.3 4.6 4.3 1.6 0 2.5-.7 3.4-.7s1.8.7 3.4.7c2.6 0 4.6-1.7 4.6-4.3 0-3.8-3.5-7.2-8-7.2z"/>
+      </svg>
       serenity pet grooming
     </a>
     <nav class="hidden md:flex items-center gap-7 text-sm text-ink/70">
+      <a href="#about"    class="hover:text-ink transition">About</a>
       <a href="#services" class="hover:text-ink transition">Services</a>
       <a href="#reviews"  class="hover:text-ink transition">Reviews</a>
       <a href="#visit"    class="hover:text-ink transition">Visit</a>
-      <a href="#contact"  class="hover:text-ink transition">Contact</a>
     </nav>
     <a href="tel:+19094610793"
-       class="inline-flex items-center gap-2 rounded-full bg-ink text-white text-sm font-medium px-4 py-2 hover:bg-brand-700 transition">
-      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 0 0 2.25-2.25v-1.372a1.5 1.5 0 0 0-1.06-1.435l-3.94-1.182a1.5 1.5 0 0 0-1.6.547l-.86 1.146a11.25 11.25 0 0 1-5.32-5.32l1.146-.86a1.5 1.5 0 0 0 .547-1.6L7.728 5.81a1.5 1.5 0 0 0-1.435-1.06H4.5A2.25 2.25 0 0 0 2.25 7v-.25Z"/>
-      </svg>
+       class="inline-flex items-center gap-2 rounded-full bg-ink text-paper text-sm font-medium px-4 py-2 hover:bg-brand-700 transition">
       <span class="hidden sm:inline">(909) 461-0793</span>
       <span class="sm:hidden">Call</span>
     </a>
@@ -104,307 +167,299 @@
 
 <!-- ============ Hero ============ -->
 <section id="top" class="relative overflow-hidden">
-  <div aria-hidden="true" class="absolute inset-0 -z-10">
-    <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-white"></div>
-    <div class="absolute inset-0 grain opacity-60"></div>
-    <div class="absolute -top-24 -right-24 w-[36rem] h-[36rem] rounded-full bg-brand-100 blur-3xl opacity-70"></div>
-  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-14 pb-20 sm:pt-20 sm:pb-28">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28">
-    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-      <div class="lg:col-span-7">
-        <div class="inline-flex items-center gap-2 rounded-full bg-white ring-soft px-3 py-1 text-xs font-medium text-ink/70 mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          4.8 stars on Google — next-day appointments available
-        </div>
+      <div class="lg:col-span-7 order-2 lg:order-1">
+        <p class="font-hand text-2xl text-brand-700 leading-none mb-3" style="transform: rotate(-2deg); transform-origin: left;">
+          small + friendly · pomona, ca
+        </p>
 
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-          Anxious pup? They come out happy.
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.6rem] leading-[1.02] tracking-tight">
+          Anxious pup?
+          <br/>
+          <span class="underline-wobble">They walk out happy.</span>
         </h1>
 
-        <p class="mt-6 text-lg text-ink/70 max-w-xl">
+        <p class="mt-7 text-lg text-ink/70 max-w-xl leading-relaxed">
           Patient grooming for dogs who don't love it. Next-day bookings, friendly staff, and the kind of care that gets dogs walking back in willingly.
         </p>
 
-        <div class="mt-8 flex flex-wrap gap-3">
+        <div class="mt-9 flex flex-wrap items-center gap-4">
           <a href="tel:+19094610793"
-             class="inline-flex items-center gap-2 rounded-full bg-brand-600 text-white font-medium px-5 py-3 hover:bg-brand-700 transition shadow-card">
+             class="inline-flex items-center gap-2 rounded-full bg-brand-600 text-white font-medium px-6 py-3 hover:bg-brand-700 transition shadow-lg shadow-brand-600/20">
             Call (909) 461-0793
           </a>
           <a href="#services"
-             class="inline-flex items-center gap-2 rounded-full bg-white ring-soft font-medium px-5 py-3 hover:bg-brand-50 transition">
-            See what we do
+             class="inline-flex items-center gap-2 text-ink/80 font-medium hover:text-brand-700 transition">
+            <span class="underline-wobble">See what we do</span>
+            <span aria-hidden="true">→</span>
           </a>
         </div>
 
-        <dl class="mt-10 grid grid-cols-3 max-w-md gap-6">
-          <div>
-            <dt class="text-xs uppercase tracking-wide text-ink/50">Rating</dt>
-            <dd class="mt-1 font-display text-2xl">4.8<span class="text-ink/40 text-base"> / 5</span></dd>
-          </div>
-          <div>
-            <dt class="text-xs uppercase tracking-wide text-ink/50">Reviews</dt>
-            <dd class="mt-1 font-display text-2xl">17</dd>
-          </div>
-          <div>
-            <dt class="text-xs uppercase tracking-wide text-ink/50">Serving</dt>
-            <dd class="mt-1 font-display text-2xl">Pomona</dd>
-          </div>
-        </dl>
+        <!-- Three signal pills, not a stats card -->
+        <div class="mt-12 flex flex-wrap gap-2.5 text-xs">
+          <span class="rounded-full bg-brand-50 text-brand-700 px-3 py-1.5 font-medium">4.8★ on Google</span>
+          <span class="rounded-full bg-brand-50 text-brand-700 px-3 py-1.5 font-medium">17 reviews</span>
+          <span class="rounded-full bg-terracotta-500/10 text-terracotta-700 px-3 py-1.5 font-medium">Next-day appts</span>
+        </div>
       </div>
 
-      <div class="lg:col-span-5">
-        <div class="relative rounded-3xl bg-white ring-soft shadow-card p-6 sm:p-8">
-          <div class="absolute -top-3 left-6 inline-flex items-center gap-1.5 rounded-full bg-brand-600 text-white text-xs font-medium px-2.5 py-1">
-            Why locals choose us
+      <!-- Tilted polaroid placeholder for the hero photo slot -->
+      <div class="lg:col-span-5 order-1 lg:order-2">
+        <div class="relative max-w-md mx-auto">
+          <div class="polaroid rounded-sm" style="transform: rotate(-3deg);">
+            <div class="ph">
+              <div class="frame">
+                <svg class="w-10 h-10 mx-auto opacity-60" viewBox="0 0 32 32" fill="currentColor">
+                  <ellipse cx="9" cy="11" rx="2.4" ry="3"/><ellipse cx="16" cy="8" rx="2.4" ry="3"/>
+                  <ellipse cx="23" cy="11" rx="2.4" ry="3"/><ellipse cx="5" cy="17" rx="2" ry="2.6"/>
+                  <path d="M16 14c-4.5 0-8 3.4-8 7.2 0 2.6 2 4.3 4.6 4.3 1.6 0 2.5-.7 3.4-.7s1.8.7 3.4.7c2.6 0 4.6-1.7 4.6-4.3 0-3.8-3.5-7.2-8-7.2z"/>
+                </svg>
+                <p class="font-hand text-lg mt-3 text-brand-700">your pup's photo</p>
+                <p class="text-xs text-ink/40 mt-1">(we'll add real shots once you give us the green light)</p>
+              </div>
+            </div>
+            <p class="text-center font-hand text-xl text-ink/70 mt-3">first visit · no stress</p>
           </div>
-          <ul class="mt-3 space-y-4">
-            <li class="flex gap-3">
-              <span class="mt-0.5 w-6 h-6 rounded-full bg-brand-100 text-brand-700 inline-flex items-center justify-center text-sm font-bold">1</span>
-              <div>
-                <p class="font-semibold">Calm with anxious dogs</p>
-                <p class="text-sm text-ink/60 mt-0.5">Dany's usually-nervous dog came out happy. That's the whole reason people drive across town to come here.</p>
-              </div>
-            </li>
-            <li class="flex gap-3">
-              <span class="mt-0.5 w-6 h-6 rounded-full bg-brand-100 text-brand-700 inline-flex items-center justify-center text-sm font-bold">2</span>
-              <div>
-                <p class="font-semibold">Ready for the photos</p>
-                <p class="text-sm text-ink/60 mt-0.5">Roxanna books trims around Christmas pictures — they know what 'photo-ready' actually means.</p>
-              </div>
-            </li>
-            <li class="flex gap-3">
-              <span class="mt-0.5 w-6 h-6 rounded-full bg-brand-100 text-brand-700 inline-flex items-center justify-center text-sm font-bold">3</span>
-              <div>
-                <p class="font-semibold">Next-day bookings</p>
-                <p class="text-sm text-ink/60 mt-0.5">No need to plan three weeks out — call and check, openings happen fast.</p>
-              </div>
-            </li>
-          </ul>
+          <!-- Decorative paw on the floor next to the polaroid -->
+          <svg class="absolute -bottom-6 -left-4 w-12 h-12 text-brand-600/30 rotate-[20deg]" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <ellipse cx="9" cy="11" rx="2.4" ry="3"/><ellipse cx="16" cy="8" rx="2.4" ry="3"/>
+            <ellipse cx="23" cy="11" rx="2.4" ry="3"/><ellipse cx="5" cy="17" rx="2" ry="2.6"/>
+            <path d="M16 14c-4.5 0-8 3.4-8 7.2 0 2.6 2 4.3 4.6 4.3 1.6 0 2.5-.7 3.4-.7s1.8.7 3.4.7c2.6 0 4.6-1.7 4.6-4.3 0-3.8-3.5-7.2-8-7.2z"/>
+          </svg>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ About ============ -->
-<section id="about" class="py-20 sm:py-24 bg-white">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
-    <div class="lg:col-span-4">
-      <p class="text-xs uppercase tracking-[0.18em] text-brand-700 font-semibold">About</p>
-      <h2 class="mt-3 font-display text-3xl sm:text-4xl tracking-tight">A grooming salon dogs actually like.</h2>
-    </div>
-    <div class="lg:col-span-8">
-      <p class="text-lg text-ink/75 leading-relaxed">serenity pet grooming sits on Phillips Blvd in Pomona. Small, friendly staff, easy parking, and a real talent for handling nervous dogs.</p>
-      <p class="mt-4 text-lg text-ink/75 leading-relaxed">Most reviews say the same thing in different words — the staff is gentle, the prices are fair, and your dog comes out looking great without the stress signals you'd see at a bigger chain.</p>
-    </div>
+<!-- ============ About — quotation-style ============ -->
+<section id="about" class="py-20 sm:py-28 bg-paperDark/40">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <p class="text-xs uppercase tracking-[0.2em] text-brand-700 font-semibold">About</p>
+    <h2 class="mt-4 font-display text-3xl sm:text-5xl tracking-tight leading-[1.1]">
+      A grooming salon dogs actually like.
+    </h2>
+    <p class="mt-8 text-lg sm:text-xl text-ink/75 leading-relaxed">
+      serenity pet grooming sits on Phillips Blvd in Pomona. Small, friendly staff, easy parking, and a real talent for handling nervous dogs.
+    </p>
+    <p class="mt-5 text-lg sm:text-xl text-ink/75 leading-relaxed">
+      Most reviews say the same thing in different words — the staff is gentle, the prices are fair, and your dog comes out looking great without the stress signals you'd see at a bigger chain.
+    </p>
   </div>
 </section>
 
-<!-- ============ Services ============ -->
-<section id="services" class="py-20 sm:py-24 bg-ink text-white">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+<!-- ============ Services — numbered menu, not cards ============ -->
+<section id="services" class="py-20 sm:py-28">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="flex items-end justify-between gap-8 flex-wrap mb-12">
       <div>
-        <p class="text-xs uppercase tracking-[0.18em] text-brand-500 font-semibold">What we do</p>
+        <p class="text-xs uppercase tracking-[0.2em] text-brand-700 font-semibold">What we offer</p>
         <h2 class="mt-3 font-display text-3xl sm:text-4xl tracking-tight">What we offer.</h2>
       </div>
-      <p class="max-w-md text-white/70">Full grooming, trims, nail care, and bath services. Call ahead to talk about your dog — coat type, temperament, and any specific notes.</p>
+      <p class="max-w-sm text-ink/65 text-sm leading-relaxed">Full grooming, trims, nail care, and bath services. Call ahead to talk about your dog — coat type, temperament, and any specific notes.</p>
     </div>
 
-    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <!-- service cards -->
-      <article class="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-6 hover:bg-white/[0.07] transition">
-        <div class="w-10 h-10 rounded-xl bg-brand-600/20 text-brand-500 inline-flex items-center justify-center font-bold">01</div>
-        <h3 class="mt-5 font-semibold text-lg">Full grooming</h3>
-        <p class="mt-2 text-white/65 text-sm leading-relaxed">Bath, brush-out, haircut, nails, ears. Everything your dog needs in one visit.</p>
-      </article>
-      <article class="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-6 hover:bg-white/[0.07] transition">
-        <div class="w-10 h-10 rounded-xl bg-brand-600/20 text-brand-500 inline-flex items-center justify-center font-bold">02</div>
-        <h3 class="mt-5 font-semibold text-lg">Trims & bath</h3>
-        <p class="mt-2 text-white/65 text-sm leading-relaxed">Lighter package — bath, blow-dry, trim around face and feet.</p>
-      </article>
-      <article class="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-6 hover:bg-white/[0.07] transition">
-        <div class="w-10 h-10 rounded-xl bg-brand-600/20 text-brand-500 inline-flex items-center justify-center font-bold">03</div>
-        <h3 class="mt-5 font-semibold text-lg">Nail care</h3>
-        <p class="mt-2 text-white/65 text-sm leading-relaxed">Quick nail clipping or grinding, in and out.</p>
-      </article>
-      <article class="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-6 hover:bg-white/[0.07] transition">
-        <div class="w-10 h-10 rounded-xl bg-brand-600/20 text-brand-500 inline-flex items-center justify-center font-bold">04</div>
-        <h3 class="mt-5 font-semibold text-lg">Anxious-pet care</h3>
-        <p class="mt-2 text-white/65 text-sm leading-relaxed">We take extra time with dogs who don't love grooming. No shortcuts, no force.</p>
-      </article>
-      <article class="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-6 hover:bg-white/[0.07] transition">
-        <div class="w-10 h-10 rounded-xl bg-brand-600/20 text-brand-500 inline-flex items-center justify-center font-bold">05</div>
-        <h3 class="mt-5 font-semibold text-lg">Holiday-photo grooming</h3>
-        <p class="mt-2 text-white/65 text-sm leading-relaxed">Books up around Christmas and Easter — get on the schedule early.</p>
-      </article>
-      <article class="rounded-2xl bg-gradient-to-br from-brand-600 to-brand-700 p-6 flex flex-col justify-between">
-        <div>
-          <p class="text-xs uppercase tracking-[0.18em] font-semibold text-white/80">Get started</p>
-          <h3 class="mt-3 font-display text-2xl tracking-tight">Talk to a human in Pomona</h3>
+    <ol class="divide-y divide-ink/10">
+      <li class="grid grid-cols-12 gap-4 py-7 group">
+        <span class="col-span-2 sm:col-span-1 font-display text-3xl sm:text-4xl text-brand-600/70">01</span>
+        <div class="col-span-10 sm:col-span-11 grid sm:grid-cols-3 gap-3 sm:gap-8 items-baseline">
+          <h3 class="font-display text-2xl tracking-tight">Full grooming</h3>
+          <p class="sm:col-span-2 text-ink/70 leading-relaxed">Bath, brush-out, haircut, nails, ears. Everything your dog needs in one visit.</p>
         </div>
-        <a href="tel:+19094610793" class="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-white text-ink font-medium px-4 py-2.5 hover:bg-brand-50 transition">
+      </li>
+      <li class="grid grid-cols-12 gap-4 py-7 group">
+        <span class="col-span-2 sm:col-span-1 font-display text-3xl sm:text-4xl text-brand-600/70">02</span>
+        <div class="col-span-10 sm:col-span-11 grid sm:grid-cols-3 gap-3 sm:gap-8 items-baseline">
+          <h3 class="font-display text-2xl tracking-tight">Trims & bath</h3>
+          <p class="sm:col-span-2 text-ink/70 leading-relaxed">Lighter package — bath, blow-dry, trim around face and feet.</p>
+        </div>
+      </li>
+      <li class="grid grid-cols-12 gap-4 py-7 group">
+        <span class="col-span-2 sm:col-span-1 font-display text-3xl sm:text-4xl text-brand-600/70">03</span>
+        <div class="col-span-10 sm:col-span-11 grid sm:grid-cols-3 gap-3 sm:gap-8 items-baseline">
+          <h3 class="font-display text-2xl tracking-tight">Nail care</h3>
+          <p class="sm:col-span-2 text-ink/70 leading-relaxed">Quick nail clipping or grinding, in and out.</p>
+        </div>
+      </li>
+      <li class="grid grid-cols-12 gap-4 py-7 group">
+        <span class="col-span-2 sm:col-span-1 font-display text-3xl sm:text-4xl text-brand-600/70">04</span>
+        <div class="col-span-10 sm:col-span-11 grid sm:grid-cols-3 gap-3 sm:gap-8 items-baseline">
+          <h3 class="font-display text-2xl tracking-tight">Anxious-pet care</h3>
+          <p class="sm:col-span-2 text-ink/70 leading-relaxed">We take extra time with dogs who don't love grooming. No shortcuts, no force.</p>
+        </div>
+      </li>
+      <li class="grid grid-cols-12 gap-4 py-7 group">
+        <span class="col-span-2 sm:col-span-1 font-display text-3xl sm:text-4xl text-brand-600/70">05</span>
+        <div class="col-span-10 sm:col-span-11 grid sm:grid-cols-3 gap-3 sm:gap-8 items-baseline">
+          <h3 class="font-display text-2xl tracking-tight">Holiday-photo grooming</h3>
+          <p class="sm:col-span-2 text-ink/70 leading-relaxed">Books up around Christmas and Easter — get on the schedule early.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="mt-12 font-hand text-2xl text-brand-700 text-center" style="transform: rotate(-1deg);">
+      not sure which? — call us and we'll figure it out together
+    </p>
+  </div>
+</section>
+
+<!-- ============ Reviews — tilted polaroid stack ============ -->
+<section id="reviews" class="py-24 sm:py-32 paws-bg">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-16">
+      <p class="text-xs uppercase tracking-[0.2em] text-brand-700 font-semibold">From real visits</p>
+      <h2 class="mt-3 font-display text-3xl sm:text-5xl tracking-tight">What pet parents say.</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12">
+      <figure class="polaroid rounded-sm" style="transform: rotate(-2deg);">
+        <div class="ph">
+          <div class="frame text-center">
+            <p class="text-5xl text-brand-600 leading-none">"</p>
+            <p class="font-hand text-base text-ink/50 mt-1">Dany Fernanda Her's dog</p>
+          </div>
+        </div>
+        <figcaption class="mt-4 px-1">
+          <p class="text-[15px] leading-relaxed text-ink/85">"Took my pet today with them! Service was amazing! Everyone was very friendly and my dog came out very happy. He’s usually anxious when we take him to groomers (thanks to petsmart) but I noticed my dog wasn’t anxious after his grooming here. …"</p>
+          <p class="mt-3 text-sm font-semibold text-brand-700">— Dany Fernanda Her</p>
+        </figcaption>
+      </figure>
+
+      <figure class="polaroid rounded-sm sm:mt-10" style="transform: rotate(1.5deg);">
+        <div class="ph">
+          <div class="frame text-center">
+            <p class="text-5xl text-brand-600 leading-none">"</p>
+            <p class="font-hand text-base text-ink/50 mt-1">roxanna canales's dog</p>
+          </div>
+        </div>
+        <figcaption class="mt-4 px-1">
+          <p class="text-[15px] leading-relaxed text-ink/85">"My golden loves the treatment she gets here ! They do a good job for the price and even have next day bookings available . I got her a trim for Christmas photos and loved the end result"</p>
+          <p class="mt-3 text-sm font-semibold text-brand-700">— roxanna canales</p>
+        </figcaption>
+      </figure>
+
+      <figure class="polaroid rounded-sm" style="transform: rotate(-1deg);">
+        <div class="ph">
+          <div class="frame text-center">
+            <p class="text-5xl text-brand-600 leading-none">"</p>
+            <p class="font-hand text-base text-ink/50 mt-1">neil li's dog</p>
+          </div>
+        </div>
+        <figcaption class="mt-4 px-1">
+          <p class="text-[15px] leading-relaxed text-ink/85">"I had a fantastic experience at this pet grooming salon! The staff was incredibly friendly and professional, and they took excellent care of my furry friend. The best part was that the prices were quite reasonable compared to other places …"</p>
+          <p class="mt-3 text-sm font-semibold text-brand-700">— neil li</p>
+        </figcaption>
+      </figure>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=serenity+pet+grooming+4412+Phillips+Blvd%2C+Pomona%2C+CA+91766" target="_blank" rel="noopener"
+         class="rounded-2xl bg-ink text-paper p-8 flex flex-col justify-between hover:bg-brand-900 transition group">
+        <div>
+          <p class="font-display text-4xl">4.8<span class="text-paper/40 text-2xl"> / 5</span></p>
+          <p class="text-paper/65 mt-1">across 17 Google reviews</p>
+        </div>
+        <p class="font-hand text-2xl mt-6 text-brand-500 group-hover:translate-x-1 transition">
+          read them all →
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Visit ============ -->
+<section id="visit" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] text-brand-700 font-semibold">Drop by</p>
+      <h2 class="mt-3 font-display text-3xl sm:text-5xl tracking-tight leading-[1.05]">
+        Phillips Blvd. Easy parking. Friendly door.
+      </h2>
+      <p class="mt-6 text-ink/70 text-lg leading-relaxed">
+        Phillips Blvd in Pomona. Friendly staff, easy parking, and they'll work with your dog's pace.
+      </p>
+
+      <div class="mt-8 space-y-3 text-ink/80">
+        <p class="flex items-start gap-3">
+          <span class="font-hand text-2xl text-brand-700 leading-none">↳</span>
+          <span><span class="font-semibold">4412 Phillips Blvd</span><br/><span class="text-ink/60 text-sm">Pomona, CA 91766</span></span>
+        </p>
+        <p class="flex items-start gap-3">
+          <span class="font-hand text-2xl text-brand-700 leading-none">↳</span>
+          <a href="tel:+19094610793" class="font-semibold hover:text-brand-700 transition">(909) 461-0793</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-3xl bg-paperDark/60 p-8 sm:p-10">
+      <p class="font-hand text-2xl text-brand-700 mb-5" style="transform: rotate(-1.5deg); transform-origin: left;">
+        when we're open
+      </p>
+      <ul class="space-y-3 text-lg">
+        <li class="flex items-baseline justify-between border-b border-dashed border-ink/15 pb-3"><span class="text-ink/70">Mon</span><span class="font-medium">By appointment</span></li>
+        <li class="flex items-baseline justify-between border-b border-dashed border-ink/15 pb-3"><span class="text-ink/70">Tue</span><span class="font-medium">9:00 AM – 5:00 PM</span></li>
+        <li class="flex items-baseline justify-between border-b border-dashed border-ink/15 pb-3"><span class="text-ink/70">Wed</span><span class="font-medium">9:00 AM – 5:00 PM</span></li>
+        <li class="flex items-baseline justify-between border-b border-dashed border-ink/15 pb-3"><span class="text-ink/70">Thu</span><span class="font-medium">9:00 AM – 5:00 PM</span></li>
+        <li class="flex items-baseline justify-between border-b border-dashed border-ink/15 pb-3"><span class="text-ink/70">Fri</span><span class="font-medium">9:00 AM – 5:00 PM</span></li>
+        <li class="flex items-baseline justify-between border-b border-dashed border-ink/15 pb-3"><span class="text-ink/70">Sat</span><span class="font-medium">9:00 AM – 4:00 PM</span></li>
+        <li class="flex items-baseline justify-between"><span class="text-ink/70">Sun</span><span class="font-medium">Closed</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA — ticket-stub ============ -->
+<section id="contact" class="py-20 sm:py-28">
+  <div class="max-w-3xl mx-auto px-8 sm:px-12">
+    <div class="ticket px-10 py-10 sm:px-14 sm:py-14 text-center">
+      <p class="font-hand text-3xl text-brand-700" style="transform: rotate(-2deg);">grooming ticket</p>
+      <h2 class="mt-3 font-display text-3xl sm:text-5xl tracking-tight leading-[1.05]">
+        Book your dog's next visit.
+      </h2>
+      <div class="ticket-divider my-7"></div>
+      <p class="text-ink/75 text-lg max-w-xl mx-auto leading-relaxed">
+        Call to set up — next-day bookings are often available. Tell us about your dog and we'll plan around them.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="tel:+19094610793"
+           class="inline-flex items-center gap-2 rounded-full bg-brand-600 text-white font-medium px-6 py-3 hover:bg-brand-700 transition">
           Call (909) 461-0793
         </a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Reviews ============ -->
-<section id="reviews" class="py-20 sm:py-24 bg-brand-50/60">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="max-w-2xl">
-      <p class="text-xs uppercase tracking-[0.18em] text-brand-700 font-semibold">What customers say</p>
-      <h2 class="mt-3 font-display text-3xl sm:text-4xl tracking-tight">What pet parents say.</h2>
-      <p class="mt-3 text-ink/70">Real reviews from our Google listing — 4.8★ across 17 ratings.</p>
-    </div>
-
-    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <figure class="rounded-2xl bg-white p-6 ring-soft shadow-card">
-        <div class="flex gap-0.5 text-brand-600" aria-label="5 stars">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-        <blockquote class="mt-4 text-ink/80 leading-relaxed">"Took my pet today with them! Service was amazing! Everyone was very friendly and my dog came out very happy. He’s usually anxious when we take him to groomers (thanks to petsmart) but I noticed my dog wasn’t anxious after his grooming here. …"</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-brand-100 text-brand-700 inline-flex items-center justify-center font-semibold">D</div>
-          <div>
-            <p class="text-sm font-semibold">Dany Fernanda Her</p>
-            <p class="text-xs text-ink/50">via Google</p>
-          </div>
-        </figcaption>
-      </figure>
-
-      <figure class="rounded-2xl bg-white p-6 ring-soft shadow-card">
-        <div class="flex gap-0.5 text-brand-600" aria-label="5 stars">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-        <blockquote class="mt-4 text-ink/80 leading-relaxed">"My golden loves the treatment she gets here ! They do a good job for the price and even have next day bookings available . I got her a trim for Christmas photos and loved the end result"</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-brand-100 text-brand-700 inline-flex items-center justify-center font-semibold">R</div>
-          <div>
-            <p class="text-sm font-semibold">roxanna canales</p>
-            <p class="text-xs text-ink/50">via Google</p>
-          </div>
-        </figcaption>
-      </figure>
-
-      <figure class="rounded-2xl bg-white p-6 ring-soft shadow-card">
-        <div class="flex gap-0.5 text-brand-600" aria-label="5 stars">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-        <blockquote class="mt-4 text-ink/80 leading-relaxed">"I had a fantastic experience at this pet grooming salon! The staff was incredibly friendly and professional, and they took excellent care of my furry friend. The best part was that the prices were quite reasonable compared to other places …"</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-brand-100 text-brand-700 inline-flex items-center justify-center font-semibold">N</div>
-          <div>
-            <p class="text-sm font-semibold">neil li</p>
-            <p class="text-xs text-ink/50">via Google</p>
-          </div>
-        </figcaption>
-      </figure>
-
-      <article class="rounded-2xl bg-ink text-white p-6 flex flex-col justify-between">
-        <div>
-          <p class="font-display text-3xl tracking-tight">4.8<span class="text-white/40 text-xl"> / 5</span></p>
-          <p class="text-white/70 text-sm mt-1">17 Google reviews</p>
-        </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=serenity+pet+grooming+4412+Phillips+Blvd%2C+Pomona%2C+CA+91766" target="_blank" rel="noopener" class="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-white text-ink font-medium px-4 py-2.5 hover:bg-brand-50 transition">
-          Read all reviews
+        <a href="https://www.google.com/maps/search/?api=1&query=serenity+pet+grooming+4412+Phillips+Blvd%2C+Pomona%2C+CA+91766" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 rounded-full bg-paper ring-1 ring-ink/15 text-ink font-medium px-6 py-3 hover:bg-paperDark transition">
+          Get directions
         </a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Visit / Hours ============ -->
-<section id="visit" class="py-20 sm:py-24 bg-white">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10">
-    <div class="lg:col-span-5">
-      <p class="text-xs uppercase tracking-[0.18em] text-brand-700 font-semibold">Visit</p>
-      <h2 class="mt-3 font-display text-3xl sm:text-4xl tracking-tight">Come see us in Pomona</h2>
-      <p class="mt-4 text-ink/70 leading-relaxed">Phillips Blvd in Pomona. Friendly staff, easy parking, and they'll work with your dog's pace.</p>
-
-      <div class="mt-8 space-y-4">
-        <div class="flex gap-3">
-          <svg class="w-5 h-5 text-brand-600 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
-          <div>
-            <p class="font-semibold">4412 Phillips Blvd</p>
-            <p class="text-sm text-ink/60">Pomona, CA 91766</p>
-          </div>
-        </div>
-        <div class="flex gap-3">
-          <svg class="w-5 h-5 text-brand-600 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 0 0 2.25-2.25v-1.372a1.5 1.5 0 0 0-1.06-1.435l-3.94-1.182a1.5 1.5 0 0 0-1.6.547l-.86 1.146a11.25 11.25 0 0 1-5.32-5.32l1.146-.86a1.5 1.5 0 0 0 .547-1.6L7.728 5.81a1.5 1.5 0 0 0-1.435-1.06H4.5A2.25 2.25 0 0 0 2.25 7v-.25Z"/></svg>
-          <div>
-            <p class="font-semibold">(909) 461-0793</p>
-            <p class="text-sm text-ink/60">Tap to call from mobile</p>
-          </div>
-        </div>
       </div>
-    </div>
-
-    <div class="lg:col-span-7">
-      <div class="rounded-2xl ring-soft overflow-hidden bg-brand-50">
-        <div class="px-6 py-5 border-b border-black/5 flex items-center justify-between">
-          <p class="font-semibold">Hours</p>
-          <span class="text-xs text-ink/50">All times local</span>
-        </div>
-        <dl class="divide-y divide-black/5">
-          <div class="px-6 py-3 flex items-center justify-between"><dt class="text-ink/70">Monday</dt><dd class="font-medium">By appointment</dd></div>
-          <div class="px-6 py-3 flex items-center justify-between"><dt class="text-ink/70">Tuesday</dt><dd class="font-medium">9:00 AM – 5:00 PM</dd></div>
-          <div class="px-6 py-3 flex items-center justify-between"><dt class="text-ink/70">Wednesday</dt><dd class="font-medium">9:00 AM – 5:00 PM</dd></div>
-          <div class="px-6 py-3 flex items-center justify-between"><dt class="text-ink/70">Thursday</dt><dd class="font-medium">9:00 AM – 5:00 PM</dd></div>
-          <div class="px-6 py-3 flex items-center justify-between"><dt class="text-ink/70">Friday</dt><dd class="font-medium">9:00 AM – 5:00 PM</dd></div>
-          <div class="px-6 py-3 flex items-center justify-between"><dt class="text-ink/70">Saturday</dt><dd class="font-medium">9:00 AM – 4:00 PM</dd></div>
-          <div class="px-6 py-3 flex items-center justify-between"><dt class="text-ink/70">Sunday</dt><dd class="font-medium">Closed</dd></div>
-        </dl>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Contact CTA ============ -->
-<section id="contact" class="py-20 sm:py-24 bg-gradient-to-br from-brand-600 to-brand-900 text-white">
-  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
-    <h2 class="font-display text-3xl sm:text-5xl tracking-tight">Book your dog's next visit.</h2>
-    <p class="mt-5 text-white/80 max-w-2xl mx-auto text-lg">Call to set up — next-day bookings are often available. Tell us about your dog and we'll plan around them.</p>
-    <div class="mt-8 flex flex-wrap justify-center gap-3">
-      <a href="tel:+19094610793" class="inline-flex items-center gap-2 rounded-full bg-white text-ink font-medium px-6 py-3 hover:bg-brand-50 transition">
-        Call (909) 461-0793
-      </a>
-      <a href="https://www.google.com/maps/search/?api=1&query=serenity+pet+grooming+4412+Phillips+Blvd%2C+Pomona%2C+CA+91766" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/30 font-medium px-6 py-3 hover:bg-white/15 transition">
-        Get directions
-      </a>
     </div>
   </div>
 </section>
 
 <!-- ============ Footer ============ -->
-<footer class="bg-ink text-white/70">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-12 grid md:grid-cols-3 gap-8 text-sm">
+<footer class="bg-ink text-paper/70 mt-8">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 grid md:grid-cols-3 gap-10 text-sm">
     <div>
-      <p class="font-display text-white text-lg">serenity pet grooming</p>
-      <p class="mt-2">4412 Phillips Blvd<br />Pomona, CA 91766</p>
-      <p class="mt-2"><a class="hover:text-white" href="tel:+19094610793">(909) 461-0793</a></p>
+      <p class="font-display text-paper text-xl">serenity pet grooming</p>
+      <p class="mt-2">4412 Phillips Blvd<br/>Pomona, CA 91766</p>
+      <p class="mt-2"><a class="hover:text-paper" href="tel:+19094610793">(909) 461-0793</a></p>
     </div>
     <div>
-      <p class="text-white font-semibold mb-3">Explore</p>
+      <p class="text-paper font-semibold mb-3">Explore</p>
       <ul class="space-y-2">
-        <li><a class="hover:text-white" href="#services">Services</a></li>
-        <li><a class="hover:text-white" href="#reviews">Reviews</a></li>
-        <li><a class="hover:text-white" href="#visit">Hours &amp; location</a></li>
-        <li><a class="hover:text-white" href="#contact">Contact</a></li>
+        <li><a class="hover:text-paper" href="#about">About</a></li>
+        <li><a class="hover:text-paper" href="#services">Services</a></li>
+        <li><a class="hover:text-paper" href="#reviews">Reviews</a></li>
+        <li><a class="hover:text-paper" href="#visit">Hours &amp; location</a></li>
       </ul>
     </div>
     <div class="md:text-right">
-      <p class="text-white/80">Website preview created by</p>
-      <p class="text-white font-semibold">WestCo App Studio</p>
-      <p><a class="hover:text-white" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a></p>
-      <p><a class="hover:text-white" href="tel:+12135229136">(213) 522-9136</a></p>
+      <p class="text-paper/80">Website preview created by</p>
+      <p class="text-paper font-semibold">WestCo App Studio</p>
+      <p><a class="hover:text-paper" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a></p>
+      <p><a class="hover:text-paper" href="tel:+12135229136">(213) 522-9136</a></p>
     </div>
   </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 text-xs text-white/40 flex flex-wrap items-center justify-between gap-3">
+  <div class="border-t border-paper/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 text-xs text-paper/40 flex flex-wrap items-center justify-between gap-3">
       <span>© 2026 serenity pet grooming. All rights reserved.</span>
       <span>Preview built May 2026 — not the official site.</span>
     </div>
