@@ -14,7 +14,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -22,7 +22,7 @@
     theme: {
       extend: {
         fontFamily: {
-          sans:    ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          sans:    ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           display: ['"Big Shoulders Display"', 'Impact', '"Arial Narrow"', 'sans-serif'],
           mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
         },
@@ -36,8 +36,6 @@
             900: 'var(--brand-900)',
           },
           night: '#0a0a0a',
-          coal:  '#161616',
-          smoke: '#2a2a2a',
           chalk: '#f4f1ea',
         },
       },
@@ -56,75 +54,7 @@
   }
   html { scroll-behavior: smooth; background: #0a0a0a; }
   body { background: #0a0a0a; color: #f4f1ea; overflow-x: hidden; }
-  .font-display { font-weight: 800; }   /* Big Shoulders Display needs an explicit heavy weight */
-
-  /* Brushed-chrome effect for display headlines — pulls light/shadow across the type */
-  .chrome {
-    background: linear-gradient(180deg, #f6f6f9 0%, #c8ccd3 38%, #6e7077 52%, #b0b4bc 64%, #f6f6f9 100%);
-    -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* Subtle film-grain texture overlay */
-  .grain::before {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background-image:
-      radial-gradient(rgba(244,241,234,0.025) 1px, transparent 1px);
-    background-size: 2px 2px;
-    mix-blend-mode: overlay;
-  }
-
-  /* Marquee */
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-  .marquee-track {
-    display: flex; gap: 3rem;
-    animation: marquee 38s linear infinite;
-    white-space: nowrap;
-  }
-  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
-
-  /* Pricelist dot leaders — pure CSS, no extra spans.
-     Desktop: title · dot-leader · meta on one row.
-     Mobile:  title stacked above meta, leader hidden. */
-  .pricelist li {
-    display: flex; flex-direction: column; gap: 0.4rem;
-    padding: 1.1rem 0;
-    border-top: 1px solid rgba(244,241,234,0.10);
-  }
-  .pricelist li:last-child { border-bottom: 1px solid rgba(244,241,234,0.10); }
-  .pricelist li .title { flex: 0 0 auto; }
-  .pricelist li .leader { display: none; }
-  .pricelist li .meta { color: rgba(244,241,234,0.65); }
-  @media (min-width: 640px) {
-    .pricelist li { flex-direction: row; align-items: baseline; gap: 0.75rem; padding: 1.25rem 0; }
-    .pricelist li .leader {
-      display: block; flex: 1 1 auto;
-      border-bottom: 2px dotted rgba(244,241,234,0.18);
-      transform: translateY(-6px); margin: 0 0.25rem;
-    }
-    .pricelist li .meta { flex: 0 0 auto; }
-  }
-
-  /* Editorial pull quote — oversized opening glyph */
-  .pull-quote::before {
-    content: "“";
-    font-family: 'Big Shoulders Display', Impact, sans-serif;
-    font-weight: 900;
-    color: var(--brand-500);
-    font-size: 4.5rem; line-height: 0.6;
-    display: block; margin-bottom: 0.5rem;
-  }
-  @media (min-width: 640px) {
-    .pull-quote::before { font-size: 7rem; margin-bottom: 1rem; }
-  }
-
-  /* Numbered review block "01 / 05" style */
-  .review-no { font-family: 'JetBrains Mono', monospace; color: var(--brand-500); letter-spacing: 0.1em; }
+  .font-display { font-weight: 800; }
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ga4_id}}"></script>
@@ -138,33 +68,22 @@
 
 <body class="font-sans antialiased">
 
-<!-- ============ Top marquee ticker ============ -->
-<div class="border-b border-chalk/10 bg-night overflow-hidden">
-  <div class="marquee-track py-3 font-mono text-[11px] uppercase tracking-[0.25em] text-chalk/55">
-    <span>WRLDWIDE BARBERSHOP · POMONA · @WRLDWIDEBARBERSHOP · OPEN 7 DAYS · WALK-INS + APPOINTMENTS · SHARP FADES · LINE-UPS · BEARDS · KIDS' CUTS · 5.0 ★ ON GOOGLE</span>
-    <span aria-hidden="true">WRLDWIDE BARBERSHOP · POMONA · @WRLDWIDEBARBERSHOP · OPEN 7 DAYS · WALK-INS + APPOINTMENTS · SHARP FADES · LINE-UPS · BEARDS · KIDS' CUTS · 5.0 ★ ON GOOGLE</span>
-  </div>
-</div>
-
 <!-- ============ Nav ============ -->
 <header class="sticky top-0 z-40 backdrop-blur bg-night/85 border-b border-chalk/10">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+  <div class="max-w-4xl mx-auto px-6 sm:px-10 h-16 flex items-center justify-between">
     <a href="#top" class="flex items-center gap-3">
-      <!-- Circular emblem — text-on-path wordmark + globe -->
-      <svg viewBox="0 0 200 200" class="w-9 h-9 text-chalk" aria-hidden="true">
+      <svg viewBox="0 0 200 200" class="w-8 h-8 text-chalk shrink-0" aria-hidden="true">
         <defs>
-          <path id="emblemTop"    d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
-          <path id="emblemBottom" d="M 28,100 A 72,72 0 0,0 172,100" fill="none"/>
+          <path id="navEmblemTop"    d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
+          <path id="navEmblemBottom" d="M 28,100 A 72,72 0 0,0 172,100" fill="none"/>
         </defs>
         <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="3"/>
-        <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
         <text font-family="'Big Shoulders Display', Impact, sans-serif" font-weight="900" font-size="22" letter-spacing="3.5" fill="currentColor">
-          <textPath href="#emblemTop" startOffset="50%" text-anchor="middle">WRLDWIDE BARBERSHOP</textPath>
+          <textPath href="#navEmblemTop" startOffset="50%" text-anchor="middle">WRLDWIDE BARBERSHOP</textPath>
         </text>
         <text font-family="'Big Shoulders Display', Impact, sans-serif" font-weight="700" font-size="15" letter-spacing="6" fill="currentColor">
-          <textPath href="#emblemBottom" startOffset="50%" text-anchor="middle">★ POMONA · CA ★</textPath>
+          <textPath href="#navEmblemBottom" startOffset="50%" text-anchor="middle">★ POMONA · CA ★</textPath>
         </text>
-        <!-- Globe in center -->
         <g transform="translate(100,100)" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
           <circle r="26"/>
           <ellipse rx="26" ry="10"/>
@@ -173,387 +92,110 @@
           <path d="M -22, 14 Q 0, 30 22, 14"/>
         </g>
       </svg>
-      <span class="font-display font-extrabold text-xl tracking-[0.04em] uppercase">WRLDWIDE BARBERSHOP</span>
+      <span class="font-display text-base sm:text-lg tracking-[0.06em] uppercase">WRLDWIDE BARBERSHOP</span>
     </a>
-    <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-chalk/65 font-medium">
-      <a href="#about"    class="hover:text-chalk transition">The shop</a>
-      <a href="#pricelist" class="hover:text-chalk transition">Cuts</a>
-      <a href="#reviews"  class="hover:text-chalk transition">In the chair</a>
-      <a href="#visit"    class="hover:text-chalk transition">Visit</a>
-    </nav>
     <a href="tel:+19097668039"
-       class="inline-flex items-center gap-2 rounded-sm bg-chalk text-night text-xs uppercase tracking-[0.2em] font-bold px-4 py-2.5 hover:bg-brand-700 hover:text-chalk transition">
-      <span class="hidden sm:inline">Book a chair</span>
+       class="inline-flex items-center gap-2 rounded-sm bg-chalk text-night text-[10px] sm:text-xs uppercase tracking-[0.22em] font-bold px-3.5 sm:px-4 py-2.5 hover:bg-brand-700 hover:text-chalk transition">
+      <span class="hidden sm:inline">Book</span>
       <span class="sm:hidden">Call</span>
     </a>
   </div>
 </header>
 
 <!-- ============ Hero ============ -->
-<section id="top" class="relative overflow-hidden grain">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-1/4 -right-32 w-[40rem] h-[40rem] rounded-full"
-         style="background: radial-gradient(circle, var(--brand-700) 0%, transparent 60%); opacity: .35;"></div>
-  </div>
+<section id="top" class="min-h-[86vh] flex flex-col justify-center max-w-4xl mx-auto px-6 sm:px-10 pt-20 pb-24 sm:pt-28 sm:pb-32">
+  <!-- Emblem mark, larger than the nav -->
+  <svg viewBox="0 0 200 200" class="w-24 h-24 sm:w-28 sm:h-28 text-chalk mb-14 sm:mb-20" aria-hidden="true">
+    <defs>
+      <path id="heroEmblemTop"    d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
+      <path id="heroEmblemBottom" d="M 28,100 A 72,72 0 0,0 172,100" fill="none"/>
+    </defs>
+    <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="3"/>
+    <text font-family="'Big Shoulders Display', Impact, sans-serif" font-weight="900" font-size="22" letter-spacing="3.5" fill="currentColor">
+      <textPath href="#heroEmblemTop" startOffset="50%" text-anchor="middle">WRLDWIDE BARBERSHOP</textPath>
+    </text>
+    <text font-family="'Big Shoulders Display', Impact, sans-serif" font-weight="700" font-size="15" letter-spacing="6" fill="currentColor">
+      <textPath href="#heroEmblemBottom" startOffset="50%" text-anchor="middle">★ POMONA · CA ★</textPath>
+    </text>
+    <g transform="translate(100,100)" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <circle r="26"/>
+      <ellipse rx="26" ry="10"/>
+      <line x1="-26" y1="0" x2="26" y2="0"/>
+      <path d="M -22,-14 Q 0,-30 22,-14"/>
+      <path d="M -22, 14 Q 0, 30 22, 14"/>
+    </g>
+  </svg>
 
-  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-20 sm:pt-28 sm:pb-32">
-    <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500 mb-7">
-      @wrldwidebarbershop · Indian Hill Blvd · Pomona, CA
-    </p>
+  <h1 class="font-display tracking-[0.01em] leading-[0.92] sm:leading-[0.88] text-[clamp(2.4rem,8.5vw,6.5rem)] break-words">
+    SHARP FADES.<br/>
+    REAL FAMILY ENERGY.
+  </h1>
 
-    <h1 class="font-display tracking-[0.01em] leading-[0.88] sm:leading-[0.86] text-[clamp(2.4rem,10vw,9.5rem)] break-words">
-      SHARP FADES.<br/>
-      <span class="chrome">REAL FAMILY ENERGY.</span>
-    </h1>
+  <a href="tel:+19097668039"
+     class="mt-14 sm:mt-20 font-display text-3xl sm:text-5xl tracking-[0.04em] self-start hover:text-brand-500 transition">
+    (909) 766-8039
+  </a>
 
-    <div class="mt-10 grid lg:grid-cols-12 gap-10 items-end">
-      <p class="lg:col-span-7 text-chalk/75 text-lg leading-relaxed max-w-2xl">
-        Sharp fades, line-ups that hold, and real family energy in the shop. Walk in, sit down, walk out feeling brand new.
-      </p>
-
-      <div class="lg:col-span-5 flex flex-wrap gap-3 lg:justify-end">
-        <a href="tel:+19097668039"
-           class="inline-flex items-center gap-3 rounded-sm bg-chalk text-night font-semibold uppercase tracking-[0.18em] text-sm px-6 py-4 hover:bg-brand-500 hover:text-chalk transition">
-          Call (909) 766-8039
-        </a>
-        <a href="#pricelist"
-           class="inline-flex items-center gap-3 rounded-sm ring-1 ring-chalk/25 font-semibold uppercase tracking-[0.18em] text-sm px-6 py-4 hover:bg-chalk/5 transition">
-          See the cuts →
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Stats strip -->
-  <div class="border-y border-chalk/10 bg-coal">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid grid-cols-3 divide-x divide-chalk/10">
-      <div class="py-7 sm:py-10 pr-3 sm:pr-0">
-        <p class="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-chalk/50">Rating</p>
-        <p class="font-display text-3xl sm:text-5xl md:text-6xl mt-2 leading-none">5.0<span class="text-chalk/30 text-base sm:text-2xl">/5</span></p>
-      </div>
-      <div class="py-7 sm:py-10 pl-3 sm:pl-6">
-        <p class="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-chalk/50">Reviews</p>
-        <p class="font-display text-3xl sm:text-5xl md:text-6xl mt-2 leading-none">443</p>
-      </div>
-      <div class="py-7 sm:py-10 pl-3 sm:pl-6">
-        <p class="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-chalk/50">Serving</p>
-        <p class="font-display text-3xl sm:text-5xl md:text-6xl mt-2 leading-none tracking-[0.01em]">Pomona</p>
-      </div>
-    </div>
-  </div>
+  <p class="mt-5 font-mono text-[11px] uppercase tracking-[0.28em] text-chalk/50">
+    Open 7 days · 596 Indian Hill Blvd
+  </p>
 </section>
 
-<!-- ============ Pull quote (editorial big-quote about the shop) ============ -->
-<section id="about" class="py-24 sm:py-32">
-  <div class="max-w-4xl mx-auto px-5 sm:px-8">
-    <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500 mb-8">What people say</p>
-    <blockquote class="pull-quote font-display text-3xl sm:text-5xl md:text-6xl leading-[1.1] sm:leading-[1.05] tracking-[0.01em]">
-      Fire cuts, real family energy in the shop, and a perfect spot right next to Tierra Mia. Easily the best barbershop in Pomona.
-    </blockquote>
-    <p class="mt-8 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">
-      — Owen Brown · Google review
-    </p>
-
-    <div class="mt-16 grid sm:grid-cols-2 gap-10 text-chalk/75 leading-relaxed text-[17px]">
-      <p>WRLDWIDE BARBERSHOP sits on Indian Hill Blvd, right next door to Tierra Mia Coffee. Five chairs, a deep bench of barbers — Alex, Erik, Chuy — and a regular flow of dads bringing their kids in for their first cut.</p>
-      <p>Five stars across 443 Google reviews isn't an accident. People come back because the cuts hold, the conversation is good, and nobody walks out unhappy.</p>
-    </div>
-  </div>
+<!-- ============ Cuts ============ -->
+<section id="cuts" class="py-28 sm:py-44 max-w-4xl mx-auto px-6 sm:px-10">
+  <h2 class="font-display text-5xl sm:text-8xl tracking-[0.01em] mb-12 sm:mb-20 leading-none">Cuts.</h2>
+  <ul class="font-display text-3xl sm:text-5xl tracking-[0.01em]">
+    <li class="py-5 sm:py-7 border-t border-chalk/12">Signature fade</li>
+    <li class="py-5 sm:py-7 border-t border-chalk/12">Beard work</li>
+    <li class="py-5 sm:py-7 border-t border-chalk/12">Kids' cuts</li>
+    <li class="py-5 sm:py-7 border-t border-chalk/12">Hot-towel shave</li>
+    <li class="py-5 sm:py-7 border-t border-b border-chalk/12">Walk-ins welcome</li>
+  </ul>
 </section>
 
-<!-- ============ Pricelist (services) ============ -->
-<section id="pricelist" class="py-24 sm:py-32 bg-coal">
-  <div class="max-w-5xl mx-auto px-5 sm:px-8">
-    <div class="flex items-end justify-between flex-wrap gap-6 mb-12">
-      <div>
-        <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">The cuts</p>
-        <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">What we do.</h2>
-      </div>
-      <p class="max-w-sm text-chalk/55 text-sm leading-relaxed">Open 7 days, walk-ins welcome. Saturdays book up early — call ahead if you want a specific barber.</p>
-    </div>
-
-    <ul class="pricelist text-xl sm:text-3xl font-display tracking-[0.01em]">
-      <li>
-        <span class="title">Signature fade</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Skin, low, mid, or high — whatever the cut calls for, lined up clean.</span>
-      </li>
-      <li>
-        <span class="title">Beard work</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Shape, line-up, hot-towel detail. Comes with most cuts or solo.</span>
-      </li>
-      <li>
-        <span class="title">Kids' cuts</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Younger clients get the same time and care — easy first-haircut energy.</span>
-      </li>
-      <li>
-        <span class="title">Hot-towel shave</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Old-school straight razor finish with hot towels and aftershave.</span>
-      </li>
-      <li>
-        <span class="title">Walk-ins welcome</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Weekday afternoons rarely have a wait. Saturday mornings, call first.</span>
-      </li>
-    </ul>
-
-    <!-- Barber lineup -->
-    <div class="mt-12 sm:mt-16 flex flex-wrap items-center gap-3 sm:gap-4">
-      <span class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45">In the chairs</span>
-      <span class="text-chalk/30 hidden sm:inline">·</span>
-      <span class="font-display text-2xl sm:text-3xl md:text-4xl tracking-[0.03em] w-full sm:w-auto">ALEX · ERIK · CHUY</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Gallery — "FROM THE CHAIR" ============ -->
-<section id="gallery" class="py-20 sm:py-28">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="flex items-end justify-between flex-wrap gap-6 mb-10 sm:mb-14">
-      <div>
-        <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">From the chair</p>
-        <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">Fresh work.</h2>
-      </div>
-      <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/45 max-w-xs">
-        Photos · from the shop's Instagram
-      </p>
-    </div>
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-br from-coal to-night"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(200,205,215,0.07) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">01</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Fade</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-tr from-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(200,205,215,0.06) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">02</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Line-up</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-bl from-coal via-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(200,205,215,0.08) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">03</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Beard</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-tl from-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(200,205,215,0.06) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">04</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Kids' cut</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-br from-coal to-night"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(200,205,215,0.07) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">05</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Hot towel</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-tr from-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(200,205,215,0.07) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">06</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Walk-in</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-    </div>
-
-    <p class="mt-8 font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/40 text-center">
-      Live site syncs from the shop's Instagram grid
-    </p>
-  </div>
-</section>
-
-<!-- ============ Reviews — numbered editorial pull quotes ============ -->
-<section id="reviews" class="py-24 sm:py-32">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="flex items-end justify-between flex-wrap gap-6 mb-12 sm:mb-16">
-      <div>
-        <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">In the chair</p>
-        <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">Pomona on WRLDWIDE.</h2>
-      </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=WRLDWIDE+BARBERSHOP+596+Indian+Hill+Blvd%2C+Pomona%2C+CA+91766" target="_blank" rel="noopener"
-         class="font-mono text-[11px] uppercase tracking-[0.28em] text-chalk/65 hover:text-brand-500 transition">
-        Read all 443 reviews →
-      </a>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-x-14 gap-y-16">
-      <figure class="border-t border-chalk/15 pt-8">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">01 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"As a haircut connoisseur, I can say that world wide barbershop is a 5 star barbershop. They always go above and beyond with the cuts and make sure you get off that chair feeling great & full of confidence. The fades are some of the crispiest cuts, my friends say they’re crispier than bacon 🔥 Alex, Chuy & Alvaro always leave my cut 10 out of 10 🧼 your barbers favorite barbers!"</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— Joe SMTD</figcaption>
-      </figure>
-
-      <figure class="border-t border-chalk/15 pt-8 md:mt-12">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">02 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"Wrld Wide Barbershop is hands down one of the best shops around. Great vibes, super professional, and they really take their time to make sure your cut comes out perfect. Clean fades, sharp lineups, and consistent work every time. Everybody …"</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— Ruben Avila</figcaption>
-      </figure>
-
-      <figure class="border-t border-chalk/15 pt-8">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">03 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"Fire cuts, real family energy in the shop, and a perfect spot right next to Tierra Mia. Easily the best barbershop in Pomona. Alex never misses; clean, precise, and professional every single time. 10/10, I recommend Alex to everyone."</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— Owen Brown</figcaption>
-      </figure>
-
-      <figure class="border-t border-chalk/15 pt-8 md:mt-12">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">04 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"Erik did awesome, I have been teaching my son about how important it is to have his own barber, and I think we have found him, he took his time with the haircut and it came out clean.. we are definitely coming back to see him and this time i will wait for him to give me a haircut also."</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— iTzLonz</figcaption>
-      </figure>
-
-      <figure class="border-t border-chalk/15 pt-8">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">05 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"Man my boy Chuy got me RIGHT! Clean fade sharp line-up everything on point. Bro really knows what he's doing had me walking out feeling brand new. If you need a cut tap in with Chuy he don't miss!"</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— Pookie</figcaption>
-      </figure>
-    </div>
-  </div>
+<!-- ============ One review ============ -->
+<section id="quote" class="py-28 sm:py-44 max-w-3xl mx-auto px-6 sm:px-10">
+  <blockquote class="font-display text-3xl sm:text-5xl tracking-[0.01em] leading-[1.1]">
+    “Fire cuts, real family energy in the shop, and a perfect spot right next to Tierra Mia. Easily the best barbershop in Pomona.”
+  </blockquote>
+  <p class="mt-10 sm:mt-14 font-mono text-[11px] uppercase tracking-[0.28em] text-chalk/55">
+    Owen Brown — 1 of 443 reviews
+  </p>
+  <a href="https://www.google.com/maps/search/?api=1&query=WRLDWIDE+BARBERSHOP+596+Indian+Hill+Blvd%2C+Pomona%2C+CA+91766" target="_blank" rel="noopener"
+     class="mt-3 inline-block font-mono text-[11px] uppercase tracking-[0.28em] text-chalk/55 hover:text-chalk transition">
+    Read them all on Google →
+  </a>
 </section>
 
 <!-- ============ Visit ============ -->
-<section id="visit" class="py-24 sm:py-32 bg-coal border-y border-chalk/10">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-12">
-    <div class="lg:col-span-7">
-      <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">Visit</p>
-      <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">On Indian Hill. Next to Tierra Mia.</h2>
-      <p class="mt-8 text-chalk/70 text-lg leading-relaxed max-w-xl">Indian Hill Blvd in Pomona, right next to Tierra Mia. Open 7 days — walk-ins and appointments both welcome.</p>
+<section id="visit" class="py-28 sm:py-44 max-w-4xl mx-auto px-6 sm:px-10">
+  <h2 class="font-display text-5xl sm:text-8xl tracking-[0.01em] mb-12 sm:mb-20 leading-none">Visit.</h2>
 
-      <div class="mt-10 grid sm:grid-cols-2 gap-8">
-        <div>
-          <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45 mb-2">Address</p>
-          <p class="font-display text-2xl leading-tight">596 Indian Hill Blvd</p>
-          <p class="text-chalk/60 text-sm mt-1">Pomona, CA 91766</p>
-        </div>
-        <div>
-          <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45 mb-2">Phone</p>
-          <a href="tel:+19097668039" class="font-display text-2xl hover:text-brand-500 transition">(909) 766-8039</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="lg:col-span-5">
-      <div class="border border-chalk/15 rounded-sm p-7">
-        <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45 mb-5">Hours</p>
-        <dl class="space-y-2.5 font-display text-xl tracking-[0.02em]">
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Mon</dt><dd>10:00 AM – 7:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Tue</dt><dd>10:00 AM – 7:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Wed</dt><dd>10:00 AM – 7:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Thu</dt><dd>10:00 AM – 7:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Fri</dt><dd>10:00 AM – 8:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Sat</dt><dd>9:00 AM – 7:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Sun</dt><dd>10:00 AM – 4:00 PM</dd></div>
-        </dl>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA ============ -->
-<section id="contact" class="py-28 sm:py-40 relative overflow-hidden">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[60rem] h-[60rem] rounded-full"
-         style="background: radial-gradient(circle, var(--brand-700) 0%, transparent 65%); opacity: .45;"></div>
-  </div>
-
-  <div class="relative max-w-5xl mx-auto px-5 sm:px-8 text-center">
-    <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500 mb-6">Book a chair</p>
-    <h2 class="font-display text-[clamp(2.4rem,9vw,8rem)] leading-[0.92] sm:leading-[0.88] tracking-[0.01em] break-words">
-      Ready for a fresh cut?
-    </h2>
-    <p class="mt-8 max-w-xl mx-auto text-chalk/75 text-lg leading-relaxed">Walk in, or call to lock in a chair with the barber you want. We'll handle the rest.</p>
-    <div class="mt-10 flex flex-wrap justify-center gap-3">
+  <div class="grid sm:grid-cols-2 gap-12 sm:gap-16">
+    <div>
+      <p class="font-display text-2xl sm:text-3xl tracking-[0.02em]">596 Indian Hill Blvd</p>
+      <p class="font-display text-2xl sm:text-3xl tracking-[0.02em] text-chalk/55">Pomona, CA 91766</p>
       <a href="tel:+19097668039"
-         class="inline-flex items-center gap-3 rounded-sm bg-chalk text-night font-semibold uppercase tracking-[0.18em] text-sm px-7 py-4 hover:bg-brand-500 hover:text-chalk transition">
-        Call (909) 766-8039
+         class="mt-7 sm:mt-9 inline-block font-display text-2xl sm:text-3xl tracking-[0.04em] hover:text-brand-500 transition">
+        (909) 766-8039
       </a>
-      <a href="https://www.google.com/maps/search/?api=1&query=WRLDWIDE+BARBERSHOP+596+Indian+Hill+Blvd%2C+Pomona%2C+CA+91766" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-3 rounded-sm ring-1 ring-chalk/25 font-semibold uppercase tracking-[0.18em] text-sm px-7 py-4 hover:bg-chalk/5 transition">
-        Get directions
-      </a>
+    </div>
+    <div>
+      <p class="font-display text-2xl sm:text-3xl tracking-[0.02em]">Open daily</p>
+      <p class="mt-3 text-chalk/65 leading-relaxed">
+        10am – 7pm<br/>
+        Fridays until 8<br/>
+        Sundays until 4
+      </p>
     </div>
   </div>
 </section>
 
 <!-- ============ Footer ============ -->
-<footer class="border-t border-chalk/10">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 grid md:grid-cols-3 gap-10 text-sm">
-    <div>
-      <p class="font-display text-2xl tracking-[0.03em]">WRLDWIDE BARBERSHOP</p>
-      <p class="mt-2 text-chalk/60">596 Indian Hill Blvd<br/>Pomona, CA 91766</p>
-      <p class="mt-2"><a class="text-chalk/85 hover:text-brand-500 transition" href="tel:+19097668039">(909) 766-8039</a></p>
-    </div>
-    <div>
-      <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45 mb-3">Explore</p>
-      <ul class="space-y-2 text-chalk/70">
-        <li><a class="hover:text-chalk" href="#about">The shop</a></li>
-        <li><a class="hover:text-chalk" href="#pricelist">Cuts</a></li>
-        <li><a class="hover:text-chalk" href="#reviews">In the chair</a></li>
-        <li><a class="hover:text-chalk" href="#visit">Hours &amp; location</a></li>
-      </ul>
-    </div>
-    <div class="md:text-right">
-      <p class="text-chalk/70">Website preview created by</p>
-      <p class="text-chalk font-semibold">WestCo App Studio</p>
-      <p><a class="text-chalk/70 hover:text-chalk transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a></p>
-      <p><a class="text-chalk/70 hover:text-chalk transition" href="tel:+12135229136">(213) 522-9136</a></p>
-    </div>
-  </div>
-  <div class="border-t border-chalk/10">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 text-[11px] font-mono uppercase tracking-[0.22em] text-chalk/40 flex flex-wrap items-center justify-between gap-3">
-      <span>© 2026 WRLDWIDE BARBERSHOP</span>
-      <span>Preview built May 2026 — not the official site</span>
-    </div>
+<footer class="border-t border-chalk/10 py-10 max-w-4xl mx-auto px-6 sm:px-10">
+  <div class="flex flex-wrap items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/40">
+    <p>© 2026 WRLDWIDE BARBERSHOP</p>
+    <p>Preview · <a href="https://castanedanetworks.com" target="_blank" rel="noopener" class="hover:text-chalk transition">WestCo App Studio</a></p>
   </div>
 </footer>
 
