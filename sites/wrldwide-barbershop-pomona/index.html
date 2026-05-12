@@ -55,7 +55,7 @@
     --brand-900: #450a0a;
   }
   html { scroll-behavior: smooth; background: #0a0a0a; }
-  body { background: #0a0a0a; color: #f4f1ea; }
+  body { background: #0a0a0a; color: #f4f1ea; overflow-x: hidden; }
 
   /* Subtle film-grain texture overlay */
   .grain::before {
@@ -78,27 +78,38 @@
   }
   @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 
-  /* Pricelist dot leaders — pure CSS, no extra spans */
+  /* Pricelist dot leaders — pure CSS, no extra spans.
+     Desktop: title · dot-leader · meta on one row.
+     Mobile:  title stacked above meta, leader hidden. */
   .pricelist li {
-    display: flex; align-items: baseline; gap: 0.75rem;
-    padding: 1.25rem 0;
+    display: flex; flex-direction: column; gap: 0.4rem;
+    padding: 1.1rem 0;
     border-top: 1px solid rgba(244,241,234,0.10);
   }
   .pricelist li:last-child { border-bottom: 1px solid rgba(244,241,234,0.10); }
   .pricelist li .title { flex: 0 0 auto; }
-  .pricelist li .leader {
-    flex: 1 1 auto; border-bottom: 2px dotted rgba(244,241,234,0.18);
-    transform: translateY(-6px); margin: 0 0.25rem;
+  .pricelist li .leader { display: none; }
+  .pricelist li .meta { color: rgba(244,241,234,0.65); }
+  @media (min-width: 640px) {
+    .pricelist li { flex-direction: row; align-items: baseline; gap: 0.75rem; padding: 1.25rem 0; }
+    .pricelist li .leader {
+      display: block; flex: 1 1 auto;
+      border-bottom: 2px dotted rgba(244,241,234,0.18);
+      transform: translateY(-6px); margin: 0 0.25rem;
+    }
+    .pricelist li .meta { flex: 0 0 auto; }
   }
-  .pricelist li .meta { flex: 0 0 auto; color: rgba(244,241,234,0.65); }
 
   /* Editorial pull quote — oversized opening glyph */
   .pull-quote::before {
     content: "“";
     font-family: 'Bebas Neue', sans-serif;
     color: var(--brand-500);
-    font-size: 7rem; line-height: 0.5;
-    display: block; margin-bottom: 1rem;
+    font-size: 4.5rem; line-height: 0.5;
+    display: block; margin-bottom: 0.75rem;
+  }
+  @media (min-width: 640px) {
+    .pull-quote::before { font-size: 7rem; margin-bottom: 1rem; }
   }
 
   /* Numbered review block "01 / 05" style */
@@ -160,7 +171,7 @@
       Est. Indian Hill Blvd · Pomona, CA
     </p>
 
-    <h1 class="font-display tracking-[0.01em] leading-[0.86] text-[clamp(3.2rem,11vw,9.5rem)]">
+    <h1 class="font-display tracking-[0.01em] leading-[0.88] sm:leading-[0.86] text-[clamp(2.4rem,10vw,9.5rem)] break-words">
       SHARP FADES.<br/>
       <span style="color: var(--brand-500);">REAL FAMILY ENERGY.</span>
     </h1>
@@ -186,17 +197,17 @@
   <!-- Stats strip -->
   <div class="border-y border-chalk/10 bg-coal">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 grid grid-cols-3 divide-x divide-chalk/10">
-      <div class="py-8 sm:py-10">
-        <p class="font-mono text-[10px] uppercase tracking-[0.25em] text-chalk/50">Rating</p>
-        <p class="font-display text-5xl sm:text-6xl mt-2">5.0<span class="text-chalk/30 text-2xl">/5</span></p>
+      <div class="py-7 sm:py-10 pr-3 sm:pr-0">
+        <p class="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-chalk/50">Rating</p>
+        <p class="font-display text-3xl sm:text-5xl md:text-6xl mt-2 leading-none">5.0<span class="text-chalk/30 text-base sm:text-2xl">/5</span></p>
       </div>
-      <div class="py-8 sm:py-10 pl-6">
-        <p class="font-mono text-[10px] uppercase tracking-[0.25em] text-chalk/50">Reviews</p>
-        <p class="font-display text-5xl sm:text-6xl mt-2">443</p>
+      <div class="py-7 sm:py-10 pl-3 sm:pl-6">
+        <p class="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-chalk/50">Reviews</p>
+        <p class="font-display text-3xl sm:text-5xl md:text-6xl mt-2 leading-none">443</p>
       </div>
-      <div class="py-8 sm:py-10 pl-6">
-        <p class="font-mono text-[10px] uppercase tracking-[0.25em] text-chalk/50">Serving</p>
-        <p class="font-display text-5xl sm:text-6xl mt-2 tracking-[0.02em]">Pomona</p>
+      <div class="py-7 sm:py-10 pl-3 sm:pl-6">
+        <p class="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-chalk/50">Serving</p>
+        <p class="font-display text-3xl sm:text-5xl md:text-6xl mt-2 leading-none tracking-[0.01em]">Pomona</p>
       </div>
     </div>
   </div>
@@ -206,7 +217,7 @@
 <section id="about" class="py-24 sm:py-32">
   <div class="max-w-4xl mx-auto px-5 sm:px-8">
     <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500 mb-8">What people say</p>
-    <blockquote class="pull-quote font-display text-4xl sm:text-6xl leading-[1.05] tracking-[0.01em]">
+    <blockquote class="pull-quote font-display text-3xl sm:text-5xl md:text-6xl leading-[1.1] sm:leading-[1.05] tracking-[0.01em]">
       Fire cuts, real family energy in the shop, and a perfect spot right next to Tierra Mia. Easily the best barbershop in Pomona.
     </blockquote>
     <p class="mt-8 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">
@@ -226,12 +237,12 @@
     <div class="flex items-end justify-between flex-wrap gap-6 mb-12">
       <div>
         <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">The cuts</p>
-        <h2 class="font-display text-5xl sm:text-7xl tracking-[0.01em] mt-3">What we do.</h2>
+        <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">What we do.</h2>
       </div>
       <p class="max-w-sm text-chalk/55 text-sm leading-relaxed">Five chairs running most of the week. Walk-ins are fine, but Saturdays book up — call ahead if you want a specific barber.</p>
     </div>
 
-    <ul class="pricelist text-2xl sm:text-3xl font-display tracking-[0.01em]">
+    <ul class="pricelist text-xl sm:text-3xl font-display tracking-[0.01em]">
       <li>
         <span class="title">Signature fade</span>
         <span class="leader" aria-hidden="true"></span>
@@ -260,10 +271,10 @@
     </ul>
 
     <!-- Barber lineup -->
-    <div class="mt-16 flex flex-wrap items-center gap-3 sm:gap-4">
+    <div class="mt-12 sm:mt-16 flex flex-wrap items-center gap-3 sm:gap-4">
       <span class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45">In the chairs</span>
-      <span class="text-chalk/30">·</span>
-      <span class="font-display text-3xl sm:text-4xl tracking-[0.03em]">ALEX · ERIK · CHUY</span>
+      <span class="text-chalk/30 hidden sm:inline">·</span>
+      <span class="font-display text-2xl sm:text-3xl md:text-4xl tracking-[0.03em] w-full sm:w-auto">ALEX · ERIK · CHUY</span>
     </div>
   </div>
 </section>
@@ -271,10 +282,10 @@
 <!-- ============ Reviews — numbered editorial pull quotes ============ -->
 <section id="reviews" class="py-24 sm:py-32">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="flex items-end justify-between flex-wrap gap-6 mb-16">
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-12 sm:mb-16">
       <div>
         <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">In the chair</p>
-        <h2 class="font-display text-5xl sm:text-7xl tracking-[0.01em] mt-3">Pomona on WRLDWIDE.</h2>
+        <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">Pomona on WRLDWIDE.</h2>
       </div>
       <a href="https://www.google.com/maps/search/?api=1&query=WRLDWIDE+BARBERSHOP+596+Indian+Hill+Blvd%2C+Pomona%2C+CA+91766" target="_blank" rel="noopener"
          class="font-mono text-[11px] uppercase tracking-[0.28em] text-chalk/65 hover:text-brand-500 transition">
@@ -336,7 +347,7 @@
   <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-12">
     <div class="lg:col-span-7">
       <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">Visit</p>
-      <h2 class="font-display text-5xl sm:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">On Indian Hill. Next to Tierra Mia.</h2>
+      <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">On Indian Hill. Next to Tierra Mia.</h2>
       <p class="mt-8 text-chalk/70 text-lg leading-relaxed max-w-xl">Indian Hill Blvd in Pomona, right next to Tierra Mia. Easy parking out front, easy in and out.</p>
 
       <div class="mt-10 grid sm:grid-cols-2 gap-8">
@@ -378,7 +389,7 @@
 
   <div class="relative max-w-5xl mx-auto px-5 sm:px-8 text-center">
     <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500 mb-6">Book a chair</p>
-    <h2 class="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.88] tracking-[0.01em]">
+    <h2 class="font-display text-[clamp(2.4rem,9vw,8rem)] leading-[0.92] sm:leading-[0.88] tracking-[0.01em] break-words">
       Ready for a fresh cut?
     </h2>
     <p class="mt-8 max-w-xl mx-auto text-chalk/75 text-lg leading-relaxed">Walk in, or call to lock in a chair with the barber you want. We'll handle the rest.</p>
