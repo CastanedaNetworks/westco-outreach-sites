@@ -155,10 +155,10 @@
 
 <!-- ============ Nav ============ -->
 <header class="sticky top-0 z-40 backdrop-blur bg-night/85 border-b border-chalk/10">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-    <a href="#top" class="flex items-center gap-3">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2 sm:gap-3 min-w-0">
       <!-- Circular emblem — text-on-path wordmark + globe -->
-      <svg viewBox="0 0 200 200" class="w-9 h-9 text-chalk" aria-hidden="true">
+      <svg viewBox="0 0 200 200" class="w-7 h-7 sm:w-9 sm:h-9 text-chalk shrink-0" aria-hidden="true">
         <defs>
           <path id="emblemTop"    d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
           <path id="emblemBottom" d="M 28,100 A 72,72 0 0,0 172,100" fill="none"/>
@@ -180,7 +180,7 @@
           <path d="M -22, 14 Q 0, 30 22, 14"/>
         </g>
       </svg>
-      <span class="font-display font-extrabold text-xl tracking-[0.04em] uppercase">{{business_name}}</span>
+      <span class="font-display font-extrabold text-sm sm:text-xl tracking-[0.04em] uppercase truncate">{{business_name}}</span>
     </a>
     <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-chalk/65 font-medium">
       <a href="#about"    class="hover:text-chalk transition">The shop</a>
@@ -189,7 +189,7 @@
       <a href="#visit"    class="hover:text-chalk transition">Visit</a>
     </nav>
     <a href="tel:{{phone_tel}}"
-       class="inline-flex items-center gap-2 rounded-sm bg-chalk text-night text-xs uppercase tracking-[0.2em] font-bold px-4 py-2.5 hover:bg-brand-700 hover:text-chalk transition">
+       class="inline-flex items-center gap-2 rounded-sm bg-chalk text-night text-xs uppercase tracking-[0.2em] font-bold px-4 py-2.5 hover:bg-brand-700 hover:text-chalk transition shrink-0 whitespace-nowrap">
       <span class="hidden sm:inline">Book a chair</span>
       <span class="sm:hidden">Call</span>
     </a>

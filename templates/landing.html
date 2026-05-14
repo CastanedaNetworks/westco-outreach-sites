@@ -80,10 +80,10 @@
 
 <!-- ============ Sticky Nav ============ -->
 <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-black/5">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-    <a href="#top" class="flex items-center gap-2 font-display font-bold text-lg tracking-tight">
-      <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-600"></span>
-      {{business_name}}
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2 font-display font-bold text-sm sm:text-lg tracking-tight min-w-0">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-600 shrink-0"></span>
+      <span class="truncate">{{business_name}}</span>
     </a>
     <nav class="hidden md:flex items-center gap-7 text-sm text-ink/70">
       <a href="#services" class="hover:text-ink transition">Services</a>
@@ -92,7 +92,7 @@
       <a href="#contact"  class="hover:text-ink transition">Contact</a>
     </nav>
     <a href="tel:{{phone_tel}}"
-       class="inline-flex items-center gap-2 rounded-full bg-ink text-white text-sm font-medium px-4 py-2 hover:bg-brand-700 transition">
+       class="inline-flex items-center gap-2 rounded-full bg-ink text-white text-sm font-medium px-4 py-2 hover:bg-brand-700 transition shrink-0 whitespace-nowrap">
       <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 0 0 2.25-2.25v-1.372a1.5 1.5 0 0 0-1.06-1.435l-3.94-1.182a1.5 1.5 0 0 0-1.6.547l-.86 1.146a11.25 11.25 0 0 1-5.32-5.32l1.146-.86a1.5 1.5 0 0 0 .547-1.6L7.728 5.81a1.5 1.5 0 0 0-1.435-1.06H4.5A2.25 2.25 0 0 0 2.25 7v-.25Z"/>
       </svg>

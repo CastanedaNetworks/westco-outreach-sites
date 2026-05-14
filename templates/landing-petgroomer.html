@@ -139,17 +139,17 @@
 
 <!-- ============ Nav ============ -->
 <header class="sticky top-0 z-40 backdrop-blur bg-paper/85 border-b border-ink/5">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-    <a href="#top" class="flex items-center gap-2.5 font-display font-bold text-lg tracking-tight">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2 sm:gap-2.5 font-display font-bold text-sm sm:text-lg tracking-tight min-w-0">
       <!-- Paw mark -->
-      <svg class="w-6 h-6 text-brand-600" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <svg class="w-5 h-5 sm:w-6 sm:h-6 text-brand-600 shrink-0" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
         <ellipse cx="9" cy="11" rx="2.4" ry="3"/>
         <ellipse cx="16" cy="8" rx="2.4" ry="3"/>
         <ellipse cx="23" cy="11" rx="2.4" ry="3"/>
         <ellipse cx="5" cy="17" rx="2" ry="2.6"/>
         <path d="M16 14c-4.5 0-8 3.4-8 7.2 0 2.6 2 4.3 4.6 4.3 1.6 0 2.5-.7 3.4-.7s1.8.7 3.4.7c2.6 0 4.6-1.7 4.6-4.3 0-3.8-3.5-7.2-8-7.2z"/>
       </svg>
-      {{business_name}}
+      <span class="truncate">{{business_name}}</span>
     </a>
     <nav class="hidden md:flex items-center gap-7 text-sm text-ink/70">
       <a href="#about"    class="hover:text-ink transition">About</a>
@@ -158,7 +158,7 @@
       <a href="#visit"    class="hover:text-ink transition">Visit</a>
     </nav>
     <a href="tel:{{phone_tel}}"
-       class="inline-flex items-center gap-2 rounded-full bg-ink text-paper text-sm font-medium px-4 py-2 hover:bg-brand-700 transition">
+       class="inline-flex items-center gap-2 rounded-full bg-ink text-paper text-sm font-medium px-4 py-2 hover:bg-brand-700 transition shrink-0 whitespace-nowrap">
       <span class="hidden sm:inline">{{phone_display}}</span>
       <span class="sm:hidden">Call</span>
     </a>
