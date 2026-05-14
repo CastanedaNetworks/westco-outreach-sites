@@ -94,7 +94,7 @@
   .section-num {
     font-family: 'Anton', Impact, sans-serif;
     font-weight: 400;
-    font-size: clamp(7rem, 18vw, 14rem);
+    font-size: clamp(4.5rem, 18vw, 14rem);
     line-height: 0.82;
     color: transparent;
     -webkit-text-stroke: 1.5px var(--brand-500);
@@ -159,16 +159,19 @@
 
 <!-- ============ Nav ============ -->
 <header class="sticky top-0 z-40 bg-asphalt/95 backdrop-blur border-b border-chalk/10">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
-    <a href="#top" class="flex items-center gap-3 shrink-0">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 h-14 sm:h-20 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2 sm:gap-3 min-w-0">
       <!-- Bolt-head mark -->
-      <svg viewBox="0 0 32 32" class="w-7 h-7 text-hi" aria-hidden="true">
+      <svg viewBox="0 0 32 32" class="w-6 h-6 sm:w-7 sm:h-7 text-hi shrink-0" aria-hidden="true">
         <path fill="currentColor" d="M16 2 L28 9 L28 23 L16 30 L4 23 L4 9 Z M16 8 L9 12 L9 20 L16 24 L23 20 L23 12 Z"/>
       </svg>
-      <span class="display-h text-xl sm:text-2xl tracking-[0.02em]">Covina Complete Auto Repair</span>
+      <span class="display-h text-sm sm:text-2xl tracking-[0.02em] truncate">
+        <span class="sm:hidden">Covina Complete</span>
+        <span class="hidden sm:inline">Covina Complete Auto Repair</span>
+      </span>
     </a>
     <a href="tel:+16266992348"
-       class="display-h tracking-[0.04em] text-base sm:text-lg text-chalk hover:text-hi transition">
+       class="display-h tracking-[0.04em] text-sm sm:text-lg text-chalk hover:text-hi transition shrink-0 whitespace-nowrap">
       <span class="text-hi">→</span> (626) 699-2348
     </a>
   </div>
@@ -187,7 +190,7 @@
         File · JOE-Covina · Open work order
       </p>
 
-      <h1 class="display-h relative mt-8 text-[clamp(3.4rem,9vw,7.5rem)]">
+      <h1 class="display-h relative mt-8 text-[clamp(2.8rem,9vw,7.5rem)]">
         Honest mechanics<br/>
         <span class="text-hi">are hard to find.</span>
       </h1>
@@ -204,14 +207,14 @@
         </div>
       </div>
 
-      <div class="relative mt-12 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm">
+      <div class="relative mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
         <a href="tel:+16266992348" class="blade-btn inline-flex items-center bg-hi text-asphalt font-semibold uppercase tracking-[0.18em] text-xs px-5 py-3.5 hover:bg-chalk transition">
           Call (626) 699-2348
         </a>
-        <a href="#services" class="text-chalk/75 font-medium hover:text-hi transition uppercase tracking-[0.18em] text-xs">
+        <a href="#services" class="text-chalk/75 font-medium hover:text-hi transition uppercase tracking-[0.18em] text-xs py-2">
           Services →
         </a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Covina+Complete+Auto+Repair+859+W+Covina+Blvd%2C+Covina%2C+CA+91722" target="_blank" rel="noopener" class="text-chalk/75 font-medium hover:text-hi transition uppercase tracking-[0.18em] text-xs">
+        <a href="https://www.google.com/maps/search/?api=1&query=Covina+Complete+Auto+Repair+859+W+Covina+Blvd%2C+Covina%2C+CA+91722" target="_blank" rel="noopener" class="text-chalk/75 font-medium hover:text-hi transition uppercase tracking-[0.18em] text-xs py-2">
           Directions ↗
         </a>
       </div>
@@ -262,7 +265,7 @@
   <span class="section-num absolute top-4 right-4 sm:top-8 sm:right-10 opacity-20" aria-hidden="true">01</span>
   <div class="max-w-5xl mx-auto px-5 sm:px-8 relative">
     <p class="field">From the field · Google review</p>
-    <blockquote class="display-h mt-7 text-[clamp(2.5rem,6.5vw,5.5rem)] tracking-[-0.01em]">
+    <blockquote class="display-h mt-7 text-[clamp(1.9rem,6.5vw,5.5rem)] tracking-[-0.01em]">
       “Joe is the absolute best mechanic, plus he's nice, and he cares about his customers — a very difficult mix of professional for hire to find these days.”
     </blockquote>
     <p class="font-type text-sm tracking-[0.2em] uppercase text-hi mt-10">
@@ -279,7 +282,7 @@
 
     <div class="lg:col-span-4 relative">
       <p class="field">Services covered</p>
-      <h2 class="display-h mt-4 text-[clamp(2.6rem,6vw,5rem)]">
+      <h2 class="display-h mt-4 text-[clamp(2.1rem,6vw,5rem)]">
         What we service.
       </h2>
       <p class="mt-7 text-chalk/65 leading-relaxed max-w-sm">
@@ -352,7 +355,7 @@
     </div>
     <div class="lg:col-span-7">
       <p class="field">About the shop</p>
-      <h2 class="display-h mt-3 text-[clamp(2.6rem,6vw,5rem)]">
+      <h2 class="display-h mt-3 text-[clamp(2.1rem,6vw,5rem)]">
         Mr Joe at the bench.
       </h2>
       <div class="mt-8 space-y-5 text-[17px] text-chalk/80 leading-relaxed max-w-2xl">
@@ -369,7 +372,7 @@
   <div class="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28 grid lg:grid-cols-12 gap-12">
     <div class="lg:col-span-7">
       <p class="field">Hours &amp; address</p>
-      <h2 class="display-h mt-3 text-[clamp(2.6rem,6vw,5rem)]">On W. Covina Blvd.</h2>
+      <h2 class="display-h mt-3 text-[clamp(2.1rem,6vw,5rem)]">On W. Covina Blvd.</h2>
       <p class="mt-7 text-chalk/65 leading-relaxed max-w-xl">859 W. Covina Blvd. Pull in for a free estimate or call ahead so Joe can pencil you in.</p>
 
       <div class="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-8">
@@ -411,10 +414,10 @@
   <span class="section-num absolute top-6 left-4 sm:left-10 opacity-15" aria-hidden="true">05</span>
   <div class="max-w-5xl mx-auto px-5 sm:px-8 relative">
     <p class="field">Step one</p>
-    <h2 class="display-h mt-4 text-[clamp(2.8rem,8vw,6.5rem)]">Bring the car in.</h2>
+    <h2 class="display-h mt-4 text-[clamp(2.4rem,8vw,6.5rem)]">Bring the car in.</h2>
     <p class="mt-7 max-w-xl text-chalk/75 text-lg leading-relaxed">Pull up, get a free estimate. Or call (626) 699-2348 and Joe will tell you what's worth fixing and what isn't.</p>
 
-    <a href="tel:+16266992348" class="display-h block mt-12 text-[clamp(3rem,12vw,8rem)] text-hi hover:text-chalk transition tracking-[0.01em]">
+    <a href="tel:+16266992348" class="display-h block mt-12 text-[clamp(2.4rem,12vw,8rem)] text-hi hover:text-chalk transition tracking-[0.01em]">
       (626) 699-2348
     </a>
 
