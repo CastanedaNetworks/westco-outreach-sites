@@ -3,564 +3,1002 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>SN Barbershop — El Monte, CA</title>
-<meta name="description" content="SN Barbershop on Peck Rd, El Monte. Second-generation family shop with Jesse and Julian on the chairs. 4.7 across 101 Google reviews. Cash only." />
+<title>SN Barbershop — Programme · 4705 Peck Rd, El Monte</title>
+<meta name="description" content="SN Barbershop, El Monte. Since 1997. 4.7 stars across 101 Google reviews. Jesse, Julian, and the second-generation chair on Peck Rd. Cash only, ATM inside." />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/sn-barbershop-el-monte/" />
 
-<meta property="og:title" content="SN Barbershop" />
-<meta property="og:description" content="SN Barbershop on Peck Rd, El Monte. Second-generation family shop with Jesse and Julian on the chairs. 4.7 across 101 Google reviews. Cash only." />
+<meta property="og:title" content="SN Barbershop — Programme · 4705 Peck Rd, El Monte" />
+<meta property="og:description" content="SN Barbershop, El Monte. Since 1997. 4.7 stars across 101 Google reviews. Jesse, Julian, and the second-generation chair on Peck Rd. Cash only, ATM inside." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://castanedanetworks.github.io/westco-outreach-sites/sites/sn-barbershop-el-monte/" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans:    ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          display: ['"Big Shoulders Display"', 'Impact', '"Arial Narrow"', 'sans-serif'],
-          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-        },
-        colors: {
-          brand: {
-            50:  'var(--brand-50)',
-            100: 'var(--brand-100)',
-            500: 'var(--brand-500)',
-            600: 'var(--brand-600)',
-            700: 'var(--brand-700)',
-            900: 'var(--brand-900)',
-          },
-          night: '#0a0a0a',
-          coal:  '#161616',
-          smoke: '#2a2a2a',
-          chalk: '#f4f1ea',
-        },
-      },
-    },
-  };
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
 <style>
-  :root {
-    --brand-50:  #f1f2f5;
-    --brand-100: #d8dade;
-    --brand-500: #c0c5cc;
-    --brand-600: #989aa3;
-    --brand-700: #6e7077;
-    --brand-900: #1a1b1e;
-  }
-  html { scroll-behavior: smooth; background: #0a0a0a; }
-  body { background: #0a0a0a; color: #f4f1ea; overflow-x: hidden; }
-  .font-display { font-weight: 800; }   /* Big Shoulders Display needs an explicit heavy weight */
+/* ─────────────────────────────────────────────────────────────
+   Foundations
+   ───────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; transition: color .15s; }
+a:hover { color: var(--red); }
 
-  /* Brushed effect for display headlines — pulls light/shadow across the type.
-     Driven by brand-* vars so each prospect's palette colors the gradient
-     (silver palette → chrome; red palette → enamel-red; etc.) */
-  .chrome {
-    background: linear-gradient(180deg,
-      var(--brand-50)  0%,
-      var(--brand-500) 38%,
-      var(--brand-700) 52%,
-      var(--brand-500) 64%,
-      var(--brand-50)  100%);
-    -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
+:root {
+  --paper:   #ede5d0;   /* yellowed newsprint */
+  --paper-2: #e0d5b6;
+  --ink:     #181410;
+  --ink-2:   rgba(24, 20, 16, 0.68);
+  --ink-3:   rgba(24, 20, 16, 0.42);
+  --red:     #c81e1e;
+  --red-dk:  #9a1212;
+  --blue:    #224a8a;
+  --hair:    rgba(24, 20, 16, 0.22);
+  --hair-2:  rgba(24, 20, 16, 0.10);
+}
 
-  /* Subtle film-grain texture overlay */
-  .grain::before {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background-image:
-      radial-gradient(rgba(244,241,234,0.025) 1px, transparent 1px);
-    background-size: 2px 2px;
-    mix-blend-mode: overlay;
-  }
+.display { font-family: 'Anton', Impact, 'Arial Narrow', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.005em; line-height: 0.9; }
+.serif   { font-family: 'Lora', Georgia, serif; }
+.mono    { font-family: 'Space Mono', 'JetBrains Mono', ui-monospace, monospace; }
 
-  /* Marquee */
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-  .marquee-track {
-    display: flex; gap: 3rem;
-    animation: marquee 38s linear infinite;
-    white-space: nowrap;
-  }
-  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+.kicker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.kicker--red { color: var(--red); }
 
-  /* Pricelist dot leaders — pure CSS, no extra spans.
-     Desktop: title · dot-leader · meta on one row.
-     Mobile:  title stacked above meta, leader hidden. */
-  .pricelist li {
-    display: flex; flex-direction: column; gap: 0.4rem;
-    padding: 1.1rem 0;
-    border-top: 1px solid rgba(244,241,234,0.10);
-  }
-  .pricelist li:last-child { border-bottom: 1px solid rgba(244,241,234,0.10); }
-  .pricelist li .title { flex: 0 0 auto; }
-  .pricelist li .leader { display: none; }
-  .pricelist li .meta { color: rgba(244,241,234,0.65); }
-  @media (min-width: 640px) {
-    .pricelist li { flex-direction: row; align-items: baseline; gap: 0.75rem; padding: 1.25rem 0; }
-    .pricelist li .leader {
-      display: block; flex: 1 1 auto;
-      border-bottom: 2px dotted rgba(244,241,234,0.18);
-      transform: translateY(-6px); margin: 0 0.25rem;
-    }
-    .pricelist li .meta { flex: 0 0 auto; }
-  }
+.dropcap::first-letter {
+  font-family: 'Anton', Impact, sans-serif;
+  float: left;
+  font-size: 4em;
+  line-height: 0.78;
+  margin: 0.05em 0.15em 0 0;
+  color: var(--red);
+  text-transform: uppercase;
+}
 
-  /* Editorial pull quote — oversized opening glyph */
-  .pull-quote::before {
-    content: "“";
-    font-family: 'Big Shoulders Display', Impact, sans-serif;
-    font-weight: 900;
-    color: var(--brand-500);
-    font-size: 4.5rem; line-height: 0.6;
-    display: block; margin-bottom: 0.5rem;
-  }
-  @media (min-width: 640px) {
-    .pull-quote::before { font-size: 7rem; margin-bottom: 1rem; }
-  }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 22px; }
+@media (min-width: 768px) { .wrap { padding: 0 40px; } }
+@media (min-width: 1100px) { .wrap { padding: 0 56px; } }
 
-  /* Numbered review block "01 / 05" style */
-  .review-no { font-family: 'JetBrains Mono', monospace; color: var(--brand-500); letter-spacing: 0.1em; }
+/* Barber-pole rule */
+.pole {
+  height: 12px;
+  background:
+    repeating-linear-gradient(115deg,
+      var(--red)   0 14px,
+      var(--paper) 14px 28px,
+      var(--blue)  28px 42px,
+      var(--paper) 42px 56px
+    );
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+/* Ticket-stub bar */
+.stub { background: var(--paper); border-bottom: 1px solid var(--ink); }
+.stub__row {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px; padding: 9px 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.stub__row .right { display: none; }
+@media (min-width: 600px) { .stub__row .right { display: inline; } }
+
+/* Nav — solid, no blur */
+.nav {
+  position: sticky; top: 0; z-index: 30;
+  background: var(--paper);
+  border-bottom: 1px solid var(--ink);
+}
+.nav__row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 12px 0;
+}
+.nav__mark {
+  display: inline-flex; align-items: baseline; gap: 8px;
+  white-space: nowrap; overflow: hidden;
+}
+.nav__sn {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.nav__sn .red-dot {
+  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--red); vertical-align: middle;
+  margin: 0 2px 4px;
+}
+.nav__sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  display: none;
+}
+@media (min-width: 600px) { .nav__sub { display: inline; } }
+.nav__links {
+  display: none;
+  gap: 24px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+@media (min-width: 920px) { .nav__links { display: flex; } }
+.nav__cta {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--ink);
+  padding: 11px 18px;
+  border: 1px solid var(--ink);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.nav__cta:hover { background: var(--red); color: var(--paper); }
+@media (min-width: 600px) { .nav__cta { padding: 12px 22px; } }
+
+/* Cover */
+.cover { padding: 56px 0 36px; }
+@media (min-width: 768px) { .cover { padding: 88px 0 56px; } }
+@media (min-width: 1100px) { .cover { padding: 120px 0 72px; } }
+
+.cover__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 16px; flex-wrap: wrap;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 10px;
+  margin-bottom: 22px;
+}
+.cover__head b { color: var(--red); font-weight: 700; }
+
+.cover__sn {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(7rem, 32vw, 22rem);
+  letter-spacing: -0.01em;
+  line-height: 0.84;
+  color: var(--ink);
+  margin-left: -0.04em;
+  display: block;
+  text-transform: uppercase;
+}
+.cover__sn .dot {
+  display: inline-block;
+  vertical-align: 0.18em;
+  width: 0.12em; height: 0.12em;
+  border-radius: 50%;
+  background: var(--red);
+  margin: 0 0.06em;
+}
+
+.cover__sub {
+  margin-top: clamp(1rem, 3vw, 1.5rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) { .cover__sub { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.cover__sub .label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: block;
+  margin-bottom: 4px;
+}
+.cover__sub .val {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+/* Tale of the Tape */
+.tape {
+  background: var(--paper-2);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.tape__row { display: grid; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 768px) { .tape__row { grid-template-columns: repeat(4, 1fr); } }
+.tape__cell {
+  padding: 22px 18px;
+  border-right: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+.tape__cell:nth-child(2n) { border-right: 0; }
+@media (min-width: 768px) {
+  .tape__cell { padding: 28px; border-bottom: 0; }
+  .tape__cell:nth-child(2n) { border-right: 1px solid var(--hair); }
+  .tape__cell:last-child    { border-right: 0; }
+}
+.tape__label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+.tape__num {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  line-height: 0.92;
+  color: var(--ink);
+  text-transform: uppercase;
+}
+.tape__num .small {
+  font-size: 0.42em;
+  color: var(--ink-3);
+  vertical-align: 0.5em;
+  margin-left: 4px;
+  letter-spacing: 0.1em;
+}
+.tape__num .star { color: var(--red); }
+
+/* Plates */
+.plate {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--paper-2);
+}
+.plate img {
+  width: 100%;
+  filter: contrast(1.06) saturate(0.85) sepia(0.08);
+}
+.plate--banner img    { aspect-ratio: 21 / 9;   object-fit: cover; }
+.plate--portrait img  { aspect-ratio: 4 / 5;    object-fit: cover; }
+.plate--detail img    { aspect-ratio: 3 / 2;    object-fit: cover; }
+.plate__caption {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 16px; padding: 12px 22px;
+  background: var(--paper);
+  border-top: 1px solid var(--ink);
+}
+@media (min-width: 768px) { .plate__caption { padding: 14px 40px; } }
+.plate__caption em {
+  font-family: 'Lora', serif; font-style: italic;
+  color: var(--ink); font-size: 0.95rem;
+}
+.plate__caption span {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* Round */
+.round {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--ink);
+}
+@media (min-width: 768px) { .round { padding: 88px 0; } }
+.round__grid {
+  display: grid; grid-template-columns: 1fr; gap: 24px;
+}
+@media (min-width: 900px) {
+  .round__grid { grid-template-columns: 130px 1fr; gap: 56px; }
+}
+.round__num {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3.6rem, 9vw, 6.5rem);
+  line-height: 0.85;
+  color: var(--red);
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+.round__num small {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-top: 6px;
+  font-weight: 400;
+}
+.round__h {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(2.1rem, 6vw, 4.4rem);
+  line-height: 0.96;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  margin-top: 8px;
+}
+.round__h .red { color: var(--red); }
+
+.lede {
+  font-family: 'Lora', serif;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-top: 24px;
+  max-width: 40rem;
+}
+.lede p + p { margin-top: 1em; }
+.aside-pull {
+  margin-top: 28px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--red);
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(1.5rem, 3.8vw, 2.4rem);
+  line-height: 1.05;
+  color: var(--ink);
+  text-transform: uppercase;
+  max-width: 30rem;
+}
+.aside-pull cite {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-top: 12px;
+}
+@media (min-width: 1100px) {
+  .lede--with-pull {
+    display: grid; grid-template-columns: 1fr 18rem; gap: 56px;
+    max-width: none;
+  }
+  .lede--with-pull .lede-body { max-width: 36rem; }
+  .lede--with-pull .aside-pull { margin-top: 0; }
+}
+
+/* Card (services as a fight card) */
+.card {
+  margin-top: 32px;
+  border-top: 4px double var(--ink);
+}
+.card__row {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--hair);
+}
+@media (min-width: 768px) {
+  .card__row {
+    grid-template-columns: 60px 12rem 1fr 6rem;
+    gap: 28px;
+  }
+}
+.card__num {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--red);
+  text-transform: uppercase;
+  padding-top: 4px;
+}
+.card__name {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.55rem;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+.card__desc {
+  font-family: 'Lora', serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+  grid-column: 2 / -1;
+  margin-top: 6px;
+}
+@media (min-width: 768px) { .card__desc { grid-column: auto; margin-top: 0; } }
+.card__price {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.55rem;
+  color: var(--ink);
+  text-transform: uppercase;
+  grid-column: 2 / -1;
+  margin-top: 6px;
+}
+@media (min-width: 768px) { .card__price { grid-column: auto; margin-top: 0; text-align: right; } }
+.card__price .from {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  color: var(--ink-3);
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Spread (roster + photo) */
+.spread {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 32px;
+}
+@media (min-width: 900px) { .spread { grid-template-columns: 1fr 1fr; gap: 56px; } }
+.spread__figure { margin: 0; }
+.spread__figure img {
+  width: 100%;
+  filter: contrast(1.05) saturate(0.85) sepia(0.05);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+.spread__figure figcaption {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 16px;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--ink-2);
+  margin-top: 12px;
+  border-top: 1px solid var(--hair);
+  padding-top: 8px;
+}
+.spread__figure figcaption span {
+  font-family: 'Space Mono', monospace;
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.roster { margin-top: 4px; }
+.roster__entry {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--hair);
+}
+.roster__num {
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  color: var(--red);
+  line-height: 0.9;
+}
+.roster__name {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  color: var(--ink);
+}
+.roster__bio {
+  font-family: 'Lora', serif;
+  font-size: 0.98rem;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin-top: 6px;
+  grid-column: 2 / -1;
+}
+
+/* Visit tabular */
+.tabular {
+  margin-top: 32px;
+  border-top: 4px double var(--ink);
+}
+.tabular__row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--hair);
+  align-items: baseline;
+}
+@media (min-width: 768px) {
+  .tabular__row { grid-template-columns: 160px 1fr auto; gap: 28px; }
+}
+.tabular__key {
+  font-family: 'Space Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.tabular__val {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.tabular__val b {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.tabular__edge {
+  display: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+@media (min-width: 768px) { .tabular__edge { display: inline; } }
+
+.hours {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--ink);
+}
+@media (min-width: 600px) { .hours { grid-template-columns: repeat(7, 1fr); } }
+.hours__day {
+  text-align: center;
+  padding: 14px 8px;
+  border-right: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+.hours__day:nth-child(2n) { border-right: 0; }
+@media (min-width: 600px) {
+  .hours__day { border-bottom: 0; }
+  .hours__day:nth-child(2n) { border-right: 1px solid var(--hair); }
+  .hours__day:last-child { border-right: 0; }
+}
+.hours__day-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: block;
+  margin-bottom: 6px;
+}
+.hours__day-time {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.hours__day--closed .hours__day-time { color: var(--ink-3); }
+
+/* Book / CTA */
+.book {
+  padding: 72px 0 96px;
+  border-bottom: 1px solid var(--ink);
+}
+@media (min-width: 768px) { .book { padding: 120px 0 136px; } }
+.book__line {
+  display: grid; grid-template-columns: 1fr; gap: 10px;
+  align-items: baseline; margin-top: 18px;
+}
+@media (min-width: 768px) { .book__line { grid-template-columns: auto 1fr; gap: 26px; } }
+.book__verb {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(2.6rem, 9vw, 6.2rem);
+  line-height: 0.94;
+  color: var(--ink);
+}
+.book__link {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(2.2rem, 7.5vw, 5.4rem);
+  color: var(--red);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  display: inline-block;
+  border-bottom: 3px solid var(--red);
+  padding-bottom: 4px;
+}
+.book__link:hover { color: var(--red-dk); }
+.book__sub {
+  margin-top: 26px;
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: var(--ink-2);
+  max-width: 34rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.foot { padding: 40px 0 56px; }
+.foot__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .foot__grid { grid-template-columns: 1.5fr 1fr 1fr; gap: 56px; }
+}
+.foot__mark {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.foot__mark .dot {
+  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--red); margin: 0 2px 5px; vertical-align: middle;
+}
+.foot__set {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--ink-2);
+  margin-top: 14px;
+  line-height: 1.6;
+  max-width: 28rem;
+}
+.foot__col p {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+}
+.foot__col a, .foot__col span {
+  font-family: 'Lora', serif;
+  font-size: 0.98rem;
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+.foot__bar {
+  border-top: 1px solid var(--ink);
+  margin-top: 40px; padding-top: 18px;
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
 </style>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ga4_id}}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ga4_id}}', { 'anonymize_ip': true });
-</script>
 </head>
 
-<body class="font-sans antialiased">
+<body>
 
-<!-- ============ Top marquee ticker ============ -->
-<div class="border-b border-chalk/10 bg-night overflow-hidden">
-  <div class="marquee-track py-3 font-mono text-[11px] uppercase tracking-[0.25em] text-chalk/55">
-    <span>SN BARBERSHOP · EL MONTE · 4705 PECK RD · JESSE & JULIAN · CASH ONLY · ATM INSIDE · WALK-INS + APPOINTMENTS · 4.7 ★ 101 GOOGLE REVIEWS</span>
-    <span aria-hidden="true">SN BARBERSHOP · EL MONTE · 4705 PECK RD · JESSE & JULIAN · CASH ONLY · ATM INSIDE · WALK-INS + APPOINTMENTS · 4.7 ★ 101 GOOGLE REVIEWS</span>
+<!-- Ticket-stub bar -->
+<div class="stub">
+  <div class="wrap stub__row">
+    <span>Programme No. 1997 · est. 1997</span>
+    <span class="right">Admission · Walk-in or Appointment</span>
   </div>
 </div>
 
-<!-- ============ Nav ============ -->
-<header class="sticky top-0 z-40 backdrop-blur bg-night/85 border-b border-chalk/10">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-    <a href="#top" class="flex items-center gap-3">
-      <!-- Circular emblem — text-on-path wordmark + globe -->
-      <svg viewBox="0 0 200 200" class="w-9 h-9 text-chalk" aria-hidden="true">
-        <defs>
-          <path id="emblemTop"    d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
-          <path id="emblemBottom" d="M 28,100 A 72,72 0 0,0 172,100" fill="none"/>
-        </defs>
-        <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="3"/>
-        <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
-        <text font-family="'Big Shoulders Display', Impact, sans-serif" font-weight="900" font-size="22" letter-spacing="3.5" fill="currentColor">
-          <textPath href="#emblemTop" startOffset="50%" text-anchor="middle">WRLDWIDE BARBERSHOP</textPath>
-        </text>
-        <text font-family="'Big Shoulders Display', Impact, sans-serif" font-weight="700" font-size="15" letter-spacing="6" fill="currentColor">
-          <textPath href="#emblemBottom" startOffset="50%" text-anchor="middle">★ POMONA · CA ★</textPath>
-        </text>
-        <!-- Globe in center -->
-        <g transform="translate(100,100)" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
-          <circle r="26"/>
-          <ellipse rx="26" ry="10"/>
-          <line x1="-26" y1="0" x2="26" y2="0"/>
-          <path d="M -22,-14 Q 0,-30 22,-14"/>
-          <path d="M -22, 14 Q 0, 30 22, 14"/>
-        </g>
-      </svg>
-      <span class="font-display font-extrabold text-xl tracking-[0.04em] uppercase">SN Barbershop</span>
+<!-- Barber-pole rule -->
+<div class="pole" aria-hidden="true"></div>
+
+<!-- Nav -->
+<header class="nav">
+  <div class="wrap nav__row">
+    <a href="#top" class="nav__mark">
+      <span class="nav__sn">S<span class="red-dot"></span>N</span>
+      <span class="nav__sub">Barbershop · El Monte</span>
     </a>
-    <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-chalk/65 font-medium">
-      <a href="#about"    class="hover:text-chalk transition">The shop</a>
-      <a href="#pricelist" class="hover:text-chalk transition">Cuts</a>
-      <a href="#reviews"  class="hover:text-chalk transition">In the chair</a>
-      <a href="#visit"    class="hover:text-chalk transition">Visit</a>
+    <nav class="nav__links">
+      <a href="#tape">Tale of the tape</a>
+      <a href="#round-01">§ Shop</a>
+      <a href="#round-02">§ Card</a>
+      <a href="#round-03">§ Chairs</a>
+      <a href="#round-04">§ Visit</a>
     </nav>
-    <a href="tel:+16264542393"
-       class="inline-flex items-center gap-2 rounded-sm bg-chalk text-night text-xs uppercase tracking-[0.2em] font-bold px-4 py-2.5 hover:bg-brand-700 hover:text-chalk transition">
-      <span class="hidden sm:inline">Book a chair</span>
-      <span class="sm:hidden">Call</span>
-    </a>
+    <a href="tel:+16264542393" class="nav__cta">Call ↗</a>
   </div>
 </header>
 
-<!-- ============ Hero ============ -->
-<section id="top" class="relative overflow-hidden grain">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-1/4 -right-32 w-[40rem] h-[40rem] rounded-full"
-         style="background: radial-gradient(circle, var(--brand-700) 0%, transparent 60%); opacity: .35;"></div>
-  </div>
-
-  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-20 sm:pt-28 sm:pb-32">
-    <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500 mb-7">
-      4705 Peck Rd · El Monte · cash only (ATM inside)
-    </p>
-
-    <h1 class="font-display tracking-[0.01em] leading-[0.88] sm:leading-[0.86] text-[clamp(2.4rem,10vw,9.5rem)] break-words">
-      JESSE. JULIAN.<br/>
-      <span class="chrome">PECK ROAD CHAIRS.</span>
-    </h1>
-
-    <div class="mt-10 grid lg:grid-cols-12 gap-10 items-end">
-      <p class="lg:col-span-7 text-chalk/75 text-lg leading-relaxed max-w-2xl">
-        Two chairs on Peck Road. Cash only — there's an ATM in the shop. Walk in most days, or call to set a weekend slot.
-      </p>
-
-      <div class="lg:col-span-5 flex flex-wrap gap-3 lg:justify-end">
-        <a href="tel:+16264542393"
-           class="inline-flex items-center gap-3 rounded-sm bg-chalk text-night font-semibold uppercase tracking-[0.18em] text-sm px-6 py-4 hover:bg-brand-500 hover:text-chalk transition">
-          Call (626) 454-2393
-        </a>
-        <a href="#pricelist"
-           class="inline-flex items-center gap-3 rounded-sm ring-1 ring-chalk/25 font-semibold uppercase tracking-[0.18em] text-sm px-6 py-4 hover:bg-chalk/5 transition">
-          See the cuts →
-        </a>
-      </div>
+<!-- Cover -->
+<section id="top" class="cover">
+  <div class="wrap">
+    <div class="cover__head">
+      <span><b>Programme</b> · Vol. 1, Issue 1997 · El Monte, CA</span>
+      <span>Mon&ndash;Sat · 9 am to 6 pm</span>
     </div>
-  </div>
 
-  <!-- Stats strip -->
-  <div class="border-y border-chalk/10 bg-coal">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid grid-cols-3 divide-x divide-chalk/10">
-      <div class="py-7 sm:py-10 pr-3 sm:pr-0">
-        <p class="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-chalk/50">Rating</p>
-        <p class="font-display text-3xl sm:text-5xl md:text-6xl mt-2 leading-none">4.7<span class="text-chalk/30 text-base sm:text-2xl">/5</span></p>
-      </div>
-      <div class="py-7 sm:py-10 pl-3 sm:pl-6">
-        <p class="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-chalk/50">Reviews</p>
-        <p class="font-display text-3xl sm:text-5xl md:text-6xl mt-2 leading-none">101</p>
-      </div>
-      <div class="py-7 sm:py-10 pl-3 sm:pl-6">
-        <p class="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-chalk/50">Serving</p>
-        <p class="font-display text-3xl sm:text-5xl md:text-6xl mt-2 leading-none tracking-[0.01em]">El Monte</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <span class="cover__sn">S<span class="dot"></span>N</span>
 
-<!-- ============ Pull quote ============ -->
-<section id="about" class="py-24 sm:py-32">
-  <div class="max-w-4xl mx-auto px-5 sm:px-8">
-    <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500 mb-8">101 reviews. one says it well.</p>
-    <blockquote class="pull-quote font-display text-3xl sm:text-5xl md:text-6xl leading-[1.1] sm:leading-[1.05] tracking-[0.01em]">
-      Julian made my hair look even better than imagined. I wasn't sure what cut to go with so he helped me decide. It came out looking amazing.
-    </blockquote>
-    <p class="mt-8 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">
-      — Gordon Hebert · Google review
-    </p>
-
-    <div class="mt-16 grid sm:grid-cols-2 gap-10 text-chalk/75 leading-relaxed text-[17px]">
-      <p>SN Barbershop's been on Peck Road for years. The founder started it, and after he passed his son kept the chairs running with the same standards. Jesse and Julian handle most of the walk-ins.</p>
-      <p>Art Mendoza summed it up in his review: the son cuts just as professionally as his late father did. New regulars walk in for Julian, longtime ones stay for the continuity.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Pricelist ============ -->
-<section id="pricelist" class="py-24 sm:py-32 bg-coal">
-  <div class="max-w-5xl mx-auto px-5 sm:px-8">
-    <div class="flex items-end justify-between flex-wrap gap-6 mb-12">
+    <div class="cover__sub">
       <div>
-        <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">The cuts</p>
-        <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">Cuts.</h2>
+        <span class="label">The shop</span>
+        <span class="val">Barbershop, established 1997. Second-generation chairs on Peck Road.</span>
       </div>
-      <p class="max-w-sm text-chalk/55 text-sm leading-relaxed">Two chairs. Walk-ins welcome most days. Weekend appointments fill fast — call Friday for Saturday.</p>
-    </div>
-
-    <ul class="pricelist text-xl sm:text-3xl font-display tracking-[0.01em]">
-      <li>
-        <span class="title">Fade</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Skin, low, mid, or high. Clean lines.</span>
-      </li>
-      <li>
-        <span class="title">Line-up</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Hair or beard, dialed in.</span>
-      </li>
-      <li>
-        <span class="title">Kids' cuts</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Patient with first timers.</span>
-      </li>
-      <li>
-        <span class="title">Style cut</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Tell us what you want or ask — Julian's good with suggestions.</span>
-      </li>
-      <li>
-        <span class="title">Walk-in</span>
-        <span class="leader" aria-hidden="true"></span>
-        <span class="meta font-sans text-sm">Most days, no wait. Cash only — ATM in the shop.</span>
-      </li>
-    </ul>
-
-    <!-- Barber lineup -->
-    <div class="mt-12 sm:mt-16 flex flex-wrap items-center gap-3 sm:gap-4">
-      <span class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45">In the chairs</span>
-      <span class="text-chalk/30 hidden sm:inline">·</span>
-      <span class="font-display text-2xl sm:text-3xl md:text-4xl tracking-[0.03em] w-full sm:w-auto">JESSE · JULIAN</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Gallery — "FROM THE CHAIR" ============ -->
-<section id="gallery" class="py-20 sm:py-28">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="flex items-end justify-between flex-wrap gap-6 mb-10 sm:mb-14">
       <div>
-        <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">From the chair</p>
-        <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">Recent cuts.</h2>
-      </div>
-      <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/45 max-w-xs">
-        Photos · from the shop
-      </p>
-    </div>
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-br from-coal to-night"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(200,205,215,0.07) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">01</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Fade</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-tr from-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(200,205,215,0.06) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">02</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Line-up</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-bl from-coal via-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(200,205,215,0.08) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">03</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Beard</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-tl from-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(200,205,215,0.06) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">04</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Kids' cut</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-br from-coal to-night"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(135deg, rgba(200,205,215,0.07) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">05</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Style</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-      <figure class="relative aspect-square overflow-hidden border border-chalk/12">
-        <div class="absolute inset-0 bg-gradient-to-tr from-night to-coal"></div>
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, rgba(200,205,215,0.07) 0 6px, transparent 6px 14px);"></div>
-        <div class="absolute inset-3 border border-dashed border-chalk/15"></div>
-        <span class="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-500 bg-night/85 px-1.5 py-0.5">06</span>
-        <figcaption class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/60">
-          <span>Walk-in</span>
-          <span class="text-chalk/30">shop</span>
-        </figcaption>
-      </figure>
-
-    </div>
-
-    <p class="mt-8 font-mono text-[10px] uppercase tracking-[0.22em] text-chalk/40 text-center">
-      Live site syncs from the shop's Instagram grid
-    </p>
-  </div>
-</section>
-
-<!-- ============ Reviews — numbered editorial pull quotes ============ -->
-<section id="reviews" class="py-24 sm:py-32">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="flex items-end justify-between flex-wrap gap-6 mb-12 sm:mb-16">
-      <div>
-        <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">In the chair</p>
-        <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">101 reviews. Five stars from regulars.</h2>
-      </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=SN+Barbershop+4705+Peck+Rd%2C+El+Monte%2C+CA+91732" target="_blank" rel="noopener"
-         class="font-mono text-[11px] uppercase tracking-[0.28em] text-chalk/65 hover:text-brand-500 transition">
-        Read all 101 reviews →
-      </a>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-x-14 gap-y-16">
-      <figure class="border-t border-chalk/15 pt-8">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">01 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"First time visiting this barbershop and I will continue getting my haircuts here. I did a walk in and some guy named Jesse did my hair without hesitation. This guy is top notch. Best haircut I've ever gotten. You could tell right away Jesse takes pride in his trade. Seems like a cool guy too. The place is nice and clean and plenty of parking in the front and back. Definitely recommend this place."</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— Jose A</figcaption>
-      </figure>
-
-      <figure class="border-t border-chalk/15 pt-8 md:mt-12">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">02 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"Julian made my hair look even better than imagined. I wasn't sure what cut to go with so he helped me decide. It came out looking amazing. This is definitely my new place."</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— Gordon Hebert</figcaption>
-      </figure>
-
-      <figure class="border-t border-chalk/15 pt-8">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">03 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"My third time coming to this place , and honestly they do a great job , never rushing, great prices, they always make me feel welcomed ,"</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— carlos estevez</figcaption>
-      </figure>
-
-      <figure class="border-t border-chalk/15 pt-8 md:mt-12">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">04 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"I've been coming here for quite a few years.
-The owner RIP was doing my hair for many years and after he passed his son doesn't know just as professional as he does. The barber shop is a very clean place great environment and friendly staff.. I cut my hair here with Jesse the barber every 3 weeks and I drive for 3 hours to get here So for me as well worth it and I strongly recommend this location."</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— Art Mendoza</figcaption>
-      </figure>
-
-      <figure class="border-t border-chalk/15 pt-8">
-        <div class="flex items-center justify-between mb-4">
-          <span class="review-no text-xs">05 / 05</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-chalk/40">via Google</span>
-        </div>
-        <blockquote class="font-display text-2xl sm:text-3xl leading-[1.15] tracking-[0.01em]">"Super clean and really nice workers. Cash only. There is an ATM inside for your convince.  Make an appointment especially on weekends for faster service."</blockquote>
-        <figcaption class="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-chalk/65">— Gabriela Canedo Mala</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Visit ============ -->
-<section id="visit" class="py-24 sm:py-32 bg-coal border-y border-chalk/10">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-12">
-    <div class="lg:col-span-7">
-      <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500">Visit</p>
-      <h2 class="font-display text-4xl sm:text-6xl md:text-7xl tracking-[0.01em] mt-3 leading-[0.95]">On Peck Road. Cash only.</h2>
-      <p class="mt-8 text-chalk/70 text-lg leading-relaxed max-w-xl">4705 Peck Rd, El Monte. Cash only — there's an ATM inside if you forgot. Walk in most days, or call to set a weekend slot.</p>
-
-      <div class="mt-10 grid sm:grid-cols-2 gap-8">
-        <div>
-          <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45 mb-2">Address</p>
-          <p class="font-display text-2xl leading-tight">4705 Peck Rd</p>
-          <p class="text-chalk/60 text-sm mt-1">El Monte, CA 91732</p>
-        </div>
-        <div>
-          <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45 mb-2">Phone</p>
-          <a href="tel:+16264542393" class="font-display text-2xl hover:text-brand-500 transition">(626) 454-2393</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="lg:col-span-5">
-      <div class="border border-chalk/15 rounded-sm p-7">
-        <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45 mb-5">Hours</p>
-        <dl class="space-y-2.5 font-display text-xl tracking-[0.02em]">
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Mon</dt><dd>Closed</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Tue</dt><dd>10:00 AM – 7:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Wed</dt><dd>10:00 AM – 7:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Thu</dt><dd>10:00 AM – 7:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Fri</dt><dd>10:00 AM – 7:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Sat</dt><dd>9:00 AM – 6:00 PM</dd></div>
-          <div class="flex items-baseline justify-between"><dt class="text-chalk/55 font-sans text-sm uppercase tracking-[0.18em]">Sun</dt><dd>10:00 AM – 3:00 PM</dd></div>
-        </dl>
+        <span class="label">Where</span>
+        <span class="val">4705 Peck Rd, El Monte, California 91732 &nbsp;·&nbsp; (626) 454&#8209;2393</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
-<section id="contact" class="py-28 sm:py-40 relative overflow-hidden">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[60rem] h-[60rem] rounded-full"
-         style="background: radial-gradient(circle, var(--brand-700) 0%, transparent 65%); opacity: .45;"></div>
-  </div>
-
-  <div class="relative max-w-5xl mx-auto px-5 sm:px-8 text-center">
-    <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-brand-500 mb-6">Book a chair</p>
-    <h2 class="font-display text-[clamp(2.4rem,9vw,8rem)] leading-[0.92] sm:leading-[0.88] tracking-[0.01em] break-words">
-      Stop by.
-    </h2>
-    <p class="mt-8 max-w-xl mx-auto text-chalk/75 text-lg leading-relaxed">Walk in most days. Or call (626) 454-2393 and ask for Jesse or Julian by name.</p>
-    <div class="mt-10 flex flex-wrap justify-center gap-3">
-      <a href="tel:+16264542393"
-         class="inline-flex items-center gap-3 rounded-sm bg-chalk text-night font-semibold uppercase tracking-[0.18em] text-sm px-7 py-4 hover:bg-brand-500 hover:text-chalk transition">
-        Call (626) 454-2393
-      </a>
-      <a href="https://www.google.com/maps/search/?api=1&query=SN+Barbershop+4705+Peck+Rd%2C+El+Monte%2C+CA+91732" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-3 rounded-sm ring-1 ring-chalk/25 font-semibold uppercase tracking-[0.18em] text-sm px-7 py-4 hover:bg-chalk/5 transition">
-        Get directions
-      </a>
+<!-- Tale of the Tape -->
+<section id="tape" class="tape">
+  <div class="tape__row">
+    <div class="tape__cell">
+      <p class="tape__label">Founded</p>
+      <p class="tape__num">1997<span class="small">est.</span></p>
+    </div>
+    <div class="tape__cell">
+      <p class="tape__label">Rating</p>
+      <p class="tape__num">4.7<span class="star"> ★</span></p>
+    </div>
+    <div class="tape__cell">
+      <p class="tape__label">Google reviews</p>
+      <p class="tape__num">101</p>
+    </div>
+    <div class="tape__cell">
+      <p class="tape__label">Cash policy</p>
+      <p class="tape__num">Cash<span class="small">only · ATM inside</span></p>
     </div>
   </div>
 </section>
 
-<!-- ============ Footer ============ -->
-<footer class="border-t border-chalk/10">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 grid md:grid-cols-3 gap-10 text-sm">
+<!-- Plate I — wide banner -->
+<figure class="plate plate--banner">
+  <img src="https://images.unsplash.com/photo-1536520002442-39764a41e987?fm=jpg&q=72&w=1800&fit=crop"
+       alt="A barbershop interior with chairs and mirrors" />
+  <figcaption class="plate__caption">
+    <em>Plate I.&nbsp; The room. Chairs, mirrors, and the steady rhythm of clippers since 1997.</em>
+    <span>4705 Peck Rd</span>
+  </figcaption>
+</figure>
+
+<!-- Round 01 — The shop -->
+<section id="round-01" class="round">
+  <div class="wrap round__grid">
+    <div class="round__num">01<small>The shop</small></div>
     <div>
-      <p class="font-display text-2xl tracking-[0.03em]">SN Barbershop</p>
-      <p class="mt-2 text-chalk/60">4705 Peck Rd<br/>El Monte, CA 91732</p>
-      <p class="mt-2"><a class="text-chalk/85 hover:text-brand-500 transition" href="tel:+16264542393">(626) 454-2393</a></p>
-    </div>
-    <div>
-      <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-chalk/45 mb-3">Explore</p>
-      <ul class="space-y-2 text-chalk/70">
-        <li><a class="hover:text-chalk" href="#about">The shop</a></li>
-        <li><a class="hover:text-chalk" href="#pricelist">Cuts</a></li>
-        <li><a class="hover:text-chalk" href="#reviews">In the chair</a></li>
-        <li><a class="hover:text-chalk" href="#visit">Hours &amp; location</a></li>
-      </ul>
-    </div>
-    <div class="md:text-right">
-      <p class="text-chalk/70">Website preview created by</p>
-      <p class="text-chalk font-semibold">WestCo App Studio</p>
-      <p><a class="text-chalk/70 hover:text-chalk transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a></p>
-      <p><a class="text-chalk/70 hover:text-chalk transition" href="tel:+12135229136">(213) 522-9136</a></p>
+      <p class="kicker kicker--red">Round 01 · The shop</p>
+      <h2 class="round__h">A family chair, <span class="red">held twice.</span></h2>
+
+      <div class="lede lede--with-pull">
+        <div class="lede-body">
+          <p class="dropcap">SN Barbershop has been at 4705 Peck Road in El Monte since 1997. The founder cut hair there for years before passing the chair to his son. The shop stayed open. The clippers kept running. The customers kept coming back.</p>
+          <p>It is a small family-shop story that doesn't get marketed because it doesn't have to be. The proof is in the chair: razor fades, blends, tapers, combovers, flattops, beards. Cash only. ATM at the front. Walk-in any day except Sunday — appointments take over the weekend.</p>
+          <p>The reviews are forgiving even of bad days. They are not forgiving of much else. Carlos came back a third time. Gabriela called the place clean and the staff really nice. Jose, after one walk-in, called it <em>“the best haircut I've ever gotten.”</em></p>
+        </div>
+
+        <aside class="aside-pull">
+          “I drive 3 hours every 3 weeks to get here. So for me, well worth it.”
+          <cite>— Art Mendoza · Google review</cite>
+        </aside>
+      </div>
     </div>
   </div>
-  <div class="border-t border-chalk/10">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 text-[11px] font-mono uppercase tracking-[0.22em] text-chalk/40 flex flex-wrap items-center justify-between gap-3">
+</section>
+
+<!-- Round 02 — The card -->
+<section id="round-02" class="round">
+  <div class="wrap round__grid">
+    <div class="round__num">02<small>The card</small></div>
+    <div>
+      <p class="kicker kicker--red">Round 02 · The card</p>
+      <h2 class="round__h">Seven cuts. <span class="red">One chair at a time.</span></h2>
+
+      <ol class="card">
+        <li class="card__row">
+          <span class="card__num">No. 01</span>
+          <span class="card__name">Razor fade</span>
+          <span class="card__desc">Skin-to-skin or low-to-high taper. Razor finish on the line. The shop's signature.</span>
+          <span class="card__price">$<span class="from">from · cash</span></span>
+        </li>
+        <li class="card__row">
+          <span class="card__num">No. 02</span>
+          <span class="card__name">Taper &amp; blend</span>
+          <span class="card__desc">Worked in degrees, blended dry. The cut Jesse takes his time on — never rushing, even on a busy Saturday.</span>
+          <span class="card__price">$<span class="from">from · cash</span></span>
+        </li>
+        <li class="card__row">
+          <span class="card__num">No. 03</span>
+          <span class="card__name">Combover</span>
+          <span class="card__desc">Classic side-part, finished and styled. The look that holds at a wedding through last call.</span>
+          <span class="card__price">$<span class="from">from · cash</span></span>
+        </li>
+        <li class="card__row">
+          <span class="card__num">No. 04</span>
+          <span class="card__name">Flattop</span>
+          <span class="card__desc">Right angles, cut by hand. For someone who knows what they want.</span>
+          <span class="card__price">$<span class="from">from · cash</span></span>
+        </li>
+        <li class="card__row">
+          <span class="card__num">No. 05</span>
+          <span class="card__name">Mohawk</span>
+          <span class="card__desc">High, low, and everywhere between. Done clean — never an afterthought.</span>
+          <span class="card__price">$<span class="from">from · cash</span></span>
+        </li>
+        <li class="card__row">
+          <span class="card__num">No. 06</span>
+          <span class="card__name">Beard line</span>
+          <span class="card__desc">Edged with the straight razor, shaped with the trimmer, finished with a hot towel.</span>
+          <span class="card__price">$<span class="from">from · cash</span></span>
+        </li>
+        <li class="card__row">
+          <span class="card__num">No. 07</span>
+          <span class="card__name">Standing slot</span>
+          <span class="card__desc">A recurring appointment with Jesse or Julian. Three-week rotation, booked at the chair.</span>
+          <span class="card__price">Recurring<span class="from">book at chair</span></span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Round 03 — Chairs (roster + photo) -->
+<section id="round-03" class="round">
+  <div class="wrap round__grid">
+    <div class="round__num">03<small>In the chairs</small></div>
+    <div>
+      <p class="kicker kicker--red">Round 03 · In the chairs</p>
+      <h2 class="round__h">Jesse &amp; <span class="red">Julian.</span></h2>
+
+      <div class="spread">
+        <figure class="spread__figure">
+          <img src="https://images.unsplash.com/photo-1647140655214-e4a2d914971f?fm=jpg&q=72&w=1100&fit=crop"
+               alt="A barber cutting a man's hair with scissors" />
+          <figcaption>
+            <em>Plate II. The work — scissors, comb, and the steady second-pass.</em>
+            <span>SN · No. 02</span>
+          </figcaption>
+        </figure>
+
+        <div>
+          <ol class="roster">
+            <li class="roster__entry">
+              <span class="roster__num">01</span>
+              <div>
+                <span class="roster__name">Jesse</span>
+                <p class="roster__bio">Took the chair after his father. The barber Art drives three hours to see every three weeks. Walk-ins on weekdays; appointments hold the weekend.</p>
+              </div>
+            </li>
+            <li class="roster__entry">
+              <span class="roster__num">02</span>
+              <div>
+                <span class="roster__name">Julian</span>
+                <p class="roster__bio">The cut Gordon called <em>“even better than imagined.”</em> Helps walk-ins who don't know what to ask for. Patient with kids; faster with the regulars.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Barber-pole rule between 03 and 04 -->
+<div class="pole" aria-hidden="true"></div>
+
+<!-- Round 04 — Visit -->
+<section id="round-04" class="round">
+  <div class="wrap round__grid">
+    <div class="round__num">04<small>Visit the shop</small></div>
+    <div>
+      <p class="kicker kicker--red">Round 04 · Visit</p>
+      <h2 class="round__h">4705 Peck Road, <span class="red">El Monte.</span></h2>
+
+      <dl class="tabular">
+        <div class="tabular__row">
+          <dt class="tabular__key">Address</dt>
+          <dd class="tabular__val">4705 Peck Rd, El Monte, California 91732</dd>
+          <span class="tabular__edge"><a href="https://www.google.com/maps/search/?api=1&query=4705+Peck+Rd%2C+El+Monte%2C+CA+91732" target="_blank" rel="noopener">Directions ↗</a></span>
+        </div>
+        <div class="tabular__row">
+          <dt class="tabular__key">Phone</dt>
+          <dd class="tabular__val"><b>(626) 454&#8209;2393</b></dd>
+          <span class="tabular__edge">Call to book</span>
+        </div>
+        <div class="tabular__row">
+          <dt class="tabular__key">Payment</dt>
+          <dd class="tabular__val">Cash only · ATM at the front of the shop</dd>
+          <span class="tabular__edge">No card readers</span>
+        </div>
+        <div class="tabular__row">
+          <dt class="tabular__key">Walk-ins</dt>
+          <dd class="tabular__val">Mon&ndash;Fri all day. Weekends faster with an appointment.</dd>
+          <span class="tabular__edge">Family friendly</span>
+        </div>
+        <div class="tabular__row">
+          <dt class="tabular__key">Parking</dt>
+          <dd class="tabular__val">Lot in front. Plenty of room.</dd>
+          <span class="tabular__edge">Free</span>
+        </div>
+      </dl>
+
+      <div class="hours" aria-label="Hours">
+        <div class="hours__day"><span class="hours__day-name">Mon</span><span class="hours__day-time">9–6</span></div>
+        <div class="hours__day"><span class="hours__day-name">Tue</span><span class="hours__day-time">9–6</span></div>
+        <div class="hours__day"><span class="hours__day-name">Wed</span><span class="hours__day-time">9–6</span></div>
+        <div class="hours__day"><span class="hours__day-name">Thu</span><span class="hours__day-time">9–6</span></div>
+        <div class="hours__day"><span class="hours__day-name">Fri</span><span class="hours__day-time">9–6</span></div>
+        <div class="hours__day"><span class="hours__day-name">Sat</span><span class="hours__day-time">9–6</span></div>
+        <div class="hours__day hours__day--closed"><span class="hours__day-name">Sun</span><span class="hours__day-time">Closed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Plate III — closing detail -->
+<figure class="plate plate--detail">
+  <img src="https://images.unsplash.com/photo-1596362601603-b74f6ef166e4?fm=jpg&q=72&w=1600&fit=crop"
+       alt="Stainless steel barber scissors and a hair comb" />
+  <figcaption class="plate__caption">
+    <em>Plate III.&nbsp; Tools, laid out. Scissors, comb, clippers — the kit hasn't changed.</em>
+    <span>SN · No. 03</span>
+  </figcaption>
+</figure>
+
+<!-- Round 05 — Book -->
+<section id="round-05" class="book">
+  <div class="wrap round__grid">
+    <div class="round__num">05<small>Book a chair</small></div>
+    <div>
+      <p class="kicker kicker--red">Round 05 · Book a chair</p>
+      <div class="book__line">
+        <span class="book__verb">Call &rarr;</span>
+        <a class="book__link" href="tel:+16264542393">(626) 454&#8209;2393</a>
+      </div>
+      <p class="book__sub">Walk in any weekday between 9 and 6. Weekends fill — call ahead and Jesse or Julian will hold a spot. Cash only at the chair. ATM at the front if you forgot to stop on the way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Colophon footer -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <div class="foot__mark">S<span class="dot"></span>N Barbershop</div>
+        <p class="foot__set">
+          Programme No. 1997, set in <i>Anton</i> for the display, <i>Lora</i> for the body, and <i>Space Mono</i> for the technical type. Three photographic plates. Two barbers. One chair held twice — by a father, then a son.
+        </p>
+      </div>
+      <div class="foot__col">
+        <p>Where</p>
+        <span>4705 Peck Road</span>
+        <span>El Monte, California 91732</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=4705+Peck+Rd%2C+El+Monte%2C+CA+91732" target="_blank" rel="noopener">Directions ↗</a>
+      </div>
+      <div class="foot__col">
+        <p>Preview by</p>
+        <span>WestCo App Studio</span>
+        <a href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
+        <a href="tel:+12135229136">(213) 522-9136</a>
+      </div>
+    </div>
+    <div class="foot__bar">
       <span>© 2026 SN Barbershop</span>
-      <span>Preview built May 2026 — not the official site</span>
+      <span>Preview build · not the official site</span>
     </div>
   </div>
 </footer>
