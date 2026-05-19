@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>The Gem Lab — Tooth gems &amp; smile jewelry · Mobile in LA / SGV</title>
-<meta name="description" content="Luxury tooth gems applied at your home, hotel, or studio. Mobile service across Los Angeles + the San Gabriel Valley. Book by DM on Instagram." />
+<title>The Gem Lab — Tooth Gems &amp; Smile Jewelry · LA / SGV</title>
+<meta name="description" content="Hand-set tooth gems applied at your home, hotel, or studio. Mobile across Los Angeles &amp; the San Gabriel Valley. DM @thegemlab.la to book." />
 <meta name="robots" content="noindex,nofollow" />
 
-<meta property="og:title" content="The Gem Lab — Mobile tooth gems · LA / SGV" />
-<meta property="og:description" content="Your Luxury Tooth Fairy. Blinging smiles wherever you are. DM to book." />
+<meta property="og:title" content="The Gem Lab — Mobile Tooth Gems · LA / SGV" />
+<meta property="og:description" content="Your Luxury Tooth Fairy. Blinging smiles wherever you are." />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,400..700&family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,30..100;1,9..144,300..900,30..100&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -21,19 +21,24 @@
     theme: {
       extend: {
         fontFamily: {
-          sans:    ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          sans:    ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           display: ['"Fraunces"', 'Georgia', 'serif'],
-          mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          mono:    ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
         },
         colors: {
-          ink:     '#0a0408',
-          ink2:    '#15090f',
-          rose:    '#ff3d8a',
-          roseDk:  '#d62674',
-          peach:   '#ffb7c8',
-          gold:    '#f4c977',
-          cream:   '#f6efe6',
-          plum:    '#2a0e1e',
+          // Off-white aged magazine paper, not slate
+          paper:   '#f5ead7',
+          paperHi: '#fbf3e3',
+          ink:     '#1a0f12',
+          inkSoft: '#3a262b',
+          // The one hot accent — applied with intent, not everywhere
+          shock:   '#ff2a7a',
+          shockDk: '#c41560',
+          // Y2K supporting tones
+          tan:     '#d9a25e',
+          tanDk:   '#7a4621',
+          chrome:  '#a8a9b3',
+          ice:     '#e7eaf0',
         },
       },
     },
@@ -41,491 +46,678 @@
 </script>
 
 <style>
-  html { scroll-behavior: smooth; background: #0a0408; }
-  body { background: #0a0408; color: #f6efe6; overflow-x: hidden; }
+  :root {
+    --underline-stroke: #ff2a7a;
+  }
+  html { scroll-behavior: smooth; background: #f5ead7; }
+  body { background: #f5ead7; color: #1a0f12; overflow-x: hidden; }
 
-  /* Display variants */
-  .display    { font-family: 'Fraunces', Georgia, serif; font-style: normal; font-weight: 500; letter-spacing: -0.018em; font-variation-settings: "opsz" 144, "SOFT" 50; }
-  .display-it { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 500; letter-spacing: -0.018em; font-variation-settings: "opsz" 144, "SOFT" 100; }
-
+  /* Display variants — Fraunces with character */
+  .display    {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: normal; font-weight: 600;
+    letter-spacing: -0.025em;
+    font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
+  }
+  .display-it {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic; font-weight: 500;
+    letter-spacing: -0.022em;
+    font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  }
   .field {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.28em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: #7a4621;
+  }
+  .field-shock { color: #ff2a7a; }
+
+  /* Leopard fill — applied via SVG pattern reference, see <defs> below */
+  .leopard-bg {
+    background-color: #d9a25e;
+    background-image: var(--leopard-tile);
+    background-size: 78px 78px;
+  }
+
+  /* Hand-drawn underline using a wobbly SVG, sits below text */
+  .scribble { position: relative; display: inline-block; }
+  .scribble::after {
+    content: "";
+    position: absolute; left: -2%; right: -2%;
+    bottom: -0.18em; height: 0.42em;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'><path d='M3 9 Q 25 2 50 8 T 100 7 T 150 9 T 200 6 T 250 9 T 297 7' fill='none' stroke='%23ff2a7a' stroke-width='3.4' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    pointer-events: none;
+  }
+
+  /* Scotch tape strip — slightly translucent off-white at an angle */
+  .tape {
+    position: absolute;
+    width: 80px; height: 22px;
+    background: rgba(253, 248, 235, 0.78);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    border-left: 1px dashed rgba(0,0,0,0.06);
+    border-right: 1px dashed rgba(0,0,0,0.06);
+  }
+
+  /* Polaroid frame — slight rotation, scrappy corners */
+  .polaroid {
+    background: #fbf3e3;
+    padding: 10px 10px 36px;
+    box-shadow: 0 18px 36px -22px rgba(26,15,18,0.45), 0 2px 0 rgba(26,15,18,0.04);
+  }
+  .polaroid .cap {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #1a0f12;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* Y2K chrome label — outlined */
+  .chrome-chip {
+    border: 1px solid #1a0f12;
+    background: linear-gradient(180deg, #f8fafd 0%, #d5d8e0 48%, #f6f8fb 52%, #b8bcc6 100%);
+    color: #1a0f12;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #ffb7c8;
+    font-weight: 600;
+    padding: 5px 11px;
   }
 
-  /* Holographic / iridescent gradient text */
-  .holo {
-    background: linear-gradient(110deg, #ffb7c8 0%, #ff3d8a 25%, #f4c977 50%, #ff3d8a 75%, #ffb7c8 100%);
-    background-size: 220% 100%;
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: holo-pan 9s ease-in-out infinite;
-  }
-  @keyframes holo-pan {
-    0%, 100% { background-position: 0% 50%; }
-    50%      { background-position: 100% 50%; }
-  }
+  /* Type that runs hot pink, no gradient */
+  .shock { color: #ff2a7a; }
 
-  /* Soft glow halo behind hero */
-  .glow-rose {
-    background: radial-gradient(closest-side at 50% 50%, rgba(255,61,138,0.45), rgba(255,61,138,0.15) 45%, transparent 70%);
-    filter: blur(40px);
-  }
-  .glow-gold {
-    background: radial-gradient(closest-side at 50% 50%, rgba(244,201,119,0.35), rgba(244,201,119,0.08) 45%, transparent 70%);
-    filter: blur(36px);
-  }
-
-  /* Sparkle dot bg layer */
-  .sparkle-layer {
-    background-image:
-      radial-gradient(1.5px 1.5px at 12% 22%, rgba(255,255,255,0.85), transparent 60%),
-      radial-gradient(1px 1px at 38% 78%, rgba(255,255,255,0.7), transparent 60%),
-      radial-gradient(2px 2px at 72% 18%, rgba(244,201,119,0.95), transparent 60%),
-      radial-gradient(1px 1px at 88% 62%, rgba(255,183,200,0.85), transparent 60%),
-      radial-gradient(1.5px 1.5px at 26% 88%, rgba(255,255,255,0.75), transparent 60%),
-      radial-gradient(1px 1px at 56% 40%, rgba(244,201,119,0.7), transparent 60%);
-  }
-
-  /* Hairline rule, rose-tinted */
-  .hr-rose { background: linear-gradient(90deg, transparent, rgba(255,61,138,0.6), transparent); height: 1px; width: 100%; }
-
-  /* Card hover lift */
-  .card { transition: transform 0.4s ease, border-color 0.4s ease; }
-  .card:hover { transform: translateY(-3px); border-color: rgba(255,61,138,0.45); }
-
-  /* Marquee for the announcement strip */
+  /* Marquee */
   @keyframes marquee {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
   }
-  .marquee-track { animation: marquee 38s linear infinite; }
+  .marquee-track { animation: marquee 42s linear infinite; }
 
-  /* Tiny gem decoration */
-  .gem::before {
-    content: "✦";
-    color: #f4c977;
-    margin-right: 0.45em;
-    display: inline-block;
-  }
+  /* Subtle image treatment — magazine print pass */
+  .photo-print { filter: contrast(1.04) saturate(1.06); }
 
-  /* Image treatment: deeper contrast for the dark theme */
-  .photo-treatment { filter: contrast(1.05) saturate(1.05); }
+  /* Hover state on menu rows — number tilts */
+  .menu-row:hover .menu-num { transform: rotate(-6deg) translateY(-4px); color: #ff2a7a; }
+  .menu-num { transition: transform 0.35s ease, color 0.35s ease; transform-origin: center; }
 
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(16px); }
+  /* Hover lift on polaroids */
+  .pol-tilt-l { transform: rotate(-3.5deg); transition: transform 0.35s ease; }
+  .pol-tilt-r { transform: rotate(3deg); transition: transform 0.35s ease; }
+  .pol-tilt-l:hover, .pol-tilt-r:hover { transform: rotate(0deg) scale(1.02); }
+
+  /* Reveal on load */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(18px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-  .fade-up { animation: fade-up 1s ease-out both; }
+  .rise { animation: rise 0.9s ease-out both; }
+  .rise-2 { animation-delay: 0.12s; }
+  .rise-3 { animation-delay: 0.22s; }
+
+  /* Vertical rule for editorial side ticks */
+  .v-rule { width: 1px; background: #1a0f12; opacity: 0.45; }
+
+  /* Tighter italic glyphs in display */
+  .glyph-amp { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; }
+
+  /* Sticker — die-cut feel for the FAQ markers */
+  .sticker-q {
+    display: inline-block;
+    background: #ff2a7a; color: #fbf3e3;
+    width: 1.6em; height: 1.6em;
+    line-height: 1.6em; text-align: center;
+    border-radius: 999px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    box-shadow: 0 0 0 3px #fbf3e3, 0 0 0 4px #ff2a7a;
+  }
+
+  /* Custom 4-point star sparkle as a single SVG, used sparingly */
+  .star-4 {
+    display:inline-block; width: 1em; height: 1em;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 1 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z' fill='%23ff2a7a'/></svg>");
+    background-size: contain; background-repeat: no-repeat;
+    vertical-align: -0.1em;
+  }
+
+  /* Numbered drop-cap for FAQ */
+  details summary::-webkit-details-marker { display: none; }
+  details summary::marker { display: none; }
 </style>
 
 </head>
 
 <body class="font-sans antialiased">
 
-<!-- ============ Announcement marquee ============ -->
-<div class="bg-rose text-ink border-b border-rose/40 overflow-hidden">
-  <div class="flex marquee-track whitespace-nowrap py-2 font-mono text-[11px] uppercase tracking-[0.28em] font-semibold">
-    <div class="flex shrink-0 gap-10 px-5">
-      <span>✦ Now booking LA + SGV</span>
-      <span>✦ Mobile gem tech — we come to you</span>
-      <span>✦ DM @thegemlab.la to lock in your sparkle</span>
-      <span>✦ 18K gold · Swarovski · luxe charms</span>
-      <span>✦ Now booking LA + SGV</span>
-      <span>✦ Mobile gem tech — we come to you</span>
-      <span>✦ DM @thegemlab.la to lock in your sparkle</span>
-      <span>✦ 18K gold · Swarovski · luxe charms</span>
+<!-- Hidden SVG defs: leopard print pattern (referenced via CSS data URI on .leopard-bg) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="leopardPat" x="0" y="0" width="78" height="78" patternUnits="userSpaceOnUse">
+      <rect width="78" height="78" fill="#d9a25e"/>
+      <ellipse cx="18" cy="14" rx="6" ry="5" fill="#1a0f12" opacity="0.92"/>
+      <ellipse cx="48" cy="22" rx="7" ry="5.5" fill="#1a0f12" opacity="0.92"/>
+      <ellipse cx="26" cy="44" rx="5.5" ry="4.5" fill="#1a0f12" opacity="0.92"/>
+      <ellipse cx="60" cy="56" rx="6.5" ry="5" fill="#1a0f12" opacity="0.92"/>
+      <ellipse cx="8" cy="60" rx="4" ry="3" fill="#1a0f12" opacity="0.92"/>
+      <ellipse cx="68" cy="10" rx="3.5" ry="3" fill="#1a0f12" opacity="0.92"/>
+      <ellipse cx="40" cy="70" rx="4" ry="3.2" fill="#1a0f12" opacity="0.92"/>
+      <circle cx="18" cy="14" r="2.3" fill="#7a4621" opacity="0.55"/>
+      <circle cx="48" cy="22" r="2.8" fill="#7a4621" opacity="0.55"/>
+      <circle cx="26" cy="44" r="2" fill="#7a4621" opacity="0.55"/>
+      <circle cx="60" cy="56" r="2.4" fill="#7a4621" opacity="0.55"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- Inline the leopard tile so the CSS can use it as a data URI -->
+<style>
+  :root {
+    --leopard-tile: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='78' height='78' viewBox='0 0 78 78'><rect width='78' height='78' fill='%23d9a25e'/><ellipse cx='18' cy='14' rx='6' ry='5' fill='%231a0f12'/><ellipse cx='48' cy='22' rx='7' ry='5.5' fill='%231a0f12'/><ellipse cx='26' cy='44' rx='5.5' ry='4.5' fill='%231a0f12'/><ellipse cx='60' cy='56' rx='6.5' ry='5' fill='%231a0f12'/><ellipse cx='8' cy='60' rx='4' ry='3' fill='%231a0f12'/><ellipse cx='68' cy='10' rx='3.5' ry='3' fill='%231a0f12'/><ellipse cx='40' cy='70' rx='4' ry='3.2' fill='%231a0f12'/><circle cx='18' cy='14' r='2.3' fill='%237a4621' opacity='0.55'/><circle cx='48' cy='22' r='2.8' fill='%237a4621' opacity='0.55'/><circle cx='26' cy='44' r='2' fill='%237a4621' opacity='0.55'/><circle cx='60' cy='56' r='2.4' fill='%237a4621' opacity='0.55'/></svg>");
+  }
+</style>
+
+
+<!-- ============ Top issue strip ============ -->
+<div class="bg-ink text-paper border-b border-ink/80">
+  <div class="max-w-[1500px] mx-auto px-5 sm:px-8 py-2 flex items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.28em]">
+    <span>Vol. 01 — Issue 003</span>
+    <span class="hidden sm:inline">A field guide to mobile tooth gems</span>
+    <span>LA <span class="text-shock">·</span> SGV</span>
+  </div>
+</div>
+
+
+<!-- ============ Leopard marquee ============ -->
+<div class="leopard-bg border-y border-ink overflow-hidden">
+  <div class="flex marquee-track whitespace-nowrap py-2.5">
+    <div class="flex shrink-0 gap-8 px-4 font-mono uppercase font-semibold tracking-[0.28em] text-[11px] text-ink">
+      <span>Now booking LA + SGV</span><span>★</span>
+      <span>Mobile gem tech — we come to you</span><span>★</span>
+      <span>Single gem $40 → disco ball $120</span><span>★</span>
+      <span>18K gold · Swarovski crystals</span><span>★</span>
+      <span>Now booking LA + SGV</span><span>★</span>
+      <span>Mobile gem tech — we come to you</span><span>★</span>
+      <span>Single gem $40 → disco ball $120</span><span>★</span>
+      <span>18K gold · Swarovski crystals</span><span>★</span>
     </div>
-    <div class="flex shrink-0 gap-10 px-5" aria-hidden="true">
-      <span>✦ Now booking LA + SGV</span>
-      <span>✦ Mobile gem tech — we come to you</span>
-      <span>✦ DM @thegemlab.la to lock in your sparkle</span>
-      <span>✦ 18K gold · Swarovski · luxe charms</span>
-      <span>✦ Now booking LA + SGV</span>
-      <span>✦ Mobile gem tech — we come to you</span>
-      <span>✦ DM @thegemlab.la to lock in your sparkle</span>
-      <span>✦ 18K gold · Swarovski · luxe charms</span>
+    <div class="flex shrink-0 gap-8 px-4 font-mono uppercase font-semibold tracking-[0.28em] text-[11px] text-ink" aria-hidden="true">
+      <span>Now booking LA + SGV</span><span>★</span>
+      <span>Mobile gem tech — we come to you</span><span>★</span>
+      <span>Single gem $40 → disco ball $120</span><span>★</span>
+      <span>18K gold · Swarovski crystals</span><span>★</span>
+      <span>Now booking LA + SGV</span><span>★</span>
+      <span>Mobile gem tech — we come to you</span><span>★</span>
+      <span>Single gem $40 → disco ball $120</span><span>★</span>
+      <span>18K gold · Swarovski crystals</span><span>★</span>
     </div>
   </div>
 </div>
 
+
 <!-- ============ Nav ============ -->
-<header class="sticky top-0 z-40 bg-ink/85 backdrop-blur border-b border-rose/15">
-  <div class="max-w-7xl mx-auto px-5 sm:px-10 h-14 sm:h-16 flex items-center justify-between gap-4">
-    <a href="#top" class="display-it text-2xl sm:text-3xl leading-none holo">
-      The Gem Lab
+<header class="border-b border-ink/15">
+  <div class="max-w-[1500px] mx-auto px-5 sm:px-8 h-14 flex items-center justify-between gap-4">
+    <a href="#top" class="display-it text-2xl sm:text-3xl leading-none text-ink">
+      The Gem <span class="shock">Lab</span>
     </a>
-    <div class="hidden md:flex items-center gap-7 text-sm text-cream/70">
-      <a href="#menu" class="hover:text-rose transition">Menu</a>
-      <a href="#how" class="hover:text-rose transition">How it works</a>
-      <a href="#care" class="hover:text-rose transition">After care</a>
-      <a href="#policy" class="hover:text-rose transition">Travel policy</a>
-      <a href="#faq" class="hover:text-rose transition">FAQ</a>
+    <div class="hidden md:flex items-center gap-7 text-[13px] text-inkSoft">
+      <a href="#menu" class="hover:text-shock transition">Menu</a>
+      <a href="#process" class="hover:text-shock transition">Process</a>
+      <a href="#care" class="hover:text-shock transition">After care</a>
+      <a href="#travel" class="hover:text-shock transition">Travel</a>
+      <a href="#faq" class="hover:text-shock transition">FAQ</a>
     </div>
     <a href="https://www.instagram.com/thegemlab.la/" target="_blank" rel="noopener"
-       class="inline-flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-mono uppercase tracking-[0.2em] text-ink bg-rose hover:bg-peach transition px-3 sm:px-4 py-2 font-semibold whitespace-nowrap">
-      <span class="hidden sm:inline">Book on IG</span>
-      <span class="sm:hidden">DM</span>
-      <span>↗</span>
+       class="chrome-chip whitespace-nowrap hover:bg-shock hover:text-paperHi transition">
+      DM @thegemlab.la ↗
     </a>
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
+
+<!-- ============ HERO — asymmetric editorial split ============ -->
 <section id="top" class="relative overflow-hidden">
-  <!-- decorative sparkle field -->
-  <div class="absolute inset-0 sparkle-layer pointer-events-none" aria-hidden="true"></div>
-  <!-- decorative glows -->
-  <div class="absolute -top-32 -left-20 w-[28rem] h-[28rem] glow-rose pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute top-40 -right-24 w-[26rem] h-[26rem] glow-gold pointer-events-none" aria-hidden="true"></div>
+  <div class="max-w-[1500px] mx-auto grid lg:grid-cols-12">
 
-  <div class="relative max-w-7xl mx-auto px-5 sm:px-10 pt-16 pb-20 sm:pt-28 sm:pb-32">
+    <!-- LEFT: copy, oversized italic ------------------------------------ -->
+    <div class="lg:col-span-7 px-5 sm:px-8 lg:pr-10 pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-24 lg:pb-32 relative">
 
-    <p class="field">Tooth gems · Smile jewelry · LA + SGV</p>
+      <!-- Editorial tick row -->
+      <div class="flex items-center gap-3 rise">
+        <span class="field field-shock">No. 001</span>
+        <span class="h-px w-10 bg-shock"></span>
+        <span class="field">Tooth gems · Smile jewelry</span>
+      </div>
 
-    <h1 class="mt-7 sm:mt-10 leading-[0.92] fade-up">
-      <span class="display block text-[clamp(3rem,12vw,9rem)]">Your luxury</span>
-      <span class="display-it block text-[clamp(3rem,12vw,9rem)] holo">tooth fairy.</span>
-    </h1>
+      <h1 class="mt-8 sm:mt-10 leading-[0.86] rise rise-2">
+        <span class="display block text-[clamp(3.25rem,12vw,9.5rem)] text-ink">Your luxury</span>
+        <span class="display-it block text-[clamp(3.5rem,14vw,11rem)] text-ink -mt-2 sm:-mt-3 ml-0 sm:ml-12">
+          tooth <span class="scribble">fairy</span>.
+        </span>
+      </h1>
 
-    <div class="mt-9 grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
-      <p class="lg:col-span-7 text-base sm:text-lg leading-[1.7] text-cream/75 max-w-xl">
-        Hand-set tooth gems and smile jewelry, brought to your home, hotel, or
-        studio. Sparkle on demand — single stones, sweet little cherries,
-        butterflies, full outlines, disco balls, 18K gold charms.
-      </p>
+      <!-- Sub copy, sits indented like a magazine deck -->
+      <div class="mt-9 sm:mt-12 grid sm:grid-cols-12 gap-5 sm:gap-8 rise rise-3">
+        <div class="sm:col-span-1 hidden sm:block">
+          <div class="v-rule h-full ml-2"></div>
+        </div>
+        <div class="sm:col-span-10 lg:col-span-9">
+          <p class="text-[17px] sm:text-[19px] leading-[1.55] text-inkSoft max-w-xl">
+            Hand-set crystals + 18K gold charms, applied at your kitchen table,
+            your hotel suite, your friend's birthday. Sparkle on demand —
+            no chairs, no waiting room, no fluorescent overhead.
+          </p>
+        </div>
+      </div>
 
-      <div class="lg:col-span-5 lg:pl-6 lg:border-l lg:border-rose/20">
-        <div class="grid grid-cols-3 gap-x-4 sm:gap-x-6 gap-y-2">
-          <div>
-            <p class="field text-[10px] text-cream/55">From</p>
-            <p class="display text-3xl sm:text-4xl text-rose mt-1">$40</p>
-            <p class="text-[11px] text-cream/55 mt-1">single gem</p>
-          </div>
-          <div>
-            <p class="field text-[10px] text-cream/55">Service</p>
-            <p class="display text-3xl sm:text-4xl mt-1">Mobile</p>
-            <p class="text-[11px] text-cream/55 mt-1">we come to you</p>
-          </div>
-          <div>
-            <p class="field text-[10px] text-cream/55">Booking</p>
-            <p class="display text-3xl sm:text-4xl mt-1">DM</p>
-            <p class="text-[11px] text-cream/55 mt-1">Instagram</p>
-          </div>
+      <!-- CTAs — single specific verb, no "Get Started" -->
+      <div class="mt-10 sm:mt-14 flex flex-wrap items-center gap-4 sm:gap-6">
+        <a href="https://www.instagram.com/thegemlab.la/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-3 bg-shock text-paperHi uppercase tracking-[0.22em] text-[11px] font-bold px-7 sm:px-8 py-4 hover:bg-shockDk transition">
+          DM <span class="font-display italic font-medium tracking-normal text-[14px] normal-case">@thegemlab.la</span> to book
+        </a>
+        <a href="#menu" class="inline-flex items-baseline gap-2 text-ink hover:text-shock transition group">
+          <span class="field">See the menu</span>
+          <span class="group-hover:translate-x-1 transition">→</span>
+        </a>
+      </div>
+
+      <!-- Stats strip — print spec block, no icons -->
+      <div class="mt-14 sm:mt-20 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
+        <div>
+          <p class="field">From</p>
+          <p class="display text-4xl sm:text-5xl shock mt-1">$40</p>
+          <p class="text-[11px] text-inkSoft mt-1 leading-tight">single gem,<br/>applied</p>
+        </div>
+        <div class="border-l border-ink/15 pl-3 sm:pl-5">
+          <p class="field">Service</p>
+          <p class="display text-4xl sm:text-5xl mt-1">Mobile</p>
+          <p class="text-[11px] text-inkSoft mt-1 leading-tight">we drive<br/>to you</p>
+        </div>
+        <div class="border-l border-ink/15 pl-3 sm:pl-5">
+          <p class="field">Booking</p>
+          <p class="display-it text-4xl sm:text-5xl mt-1">via DM</p>
+          <p class="text-[11px] text-inkSoft mt-1 leading-tight">Instagram,<br/>same day</p>
         </div>
       </div>
     </div>
 
-    <div class="mt-12 flex flex-wrap items-center gap-3 sm:gap-5">
-      <a href="https://www.instagram.com/thegemlab.la/" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-3 bg-rose text-ink uppercase tracking-[0.2em] text-xs font-bold px-7 py-4 hover:bg-peach transition">
-        Book your sparkle ↗
-      </a>
-      <a href="#menu"
-         class="inline-flex items-center gap-3 border border-rose/40 text-cream/85 uppercase tracking-[0.2em] text-xs font-semibold px-7 py-4 hover:border-rose hover:text-rose transition">
-         See the menu
-      </a>
-    </div>
 
-    <!-- Tag chips -->
-    <div class="mt-12 flex flex-wrap gap-2 text-[11px] font-mono uppercase tracking-[0.18em]">
-      <span class="border border-rose/30 text-cream/75 px-3 py-1.5 gem">Painless application</span>
-      <span class="border border-rose/30 text-cream/75 px-3 py-1.5 gem">Non-invasive · no drilling</span>
-      <span class="border border-rose/30 text-cream/75 px-3 py-1.5 gem">Lasts 6–12 months+</span>
-      <span class="border border-rose/30 text-cream/75 px-3 py-1.5 gem">Removable any time</span>
+    <!-- RIGHT: photo column ------------------------------------ -->
+    <div class="lg:col-span-5 relative bg-paperHi border-t lg:border-t-0 lg:border-l border-ink/15">
+
+      <!-- Big editorial photo -->
+      <div class="relative w-full h-full min-h-[28rem] sm:min-h-[36rem]">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=72&w=1200&fit=crop"
+             alt="A woman in a red turtleneck mid-laugh, teeth catching the light, photographed on a downtown street."
+             class="absolute inset-0 w-full h-full object-cover photo-print" />
+
+        <!-- Photo caption sits on the photo, lower right, like a contact sheet -->
+        <div class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-paperHi text-ink px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] shadow-[0_2px_0_rgba(0,0,0,0.06)]">
+          fig. i — client, post-set
+        </div>
+
+        <!-- Polaroid overlay — bottom-left, slight rotation -->
+        <div class="absolute -bottom-8 -left-6 sm:bottom-8 sm:-left-10 w-36 sm:w-44 polaroid pol-tilt-l hidden sm:block">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?fm=jpg&q=70&w=400&fit=crop"
+                 alt="A hand with tortoiseshell and black manicured nails." class="w-full aspect-[3/4] object-cover" />
+            <div class="tape" style="top:-12px; left:50%; transform:translateX(-50%) rotate(-4deg);"></div>
+          </div>
+          <p class="cap">tools of the trade</p>
+        </div>
+
+        <!-- Top-right chrome callout -->
+        <div class="absolute top-5 right-5 chrome-chip">
+          ☆ Painless · No drilling
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="hr-rose"></div>
 </section>
 
 
-<!-- ============ Menu / Price list ============ -->
-<section id="menu" class="relative py-20 sm:py-28">
-  <div class="absolute top-10 right-0 w-72 h-72 glow-rose pointer-events-none opacity-60" aria-hidden="true"></div>
+<!-- ============ Manifesto strip — leopard band ============ -->
+<section class="relative leopard-bg border-y border-ink">
+  <div class="max-w-[1500px] mx-auto px-5 sm:px-10 py-12 sm:py-16 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10">
+    <span class="bg-ink text-paper font-mono uppercase tracking-[0.32em] text-[10px] px-3 py-1.5 shrink-0">Manifesto</span>
+    <p class="display-it text-[clamp(1.5rem,3.4vw,2.6rem)] leading-[1.18] text-ink max-w-3xl">
+      "Everyone keeps asking where I got it done. <span class="shock">I tell them — she came to me.</span>"
+    </p>
+    <span class="font-mono uppercase tracking-[0.22em] text-[10px] text-ink/75 sm:ml-auto shrink-0">— DM, March '26</span>
+  </div>
+</section>
 
-  <div class="relative max-w-6xl mx-auto px-5 sm:px-10">
 
-    <div class="grid lg:grid-cols-12 gap-8 lg:gap-16 mb-12">
-      <div class="lg:col-span-5">
-        <p class="field">The gem menu</p>
-        <h2 class="display text-[clamp(3rem,8vw,6rem)] leading-[0.92] mt-3">
-          Pick your <span class="display-it holo">sparkle.</span>
+<!-- ============ MENU — editorial numbered list, NOT a 3-col grid ============ -->
+<section id="menu" class="relative py-20 sm:py-32">
+  <div class="max-w-[1500px] mx-auto px-5 sm:px-10">
+
+    <!-- Section header — left-anchored, oversized -->
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-14 sm:mb-20">
+      <div class="lg:col-span-7">
+        <p class="field">§ 02 — The Menu</p>
+        <h2 class="display text-[clamp(3rem,9vw,7rem)] leading-[0.92] mt-3 text-ink">
+          Pick your <span class="display-it shock scribble">sparkle.</span>
         </h2>
-        <div class="hr-rose mt-6 max-w-[3rem]"></div>
       </div>
-      <p class="lg:col-span-7 lg:pt-10 text-cream/70 text-base sm:text-lg leading-[1.7] max-w-xl">
-        Pricing is per design, set on a single tooth. Want more than one tooth
-        done? Combine designs — we'll quote you in the DM. Extra gems added to
-        a design are <span class="text-rose font-semibold">$20 each</span>.
-      </p>
+      <div class="lg:col-span-5 lg:pt-6">
+        <p class="text-[16px] sm:text-[17px] leading-[1.6] text-inkSoft max-w-md">
+          Prices below are per design, set on a single tooth. Combinations
+          and full sets quoted in the DM. Each extra gem added to a design
+          is <span class="shock font-semibold">$20</span>.
+        </p>
+      </div>
     </div>
 
-    <ol class="border-t border-rose/15">
-      <li class="grid sm:grid-cols-12 gap-3 sm:gap-8 py-7 sm:py-8 border-b border-rose/12 items-baseline">
-        <div class="sm:col-span-1 font-mono text-xs tracking-[0.18em] text-gold">01</div>
-        <div class="sm:col-span-4">
-          <h3 class="display text-3xl sm:text-4xl">Single gem</h3>
+    <!-- Numbered editorial menu — big italic numerals overlap the row -->
+    <ol class="border-t-2 border-ink">
+      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-7 sm:py-9 border-b border-ink/20 items-baseline">
+        <div class="col-span-2 sm:col-span-1">
+          <span class="menu-num display-it block text-5xl sm:text-7xl text-tan">01</span>
         </div>
-        <div class="sm:col-span-5 text-cream/70 leading-relaxed text-sm sm:text-base">
-          One hand-placed crystal on the tooth of your choice. The clean, classic
-          look — a single point of light when you smile.
+        <div class="col-span-10 sm:col-span-4 lg:col-span-3">
+          <h3 class="display text-3xl sm:text-4xl lg:text-5xl">Single gem</h3>
+          <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-tanDk mt-1">classic · one stone</p>
         </div>
-        <div class="sm:col-span-2 sm:text-right">
-          <span class="display text-3xl sm:text-4xl text-rose">$40</span>
+        <div class="hidden sm:block sm:col-span-5 lg:col-span-6 text-inkSoft leading-relaxed text-[15px]">
+          One hand-placed crystal on the tooth of your choice. The clean,
+          quiet flex — a single point of light when you smile.
         </div>
-      </li>
-
-      <li class="grid sm:grid-cols-12 gap-3 sm:gap-8 py-7 sm:py-8 border-b border-rose/12 items-baseline">
-        <div class="sm:col-span-1 font-mono text-xs tracking-[0.18em] text-gold">02</div>
-        <div class="sm:col-span-4">
-          <h3 class="display text-3xl sm:text-4xl">Cherry</h3>
-        </div>
-        <div class="sm:col-span-5 text-cream/70 leading-relaxed text-sm sm:text-base">
-          Twin red gems with a gold stem — sweet, signature, a little playful.
-          The crowd-favorite for a reason.
-        </div>
-        <div class="sm:col-span-2 sm:text-right">
-          <span class="display text-3xl sm:text-4xl text-rose">$70</span>
+        <div class="col-span-12 sm:col-span-2 sm:text-right -mt-3 sm:mt-0">
+          <span class="display text-3xl sm:text-4xl lg:text-5xl shock">$40</span>
         </div>
       </li>
 
-      <li class="grid sm:grid-cols-12 gap-3 sm:gap-8 py-7 sm:py-8 border-b border-rose/12 items-baseline">
-        <div class="sm:col-span-1 font-mono text-xs tracking-[0.18em] text-gold">03</div>
-        <div class="sm:col-span-4">
-          <h3 class="display text-3xl sm:text-4xl">Butterfly</h3>
+      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-7 sm:py-9 border-b border-ink/20 items-baseline">
+        <div class="col-span-2 sm:col-span-1">
+          <span class="menu-num display-it block text-5xl sm:text-7xl text-tan">02</span>
         </div>
-        <div class="sm:col-span-5 text-cream/70 leading-relaxed text-sm sm:text-base">
-          Multi-stone wing shape laid across one tooth. Delicate, symmetric,
-          shows from a smile or a half-laugh.
+        <div class="col-span-10 sm:col-span-4 lg:col-span-3">
+          <h3 class="display text-3xl sm:text-4xl lg:text-5xl">Cherry</h3>
+          <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-tanDk mt-1">house favorite</p>
         </div>
-        <div class="sm:col-span-2 sm:text-right">
-          <span class="display text-3xl sm:text-4xl text-rose">$80</span>
+        <div class="hidden sm:block sm:col-span-5 lg:col-span-6 text-inkSoft leading-relaxed text-[15px]">
+          Twin red gems with a gold stem. The pair that makes strangers
+          ask. Cherry red is the only red worth wearing.
         </div>
-      </li>
-
-      <li class="grid sm:grid-cols-12 gap-3 sm:gap-8 py-7 sm:py-8 border-b border-rose/12 items-baseline">
-        <div class="sm:col-span-1 font-mono text-xs tracking-[0.18em] text-gold">04</div>
-        <div class="sm:col-span-4">
-          <h3 class="display text-3xl sm:text-4xl">Flower</h3>
-        </div>
-        <div class="sm:col-span-5 text-cream/70 leading-relaxed text-sm sm:text-base">
-          A small cluster — center stone surrounded by petals. Pick the petal
-          colors in the DM and we'll set it accordingly.
-        </div>
-        <div class="sm:col-span-2 sm:text-right">
-          <span class="display text-3xl sm:text-4xl text-rose">$80</span>
+        <div class="col-span-12 sm:col-span-2 sm:text-right -mt-3 sm:mt-0">
+          <span class="display text-3xl sm:text-4xl lg:text-5xl shock">$70</span>
         </div>
       </li>
 
-      <li class="grid sm:grid-cols-12 gap-3 sm:gap-8 py-7 sm:py-8 border-b border-rose/12 items-baseline">
-        <div class="sm:col-span-1 font-mono text-xs tracking-[0.18em] text-gold">05</div>
-        <div class="sm:col-span-4">
-          <h3 class="display text-3xl sm:text-4xl">Outline</h3>
+      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-7 sm:py-9 border-b border-ink/20 items-baseline">
+        <div class="col-span-2 sm:col-span-1">
+          <span class="menu-num display-it block text-5xl sm:text-7xl text-tan">03</span>
         </div>
-        <div class="sm:col-span-5 text-cream/70 leading-relaxed text-sm sm:text-base">
-          A border of crystals tracing the edge of a tooth. Bold and statement —
-          the look people stop you about.
+        <div class="col-span-10 sm:col-span-4 lg:col-span-3">
+          <h3 class="display text-3xl sm:text-4xl lg:text-5xl">Butterfly</h3>
+          <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-tanDk mt-1">multi-stone wing</p>
         </div>
-        <div class="sm:col-span-2 sm:text-right">
-          <span class="display text-3xl sm:text-4xl text-rose">$100</span>
+        <div class="hidden sm:block sm:col-span-5 lg:col-span-6 text-inkSoft leading-relaxed text-[15px]">
+          Symmetric wing laid across one tooth. Shows from a smile or a
+          half-laugh — designed to catch you mid-sentence.
         </div>
-      </li>
-
-      <li class="grid sm:grid-cols-12 gap-3 sm:gap-8 py-7 sm:py-8 border-b border-rose/12 items-baseline">
-        <div class="sm:col-span-1 font-mono text-xs tracking-[0.18em] text-gold">06</div>
-        <div class="sm:col-span-4">
-          <h3 class="display text-3xl sm:text-4xl">Disco ball</h3>
-        </div>
-        <div class="sm:col-span-5 text-cream/70 leading-relaxed text-sm sm:text-base">
-          A full cover of mini crystals across a single tooth — the showstopper.
-          Catches every light in the room.
-        </div>
-        <div class="sm:col-span-2 sm:text-right">
-          <span class="display text-3xl sm:text-4xl text-rose">$120</span>
+        <div class="col-span-12 sm:col-span-2 sm:text-right -mt-3 sm:mt-0">
+          <span class="display text-3xl sm:text-4xl lg:text-5xl shock">$80</span>
         </div>
       </li>
 
-      <li class="grid sm:grid-cols-12 gap-3 sm:gap-8 py-7 sm:py-8 items-baseline">
-        <div class="sm:col-span-1 font-mono text-xs tracking-[0.18em] text-gold">07</div>
-        <div class="sm:col-span-4">
-          <h3 class="display text-3xl sm:text-4xl">18K gold charm</h3>
-          <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-gold/80 mt-1">+ price of gem</p>
+      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-7 sm:py-9 border-b border-ink/20 items-baseline">
+        <div class="col-span-2 sm:col-span-1">
+          <span class="menu-num display-it block text-5xl sm:text-7xl text-tan">04</span>
         </div>
-        <div class="sm:col-span-5 text-cream/70 leading-relaxed text-sm sm:text-base">
-          Solid 18K gold charm set alongside a gem of your choosing. The most
-          luxe option on the menu — shapes confirmed in the DM.
+        <div class="col-span-10 sm:col-span-4 lg:col-span-3">
+          <h3 class="display text-3xl sm:text-4xl lg:text-5xl">Flower</h3>
+          <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-tanDk mt-1">cluster · pick the petals</p>
         </div>
-        <div class="sm:col-span-2 sm:text-right">
-          <span class="display text-3xl sm:text-4xl text-rose">$120</span>
+        <div class="hidden sm:block sm:col-span-5 lg:col-span-6 text-inkSoft leading-relaxed text-[15px]">
+          Center stone with five petals around it. Pick the colors in the
+          DM — clear, gold, rose, blue, green. We set to match.
+        </div>
+        <div class="col-span-12 sm:col-span-2 sm:text-right -mt-3 sm:mt-0">
+          <span class="display text-3xl sm:text-4xl lg:text-5xl shock">$80</span>
+        </div>
+      </li>
+
+      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-7 sm:py-9 border-b border-ink/20 items-baseline">
+        <div class="col-span-2 sm:col-span-1">
+          <span class="menu-num display-it block text-5xl sm:text-7xl text-tan">05</span>
+        </div>
+        <div class="col-span-10 sm:col-span-4 lg:col-span-3">
+          <h3 class="display text-3xl sm:text-4xl lg:text-5xl">Outline</h3>
+          <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-tanDk mt-1">border · statement</p>
+        </div>
+        <div class="hidden sm:block sm:col-span-5 lg:col-span-6 text-inkSoft leading-relaxed text-[15px]">
+          A border of crystals tracing the edge of a single tooth. Bold —
+          the look people stop you about on the sidewalk.
+        </div>
+        <div class="col-span-12 sm:col-span-2 sm:text-right -mt-3 sm:mt-0">
+          <span class="display text-3xl sm:text-4xl lg:text-5xl shock">$100</span>
+        </div>
+      </li>
+
+      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-7 sm:py-9 border-b border-ink/20 items-baseline">
+        <div class="col-span-2 sm:col-span-1">
+          <span class="menu-num display-it block text-5xl sm:text-7xl text-tan">06</span>
+        </div>
+        <div class="col-span-10 sm:col-span-4 lg:col-span-3">
+          <h3 class="display text-3xl sm:text-4xl lg:text-5xl">Disco ball</h3>
+          <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-tanDk mt-1">full coverage · showstopper</p>
+        </div>
+        <div class="hidden sm:block sm:col-span-5 lg:col-span-6 text-inkSoft leading-relaxed text-[15px]">
+          A full cover of mini crystals across the whole tooth. The one
+          that catches every light in the room. Not subtle. On purpose.
+        </div>
+        <div class="col-span-12 sm:col-span-2 sm:text-right -mt-3 sm:mt-0">
+          <span class="display text-3xl sm:text-4xl lg:text-5xl shock">$120</span>
+        </div>
+      </li>
+
+      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-7 sm:py-9 items-baseline">
+        <div class="col-span-2 sm:col-span-1">
+          <span class="menu-num display-it block text-5xl sm:text-7xl text-tan">07</span>
+        </div>
+        <div class="col-span-10 sm:col-span-4 lg:col-span-3">
+          <h3 class="display text-3xl sm:text-4xl lg:text-5xl">18K gold charm</h3>
+          <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-tanDk mt-1">+ price of the gem set with it</p>
+        </div>
+        <div class="hidden sm:block sm:col-span-5 lg:col-span-6 text-inkSoft leading-relaxed text-[15px]">
+          Solid 18K gold charm — heart, star, cross, custom — set
+          alongside a gem of your choosing. The most luxe ticket on the menu.
+        </div>
+        <div class="col-span-12 sm:col-span-2 sm:text-right -mt-3 sm:mt-0">
+          <span class="display text-3xl sm:text-4xl lg:text-5xl shock">$120</span>
         </div>
       </li>
     </ol>
 
-    <!-- footnote -->
-    <p class="mt-10 text-cream/55 text-sm leading-relaxed max-w-2xl">
-      ✦ Custom designs, color combos, and multi-tooth sets quoted on request.
-      Send a reference pic in the DM and we'll match the vibe.
+    <p class="mt-10 text-[13px] text-inkSoft max-w-2xl leading-relaxed">
+      <span class="star-4"></span>
+      Custom designs, multi-tooth sets, and color combos quoted on request.
+      Drop a reference pic in the DM and we'll match the energy.
     </p>
   </div>
 </section>
 
 
-<!-- ============ Pull quote ============ -->
-<section class="relative py-20 sm:py-24 bg-plum/40 border-y border-rose/15">
-  <div class="absolute inset-0 sparkle-layer opacity-50 pointer-events-none" aria-hidden="true"></div>
-  <div class="relative max-w-4xl mx-auto px-5 sm:px-10 text-center">
-    <p class="field">Blinging smiles wherever you are</p>
-    <p class="display-it text-[clamp(2.25rem,6vw,4.5rem)] leading-[1.08] mt-6 holo">
-      "Everyone keeps asking where I got it done. I tell them — she came to me."
-    </p>
-    <p class="font-mono text-[11px] tracking-[0.22em] uppercase text-cream/55 mt-8">
-      ✦ a returning client
-    </p>
-  </div>
-</section>
+<!-- ============ Process — magazine spread, photo + numbered annotations ============ -->
+<section id="process" class="relative bg-paperHi border-y border-ink/15">
+  <div class="max-w-[1500px] mx-auto grid lg:grid-cols-12 gap-0">
 
-
-<!-- ============ How it works ============ -->
-<section id="how" class="py-20 sm:py-28">
-  <div class="max-w-6xl mx-auto px-5 sm:px-10">
-
-    <div class="max-w-2xl">
-      <p class="field">How it works</p>
-      <h2 class="display text-[clamp(2.75rem,7vw,5rem)] leading-[0.95] mt-3">
-        Three steps. <span class="display-it holo">Zero stress.</span>
-      </h2>
-      <div class="hr-rose mt-6 max-w-[3rem]"></div>
+    <!-- Photo column with polaroid overlay -->
+    <div class="lg:col-span-5 relative min-h-[24rem] lg:min-h-[40rem] border-b lg:border-b-0 lg:border-r border-ink/15">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?fm=jpg&q=72&w=1200&fit=crop"
+           alt="Stylized portrait against a pink wall — Y2K energy."
+           class="absolute inset-0 w-full h-full object-cover photo-print" />
+      <div class="absolute bottom-5 left-5 chrome-chip">In studio · El Monte</div>
     </div>
 
-    <ol class="mt-14 grid md:grid-cols-3 gap-8 md:gap-10">
-      <li class="card border border-rose/20 bg-ink2/60 p-7 relative">
-        <p class="display-it text-6xl text-rose">i.</p>
-        <h3 class="display text-2xl sm:text-3xl mt-3">DM the lab.</h3>
-        <p class="mt-3 text-cream/70 leading-relaxed text-sm">
-          Send a message to <span class="text-rose">@thegemlab.la</span> with
-          the design you want, the day that works, and your zip code.
-          We confirm a time + travel fee if applicable.
-        </p>
-      </li>
-      <li class="card border border-rose/20 bg-ink2/60 p-7 relative">
-        <p class="display-it text-6xl text-rose">ii.</p>
-        <h3 class="display text-2xl sm:text-3xl mt-3">We come to you.</h3>
-        <p class="mt-3 text-cream/70 leading-relaxed text-sm">
-          Mobile setup at your home, hotel, or studio. The full kit — lights,
-          curing UV, sterilized tools, the gem case. We work clean.
-        </p>
-      </li>
-      <li class="card border border-rose/20 bg-ink2/60 p-7 relative">
-        <p class="display-it text-6xl text-rose">iii.</p>
-        <h3 class="display text-2xl sm:text-3xl mt-3">Sparkle on.</h3>
-        <p class="mt-3 text-cream/70 leading-relaxed text-sm">
-          Tooth is etched, gem is bonded with dental-grade adhesive, cured
-          under UV. Painless, non-invasive, no drilling. You walk away set.
-        </p>
-      </li>
-    </ol>
+    <!-- Annotations column -->
+    <div class="lg:col-span-7 px-5 sm:px-10 lg:px-14 py-16 sm:py-24 relative">
+      <p class="field">§ 03 — Process</p>
+      <h2 class="display text-[clamp(2.75rem,7vw,5.5rem)] leading-[0.92] mt-3 text-ink">
+        Three <span class="display-it scribble">moves.</span>
+      </h2>
 
-    <!-- timing row -->
-    <div class="mt-14 grid sm:grid-cols-3 gap-6 border-t border-rose/15 pt-10">
-      <div>
-        <p class="field text-[10px]">Appointment length</p>
-        <p class="display text-2xl mt-1">~30–60 min</p>
-        <p class="text-xs text-cream/55 mt-1">depends on design</p>
-      </div>
-      <div>
-        <p class="field text-[10px]">How long it lasts</p>
-        <p class="display text-2xl mt-1">6–12+ months</p>
-        <p class="text-xs text-cream/55 mt-1">with care, often longer</p>
-      </div>
-      <div>
-        <p class="field text-[10px]">Reversible?</p>
-        <p class="display text-2xl mt-1">Always</p>
-        <p class="text-xs text-cream/55 mt-1">no damage to enamel</p>
-      </div>
+      <ol class="mt-12 sm:mt-16 space-y-12 sm:space-y-14">
+        <!-- 01 -->
+        <li class="grid grid-cols-12 gap-4 sm:gap-6">
+          <span class="display-it text-6xl sm:text-7xl shock col-span-2">i.</span>
+          <div class="col-span-10">
+            <h3 class="display text-2xl sm:text-3xl">DM the lab.</h3>
+            <p class="mt-3 text-[15px] text-inkSoft leading-[1.65] max-w-md">
+              Send the design you want, your date window, and your zip.
+              We confirm a time and any travel adjustment — usually same day.
+            </p>
+            <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-tanDk mt-3">
+              → @thegemlab.la
+            </p>
+          </div>
+        </li>
+        <!-- 02 -->
+        <li class="grid grid-cols-12 gap-4 sm:gap-6">
+          <span class="display-it text-6xl sm:text-7xl shock col-span-2">ii.</span>
+          <div class="col-span-10">
+            <h3 class="display text-2xl sm:text-3xl">We come to you.</h3>
+            <p class="mt-3 text-[15px] text-inkSoft leading-[1.65] max-w-md">
+              Mobile kit: ring light, curing UV, sterilized tools, the gem
+              case. Setup is five minutes at your kitchen counter or vanity.
+            </p>
+            <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-tanDk mt-3">
+              → 30–60 min appointment
+            </p>
+          </div>
+        </li>
+        <!-- 03 -->
+        <li class="grid grid-cols-12 gap-4 sm:gap-6">
+          <span class="display-it text-6xl sm:text-7xl shock col-span-2">iii.</span>
+          <div class="col-span-10">
+            <h3 class="display text-2xl sm:text-3xl">Sparkle on.</h3>
+            <p class="mt-3 text-[15px] text-inkSoft leading-[1.65] max-w-md">
+              The tooth is etched, the gem is bonded with dental-grade
+              adhesive, cured under UV. No drilling. No numbing. No damage.
+              You leave the same way you came in — set.
+            </p>
+            <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-tanDk mt-3">
+              → 6–12+ months, removable any time
+            </p>
+          </div>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
 
 
-<!-- ============ After Care ============ -->
-<section id="care" class="py-20 sm:py-28 bg-ink2/70 border-y border-rose/15">
-  <div class="max-w-6xl mx-auto px-5 sm:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16">
-    <div class="lg:col-span-5">
-      <p class="field">After care</p>
-      <h2 class="display text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] mt-3">
-        Keep the <span class="display-it holo">sparkle.</span>
-      </h2>
-      <div class="hr-rose mt-6 max-w-[3rem]"></div>
-      <p class="mt-8 text-cream/70 text-base leading-[1.7] max-w-md">
-        A few easy rules. Follow them and your gem stays bonded comfortably
-        for months — most clients get well past a year before they're ready
-        for a refresh.
-      </p>
-    </div>
+<!-- ============ After care — service card layout ============ -->
+<section id="care" class="py-20 sm:py-32">
+  <div class="max-w-[1500px] mx-auto px-5 sm:px-10">
 
-    <ol class="lg:col-span-7 space-y-5">
-      <li class="flex gap-5">
-        <span class="display-it text-3xl text-rose w-10 shrink-0">01</span>
-        <div>
-          <h3 class="display text-xl sm:text-2xl">No eating or drinking for 2 hours.</h3>
-          <p class="text-cream/65 mt-1.5 text-sm leading-relaxed">Let the adhesive fully set before you put anything on it.</p>
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+      <!-- LEFT: title block, sits low -->
+      <div class="lg:col-span-5 lg:pt-32">
+        <p class="field">§ 04 — After care</p>
+        <h2 class="display text-[clamp(2.75rem,7vw,5.5rem)] leading-[0.92] mt-3 text-ink">
+          Keep the
+          <span class="display-it shock block sm:inline">sparkle.</span>
+        </h2>
+        <p class="mt-7 text-[15px] sm:text-[16px] text-inkSoft leading-[1.7] max-w-md">
+          Six small rules. Follow them and the gem stays bonded comfortably —
+          most of our regulars get well past a year before they swap.
+        </p>
+
+        <!-- Polaroid stack, only on desktop -->
+        <div class="hidden lg:block relative mt-16 h-64">
+          <div class="absolute left-0 top-0 w-48 polaroid pol-tilt-l">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?fm=jpg&q=70&w=400&fit=crop"
+                 alt="Close-up beauty portrait against a pink studio wall."
+                 class="w-full aspect-[3/4] object-cover" />
+            <p class="cap">Mara · disco ball</p>
+            <div class="tape" style="top:-12px; left:50%; transform:translateX(-50%) rotate(-5deg);"></div>
+          </div>
+          <div class="absolute left-40 top-6 w-44 polaroid pol-tilt-r">
+            <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?fm=jpg&q=70&w=400&fit=crop"
+                 alt="Portrait of a client against a peach-toned wall."
+                 class="w-full aspect-[3/4] object-cover" />
+            <p class="cap">Jess · cherry set</p>
+            <div class="tape" style="top:-12px; left:50%; transform:translateX(-50%) rotate(4deg);"></div>
+          </div>
         </div>
-      </li>
-      <li class="flex gap-5">
-        <span class="display-it text-3xl text-rose w-10 shrink-0">02</span>
-        <div>
-          <h3 class="display text-xl sm:text-2xl">No hot drinks for 24 hours.</h3>
-          <p class="text-cream/65 mt-1.5 text-sm leading-relaxed">Coffee, tea, soup — let it cool first for the first day.</p>
-        </div>
-      </li>
-      <li class="flex gap-5">
-        <span class="display-it text-3xl text-rose w-10 shrink-0">03</span>
-        <div>
-          <h3 class="display text-xl sm:text-2xl">Brush gently — go around the gem.</h3>
-          <p class="text-cream/65 mt-1.5 text-sm leading-relaxed">Soft-bristle brush. Don't scrub directly over it.</p>
-        </div>
-      </li>
-      <li class="flex gap-5">
-        <span class="display-it text-3xl text-rose w-10 shrink-0">04</span>
-        <div>
-          <h3 class="display text-xl sm:text-2xl">Don't pick or floss-tug at it.</h3>
-          <p class="text-cream/65 mt-1.5 text-sm leading-relaxed">Floss next to it, not through it. Picking is the #1 reason gems pop early.</p>
-        </div>
-      </li>
-      <li class="flex gap-5">
-        <span class="display-it text-3xl text-rose w-10 shrink-0">05</span>
-        <div>
-          <h3 class="display text-xl sm:text-2xl">Skip biting hard objects.</h3>
-          <p class="text-cream/65 mt-1.5 text-sm leading-relaxed">Ice, pen caps, fingernails. Treat the gem like a tiny piece of jewelry — because it is.</p>
-        </div>
-      </li>
-      <li class="flex gap-5">
-        <span class="display-it text-3xl text-rose w-10 shrink-0">06</span>
-        <div>
-          <h3 class="display text-xl sm:text-2xl">Gem fell off? DM us.</h3>
-          <p class="text-cream/65 mt-1.5 text-sm leading-relaxed">If it pops within the first 7 days, the re-set is on the house.</p>
-        </div>
-      </li>
-    </ol>
+      </div>
+
+      <!-- RIGHT: rules list — magazine numbered, no boxes -->
+      <ol class="lg:col-span-7 space-y-0 border-t border-ink/20">
+        <li class="grid grid-cols-12 gap-3 py-6 border-b border-ink/15">
+          <span class="display-it text-2xl shock col-span-2 sm:col-span-1">01</span>
+          <div class="col-span-10 sm:col-span-11">
+            <h3 class="display text-xl sm:text-2xl">No eating or drinking for 2 hours.</h3>
+            <p class="text-[14px] text-inkSoft mt-1 max-w-lg">Let the adhesive set fully before you put anything on it.</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-12 gap-3 py-6 border-b border-ink/15">
+          <span class="display-it text-2xl shock col-span-2 sm:col-span-1">02</span>
+          <div class="col-span-10 sm:col-span-11">
+            <h3 class="display text-xl sm:text-2xl">No hot drinks for 24 hours.</h3>
+            <p class="text-[14px] text-inkSoft mt-1 max-w-lg">Coffee, tea, soup — let them cool first the first day.</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-12 gap-3 py-6 border-b border-ink/15">
+          <span class="display-it text-2xl shock col-span-2 sm:col-span-1">03</span>
+          <div class="col-span-10 sm:col-span-11">
+            <h3 class="display text-xl sm:text-2xl">Brush gently. Go around, not over.</h3>
+            <p class="text-[14px] text-inkSoft mt-1 max-w-lg">Soft-bristle. Don't scrub directly on the gem.</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-12 gap-3 py-6 border-b border-ink/15">
+          <span class="display-it text-2xl shock col-span-2 sm:col-span-1">04</span>
+          <div class="col-span-10 sm:col-span-11">
+            <h3 class="display text-xl sm:text-2xl">Don't pick. Don't floss-tug.</h3>
+            <p class="text-[14px] text-inkSoft mt-1 max-w-lg">Floss next to it, not through it. Picking is the #1 reason gems pop early.</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-12 gap-3 py-6 border-b border-ink/15">
+          <span class="display-it text-2xl shock col-span-2 sm:col-span-1">05</span>
+          <div class="col-span-10 sm:col-span-11">
+            <h3 class="display text-xl sm:text-2xl">Skip biting hard objects.</h3>
+            <p class="text-[14px] text-inkSoft mt-1 max-w-lg">Ice, pen caps, fingernails. Treat it like a tiny piece of jewelry — it is.</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-12 gap-3 py-6">
+          <span class="display-it text-2xl shock col-span-2 sm:col-span-1">06</span>
+          <div class="col-span-10 sm:col-span-11">
+            <h3 class="display text-xl sm:text-2xl">Gem fell off in the first 7 days?</h3>
+            <p class="text-[14px] text-inkSoft mt-1 max-w-lg">DM us a photo. The re-set is on the house.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
   </div>
 </section>
 
 
-<!-- ============ Travel policy + service area ============ -->
-<section id="policy" class="py-20 sm:py-28">
-  <div class="max-w-6xl mx-auto px-5 sm:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-    <div class="lg:col-span-6">
-      <p class="field">Where we go</p>
-      <h2 class="display text-[clamp(2.5rem,6.5vw,5rem)] leading-[0.95] mt-3">
-        LA + the <span class="display-it holo">SGV.</span>
+<!-- ============ Travel + policy — chrome card on leopard ============ -->
+<section id="travel" class="relative leopard-bg border-y border-ink overflow-hidden">
+
+  <!-- Diagonal accent strips at edges -->
+  <div class="max-w-[1500px] mx-auto px-5 sm:px-10 py-20 sm:py-28 relative grid lg:grid-cols-12 gap-8 lg:gap-12">
+
+    <!-- Title block, ink-on-leopard -->
+    <div class="lg:col-span-5 relative">
+      <p class="bg-ink text-paper inline-block font-mono uppercase tracking-[0.28em] text-[10px] px-3 py-1.5">§ 05 — Travel</p>
+      <h2 class="display text-[clamp(2.75rem,7vw,5.5rem)] leading-[0.9] mt-5 text-ink">
+        LA + the <span class="display-it scribble">SGV.</span>
       </h2>
-      <div class="hr-rose mt-6 max-w-[3rem]"></div>
-      <div class="mt-8 grid grid-cols-2 gap-x-6 gap-y-2 font-mono text-[12px] uppercase tracking-[0.18em] text-cream/75 max-w-md">
+
+      <div class="mt-8 grid grid-cols-2 gap-x-5 gap-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-ink max-w-md">
         <span>Downtown LA</span>
         <span>Hollywood</span>
         <span>K-Town</span>
@@ -539,198 +731,227 @@
         <span>Pomona</span>
         <span>Glendora</span>
       </div>
-      <p class="mt-8 text-cream/65 text-sm leading-relaxed max-w-md">
-        Outside this list? DM us — we travel widely across LA and the SGV.
-        We'll confirm if we can make it and any travel fee.
+      <p class="mt-8 text-[14px] leading-relaxed text-ink/80 max-w-md">
+        Outside the list? DM us. We travel widely across LA and the SGV —
+        we'll confirm if we can make it and what the travel adjustment looks like.
       </p>
     </div>
 
-    <div class="lg:col-span-6 border border-rose/20 bg-ink2/60 p-7 sm:p-9">
-      <p class="field">Travel policy</p>
-      <h3 class="display text-3xl sm:text-4xl mt-3">The fine print, kept short.</h3>
-      <div class="hr-rose mt-6 max-w-[2rem]"></div>
+    <!-- Policy card — looks like a backstage call sheet -->
+    <div class="lg:col-span-7">
+      <div class="bg-paperHi border-2 border-ink p-7 sm:p-10 shadow-[8px_8px_0_0_#1a0f12]">
+        <div class="flex items-baseline justify-between gap-4 border-b border-ink/20 pb-4">
+          <p class="display-it text-2xl">The fine print, kept short.</p>
+          <span class="chrome-chip">Call sheet 01</span>
+        </div>
 
-      <ul class="mt-7 space-y-5 text-sm sm:text-base text-cream/75 leading-relaxed">
-        <li class="flex gap-3">
-          <span class="text-gold mt-1">✦</span>
-          <span><strong class="text-cream">$15 travel fee</strong> within the core LA / SGV area. Confirmed at booking.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-gold mt-1">✦</span>
-          <span><strong class="text-cream">Further zips</strong> quoted by distance — we'll let you know before you commit.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-gold mt-1">✦</span>
-          <span><strong class="text-cream">Group sessions</strong> (3+ people) travel fee is waived. Bring your girls.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-gold mt-1">✦</span>
-          <span><strong class="text-cream">Deposit</strong> reserves your slot. Final balance due at the appointment — cash, Zelle, or CashApp.</span>
-        </li>
-        <li class="flex gap-3">
-          <span class="text-gold mt-1">✦</span>
-          <span><strong class="text-cream">Reschedules</strong> are no problem with 24h notice. Same-day cancellations forfeit the deposit.</span>
-        </li>
-      </ul>
+        <dl class="mt-6 divide-y divide-ink/15">
+          <div class="grid grid-cols-12 gap-3 py-4 items-baseline">
+            <dt class="col-span-4 sm:col-span-3 field">Travel fee</dt>
+            <dd class="col-span-8 sm:col-span-9 text-[15px] text-inkSoft leading-relaxed">
+              <span class="shock font-semibold">$15</span> within the core LA / SGV area.
+              Further zips quoted by distance — confirmed before you commit.
+            </dd>
+          </div>
+          <div class="grid grid-cols-12 gap-3 py-4 items-baseline">
+            <dt class="col-span-4 sm:col-span-3 field">Group sessions</dt>
+            <dd class="col-span-8 sm:col-span-9 text-[15px] text-inkSoft leading-relaxed">
+              Three or more people? Travel is on us. Bring your girls.
+            </dd>
+          </div>
+          <div class="grid grid-cols-12 gap-3 py-4 items-baseline">
+            <dt class="col-span-4 sm:col-span-3 field">Deposit</dt>
+            <dd class="col-span-8 sm:col-span-9 text-[15px] text-inkSoft leading-relaxed">
+              A small deposit holds your slot. Final balance at the appointment —
+              cash, Zelle, or CashApp.
+            </dd>
+          </div>
+          <div class="grid grid-cols-12 gap-3 py-4 items-baseline">
+            <dt class="col-span-4 sm:col-span-3 field">Reschedules</dt>
+            <dd class="col-span-8 sm:col-span-9 text-[15px] text-inkSoft leading-relaxed">
+              No problem with 24h notice. Same-day cancellations forfeit the deposit.
+            </dd>
+          </div>
+          <div class="grid grid-cols-12 gap-3 py-4 items-baseline">
+            <dt class="col-span-4 sm:col-span-3 field">Touch-ups</dt>
+            <dd class="col-span-8 sm:col-span-9 text-[15px] text-inkSoft leading-relaxed">
+              If a gem pops in the first 7 days, the re-set is free.
+              After that we charge a small re-application fee.
+            </dd>
+          </div>
+        </dl>
+      </div>
     </div>
   </div>
 </section>
 
 
-<!-- ============ FAQ ============ -->
-<section id="faq" class="py-20 sm:py-28 bg-ink2/70 border-y border-rose/15">
-  <div class="max-w-4xl mx-auto px-5 sm:px-10">
-    <div class="text-center max-w-2xl mx-auto">
-      <p class="field">Questions</p>
-      <h2 class="display text-[clamp(2.5rem,6.5vw,5rem)] leading-[0.95] mt-3">
-        The <span class="display-it holo">FAQ.</span>
+<!-- ============ FAQ — editorial, no boxes ============ -->
+<section id="faq" class="py-20 sm:py-32">
+  <div class="max-w-3xl mx-auto px-5 sm:px-10">
+
+    <div class="mb-12 sm:mb-16">
+      <p class="field">§ 06 — FAQ</p>
+      <h2 class="display text-[clamp(3rem,8vw,6rem)] leading-[0.92] mt-3 text-ink">
+        Asked &amp; <span class="display-it shock scribble">answered.</span>
       </h2>
     </div>
 
-    <div class="mt-12 space-y-3">
-      <details class="group border border-rose/15 bg-ink/60 p-5 sm:p-6 open:border-rose/40 transition">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="display text-xl sm:text-2xl">Does it hurt?</span>
-          <span class="text-rose group-open:rotate-45 transition text-2xl leading-none">+</span>
+    <div class="border-t-2 border-ink">
+      <details class="group border-b border-ink/20 py-5 sm:py-6">
+        <summary class="flex items-start gap-4 sm:gap-6 cursor-pointer list-none">
+          <span class="sticker-q shrink-0 mt-1">Q</span>
+          <span class="display text-xl sm:text-2xl flex-1">Does it hurt?</span>
+          <span class="font-display italic text-shock text-2xl leading-none mt-1 group-open:rotate-45 transition shrink-0">+</span>
         </summary>
-        <p class="mt-4 text-cream/70 leading-relaxed text-sm sm:text-base">
-          No. The application is completely painless — no needles, no drilling,
-          no numbing. We use a dental-grade adhesive that bonds to the enamel
-          surface, the same kind of resin orthodontists use.
-        </p>
+        <div class="mt-4 pl-10 sm:pl-14 text-inkSoft text-[15px] leading-[1.7] max-w-2xl">
+          No. Completely painless — no needles, no numbing, no drilling. We use a
+          dental-grade adhesive that bonds to the enamel surface, the same kind of
+          resin orthodontists use.
+        </div>
       </details>
 
-      <details class="group border border-rose/15 bg-ink/60 p-5 sm:p-6 open:border-rose/40 transition">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="display text-xl sm:text-2xl">Will it damage my teeth?</span>
-          <span class="text-rose group-open:rotate-45 transition text-2xl leading-none">+</span>
+      <details class="group border-b border-ink/20 py-5 sm:py-6">
+        <summary class="flex items-start gap-4 sm:gap-6 cursor-pointer list-none">
+          <span class="sticker-q shrink-0 mt-1">Q</span>
+          <span class="display text-xl sm:text-2xl flex-1">Will it damage my teeth?</span>
+          <span class="font-display italic text-shock text-2xl leading-none mt-1 group-open:rotate-45 transition shrink-0">+</span>
         </summary>
-        <p class="mt-4 text-cream/70 leading-relaxed text-sm sm:text-base">
+        <div class="mt-4 pl-10 sm:pl-14 text-inkSoft text-[15px] leading-[1.7] max-w-2xl">
           No drilling, no scraping, no damage to enamel. The gem sits on the
-          surface of the tooth and can be removed any time with no trace left
+          surface of the tooth and can be removed any time with zero trace left
           behind.
-        </p>
+        </div>
       </details>
 
-      <details class="group border border-rose/15 bg-ink/60 p-5 sm:p-6 open:border-rose/40 transition">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="display text-xl sm:text-2xl">How long does it last?</span>
-          <span class="text-rose group-open:rotate-45 transition text-2xl leading-none">+</span>
+      <details class="group border-b border-ink/20 py-5 sm:py-6">
+        <summary class="flex items-start gap-4 sm:gap-6 cursor-pointer list-none">
+          <span class="sticker-q shrink-0 mt-1">Q</span>
+          <span class="display text-xl sm:text-2xl flex-1">How long does it last?</span>
+          <span class="font-display italic text-shock text-2xl leading-none mt-1 group-open:rotate-45 transition shrink-0">+</span>
         </summary>
-        <p class="mt-4 text-cream/70 leading-relaxed text-sm sm:text-base">
-          Six to twelve months on average, often longer with good after-care.
-          Many of our regulars keep theirs in for a year+ before they're ready
-          for a change.
-        </p>
+        <div class="mt-4 pl-10 sm:pl-14 text-inkSoft text-[15px] leading-[1.7] max-w-2xl">
+          Six to twelve months on average, often longer with good after-care. Many
+          of our regulars keep theirs in for a year+ before they're ready for a
+          change.
+        </div>
       </details>
 
-      <details class="group border border-rose/15 bg-ink/60 p-5 sm:p-6 open:border-rose/40 transition">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="display text-xl sm:text-2xl">What if it falls off?</span>
-          <span class="text-rose group-open:rotate-45 transition text-2xl leading-none">+</span>
+      <details class="group border-b border-ink/20 py-5 sm:py-6">
+        <summary class="flex items-start gap-4 sm:gap-6 cursor-pointer list-none">
+          <span class="sticker-q shrink-0 mt-1">Q</span>
+          <span class="display text-xl sm:text-2xl flex-1">What if it falls off?</span>
+          <span class="font-display italic text-shock text-2xl leading-none mt-1 group-open:rotate-45 transition shrink-0">+</span>
         </summary>
-        <p class="mt-4 text-cream/70 leading-relaxed text-sm sm:text-base">
-          If a gem comes off within 7 days of placement, the re-set is free.
-          After that we'll re-set at a small re-application fee — just DM us a
-          photo.
-        </p>
+        <div class="mt-4 pl-10 sm:pl-14 text-inkSoft text-[15px] leading-[1.7] max-w-2xl">
+          Within 7 days of placement, the re-set is free. After that we'll re-set
+          at a small re-application fee. Just DM us a photo.
+        </div>
       </details>
 
-      <details class="group border border-rose/15 bg-ink/60 p-5 sm:p-6 open:border-rose/40 transition">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="display text-xl sm:text-2xl">Can I do a group session?</span>
-          <span class="text-rose group-open:rotate-45 transition text-2xl leading-none">+</span>
+      <details class="group border-b border-ink/20 py-5 sm:py-6">
+        <summary class="flex items-start gap-4 sm:gap-6 cursor-pointer list-none">
+          <span class="sticker-q shrink-0 mt-1">Q</span>
+          <span class="display text-xl sm:text-2xl flex-1">Can I do a group session?</span>
+          <span class="font-display italic text-shock text-2xl leading-none mt-1 group-open:rotate-45 transition shrink-0">+</span>
         </summary>
-        <p class="mt-4 text-cream/70 leading-relaxed text-sm sm:text-base">
-          Absolutely — and it's our favorite kind of booking. Birthdays,
-          bachelorettes, girls' nights. Three or more and travel is on us.
-          DM us with how many and where.
-        </p>
+        <div class="mt-4 pl-10 sm:pl-14 text-inkSoft text-[15px] leading-[1.7] max-w-2xl">
+          Absolutely — birthdays, bachelorettes, girls' nights. Three or more and
+          travel is on us. DM with how many and where and we'll send a slot.
+        </div>
       </details>
 
-      <details class="group border border-rose/15 bg-ink/60 p-5 sm:p-6 open:border-rose/40 transition">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="display text-xl sm:text-2xl">Can I pick custom colors?</span>
-          <span class="text-rose group-open:rotate-45 transition text-2xl leading-none">+</span>
+      <details class="group border-b border-ink/20 py-5 sm:py-6">
+        <summary class="flex items-start gap-4 sm:gap-6 cursor-pointer list-none">
+          <span class="sticker-q shrink-0 mt-1">Q</span>
+          <span class="display text-xl sm:text-2xl flex-1">Can I pick custom colors?</span>
+          <span class="font-display italic text-shock text-2xl leading-none mt-1 group-open:rotate-45 transition shrink-0">+</span>
         </summary>
-        <p class="mt-4 text-cream/70 leading-relaxed text-sm sm:text-base">
+        <div class="mt-4 pl-10 sm:pl-14 text-inkSoft text-[15px] leading-[1.7] max-w-2xl">
           Yes. The case travels with us — clear, gold, rose, red, blue, green,
-          black, multicolor. Send a reference pic of any combo you want and
-          we'll match it.
-        </p>
+          black, multicolor. Send a reference pic of any combo you want and we'll
+          match it.
+        </div>
       </details>
 
-      <details class="group border border-rose/15 bg-ink/60 p-5 sm:p-6 open:border-rose/40 transition">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <span class="display text-xl sm:text-2xl">How do I book?</span>
-          <span class="text-rose group-open:rotate-45 transition text-2xl leading-none">+</span>
+      <details class="group border-b border-ink/20 py-5 sm:py-6">
+        <summary class="flex items-start gap-4 sm:gap-6 cursor-pointer list-none">
+          <span class="sticker-q shrink-0 mt-1">Q</span>
+          <span class="display text-xl sm:text-2xl flex-1">How do I book?</span>
+          <span class="font-display italic text-shock text-2xl leading-none mt-1 group-open:rotate-45 transition shrink-0">+</span>
         </summary>
-        <p class="mt-4 text-cream/70 leading-relaxed text-sm sm:text-base">
-          Instagram DM at <a class="text-rose hover:text-peach transition underline" href="https://www.instagram.com/thegemlab.la/" target="_blank" rel="noopener">@thegemlab.la</a>.
-          Include design, date window, and your zip — we'll confirm the rest.
-        </p>
+        <div class="mt-4 pl-10 sm:pl-14 text-inkSoft text-[15px] leading-[1.7] max-w-2xl">
+          DM us at <a class="shock hover:underline" href="https://www.instagram.com/thegemlab.la/" target="_blank" rel="noopener">@thegemlab.la</a>.
+          Include design, date window, and your zip — we'll confirm the rest the
+          same day.
+        </div>
       </details>
     </div>
   </div>
 </section>
 
 
-<!-- ============ Book CTA ============ -->
-<section id="book" class="relative py-24 sm:py-36 overflow-hidden">
-  <div class="absolute inset-0 sparkle-layer opacity-60 pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] glow-rose pointer-events-none" aria-hidden="true"></div>
-
-  <div class="relative max-w-4xl mx-auto px-5 sm:px-10 text-center">
-    <p class="field">Book your sparkle</p>
-    <h2 class="mt-5 leading-[0.93]">
-      <span class="display block text-[clamp(3rem,11vw,8rem)]">DM us.</span>
-      <span class="display-it block text-[clamp(3rem,11vw,8rem)] holo">We'll bring the bling.</span>
-    </h2>
-    <p class="mt-9 text-cream/80 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-      Send a message on Instagram with the design, your date window, and your
-      zip. We'll confirm a time and travel and lock you in.
-    </p>
-    <div class="mt-11 flex flex-wrap justify-center gap-4">
-      <a href="https://www.instagram.com/thegemlab.la/" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-3 bg-rose text-ink uppercase tracking-[0.2em] text-xs font-bold px-9 py-4 hover:bg-peach transition">
-        Message @thegemlab.la
-      </a>
+<!-- ============ Closing CTA — leopard band with hot pink center ============ -->
+<section id="book" class="relative leopard-bg border-t border-ink">
+  <div class="max-w-[1500px] mx-auto px-5 sm:px-10 py-20 sm:py-28">
+    <div class="bg-shock text-paperHi border-2 border-ink shadow-[10px_10px_0_0_#1a0f12] px-7 sm:px-12 py-14 sm:py-20 text-center max-w-3xl mx-auto">
+      <p class="font-mono uppercase tracking-[0.3em] text-[10px] text-paperHi/80">§ 07 — Booking is open</p>
+      <h2 class="mt-5 leading-[0.92]">
+        <span class="display block text-[clamp(3rem,11vw,8rem)]">DM us.</span>
+        <span class="display-it block text-[clamp(2.75rem,9vw,6.5rem)] -mt-1">we'll bring the bling.</span>
+      </h2>
+      <p class="mt-8 text-[15px] sm:text-[16px] leading-relaxed max-w-md mx-auto text-paperHi/85">
+        Design + date window + zip. That's it. We'll confirm a time, the travel
+        fee, and lock you in — usually the same day.
+      </p>
+      <div class="mt-10">
+        <a href="https://www.instagram.com/thegemlab.la/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-3 bg-ink text-paperHi font-mono uppercase tracking-[0.22em] text-[11px] font-bold px-8 py-4 hover:bg-paperHi hover:text-shock transition">
+          Message @thegemlab.la ↗
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 
-<!-- ============ Footer ============ -->
-<footer class="border-t border-rose/15 bg-ink">
-  <div class="max-w-6xl mx-auto px-5 sm:px-10 py-12 grid md:grid-cols-3 gap-10 text-sm">
-    <div>
-      <p class="display-it text-3xl holo">The Gem Lab</p>
-      <p class="mt-3 text-cream/55 font-mono text-[11px] uppercase tracking-[0.22em]">Mobile tooth gems · LA / SGV</p>
-      <p class="mt-3 text-cream/80 hover:text-rose transition">
-        <a href="https://www.instagram.com/thegemlab.la/" target="_blank" rel="noopener">@thegemlab.la ↗</a>
+<!-- ============ Footer — masthead style ============ -->
+<footer class="bg-ink text-paper">
+  <div class="max-w-[1500px] mx-auto px-5 sm:px-10 py-14 grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <p class="display-it text-4xl">The Gem <span class="shock">Lab</span></p>
+      <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-paper/60">Mobile tooth gems · LA / SGV</p>
+      <p class="mt-6 text-[14px] text-paper/75 max-w-sm leading-relaxed">
+        Your luxury tooth fairy. Blinging smiles wherever you are.
+        DM <a class="shock hover:underline" href="https://www.instagram.com/thegemlab.la/" target="_blank" rel="noopener">@thegemlab.la</a> to book.
       </p>
     </div>
-    <div>
-      <p class="field">Sections</p>
-      <ul class="space-y-2 mt-3 text-cream/65">
-        <li><a class="hover:text-rose" href="#menu">Menu</a></li>
-        <li><a class="hover:text-rose" href="#how">How it works</a></li>
-        <li><a class="hover:text-rose" href="#care">After care</a></li>
-        <li><a class="hover:text-rose" href="#policy">Travel policy</a></li>
-        <li><a class="hover:text-rose" href="#faq">FAQ</a></li>
+    <div class="md:col-span-3">
+      <p class="font-mono uppercase tracking-[0.28em] text-[10px] text-shock">Index</p>
+      <ul class="mt-4 space-y-2 text-[14px] text-paper/80">
+        <li><a class="hover:text-shock transition" href="#menu">02 — Menu</a></li>
+        <li><a class="hover:text-shock transition" href="#process">03 — Process</a></li>
+        <li><a class="hover:text-shock transition" href="#care">04 — After care</a></li>
+        <li><a class="hover:text-shock transition" href="#travel">05 — Travel</a></li>
+        <li><a class="hover:text-shock transition" href="#faq">06 — FAQ</a></li>
       </ul>
     </div>
-    <div class="md:text-right">
-      <p class="field">Preview by</p>
+    <div class="md:col-span-4">
+      <p class="font-mono uppercase tracking-[0.28em] text-[10px] text-shock">Preview by</p>
       <p class="display-it text-2xl mt-2">WestCo App Studio</p>
-      <p><a class="text-cream/60 hover:text-rose transition font-mono text-[11px] uppercase tracking-[0.22em]" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a></p>
-      <p><a class="text-cream/60 hover:text-rose transition font-mono text-[11px] uppercase tracking-[0.22em]" href="tel:+12135229136">(213) 522-9136</a></p>
+      <p class="mt-2 font-mono text-[11px] uppercase tracking-[0.22em] text-paper/70">
+        <a class="hover:text-shock transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
+      </p>
+      <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-paper/70">
+        <a class="hover:text-shock transition" href="tel:+12135229136">(213) 522-9136</a>
+      </p>
     </div>
   </div>
-  <div class="border-t border-rose/15">
-    <div class="max-w-6xl mx-auto px-5 sm:px-10 py-5 text-[11px] font-mono uppercase tracking-[0.22em] text-cream/40 flex flex-wrap items-center justify-between gap-3">
+  <div class="border-t border-paper/15">
+    <div class="max-w-[1500px] mx-auto px-5 sm:px-10 py-5 flex flex-wrap items-center justify-between gap-3 font-mono uppercase tracking-[0.22em] text-[10px] text-paper/55">
       <span>© 2026 The Gem Lab</span>
-      <span>Preview build · not the official site</span>
+      <span>Vol. 01 · Issue 003</span>
+      <span>Preview build — not the official site</span>
     </div>
   </div>
 </footer>
