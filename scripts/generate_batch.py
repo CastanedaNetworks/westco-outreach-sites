@@ -523,6 +523,151 @@ CONTENT = {
     # ============ 8. Riverside Car Clinic (Riverside) ============
     # Owner is "Bruce" — named in nearly every captured review. Family-owned.
     # Specialty: OBD1 / older vehicles. Honest-mechanic angle.
+    # ============ 9. Red Hair Salon /Wendy (West Covina) ============
+    # Per the captured reviews, the actual stylist customers rave about is
+    # CHERRY (not "Wendy" from the listing name). 5-year regulars praise her
+    # memory and consistency. Single-chair shop — only 1 stylist row used.
+    "red-hair-salon-wendy-west-covina": {
+        "template": "landing-salon.html",
+        "meta_description": "Red Hair Salon — Cherry's chair on Wescove Pl, West Covina. 4.6 across 56 Google reviews. Color, cuts, makeup. Regulars come back for years.",
+        "brand": {
+            # Warm wine on cream
+            "50":  "#fbf3e8",
+            "100": "#f1ddc7",
+            "500": "#7c2f3f",
+            "600": "#5a1d2c",
+            "700": "#3f1320",
+            "900": "#1f0610",
+        },
+        "trust_badge":         "4.6 · 56 Google reviews",
+        "top_band_left":       "Color · Cut · Makeup · 5-year regulars",
+        "top_band_right":      "Wescove Pl · West Covina, CA · By appointment",
+        "photo_caption":       "Red Hair Salon · West Covina",
+        "eyebrow_kicker":      "1104 Wescove Pl · West Covina, CA · Book direct with Cherry",
+        "hero_headline_part_1": "Cherry's chair.",
+        "hero_headline_part_2": "Five-year regulars.",
+        "stat_3_label":        "Regulars stay",
+        "stat_3_value":        "5+ yrs",
+        "about_kicker":        "What the regulars say.",
+        "pull_quote_text":     "Cherry has always hooked me up. Her memory is impeccable — I see her through five years, four or five different times, and she always remembers me.",
+        "pull_quote_author":   "Elisa Elizondo Coronel",
+        "chairs_heading":      "One chair. One stylist.",
+        "chairs_intro":        "Cherry runs the chair herself. No rotation, no rebooking with a stranger. The reviews call out her memory — what cuts you've had, which lengths you've kept, what's growing in.",
+        "stylists": [
+            ("Cherry", "Lead stylist and owner of the chair. Color, cuts, makeup, and event styling. Long-term clients booking three to five years out."),
+            ("__BLANK_STYLIST__", ""),
+            ("__BLANK_STYLIST__", ""),
+        ],
+        "services_heading":    "What she works on.",
+        "services_intro":      "Cherry handles cuts, color, and pre-event styling. Pricing confirmed when you book — quote varies by length and process.",
+        "services": [
+            ("Color",          "Single process, balayage, root touch-up. Cherry will tell you what's worth doing and what isn't."),
+            ("Cut + style",    "Wash, cut, blow-dry. Lengths from pixie to mid-back."),
+            ("Event styling",  "Wedding, prom, photoshoot. Marlene's review covered hair and makeup that 'stayed gorgeous all day.'"),
+            ("Makeup",         "On-site for events or solo. Natural to full glam — Cherry picks the right register."),
+            ("Standing slots", "Weekly or monthly recurring booking. Regulars book three months out."),
+        ],
+        "service_metas": ["from $", "from $", "event", "event", "weekly"],
+        "about_heading":       "On Wescove Pl. By appointment.",
+        "about_paragraph":     "Red Hair Salon sits on Wescove Pl in West Covina. Cherry runs the chair herself — color, cuts, and pre-event hair and makeup. Holly's review put it bluntly: 'Cherry is the only one allowed to touch her hair.'",
+        "about_paragraph_2":   "Marlene came in for an event and called it 'comfortable, natural, and beautiful.' Elisa has been a client across five years and four chairs. The shop runs on these long arcs — not walk-in volume.",
+        "visit_heading":       "Wescove Pl, West Covina.",
+        "visit_paragraph":     "1104 Wescove Pl. By appointment only. Call Cherry directly to set a time — she answers, books, and remembers.",
+        "book_note":           "Cherry takes the call",
+        "hours": {
+            "mon": "Closed",
+            "tue": "By appointment",
+            "wed": "By appointment",
+            "thu": "By appointment",
+            "fri": "By appointment",
+            "sat": "By appointment",
+            "sun": "Closed",
+        },
+        "cta_kicker":          "Book the chair",
+        "cta_heading":         "Call Cherry directly.",
+        "cta_body":            "Cherry books, takes the call, and remembers you. Tell her what you want — she'll tell you when she has a slot.",
+        "email_subject":       "built Red Hair Salon a website preview",
+        "email_body": (
+            "elisa's review where she said cherry 'has always hooked me up' and that her memory is impeccable across five years and four different visits stuck with me — that's a sentence most salons would pay for.\n\n"
+            "you're 4.6 stars across 56 Google reviews but anyone who searches Red Hair Salon on their phone just hits a maps pin, no website. the listing also says 'Wendy' but every five-star review is about Cherry.\n\n"
+            "built you a preview using your real reviews and put cherry's chair up front: {preview_url}\n\n"
+            "if you want it live this week, i can have it up for $1,497 — text or call me at (213) 522-9136.\n\n"
+            "i'm in west covina too, easy meet if you'd rather talk in person."
+        ),
+    },
+
+    # ============ 10. Thirty Three Salon (Covina) ============
+    # Reviews call out 3 stylists: Frank (lightening specialist), Thomas
+    # (color + cut), and Eliana (negative review — excluded from pull quote).
+    # Carries Oribe products. Previously named Salon Lavish — recent rebrand.
+    "thirty-three-salon-west-covina": {
+        "template": "landing-salon.html",
+        "meta_description": "Thirty Three Salon — color, cuts, and styling on S. Citrus Ave, Covina. Stocks Oribe. Frank, Thomas, and the team. 4.5 across 44 Google reviews.",
+        "brand": {
+            "50":  "#fbf3e8",
+            "100": "#f1ddc7",
+            "500": "#7c2f3f",
+            "600": "#5a1d2c",
+            "700": "#3f1320",
+            "900": "#1f0610",
+        },
+        "trust_badge":         "4.5 · 44 Google reviews · stocks Oribe",
+        "top_band_left":       "Color · Cut · Style · Oribe stockist",
+        "top_band_right":      "147 S Citrus Ave · Covina, CA · Walk-ins + appointments",
+        "photo_caption":       "Thirty Three Salon · Covina",
+        "eyebrow_kicker":      "147 S Citrus Ave · Covina, CA · Oribe stockist · formerly Salon Lavish",
+        "hero_headline_part_1": "Three chairs.",
+        "hero_headline_part_2": "Oribe on the shelves.",
+        "stat_3_label":        "We stock",
+        "stat_3_value":        "Oribe",
+        "about_kicker":        "What a client wrote.",
+        "pull_quote_text":     "I got my hair colored and cut. Thomas did a fantastic job. He met every expectation I had. If you want your hair to look amazing I recommend asking for Thomas.",
+        "pull_quote_author":   "Patricia Hernandez",
+        "chairs_heading":      "Frank. Thomas. The team.",
+        "chairs_intro":        "Three stylists, three specialties. Book by name when you know what you want — or call the salon and we'll match you to the right chair.",
+        "stylists": [
+            ("Frank",  "Lightening specialist. Karina Rodriguez was 'skeptical on how light they can get my hair without damaging it' — Frank did it without damage."),
+            ("Thomas", "Color and cuts. Patricia wrote 'he met every expectation that I had — sweetheart and polite.' Booking him fills fast."),
+            ("The team", "Plus walk-in slots most weekdays. Same-day prom and event styling when the schedule allows."),
+        ],
+        "services_heading":    "The menu.",
+        "services_intro":      "Single-process color, balayage, lightening, cuts, blow-outs, makeup. Pricing varies by length and process — quoted at consult before any work starts.",
+        "services": [
+            ("Color",          "Single process to full balayage. Frank handles the lightening; Thomas runs single-process and gloss work."),
+            ("Cut + style",    "Wash, cut, blow-dry. Long-hair cuts, short-cut precision, men's clipper work."),
+            ("Lightening",     "Going lighter — without burning the hair off. Frank's specialty. Multi-session if needed."),
+            ("Event hair",     "Prom, wedding, photoshoot. Same-day available when there's a gap."),
+            ("Oribe products", "Carried in-shop. Cherry-picked from the line — what we'd use on our own hair."),
+        ],
+        "service_metas": ["from $", "from $", "from $", "event", "retail"],
+        "about_heading":       "Salon Lavish, reborn.",
+        "about_paragraph":     "Thirty Three Salon took over the chairs that used to belong to Salon Lavish on S. Citrus Ave. New owners, same address, refreshed shelves. Karina Cecilia wrote that she was 'pleased to see they now carry Oribe.'",
+        "about_paragraph_2":   "Frank and Thomas anchor the chair work. The shop runs on referrals — Karina Rodriguez wrote she 'was referred by a friend to Frank' and walked out lighter without damage. Word travels in Covina.",
+        "visit_heading":       "S. Citrus Ave, Covina.",
+        "visit_paragraph":     "147 S. Citrus Ave. Walk-ins fine most weekdays. Saturdays book up early — call ahead if you want a specific stylist.",
+        "book_note":           "Ask for Frank or Thomas",
+        "hours": {
+            "mon": "Closed",
+            "tue": "9:30 AM – 7:00 PM",
+            "wed": "9:30 AM – 7:00 PM",
+            "thu": "9:30 AM – 7:00 PM",
+            "fri": "9:30 AM – 7:00 PM",
+            "sat": "9:00 AM – 6:00 PM",
+            "sun": "10:00 AM – 4:00 PM",
+        },
+        "cta_kicker":          "Book a chair",
+        "cta_heading":         "Pick a chair. Make the call.",
+        "cta_body":            "Ask for Frank if you're going lighter. Ask for Thomas for color and cut. Or just call and we'll put you in the right chair.",
+        "email_subject":       "built Thirty Three Salon a website preview",
+        "email_body": (
+            "patricia's review about thomas — 'he met every expectation that i had' — and karina's review about frank getting her lighter without damage stuck with me. that's two stylists each getting their own loyal following.\n\n"
+            "you're 4.5 stars across 44 Google reviews and you stock Oribe but anyone who searches Thirty Three on their phone just hits a maps pin, no website.\n\n"
+            "built you a preview using your real reviews — Frank and Thomas both featured by name, and the oribe stockist thing front and center: {preview_url}\n\n"
+            "if you want it live this week, i can have it up for $1,497 — text or call me at (213) 522-9136.\n\n"
+            "i'm in west covina, 10 min from your shop if you'd rather meet."
+        ),
+    },
+
     "riverside-car-clinic-riverside": {
         "template": "landing-auto.html",
         "meta_description": "Riverside Car Clinic — Bruce on Van Buren Blvd. Family-owned auto repair, OBD1 specialty, honest labor pricing. 4.7 across 82 Google reviews.",
@@ -674,6 +819,15 @@ def render_one(row: dict, content: dict) -> str:
         "stat_3_value":        content.get("stat_3_value", row["city"]),
         "services_footnote":   content.get("services_footnote", ""),
         "schedule_note":       content.get("schedule_note", "Walk-ins welcome"),
+        # salon template only — stylists, photo caption, book note, service prices
+        "photo_caption":       content.get("photo_caption", f"{row['name']} · {row['city']}"),
+        "chairs_heading":      content.get("chairs_heading", ""),
+        "chairs_intro":        content.get("chairs_intro", ""),
+        **{f"stylist_{i+1}_name": (content.get("stylists") or [("__BLANK_STYLIST__",""),("__BLANK_STYLIST__",""),("__BLANK_STYLIST__","")])[i][0] for i in range(3)},
+        **{f"stylist_{i+1}_body": (content.get("stylists") or [("",""),("",""),("","")])[i][1] for i in range(3)},
+        **{f"service_{i+1}_meta": (content.get("service_metas") or ["","","","",""])[i] for i in range(5)},
+        "cta_kicker":          content.get("cta_kicker", "Book a session"),
+        "book_note":           content.get("book_note", "Walk-ins welcome"),
         "rating":              row["rating"],
         "review_count":        row["review_count"],
         # value_props + services arrays expand into individual slots. The default
@@ -727,6 +881,16 @@ def render_one(row: dict, content: dict) -> str:
     rendered = re.sub(
         r'\s*<figure\b[^>]*>'
         r'(?:(?!</figure>).)*?"__BLANK_REVIEW__"(?:(?!</figure>).)*?</figure>',
+        '',
+        rendered,
+        flags=re.DOTALL,
+    )
+
+    # Same pattern, applied to salon-template stylist <li> rows. Drops any
+    # row whose stylist name was the empty sentinel.
+    rendered = re.sub(
+        r'\s*<li\b[^>]*>'
+        r'(?:(?!</li>).)*?__BLANK_STYLIST__(?:(?!</li>).)*?</li>',
         '',
         rendered,
         flags=re.DOTALL,
