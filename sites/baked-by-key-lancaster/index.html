@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>baked.bykey — Gourmet Cookies &amp; Dessert Egg Rolls · Lancaster, CA</title>
-<meta name="description" content="Thick, soft, small-batch gourmet cookies and dessert egg rolls, baked to order in Lancaster, CA. Pre-order for pickup or delivery. DM @baked.bykey to order." />
+<title>baked.bykey — Gourmet Cookies &amp; Dessert Egg Rolls, Lancaster CA</title>
+<meta name="description" content="Thick, soft, small-batch gourmet cookies and dessert egg rolls, baked to order in Lancaster, CA. Pre-order for pickup or delivery across the Antelope Valley. DM @baked.bykey to order." />
 <meta name="robots" content="noindex,nofollow" />
 
 <meta property="og:title" content="baked.bykey — Gourmet Cookies, Baked to Order" />
-<meta property="og:description" content="Thick, soft, loaded with flavor. Ten rotating cookie flavors + dessert egg rolls. Lancaster, CA. DM @baked.bykey." />
+<meta property="og:description" content="Ten rotating cookie flavors + dessert egg rolls, baked fresh the day they're yours. Lancaster, CA." />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,30..100;1,9..144,300..900,30..100&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Space+Grotesk:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -21,23 +21,21 @@
     theme: {
       extend: {
         fontFamily: {
-          sans:    ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          sans:    ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           display: ['"Fraunces"', 'Georgia', 'serif'],
-          mono:    ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
           script:  ['"Dancing Script"', 'cursive'],
         },
         colors: {
-          espresso:  '#14100b',
-          espressoHi:'#221a12',
-          cream:     '#f6efe1',
-          creamHi:   '#fbf6ec',
-          ink:       '#1c140c',
-          inkSoft:   '#5b4a37',
-          gold:      '#d8b25e',
-          goldHi:    '#f0d68a',
-          goldDk:    '#9c7724',
-          berry:     '#c0445b',
-          caramel:   '#b9763a',
+          espresso:  '#130f0a',
+          espresso2: '#1f1810',
+          cream:     '#f3e9d4',
+          cream2:    '#faf3e3',
+          ink:       '#1b140c',
+          inkSoft:   '#5a4a37',
+          gold:      '#cf9b3b',
+          goldHi:    '#eccb78',
+          goldDk:    '#8f6a1f',
+          berry:     '#b8324c',
         },
       },
     },
@@ -45,688 +43,624 @@
 </script>
 
 <style>
-  html { scroll-behavior: smooth; background: #14100b; }
-  body { background: #f6efe1; color: #1c140c; overflow-x: hidden; }
+  html { scroll-behavior: smooth; background: #130f0a; }
+  body { background: #f3e9d4; color: #1b140c; overflow-x: hidden; }
 
-  .display    {
-    font-family: 'Fraunces', Georgia, serif;
-    font-weight: 600; letter-spacing: -0.02em;
-    font-variation-settings: "opsz" 144, "SOFT" 40, "WONK" 0;
+  .display {
+    font-family: 'Fraunces', Georgia, serif; font-weight: 600;
+    font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
   }
   .display-it {
-    font-family: 'Fraunces', Georgia, serif;
-    font-style: italic; font-weight: 500; letter-spacing: -0.018em;
-    font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+    font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 500;
+    font-variation-settings: "opsz" 144, "SOFT" 80, "WONK" 1;
   }
   .script { font-family: 'Dancing Script', cursive; }
-  .field {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px; letter-spacing: 0.3em;
-    text-transform: uppercase; color: #9c7724;
+
+  /* tracked editorial label — Space Grotesk, not mono */
+  .label {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+    font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #8f6a1f;
   }
 
-  /* Gold-foil text — sparingly */
+  /* gold foil text — the single strong accent, used sparingly */
   .foil {
-    background: linear-gradient(100deg,#9c7724 0%,#e8c878 24%,#fff4cf 40%,#d8b25e 56%,#f0d68a 72%,#9c7724 100%);
-    -webkit-background-clip: text; background-clip: text;
-    color: transparent;
-  }
-  .foil-soft {
-    background: linear-gradient(100deg,#b98e34 0%,#f0d68a 45%,#fff4cf 55%,#b98e34 100%);
+    background: linear-gradient(96deg,#8f6a1f 0%,#eccb78 26%,#fff3d2 42%,#cf9b3b 58%,#eccb78 74%,#8f6a1f 100%);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
 
-  /* Hairline gold border */
-  .rule-gold { border-color: rgba(216,178,94,0.35); }
-
-  /* Ticket — die-cut menu card with notched corners */
-  .ticket {
-    background: #fbf6ec;
-    border: 1.5px solid #14100b;
-    box-shadow: 8px 8px 0 0 #14100b;
-  }
-  .ticket-gold { box-shadow: 8px 8px 0 0 #9c7724; }
-
-  /* Dashed perforation line */
-  .perf { border-top: 2px dashed rgba(20,16,11,0.28); }
-
-  /* Marquee */
-  @keyframes marquee { from { transform: translateX(0);} to { transform: translateX(-50%);} }
-  .marquee-track { animation: marquee 38s linear infinite; }
-
-  /* Reveal */
-  @keyframes rise { from { opacity:0; transform: translateY(16px);} to { opacity:1; transform: translateY(0);} }
-  .rise { animation: rise 0.85s ease-out both; }
-  .rise-2 { animation-delay: 0.1s; } .rise-3 { animation-delay: 0.2s; }
-
-  /* Menu row hover — number warms up */
-  .menu-row:hover .menu-num { transform: rotate(-7deg) translateY(-3px); }
-  .menu-num { transition: transform 0.35s ease; transform-origin: center; }
-
-  /* Best-seller stamp */
-  .stamp {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: #c0445b; border: 1.5px solid #c0445b; border-radius: 999px;
-    padding: 2px 9px; transform: rotate(-3deg); display: inline-block;
+  /* film grain — overlays everything, low opacity, both light + dark sections */
+  .grain::after {
+    content:""; position: fixed; inset: 0; z-index: 70; pointer-events: none; opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  details summary::-webkit-details-marker { display:none; }
-  details summary::marker { display:none; }
+  /* photo treatment + hover character */
+  .photo { filter: saturate(1.05) contrast(1.03); }
+  .photo-hover { overflow: hidden; }
+  .photo-hover img { transition: transform 0.7s cubic-bezier(.2,.8,.2,1), filter 0.6s ease; }
+  .photo-hover:hover img { transform: scale(1.045) rotate(-0.4deg); filter: saturate(1.12) contrast(1.05); }
 
-  /* Soft warm vignette on espresso sections */
-  .vignette { position: relative; }
-  .vignette::before {
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background: radial-gradient(120% 90% at 50% -10%, rgba(216,178,94,0.10), transparent 60%);
-  }
+  /* hard offset shadow only where intentional — no soft shadows everywhere */
+  .ticket { background: #faf3e3; border: 1.5px solid #130f0a; box-shadow: 9px 9px 0 0 #130f0a; }
+  .ticket-gold { background:#faf3e3; border: 1.5px solid #130f0a; box-shadow: 9px 9px 0 0 #8f6a1f; }
+  .perf { border-top: 2px dashed rgba(27,20,12,0.3); }
+
+  /* tape strip for off-grid pinned photos */
+  .tape { position:absolute; width:74px; height:26px; background: rgba(207,155,59,0.28);
+    border-left:1px dashed rgba(19,15,10,0.25); border-right:1px dashed rgba(19,15,10,0.25); }
+
+  /* marquee */
+  @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  .marquee-track { animation: marquee 40s linear infinite; }
+
+  /* reveal */
+  @keyframes rise { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+  .rise { animation: rise .9s cubic-bezier(.2,.8,.2,1) both; }
+  .rise-2{animation-delay:.1s}.rise-3{animation-delay:.2s}.rise-4{animation-delay:.32s}
+
+  /* menu row number kick on hover */
+  .menu-row:hover .menu-num { transform: rotate(-8deg) translateY(-4px); color:#b8324c; }
+  .menu-num { transition: transform .4s cubic-bezier(.2,.8,.2,1), color .4s ease; transform-origin:center; }
+
+  /* link with a drawing underline */
+  .ul-draw { background-image: linear-gradient(#cf9b3b,#cf9b3b); background-size:0% 2px;
+    background-position:0 100%; background-repeat:no-repeat; transition: background-size .35s ease; padding-bottom:2px; }
+  .ul-draw:hover { background-size:100% 2px; }
+
+  /* CTA arrow slide */
+  .cta-arrow span:last-child { display:inline-block; transition: transform .3s ease; }
+  .cta-arrow:hover span:last-child { transform: translateX(5px); }
+
+  /* best-seller stamp */
+  .stamp { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:9.5px; letter-spacing:0.2em;
+    text-transform:uppercase; color:#b8324c; border:1.5px solid #b8324c; border-radius:999px; padding:2px 9px;
+    transform: rotate(-3deg); display:inline-block; }
+
+  details summary::-webkit-details-marker{display:none} details summary::marker{display:none}
+  .vignette{position:relative}
+  .vignette::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(130% 100% at 70% 0%, rgba(207,155,59,0.12), transparent 55%)}
 </style>
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased grain">
 
-<!-- ============ Top announcement strip ============ -->
-<div class="bg-espresso text-cream">
-  <div class="max-w-[1480px] mx-auto px-4 sm:px-8 py-2 flex items-center justify-between gap-3 font-mono text-[9.5px] sm:text-[10px] uppercase tracking-[0.22em]">
-    <span class="text-goldHi">Pre-orders only</span>
-    <span class="hidden sm:inline text-cream/70">Pickup &amp; delivery · Lancaster, CA</span>
-    <span class="text-cream/70">DM to order</span>
+<!-- ===== top ticker ===== -->
+<div class="bg-espresso text-cream/90">
+  <div class="max-w-[1500px] mx-auto px-4 sm:px-8 py-2 flex items-center justify-between gap-3 text-[10px] font-semibold uppercase tracking-[0.28em]">
+    <span class="text-goldHi">● Pre-orders open</span>
+    <span class="hidden sm:inline text-cream/55">Baked to order · Lancaster, CA</span>
+    <span class="text-cream/55">Zelle / Apple Pay</span>
   </div>
 </div>
 
-<!-- ============ Flavor marquee ============ -->
-<div class="bg-gold border-y border-espresso overflow-hidden">
-  <div class="flex marquee-track whitespace-nowrap py-2">
-    <div class="flex shrink-0 gap-6 px-3 font-mono uppercase font-medium tracking-[0.24em] text-[10.5px] text-espresso">
-      <span>Strawberry Shortcake</span><span>✦</span><span>Biscoff Cookie Butter</span><span>✦</span>
-      <span>Cookies &amp; Cream</span><span>✦</span><span>Banana Pudding</span><span>✦</span>
-      <span>Oreo Reese's</span><span>✦</span><span>Fruity Pebbles</span><span>✦</span>
-      <span>Birthday Cake</span><span>✦</span><span>Cap'n Crunch</span><span>✦</span>
-      <span>S'mores</span><span>✦</span><span>Cookie Monster</span><span>✦</span>
-      <span>Apple Pie Egg Rolls</span><span>✦</span><span>Peach Cobbler Egg Rolls</span><span>✦</span>
-    </div>
-    <div class="flex shrink-0 gap-6 px-3 font-mono uppercase font-medium tracking-[0.24em] text-[10.5px] text-espresso" aria-hidden="true">
-      <span>Strawberry Shortcake</span><span>✦</span><span>Biscoff Cookie Butter</span><span>✦</span>
-      <span>Cookies &amp; Cream</span><span>✦</span><span>Banana Pudding</span><span>✦</span>
-      <span>Oreo Reese's</span><span>✦</span><span>Fruity Pebbles</span><span>✦</span>
-      <span>Birthday Cake</span><span>✦</span><span>Cap'n Crunch</span><span>✦</span>
-      <span>S'mores</span><span>✦</span><span>Cookie Monster</span><span>✦</span>
-      <span>Apple Pie Egg Rolls</span><span>✦</span><span>Peach Cobbler Egg Rolls</span><span>✦</span>
-    </div>
-  </div>
-</div>
-
-<!-- ============ Nav ============ -->
-<header class="bg-espresso text-cream border-b border-gold/25">
-  <div class="max-w-[1480px] mx-auto px-4 sm:px-8 h-16 flex items-center justify-between gap-3">
-    <a href="#top" class="leading-none">
-      <span class="display text-2xl sm:text-3xl foil">baked.bykey</span>
-      <span class="script text-goldHi text-lg sm:text-xl ml-1 align-baseline">by Key</span>
+<!-- ===== nav ===== -->
+<header class="bg-espresso text-cream sticky top-0 z-50 border-b border-gold/20">
+  <div class="max-w-[1500px] mx-auto px-4 sm:px-8 h-16 flex items-center justify-between gap-3">
+    <a href="#top" class="leading-none flex items-center gap-2.5">
+      <img src="logo.jpg" alt="baked.bykey logo — Key in a chef's hat with a rolling pin and bread"
+           class="h-9 w-9 sm:h-11 sm:w-11 rounded-full object-cover ring-1 ring-gold/40 shrink-0" />
+      <span class="flex items-baseline gap-1.5">
+        <span class="display text-[24px] sm:text-3xl tracking-[-0.02em] foil">baked.bykey</span>
+        <span class="script text-goldHi text-lg sm:text-xl hidden sm:inline">by Key</span>
+      </span>
     </a>
-    <nav class="hidden md:flex items-center gap-7 text-[13px] text-cream/75">
-      <a href="#cookies" class="hover:text-goldHi transition">Cookies</a>
-      <a href="#eggrolls" class="hover:text-goldHi transition">Egg Rolls</a>
-      <a href="#ordering" class="hover:text-goldHi transition">Ordering</a>
-      <a href="#faq" class="hover:text-goldHi transition">FAQ</a>
+    <nav class="hidden md:flex items-center gap-8 text-[13.5px] text-cream/70">
+      <a href="#cookies" class="ul-draw hover:text-goldHi transition">Cookies</a>
+      <a href="#eggrolls" class="ul-draw hover:text-goldHi transition">Egg Rolls</a>
+      <a href="#order" class="ul-draw hover:text-goldHi transition">How to order</a>
+      <a href="#faq" class="ul-draw hover:text-goldHi transition">FAQ</a>
     </nav>
     <a href="https://www.instagram.com/baked.bykey/" target="_blank" rel="noopener"
-       class="whitespace-nowrap bg-gold text-espresso font-mono text-[10px] uppercase tracking-[0.18em] font-semibold px-4 py-2.5 hover:bg-goldHi transition">
-      DM @baked.bykey ↗
+       class="cta-arrow whitespace-nowrap bg-gold text-espresso text-[10.5px] uppercase tracking-[0.16em] font-bold px-4 py-2.5 hover:bg-goldHi transition flex items-center gap-2">
+      DM to order <span>→</span>
     </a>
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
+<!-- ===== HERO — asymmetric, photo bleeds right ===== -->
 <section id="top" class="bg-espresso text-cream vignette relative overflow-hidden">
-  <div class="max-w-[1480px] mx-auto grid lg:grid-cols-12 relative">
+  <div class="max-w-[1500px] mx-auto grid lg:grid-cols-12 relative">
 
-    <!-- LEFT: copy -->
-    <div class="lg:col-span-7 px-4 sm:px-8 lg:pr-10 pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-24 lg:pb-28">
+    <!-- copy -->
+    <div class="lg:col-span-7 px-4 sm:px-8 lg:pr-12 pt-12 pb-10 sm:pt-16 lg:pt-24 lg:pb-28 relative z-10">
       <div class="flex items-center gap-3 rise">
-        <span class="field text-goldHi">Est. Lancaster, CA</span>
-        <span class="h-px w-9 bg-gold/60"></span>
-        <span class="field text-cream/55">Baked to order 🌵</span>
+        <span class="label text-goldHi">No. 01</span>
+        <span class="h-px w-10 bg-gold/50"></span>
+        <span class="label text-cream/45">Lancaster · Antelope Valley</span>
       </div>
 
-      <h1 class="mt-7 sm:mt-9 leading-[0.88] rise rise-2">
-        <span class="display block text-[clamp(2.9rem,11vw,8rem)]">Gourmet cookies,</span>
-        <span class="display-it block foil text-[clamp(3rem,12vw,9rem)] -mt-1 sm:-mt-2">baked to order.</span>
+      <h1 class="mt-7 sm:mt-9 leading-[0.85] tracking-[-0.03em] rise rise-2">
+        <span class="display block text-[clamp(3rem,11.5vw,8.6rem)]">Thick. Soft.</span>
+        <span class="display block text-[clamp(3rem,11.5vw,8.6rem)]">Loaded</span>
+        <span class="display-it block foil text-[clamp(3.2rem,12.5vw,9.4rem)] -mt-1">to order.</span>
       </h1>
 
-      <p class="mt-7 sm:mt-9 text-[16px] sm:text-[18px] leading-[1.6] text-cream/80 max-w-xl rise rise-3">
-        Thick, soft, and loaded with flavor — ten rotating cookie flavors plus
-        dessert egg rolls fresh out the fryer. Pre-order, then pick up or get it
-        delivered across the Antelope Valley.
+      <p class="mt-7 sm:mt-9 text-[16px] sm:text-[18px] leading-[1.6] text-cream/75 max-w-lg rise rise-3">
+        Gourmet cookies and dessert egg rolls baked the morning they're yours —
+        ten flavors on rotation, no shelf, no day-olds. Pre-order, then grab pickup
+        or get them delivered across the Valley.
       </p>
 
-      <div class="mt-9 sm:mt-12 flex flex-wrap items-center gap-4 sm:gap-6">
+      <div class="mt-8 sm:mt-10 flex flex-wrap items-center gap-5 sm:gap-7 rise rise-4">
         <a href="https://www.instagram.com/baked.bykey/" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-3 bg-gold text-espresso uppercase tracking-[0.2em] text-[11px] font-bold px-7 sm:px-8 py-4 hover:bg-goldHi transition">
-          DM <span class="script text-[16px] tracking-normal normal-case font-bold">@baked.bykey</span> to order
+           class="cta-arrow inline-flex items-center gap-3 bg-gold text-espresso uppercase tracking-[0.18em] text-[11px] font-bold px-7 sm:px-9 py-4 hover:bg-goldHi transition">
+          DM <span class="script text-[17px] tracking-normal normal-case font-bold">@baked.bykey</span> <span>→</span>
         </a>
-        <a href="#cookies" class="inline-flex items-baseline gap-2 text-cream hover:text-goldHi transition group">
-          <span class="field text-cream/70 group-hover:text-goldHi transition">See the menu</span>
-          <span class="group-hover:translate-x-1 transition">→</span>
+        <a href="#cookies" class="inline-flex items-baseline gap-2 text-cream/80 hover:text-goldHi transition">
+          <span class="label text-cream/60">See the menu</span>
         </a>
       </div>
 
-      <!-- Stat strip -->
-      <div class="mt-12 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
+      <div class="mt-11 sm:mt-16 flex flex-wrap gap-x-8 gap-y-5">
         <div>
-          <p class="field text-cream/45">From</p>
-          <p class="display text-4xl sm:text-5xl foil-soft mt-1">$15</p>
-          <p class="text-[11px] text-cream/55 mt-1 leading-tight">4 cookies,<br/>fresh baked</p>
+          <p class="display text-4xl sm:text-5xl foil leading-none">$15</p>
+          <p class="label text-cream/40 mt-2">4 cookies, fresh</p>
         </div>
-        <div class="border-l border-gold/25 pl-3 sm:pl-5">
-          <p class="field text-cream/45">Flavors</p>
-          <p class="display text-4xl sm:text-5xl mt-1">10</p>
-          <p class="text-[11px] text-cream/55 mt-1 leading-tight">gourmet,<br/>on rotation</p>
+        <div class="pl-8 border-l border-gold/20">
+          <p class="display text-4xl sm:text-5xl leading-none">10</p>
+          <p class="label text-cream/40 mt-2">flavors on rotation</p>
         </div>
-        <div class="border-l border-gold/25 pl-3 sm:pl-5">
-          <p class="field text-cream/45">Order via</p>
-          <p class="display-it text-4xl sm:text-5xl mt-1">DM</p>
-          <p class="text-[11px] text-cream/55 mt-1 leading-tight">Instagram,<br/>pre-order</p>
+        <div class="pl-8 border-l border-gold/20">
+          <p class="display-it text-4xl sm:text-5xl leading-none">DM</p>
+          <p class="label text-cream/40 mt-2">pre-order via IG</p>
         </div>
       </div>
     </div>
 
-    <!-- RIGHT: order ticket -->
-    <div class="lg:col-span-5 relative px-4 sm:px-8 pb-14 lg:pb-0 lg:pt-24 flex items-center justify-center">
-      <div class="ticket ticket-gold w-full max-w-sm">
-        <div class="bg-espressoHi text-cream px-6 pt-6 pb-5 text-center border-b border-gold/30">
-          <p class="font-mono text-[9.5px] uppercase tracking-[0.3em] text-goldHi">Fresh batch · order ticket</p>
-          <p class="display text-3xl mt-2 foil">baked.bykey</p>
-          <p class="script text-goldHi text-lg leading-none">by Key</p>
-        </div>
-        <div class="px-6 py-6 text-ink">
-          <dl class="space-y-3.5">
-            <div class="flex items-baseline justify-between gap-3">
-              <dt class="text-[14px]">4 cookies</dt>
-              <dd class="display text-xl">$15</dd>
-            </div>
-            <div class="flex items-baseline justify-between gap-3">
-              <dt class="text-[14px]">6 cookies</dt>
-              <dd class="display text-xl">$25</dd>
-            </div>
-            <div class="flex items-baseline justify-between gap-3">
-              <dt class="text-[14px]">12 cookies</dt>
-              <dd class="display text-xl">$40</dd>
-            </div>
-            <div class="flex items-baseline justify-between gap-3">
-              <dt class="text-[14px]">24 cookies</dt>
-              <dd class="display text-xl">$75</dd>
-            </div>
-          </dl>
-          <div class="perf mt-5 pt-4">
-            <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-inkSoft leading-relaxed">
-              Best sellers — <span class="text-berry font-semibold">Strawberry Shortcake</span> &amp;
-              <span class="text-caramel font-semibold">Biscoff Cookie Butter</span>
-            </p>
-          </div>
-        </div>
-        <div class="bg-gold text-espresso text-center font-mono text-[10px] uppercase tracking-[0.22em] py-2.5 font-semibold">
-          No deposit = no order
+    <!-- photo, bleeds the right column -->
+    <div class="lg:col-span-5 relative min-h-[20rem] lg:min-h-0 photo-hover">
+      <img src="https://images.pexels.com/photos/9282014/pexels-photo-9282014.jpeg?auto=compress&cs=tinysrgb&w=1000"
+           alt="A tall stack of thick, golden cookies on a dark surface, dusted with crumbs."
+           class="absolute inset-0 w-full h-full object-cover photo" />
+      <div class="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-espresso/40 lg:bg-gradient-to-r lg:from-espresso lg:via-espresso/10 lg:to-transparent"></div>
+    </div>
+
+    <!-- off-grid order tag pinned over the seam -->
+    <div class="hidden lg:block absolute z-20 top-24 right-[34%] -rotate-6">
+      <div class="ticket-gold px-5 py-4 w-44 text-ink">
+        <p class="label text-[9px]">Fresh batch</p>
+        <p class="display text-2xl mt-1 leading-none">No&nbsp;deposit,</p>
+        <p class="display-it text-xl leading-tight">no order.</p>
+        <div class="perf mt-3 pt-2 flex items-center justify-between">
+          <span class="script text-berry text-lg leading-none">by Key</span>
+          <span class="text-[10px] text-inkSoft">✦</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ Manifesto strip ============ -->
-<section class="bg-gold border-y border-espresso">
-  <div class="max-w-[1480px] mx-auto px-4 sm:px-10 py-10 sm:py-14 flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-10">
-    <span class="bg-espresso text-cream font-mono uppercase tracking-[0.3em] text-[9.5px] px-3 py-1.5 shrink-0">The promise</span>
-    <p class="display-it text-[clamp(1.4rem,3.4vw,2.5rem)] leading-[1.18] text-espresso max-w-3xl">
-      "Soft, thick, and loaded with flavor. <span class="underline decoration-espresso/40 decoration-2 underline-offset-4">Baked fresh the day you get them</span> — never sitting on a shelf."
-    </p>
-    <span class="font-mono uppercase tracking-[0.2em] text-[9.5px] text-espresso/70 sm:ml-auto shrink-0">— Key, the baker</span>
+<!-- ===== flavor ribbon ===== -->
+<div class="bg-gold text-espresso border-y border-espresso overflow-hidden">
+  <div class="flex marquee-track whitespace-nowrap py-2.5">
+    <div class="flex shrink-0 gap-5 px-2.5 uppercase font-semibold tracking-[0.2em] text-[11px]">
+      <span>Strawberry Shortcake</span><span class="text-espresso/40">✦</span><span>Biscoff Cookie Butter</span><span class="text-espresso/40">✦</span>
+      <span>Cookies &amp; Cream</span><span class="text-espresso/40">✦</span><span>Banana Pudding</span><span class="text-espresso/40">✦</span>
+      <span>Oreo Reese's</span><span class="text-espresso/40">✦</span><span>Fruity Pebbles</span><span class="text-espresso/40">✦</span>
+      <span>Birthday Cake</span><span class="text-espresso/40">✦</span><span>Cap'n Crunch</span><span class="text-espresso/40">✦</span>
+      <span>S'mores</span><span class="text-espresso/40">✦</span><span>Cookie Monster</span><span class="text-espresso/40">✦</span>
+      <span>Apple Pie Egg Rolls</span><span class="text-espresso/40">✦</span><span>Peach Cobbler Egg Rolls</span><span class="text-espresso/40">✦</span>
+    </div>
+    <div class="flex shrink-0 gap-5 px-2.5 uppercase font-semibold tracking-[0.2em] text-[11px]" aria-hidden="true">
+      <span>Strawberry Shortcake</span><span class="text-espresso/40">✦</span><span>Biscoff Cookie Butter</span><span class="text-espresso/40">✦</span>
+      <span>Cookies &amp; Cream</span><span class="text-espresso/40">✦</span><span>Banana Pudding</span><span class="text-espresso/40">✦</span>
+      <span>Oreo Reese's</span><span class="text-espresso/40">✦</span><span>Fruity Pebbles</span><span class="text-espresso/40">✦</span>
+      <span>Birthday Cake</span><span class="text-espresso/40">✦</span><span>Cap'n Crunch</span><span class="text-espresso/40">✦</span>
+      <span>S'mores</span><span class="text-espresso/40">✦</span><span>Cookie Monster</span><span class="text-espresso/40">✦</span>
+      <span>Apple Pie Egg Rolls</span><span class="text-espresso/40">✦</span><span>Peach Cobbler Egg Rolls</span><span class="text-espresso/40">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== full-bleed "baked fresh" band — text offset bottom-left over photo ===== -->
+<section class="relative">
+  <div class="relative h-[78vw] max-h-[640px] min-h-[420px] photo-hover">
+    <img src="https://images.pexels.com/photos/4716795/pexels-photo-4716795.jpeg?auto=compress&cs=tinysrgb&w=1600"
+         alt="Rows of freshly baked cookies cooling on a baking tray."
+         class="absolute inset-0 w-full h-full object-cover photo" />
+    <div class="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/45 to-espresso/10"></div>
+  </div>
+  <div class="absolute inset-0 flex items-end">
+    <div class="max-w-[1500px] mx-auto w-full px-4 sm:px-8 pb-10 sm:pb-16">
+      <div class="max-w-2xl">
+        <span class="label text-goldHi">The whole idea</span>
+        <p class="display text-cream text-[clamp(1.7rem,5vw,3.6rem)] leading-[1.08] tracking-[-0.02em] mt-4">
+          Every box is baked the <span class="display-it foil">morning it's yours.</span>
+          No shelf, no day-olds — still soft when Key hands it over.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ============ COOKIE MENU ============ -->
-<section id="cookies" class="bg-cream py-16 sm:py-28">
-  <div class="max-w-[1480px] mx-auto px-4 sm:px-10">
+<!-- ===== THE MENU — editorial numbered list, photos break the rhythm ===== -->
+<section id="cookies" class="bg-cream py-16 sm:py-24">
+  <div class="max-w-[1500px] mx-auto px-4 sm:px-8">
 
-    <div class="grid lg:grid-cols-12 gap-7 lg:gap-12 mb-12 sm:mb-16">
-      <div class="lg:col-span-7">
-        <p class="field">§ 01 — Gourmet Cookie Menu</p>
-        <h2 class="display text-[clamp(2.6rem,9vw,6.5rem)] leading-[0.92] mt-3 text-ink">
-          Pick your <span class="display-it foil-soft">flavor.</span>
+    <!-- header: off-center, big -->
+    <div class="grid lg:grid-cols-12 gap-6 lg:gap-12 items-end mb-10 sm:mb-16">
+      <div class="lg:col-span-8">
+        <span class="label">§ 01 — Gourmet cookie menu</span>
+        <h2 class="display text-[clamp(2.8rem,10vw,7rem)] leading-[0.9] tracking-[-0.03em] mt-3 text-ink">
+          Ten flavors. <span class="display-it foil">Pick yours.</span>
         </h2>
       </div>
-      <div class="lg:col-span-5 lg:pt-6">
-        <p class="text-[15px] sm:text-[16px] leading-[1.65] text-inkSoft max-w-md">
-          Ten flavors on rotation, each one thick and stacked with mix-ins. Order
-          by the 4, 6, 12, or 24 — mix and match across the whole menu. Just list
-          what you want in the DM.
+      <div class="lg:col-span-4 lg:pb-3">
+        <p class="text-[15px] leading-[1.65] text-inkSoft max-w-sm">
+          Each one thick and stacked with mix-ins. Order by the 4, 6, 12, or 24 and
+          mix any flavors in one box — just list what you want in the DM.
         </p>
       </div>
     </div>
 
-    <!-- Flavor list -->
-    <ol class="border-t-2 border-espresso">
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 border-b border-espresso/15 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">01</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3">
-          <div class="flex items-center gap-2 flex-wrap">
-            <h3 class="display text-2xl sm:text-3xl lg:text-4xl">Strawberry Shortcake</h3>
-            <span class="stamp">Best seller</span>
-          </div>
+    <ol>
+      <!-- 01 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-t border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">01</span>
+        <div class="col-span-10 sm:col-span-4">
+          <h3 class="display text-2xl sm:text-3xl flex flex-wrap items-center gap-2">Strawberry Shortcake <span class="stamp">Best seller</span></h3>
         </div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Buttery cookie rolled in golden shortcake crumble with a sweet strawberry
-          cream — the one everybody asks for first.
-        </div>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">
+          Buttery cookie rolled in golden shortcake crumble with a real strawberry cream center. The one everyone asks for first.
+        </p>
       </li>
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 border-b border-espresso/15 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">02</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3">
-          <div class="flex items-center gap-2 flex-wrap">
-            <h3 class="display text-2xl sm:text-3xl lg:text-4xl">Biscoff Cookie Butter</h3>
-            <span class="stamp">Best seller</span>
-          </div>
+      <!-- 02 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-t border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">02</span>
+        <div class="col-span-10 sm:col-span-4">
+          <h3 class="display text-2xl sm:text-3xl flex flex-wrap items-center gap-2">Biscoff Cookie Butter <span class="stamp">Best seller</span></h3>
         </div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Loaded with creamy Biscoff spread and a whole speculoos cookie pressed
-          on top. Warm, spiced, caramelized.
-        </div>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">
+          Loaded with creamy Biscoff spread and a whole speculoos cookie pressed on top. Warm, spiced, caramelized.
+        </p>
       </li>
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 border-b border-espresso/15 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">03</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3"><h3 class="display text-2xl sm:text-3xl lg:text-4xl">Cookies &amp; Cream</h3></div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Crushed sandwich cookies folded through and a cookies-and-cream drizzle
-          on top. A classic, done thick.
-        </div>
+
+      <!-- photo break: two off-set images -->
+      <li class="grid sm:grid-cols-12 gap-4 sm:gap-6 py-6 sm:py-8 border-t border-ink/15">
+        <figure class="sm:col-span-7 photo-hover relative">
+          <img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=1000"
+               alt="A warm stack of thick chocolate-chip cookies on a dark board."
+               class="w-full h-56 sm:h-72 object-cover photo" />
+          <figcaption class="absolute bottom-3 left-3 bg-cream2 text-ink text-[10px] uppercase tracking-[0.18em] font-semibold px-2.5 py-1">fresh out the oven</figcaption>
+        </figure>
+        <figure class="sm:col-span-5 photo-hover relative -rotate-1 mt-2 sm:mt-6">
+          <img src="https://images.pexels.com/photos/342020/pexels-photo-342020.jpeg?auto=compress&cs=tinysrgb&w=800"
+               alt="Pink strawberry desserts plated together, soft and sweet."
+               class="w-full h-48 sm:h-64 object-cover photo" />
+          <div class="tape -top-3 left-1/2 -translate-x-1/2 rotate-3"></div>
+          <figcaption class="absolute bottom-3 left-3 script text-cream text-xl drop-shadow">strawberry season</figcaption>
+        </figure>
       </li>
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 border-b border-espresso/15 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">04</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3"><h3 class="display text-2xl sm:text-3xl lg:text-4xl">Banana Pudding</h3></div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Vanilla wafer cookie with a banana pudding cream center and a wafer
-          crown. Tastes like the dessert in cookie form.
-        </div>
+
+      <!-- 03 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-t border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">03</span>
+        <h3 class="display text-2xl sm:text-3xl col-span-10 sm:col-span-4">Cookies &amp; Cream</h3>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">Crushed sandwich cookies folded through, with a cookies-and-cream drizzle on top. A classic, done thick.</p>
       </li>
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 border-b border-espresso/15 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">05</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3"><h3 class="display text-2xl sm:text-3xl lg:text-4xl">Oreo Reese's</h3></div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Chocolate cookie packed with crushed Oreos and Reese's, finished with a
-          peanut-butter chocolate drizzle.
-        </div>
+      <!-- 04 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-t border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">04</span>
+        <h3 class="display text-2xl sm:text-3xl col-span-10 sm:col-span-4">Banana Pudding</h3>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">Vanilla-wafer cookie with a banana-pudding cream center and a wafer crown. Tastes like the dessert, in cookie form.</p>
       </li>
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 border-b border-espresso/15 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">06</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3"><h3 class="display text-2xl sm:text-3xl lg:text-4xl">Fruity Pebbles</h3></div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Vanilla cookie rolled in Fruity Pebbles with a sweet cereal-milk drizzle.
-          Colorful, crunchy, nostalgic.
-        </div>
+      <!-- 05 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-t border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">05</span>
+        <h3 class="display text-2xl sm:text-3xl col-span-10 sm:col-span-4">Oreo Reese's</h3>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">Chocolate cookie packed with crushed Oreos and Reese's, finished with a peanut-butter chocolate drizzle.</p>
       </li>
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 border-b border-espresso/15 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">07</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3"><h3 class="display text-2xl sm:text-3xl lg:text-4xl">Birthday Cake</h3></div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Funfetti cookie loaded with sprinkles and a birthday-cake frosting
-          drizzle. Every day's a celebration.
-        </div>
+      <!-- 06 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-t border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">06</span>
+        <h3 class="display text-2xl sm:text-3xl col-span-10 sm:col-span-4">Fruity Pebbles</h3>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">Vanilla cookie rolled in Fruity Pebbles with a sweet cereal-milk drizzle. Colorful, crunchy, nostalgic.</p>
       </li>
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 border-b border-espresso/15 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">08</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3"><h3 class="display text-2xl sm:text-3xl lg:text-4xl">Cap'n Crunch</h3></div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Buttery cookie rolled in Cap'n Crunch berries for a sweet, crunchy
-          cereal-bar finish.
-        </div>
+      <!-- 07 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-t border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">07</span>
+        <h3 class="display text-2xl sm:text-3xl col-span-10 sm:col-span-4">Birthday Cake</h3>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">Funfetti cookie loaded with sprinkles and a birthday-cake frosting drizzle. Every day's a celebration.</p>
       </li>
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 border-b border-espresso/15 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">09</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3"><h3 class="display text-2xl sm:text-3xl lg:text-4xl">S'mores</h3></div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Graham cookie stuffed with chocolate and torched marshmallow on top.
-          Campfire energy, no campfire required.
-        </div>
+      <!-- 08 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-t border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">08</span>
+        <h3 class="display text-2xl sm:text-3xl col-span-10 sm:col-span-4">Cap'n Crunch</h3>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">Buttery cookie rolled in Cap'n Crunch berries for a sweet, crunchy cereal-bar finish.</p>
       </li>
-      <li class="menu-row grid grid-cols-12 gap-2 sm:gap-6 py-6 sm:py-8 items-baseline">
-        <div class="col-span-2 sm:col-span-1"><span class="menu-num display-it block text-4xl sm:text-6xl text-gold">10</span></div>
-        <div class="col-span-10 sm:col-span-4 lg:col-span-3"><h3 class="display text-2xl sm:text-3xl lg:text-4xl">Cookie Monster</h3></div>
-        <div class="hidden sm:block sm:col-span-7 lg:col-span-8 text-inkSoft leading-relaxed text-[15px]">
-          Loaded with chocolate chips and candy-coated chocolates over a rich
-          cookie base. The one the kids fight over.
-        </div>
+      <!-- 09 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-t border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">09</span>
+        <h3 class="display text-2xl sm:text-3xl col-span-10 sm:col-span-4">S'mores</h3>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">Graham cookie stuffed with chocolate and torched marshmallow on top. Campfire energy, no campfire required.</p>
+      </li>
+      <!-- 10 -->
+      <li class="menu-row grid grid-cols-12 gap-x-3 gap-y-1 py-6 border-y border-ink/15 items-baseline">
+        <span class="menu-num display-it col-span-2 sm:col-span-1 text-4xl sm:text-6xl text-gold">10</span>
+        <h3 class="display text-2xl sm:text-3xl col-span-10 sm:col-span-4">Cookie Monster</h3>
+        <p class="col-span-12 sm:col-span-7 text-inkSoft text-[14.5px] leading-relaxed sm:pl-4">Loaded with chocolate chips and candy-coated chocolates over a rich cookie base. The one the kids fight over.</p>
       </li>
     </ol>
 
-    <!-- Pricing tickets -->
-    <div class="mt-12 sm:mt-16">
-      <p class="field mb-5">Pricing — mix &amp; match any flavors</p>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <div class="ticket p-5 sm:p-6 text-center">
-          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-inkSoft">4 cookies</p>
-          <p class="display text-4xl sm:text-5xl mt-2 text-ink">$15</p>
-        </div>
-        <div class="ticket p-5 sm:p-6 text-center">
-          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-inkSoft">6 cookies</p>
-          <p class="display text-4xl sm:text-5xl mt-2 text-ink">$25</p>
-        </div>
-        <div class="ticket p-5 sm:p-6 text-center">
-          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-inkSoft">12 cookies</p>
-          <p class="display text-4xl sm:text-5xl mt-2 text-ink">$40</p>
-        </div>
-        <div class="ticket ticket-gold p-5 sm:p-6 text-center relative">
-          <span class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-berry text-creamHi font-mono text-[8.5px] uppercase tracking-[0.2em] px-2.5 py-1 whitespace-nowrap">Best value</span>
-          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-inkSoft">24 cookies</p>
-          <p class="display text-4xl sm:text-5xl mt-2 foil-soft">$75</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DESSERT EGG ROLLS ============ -->
-<section id="eggrolls" class="bg-espresso text-cream vignette py-16 sm:py-28 border-y border-gold/20">
-  <div class="max-w-[1480px] mx-auto px-4 sm:px-10">
-
-    <div class="grid lg:grid-cols-12 gap-7 lg:gap-12 mb-12 sm:mb-16 items-end">
-      <div class="lg:col-span-8">
-        <p class="field text-goldHi">§ 02 — Baker's Dessert Egg Rolls</p>
-        <h2 class="display text-[clamp(2.4rem,8vw,6rem)] leading-[0.92] mt-3">
-          Fresh · crispy · <span class="display-it foil">made to order.</span>
-        </h2>
-      </div>
-      <div class="lg:col-span-4">
-        <p class="text-[15px] sm:text-[16px] leading-[1.65] text-cream/75">
-          Warm fruit fillings rolled in a crispy golden shell and fried to order —
-          each one comes with its own dipping sauce.
-        </p>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
-      <!-- Apple Pie -->
-      <div class="bg-espressoHi border border-gold/25 p-6 sm:p-9">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="display text-3xl sm:text-4xl text-creamHi">Apple Pie</h3>
-          <span class="text-3xl" aria-hidden="true">🍎</span>
-        </div>
-        <p class="mt-4 text-[15px] leading-[1.7] text-cream/75">
-          Cinnamon apples wrapped in a crispy golden shell. Comes with a warm
-          caramel dipping sauce.
-        </p>
-        <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-goldHi">+ caramel dip</p>
-      </div>
-      <!-- Peach Cobbler -->
-      <div class="bg-espressoHi border border-gold/25 p-6 sm:p-9">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="display text-3xl sm:text-4xl text-creamHi">Peach Cobbler</h3>
-          <span class="text-3xl" aria-hidden="true">🍑</span>
-        </div>
-        <p class="mt-4 text-[15px] leading-[1.7] text-cream/75">
-          Sweet, juicy peaches with that buttery cobbler flavor in a crispy shell.
-          Comes with a vanilla glaze.
-        </p>
-        <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-goldHi">+ vanilla glaze</p>
-      </div>
-    </div>
-
-    <!-- Egg roll pricing -->
-    <div class="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-6 max-w-2xl">
-      <div class="border border-gold/25 text-center py-5">
-        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55">3 rolls</p>
-        <p class="display text-3xl sm:text-4xl mt-1.5 text-goldHi">$6</p>
-      </div>
-      <div class="border border-gold/25 text-center py-5">
-        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55">6 rolls</p>
-        <p class="display text-3xl sm:text-4xl mt-1.5 text-goldHi">$12</p>
-      </div>
-      <div class="border border-gold/25 text-center py-5">
-        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55">8 rolls</p>
-        <p class="display text-3xl sm:text-4xl mt-1.5 text-goldHi">$15</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ORDERING ============ -->
-<section id="ordering" class="bg-cream py-16 sm:py-28">
-  <div class="max-w-[1480px] mx-auto px-4 sm:px-10">
-
-    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
-      <!-- LEFT: steps -->
-      <div class="lg:col-span-7">
-        <p class="field">§ 03 — How ordering works</p>
-        <h2 class="display text-[clamp(2.4rem,7vw,5rem)] leading-[0.92] mt-3 text-ink">
-          Four steps to <span class="display-it foil-soft">fresh.</span>
-        </h2>
-
-        <ol class="mt-10 sm:mt-12 space-y-8 sm:space-y-10">
-          <li class="grid grid-cols-12 gap-4 sm:gap-6">
-            <span class="display-it text-5xl sm:text-6xl text-gold col-span-2">i.</span>
-            <div class="col-span-10">
-              <h3 class="display text-xl sm:text-2xl">Send your order in the DM.</h3>
-              <p class="mt-2 text-[15px] text-inkSoft leading-[1.65] max-w-md">
-                List your flavors and quantity, your date, and whether you want
-                pickup or delivery. Mix and match across the whole menu.
-              </p>
+    <!-- pricing — off-grid torn ticket, rotated -->
+    <div class="mt-12 sm:mt-16 flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-14">
+      <div class="lg:rotate-[-1.5deg]">
+        <div class="ticket px-6 sm:px-9 py-7">
+          <p class="label mb-4">Pricing — mix &amp; match any flavors</p>
+          <div class="flex flex-wrap gap-x-9 gap-y-5">
+            <div><p class="display text-4xl sm:text-5xl text-ink leading-none">$15</p><p class="label text-inkSoft mt-2">4 cookies</p></div>
+            <div class="pl-9 border-l border-ink/15"><p class="display text-4xl sm:text-5xl text-ink leading-none">$25</p><p class="label text-inkSoft mt-2">6 cookies</p></div>
+            <div class="pl-9 border-l border-ink/15"><p class="display text-4xl sm:text-5xl text-ink leading-none">$40</p><p class="label text-inkSoft mt-2">12 cookies</p></div>
+            <div class="pl-9 border-l border-ink/15 relative">
+              <span class="absolute -top-3 -right-1 bg-berry text-cream2 text-[8.5px] font-bold uppercase tracking-[0.16em] px-2 py-0.5 rotate-3">Best value</span>
+              <p class="display text-4xl sm:text-5xl foil leading-none">$75</p><p class="label text-inkSoft mt-2">24 cookies</p>
             </div>
-          </li>
-          <li class="grid grid-cols-12 gap-4 sm:gap-6">
-            <span class="display-it text-5xl sm:text-6xl text-gold col-span-2">ii.</span>
-            <div class="col-span-10">
-              <h3 class="display text-xl sm:text-2xl">Lock it in with a deposit.</h3>
-              <p class="mt-2 text-[15px] text-inkSoft leading-[1.65] max-w-md">
-                A deposit confirms your batch — no deposit, no order. Pay by Zelle
-                or Apple Pay and your slot is held.
-              </p>
-            </div>
-          </li>
-          <li class="grid grid-cols-12 gap-4 sm:gap-6">
-            <span class="display-it text-5xl sm:text-6xl text-gold col-span-2">iii.</span>
-            <div class="col-span-10">
-              <h3 class="display text-xl sm:text-2xl">Baked fresh on your date.</h3>
-              <p class="mt-2 text-[15px] text-inkSoft leading-[1.65] max-w-md">
-                Everything's made to order — cookies and egg rolls come out fresh
-                the day they're for, never sitting on a shelf.
-              </p>
-            </div>
-          </li>
-          <li class="grid grid-cols-12 gap-4 sm:gap-6">
-            <span class="display-it text-5xl sm:text-6xl text-gold col-span-2">iv.</span>
-            <div class="col-span-10">
-              <h3 class="display text-xl sm:text-2xl">Pick up or get it delivered.</h3>
-              <p class="mt-2 text-[15px] text-inkSoft leading-[1.65] max-w-md">
-                Grab it at pickup, or add delivery for a $10 fee depending on
-                distance around Lancaster and the Antelope Valley.
-              </p>
-            </div>
-          </li>
-        </ol>
-      </div>
-
-      <!-- RIGHT: policy ticket -->
-      <div class="lg:col-span-5">
-        <div class="ticket p-6 sm:p-8 lg:sticky lg:top-8">
-          <div class="flex items-baseline justify-between gap-4 border-b border-espresso/15 pb-4">
-            <p class="display-it text-2xl text-ink">The details.</p>
-            <span class="font-mono text-[9px] uppercase tracking-[0.2em] text-goldDk border border-gold px-2.5 py-1">Order info</span>
           </div>
-          <dl class="mt-5 divide-y divide-espresso/10">
-            <div class="grid grid-cols-12 gap-3 py-3.5 items-baseline">
-              <dt class="col-span-4 field">Orders</dt>
-              <dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed">Pre-orders only — DM ahead, no walk-ups.</dd>
-            </div>
-            <div class="grid grid-cols-12 gap-3 py-3.5 items-baseline">
-              <dt class="col-span-4 field">Deposit</dt>
-              <dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed"><span class="text-berry font-semibold">Required.</span> No deposit = no order. It holds your batch.</dd>
-            </div>
-            <div class="grid grid-cols-12 gap-3 py-3.5 items-baseline">
-              <dt class="col-span-4 field">Payment</dt>
-              <dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed">Zelle or Apple Pay.</dd>
-            </div>
-            <div class="grid grid-cols-12 gap-3 py-3.5 items-baseline">
-              <dt class="col-span-4 field">Delivery</dt>
-              <dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed">$10 fee, depending on distance. Pickup also available.</dd>
-            </div>
-            <div class="grid grid-cols-12 gap-3 py-3.5 items-baseline">
-              <dt class="col-span-4 field">Area</dt>
-              <dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed">Lancaster, CA &amp; the Antelope Valley.</dd>
-            </div>
-          </dl>
-          <a href="https://www.instagram.com/baked.bykey/" target="_blank" rel="noopener"
-             class="mt-6 block text-center bg-espresso text-cream font-mono text-[10px] uppercase tracking-[0.2em] font-semibold py-3.5 hover:bg-espressoHi transition">
-            Start an order in the DM ↗
-          </a>
         </div>
+      </div>
+      <p class="text-[14.5px] text-inkSoft leading-relaxed max-w-xs">
+        Bigger box for a party or dessert table? Send the date and headcount in the
+        DM and Key will quote it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EGG ROLLS — dark split, photo bleeds left ===== -->
+<section id="eggrolls" class="bg-espresso text-cream vignette border-y border-gold/20">
+  <div class="max-w-[1500px] mx-auto grid lg:grid-cols-12">
+
+    <!-- big photo left -->
+    <div class="lg:col-span-5 relative min-h-[18rem] lg:min-h-[40rem] photo-hover order-2 lg:order-1">
+      <img src="https://images.pexels.com/photos/8178762/pexels-photo-8178762.jpeg?auto=compress&cs=tinysrgb&w=1000"
+           alt="A plate of golden, crispy fried dessert egg rolls."
+           class="absolute inset-0 w-full h-full object-cover photo" />
+      <div class="absolute inset-0 bg-gradient-to-t from-espresso/60 to-transparent lg:bg-gradient-to-l lg:from-espresso lg:to-transparent"></div>
+      <span class="absolute bottom-4 left-4 label text-goldHi">Fried to order ✦ never reheated</span>
+    </div>
+
+    <!-- copy right -->
+    <div class="lg:col-span-7 px-4 sm:px-8 lg:px-14 py-14 sm:py-20 order-1 lg:order-2">
+      <span class="label text-goldHi">§ 02 — Baker's dessert egg rolls</span>
+      <h2 class="display text-[clamp(2.4rem,8vw,5.6rem)] leading-[0.9] tracking-[-0.02em] mt-3">
+        Crispy shell. <span class="display-it foil">Warm filling.</span>
+      </h2>
+      <p class="mt-5 text-[16px] leading-[1.6] text-cream/75 max-w-xl">
+        Fruit folded into a crisp golden wrapper and fried the second you order it —
+        each one comes with its own dipping sauce.
+      </p>
+
+      <div class="mt-9 grid sm:grid-cols-2 gap-5">
+        <div class="border border-gold/25 p-5 sm:p-6">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="display text-2xl sm:text-3xl text-cream2">Apple Pie</h3>
+            <span class="text-2xl" aria-hidden="true">🍎</span>
+          </div>
+          <p class="mt-3 text-[14.5px] leading-[1.6] text-cream/70">Cinnamon apples in a crispy golden shell, with a warm caramel dipping sauce.</p>
+        </div>
+        <div class="border border-gold/25 p-5 sm:p-6">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="display text-2xl sm:text-3xl text-cream2">Peach Cobbler</h3>
+            <span class="text-2xl" aria-hidden="true">🍑</span>
+          </div>
+          <p class="mt-3 text-[14.5px] leading-[1.6] text-cream/70">Sweet, juicy peaches with that buttery cobbler flavor, finished with a vanilla glaze.</p>
+        </div>
+      </div>
+
+      <!-- inline pricing -->
+      <div class="mt-8 flex flex-wrap items-end gap-x-8 gap-y-4">
+        <div><p class="display text-3xl sm:text-4xl text-goldHi leading-none">$6</p><p class="label text-cream/45 mt-1.5">3 rolls</p></div>
+        <div class="pl-8 border-l border-gold/20"><p class="display text-3xl sm:text-4xl text-goldHi leading-none">$12</p><p class="label text-cream/45 mt-1.5">6 rolls</p></div>
+        <div class="pl-8 border-l border-gold/20"><p class="display text-3xl sm:text-4xl text-goldHi leading-none">$15</p><p class="label text-cream/45 mt-1.5">8 rolls</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section id="faq" class="bg-cream py-16 sm:py-28 border-t border-espresso/10">
-  <div class="max-w-3xl mx-auto px-4 sm:px-10">
-    <div class="mb-10 sm:mb-14">
-      <p class="field">§ 04 — FAQ</p>
-      <h2 class="display text-[clamp(2.6rem,8vw,5.5rem)] leading-[0.92] mt-3 text-ink">
-        Asked &amp; <span class="display-it foil-soft">answered.</span>
+<!-- ===== HOW TO ORDER — numbered, with hands photo + policy ticket ===== -->
+<section id="order" class="bg-cream py-16 sm:py-24">
+  <div class="max-w-[1500px] mx-auto px-4 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-14">
+
+    <!-- left: steps + photo -->
+    <div class="lg:col-span-7">
+      <span class="label">§ 03 — How to order</span>
+      <h2 class="display text-[clamp(2.4rem,7.5vw,5.2rem)] leading-[0.9] tracking-[-0.02em] mt-3 text-ink">
+        Four steps <span class="display-it foil">to fresh.</span>
       </h2>
+
+      <div class="grid sm:grid-cols-2 gap-x-8 gap-y-9 mt-10">
+        <div>
+          <p class="display-it text-5xl text-gold leading-none">i.</p>
+          <h3 class="display text-xl mt-2">Send it in the DM</h3>
+          <p class="text-[14.5px] text-inkSoft leading-[1.6] mt-1.5">Flavors, quantity, your date, and pickup or delivery. Mix any flavors in one box.</p>
+        </div>
+        <div>
+          <p class="display-it text-5xl text-gold leading-none">ii.</p>
+          <h3 class="display text-xl mt-2">Lock it with a deposit</h3>
+          <p class="text-[14.5px] text-inkSoft leading-[1.6] mt-1.5">A deposit confirms your batch — <span class="text-berry font-semibold">no deposit, no order.</span> Pay by Zelle or Apple Pay.</p>
+        </div>
+        <div>
+          <p class="display-it text-5xl text-gold leading-none">iii.</p>
+          <h3 class="display text-xl mt-2">Baked on your date</h3>
+          <p class="text-[14.5px] text-inkSoft leading-[1.6] mt-1.5">Everything's made to order, so it comes out fresh the day it's for — never sitting around.</p>
+        </div>
+        <div>
+          <p class="display-it text-5xl text-gold leading-none">iv.</p>
+          <h3 class="display text-xl mt-2">Pickup or delivery</h3>
+          <p class="text-[14.5px] text-inkSoft leading-[1.6] mt-1.5">Grab it at pickup, or add delivery for a $10 fee depending on distance around the Valley.</p>
+        </div>
+      </div>
+
+      <figure class="mt-10 photo-hover relative">
+        <img src="https://images.pexels.com/photos/6563916/pexels-photo-6563916.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             alt="Hands working dough on a floured surface."
+             class="w-full h-56 sm:h-72 object-cover photo" />
+        <figcaption class="absolute bottom-3 left-3 script text-cream text-2xl drop-shadow">made by hand, in small batches</figcaption>
+      </figure>
     </div>
 
-    <div class="border-t-2 border-espresso">
-      <details class="group border-b border-espresso/15 py-5">
-        <summary class="flex items-start gap-4 cursor-pointer list-none">
-          <span class="display-it text-gold text-2xl shrink-0 leading-none mt-0.5">Q</span>
-          <span class="display text-lg sm:text-xl flex-1">How do I place an order?</span>
-          <span class="font-display italic text-gold text-2xl leading-none group-open:rotate-45 transition shrink-0">+</span>
-        </summary>
-        <div class="mt-3 pl-8 sm:pl-10 text-inkSoft text-[15px] leading-[1.7]">
-          DM <a class="text-caramel hover:underline font-semibold" href="https://www.instagram.com/baked.bykey/" target="_blank" rel="noopener">@baked.bykey</a> on Instagram
-          with your flavors, quantity, the date you need them, and whether you want pickup or delivery.
+    <!-- right: policy ticket, sticky -->
+    <div class="lg:col-span-5">
+      <div class="ticket-gold p-6 sm:p-8 lg:sticky lg:top-24">
+        <div class="flex items-baseline justify-between gap-3 border-b border-ink/15 pb-4">
+          <p class="display-it text-2xl text-ink">The fine print.</p>
+          <span class="label text-[9px] border border-gold px-2.5 py-1">Order info</span>
         </div>
-      </details>
-
-      <details class="group border-b border-espresso/15 py-5">
-        <summary class="flex items-start gap-4 cursor-pointer list-none">
-          <span class="display-it text-gold text-2xl shrink-0 leading-none mt-0.5">Q</span>
-          <span class="display text-lg sm:text-xl flex-1">Do you require a deposit?</span>
-          <span class="font-display italic text-gold text-2xl leading-none group-open:rotate-45 transition shrink-0">+</span>
-        </summary>
-        <div class="mt-3 pl-8 sm:pl-10 text-inkSoft text-[15px] leading-[1.7]">
-          Yes — a deposit is what locks your batch in. No deposit, no order. It goes toward your total and reserves your spot for that date.
-        </div>
-      </details>
-
-      <details class="group border-b border-espresso/15 py-5">
-        <summary class="flex items-start gap-4 cursor-pointer list-none">
-          <span class="display-it text-gold text-2xl shrink-0 leading-none mt-0.5">Q</span>
-          <span class="display text-lg sm:text-xl flex-1">How do I pay?</span>
-          <span class="font-display italic text-gold text-2xl leading-none group-open:rotate-45 transition shrink-0">+</span>
-        </summary>
-        <div class="mt-3 pl-8 sm:pl-10 text-inkSoft text-[15px] leading-[1.7]">
-          Zelle or Apple Pay. Payment details are sent in the DM once your order is confirmed.
-        </div>
-      </details>
-
-      <details class="group border-b border-espresso/15 py-5">
-        <summary class="flex items-start gap-4 cursor-pointer list-none">
-          <span class="display-it text-gold text-2xl shrink-0 leading-none mt-0.5">Q</span>
-          <span class="display text-lg sm:text-xl flex-1">Do you deliver, or is it pickup?</span>
-          <span class="font-display italic text-gold text-2xl leading-none group-open:rotate-45 transition shrink-0">+</span>
-        </summary>
-        <div class="mt-3 pl-8 sm:pl-10 text-inkSoft text-[15px] leading-[1.7]">
-          Both. Pickup is available, or add delivery for a $10 fee that depends on distance around Lancaster and the Antelope Valley.
-        </div>
-      </details>
-
-      <details class="group border-b border-espresso/15 py-5">
-        <summary class="flex items-start gap-4 cursor-pointer list-none">
-          <span class="display-it text-gold text-2xl shrink-0 leading-none mt-0.5">Q</span>
-          <span class="display text-lg sm:text-xl flex-1">How far in advance should I order?</span>
-          <span class="font-display italic text-gold text-2xl leading-none group-open:rotate-45 transition shrink-0">+</span>
-        </summary>
-        <div class="mt-3 pl-8 sm:pl-10 text-inkSoft text-[15px] leading-[1.7]">
-          Everything is pre-order and baked to order, so the sooner the better — especially for bigger boxes. DM for the next available batch date.
-        </div>
-      </details>
-
-      <details class="group border-b border-espresso/15 py-5">
-        <summary class="flex items-start gap-4 cursor-pointer list-none">
-          <span class="display-it text-gold text-2xl shrink-0 leading-none mt-0.5">Q</span>
-          <span class="display text-lg sm:text-xl flex-1">Can you do custom orders or events?</span>
-          <span class="font-display italic text-gold text-2xl leading-none group-open:rotate-45 transition shrink-0">+</span>
-        </summary>
-        <div class="mt-3 pl-8 sm:pl-10 text-inkSoft text-[15px] leading-[1.7]">
-          DM with what you have in mind — birthdays, parties, dessert tables. Send the date and headcount and Key will put a box together for you.
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Closing CTA ============ -->
-<section id="order" class="bg-espresso vignette py-16 sm:py-28 border-t border-gold/20">
-  <div class="max-w-[1480px] mx-auto px-4 sm:px-10">
-    <div class="bg-gold text-espresso border-2 border-espresso ticket-gold px-6 sm:px-12 py-12 sm:py-20 text-center max-w-3xl mx-auto">
-      <p class="font-mono uppercase tracking-[0.3em] text-[10px] text-espresso/70">Now taking pre-orders</p>
-      <h2 class="mt-4 leading-[0.92]">
-        <span class="display block text-[clamp(2.6rem,11vw,7rem)]">Hungry yet?</span>
-        <span class="script block text-[clamp(2.4rem,9vw,5rem)] -mt-1">DM to order.</span>
-      </h2>
-      <p class="mt-6 text-[15px] sm:text-[16px] leading-relaxed max-w-md mx-auto text-espresso/80">
-        Flavors + quantity + date + pickup or delivery. Send it over and Key will
-        confirm your batch.
-      </p>
-      <div class="mt-8">
+        <dl class="mt-5 divide-y divide-ink/10">
+          <div class="grid grid-cols-12 gap-3 py-3.5"><dt class="col-span-4 label">Orders</dt><dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed">Pre-orders only — DM ahead, no walk-ups.</dd></div>
+          <div class="grid grid-cols-12 gap-3 py-3.5"><dt class="col-span-4 label">Deposit</dt><dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed"><span class="text-berry font-semibold">Required.</span> Holds your batch — no deposit, no order.</dd></div>
+          <div class="grid grid-cols-12 gap-3 py-3.5"><dt class="col-span-4 label">Payment</dt><dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed">Zelle or Apple Pay.</dd></div>
+          <div class="grid grid-cols-12 gap-3 py-3.5"><dt class="col-span-4 label">Delivery</dt><dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed">$10, by distance. Pickup also available.</dd></div>
+          <div class="grid grid-cols-12 gap-3 py-3.5"><dt class="col-span-4 label">Area</dt><dd class="col-span-8 text-[14.5px] text-inkSoft leading-relaxed">Lancaster &amp; the Antelope Valley.</dd></div>
+        </dl>
+        <figure class="mt-5 photo-hover">
+          <img src="https://images.pexels.com/photos/11112059/pexels-photo-11112059.jpeg?auto=compress&cs=tinysrgb&w=800"
+               alt="A boxed order tied with ribbon, ready for pickup or delivery."
+               class="w-full h-36 object-cover photo" />
+        </figure>
         <a href="https://www.instagram.com/baked.bykey/" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-3 bg-espresso text-cream font-mono uppercase tracking-[0.2em] text-[11px] font-bold px-8 py-4 hover:bg-espressoHi transition">
-          Message @baked.bykey ↗
+           class="cta-arrow mt-5 flex items-center justify-center gap-2 bg-espresso text-cream text-[10.5px] uppercase tracking-[0.18em] font-bold py-3.5 hover:bg-espresso2 transition">
+          Start an order in the DM <span>→</span>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ Footer ============ -->
-<footer class="bg-espresso text-cream border-t border-gold/15">
-  <div class="max-w-[1480px] mx-auto px-4 sm:px-10 py-12 grid md:grid-cols-12 gap-10">
+<!-- ===== FAQ — narrow editorial column ===== -->
+<section id="faq" class="bg-cream2 py-16 sm:py-24 border-t border-ink/10">
+  <div class="max-w-3xl mx-auto px-4 sm:px-8">
+    <div class="mb-9 sm:mb-12">
+      <span class="label">§ 04 — Questions</span>
+      <h2 class="display text-[clamp(2.6rem,8vw,5rem)] leading-[0.9] tracking-[-0.02em] mt-3 text-ink">Asked &amp; <span class="display-it foil">answered.</span></h2>
+    </div>
+    <div class="border-t-2 border-ink">
+      <details class="group border-b border-ink/15 py-5">
+        <summary class="flex items-center gap-4 cursor-pointer list-none">
+          <span class="display text-xl sm:text-2xl flex-1">How do I place an order?</span>
+          <span class="display-it text-gold text-3xl leading-none group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-inkSoft text-[15px] leading-[1.7]">DM <a class="text-berry font-semibold ul-draw" href="https://www.instagram.com/baked.bykey/" target="_blank" rel="noopener">@baked.bykey</a> with your flavors, quantity, the date you need them, and whether you want pickup or delivery.</p>
+      </details>
+      <details class="group border-b border-ink/15 py-5">
+        <summary class="flex items-center gap-4 cursor-pointer list-none">
+          <span class="display text-xl sm:text-2xl flex-1">Why a deposit?</span>
+          <span class="display-it text-gold text-3xl leading-none group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-inkSoft text-[15px] leading-[1.7]">It's what locks your batch in for that date. No deposit, no order — and it goes toward your total, so you're not paying extra.</p>
+      </details>
+      <details class="group border-b border-ink/15 py-5">
+        <summary class="flex items-center gap-4 cursor-pointer list-none">
+          <span class="display text-xl sm:text-2xl flex-1">How do I pay?</span>
+          <span class="display-it text-gold text-3xl leading-none group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-inkSoft text-[15px] leading-[1.7]">Zelle or Apple Pay. Details come through in the DM once your order's confirmed.</p>
+      </details>
+      <details class="group border-b border-ink/15 py-5">
+        <summary class="flex items-center gap-4 cursor-pointer list-none">
+          <span class="display text-xl sm:text-2xl flex-1">Pickup or delivery?</span>
+          <span class="display-it text-gold text-3xl leading-none group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-inkSoft text-[15px] leading-[1.7]">Both. Pickup is free; delivery is a $10 fee depending on distance around Lancaster and the Antelope Valley.</p>
+      </details>
+      <details class="group border-b border-ink/15 py-5">
+        <summary class="flex items-center gap-4 cursor-pointer list-none">
+          <span class="display text-xl sm:text-2xl flex-1">How far ahead should I order?</span>
+          <span class="display-it text-gold text-3xl leading-none group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-inkSoft text-[15px] leading-[1.7]">Everything's pre-order and baked to order, so sooner is better — especially for big boxes and events. DM for the next available batch.</p>
+      </details>
+      <details class="group border-b border-ink/15 py-5">
+        <summary class="flex items-center gap-4 cursor-pointer list-none">
+          <span class="display text-xl sm:text-2xl flex-1">Custom orders or events?</span>
+          <span class="display-it text-gold text-3xl leading-none group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-inkSoft text-[15px] leading-[1.7]">Yes — birthdays, parties, dessert tables. Send the date and headcount and Key will put a box together for you.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== closing CTA over photo ===== -->
+<section class="relative">
+  <div class="relative h-[70vw] max-h-[560px] min-h-[400px] photo-hover">
+    <img src="https://images.pexels.com/photos/3252139/pexels-photo-3252139.jpeg?auto=compress&cs=tinysrgb&w=1600"
+         alt="A hand reaching for a stack of fresh cookies."
+         class="absolute inset-0 w-full h-full object-cover photo" />
+    <div class="absolute inset-0 bg-espresso/72"></div>
+  </div>
+  <div class="absolute inset-0 flex items-center">
+    <div class="max-w-[1500px] mx-auto w-full px-4 sm:px-8">
+      <div class="max-w-xl">
+        <div class="flex items-center gap-4 mb-6">
+          <img src="logo.jpg" alt="baked.bykey logo"
+               class="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover ring-2 ring-gold/50" />
+          <span class="script text-goldHi text-2xl sm:text-3xl leading-tight">straight from<br/>Key's kitchen</span>
+        </div>
+        <span class="label text-goldHi">Now taking pre-orders</span>
+        <h2 class="display text-cream text-[clamp(2.8rem,11vw,7rem)] leading-[0.88] tracking-[-0.03em] mt-3">
+          Go on, <span class="display-it foil">order.</span>
+        </h2>
+        <p class="text-cream/80 text-[15px] sm:text-[16px] leading-relaxed mt-5 max-w-md">
+          Flavors + quantity + date + pickup or delivery. Send it over and Key
+          confirms your batch — usually same day.
+        </p>
+        <a href="https://www.instagram.com/baked.bykey/" target="_blank" rel="noopener"
+           class="cta-arrow mt-7 inline-flex items-center gap-3 bg-gold text-espresso uppercase tracking-[0.18em] text-[11px] font-bold px-8 py-4 hover:bg-goldHi transition">
+          Message @baked.bykey <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== footer ===== -->
+<footer class="bg-espresso text-cream">
+  <div class="max-w-[1500px] mx-auto px-4 sm:px-8 py-12 grid md:grid-cols-12 gap-10">
     <div class="md:col-span-5">
-      <p class="display text-3xl foil">baked.bykey</p>
-      <p class="script text-goldHi text-xl leading-none">by Key</p>
-      <p class="mt-4 font-mono text-[10.5px] uppercase tracking-[0.2em] text-cream/55">Gourmet cookies &amp; dessert egg rolls · Lancaster, CA</p>
-      <p class="mt-5 text-[14px] text-cream/70 max-w-sm leading-relaxed">
+      <div class="flex items-center gap-3.5">
+        <img src="logo.jpg" alt="baked.bykey logo"
+             class="h-14 w-14 rounded-full object-cover ring-1 ring-gold/40 shrink-0" />
+        <div>
+          <p class="display text-3xl foil leading-none">baked.bykey</p>
+          <p class="script text-goldHi text-xl mt-0.5">by Key</p>
+        </div>
+      </div>
+      <p class="label text-cream/45 mt-4">Gourmet cookies &amp; dessert egg rolls · Lancaster, CA</p>
+      <p class="mt-4 text-[14px] text-cream/65 max-w-sm leading-relaxed">
         Baked to order, soft and loaded with flavor. Pre-order for pickup or
         delivery across the Antelope Valley. DM
-        <a class="text-goldHi hover:underline" href="https://www.instagram.com/baked.bykey/" target="_blank" rel="noopener">@baked.bykey</a> to order.
+        <a class="text-goldHi ul-draw" href="https://www.instagram.com/baked.bykey/" target="_blank" rel="noopener">@baked.bykey</a> to order.
       </p>
     </div>
     <div class="md:col-span-3">
-      <p class="font-mono uppercase tracking-[0.26em] text-[10px] text-goldHi">Menu</p>
-      <ul class="mt-4 space-y-2 text-[14px] text-cream/75">
-        <li><a class="hover:text-goldHi transition" href="#cookies">01 — Cookies</a></li>
-        <li><a class="hover:text-goldHi transition" href="#eggrolls">02 — Egg Rolls</a></li>
-        <li><a class="hover:text-goldHi transition" href="#ordering">03 — Ordering</a></li>
-        <li><a class="hover:text-goldHi transition" href="#faq">04 — FAQ</a></li>
+      <p class="label text-goldHi">Menu</p>
+      <ul class="mt-4 space-y-2 text-[14px] text-cream/70">
+        <li><a class="ul-draw hover:text-goldHi transition" href="#cookies">01 — Cookies</a></li>
+        <li><a class="ul-draw hover:text-goldHi transition" href="#eggrolls">02 — Egg Rolls</a></li>
+        <li><a class="ul-draw hover:text-goldHi transition" href="#order">03 — How to order</a></li>
+        <li><a class="ul-draw hover:text-goldHi transition" href="#faq">04 — FAQ</a></li>
       </ul>
     </div>
     <div class="md:col-span-4">
-      <p class="font-mono uppercase tracking-[0.26em] text-[10px] text-goldHi">Preview by</p>
+      <p class="label text-goldHi">Preview by</p>
       <p class="display-it text-2xl mt-2">WestCo App Studio</p>
-      <p class="mt-2 font-mono text-[11px] uppercase tracking-[0.2em] text-cream/65">
-        <a class="hover:text-goldHi transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
-      </p>
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-cream/65">
-        <a class="hover:text-goldHi transition" href="tel:+12135229136">(213) 522-9136</a>
-      </p>
+      <p class="mt-2 text-[13px] text-cream/60"><a class="ul-draw hover:text-goldHi transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a></p>
+      <p class="text-[13px] text-cream/60"><a class="ul-draw hover:text-goldHi transition" href="tel:+12135229136">(213) 522-9136</a></p>
     </div>
   </div>
   <div class="border-t border-cream/10">
-    <div class="max-w-[1480px] mx-auto px-4 sm:px-10 py-5 flex flex-wrap items-center justify-between gap-3 font-mono uppercase tracking-[0.2em] text-[10px] text-cream/45">
+    <div class="max-w-[1500px] mx-auto px-4 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-3 text-[10px] uppercase tracking-[0.2em] text-cream/40">
       <span>© 2026 baked.bykey</span>
       <span>Lancaster, CA · Antelope Valley</span>
       <span>Website preview — not the official site</span>
     </div>
   </div>
 </footer>
+
+<!-- Photo credits (Pexels): cookies stack — Lisa Fotios; fresh tray — Marta Dzedyshko; choc-chip stack — Pixabay; strawberry plate — Pixabay; egg rolls — Cup of Couple; dough hands — Klaus Nielsen; box — Karolina Grabowska. -->
 
 </body>
 </html>
