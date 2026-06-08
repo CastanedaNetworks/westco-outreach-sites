@@ -66,6 +66,9 @@
   /* Warm photo tone to match the brand's sunset palette */
   .photo-treatment { filter: sepia(0.14) saturate(1.12) contrast(1.02) brightness(1.01); }
 
+  /* Real, dim phone photos: gentle lift so the subject reads, mood kept */
+  .photo-real { filter: brightness(1.1) contrast(1.05) saturate(1.0); }
+
   @keyframes fade-up {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -157,9 +160,10 @@
 <section id="about" class="py-20 sm:py-32">
   <div class="max-w-6xl mx-auto px-6 sm:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
     <div class="lg:col-span-5 order-2 lg:order-1">
-      <img src="https://images.unsplash.com/photo-1611073615830-9f76902c10fe?fm=jpg&q=72&w=1000&fit=crop"
-           alt="Close-up of hands during a massage"
-           class="w-full aspect-[4/5] object-cover photo-treatment" />
+      <img src="cupping.jpg"
+           alt="Faith performing cupping therapy during a session at her West Covina studio"
+           class="w-full aspect-[4/5] object-cover object-top photo-real" />
+      <p class="field mt-3">Cupping · a recent session</p>
     </div>
     <div class="lg:col-span-7 order-1 lg:order-2 lg:pl-6">
       <p class="field">About</p>
