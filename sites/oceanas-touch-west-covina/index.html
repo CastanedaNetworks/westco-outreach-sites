@@ -26,16 +26,17 @@
           script:  ['"Pinyon Script"', 'cursive'],
         },
         colors: {
-          cream:    '#fbeee6',
-          creamDk:  '#f6ddd0',
-          blush:    '#f3cfc1',
-          coral:    '#dc7457',
-          coralDk:  '#bd5236',
-          rose:     '#9c2f3a',
-          roseDk:   '#7c2230',
-          espresso: '#2b1512',
-          cocoa:    '#6e463c',
-          sand:     '#fbeee3',
+          /* Dark "black & red" theme. Token names kept; values flipped dark. */
+          cream:    '#100a0a',  /* page background (near-black) */
+          creamDk:  '#1a1011',  /* raised dark panel */
+          blush:    '#ecb9ab',  /* light pink, for text on deep-red blocks */
+          coral:    '#e07a5c',  /* warm ember accent */
+          coralDk:  '#c95f41',  /* deeper ember */
+          rose:     '#c63a45',  /* primary red */
+          roseDk:   '#8f2531',  /* deep red */
+          espresso: '#f4e7dd',  /* primary text (light, warm) */
+          cocoa:    '#c2a99d',  /* muted text (light, warm) */
+          sand:     '#f8ebe2',  /* text on red/dark blocks */
         },
       },
     },
@@ -43,8 +44,8 @@
 </script>
 
 <style>
-  html { scroll-behavior: smooth; background: #fbeee6; }
-  body { background: #fbeee6; color: #2b1512; overflow-x: hidden; }
+  html { scroll-behavior: smooth; background: #100a0a; }
+  body { background: #100a0a; color: #f4e7dd; overflow-x: hidden; }
 
   .display-it { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500; letter-spacing: -0.012em; }
   .display    { font-family: 'Cormorant Garamond', Georgia, serif; font-style: normal; font-weight: 500; letter-spacing: -0.005em; }
@@ -57,11 +58,11 @@
     font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #bd5236;
+    color: #e07a5c;
   }
 
-  /* Thin coral hairline */
-  .hr-coral { background: #dc7457; opacity: 0.5; height: 1px; width: 100%; }
+  /* Thin ember hairline */
+  .hr-coral { background: #e07a5c; opacity: 0.55; height: 1px; width: 100%; }
 
   /* Warm photo tone to match the brand's sunset palette */
   .photo-treatment { filter: sepia(0.14) saturate(1.12) contrast(1.02) brightness(1.01); }
@@ -146,8 +147,9 @@
       <img src="https://images.unsplash.com/photo-1741522509438-a120c0bb5e88?fm=jpg&q=72&w=1400&fit=crop"
            alt="Faith giving a back massage"
            class="absolute inset-0 w-full h-full object-cover photo-treatment fade-up" />
-      <div class="absolute inset-0 bg-gradient-to-t from-rose/35 via-coral/5 to-transparent mix-blend-multiply"></div>
-      <div class="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 text-[10px] font-semibold uppercase tracking-[0.2em] text-sand bg-rose/55 backdrop-blur px-3 py-1.5">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#100a0a] via-[#100a0a]/15 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#100a0a]/70 via-transparent to-transparent hidden lg:block"></div>
+      <div class="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 text-[10px] font-semibold uppercase tracking-[0.2em] text-sand bg-black/55 backdrop-blur px-3 py-1.5">
         Oceanas Touch · West Covina
       </div>
     </div>
@@ -188,7 +190,7 @@
 </section>
 
 <!-- ============ Tagline moment ============ -->
-<section class="py-20 sm:py-28 bg-blush/40">
+<section class="py-20 sm:py-28 bg-creamDk border-y border-white/5">
   <div class="max-w-4xl mx-auto px-6 sm:px-10 text-center">
     <p class="field text-coralDk">Relax. Restore. Rejuvenate.</p>
     <p class="display-it text-[clamp(2.4rem,5.5vw,4.25rem)] leading-[1.12] mt-6 text-espresso">
@@ -324,7 +326,7 @@
 </section>
 
 <!-- ============ How it works ============ -->
-<section id="how" class="py-20 sm:py-32 bg-rose text-sand">
+<section id="how" class="py-20 sm:py-32 bg-[#4e1620] text-sand">
   <div class="max-w-6xl mx-auto px-6 sm:px-10">
 
     <div class="max-w-2xl">
@@ -447,7 +449,7 @@
 </section>
 
 <!-- ============ Book CTA · sunset gradient ============ -->
-<section id="book" class="py-24 sm:py-36 bg-gradient-to-br from-coral via-coralDk to-rose text-sand">
+<section id="book" class="py-24 sm:py-36 bg-gradient-to-br from-rose via-roseDk to-[#2a0e12] text-sand">
   <div class="max-w-3xl mx-auto px-6 sm:px-10 text-center">
     <p class="script text-4xl sm:text-5xl text-sand/90 leading-none">Oceanas Touch</p>
     <h2 class="display-it text-[clamp(3rem,8vw,6rem)] leading-[1.0] mt-4">
