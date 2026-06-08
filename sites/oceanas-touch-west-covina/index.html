@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Oceanas Touch — Private home massage studio with Faith · West Covina</title>
-<meta name="description" content="A private home massage studio in West Covina. Swedish & deep-tissue massage by appointment with Faith. Relax · Restore · Rejuvenate." />
+<title>Oceanas Touch · Home massage studio with Faith in West Covina</title>
+<meta name="description" content="Oceanas Touch is Faith's home massage studio in West Covina. Swedish and deep tissue massage by appointment. Relax, restore, rejuvenate." />
 <meta name="robots" content="noindex,nofollow" />
 
-<meta property="og:title" content="Oceanas Touch — Private home massage studio with Faith" />
-<meta property="og:description" content="A private home massage studio in West Covina. Swedish & deep-tissue massage by appointment. Book on Instagram." />
+<meta property="og:title" content="Oceanas Touch · Home massage studio with Faith" />
+<meta property="og:description" content="Faith's home massage studio in West Covina. Swedish and deep tissue, by appointment. Book on Instagram." />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Karla:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Karla:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -23,16 +23,19 @@
         fontFamily: {
           sans:    ['Karla', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-          mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          script:  ['"Pinyon Script"', 'cursive'],
         },
         colors: {
-          bone:    '#efe7d8',
-          boneDk:  '#e4dac4',
-          umber:   '#2a2520',
-          clay:    '#b8896f',
-          clayDk:  '#8a6a55',
-          moss:    '#3d4a3a',
-          taupe:   '#7a6f63',
+          cream:    '#fbeee6',
+          creamDk:  '#f6ddd0',
+          blush:    '#f3cfc1',
+          coral:    '#dc7457',
+          coralDk:  '#bd5236',
+          rose:     '#9c2f3a',
+          roseDk:   '#7c2230',
+          espresso: '#2b1512',
+          cocoa:    '#6e463c',
+          sand:     '#fbeee3',
         },
       },
     },
@@ -40,38 +43,29 @@
 </script>
 
 <style>
-  html { scroll-behavior: smooth; background: #efe7d8; }
-  body { background: #efe7d8; color: #2a2520; overflow-x: hidden; }
+  html { scroll-behavior: smooth; background: #fbeee6; }
+  body { background: #fbeee6; color: #2b1512; overflow-x: hidden; }
 
-  /* Italic display variant */
   .display-it { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500; letter-spacing: -0.012em; }
   .display    { font-family: 'Cormorant Garamond', Georgia, serif; font-style: normal; font-weight: 500; letter-spacing: -0.005em; }
+  .script     { font-family: 'Pinyon Script', cursive; font-weight: 400; }
 
-  /* Field label — DM Mono caps */
+  /* Small section label */
   .field {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Karla', sans-serif;
     font-size: 11px;
-    letter-spacing: 0.28em;
+    font-weight: 600;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #8a6a55;
+    color: #bd5236;
   }
 
-  /* Thin clay-tone hairline */
-  .hr-clay { background: #b8896f; opacity: 0.4; height: 1px; width: 100%; }
+  /* Thin coral hairline */
+  .hr-coral { background: #dc7457; opacity: 0.5; height: 1px; width: 100%; }
 
-  /* Photo treatment — warm desaturation */
-  .photo-treatment { filter: sepia(0.05) saturate(0.92) contrast(1.02); }
+  /* Warm photo tone to match the brand's sunset palette */
+  .photo-treatment { filter: sepia(0.14) saturate(1.12) contrast(1.02) brightness(1.01); }
 
-  /* Editorial pull-quote: italic with hanging quotation glyph */
-  .quote-mark::before {
-    content: "“"; font-family: 'Cormorant Garamond', serif;
-    font-style: italic; font-weight: 500;
-    font-size: 7rem; line-height: 0.5;
-    color: #b8896f;
-    display: inline-block; margin-right: 0.1em; vertical-align: -0.3em;
-  }
-
-  /* Smooth fade-in on scroll for hero photo */
   @keyframes fade-up {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -84,89 +78,79 @@
 <body class="font-sans antialiased">
 
 <!-- ============ Nav ============ -->
-<header class="sticky top-0 z-40 bg-bone/90 backdrop-blur border-b border-umber/8">
+<header class="sticky top-0 z-40 bg-cream/90 backdrop-blur border-b border-espresso/8">
   <div class="max-w-7xl mx-auto px-6 sm:px-10 h-16 sm:h-20 flex items-center justify-between gap-6">
     <a href="#top" class="flex items-center gap-3 leading-none">
-      <img src="logo.jpg" alt="Oceanas Touch logo" class="h-9 w-9 sm:h-11 sm:w-11 rounded-full object-cover ring-1 ring-umber/10" />
-      <span class="display-it text-xl sm:text-2xl">Oceanas Touch</span>
+      <img src="logo.jpg" alt="Oceanas Touch logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover ring-1 ring-coral/30" />
+      <span class="script text-2xl sm:text-[1.9rem] text-espresso leading-none pt-1">Oceanas Touch</span>
     </a>
-    <div class="hidden md:flex items-center gap-8 text-sm text-umber/65">
-      <a href="#about" class="hover:text-umber transition">About Faith</a>
-      <a href="#treatments" class="hover:text-umber transition">Pricing</a>
-      <a href="#how" class="hover:text-umber transition">How it works</a>
-      <a href="#book" class="hover:text-umber transition">Book</a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-cocoa">
+      <a href="#about" class="hover:text-rose transition">About Faith</a>
+      <a href="#treatments" class="hover:text-rose transition">Pricing</a>
+      <a href="#how" class="hover:text-rose transition">How it works</a>
+      <a href="#book" class="hover:text-rose transition">Book</a>
     </div>
     <a href="https://www.instagram.com/oceanas.touch/" target="_blank" rel="noopener"
-       class="inline-flex items-center gap-2 text-xs sm:text-sm font-mono uppercase tracking-[0.18em] text-umber hover:text-clayDk transition">
+       class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.16em] text-rose hover:text-coralDk transition">
       <span class="hidden sm:inline">@oceanas.touch</span>
       <span class="sm:hidden">DM</span>
-      <span>↗</span>
+      <span aria-hidden="true">↗</span>
     </a>
   </div>
 </header>
 
-<!-- ============ HERO — asymmetric editorial split ============ -->
+<!-- ============ HERO ============ -->
 <section id="top" class="relative">
   <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-0">
 
     <!-- Left: copy column -->
     <div class="lg:col-span-7 px-6 sm:px-10 lg:pr-12 pt-14 pb-16 sm:pt-24 sm:pb-24">
-      <p class="field">Private home studio · West Covina, CA</p>
+      <p class="field">Home massage studio in West Covina</p>
 
       <h1 class="mt-9 leading-[0.95]">
-        <span class="display-it block text-[clamp(3.5rem,10vw,8rem)]">An hour back</span>
-        <span class="display block text-[clamp(2.8rem,8vw,6.5rem)] text-clayDk">to yourself.</span>
+        <span class="display-it block text-[clamp(3.5rem,10vw,8rem)] text-espresso">An hour back</span>
+        <span class="display block text-[clamp(2.8rem,8vw,6.5rem)] text-rose">to yourself.</span>
       </h1>
 
-      <p class="mt-10 text-lg leading-[1.65] text-umber/80 max-w-xl">
-        A calm, private studio inside Faith's West Covina home — table, linens,
-        and oils already set. Book a time, come as you are, and leave the rest
-        at the door for an hour. Every session is one-on-one.
+      <p class="mt-10 text-lg leading-[1.65] text-espresso/80 max-w-xl">
+        Faith runs a small massage studio out of her home in West Covina. Pick a
+        time, come by, and take an hour for yourself while she handles the rest.
+        It stays quiet and private the whole time, just you and Faith.
       </p>
 
       <div class="mt-12 flex flex-wrap items-center gap-x-7 gap-y-3">
         <a href="https://www.instagram.com/oceanas.touch/" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-3 bg-umber text-bone uppercase tracking-[0.18em] text-xs font-semibold px-7 py-4 hover:bg-clay transition">
+           class="inline-flex items-center gap-3 bg-rose text-sand uppercase tracking-[0.16em] text-xs font-semibold px-7 py-4 hover:bg-coralDk transition">
           Book on Instagram
         </a>
         <a href="#treatments"
-           class="text-umber/70 font-medium hover:text-clayDk transition uppercase tracking-[0.18em] text-xs">
-          See treatments →
+           class="text-cocoa font-medium hover:text-rose transition uppercase tracking-[0.16em] text-xs">
+          See the prices →
         </a>
       </div>
 
-      <div class="mt-14 grid grid-cols-3 gap-x-6 gap-y-2 max-w-md">
-        <div>
-          <p class="field text-[10px]">Sessions</p>
-          <p class="display text-2xl mt-1">30–120</p>
-          <p class="text-xs text-umber/55 mt-0.5">minute formats</p>
-        </div>
-        <div>
-          <p class="field text-[10px]">From</p>
-          <p class="display text-2xl mt-1">$60</p>
-          <p class="text-xs text-umber/55 mt-0.5">per session</p>
-        </div>
-        <div>
-          <p class="field text-[10px]">Hours</p>
-          <p class="display text-2xl mt-1">11–10</p>
-          <p class="text-xs text-umber/55 mt-0.5">Tue–Sat, by appt</p>
-        </div>
+      <div class="mt-14 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-cocoa">
+        <span>Sessions 30 to 120 minutes</span>
+        <span class="text-coral" aria-hidden="true">/</span>
+        <span>From $60</span>
+        <span class="text-coral" aria-hidden="true">/</span>
+        <span>Tuesday to Saturday, 11am to 10pm</span>
       </div>
     </div>
 
-    <!-- Right: full-bleed photo -->
+    <!-- Right: full-bleed photo with warm sunset overlay -->
     <div class="lg:col-span-5 relative min-h-[24rem] sm:min-h-[34rem] lg:min-h-0">
       <img src="https://images.unsplash.com/photo-1741522509438-a120c0bb5e88?fm=jpg&q=72&w=1400&fit=crop"
-           alt="A massage therapist working on a client's back"
+           alt="Faith giving a back massage"
            class="absolute inset-0 w-full h-full object-cover photo-treatment fade-up" />
-      <div class="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 font-mono text-[10px] uppercase tracking-[0.22em] text-bone/85 bg-umber/55 backdrop-blur px-3 py-1.5">
+      <div class="absolute inset-0 bg-gradient-to-t from-rose/35 via-coral/5 to-transparent mix-blend-multiply"></div>
+      <div class="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 text-[10px] font-semibold uppercase tracking-[0.2em] text-sand bg-rose/55 backdrop-blur px-3 py-1.5">
         Oceanas Touch · West Covina
       </div>
     </div>
   </div>
 
-  <!-- Hairline divider -->
-  <div class="border-t border-umber/12"></div>
+  <div class="border-t border-espresso/10"></div>
 </section>
 
 <!-- ============ About Faith ============ -->
@@ -174,40 +158,39 @@
   <div class="max-w-6xl mx-auto px-6 sm:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
     <div class="lg:col-span-5 order-2 lg:order-1">
       <img src="https://images.unsplash.com/photo-1611073615830-9f76902c10fe?fm=jpg&q=72&w=1000&fit=crop"
-           alt="Hands at rest"
+           alt="Close-up of hands during a massage"
            class="w-full aspect-[4/5] object-cover photo-treatment" />
     </div>
     <div class="lg:col-span-7 order-1 lg:order-2 lg:pl-6">
       <p class="field">About</p>
-      <h2 class="display-it text-[clamp(3rem,8vw,6.5rem)] leading-[0.95] mt-4">
+      <h2 class="display-it text-[clamp(3rem,8vw,6.5rem)] leading-[0.95] mt-4 text-espresso">
         Faith.
       </h2>
-      <div class="hr-clay mt-6 max-w-[3rem]"></div>
-      <div class="mt-8 space-y-6 text-[17px] leading-[1.75] text-umber/80 max-w-xl">
+      <div class="hr-coral mt-6 max-w-[3rem]"></div>
+      <div class="mt-8 space-y-6 text-[17px] leading-[1.75] text-espresso/80 max-w-xl">
         <p>
-          Faith is a massage therapist in West Covina who works from a private
-          studio inside her home — a quiet, dedicated space with the table, fresh
-          linens, and oils already set, so all you do is show up.
+          Faith is a massage therapist in West Covina. She set up a studio inside
+          her home so clients get something calmer than a busy spa: a private
+          room, no waiting around, and her full attention the whole time.
         </p>
         <p>
-          Each session is one-on-one. No reception desk, no fluorescent overhead,
-          no rotating therapist. Book once. Or set a standing weekly slot.
+          A lot of people book one session and then keep coming back. If you are
+          carrying months of built-up tension, or you just want an hour to slow
+          down, tell her what is going on and she will work from there.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ Pull moment — editorial center ============ -->
-<section class="py-20 sm:py-28 bg-boneDk/60">
-  <div class="max-w-4xl mx-auto px-6 sm:px-10">
-    <p class="field">Relax · Restore · Rejuvenate</p>
-    <p class="display-it text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[1.1] mt-6">
-      Your body. My touch. <span class="text-clayDk">Total renewal.</span>
+<!-- ============ Tagline moment ============ -->
+<section class="py-20 sm:py-28 bg-blush/40">
+  <div class="max-w-4xl mx-auto px-6 sm:px-10 text-center">
+    <p class="field text-coralDk">Relax. Restore. Rejuvenate.</p>
+    <p class="display-it text-[clamp(2.4rem,5.5vw,4.25rem)] leading-[1.12] mt-6 text-espresso">
+      Your body, my touch,<br class="hidden sm:block" /> total renewal.
     </p>
-    <p class="font-mono text-xs tracking-[0.22em] uppercase text-umber/55 mt-10">
-      ✕ the Oceanas Touch promise
-    </p>
+    <p class="script text-4xl sm:text-5xl text-coral mt-8 leading-none">Oceanas Touch</p>
   </div>
 </section>
 
@@ -218,15 +201,16 @@
     <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 mb-14">
       <div class="lg:col-span-5">
         <p class="field">Pricing</p>
-        <h2 class="display-it text-[clamp(3rem,7vw,5.5rem)] leading-[0.95] mt-4">
-          The <em class="not-italic display">menu.</em>
+        <h2 class="display-it text-[clamp(3rem,7vw,5.5rem)] leading-[0.95] mt-4 text-espresso">
+          Massage <em class="not-italic display">prices.</em>
         </h2>
-        <div class="hr-clay mt-6 max-w-[3rem]"></div>
+        <div class="hr-coral mt-6 max-w-[3rem]"></div>
       </div>
-      <p class="lg:col-span-7 lg:pt-12 text-umber/75 text-lg leading-[1.7] max-w-xl">
-        Two core sessions — Swedish for relaxation, deep tissue for tension that
-        runs deeper. Build on either with scrubs, cupping, or lymphatic work.
-        Pressure and focus are tailored when you message Faith.
+      <p class="lg:col-span-7 lg:pt-12 text-espresso/75 text-lg leading-[1.7] max-w-xl">
+        Two main massages to start from. Swedish if you mostly want to relax, deep
+        tissue if you have knots and tight spots that need real pressure. You can
+        add a scrub, cupping, or lymphatic work to either one. Faith sets the
+        pressure to whatever feels right for you.
       </p>
     </div>
 
@@ -235,99 +219,100 @@
 
       <!-- Swedish -->
       <div>
-        <div class="flex items-baseline justify-between border-b border-umber/15 pb-4">
-          <h3 class="display text-3xl sm:text-4xl tracking-[-0.005em]">Swedish</h3>
+        <div class="flex items-baseline justify-between border-b border-espresso/15 pb-4">
+          <h3 class="display text-3xl sm:text-4xl tracking-[-0.005em] text-espresso">Swedish</h3>
           <span class="field text-[10px]">Relaxation</span>
         </div>
-        <p class="text-umber/70 leading-relaxed mt-5 text-[15px]">
-          Long, flowing strokes at light to medium pressure. Built to calm the
-          nervous system and ease everyday tension.
+        <p class="text-cocoa leading-relaxed mt-5 text-[15px]">
+          Smooth, flowing strokes at a light to medium pressure. The one to book
+          when you mostly want to switch off and let the stress drain out.
         </p>
         <dl class="mt-7 space-y-0">
-          <div class="flex items-center justify-between py-3 border-b border-umber/10">
-            <dt class="text-umber/80">30 minutes</dt>
-            <dd class="display text-xl">$60</dd>
+          <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+            <dt class="text-espresso/80">30 minutes</dt>
+            <dd class="display text-xl text-rose">$60</dd>
           </div>
-          <div class="flex items-center justify-between py-3 border-b border-umber/10">
-            <dt class="text-umber/80">1 hour</dt>
-            <dd class="display text-xl">$110</dd>
+          <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+            <dt class="text-espresso/80">1 hour</dt>
+            <dd class="display text-xl text-rose">$110</dd>
           </div>
-          <div class="flex items-center justify-between py-3 border-b border-umber/10">
-            <dt class="text-umber/80">90 minutes</dt>
-            <dd class="display text-xl">$160</dd>
+          <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+            <dt class="text-espresso/80">90 minutes</dt>
+            <dd class="display text-xl text-rose">$160</dd>
           </div>
           <div class="flex items-center justify-between py-3">
-            <dt class="text-umber/80">2 hours</dt>
-            <dd class="display text-xl">$210</dd>
+            <dt class="text-espresso/80">2 hours</dt>
+            <dd class="display text-xl text-rose">$210</dd>
           </div>
         </dl>
       </div>
 
       <!-- Deep tissue -->
       <div>
-        <div class="flex items-baseline justify-between border-b border-umber/15 pb-4">
-          <h3 class="display text-3xl sm:text-4xl tracking-[-0.005em]">Deep tissue</h3>
+        <div class="flex items-baseline justify-between border-b border-espresso/15 pb-4">
+          <h3 class="display text-3xl sm:text-4xl tracking-[-0.005em] text-espresso">Deep tissue</h3>
           <span class="field text-[10px]">Tension relief</span>
         </div>
-        <p class="text-umber/70 leading-relaxed mt-5 text-[15px]">
-          Slower, firmer work into the deeper muscle layers. For chronic tightness
-          in the neck, shoulders, and lower back — tell Faith where it lives.
+        <p class="text-cocoa leading-relaxed mt-5 text-[15px]">
+          Slower and firmer, working down into the muscle underneath. Best for
+          stubborn tightness in the neck, shoulders, or lower back. Point Faith to
+          the spots that need it.
         </p>
         <dl class="mt-7 space-y-0">
-          <div class="flex items-center justify-between py-3 border-b border-umber/10">
-            <dt class="text-umber/80">30 minutes</dt>
-            <dd class="display text-xl">$75</dd>
+          <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+            <dt class="text-espresso/80">30 minutes</dt>
+            <dd class="display text-xl text-rose">$75</dd>
           </div>
-          <div class="flex items-center justify-between py-3 border-b border-umber/10">
-            <dt class="text-umber/80">1 hour</dt>
-            <dd class="display text-xl">$145</dd>
+          <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+            <dt class="text-espresso/80">1 hour</dt>
+            <dd class="display text-xl text-rose">$145</dd>
           </div>
-          <div class="flex items-center justify-between py-3 border-b border-umber/10">
-            <dt class="text-umber/80">90 minutes</dt>
-            <dd class="display text-xl">$195</dd>
+          <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+            <dt class="text-espresso/80">90 minutes</dt>
+            <dd class="display text-xl text-rose">$195</dd>
           </div>
           <div class="flex items-center justify-between py-3">
-            <dt class="text-umber/80">2 hours</dt>
-            <dd class="display text-xl">$285</dd>
+            <dt class="text-espresso/80">2 hours</dt>
+            <dd class="display text-xl text-rose">$285</dd>
           </div>
         </dl>
       </div>
     </div>
 
-    <!-- Add-ons -->
+    <!-- Additions -->
     <div class="mt-16">
-      <div class="flex items-baseline justify-between border-b border-umber/15 pb-4">
-        <h3 class="display text-2xl sm:text-3xl">Add to any session</h3>
-        <span class="field text-[10px]">Enhancements</span>
+      <div class="flex items-baseline justify-between border-b border-espresso/15 pb-4">
+        <h3 class="display text-2xl sm:text-3xl text-espresso">Add to any session</h3>
+        <span class="field text-[10px]">Additions</span>
       </div>
       <dl class="mt-6 grid sm:grid-cols-2 gap-x-16">
-        <div class="flex items-center justify-between py-3 border-b border-umber/10">
-          <dt class="text-umber/80">Heating pad / hot towels</dt>
-          <dd class="display text-lg">$15</dd>
+        <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+          <dt class="text-espresso/80">Heating pad and hot towels</dt>
+          <dd class="display text-lg text-rose">$15</dd>
         </div>
-        <div class="flex items-center justify-between py-3 border-b border-umber/10">
-          <dt class="text-umber/80">Lymphatic massage — facial</dt>
-          <dd class="display text-lg">$25</dd>
+        <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+          <dt class="text-espresso/80">Lymphatic massage (facial)</dt>
+          <dd class="display text-lg text-rose">$25</dd>
         </div>
-        <div class="flex items-center justify-between py-3 border-b border-umber/10">
-          <dt class="text-umber/80">Half body scrub</dt>
-          <dd class="display text-lg">$25</dd>
+        <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+          <dt class="text-espresso/80">Half body scrub</dt>
+          <dd class="display text-lg text-rose">$25</dd>
         </div>
-        <div class="flex items-center justify-between py-3 border-b border-umber/10">
-          <dt class="text-umber/80">Lymphatic massage — full body</dt>
-          <dd class="display text-lg">$35</dd>
+        <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+          <dt class="text-espresso/80">Lymphatic massage (full body)</dt>
+          <dd class="display text-lg text-rose">$35</dd>
         </div>
-        <div class="flex items-center justify-between py-3 border-b border-umber/10">
-          <dt class="text-umber/80">Full body scrub</dt>
-          <dd class="display text-lg">$35</dd>
+        <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+          <dt class="text-espresso/80">Full body scrub</dt>
+          <dd class="display text-lg text-rose">$35</dd>
         </div>
-        <div class="flex items-center justify-between py-3 border-b border-umber/10">
-          <dt class="text-umber/80">Cupping — lower body</dt>
-          <dd class="display text-lg">$35</dd>
+        <div class="flex items-center justify-between py-3 border-b border-espresso/10">
+          <dt class="text-espresso/80">Cupping (lower body)</dt>
+          <dd class="display text-lg text-rose">$35</dd>
         </div>
-        <div class="flex items-center justify-between py-3 border-b border-umber/10 sm:border-b-0">
-          <dt class="text-umber/80">Cupping — upper body</dt>
-          <dd class="display text-lg">$45</dd>
+        <div class="flex items-center justify-between py-3 border-b border-espresso/10 sm:border-b-0">
+          <dt class="text-espresso/80">Cupping (upper body)</dt>
+          <dd class="display text-lg text-rose">$45</dd>
         </div>
       </dl>
     </div>
@@ -335,41 +320,41 @@
 </section>
 
 <!-- ============ How it works ============ -->
-<section id="how" class="py-20 sm:py-32 bg-umber text-bone">
+<section id="how" class="py-20 sm:py-32 bg-rose text-sand">
   <div class="max-w-6xl mx-auto px-6 sm:px-10">
 
     <div class="max-w-2xl">
-      <p class="font-mono text-[11px] tracking-[0.28em] uppercase text-clay">
+      <p class="text-[11px] font-semibold tracking-[0.22em] uppercase text-blush">
         How it works
       </p>
       <h2 class="display-it text-[clamp(2.4rem,7vw,5.5rem)] leading-[0.98] mt-4 break-words">
-        Three steps. <em class="not-italic display">No friction.</em>
+        What a visit <em class="not-italic display">looks like.</em>
       </h2>
     </div>
 
     <ol class="mt-16 grid md:grid-cols-3 gap-10 md:gap-14">
       <li>
-        <p class="display-it text-6xl text-clay">i.</p>
-        <h3 class="display text-3xl mt-4">DM to set a time.</h3>
-        <p class="mt-3 text-bone/70 leading-relaxed text-sm">
-          Reach out on Instagram with a day, a window, and what you're looking for.
-          Faith replies same day most of the week.
+        <p class="display-it text-6xl text-blush">i.</p>
+        <h3 class="display text-3xl mt-4">Message to book.</h3>
+        <p class="mt-3 text-sand/75 leading-relaxed text-sm">
+          Send Faith a message on Instagram with the day that works and what you
+          want done. She usually gets back to you the same day.
         </p>
       </li>
       <li>
-        <p class="display-it text-6xl text-clay">ii.</p>
+        <p class="display-it text-6xl text-blush">ii.</p>
         <h3 class="display text-3xl mt-4">Come to the studio.</h3>
-        <p class="mt-3 text-bone/70 leading-relaxed text-sm">
-          Once your deposit confirms the slot, Faith shares the West Covina address.
-          Arrive at your time — the table, linens, and oils are already set.
+        <p class="mt-3 text-sand/75 leading-relaxed text-sm">
+          Once your deposit is in, she sends over the West Covina address. Show up
+          at your time and the room is already set up and ready for you.
         </p>
       </li>
       <li>
-        <p class="display-it text-6xl text-clay">iii.</p>
-        <h3 class="display text-3xl mt-4">You unwind.</h3>
-        <p class="mt-3 text-bone/70 leading-relaxed text-sm">
-          One uninterrupted hour, or ninety minutes if you have it — in a space
-          kept calm, private, and set up just for your session.
+        <p class="display-it text-6xl text-blush">iii.</p>
+        <h3 class="display text-3xl mt-4">Let go for an hour.</h3>
+        <p class="mt-3 text-sand/75 leading-relaxed text-sm">
+          Get on the table and switch off for an hour, or ninety minutes if you
+          booked it. The room stays quiet and it is only ever you in there.
         </p>
       </li>
     </ol>
@@ -381,75 +366,75 @@
   <div class="max-w-6xl mx-auto px-6 sm:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
     <div class="lg:col-span-6">
       <img src="https://images.unsplash.com/photo-1712638932314-e2b185ca0930?fm=jpg&q=72&w=1100&fit=crop"
-           alt="A serene, quiet massage studio setting"
+           alt="A quiet, candle-lit massage room"
            class="w-full aspect-[5/4] object-cover photo-treatment" />
     </div>
     <div class="lg:col-span-6 lg:pl-6">
       <p class="field">The studio</p>
-      <h2 class="display-it text-[clamp(2.4rem,7vw,5.5rem)] leading-[0.98] mt-4 break-words">
+      <h2 class="display-it text-[clamp(2.4rem,7vw,5.5rem)] leading-[0.98] mt-4 break-words text-espresso">
         A private space in <em class="not-italic display">West Covina.</em>
       </h2>
-      <div class="hr-clay mt-7 max-w-[3rem]"></div>
-      <p class="mt-8 text-umber/80 text-[17px] leading-[1.75] max-w-md">
-        Sessions take place in Faith's private home studio in West Covina — a
-        calm, dedicated room set up for massage, not a busy spa floor. It's
-        appointment-only, so you'll never share the space with anyone else.
+      <div class="hr-coral mt-7 max-w-[3rem]"></div>
+      <p class="mt-8 text-espresso/80 text-[17px] leading-[1.75] max-w-md">
+        Every session happens in Faith's home studio in West Covina. It is a quiet
+        room she set up just for massage, not a spa floor with ten other tables
+        going at once. Because it is appointment only, you get the place to
+        yourself.
       </p>
-      <p class="mt-6 text-umber/65 text-sm leading-relaxed max-w-md">
-        The exact address is shared once your deposit confirms the time. Parking
-        and any arrival notes come with your confirmation.
+      <p class="mt-6 text-cocoa text-sm leading-relaxed max-w-md">
+        You will get the exact address and parking details after your deposit
+        goes through.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ============ Good to know — hours, deposit, policies ============ -->
-<section id="info" class="py-20 sm:py-32 border-t border-umber/12">
+<!-- ============ Good to know ============ -->
+<section id="info" class="py-20 sm:py-32 border-t border-espresso/12">
   <div class="max-w-6xl mx-auto px-6 sm:px-10">
     <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
       <div class="lg:col-span-5">
         <p class="field">Good to know</p>
-        <h2 class="display-it text-[clamp(2.8rem,6vw,4.5rem)] leading-[0.97] mt-4">
+        <h2 class="display-it text-[clamp(2.8rem,6vw,4.5rem)] leading-[0.97] mt-4 text-espresso">
           Before you <em class="not-italic display">book.</em>
         </h2>
-        <div class="hr-clay mt-6 max-w-[3rem]"></div>
-        <p class="mt-8 text-umber/75 leading-[1.7] max-w-md">
-          A few simple things keep every session smooth — so the hour stays about
-          you, not the logistics.
+        <div class="hr-coral mt-6 max-w-[3rem]"></div>
+        <p class="mt-8 text-espresso/75 leading-[1.7] max-w-md">
+          A few things worth knowing ahead of time so booking is easy.
         </p>
       </div>
 
       <div class="lg:col-span-7 grid sm:grid-cols-2 gap-x-12 gap-y-10">
         <div>
           <p class="field text-[10px]">Hours</p>
-          <p class="display text-2xl mt-2">Tue – Sat</p>
-          <p class="text-sm text-umber/65 leading-relaxed mt-2">
-            11 AM to 10 PM, by appointment. Before- or after-hours sessions are
-            available for a $30 fee.
+          <p class="display text-2xl mt-2 text-espresso">Tuesday to Saturday</p>
+          <p class="text-sm text-cocoa leading-relaxed mt-2">
+            Open 11am to 10pm, by appointment. Need a time outside that? Early or
+            late bookings are a $30 add-on.
           </p>
         </div>
         <div>
           <p class="field text-[10px]">Deposit</p>
-          <p class="display text-2xl mt-2">$20 to book</p>
-          <p class="text-sm text-umber/65 leading-relaxed mt-2">
-            A $20 deposit holds your slot ($30 for before/after-hours). It applies
-            toward your service and is non-refundable.
+          <p class="display text-2xl mt-2 text-espresso">$20 to book</p>
+          <p class="text-sm text-cocoa leading-relaxed mt-2">
+            A $20 deposit holds your spot and counts toward what you pay ($30 for
+            early or late bookings). Deposits are not refundable.
           </p>
         </div>
         <div>
-          <p class="field text-[10px]">Arrival</p>
-          <p class="display text-2xl mt-2">15-min grace</p>
-          <p class="text-sm text-umber/65 leading-relaxed mt-2">
-            Please be ready on time — there's a 15-minute grace period, after which
-            the appointment may be canceled.
+          <p class="field text-[10px]">Running late</p>
+          <p class="display text-2xl mt-2 text-espresso">15 minute grace</p>
+          <p class="text-sm text-cocoa leading-relaxed mt-2">
+            There is a 15 minute grace period if you are running behind. After
+            that the appointment may be canceled.
           </p>
         </div>
         <div>
           <p class="field text-[10px]">Respect</p>
-          <p class="display text-2xl mt-2">A safe space</p>
-          <p class="text-sm text-umber/65 leading-relaxed mt-2">
-            This is a strictly professional, therapeutic service. Inappropriate
-            conduct ends the session and bookings.
+          <p class="display text-2xl mt-2 text-espresso">A safe space</p>
+          <p class="text-sm text-cocoa leading-relaxed mt-2">
+            This is professional, therapeutic massage only. Anything inappropriate
+            ends the session, and you will not be able to book again.
           </p>
         </div>
       </div>
@@ -457,22 +442,21 @@
   </div>
 </section>
 
-<!-- ============ Book CTA ============ -->
-<section id="book" class="py-24 sm:py-36 bg-boneDk/55">
-  <div class="max-w-4xl mx-auto px-6 sm:px-10 text-center">
-    <p class="field">Book a session</p>
-    <h2 class="mt-5 leading-[0.96]">
-      <span class="display-it block text-[clamp(3.5rem,10vw,8rem)]">An hour</span>
-      <span class="display block text-[clamp(3.5rem,10vw,8rem)] text-clayDk">to yourself.</span>
+<!-- ============ Book CTA · sunset gradient ============ -->
+<section id="book" class="py-24 sm:py-36 bg-gradient-to-br from-coral via-coralDk to-rose text-sand">
+  <div class="max-w-3xl mx-auto px-6 sm:px-10 text-center">
+    <p class="script text-4xl sm:text-5xl text-sand/90 leading-none">Oceanas Touch</p>
+    <h2 class="display-it text-[clamp(3rem,8vw,6rem)] leading-[1.0] mt-4">
+      Ready when you are.
     </h2>
-    <p class="mt-9 text-umber/75 text-lg max-w-xl mx-auto leading-relaxed">
-      Send a message on Instagram with a date and what you're working with.
-      A $20 deposit confirms your time and the studio address — then just come
-      and unwind.
+    <p class="mt-7 text-sand/85 text-lg max-w-xl mx-auto leading-relaxed">
+      Send Faith a message on Instagram with a date and what you are after. Once
+      the $20 deposit is in, you will get your time and the address. After that,
+      all you have to do is show up.
     </p>
-    <div class="mt-11 flex flex-wrap justify-center gap-4">
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
       <a href="https://www.instagram.com/oceanas.touch/" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-3 bg-umber text-bone uppercase tracking-[0.18em] text-xs font-semibold px-8 py-4 hover:bg-clay transition">
+         class="inline-flex items-center gap-3 bg-sand text-rose uppercase tracking-[0.16em] text-xs font-semibold px-8 py-4 hover:bg-white transition">
         Message @oceanas.touch
       </a>
     </div>
@@ -480,38 +464,38 @@
 </section>
 
 <!-- ============ Footer ============ -->
-<footer class="border-t border-umber/12 bg-bone">
+<footer class="border-t border-espresso/12 bg-cream">
   <div class="max-w-6xl mx-auto px-6 sm:px-10 py-12 grid md:grid-cols-3 gap-10 text-sm">
     <div>
       <div class="flex items-center gap-3">
-        <img src="logo.jpg" alt="Oceanas Touch logo" class="h-10 w-10 rounded-full object-cover ring-1 ring-umber/10" />
-        <p class="display-it text-2xl">Oceanas Touch</p>
+        <img src="logo.jpg" alt="Oceanas Touch logo" class="h-11 w-11 rounded-full object-cover ring-1 ring-coral/30" />
+        <p class="script text-3xl text-espresso leading-none pt-1">Oceanas Touch</p>
       </div>
-      <p class="mt-3 text-umber/60 font-mono text-xs uppercase tracking-[0.22em]">Private home studio · West Covina, CA</p>
-      <p class="mt-2 text-umber/55 font-mono text-[11px] uppercase tracking-[0.22em]">Relax · Restore · Rejuvenate</p>
-      <p class="mt-3 text-umber/85 hover:text-clay transition">
+      <p class="mt-3 text-cocoa text-xs font-semibold uppercase tracking-[0.2em]">Home massage studio · West Covina, CA</p>
+      <p class="mt-2 text-coralDk text-[11px] font-semibold uppercase tracking-[0.2em]">Relax · Restore · Rejuvenate</p>
+      <p class="mt-3 text-rose hover:text-coralDk transition">
         <a href="https://www.instagram.com/oceanas.touch/" target="_blank" rel="noopener">@oceanas.touch ↗</a>
       </p>
     </div>
     <div>
       <p class="field">Sections</p>
-      <ul class="space-y-2 mt-3 text-umber/70">
-        <li><a class="hover:text-clayDk" href="#about">About Faith</a></li>
-        <li><a class="hover:text-clayDk" href="#treatments">Pricing</a></li>
-        <li><a class="hover:text-clayDk" href="#how">How it works</a></li>
-        <li><a class="hover:text-clayDk" href="#info">Good to know</a></li>
-        <li><a class="hover:text-clayDk" href="#book">Book</a></li>
+      <ul class="space-y-2 mt-3 text-cocoa">
+        <li><a class="hover:text-rose" href="#about">About Faith</a></li>
+        <li><a class="hover:text-rose" href="#treatments">Pricing</a></li>
+        <li><a class="hover:text-rose" href="#how">How it works</a></li>
+        <li><a class="hover:text-rose" href="#info">Good to know</a></li>
+        <li><a class="hover:text-rose" href="#book">Book</a></li>
       </ul>
     </div>
     <div class="md:text-right">
       <p class="field">Preview by</p>
-      <p class="display-it text-xl mt-2">WestCo App Studio</p>
-      <p><a class="text-umber/65 hover:text-clayDk transition font-mono text-xs uppercase tracking-[0.22em]" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a></p>
-      <p><a class="text-umber/65 hover:text-clayDk transition font-mono text-xs uppercase tracking-[0.22em]" href="tel:+12135229136">(213) 522-9136</a></p>
+      <p class="display-it text-xl mt-2 text-espresso">WestCo App Studio</p>
+      <p><a class="text-cocoa hover:text-rose transition text-xs font-semibold uppercase tracking-[0.2em]" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a></p>
+      <p><a class="text-cocoa hover:text-rose transition text-xs font-semibold uppercase tracking-[0.2em]" href="tel:+12135229136">(213) 522-9136</a></p>
     </div>
   </div>
-  <div class="border-t border-umber/12">
-    <div class="max-w-6xl mx-auto px-6 sm:px-10 py-5 text-[11px] font-mono uppercase tracking-[0.22em] text-umber/45 flex flex-wrap items-center justify-between gap-3">
+  <div class="border-t border-espresso/12">
+    <div class="max-w-6xl mx-auto px-6 sm:px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] text-cocoa/70 flex flex-wrap items-center justify-between gap-3">
       <span>© 2026 Oceanas Touch</span>
       <span>Preview build · not the official site</span>
     </div>
