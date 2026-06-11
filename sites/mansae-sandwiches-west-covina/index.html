@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Mansae Korean Egg Toast Sandwiches · West Covina, CA</title>
+<meta name="description" content="Korean egg toast sandwiches off the griddle. Thick cut milk bread, soft egg, five fillings, sauces over everything. Catch the tent at SGV night markets. Storefront coming to West Covina." />
+<meta name="robots" content="noindex,nofollow" />
+
+<meta property="og:title" content="Mansae · Korean Egg Toast Sandwiches" />
+<meta property="og:description" content="Mansae means hooray in Korean. One loaded egg toast and you will get it. Storefront coming to West Covina." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://castanedanetworks.github.io/westco-outreach-sites/sites/mansae-sandwiches-west-covina/img/hero-bulgogi-hand.jpg" />
+
+<link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gabarito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans:    ['Gabarito', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          display: ['"Black Han Sans"', 'Impact', 'sans-serif'],
+        },
+        colors: {
+          navy:    '#1d2f7e',
+          navyDk:  '#13205a',
+          inkNavy: '#16244f',
+          gold:    '#ffc426',
+          goldDp:  '#f0a818',
+          peach:   '#f09c55',
+          peachLt: '#fbd9a8',
+          cream:   '#fff6e1',
+          foam:    '#fffdf6',
+          bacon:   '#e2504a',
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+  .display-tight { letter-spacing: 0.01em; line-height: 0.92; }
+
+  /* grid pattern lifted from their takeout boxes */
+  .boxgrid {
+    background-image:
+      linear-gradient(rgba(29,47,126,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(29,47,126,0.08) 1px, transparent 1px);
+    background-size: 26px 26px;
+  }
+  .boxgrid-navy {
+    background-image:
+      linear-gradient(rgba(255,196,38,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,196,38,0.07) 1px, transparent 1px);
+    background-size: 26px 26px;
+  }
+
+  /* awning scallop under the header */
+  .awning {
+    height: 14px;
+    background-image: radial-gradient(circle at 50% 0, #1d2f7e 9px, transparent 10px);
+    background-size: 24px 14px;
+    background-repeat: repeat-x;
+  }
+
+  /* marquee ticker */
+  .ticker-track { display: inline-flex; white-space: nowrap; animation: ticker 26s linear infinite; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* sticker / polaroid photo frames */
+  .sticker {
+    border: 6px solid #fffdf6;
+    box-shadow: 10px 10px 0 rgba(29,47,126,0.18);
+    transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+  }
+  .sticker:hover { transform: rotate(0deg) scale(1.015); }
+
+  .btn-chunk {
+    box-shadow: 5px 5px 0 #13205a;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-chunk:hover { transform: translate(2px,2px); box-shadow: 2px 2px 0 #13205a; }
+  .btn-chunk-gold { box-shadow: 5px 5px 0 #b07b00; }
+  .btn-chunk-gold:hover { transform: translate(2px,2px); box-shadow: 2px 2px 0 #b07b00; }
+
+  /* scroll reveals */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .ticker-track { animation: none; }
+  }
+
+  /* hero headline offset print look */
+  .offset-cream { color: #fff6e1; text-shadow: 4px 4px 0 #1d2f7e; }
+
+  .menu-row { border-bottom: 2px dashed rgba(29,47,126,0.25); }
+  .menu-row:last-child { border-bottom: 0; }
+</style>
+</head>
+
+<body class="font-sans bg-cream text-inkNavy">
+
+<!-- ticker -->
+<div class="bg-navy text-gold overflow-hidden py-2" aria-hidden="true">
+  <div class="ticker-track font-display text-[13px] sm:text-sm tracking-[0.18em]">
+    <span class="pr-8">STOREFRONT COMING SOON TO WEST COVINA &nbsp;★&nbsp; 만세 &nbsp;★&nbsp; KOREAN EGG TOAST SANDWICHES &nbsp;★&nbsp; POP-UP DATES DROP ON INSTAGRAM &nbsp;★&nbsp; 만세 &nbsp;★&nbsp;</span>
+    <span class="pr-8">STOREFRONT COMING SOON TO WEST COVINA &nbsp;★&nbsp; 만세 &nbsp;★&nbsp; KOREAN EGG TOAST SANDWICHES &nbsp;★&nbsp; POP-UP DATES DROP ON INSTAGRAM &nbsp;★&nbsp; 만세 &nbsp;★&nbsp;</span>
+  </div>
+</div>
+
+<!-- header -->
+<header class="bg-cream sticky top-0 z-50">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5 min-w-0">
+      <img src="img/logo.jpg" alt="Mansae logo" class="w-10 h-10 rounded-full border-2 border-navy shrink-0" />
+      <span class="font-display text-navy text-2xl leading-none pt-0.5">MANSAE</span>
+      <span class="hidden sm:inline font-display text-bacon text-lg leading-none pt-1">만세</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 font-semibold text-[15px] text-navy">
+      <a class="hover:text-bacon transition" href="#menu">Menu</a>
+      <a class="hover:text-bacon transition" href="#story">Story</a>
+      <a class="hover:text-bacon transition" href="#findus">Find us</a>
+    </nav>
+    <a href="https://www.instagram.com/mansae_sandwiches/" target="_blank" rel="noopener"
+       class="btn-chunk bg-navy text-gold font-display text-sm sm:text-base px-4 sm:px-5 py-2 rounded-full shrink-0">
+      <span class="md:hidden">FOLLOW</span><span class="hidden md:inline">@MANSAE_SANDWICHES</span>
+    </a>
+  </div>
+  <div class="awning"></div>
+</header>
+
+<!-- hero -->
+<section id="top" class="bg-gold boxgrid relative overflow-hidden">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 pt-10 sm:pt-14 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-6 items-center">
+
+    <div class="lg:col-span-7 relative z-10">
+      <p class="reveal inline-flex items-center gap-2 bg-foam border-2 border-navy rounded-full px-4 py-1.5 font-bold text-navy text-[12px] sm:text-[13px] tracking-[0.14em] uppercase">
+        West Covina · by way of the 626
+      </p>
+      <h1 class="reveal font-display display-tight text-navy mt-5 text-[13.2vw] sm:text-7xl lg:text-[88px]">
+        KOREAN<br />
+        <span class="offset-cream">EGG TOAST</span><br />
+        SANDWICHES
+      </h1>
+      <p class="reveal mt-6 max-w-[46ch] text-[17px] sm:text-lg font-medium text-inkNavy/90">
+        Mansae means hooray in Korean. It is the correct thing to yell when a
+        loaded egg toast lands in your hands, still hot off the griddle.
+      </p>
+      <div class="reveal mt-8 flex flex-wrap items-center gap-4">
+        <a href="#menu" class="btn-chunk bg-navy text-gold font-display text-lg px-7 py-3 rounded-full">SEE THE MENU</a>
+        <a href="#findus" class="font-bold text-navy underline decoration-2 underline-offset-4 hover:text-bacon transition">Where to find the tent</a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 relative">
+      <figure class="reveal sticker rotate-[-2.5deg] bg-foam max-w-[420px] mx-auto">
+        <img src="img/hero-bulgogi-hand.jpg" alt="Bulgogi Korean egg toast sandwich held up at a night market" class="w-full h-auto block" loading="eager" />
+      </figure>
+      <img src="img/logo.jpg" alt="" aria-hidden="true"
+           class="reveal absolute -bottom-5 left-2 sm:left-6 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-foam shadow-lg rotate-[8deg]" />
+      <p class="reveal absolute -top-3 right-0 sm:right-3 bg-bacon text-foam font-display text-[11px] sm:text-sm px-3 sm:px-4 py-2 rounded-full rotate-[4deg] shadow-md">
+        <span class="sm:hidden">626 NIGHT MARKET ★</span><span class="hidden sm:inline">CATCH US AT 626 NIGHT MARKET</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- zigzag edge into cream -->
+  <svg class="block w-full text-cream" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true" style="margin-bottom:-1px">
+    <path d="M0 28 L0 14 L25 0 L50 14 L75 0 L100 14 L125 0 L150 14 L175 0 L200 14 L225 0 L250 14 L275 0 L300 14 L325 0 L350 14 L375 0 L400 14 L425 0 L450 14 L475 0 L500 14 L525 0 L550 14 L575 0 L600 14 L625 0 L650 14 L675 0 L700 14 L725 0 L750 14 L775 0 L800 14 L825 0 L850 14 L875 0 L900 14 L925 0 L950 14 L975 0 L1000 14 L1025 0 L1050 14 L1075 0 L1100 14 L1125 0 L1150 14 L1175 0 L1200 14 L1200 28 Z" fill="currentColor"/>
+  </svg>
+</section>
+
+<!-- menu -->
+<section id="menu" class="bg-cream boxgrid relative">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+
+    <div class="reveal max-w-[60ch]">
+      <p class="font-display text-bacon text-lg tracking-[0.2em]">THE MENU · 만세</p>
+      <h2 class="font-display display-tight text-navy text-5xl sm:text-6xl mt-3">PICK YOUR FILLING</h2>
+      <p class="mt-5 text-[17px] font-medium text-inkNavy/90">
+        Every box starts the same way. Thick cut milk bread toasted in butter on
+        the flat top, a pillow of soft egg, then sweet condensed milk and spicy
+        mayo dripped over everything. The filling is the only decision you have
+        to make.
+      </p>
+    </div>
+
+    <div class="mt-10 grid lg:grid-cols-12 gap-10 items-start">
+
+      <ul class="lg:col-span-7 bg-foam border-2 border-navy rounded-2xl px-5 sm:px-8 py-2 shadow-[8px_8px_0_rgba(29,47,126,0.15)]">
+        <li class="menu-row reveal py-5 flex items-baseline gap-4">
+          <span class="font-display text-bacon text-lg shrink-0">01</span>
+          <div>
+            <h3 class="font-display text-navy text-2xl sm:text-[28px]">BEEF BULGOGI</h3>
+            <p class="mt-1 text-[15px] sm:text-base text-inkNavy/80 font-medium">Sweet soy beef seared on the flat top. The one in every photo on our feed.</p>
+          </div>
+        </li>
+        <li class="menu-row reveal py-5 flex items-baseline gap-4">
+          <span class="font-display text-bacon text-lg shrink-0">02</span>
+          <div>
+            <h3 class="font-display text-navy text-2xl sm:text-[28px]">PORK BELLY + KIMCHI</h3>
+            <p class="mt-1 text-[15px] sm:text-base text-inkNavy/80 font-medium">Crispy pork belly stuffed with kimchi that gets its own time on the griddle.</p>
+          </div>
+        </li>
+        <li class="menu-row reveal py-5 flex items-baseline gap-4">
+          <span class="font-display text-bacon text-lg shrink-0">03</span>
+          <div>
+            <h3 class="font-display text-navy text-2xl sm:text-[28px]">SPICY GRILLED CHICKEN</h3>
+            <p class="mt-1 text-[15px] sm:text-base text-inkNavy/80 font-medium">Glazed, charred and properly spicy. If you are a heat person, this is yours.</p>
+          </div>
+        </li>
+        <li class="menu-row reveal py-5 flex items-baseline gap-4">
+          <span class="font-display text-bacon text-lg shrink-0">04</span>
+          <div>
+            <h3 class="font-display text-navy text-2xl sm:text-[28px]">SRIRACHA BACON</h3>
+            <p class="mt-1 text-[15px] sm:text-base text-inkNavy/80 font-medium">Smoky bacon with sriracha worked in. Sweet, salty and a little mean.</p>
+          </div>
+        </li>
+        <li class="menu-row reveal py-5 flex items-baseline gap-4">
+          <span class="font-display text-bacon text-lg shrink-0">05</span>
+          <div>
+            <h3 class="font-display text-navy text-2xl sm:text-[28px]">ORIGINAL HAM</h3>
+            <p class="mt-1 text-[15px] sm:text-base text-inkNavy/80 font-medium">The classic Korean street toast that started it all. Do not sleep on the simple one.</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="lg:col-span-5 grid grid-cols-2 gap-5 sm:gap-7 lg:pt-4">
+        <figure class="reveal sticker rotate-[2deg] bg-foam">
+          <img src="img/bulgogi-box.jpg" alt="Bulgogi egg toast in a Mansae grid-pattern box" class="w-full h-auto block" loading="lazy" />
+        </figure>
+        <figure class="reveal sticker rotate-[-2deg] bg-foam mt-6">
+          <img src="img/pork-belly-kimchi.jpg" alt="Pork belly and kimchi sandwich with spicy mayo and condensed milk drizzle" class="w-full h-auto block" loading="lazy" />
+        </figure>
+        <figure class="reveal sticker rotate-[-1.5deg] bg-foam col-span-2 max-w-[340px] mx-auto">
+          <img src="img/duo-orange.jpg" alt="Two Mansae egg toast sandwiches, one topped with a fried egg" class="w-full h-auto block" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+
+    <!-- sides + drink -->
+    <div class="mt-16 sm:mt-20">
+      <h2 class="reveal font-display display-tight text-navy text-4xl sm:text-5xl">NOT JUST SANDWICHES</h2>
+      <div class="mt-8 grid sm:grid-cols-2 gap-6 max-w-[860px]">
+        <article class="reveal bg-navy text-cream rounded-2xl overflow-hidden border-2 border-navy shadow-[8px_8px_0_rgba(29,47,126,0.15)]">
+          <img src="img/corn-cheese-fries.jpg" alt="Fries loaded with melted corn cheese and beef bulgogi" class="w-full h-56 sm:h-64 object-cover" loading="lazy" />
+          <div class="p-5 sm:p-6">
+            <h3 class="font-display text-gold text-2xl">CORN CHEESE BULGOGI FRIES</h3>
+            <p class="mt-2 text-[15px] text-cream/85 font-medium">Fries buried under melted corn cheese and a pile of bulgogi. A side dish that thinks it is the main event.</p>
+          </div>
+        </article>
+        <article class="reveal bg-navy text-cream rounded-2xl overflow-hidden border-2 border-navy shadow-[8px_8px_0_rgba(29,47,126,0.15)]">
+          <img src="img/sea-salt-tea.jpg" alt="Green iced tea topped with sea salt cream foam" class="w-full h-56 sm:h-64 object-cover" loading="lazy" />
+          <div class="p-5 sm:p-6">
+            <h3 class="font-display text-gold text-2xl">SEA SALT FOAM ICED TEA</h3>
+            <p class="mt-2 text-[15px] text-cream/85 font-medium">Green iced tea under a cap of sea salt cream foam. Sweet, a little salty and built for SGV heat.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- story -->
+<section id="story" class="bg-peach relative overflow-hidden">
+  <p class="absolute font-display text-foam/20 select-none leading-none text-[34vw] sm:text-[300px] -right-6 -top-8" aria-hidden="true">만세</p>
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-12 gap-10 items-center relative z-10">
+
+    <div class="lg:col-span-6">
+      <p class="reveal font-display text-navy text-lg tracking-[0.2em]">THE STORY</p>
+      <h2 class="reveal font-display display-tight text-navy text-5xl sm:text-6xl mt-3">FROM A TENT IN THE 626</h2>
+      <div class="reveal mt-6 space-y-4 text-[17px] font-medium text-inkNavy max-w-[52ch]">
+        <p>
+          Mansae started as a tent, a flat top griddle and a stack of milk bread
+          at San Gabriel Valley night markets. The sandwich is our take on
+          gilgeori toast, the egg toast sold on street corners all over Korea,
+          built bigger and messier the way a night market deserves.
+        </p>
+        <p>
+          If you have stood in our line at 626 Night Market, thank you for real.
+          If you are new, start with the bulgogi and grab napkins. More than one.
+        </p>
+      </div>
+    </div>
+
+    <div class="lg:col-span-6 grid grid-cols-2 gap-5 sm:gap-7 items-start">
+      <figure class="reveal sticker rotate-[2deg] bg-foam">
+        <img src="img/chef-griddle.jpg" alt="The Mansae team boxing up a sandwich on the griddle at a night market" class="w-full h-auto block" loading="lazy" />
+      </figure>
+      <figure class="reveal sticker rotate-[-2.5deg] bg-foam mt-8">
+        <img src="img/toast-griddle.jpg" alt="Thick slices of milk bread toasting in butter on the flat top" class="w-full h-auto block" loading="lazy" />
+      </figure>
+      <figure class="reveal sticker rotate-[1.5deg] bg-foam col-span-2 max-w-[300px] mx-auto -mt-2">
+        <img src="img/booth-banner.jpg" alt="The yellow Mansae booth banner reading Korean Egg Toast Sandwiches" class="w-full h-auto block" loading="lazy" />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- find us -->
+<section id="findus" class="bg-navy boxgrid-navy text-cream relative">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <p class="reveal font-display text-gold text-lg tracking-[0.2em]">FIND US · 만세</p>
+    <h2 class="reveal font-display display-tight text-gold text-5xl sm:text-7xl mt-3 max-w-[14ch]">WEST COVINA, WE ARE NEXT</h2>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-6 max-w-[980px]">
+      <div class="reveal bg-foam text-inkNavy rounded-2xl border-2 border-gold p-6 sm:p-8 rotate-[-0.5deg]">
+        <p class="font-display text-bacon text-base tracking-[0.18em]">THE STOREFRONT</p>
+        <p class="font-display text-navy text-3xl mt-3 leading-tight">947 S Glendora Ave<br />West Covina, CA 91790</p>
+        <p class="mt-4 text-[15px] font-medium text-inkNavy/85">
+          The tent was never the final form. We are working on a permanent home
+          right in the middle of the SGV that raised us. Opening day news drops
+          on Instagram first.
+        </p>
+        <a class="mt-5 inline-block font-bold text-navy underline decoration-2 underline-offset-4 hover:text-bacon transition"
+           href="https://maps.google.com/?q=947+S+Glendora+Ave,+West+Covina,+CA+91790" target="_blank" rel="noopener">
+          Open in Google Maps
+        </a>
+      </div>
+
+      <div class="reveal bg-foam text-inkNavy rounded-2xl border-2 border-gold p-6 sm:p-8 rotate-[0.5deg]">
+        <p class="font-display text-bacon text-base tracking-[0.18em]">UNTIL THEN, THE TENT</p>
+        <p class="font-display text-navy text-3xl mt-3 leading-tight">Night markets +<br />pop-ups around the SGV</p>
+        <p class="mt-4 text-[15px] font-medium text-inkNavy/85">
+          Pop-up dates and night market schedules go up on our story first.
+          Follow along so you know where the griddle is this weekend.
+        </p>
+        <a class="btn-chunk-gold mt-5 inline-block bg-gold text-navy font-display text-lg px-6 py-2.5 rounded-full"
+           href="https://www.instagram.com/mansae_sandwiches/" target="_blank" rel="noopener">
+          FOLLOW @MANSAE_SANDWICHES
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="bg-navyDk text-cream">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="img/logo.jpg" alt="" class="w-10 h-10 rounded-full border-2 border-gold" />
+      <div>
+        <p class="font-display text-gold text-xl leading-none">MANSAE</p>
+        <p class="text-[13px] text-cream/70 mt-1">Korean Egg Toast Sandwiches · West Covina, CA</p>
+      </div>
+    </div>
+    <div class="text-[13px] text-cream/70 sm:text-right">
+      <p>Preview by <span class="text-cream font-semibold">WestCo App Studio</span></p>
+      <p class="mt-1">
+        <a class="underline underline-offset-2 hover:text-gold transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
+        · <a class="underline underline-offset-2 hover:text-gold transition" href="tel:+12135229136">(213) 522-9136</a>
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-cream/10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-2 text-[10px] uppercase tracking-[0.2em] text-cream/45">
+      <span>© 2026 Mansae</span>
+      <span>만세 · Hooray</span>
+      <span>Website preview · not the official site</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<!-- All food, booth and team photos: @mansae_sandwiches on Instagram. Logo hosted locally. -->
+
+</body>
+</html>
