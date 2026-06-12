@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Golden Tadka · Indian Cuisine · West Covina, CA</title>
+<meta name="description" content="Golden Tadka, a new Indian kitchen now in soft launch at 360 S Glendora Ave, West Covina. Chettinad and Malabar curries, biryani, tandoor classics. Order online for pickup." />
+<meta name="robots" content="noindex,nofollow" />
+
+<meta property="og:title" content="Golden Tadka · Indian Cuisine · West Covina" />
+<meta property="og:description" content="Now in soft launch on South Glendora Avenue. The tandoor is already lit." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" type="image/png" href="img/kadai.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans:    ['Jost', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          display: ['"Playfair Display"', 'Georgia', 'serif'],
+          script:  ['"Pinyon Script"', 'cursive'],
+        },
+        colors: {
+          velvet:   '#43101d',
+          velvetDk: '#2c0a12',
+          velvetLt: '#5a1a2a',
+          gold:     '#c9a35c',
+          goldHi:   '#e3c98f',
+          goldDk:   '#97742f',
+          paper:    '#f2ecdd',
+          paper2:   '#faf6ec',
+          menuRed:  '#a31621',
+          inkM:     '#38141d',
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+  .caps { letter-spacing: 0.22em; }
+
+  /* velvet texture */
+  .velvet-bg {
+    background-color: #43101d;
+    background-image:
+      radial-gradient(1200px 600px at 50% -10%, rgba(201,163,92,0.07), transparent 60%),
+      radial-gradient(900px 500px at 100% 110%, rgba(44,10,18,0.8), transparent 60%);
+  }
+  .paper-bg {
+    background-color: #f2ecdd;
+    background-image:
+      radial-gradient(800px 400px at 85% 0%, rgba(163,22,33,0.05), transparent 60%),
+      repeating-linear-gradient(92deg, rgba(56,20,29,0.015) 0 2px, transparent 2px 6px);
+  }
+
+  .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #c9a35c 25%, #e3c98f 50%, #c9a35c 75%, transparent); }
+
+  .frame-gold { border: 1px solid rgba(201,163,92,0.55); outline: 1px solid rgba(201,163,92,0.2); outline-offset: 6px; }
+
+  .btn-lux { transition: background .25s ease, color .25s ease, letter-spacing .25s ease; }
+  .btn-lux:hover { letter-spacing: 0.28em; }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+
+<body class="font-sans bg-velvet text-paper">
+
+<!-- top bar -->
+<div class="bg-velvetDk text-gold text-center px-4 py-2.5 text-[11px] sm:text-[12px] font-medium caps uppercase">
+  Now in soft launch · 360 S Glendora Ave, West Covina
+</div>
+
+<!-- header -->
+<header class="velvet-bg sticky top-0 z-50 border-b border-gold/25 backdrop-blur">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5 min-w-0">
+      <img src="img/kadai.png" alt="" class="h-8 w-auto shrink-0" />
+      <span class="font-display font-bold text-xl sm:text-2xl leading-none text-goldHi whitespace-nowrap">Golden Tadka</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium caps uppercase text-paper/70">
+      <a class="hover:text-goldHi transition" href="#menu">Menu</a>
+      <a class="hover:text-goldHi transition" href="#story">Story</a>
+      <a class="hover:text-goldHi transition" href="#visit">Visit</a>
+    </nav>
+    <a href="https://www.goldentadka.com/s/order" target="_blank" rel="noopener"
+       class="btn-lux bg-gold text-velvetDk hover:bg-goldHi font-medium caps uppercase text-[12px] sm:text-[13px] px-5 py-2.5 shrink-0">
+      Order online
+    </a>
+  </div>
+</header>
+
+<!-- hero -->
+<section id="top" class="relative overflow-hidden">
+  <img src="img/interior.jpg" alt="The Golden Tadka dining room at night, candlelit tables in front of a glowing bar" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <div class="absolute inset-0 bg-gradient-to-t from-velvetDk via-velvetDk/60 to-velvetDk/30"></div>
+  <div class="relative max-w-[1140px] mx-auto px-4 sm:px-6 pt-24 sm:pt-36 pb-20 sm:pb-28 text-center">
+    <p class="reveal font-script text-goldHi text-5xl sm:text-6xl leading-none drop-shadow">Opening Soon</p>
+    <h1 class="reveal font-display font-bold text-paper leading-[1.1] mt-6 text-[11vw] sm:text-6xl lg:text-[68px]">
+      The tandoor is<br />already lit.
+    </h1>
+    <p class="reveal mt-6 text-paper/85 text-[16px] sm:text-lg font-light max-w-[50ch] mx-auto">
+      Golden Tadka is a new Indian kitchen in soft launch on South Glendora
+      Avenue in West Covina. Dinner is quiet for now. It will not stay that way.
+    </p>
+    <div class="reveal mt-9 flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+      <a href="https://www.goldentadka.com/s/order" target="_blank" rel="noopener"
+         class="btn-lux bg-gold text-velvetDk hover:bg-goldHi font-medium caps uppercase text-[13px] px-8 py-3.5">
+        Order online
+      </a>
+      <a href="#menu"
+         class="btn-lux border border-gold/70 text-goldHi hover:bg-gold/10 font-medium caps uppercase text-[13px] px-8 py-3.5">
+        Soft launch menu
+      </a>
+    </div>
+    <div class="reveal mt-12 max-w-[300px] mx-auto">
+      <div class="gold-rule"></div>
+      <p class="mt-4 text-[11px] caps uppercase text-gold/90">Est. 2026 · West Covina, California</p>
+    </div>
+  </div>
+</section>
+
+<!-- menu -->
+<section id="menu" class="paper-bg text-inkM">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
+    <p class="reveal font-script text-menuRed/80 text-4xl">the soft launch</p>
+    <h2 class="reveal font-display italic font-extrabold text-menuRed leading-none mt-2 text-[22vw] sm:text-[110px]">MENU</h2>
+    <p class="reveal mt-5 text-inkM/75 text-[15px] font-normal max-w-[46ch] mx-auto">
+      First names on the pass while the kitchen settles in. The full menu, with
+      prices, lives on the ordering page. Subject to change without apology.
+    </p>
+
+    <div class="mt-12 grid sm:grid-cols-2 gap-x-12 gap-y-12 max-w-[820px] mx-auto text-center">
+      <div class="reveal">
+        <h3 class="font-display font-bold text-xl tracking-wide">To Begin</h3>
+        <div class="gold-rule mt-3 mb-5 max-w-[140px] mx-auto"></div>
+        <ul class="space-y-2.5 text-[14px] caps uppercase text-menuRed font-medium">
+          <li>Pani Puri</li>
+          <li>Kale Bhalla Chaat</li>
+          <li>Chicken Tikka</li>
+          <li>Paneer Tikka</li>
+          <li>Tandoori Chicken</li>
+          <li>Gun Powder Shrimp</li>
+          <li>Paneer Chilli</li>
+          <li>Manchow Soup</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3 class="font-display font-bold text-xl tracking-wide">Mains</h3>
+        <div class="gold-rule mt-3 mb-5 max-w-[140px] mx-auto"></div>
+        <ul class="space-y-2.5 text-[14px] caps uppercase text-menuRed font-medium">
+          <li>Lamb Shank Rogan Josh</li>
+          <li>Chicken Chettinad</li>
+          <li>Malabar Chicken Curry</li>
+          <li>Butter Chicken</li>
+          <li>Dal Makhni</li>
+          <li>Channa Masala</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3 class="font-display font-bold text-xl tracking-wide">Biryani, Rice + Breads</h3>
+        <div class="gold-rule mt-3 mb-5 max-w-[140px] mx-auto"></div>
+        <ul class="space-y-2.5 text-[14px] caps uppercase text-menuRed font-medium">
+          <li>Chicken Biryani</li>
+          <li>Vegetable Biryani</li>
+          <li>Jeera Rice</li>
+          <li>Butter Naan</li>
+          <li>Kerala Paratha</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3 class="font-display font-bold text-xl tracking-wide">To Finish</h3>
+        <div class="gold-rule mt-3 mb-5 max-w-[140px] mx-auto"></div>
+        <ul class="space-y-2.5 text-[14px] caps uppercase text-menuRed font-medium">
+          <li>Rose Rasmalai</li>
+          <li>Gulab Jamun Parfait</li>
+        </ul>
+      </div>
+    </div>
+
+    <img src="img/pot-sketch.png" alt="" aria-hidden="true" class="reveal mx-auto mt-14 w-[260px] sm:w-[320px] opacity-80" loading="lazy" />
+
+    <a href="https://www.goldentadka.com/s/order" target="_blank" rel="noopener"
+       class="reveal btn-lux mt-8 inline-block bg-menuRed text-paper2 hover:bg-inkM font-medium caps uppercase text-[13px] px-8 py-3.5">
+      Order for pickup
+    </a>
+  </div>
+</section>
+
+<!-- story / soft launch -->
+<section id="story" class="velvet-bg">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-12 gap-12 items-center">
+    <figure class="reveal lg:col-span-5 max-w-[380px] mx-auto lg:mx-0 w-full">
+      <div class="frame-gold p-2">
+        <img src="img/soft-launch.jpg" alt="Tandoori chicken on a skewer over glowing coals, captioned Soft Launch" class="w-full h-auto block" loading="lazy" />
+      </div>
+    </figure>
+    <div class="lg:col-span-7 text-center lg:text-left">
+      <p class="reveal font-script text-goldHi text-4xl sm:text-5xl">From the fire</p>
+      <h2 class="reveal font-display font-bold text-3xl sm:text-4xl mt-4 text-paper leading-tight">
+        A SOFT LAUNCH IS A KITCHEN FINDING ITS RHYTHM
+      </h2>
+      <div class="reveal mt-6 space-y-4 text-paper/80 text-[16px] font-light max-w-[54ch] mx-auto lg:mx-0">
+        <p>
+          The menu reaches from Chettinad and Malabar curries in the south to
+          dal makhni and butter chicken in the north, with a tandoor running
+          hot in between. The dining room is dim, the bar glows, and the lamps
+          on the tables are gold for a reason.
+        </p>
+        <p>
+          Come during the soft launch and you can say you were early. The
+          grand opening date lands on Instagram first.
+        </p>
+      </div>
+      <a href="https://www.instagram.com/goldentadkaa/" target="_blank" rel="noopener"
+         class="reveal btn-lux mt-8 inline-block border border-gold/70 text-goldHi hover:bg-gold/10 font-medium caps uppercase text-[13px] px-8 py-3.5">
+        Follow @goldentadkaa
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- visit -->
+<section id="visit" class="paper-bg text-inkM">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <figure class="reveal max-w-[440px] mx-auto lg:mx-0 w-full">
+      <img src="img/storefront-sketch.png" alt="Hand-sketched illustration of the Golden Tadka storefront" class="w-full h-auto" loading="lazy" />
+    </figure>
+    <div class="text-center lg:text-left">
+      <p class="reveal font-script text-menuRed/80 text-4xl">You're invited</p>
+      <h2 class="reveal font-display font-bold text-3xl sm:text-4xl mt-3">FIND US ON GLENDORA AVENUE</h2>
+      <p class="reveal mt-5 text-inkM/80 text-[16px] font-normal max-w-[46ch] mx-auto lg:mx-0">
+        360 S Glendora Ave, West Covina, CA 91790. Soft launch hours and the
+        grand opening date are announced on Instagram first.
+      </p>
+      <div class="reveal mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+        <a href="https://www.google.com/maps/dir/Current+Location/360+S+Glendora+Ave,+West+Covina,+CA+91790" target="_blank" rel="noopener"
+           class="btn-lux bg-inkM text-paper2 hover:bg-menuRed font-medium caps uppercase text-[13px] px-7 py-3">
+          Get directions
+        </a>
+        <a href="https://www.goldentadka.com/s/order" target="_blank" rel="noopener"
+           class="inline-block py-2 font-medium text-inkM underline decoration-menuRed decoration-2 underline-offset-4 hover:text-menuRed transition">
+          Order online for pickup
+        </a>
+      </div>
+      <img src="img/kadai.png" alt="" aria-hidden="true" class="reveal mt-10 h-12 mx-auto lg:mx-0" />
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="bg-velvetDk text-paper">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="img/kadai.png" alt="" class="h-9 w-auto" />
+      <p class="text-[13px] text-paper/60 font-light">Indian cuisine · est. 2026<br />West Covina, California</p>
+    </div>
+    <div class="text-[13px] text-paper/60 sm:text-right font-light">
+      <p>Preview by <span class="text-paper font-medium">WestCo App Studio</span></p>
+      <p class="mt-1">
+        <a class="inline-block py-1.5 underline underline-offset-2 hover:text-goldHi transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
+        · <a class="inline-block py-1.5 underline underline-offset-2 hover:text-goldHi transition" href="tel:+12135229136">(213) 522-9136</a>
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-gold/15">
+    <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-2 text-[10px] uppercase tracking-[0.2em] text-paper/35">
+      <span>© 2026 Golden Tadka</span>
+      <span>Website preview · not the official site</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<!-- All photography and artwork: Golden Tadka (@goldentadkaa) — interior, soft launch
+     tandoori, velvet logo. Kadai icon, storefront sketch, and pot sketch extracted from
+     their own flyer and menu cards. Menu items from their posted menu cards + their
+     Square ordering page. No stock photography on this page. -->
+
+</body>
+</html>
