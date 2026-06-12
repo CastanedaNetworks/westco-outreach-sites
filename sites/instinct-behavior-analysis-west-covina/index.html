@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Instinct Behavior Analysis · ABA Consulting, Training &amp; Evaluations · West Covina, CA</title>
+<meta name="description" content="ABA consulting firm in West Covina, CA. Staff training, behavior-based safety consultation, ABA company setup, group home behavioral services, IEEs and school-based services across the San Gabriel Valley and Greater Los Angeles." />
+<meta name="robots" content="noindex,nofollow" />
+
+<meta property="og:title" content="Instinct Behavior Analysis · Turning Clinical Insight Into Lasting Behavioral Impact" />
+<meta property="og:description" content="ABA consulting, staff training and independent educational evaluations. West Covina, CA. Est. 2019." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" type="image/png" href="img/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans:  ['"Libre Franklin"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+        },
+        colors: {
+          ink:    '#14233c',
+          ink2:   '#1e3354',
+          mist:   '#f4f7fa',
+          line:   '#dde4ec',
+          gold:   '#b9862f',
+          gold2:  '#a3762a',
+          slate2: '#475569',
+        },
+        boxShadow: {
+          card:  '0 1px 2px rgba(20,35,60,0.05), 0 4px 16px rgba(20,35,60,0.06)',
+          lift:  '0 2px 4px rgba(20,35,60,0.06), 0 12px 28px rgba(20,35,60,0.10)',
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  section[id] { scroll-margin-top: 96px; }
+
+  .overline {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+
+  .btn { transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+
+  .card { transition: box-shadow .25s ease, transform .25s ease; }
+  .card:hover { box-shadow: 0 2px 4px rgba(20,35,60,0.06), 0 12px 28px rgba(20,35,60,0.10); transform: translateY(-2px); }
+
+  /* scroll reveal */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal-d1 { transition-delay: .1s; }
+  .reveal-d2 { transition-delay: .2s; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .draw-line, .chart-dot, .chart-note { animation: none !important; opacity: 1 !important; stroke-dashoffset: 0 !important; }
+  }
+
+  /* session chart: lines draw, points appear in order */
+  .draw-line { stroke-dasharray: 700; stroke-dashoffset: 700; animation: draw 1.6s ease forwards .4s; }
+  .draw-line.phase-b { animation-delay: 1.6s; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .chart-dot { opacity: 0; animation: pop .35s ease forwards; }
+  @keyframes pop { from { opacity: 0; } to { opacity: 1; } }
+  .chart-note { opacity: 0; animation: pop .6s ease forwards 3s; }
+
+  /* keep chart annotations legible when the figure scales down on phones */
+  @media (max-width: 520px) {
+    figure svg text { font-size: 12.5px; }
+  }
+</style>
+</head>
+
+<body class="bg-white text-ink font-sans">
+
+<!-- utility bar -->
+<div class="bg-ink text-white/85 text-[13px]">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 h-10 flex items-center justify-between gap-4">
+    <p class="hidden sm:block">Serving the San Gabriel Valley &amp; Greater Los Angeles</p>
+    <div class="flex items-center gap-5">
+      <a href="mailto:info@instinctbehavior.org" class="hover:text-white transition flex items-center gap-1.5">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        info@instinctbehavior.org
+      </a>
+      <span class="hidden md:inline text-white/40">|</span>
+      <span class="hidden md:inline">West Covina, CA · Est. 2019</span>
+    </div>
+  </div>
+</div>
+
+<!-- header -->
+<header class="sticky top-0 z-50 bg-white border-b border-line shadow-[0_1px_3px_rgba(20,35,60,0.04)]">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-3 min-w-0">
+      <img src="img/logo.png" alt="Instinct Behavior Analysis logo" class="h-12 w-12 shrink-0" />
+      <span class="leading-tight min-w-0">
+        <span class="block font-serif font-semibold text-[17px] tracking-tight truncate">Instinct Behavior Analysis</span>
+        <span class="block text-[11px] font-medium text-slate2 truncate">ABA Consulting &amp; Training</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium text-slate2">
+      <div class="relative group">
+        <a href="#services" class="flex items-center gap-1.5 hover:text-ink transition" aria-haspopup="true">
+          Services
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="absolute left-0 top-full pt-3 hidden group-hover:block group-focus-within:block">
+          <div class="bg-white border border-line rounded-xl shadow-lift py-2 w-[290px]">
+            <a href="staff-training.html" class="block px-5 py-2.5 text-[14px] text-slate2 hover:bg-mist hover:text-ink transition">Staff Training</a>
+            <a href="safety-consultation.html" class="block px-5 py-2.5 text-[14px] text-slate2 hover:bg-mist hover:text-ink transition">Safety Consultation</a>
+            <a href="aba-company-setup.html" class="block px-5 py-2.5 text-[14px] text-slate2 hover:bg-mist hover:text-ink transition">ABA Company Setup</a>
+            <a href="group-residential-homes.html" class="block px-5 py-2.5 text-[14px] text-slate2 hover:bg-mist hover:text-ink transition">Group &amp; Residential Homes</a>
+            <a href="independent-educational-evaluations.html" class="block px-5 py-2.5 text-[14px] text-slate2 hover:bg-mist hover:text-ink transition">Independent Educational Evaluations</a>
+            <a href="school-based-services.html" class="block px-5 py-2.5 text-[14px] text-slate2 hover:bg-mist hover:text-ink transition">School-Based Services</a>
+          </div>
+        </div>
+      </div>
+      <a href="#method" class="hover:text-ink transition">How We Work</a>
+      <a href="#about" class="hover:text-ink transition">About</a>
+      <a href="#contact" class="btn bg-ink text-white text-[14px] font-semibold px-5 py-2.5 rounded-md hover:bg-ink2">Arrange a Consultation</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden p-2 -mr-2 text-ink" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h18M2 11h18M2 16h18"/></svg>
+    </button>
+  </div>
+  <div id="menu" class="hidden md:hidden border-t border-line bg-white">
+    <nav class="max-w-[1180px] mx-auto px-4 py-3 flex flex-col text-[15px] font-medium">
+      <p class="py-3 border-b border-line text-[12px] font-semibold uppercase tracking-wide text-slate2/80">Services</p>
+      <a href="staff-training.html" class="py-2.5 pl-4 border-b border-line text-[14px] text-slate2">Staff Training</a>
+      <a href="safety-consultation.html" class="py-2.5 pl-4 border-b border-line text-[14px] text-slate2">Safety Consultation</a>
+      <a href="aba-company-setup.html" class="py-2.5 pl-4 border-b border-line text-[14px] text-slate2">ABA Company Setup</a>
+      <a href="group-residential-homes.html" class="py-2.5 pl-4 border-b border-line text-[14px] text-slate2">Group &amp; Residential Homes</a>
+      <a href="independent-educational-evaluations.html" class="py-2.5 pl-4 border-b border-line text-[14px] text-slate2">Independent Educational Evaluations</a>
+      <a href="school-based-services.html" class="py-2.5 pl-4 border-b border-line text-[14px] text-slate2">School-Based Services</a>
+      <a href="#method" class="py-3 border-b border-line">How We Work</a>
+      <a href="#about" class="py-3 border-b border-line">About</a>
+      <a href="#contact" class="py-3 font-semibold text-gold">Arrange a Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- hero -->
+<section class="bg-mist border-b border-line">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14 sm:pb-20 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+    <div class="lg:col-span-6">
+      <p class="reveal overline text-gold">Applied Behavior Analysis · Consulting, Training &amp; Evaluations</p>
+      <h1 class="reveal reveal-d1 font-serif font-semibold text-[clamp(2rem,5.5vw,3.4rem)] leading-[1.12] mt-4">
+        Behavior change you can <span class="text-gold">see in the data.</span>
+      </h1>
+      <p class="reveal reveal-d2 text-[16px] sm:text-[17px] leading-relaxed text-slate2 mt-5 max-w-[52ch]">
+        Instinct Behavior Analysis is a consulting firm in West Covina, California. Since 2019 we have helped ABA agencies, school districts, group homes and employers turn clinical insight into lasting behavioral impact.
+      </p>
+      <div class="reveal reveal-d2 mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="btn bg-ink text-white text-[15px] font-semibold px-7 py-3.5 rounded-md text-center hover:bg-ink2">Arrange a Consultation</a>
+        <a href="#services" class="btn border border-ink/25 bg-white text-ink text-[15px] font-semibold px-7 py-3.5 rounded-md text-center hover:border-ink/60">Explore Our Services</a>
+      </div>
+    </div>
+
+    <!-- single-subject session chart, the language every behavior analyst works in -->
+    <figure class="reveal reveal-d1 lg:col-span-6 bg-white border border-line rounded-xl shadow-card overflow-hidden">
+      <figcaption class="flex items-center justify-between gap-2 px-5 py-3.5 border-b border-line">
+        <span class="text-[13px] font-semibold">Target responses per session</span>
+        <span class="text-[12px] font-medium text-slate2">Sample client data</span>
+      </figcaption>
+      <div class="px-2 sm:px-4 py-3">
+        <svg viewBox="0 0 560 290" class="w-full h-auto" role="img" aria-label="Line chart showing low flat responding during baseline, then a rising trend after intervention begins, crossing the goal line">
+          <g stroke="rgba(20,35,60,0.07)" stroke-width="1">
+            <line x1="46" y1="40"  x2="540" y2="40"/>
+            <line x1="46" y1="90"  x2="540" y2="90"/>
+            <line x1="46" y1="140" x2="540" y2="140"/>
+            <line x1="46" y1="190" x2="540" y2="190"/>
+            <line x1="46" y1="240" x2="540" y2="240"/>
+          </g>
+          <line x1="46" y1="24" x2="46" y2="240" stroke="#9aa7ba" stroke-width="1.5"/>
+          <line x1="46" y1="240" x2="540" y2="240" stroke="#9aa7ba" stroke-width="1.5"/>
+          <text x="20" y="135" transform="rotate(-90 20 135)" text-anchor="middle" font-family="Libre Franklin" font-size="10" letter-spacing="0.5" fill="#64748b">Responses / min</text>
+          <text x="293" y="266" text-anchor="middle" font-family="Libre Franklin" font-size="10" letter-spacing="0.5" fill="#64748b">Sessions</text>
+
+          <line x1="46" y1="64" x2="540" y2="64" stroke="#b9862f" stroke-width="1" stroke-dasharray="2 5"/>
+          <text x="56" y="56" font-family="Libre Franklin" font-size="10" font-weight="600" letter-spacing="0.5" fill="#b9862f">Goal</text>
+
+          <line x1="218" y1="24" x2="218" y2="240" stroke="#9aa7ba" stroke-width="1.2" stroke-dasharray="5 5"/>
+          <text x="130" y="36" text-anchor="middle" font-family="Libre Franklin" font-size="10" font-weight="600" letter-spacing="0.5" fill="#64748b">Baseline</text>
+          <text x="380" y="36" text-anchor="middle" font-family="Libre Franklin" font-size="10" font-weight="600" letter-spacing="0.5" fill="#b9862f">Intervention</text>
+
+          <polyline class="draw-line" points="66,206 104,214 142,202 180,212" fill="none" stroke="#14233c" stroke-width="2"/>
+          <g fill="#14233c">
+            <circle class="chart-dot" style="animation-delay:.6s"  cx="66"  cy="206" r="4"/>
+            <circle class="chart-dot" style="animation-delay:.9s"  cx="104" cy="214" r="4"/>
+            <circle class="chart-dot" style="animation-delay:1.2s" cx="142" cy="202" r="4"/>
+            <circle class="chart-dot" style="animation-delay:1.5s" cx="180" cy="212" r="4"/>
+          </g>
+
+          <polyline class="draw-line phase-b" points="240,196 278,178 316,166 354,140 392,118 430,96 468,76 506,58" fill="none" stroke="#b9862f" stroke-width="2.5"/>
+          <g fill="#b9862f">
+            <circle class="chart-dot" style="animation-delay:1.7s" cx="240" cy="196" r="4"/>
+            <circle class="chart-dot" style="animation-delay:1.9s" cx="278" cy="178" r="4"/>
+            <circle class="chart-dot" style="animation-delay:2.1s" cx="316" cy="166" r="4"/>
+            <circle class="chart-dot" style="animation-delay:2.3s" cx="354" cy="140" r="4"/>
+            <circle class="chart-dot" style="animation-delay:2.5s" cx="392" cy="118" r="4"/>
+            <circle class="chart-dot" style="animation-delay:2.7s" cx="430" cy="96"  r="4"/>
+            <circle class="chart-dot" style="animation-delay:2.9s" cx="468" cy="76"  r="4"/>
+          </g>
+          <g class="chart-note">
+            <path d="M506 48 l2.6 6.2 6.7 .5 -5.1 4.4 1.6 6.5 -5.8 -3.5 -5.8 3.5 1.6 -6.5 -5.1 -4.4 6.7 -.5 Z" fill="#b9862f"/>
+            <text x="506" y="80" text-anchor="middle" font-family="Libre Franklin" font-size="10" font-weight="600" letter-spacing="0.5" fill="#14233c">Criterion met</text>
+          </g>
+        </svg>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- who we work with -->
+<div class="bg-white border-b border-line">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 py-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[13px] sm:text-[14px] font-medium text-slate2">
+    <span class="font-semibold text-ink">Who we work with:</span>
+    <span>ABA agencies</span><span class="text-gold">·</span>
+    <span>School districts</span><span class="text-gold">·</span>
+    <span>Group &amp; residential homes</span><span class="text-gold">·</span>
+    <span>Employers</span><span class="text-gold">·</span>
+    <span>Families</span>
+  </div>
+</div>
+
+<!-- services -->
+<section id="services" class="bg-white">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="reveal max-w-[640px] mb-10 sm:mb-14">
+      <p class="overline text-gold">Our Services</p>
+      <h2 class="font-serif font-semibold text-[clamp(1.6rem,4vw,2.4rem)] leading-tight mt-3">What we're brought in to do</h2>
+      <p class="text-[15px] sm:text-[16px] leading-relaxed text-slate2 mt-4">
+        Six areas of practice, one standard: structured, evidence-based work that holds up after we leave.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      <article class="card reveal bg-white border border-line rounded-xl shadow-card p-6 sm:p-7 flex flex-col">
+        <span class="w-11 h-11 rounded-lg bg-mist border border-line flex items-center justify-center text-ink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="11" rx="1.5"/><path d="M12 15v3.5"/><path d="M8 21l4-2.5 4 2.5"/><path d="M7.5 8h6M7.5 11h9"/></svg>
+        </span>
+        <h3 class="font-serif font-semibold text-[19px] mt-4">Staff Training</h3>
+        <p class="text-[14.5px] leading-relaxed text-slate2 mt-2.5 flex-1">
+          ABA staff training programs that build real competence, from brand new behavior technicians to seasoned supervisors. Practical, hands-on and measured against performance, so your team walks out with skills they can use in session the next morning.
+        </p>
+        <div class="mt-4 pt-4 border-t border-line flex items-center justify-between gap-3">
+          <p class="text-[12px] font-semibold uppercase tracking-wide text-slate2/80">For ABA agencies &amp; providers</p>
+          <a href="staff-training.html" class="shrink-0 text-[13.5px] font-semibold text-gold hover:text-gold2 transition">Learn more &rarr;</a>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-d1 bg-white border border-line rounded-xl shadow-card p-6 sm:p-7 flex flex-col">
+        <span class="w-11 h-11 rounded-lg bg-mist border border-line flex items-center justify-center text-ink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.8v5.4c0 4.3-3 7.4-7 9-4-1.6-7-4.7-7-9V5.8L12 3z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
+        </span>
+        <h3 class="font-serif font-semibold text-[19px] mt-4">Safety Consultation</h3>
+        <p class="text-[14.5px] leading-relaxed text-slate2 mt-2.5 flex-1">
+          Behavior-based safety training and consultation for workplaces and facilities. We look at what people actually do on the floor, then build safer habits that hold up under pressure and reduce real risk.
+        </p>
+        <div class="mt-4 pt-4 border-t border-line flex items-center justify-between gap-3">
+          <p class="text-[12px] font-semibold uppercase tracking-wide text-slate2/80">For employers &amp; facilities</p>
+          <a href="safety-consultation.html" class="shrink-0 text-[13.5px] font-semibold text-gold hover:text-gold2 transition">Learn more &rarr;</a>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-d2 bg-white border border-line rounded-xl shadow-card p-6 sm:p-7 flex flex-col">
+        <span class="w-11 h-11 rounded-lg bg-mist border border-line flex items-center justify-center text-ink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 20.5v-16a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16"/><path d="M14.5 9.5h4a1 1 0 0 1 1 1v10"/><path d="M2.5 20.5h19"/><path d="M7.5 7.5h2M7.5 11h2M7.5 14.5h2M17 13h.5M17 16.5h.5"/></svg>
+        </span>
+        <h3 class="font-serif font-semibold text-[19px] mt-4">ABA Company Setup</h3>
+        <p class="text-[14.5px] leading-relaxed text-slate2 mt-2.5 flex-1">
+          End-to-end consultation for establishing and scaling an ABA service organization. Licensing, clinical systems, staffing models and payer readiness, handled in the right order so you open strong and stay compliant.
+        </p>
+        <div class="mt-4 pt-4 border-t border-line flex items-center justify-between gap-3">
+          <p class="text-[12px] font-semibold uppercase tracking-wide text-slate2/80">For new &amp; growing agencies</p>
+          <a href="aba-company-setup.html" class="shrink-0 text-[13.5px] font-semibold text-gold hover:text-gold2 transition">Learn more &rarr;</a>
+        </div>
+      </article>
+
+      <article class="card reveal bg-white border border-line rounded-xl shadow-card p-6 sm:p-7 flex flex-col">
+        <span class="w-11 h-11 rounded-lg bg-mist border border-line flex items-center justify-center text-ink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5L12 3.5l8.5 7"/><path d="M5.5 9v11h13V9"/><path d="M12 16.8c-1.8-1.1-3-2.2-3-3.6a1.7 1.7 0 0 1 3-1.1 1.7 1.7 0 0 1 3 1.1c0 1.4-1.2 2.5-3 3.6z"/></svg>
+        </span>
+        <h3 class="font-serif font-semibold text-[19px] mt-4">Group &amp; Residential Homes</h3>
+        <p class="text-[14.5px] leading-relaxed text-slate2 mt-2.5 flex-1">
+          Comprehensive behavioral support and staff training for group home programs. Fewer incidents, cleaner documentation and a calmer house for residents and staff alike.
+        </p>
+        <div class="mt-4 pt-4 border-t border-line flex items-center justify-between gap-3">
+          <p class="text-[12px] font-semibold uppercase tracking-wide text-slate2/80">For group home operators</p>
+          <a href="group-residential-homes.html" class="shrink-0 text-[13.5px] font-semibold text-gold hover:text-gold2 transition">Learn more &rarr;</a>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-d1 bg-white border border-line rounded-xl shadow-card p-6 sm:p-7 flex flex-col">
+        <span class="w-11 h-11 rounded-lg bg-mist border border-line flex items-center justify-center text-ink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7l4 4v13H7z"/><path d="M14 3.5V8h4"/><path d="M9.5 12h5M9.5 15h5"/></svg>
+        </span>
+        <h3 class="font-serif font-semibold text-[19px] mt-4">Independent Educational Evaluations</h3>
+        <p class="text-[14.5px] leading-relaxed text-slate2 mt-2.5 flex-1">
+          When families and districts need an outside opinion, we conduct thorough, impartial evaluations across behavior, psychology and speech and language, presented clearly at the IEP table.
+        </p>
+        <div class="mt-4 pt-4 border-t border-line flex items-center justify-between gap-3">
+          <p class="text-[12px] font-semibold uppercase tracking-wide text-slate2/80">For families &amp; districts</p>
+          <a href="independent-educational-evaluations.html" class="shrink-0 text-[13.5px] font-semibold text-gold hover:text-gold2 transition">Learn more &rarr;</a>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-d2 bg-white border border-line rounded-xl shadow-card p-6 sm:p-7 flex flex-col">
+        <span class="w-11 h-11 rounded-lg bg-mist border border-line flex items-center justify-center text-ink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9.5L12 4.5l9.5 5L12 14.5l-9.5-5z"/><path d="M6.5 11.8V16c1.6 1.7 9.4 1.7 11 0v-4.2"/><path d="M21.5 9.5V14"/></svg>
+        </span>
+        <h3 class="font-serif font-semibold text-[19px] mt-4">School-Based Services</h3>
+        <p class="text-[14.5px] leading-relaxed text-slate2 mt-2.5 flex-1">
+          Credentialed behavior staff in the classroom: BII and BID support, RBTs and BCBA oversight, plus the assessments and behavior plans that tie it all back to the IEP.
+        </p>
+        <div class="mt-4 pt-4 border-t border-line flex items-center justify-between gap-3">
+          <p class="text-[12px] font-semibold uppercase tracking-wide text-slate2/80">For schools &amp; districts</p>
+          <a href="school-based-services.html" class="shrink-0 text-[13.5px] font-semibold text-gold hover:text-gold2 transition">Learn more &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- field photos -->
+<section class="bg-mist border-y border-line">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 py-14 sm:py-16">
+    <div class="grid sm:grid-cols-3 gap-5 sm:gap-6">
+      <figure class="reveal">
+        <img src="img/training.jpg" alt="Presenter leading a staff training session in a conference room" class="w-full aspect-[4/3] object-cover rounded-xl border border-line shadow-card" loading="lazy" />
+        <figcaption class="text-[13px] font-medium text-slate2 mt-3">Staff training, delivered in service</figcaption>
+      </figure>
+      <figure class="reveal reveal-d1">
+        <img src="img/school.jpg" alt="Teacher reading with a group of young students in a classroom" class="w-full aspect-[4/3] object-cover rounded-xl border border-line shadow-card" loading="lazy" />
+        <figcaption class="text-[13px] font-medium text-slate2 mt-3">School-based support, on site</figcaption>
+      </figure>
+      <figure class="reveal reveal-d2">
+        <img src="img/home.jpg" alt="Support staff helping a resident with a walker outside a residential home" class="w-full aspect-[4/3] object-cover rounded-xl border border-line shadow-card" loading="lazy" />
+        <figcaption class="text-[13px] font-medium text-slate2 mt-3">Residential support, in the field</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- method -->
+<section id="method" class="bg-ink text-white">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="reveal max-w-[640px] mb-12 sm:mb-16">
+      <p class="overline text-gold">How an engagement runs</p>
+      <h2 class="font-serif font-semibold text-[clamp(1.6rem,4vw,2.4rem)] leading-tight mt-3">The same discipline we teach is the discipline we work by.</h2>
+    </div>
+
+    <div class="relative grid md:grid-cols-3 gap-10 md:gap-8">
+      <div aria-hidden="true" class="hidden md:block absolute top-6 left-[8%] right-[8%] border-t border-white/20"></div>
+
+      <div class="reveal relative">
+        <span class="w-12 h-12 rounded-full bg-gold text-ink font-serif font-bold text-[19px] flex items-center justify-center relative z-10">1</span>
+        <p class="overline text-gold mt-5">Phase A</p>
+        <h3 class="font-serif font-semibold text-[21px] mt-1.5">Baseline</h3>
+        <p class="text-[15px] leading-relaxed text-white/70 mt-3 max-w-[40ch]">
+          Every engagement starts with measurement. We observe in the real setting, take data and establish exactly where things stand before anyone touches a plan.
+        </p>
+      </div>
+
+      <div class="reveal reveal-d1 relative">
+        <span class="w-12 h-12 rounded-full bg-gold text-ink font-serif font-bold text-[19px] flex items-center justify-center relative z-10">2</span>
+        <p class="overline text-gold mt-5">Phase B</p>
+        <h3 class="font-serif font-semibold text-[21px] mt-1.5">Intervention</h3>
+        <p class="text-[15px] leading-relaxed text-white/70 mt-3 max-w-[40ch]">
+          We design the protocol, train your people on it and implement together, with fidelity checks along the way. A plan only works when it is actually followed.
+        </p>
+      </div>
+
+      <div class="reveal reveal-d2 relative">
+        <span class="w-12 h-12 rounded-full bg-gold text-ink font-serif font-bold text-[19px] flex items-center justify-center relative z-10">3</span>
+        <p class="overline text-gold mt-5">Phase C</p>
+        <h3 class="font-serif font-semibold text-[21px] mt-1.5">Generalization</h3>
+        <p class="text-[15px] leading-relaxed text-white/70 mt-3 max-w-[40ch]">
+          Then we work ourselves out of a job. Skills carry across settings, staff and time, and the data shows it. That is what lasting impact means to us.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- about -->
+<section id="about" class="bg-white">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="reveal lg:col-span-5 order-2 lg:order-1">
+        <img src="img/consulting.jpg" alt="Consulting team reviewing program data and documents around a table" class="w-full aspect-[4/3] object-cover rounded-xl border border-line shadow-card" loading="lazy" />
+        <p class="text-[13px] font-medium text-slate2 mt-3">Program review and clinical systems consultation</p>
+      </div>
+      <div class="lg:col-span-7 order-1 lg:order-2">
+        <p class="reveal overline text-gold">About the firm</p>
+        <h2 class="reveal font-serif font-semibold text-[clamp(1.6rem,4vw,2.4rem)] leading-tight mt-3">A dedicated consulting firm that stands out for effectiveness and integrity.</h2>
+        <p class="reveal reveal-d1 text-[15px] sm:text-[16px] leading-relaxed text-slate2 mt-5 max-w-[62ch]">
+          Instinct Behavior Analysis was founded in 2019 by Ivan Montenegro and is headquartered in West Covina, California. The science of behavior is rigorous, and the way it gets delivered should be too. We keep our caseload deliberate, our recommendations honest and our data clean, whether we are training a new cohort of technicians, helping a founder open the doors to their own agency or sitting beside a family at an IEP meeting.
+        </p>
+        <blockquote class="reveal reveal-d2 mt-7 bg-mist border-l-4 border-gold rounded-r-lg px-6 py-5">
+          <p class="font-serif font-medium text-[18px] sm:text-[20px] leading-snug">"Turning clinical insight into lasting behavioral impact."</p>
+          <footer class="text-[13px] font-medium text-slate2 mt-2">Our founding principle</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IEE callout for parents -->
+<section class="bg-mist border-t border-line">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 py-14 sm:py-16">
+    <div class="reveal bg-ink text-white rounded-xl shadow-lift p-7 sm:p-10 lg:flex items-center justify-between gap-10">
+      <div class="max-w-[64ch]">
+        <p class="overline text-gold">For parents · Know your rights</p>
+        <h2 class="font-serif font-semibold text-[clamp(1.4rem,3.5vw,1.9rem)] leading-tight mt-2.5">Disagree with your district's evaluation of your child?</h2>
+        <p class="text-[15px] leading-relaxed text-white/75 mt-3">
+          Federal law gives you the right to request an independent educational evaluation. We conduct IEEs that are thorough, impartial and ready to stand up at the IEP table.
+        </p>
+      </div>
+      <a href="independent-educational-evaluations.html" class="btn shrink-0 inline-block mt-7 lg:mt-0 bg-gold text-ink text-[15px] font-semibold px-7 py-3.5 rounded-md text-center hover:bg-gold2 hover:text-white">Learn About IEEs</a>
+    </div>
+  </div>
+</section>
+
+<!-- contact -->
+<section id="contact" class="bg-mist border-t border-line">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14">
+      <div class="lg:col-span-5">
+        <p class="reveal overline text-gold">Contact</p>
+        <h2 class="reveal font-serif font-semibold text-[clamp(1.6rem,4vw,2.4rem)] leading-tight mt-3">Get in touch to schedule a consultation.</h2>
+        <p class="reveal reveal-d1 text-[15px] sm:text-[16px] leading-relaxed text-slate2 mt-4 max-w-[46ch]">
+          Tell us a little about your organization or your situation and we will come back to you with a clear next step, usually within one business day.
+        </p>
+
+        <dl class="reveal reveal-d2 mt-9 space-y-6">
+          <div class="flex gap-4">
+            <span class="w-10 h-10 shrink-0 rounded-lg bg-white border border-line flex items-center justify-center text-ink">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            <div>
+              <dt class="text-[13px] font-semibold uppercase tracking-wide text-slate2/80">Administration / Office</dt>
+              <dd class="text-[15px] font-medium mt-1">1050 Lakes Dr, West Covina, CA 91790</dd>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="w-10 h-10 shrink-0 rounded-lg bg-white border border-line flex items-center justify-center text-ink">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <div>
+              <dt class="text-[13px] font-semibold uppercase tracking-wide text-slate2/80">Email</dt>
+              <dd class="text-[15px] font-medium mt-1 leading-relaxed">
+                <a href="mailto:info@instinctbehavior.org" class="hover:text-gold transition">info@instinctbehavior.org</a><br/>
+                <a href="mailto:ivan@instinctbehavior.org" class="hover:text-gold transition">ivan@instinctbehavior.org</a>
+              </dd>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="w-10 h-10 shrink-0 rounded-lg bg-white border border-line flex items-center justify-center text-ink">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            </span>
+            <div>
+              <dt class="text-[13px] font-semibold uppercase tracking-wide text-slate2/80">Service area</dt>
+              <dd class="text-[15px] font-medium mt-1">San Gabriel Valley &amp; Greater Los Angeles</dd>
+            </div>
+          </div>
+        </dl>
+      </div>
+
+      <div class="reveal reveal-d1 lg:col-span-7">
+        <form id="consultForm" class="bg-white border border-line rounded-xl shadow-card p-6 sm:p-8">
+          <h3 class="font-serif font-semibold text-[19px] pb-4 mb-6 border-b border-line">Consultation request</h3>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-[13px] font-semibold text-slate2">Name <span class="text-gold">*</span></span>
+              <input required name="name" type="text" class="mt-1.5 w-full bg-white border border-line rounded-md px-3.5 py-2.5 text-[15px] outline-none focus:border-ink/50 focus:ring-2 focus:ring-ink/10 transition" />
+            </label>
+            <label class="block">
+              <span class="text-[13px] font-semibold text-slate2">Organization</span>
+              <input name="org" type="text" class="mt-1.5 w-full bg-white border border-line rounded-md px-3.5 py-2.5 text-[15px] outline-none focus:border-ink/50 focus:ring-2 focus:ring-ink/10 transition" />
+            </label>
+            <label class="block">
+              <span class="text-[13px] font-semibold text-slate2">Email <span class="text-gold">*</span></span>
+              <input required name="email" type="email" class="mt-1.5 w-full bg-white border border-line rounded-md px-3.5 py-2.5 text-[15px] outline-none focus:border-ink/50 focus:ring-2 focus:ring-ink/10 transition" />
+            </label>
+            <label class="block">
+              <span class="text-[13px] font-semibold text-slate2">Phone <span class="text-gold">*</span></span>
+              <input required name="phone" type="tel" class="mt-1.5 w-full bg-white border border-line rounded-md px-3.5 py-2.5 text-[15px] outline-none focus:border-ink/50 focus:ring-2 focus:ring-ink/10 transition" />
+            </label>
+            <label class="block sm:col-span-2">
+              <span class="text-[13px] font-semibold text-slate2">What do you need help with?</span>
+              <select name="topic" class="mt-1.5 w-full bg-white border border-line rounded-md px-3.5 py-2.5 text-[15px] outline-none focus:border-ink/50 focus:ring-2 focus:ring-ink/10 transition">
+                <option>Staff training</option>
+                <option>Safety consultation</option>
+                <option>ABA company setup</option>
+                <option>Group / residential home services</option>
+                <option>Independent educational evaluation (IEE)</option>
+                <option>School-based services</option>
+                <option>Something else</option>
+              </select>
+            </label>
+            <label class="block sm:col-span-2">
+              <span class="text-[13px] font-semibold text-slate2">Tell us a little more</span>
+              <textarea name="msg" rows="4" class="mt-1.5 w-full bg-white border border-line rounded-md px-3.5 py-2.5 text-[15px] outline-none focus:border-ink/50 focus:ring-2 focus:ring-ink/10 transition"></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn mt-6 w-full sm:w-auto bg-ink text-white text-[15px] font-semibold px-8 py-3.5 rounded-md hover:bg-ink2">Send Request</button>
+          <p class="text-[12.5px] text-slate2 mt-4">Opens your email app with the details filled in.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- footer -->
+<footer class="bg-ink text-white">
+  <div class="max-w-[1180px] mx-auto px-4 sm:px-6 py-12 sm:py-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 border-b border-white/15 pb-10">
+      <div class="lg:col-span-2 max-w-[40ch]">
+        <p class="font-serif font-semibold text-[19px]">Instinct Behavior Analysis</p>
+        <p class="text-[13.5px] text-gold font-medium mt-1.5">Turning clinical insight into lasting behavioral impact.</p>
+        <p class="text-[14px] text-white/60 mt-4 leading-relaxed">A West Covina consulting firm serving ABA agencies, school districts, group homes, employers and families across Southern California since 2019.</p>
+      </div>
+      <div>
+        <p class="text-[13px] font-semibold uppercase tracking-wide text-white/50">Services</p>
+        <nav class="mt-4 flex flex-col gap-2.5 text-[14px] text-white/75">
+          <a href="staff-training.html" class="hover:text-white transition">Staff Training</a>
+          <a href="safety-consultation.html" class="hover:text-white transition">Safety Consultation</a>
+          <a href="aba-company-setup.html" class="hover:text-white transition">ABA Company Setup</a>
+          <a href="group-residential-homes.html" class="hover:text-white transition">Group &amp; Residential Homes</a>
+          <a href="independent-educational-evaluations.html" class="hover:text-white transition">Independent Educational Evaluations</a>
+          <a href="school-based-services.html" class="hover:text-white transition">School-Based Services</a>
+        </nav>
+      </div>
+      <div>
+        <p class="text-[13px] font-semibold uppercase tracking-wide text-white/50">Company</p>
+        <nav class="mt-4 flex flex-col gap-2.5 text-[14px] text-white/75">
+          <a href="#services" class="hover:text-white transition">All Services</a>
+          <a href="#method" class="hover:text-white transition">How We Work</a>
+          <a href="#about" class="hover:text-white transition">About</a>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <p class="text-[13px] font-semibold uppercase tracking-wide text-white/50">Contact</p>
+        <div class="mt-4 flex flex-col gap-2.5 text-[14px] text-white/75">
+          <p>1050 Lakes Dr<br/>West Covina, CA 91790</p>
+          <a href="mailto:info@instinctbehavior.org" class="hover:text-white transition">info@instinctbehavior.org</a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-6 flex flex-col sm:flex-row justify-between gap-3 text-[12.5px] text-white/45">
+      <p>Copyright © 2026 Instinct Behavior Analysis. All rights reserved.</p>
+      <p>
+        <span>Website preview · not the official site · </span>
+        Preview by <span class="text-white/75 font-semibold">WestCo App Studio</span> ·
+        <a class="underline underline-offset-2 hover:text-white transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => {
+    const open = menu.classList.toggle('hidden') === false;
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+  // scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // consultation form -> mailto
+  document.getElementById('consultForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const subject = `Consultation request: ${f.get('topic')} (${f.get('name')})`;
+    const body = [
+      `Name: ${f.get('name')}`,
+      `Organization: ${f.get('org') || 'n/a'}`,
+      `Email: ${f.get('email')}`,
+      `Phone: ${f.get('phone')}`,
+      `Topic: ${f.get('topic')}`,
+      '',
+      f.get('msg') || ''
+    ].join('\n');
+    window.location.href = `mailto:info@instinctbehavior.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+</script>
+
+</body>
+</html>

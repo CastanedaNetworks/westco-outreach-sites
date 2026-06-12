@@ -44,3 +44,4 @@ debug-*.html
 
 # Generated dashboard backups
 dashboard.*.md.bak
+_shots/
