@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Happy Tik Pet Grooming · West Covina, CA</title>
+<meta name="description" content="One-on-one, gentle hand grooming in West Covina, now under new management. Spa baths, full grooming makeovers, quick wash and dry, cats too. Book online or walk in at 1226 W Francisquito Ave." />
+<meta name="robots" content="noindex,nofollow" />
+
+<meta property="og:title" content="Happy Tik Pet Grooming · West Covina" />
+<meta property="og:description" content="From grumpy to happy. One-on-one gentle grooming, new management, same location. Book online." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" type="image/png" href="img/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans:    ['Nunito', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          display: ['"Baloo 2"', 'ui-rounded', 'sans-serif'],
+          script:  ['Caveat', 'cursive'],
+        },
+        colors: {
+          navy:     '#1d3a70',
+          navyDk:   '#142950',
+          yellow:   '#ffd23f',
+          yellowDp: '#f0b81d',
+          orange:   '#f57e20',
+          orangeDk: '#d96812',
+          pink:     '#ef6f93',
+          cream:    '#fff8ec',
+          card:     '#fffdf6',
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+  /* polaroid frames with washi-tape corners */
+  .polaroid {
+    background: #fffdf6;
+    padding: 10px 10px 14px;
+    border-radius: 14px;
+    box-shadow: 0 14px 30px rgba(29,58,112,0.16);
+    position: relative;
+  }
+  .polaroid::before {
+    content: "";
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%) rotate(-3deg);
+    width: 92px; height: 26px; border-radius: 4px;
+    background: rgba(255,210,63,0.85);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.06);
+  }
+
+  .btn-pop { transition: transform .15s ease, box-shadow .15s ease; box-shadow: 0 5px 0 rgba(20,41,80,0.9); }
+  .btn-pop:hover { transform: translateY(2px); box-shadow: 0 3px 0 rgba(20,41,80,0.9); }
+  .btn-pop-orange { box-shadow: 0 5px 0 #b0540e; }
+  .btn-pop-orange:hover { transform: translateY(2px); box-shadow: 0 3px 0 #b0540e; }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* confetti dots backdrop */
+  .confetti {
+    background-image:
+      radial-gradient(rgba(245,126,32,0.18) 3px, transparent 4px),
+      radial-gradient(rgba(29,58,112,0.12) 3px, transparent 4px),
+      radial-gradient(rgba(239,111,147,0.14) 3px, transparent 4px);
+    background-size: 190px 190px, 230px 230px, 170px 170px;
+    background-position: 0 0, 60px 90px, 130px 40px;
+  }
+
+  .price-row { display: flex; align-items: baseline; gap: 10px; }
+  .price-row .fill { flex: 1; border-bottom: 2px dotted rgba(29,58,112,0.3); transform: translateY(-4px); }
+  .on-dark .price-row .fill { border-color: rgba(255,248,236,0.35); }
+
+  .chip { display: inline-flex; align-items: center; gap: 7px; }
+</style>
+</head>
+
+<body class="font-sans bg-cream text-navy">
+
+<!-- offer bar -->
+<a href="sms:6269291618?body=Start" class="block bg-navy text-cream text-center px-4 py-3 text-[13px] sm:text-sm font-bold hover:bg-navyDk transition">
+  New customers: text <span class="text-yellow underline underline-offset-2">START to (626) 929-1618</span> for 15% off your first visit 🐾
+</a>
+
+<!-- header -->
+<header class="bg-cream/95 backdrop-blur sticky top-0 z-50 border-b border-navy/10">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-baseline gap-2 min-w-0">
+      <span class="font-display font-extrabold text-2xl leading-none text-navy">Happy Tik</span>
+      <span class="hidden sm:inline font-display font-bold text-sm text-orange tracking-wide uppercase">Pet Grooming</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-[14px] font-bold text-navy/80">
+      <a class="hover:text-orange transition" href="#services">Services</a>
+      <a class="hover:text-orange transition" href="#glowups">Glow-ups</a>
+      <a class="hover:text-orange transition" href="#visit">Visit</a>
+    </nav>
+    <a href="https://business.joinsmiley.com/Walnut-Valley-Happy-Tik-Pet-Grooming-KGX3y/book-now" target="_blank" rel="noopener"
+       class="btn-pop-orange btn-pop bg-orange text-white font-display font-bold text-sm sm:text-base px-5 py-2 rounded-full shrink-0">
+      Book now
+    </a>
+  </div>
+</header>
+
+<!-- hero -->
+<section id="top" class="confetti relative overflow-hidden">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+    <div class="lg:col-span-6 text-center lg:text-left">
+      <p class="reveal inline-block bg-navy text-yellow font-display font-bold text-[12px] sm:text-[13px] tracking-[0.12em] uppercase px-4 py-2 rounded-full">
+        New management · Same location, better care
+      </p>
+      <p class="reveal font-script text-orange text-4xl sm:text-5xl mt-5 leading-none">From grumpy to happy!</p>
+      <h1 class="reveal font-display font-extrabold text-navy leading-[1.04] mt-3 text-[11vw] sm:text-6xl lg:text-[64px]">
+        We treat your pets like family
+      </h1>
+      <p class="reveal mt-5 text-navy/80 text-[17px] sm:text-lg font-semibold max-w-[48ch] mx-auto lg:mx-0">
+        One-on-one, gentle hand grooming at 1226 W Francisquito Ave in West Covina.
+        Dogs of every size, cats too, and pickup and drop-off when you need it.
+      </p>
+      <div class="reveal mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+        <a href="https://business.joinsmiley.com/Walnut-Valley-Happy-Tik-Pet-Grooming-KGX3y/book-now" target="_blank" rel="noopener"
+           class="btn-pop-orange btn-pop bg-orange text-white font-display font-bold text-lg px-7 py-3 rounded-full">
+          Book an appointment
+        </a>
+        <a href="#services" class="inline-block py-2 font-bold text-navy underline decoration-orange decoration-[3px] underline-offset-4 hover:text-orange transition">
+          Services + pricing
+        </a>
+      </div>
+      <ul class="reveal mt-8 flex flex-wrap justify-center lg:justify-start gap-2.5 text-[13px] font-bold text-navy">
+        <li class="chip bg-card border border-navy/15 rounded-full px-4 py-1.5">♥ Safe</li>
+        <li class="chip bg-card border border-navy/15 rounded-full px-4 py-1.5">🐶 Gentle</li>
+        <li class="chip bg-card border border-navy/15 rounded-full px-4 py-1.5">🍃 Clean</li>
+        <li class="chip bg-card border border-navy/15 rounded-full px-4 py-1.5">🐾 Loved</li>
+      </ul>
+    </div>
+
+    <div class="lg:col-span-6 relative max-w-[520px] mx-auto w-full">
+      <figure class="reveal polaroid rotate-[-2deg]">
+        <img src="img/before-after-schnauzer.jpg" alt="Before and after of a schnauzer groom, scruffy on the left and freshly trimmed with a pink bow tie on the right" class="w-full h-auto rounded-[8px]" loading="eager" />
+        <figcaption class="font-script text-navy text-2xl sm:text-3xl text-center pt-3">actual client, actual glow-up</figcaption>
+      </figure>
+      <p class="reveal absolute -bottom-6 right-2 sm:right-6 font-script text-orange text-3xl rotate-[4deg]">same dog, we promise →</p>
+    </div>
+  </div>
+</section>
+
+<!-- glow ups -->
+<section id="glowups" class="bg-navy text-cream">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-22">
+    <div class="reveal text-center max-w-[56ch] mx-auto">
+      <p class="font-script text-yellow text-4xl">Straight from our Instagram</p>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl mt-3">THE GLOW-UPS SPEAK FOR THEMSELVES</h2>
+    </div>
+
+    <div class="mt-10 grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-[860px] mx-auto items-start">
+      <figure class="reveal polaroid rotate-[1.5deg]">
+        <img src="img/grumpy-to-happy.jpg" alt="Before and after of a French bulldog, wrapped in a towel and unimpressed, then beaming in a striped tie after grooming" class="w-full h-auto rounded-[8px]" loading="lazy" />
+        <figcaption class="text-navy text-[14px] font-bold text-center pt-3 pb-1">Not in the mood ➔ party ready, just in time for Mother's Day.</figcaption>
+      </figure>
+      <figure class="reveal polaroid rotate-[-1.5deg] sm:mt-10">
+        <img src="img/frenchie-massage.jpg" alt="Black French bulldog relaxing on a plush striped lounger after grooming" class="w-full h-auto rounded-[8px]" loading="lazy" />
+        <figcaption class="text-navy text-[14px] font-bold text-center pt-3 pb-1">Beach yesterday, massage today. Bro's living better than all of us.</figcaption>
+      </figure>
+    </div>
+
+    <p class="reveal mt-10 text-center">
+      <a href="https://www.instagram.com/happytikpetgrooming/" target="_blank" rel="noopener"
+         class="btn-pop bg-yellow text-navy font-display font-bold text-base px-7 py-3 rounded-full inline-block" style="box-shadow: 0 5px 0 #b8890a;">
+        Follow @happytikpetgrooming
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- services + pricing -->
+<section id="services" class="bg-cream">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+
+    <div class="reveal text-center max-w-[58ch] mx-auto">
+      <p class="font-script text-orange text-4xl">The services</p>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl mt-3">PRICED BY WEIGHT, FINISHED WITH CARE</h2>
+      <p class="mt-4 text-navy/80 text-[16px] font-semibold">
+        Every groom is one-on-one and by hand. Prices start at the listed amount and
+        can vary with coat condition. Book online or call
+        <a class="inline-block py-1 font-bold underline decoration-orange decoration-2 underline-offset-2" href="tel:+16264223201">(626) 422-3201</a>.
+      </p>
+    </div>
+
+    <div class="mt-12 grid lg:grid-cols-2 gap-6 sm:gap-8">
+
+      <article class="reveal bg-card border-2 border-navy/15 rounded-3xl p-6 sm:p-9">
+        <h3 class="font-display font-extrabold text-2xl">Basic Spa Bath</h3>
+        <p class="mt-2 text-[15px] text-navy/75 font-semibold">
+          The works, minus the haircut: warm bath, ear cleaning, nail trim, paw pad
+          trim, sanitary trim, anal gland expression, blueberry facial, gentle
+          brush-out, and a full blow dry.
+        </p>
+        <dl class="mt-6 space-y-3 text-[15px] font-bold">
+          <div class="price-row"><dt>1 to 10 lbs</dt><span class="fill"></span><dd class="font-display text-orange">from $35</dd></div>
+          <div class="price-row"><dt>11 to 20 lbs</dt><span class="fill"></span><dd class="font-display text-orange">from $40</dd></div>
+          <div class="price-row"><dt>21 to 40 lbs</dt><span class="fill"></span><dd class="font-display text-orange">from $50</dd></div>
+          <div class="price-row"><dt>41 to 70 lbs</dt><span class="fill"></span><dd class="font-display text-orange">from $65</dd></div>
+          <div class="price-row"><dt>71 to 100 lbs</dt><span class="fill"></span><dd class="font-display text-orange">from $85</dd></div>
+          <div class="price-row"><dt>Over 100 lbs</dt><span class="fill"></span><dd class="font-display text-orange">from $95</dd></div>
+        </dl>
+      </article>
+
+      <article class="reveal on-dark bg-navy text-cream rounded-3xl p-6 sm:p-9">
+        <h3 class="font-display font-extrabold text-2xl text-yellow">Full Grooming Makeover</h3>
+        <p class="mt-2 text-[15px] text-cream/85 font-semibold">
+          Everything in the Basic Spa Bath, plus the haircut and styling. This is
+          the before-and-after one.
+        </p>
+        <dl class="mt-6 space-y-3 text-[15px] font-bold">
+          <div class="price-row"><dt>1 to 10 lbs</dt><span class="fill"></span><dd class="font-display text-yellow">from $65</dd></div>
+          <div class="price-row"><dt>11 to 20 lbs</dt><span class="fill"></span><dd class="font-display text-yellow">from $70</dd></div>
+          <div class="price-row"><dt>21 to 40 lbs</dt><span class="fill"></span><dd class="font-display text-yellow">from $85</dd></div>
+          <div class="price-row"><dt>41 to 70 lbs</dt><span class="fill"></span><dd class="font-display text-yellow">from $100</dd></div>
+          <div class="price-row"><dt>71 to 100 lbs</dt><span class="fill"></span><dd class="font-display text-yellow">from $120</dd></div>
+          <div class="price-row"><dt>Over 100 lbs</dt><span class="fill"></span><dd class="font-display text-yellow">from $150</dd></div>
+        </dl>
+        <a href="https://business.joinsmiley.com/Walnut-Valley-Happy-Tik-Pet-Grooming-KGX3y/book-now" target="_blank" rel="noopener"
+           class="btn-pop-orange btn-pop mt-7 inline-block bg-orange text-white font-display font-bold text-sm px-6 py-2.5 rounded-full">
+          Book a makeover
+        </a>
+      </article>
+
+      <article class="reveal bg-card border-2 border-navy/15 rounded-3xl p-6 sm:p-9">
+        <div class="flex items-center justify-between gap-3 flex-wrap">
+          <h3 class="font-display font-extrabold text-2xl">Quick Wash + Dry</h3>
+          <span class="chip bg-yellow text-navy font-display font-bold text-[12px] uppercase tracking-wide rounded-full px-3.5 py-1">Fresh · Clean · Fast</span>
+        </div>
+        <p class="mt-2 text-[15px] text-navy/75 font-semibold">
+          Bath, blow dry, and a light brush in about an hour. No haircut, out the
+          door clean. Same-day spots when we can fit you.
+        </p>
+        <dl class="mt-6 space-y-3 text-[15px] font-bold">
+          <div class="price-row"><dt>1 to 20 lbs</dt><span class="fill"></span><dd class="font-display text-orange">$29</dd></div>
+          <div class="price-row"><dt>21 to 40 lbs</dt><span class="fill"></span><dd class="font-display text-orange">$39</dd></div>
+          <div class="price-row"><dt>41 to 70 lbs</dt><span class="fill"></span><dd class="font-display text-orange">$49</dd></div>
+          <div class="price-row"><dt>71 to 100 lbs</dt><span class="fill"></span><dd class="font-display text-orange">$59</dd></div>
+          <div class="price-row"><dt>Over 100 lbs</dt><span class="fill"></span><dd class="font-display text-orange">$69</dd></div>
+          <div class="price-row"><dt>Self-wash, you scrub and we clean up</dt><span class="fill"></span><dd class="font-display text-orange">$25</dd></div>
+        </dl>
+      </article>
+
+      <div class="grid gap-6 sm:gap-8">
+        <article class="reveal bg-card border-2 border-navy/15 rounded-3xl overflow-hidden sm:flex">
+          <img src="img/cat-groom.jpg" alt="White long-haired cat being brushed" class="w-full sm:w-44 h-44 sm:h-auto object-cover" loading="lazy" />
+          <div class="p-6 sm:p-7">
+            <h3 class="font-display font-extrabold text-2xl">Cats, too</h3>
+            <p class="mt-2 text-[15px] text-navy/75 font-semibold">
+              Spa baths for cats of any size are <span class="font-display text-orange">from $85</span>.
+              Gentle hands, quiet room, no drama.
+            </p>
+          </div>
+        </article>
+
+        <article class="reveal bg-card border-2 border-navy/15 rounded-3xl p-6 sm:p-7">
+          <h3 class="font-display font-extrabold text-2xl">Upgrades</h3>
+          <ul class="mt-4 grid grid-cols-1 min-[400px]:grid-cols-2 gap-x-6 gap-y-2.5 text-[14px] font-bold text-navy/80">
+            <li class="price-row"><span>De-shed treatment</span><span class="fill"></span><span class="font-display text-orange">$20</span></li>
+            <li class="price-row"><span>Flea treatment</span><span class="fill"></span><span class="font-display text-orange">$20</span></li>
+            <li class="price-row"><span>Hypoallergenic shampoo</span><span class="fill"></span><span class="font-display text-orange">$15</span></li>
+            <li class="price-row"><span>Nail trim</span><span class="fill"></span><span class="font-display text-orange">$15</span></li>
+            <li class="price-row"><span>Anal gland expression</span><span class="fill"></span><span class="font-display text-orange">$15</span></li>
+            <li class="price-row"><span>Teeth cleaning</span><span class="fill"></span><span class="font-display text-orange">$10</span></li>
+            <li class="price-row"><span>Ear clean</span><span class="fill"></span><span class="font-display text-orange">$10</span></li>
+            <li class="price-row"><span>Styling</span><span class="fill"></span><span class="font-display text-orange">$10</span></li>
+          </ul>
+          <p class="mt-4 text-[13px] text-navy/60 font-bold">De-matting runs $1 per minute, capped at $20.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- monday teeth cleaning -->
+    <aside class="reveal mt-10 bg-yellow rounded-3xl px-6 sm:px-9 py-7 sm:flex items-center justify-between gap-6">
+      <div>
+        <p class="font-script text-orangeDk text-3xl leading-none">Every Monday</p>
+        <h3 class="font-display font-extrabold text-2xl mt-1 text-navy">TEETH CLEANING DAY</h3>
+        <p class="mt-2 text-[15px] text-navy/80 font-bold max-w-[52ch]">
+          Gentle, anesthesia-free tartar and plaque removal. Small dogs $150,
+          medium $180, large $200. Severe tartar adds $30.
+        </p>
+      </div>
+      <a href="https://business.joinsmiley.com/Walnut-Valley-Happy-Tik-Pet-Grooming-KGX3y/book-now" target="_blank" rel="noopener"
+         class="btn-pop mt-5 sm:mt-0 inline-block shrink-0 bg-navy text-cream font-display font-bold text-sm px-6 py-2.5 rounded-full">
+        Reserve a Monday
+      </a>
+    </aside>
+  </div>
+</section>
+
+<!-- new management / storefront -->
+<section class="bg-card border-y border-navy/10">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+    <figure class="reveal polaroid rotate-[1.5deg] max-w-[540px] mx-auto lg:mx-0 w-full">
+      <img src="img/storefront.jpg" alt="Happy Tik storefront on Francisquito Ave with grand opening banners, balloons, and flower stands" class="w-full h-auto rounded-[8px]" loading="lazy" />
+      <figcaption class="font-script text-navy text-2xl text-center pt-3">grand opening day on Francisquito</figcaption>
+    </figure>
+    <div class="text-center lg:text-left">
+      <p class="reveal font-script text-orange text-4xl">Under new management</p>
+      <h2 class="reveal font-display font-extrabold text-3xl sm:text-4xl mt-3">SAME LOCATION, BETTER CARE</h2>
+      <div class="reveal mt-5 space-y-4 text-navy/80 text-[16px] font-semibold max-w-[50ch] mx-auto lg:mx-0">
+        <p>
+          Same spot next to the plaza on Francisquito, new people behind the
+          grooming table. Every appointment is one-on-one, every groom is done by
+          hand, and nobody gets rushed.
+        </p>
+        <p>
+          Can't make the trip? Ask about pickup and drop-off, and walk-ins are
+          always welcome when there is room on the schedule.
+        </p>
+      </div>
+      <div class="reveal mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-[13px] font-bold text-navy">
+        <span class="chip bg-cream border border-navy/15 rounded-full px-4 py-1.5">✋ Gentle hand grooming</span>
+        <span class="chip bg-cream border border-navy/15 rounded-full px-4 py-1.5">🤝 One-on-one care</span>
+        <span class="chip bg-cream border border-navy/15 rounded-full px-4 py-1.5">🚗 Pickup + drop-off</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- visit -->
+<section id="visit" class="bg-navy text-cream">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="reveal text-center">
+      <p class="font-script text-yellow text-4xl">Come say hi</p>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl mt-3">WEST COVINA, EVERY DAY OF THE WEEK</h2>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-6 max-w-[980px] mx-auto">
+      <div class="reveal bg-cream/5 border border-cream/15 rounded-3xl p-6 sm:p-7 text-center">
+        <h3 class="font-display font-extrabold text-lg text-yellow">FIND US</h3>
+        <p class="mt-3 text-[15px] font-semibold text-cream/90">1226 W Francisquito Ave<br />West Covina, CA 91790</p>
+        <a class="mt-3 py-2 inline-block text-[14px] font-bold underline decoration-yellow decoration-2 underline-offset-4 hover:text-yellow transition"
+           href="https://www.google.com/maps/dir/Current+Location/1226+W+Francisquito+Ave,+West+Covina,+CA+91790" target="_blank" rel="noopener">
+          Get directions
+        </a>
+      </div>
+      <div class="reveal bg-cream/5 border border-cream/15 rounded-3xl p-6 sm:p-7 text-center">
+        <h3 class="font-display font-extrabold text-lg text-yellow">HOURS</h3>
+        <p class="mt-3 text-[15px] font-semibold text-cream/90">Monday to Thursday<br />9:30am to 5:00pm</p>
+        <p class="mt-2 text-[15px] font-semibold text-cream/90">Friday to Sunday<br />9:30am to 6:00pm</p>
+      </div>
+      <div class="reveal bg-cream/5 border border-cream/15 rounded-3xl p-6 sm:p-7 text-center">
+        <h3 class="font-display font-extrabold text-lg text-yellow">REACH US</h3>
+        <p class="mt-3 text-[15px] font-semibold"><a class="py-1.5 inline-block hover:text-yellow transition" href="tel:+16264223201">Call (626) 422-3201</a></p>
+        <p class="text-[15px] font-semibold"><a class="py-1.5 inline-block hover:text-yellow transition" href="sms:6269291618">Text (626) 929-1618</a></p>
+        <p class="mt-2 text-[13px] text-cream/60 font-semibold">Follow <a class="inline-block py-1 underline underline-offset-2 hover:text-yellow transition" href="https://www.instagram.com/happytikpetgrooming/" target="_blank" rel="noopener">@happytikpetgrooming</a></p>
+      </div>
+    </div>
+
+    <div class="reveal mt-10 text-center">
+      <a href="https://business.joinsmiley.com/Walnut-Valley-Happy-Tik-Pet-Grooming-KGX3y/book-now" target="_blank" rel="noopener"
+         class="btn-pop-orange btn-pop inline-block bg-orange text-white font-display font-bold text-base sm:text-lg px-8 py-3 rounded-full">
+        Book online now
+      </a>
+      <p class="mt-4 text-[13px] text-cream/60 font-semibold">Booking runs on our existing system. Your appointment goes straight to us.</p>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="bg-navyDk text-cream">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="img/logo.png" alt="" class="h-12 w-auto bg-cream rounded-xl p-1.5" />
+      <p class="text-[13px] text-cream/70">One-on-one pet grooming<br />West Covina, CA</p>
+    </div>
+    <div class="text-[13px] text-cream/70 sm:text-right">
+      <p>Preview by <span class="text-cream font-bold">WestCo App Studio</span></p>
+      <p class="mt-1">
+        <a class="inline-block py-1.5 underline underline-offset-2 hover:text-yellow transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
+        · <a class="inline-block py-1.5 underline underline-offset-2 hover:text-yellow transition" href="tel:+12135229136">(213) 522-9136</a>
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-cream/10">
+    <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-2 text-[10px] uppercase tracking-[0.2em] text-cream/40">
+      <span>© 2026 Happy Tik Pet Grooming</span>
+      <span>Website preview · not the official site</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<!-- Photos: storefront, schnauzer before/after, frenchie posts from @happytikpetgrooming
+     on Instagram. Logo from their Smiley booking page, hosted locally.
+     Cat photo: Pexels 6816855 (only remaining stock image). -->
+
+</body>
+</html>
