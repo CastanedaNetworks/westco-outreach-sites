@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Yama House · Modern Japanese Kitchen · Opening Summer 2026 in West Covina</title>
+<meta name="description" content="Yama House, a modern Japanese kitchen with premium all-you-can-eat and a la carte, opens Summer 2026 at The Lakes in West Covina. Now hiring the opening team." />
+<meta name="robots" content="noindex,nofollow" />
+
+<meta property="og:title" content="Yama House · Opening Summer 2026 · West Covina" />
+<meta property="og:description" content="Premium all-you-can-eat and a la carte Japanese kitchen, coming to The Lakes. Now hiring the opening team." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Yuji+Boku&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans:    ['"Zen Kaku Gothic New"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          display: ['"Shippori Mincho B1"', 'Georgia', 'serif'],
+          brush:   ['"Yuji Boku"', 'serif'],
+        },
+        colors: {
+          washi:   '#f6efe1',
+          washi2:  '#fdf8ee',
+          ink:     '#1c1a17',
+          inkSoft: '#564f45',
+          beni:    '#b32025',
+          beniDk:  '#8c1318',
+          sakura:  '#e9aebc',
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+  .caps { letter-spacing: 0.16em; }
+
+  /* washi paper grain */
+  .paper {
+    background-image:
+      radial-gradient(900px 420px at 90% -10%, rgba(179,32,37,0.05), transparent 60%),
+      radial-gradient(700px 380px at -5% 40%, rgba(233,174,188,0.10), transparent 55%),
+      repeating-linear-gradient(94deg, rgba(28,26,23,0.018) 0 2px, transparent 2px 7px);
+  }
+
+  /* hanko seal stamp */
+  .hanko {
+    background: #b32025;
+    color: #f6efe1;
+    font-family: "Yuji Boku", serif;
+    writing-mode: vertical-rl;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(140,19,24,0.35);
+  }
+
+  .frame { border-radius: 16px; overflow: hidden; box-shadow: 0 18px 40px rgba(28,26,23,0.18); }
+
+  .btn-ink { transition: background .2s ease, color .2s ease, transform .15s ease; }
+  .btn-ink:hover { transform: translateY(-2px); }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .petal { animation: none !important; }
+  }
+
+  /* sakura petals */
+  .petal {
+    position: absolute;
+    width: 14px; height: 11px;
+    background: #e9aebc;
+    border-radius: 70% 30% 60% 40% / 60% 50% 50% 40%;
+    opacity: .55;
+  }
+  .petal-drift { animation: drift 11s ease-in-out infinite; }
+  @keyframes drift {
+    0%   { transform: translate(0,0) rotate(0deg); }
+    50%  { transform: translate(-26px, 34px) rotate(140deg); }
+    100% { transform: translate(0,0) rotate(360deg); }
+  }
+
+  .dotted-leader { display: flex; align-items: baseline; gap: 10px; }
+  .dotted-leader .fill { flex: 1; border-bottom: 2px dotted rgba(246,239,225,0.3); transform: translateY(-4px); }
+</style>
+</head>
+
+<body class="font-sans bg-washi text-ink">
+
+<!-- announcement -->
+<div class="bg-beni text-washi text-center px-4 py-2.5 text-[12px] sm:text-[13px] font-bold caps uppercase">
+  Grand opening · Summer 2026 · The Lakes, West Covina
+</div>
+
+<!-- header -->
+<header class="bg-washi/95 backdrop-blur sticky top-0 z-50 border-b border-ink/10">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5 min-w-0">
+      <img src="img/logo.jpg" alt="Yama House logo" class="w-10 h-10 rounded-full border border-ink/15 shrink-0" />
+      <span class="font-display font-bold text-lg sm:text-xl leading-none whitespace-nowrap">Yama House</span>
+      <span class="hidden sm:inline font-brush text-beni text-xl leading-none pt-1">山屋</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[14px] font-bold text-inkSoft">
+      <a class="hover:text-beni transition" href="#concept">Concept</a>
+      <a class="hover:text-beni transition" href="#hiring">Hiring</a>
+      <a class="hover:text-beni transition" href="#location">Location</a>
+    </nav>
+    <a href="https://www.instagram.com/yamahouseofficial/" target="_blank" rel="noopener"
+       class="btn-ink bg-ink text-washi hover:bg-beni font-display font-bold text-[13px] sm:text-sm caps uppercase px-5 py-2.5 rounded-lg shrink-0">
+      Follow
+    </a>
+  </div>
+</header>
+
+<!-- hero -->
+<section id="top" class="paper relative overflow-hidden">
+  <span class="petal" style="top:12%; left:6%;" aria-hidden="true"></span>
+  <span class="petal petal-drift" style="top:8%; right:10%;" aria-hidden="true"></span>
+  <span class="petal" style="top:46%; right:4%; transform: rotate(120deg);" aria-hidden="true"></span>
+  <span class="petal" style="bottom:14%; left:10%; transform: rotate(220deg);" aria-hidden="true"></span>
+
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-16 sm:pb-24 text-center">
+    <figure class="reveal relative inline-block">
+      <svg class="absolute inset-0 m-auto w-[115%] h-[115%] -translate-y-3" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+        <circle cx="100" cy="100" r="88" stroke="rgba(179,32,37,0.16)" stroke-width="9"
+                stroke-linecap="round" stroke-dasharray="470 90" transform="rotate(-60 100 100)"/>
+      </svg>
+      <img src="img/logo-lockup.jpg" alt="Yama House, modern Japanese kitchen. Ink-brush Mount Fuji under a red sun." class="relative w-[260px] sm:w-[360px] h-auto mix-blend-multiply" loading="eager" />
+    </figure>
+
+    <h1 class="reveal font-display font-bold leading-[1.2] mt-8 text-[7.4vw] sm:text-4xl lg:text-[44px] max-w-[24ch] mx-auto">
+      Premium all-you-can-eat is coming to The Lakes.
+    </h1>
+    <p class="reveal mt-5 text-inkSoft text-[16px] sm:text-lg font-medium max-w-[54ch] mx-auto">
+      Yama House is a modern Japanese kitchen opening this summer at
+      1230 Lakes Dr in West Covina. All-you-can-eat done premium, a la carte
+      for the purists, and a drink list to match.
+    </p>
+    <div class="reveal mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a href="https://www.instagram.com/yamahouseofficial/" target="_blank" rel="noopener"
+         class="btn-ink bg-beni text-washi hover:bg-ink font-display font-bold caps uppercase text-sm px-7 py-3 rounded-lg">
+        Follow the build
+      </a>
+      <a href="#hiring" class="inline-block py-2 font-bold underline decoration-beni decoration-2 underline-offset-4 hover:text-beni transition">
+        We're hiring the opening team
+      </a>
+    </div>
+
+    <figure class="reveal relative mt-12 sm:mt-16 max-w-[920px] mx-auto">
+      <div class="frame">
+        <img src="img/nigiri-tray.jpg" alt="Seared salmon nigiri lined up on a wooden tray" class="w-full h-[240px] sm:h-[380px] object-cover" loading="eager" />
+      </div>
+      <span class="hanko absolute -top-5 right-4 sm:right-8 text-xl sm:text-2xl px-2.5 py-3 rotate-3" aria-hidden="true">山屋</span>
+    </figure>
+  </div>
+</section>
+
+<!-- concept -->
+<section id="concept" class="bg-washi2 border-y border-ink/10">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="reveal text-center max-w-[58ch] mx-auto">
+      <p class="font-brush text-beni text-3xl">いただきます</p>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3">TWO WAYS TO DO DINNER</h2>
+      <p class="mt-4 text-inkSoft text-[16px] font-medium">
+        The menu is being finalized in the kitchen right now, and it will drop on
+        Instagram first along with the opening date. Here is the shape of it.
+      </p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-6 sm:gap-8">
+      <article class="reveal frame bg-ink text-washi">
+        <img src="img/sushi-dark.jpg" alt="Server carrying a full platter of specialty sushi rolls" class="w-full h-56 sm:h-64 object-cover" loading="lazy" />
+        <div class="p-6 sm:p-8">
+          <h3 class="font-display font-bold text-2xl text-washi">PREMIUM ALL-YOU-CAN-EAT</h3>
+          <p class="mt-3 text-[15px] text-washi/80 font-medium">
+            Round after round, made when you order it and brought out fresh,
+            until you wave the white flag. No trays sitting out, no shortcuts.
+          </p>
+        </div>
+      </article>
+      <article class="reveal frame bg-washi border border-ink/10">
+        <img src="img/sushi-board.jpg" alt="Nigiri and rolls on a wooden serving board with tea" class="w-full h-56 sm:h-64 object-cover" loading="lazy" />
+        <div class="p-6 sm:p-8">
+          <h3 class="font-display font-bold text-2xl">A LA CARTE</h3>
+          <p class="mt-3 text-[15px] text-inkSoft font-medium">
+            Not in marathon mode? Order piece by piece and keep it focused.
+            And with a full liquor license, the drink list will hold its own.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="reveal mt-10 frame relative max-w-[920px] mx-auto">
+      <img src="img/chef-hands.jpg" alt="Chef's hands laying salmon over a roll on a bamboo mat" class="w-full h-[200px] sm:h-[280px] object-cover" loading="lazy" />
+      <p class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 to-transparent text-washi font-display font-bold text-lg sm:text-2xl px-6 sm:px-8 pb-5 pt-14">
+        Built fresh, by hand, every single order.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- hiring -->
+<section id="hiring" class="bg-ink text-washi relative overflow-hidden">
+  <p class="absolute font-brush text-washi/[0.06] select-none leading-none text-[44vw] sm:text-[360px] -right-8 -top-10" aria-hidden="true">山屋</p>
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-12 gap-10 items-center relative z-10">
+
+    <div class="lg:col-span-7">
+      <p class="reveal font-brush text-sakura text-3xl">一緒に</p>
+      <h2 class="reveal font-display font-bold text-3xl sm:text-5xl mt-3 text-washi">JOIN THE OPENING TEAM</h2>
+      <p class="reveal mt-4 text-washi/85 text-[16px] font-medium max-w-[52ch]">
+        We're building something special in West Covina. Be part of our journey
+        from day one. Japanese restaurant experience is preferred but not required.
+      </p>
+
+      <ul class="reveal mt-7 grid grid-cols-1 min-[420px]:grid-cols-2 gap-x-8 gap-y-3 text-[15px] font-bold max-w-[560px]">
+        <li class="dotted-leader"><span>Host</span><span class="fill"></span><span class="text-sakura font-display">FOH</span></li>
+        <li class="dotted-leader"><span>Server</span><span class="fill"></span><span class="text-sakura font-display">FOH</span></li>
+        <li class="dotted-leader"><span>Food runner / busser</span><span class="fill"></span><span class="text-sakura font-display">FOH</span></li>
+        <li class="dotted-leader"><span>FOH supervisor</span><span class="fill"></span><span class="text-sakura font-display">FOH</span></li>
+        <li class="dotted-leader"><span>Sushi chef / helper</span><span class="fill"></span><span class="text-sakura font-display">BOH</span></li>
+        <li class="dotted-leader"><span>Prep cook / line cook</span><span class="fill"></span><span class="text-sakura font-display">BOH</span></li>
+        <li class="dotted-leader"><span>Dishwasher</span><span class="fill"></span><span class="text-sakura font-display">BOH</span></li>
+      </ul>
+
+      <div class="reveal mt-8 flex flex-wrap items-center gap-4">
+        <a href="mailto:JshineYamaHouse@gmail.com?subject=Yama%20House%20opening%20team"
+           class="btn-ink bg-beni text-washi hover:bg-washi hover:text-ink font-display font-bold caps uppercase text-sm px-6 py-3 rounded-lg">
+          Email your resume
+        </a>
+        <a href="https://www.instagram.com/yamahouseofficial/" target="_blank" rel="noopener"
+           class="inline-block py-2 font-bold underline decoration-sakura decoration-2 underline-offset-4 hover:text-sakura transition">
+          or DM @YamaHouseOfficial
+        </a>
+      </div>
+    </div>
+
+    <figure class="reveal lg:col-span-5 max-w-[360px] mx-auto w-full">
+      <div class="bg-washi p-2.5 pb-4 rounded-xl rotate-[2deg] shadow-2xl">
+        <img src="img/hiring-flyer.jpg" alt="Yama House hiring flyer listing open positions for the opening team" class="w-full h-auto rounded-md" loading="lazy" />
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- location -->
+<section id="location" class="paper relative overflow-hidden">
+  <span class="petal" style="top:18%; right:8%;" aria-hidden="true"></span>
+  <span class="petal petal-drift" style="bottom:20%; left:7%;" aria-hidden="true"></span>
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
+    <p class="reveal font-brush text-beni text-3xl">場所</p>
+    <h2 class="reveal font-display font-bold text-3xl sm:text-4xl mt-3">FIND US AT THE LAKES</h2>
+    <p class="reveal mt-4 text-inkSoft text-[16px] font-medium max-w-[50ch] mx-auto">
+      1230 Lakes Dr, Suite 107, West Covina, CA 91790. Doors open Summer 2026,
+      and the exact date lands on Instagram first.
+    </p>
+    <div class="reveal mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a href="https://www.google.com/maps/dir/Current+Location/1230+Lakes+Dr+Suite+107,+West+Covina,+CA+91790" target="_blank" rel="noopener"
+         class="btn-ink bg-ink text-washi hover:bg-beni font-display font-bold caps uppercase text-sm px-6 py-3 rounded-lg">
+        Open in Google Maps
+      </a>
+      <a href="https://www.instagram.com/yamahouseofficial/" target="_blank" rel="noopener"
+         class="inline-block py-2 font-bold underline decoration-beni decoration-2 underline-offset-4 hover:text-beni transition">
+        @YamaHouseOfficial
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="bg-[#14120f] text-washi">
+  <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="img/logo.jpg" alt="" class="w-11 h-11 rounded-full border border-washi/20" />
+      <p class="text-[13px] text-washi/70">Modern Japanese kitchen<br />The Lakes · West Covina, CA</p>
+    </div>
+    <div class="text-[13px] text-washi/70 sm:text-right">
+      <p>Preview by <span class="text-washi font-bold">WestCo App Studio</span></p>
+      <p class="mt-1">
+        <a class="inline-block py-1.5 underline underline-offset-2 hover:text-sakura transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
+        · <a class="inline-block py-1.5 underline underline-offset-2 hover:text-sakura transition" href="tel:+12135229136">(213) 522-9136</a>
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-washi/10">
+    <div class="max-w-[1140px] mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-2 text-[10px] uppercase tracking-[0.2em] text-washi/40">
+      <span>© 2026 Yama House</span>
+      <span>山屋 · Mountain House</span>
+      <span>Website preview · not the official site</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<!-- Brand assets: logo + hiring flyer from Yama House (@YamaHouseOfficial), logo lockup
+     cropped from their flyer. Food photos are placeholder stock (Pexels): 28559483
+     (nigiri tray), 11470545 (roll platter), 2098085 (sushi board), 8951104 (chef hands).
+     Swap with their own photography before launch. -->
+
+</body>
+</html>
