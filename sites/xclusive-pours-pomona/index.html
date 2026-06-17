@@ -232,10 +232,10 @@
   </div>
   <div class="max-w-[1280px] mx-auto px-5 pb-20 sm:pb-24 relative z-10">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-line rounded-2xl overflow-hidden border border-line">
-      <div class="reveal bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-grad leading-none">100+</p><p class="mt-2 text-[14px] text-muted">Flake, metallic &amp; solid colors on the menu</p></div>
-      <div class="reveal d1 bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-grad leading-none">1 of 1</p><p class="mt-2 text-[14px] text-muted">Every metallic pour is hand-marbled, never repeated</p></div>
-      <div class="reveal d2 bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-grad leading-none">All SoCal</p><p class="mt-2 text-[14px] text-muted">Pomona based, traveling for the right project</p></div>
-      <div class="reveal d3 bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-grad leading-none">Free</p><p class="mt-2 text-[14px] text-muted">No-cost quotes, honest pricing, clean work</p></div>
+      <div class="reveal bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-chrome leading-none">100+</p><p class="mt-2 text-[14px] text-muted">Flake, metallic &amp; solid colors on the menu</p></div>
+      <div class="reveal d1 bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-chrome leading-none">1 of 1</p><p class="mt-2 text-[14px] text-muted">Every metallic pour is hand-marbled, never repeated</p></div>
+      <div class="reveal d2 bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-chrome leading-none">All SoCal</p><p class="mt-2 text-[14px] text-muted">Pomona based, traveling for the right project</p></div>
+      <div class="reveal d3 bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-chrome leading-none">Free</p><p class="mt-2 text-[14px] text-muted">No-cost quotes, honest pricing, clean work</p></div>
     </div>
   </div>
 </section>
@@ -245,67 +245,71 @@
   <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28">
     <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
       <div>
-        <p class="reveal eyebrow text-[12px] text-cyan mb-3">What we pour</p>
+        <p class="reveal eyebrow text-[12px] text-muted2 mb-3">What we pour</p>
         <h2 class="reveal d1 display text-[clamp(2rem,5.5vw,3.6rem)] text-ink max-w-[16ch]">Systems for every slab</h2>
       </div>
       <p class="reveal d2 text-[15px] text-muted max-w-[42ch]">From a one-day garage to a full metallic showpiece, we match the system to how the space gets used.</p>
     </div>
 
-    <div class="grid lg:grid-cols-12 gap-5 sm:gap-6">
-      <!-- feature: metallic -->
-      <article class="card reveal lg:col-span-7 relative rounded-2xl overflow-hidden border border-line group min-h-[420px] flex">
-        <img src="img/floor-orange-room.jpg" alt="Orange and carbon metallic epoxy garage floor" class="tile-img absolute inset-0 w-full h-full object-cover" loading="eager" decoding="async" fetchpriority="high" />
-        <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent"></div>
-        <div class="relative z-10 mt-auto p-7 sm:p-9">
-          <span class="eyebrow text-[11px] text-cyan">Signature</span>
-          <h3 class="display text-[34px] sm:text-[44px] text-ink mt-2">Metallic Epoxy</h3>
-          <p class="text-[15px] text-muted mt-2 max-w-[46ch]">Liquid pigment marbled by hand into a deep, three-dimensional, mirror-gloss floor. Lava, marble, ocean, galaxy, your call. Every pour is one of one.</p>
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+      <figure class="reveal lg:col-span-5 relative rounded-2xl overflow-hidden group min-h-[380px] lg:min-h-0 lg:h-full">
+        <img src="img/floor-orange-close.jpg" alt="Hand-marbled orange and carbon metallic epoxy floor" class="tile-img absolute inset-0 w-full h-full object-cover" loading="eager" decoding="async" fetchpriority="high" />
+        <div class="absolute inset-0 bg-gradient-to-t from-bg/85 via-transparent to-bg/15"></div>
+        <figcaption class="absolute bottom-0 inset-x-0 p-6 flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-cyan shadow-[0_0_12px_#2ec5f0]"></span>
+          <span class="cond font-bold uppercase tracking-wide text-[13px] text-ink">Hand-marbled metallic, our signature</span>
+        </figcaption>
+      </figure>
+      <div class="lg:col-span-7 flex flex-col justify-center">
+        <div class="border-t border-line">
+          <article class="reveal group border-b border-line py-6 sm:py-7">
+            <div class="flex items-start gap-5 sm:gap-8">
+              <span class="cond font-bold text-[14px] text-muted2 pt-2.5 w-7 shrink-0">01</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-3 flex-wrap"><h3 class="display text-[26px] sm:text-[32px] text-ink group-hover:translate-x-1 transition-transform">Metallic Epoxy</h3>
+                  <span class="cond uppercase text-[10px] tracking-[0.2em] text-cyan border border-cyan/30 rounded-full px-2.5 py-1">Signature</span></div>
+                <p class="text-[14.5px] text-muted mt-1.5 max-w-[60ch]">Liquid pigment marbled by hand into a deep, three-dimensional, mirror-gloss floor. Lava, marble, ocean, your call. Every pour is one of one.</p>
+              </div>
+            </div>
+          </article>
+          <article class="reveal d1 group border-b border-line py-6 sm:py-7">
+            <div class="flex items-start gap-5 sm:gap-8">
+              <span class="cond font-bold text-[14px] text-muted2 pt-2.5 w-7 shrink-0">02</span>
+              <div class="flex-1 min-w-0">
+                <h3 class="display text-[26px] sm:text-[32px] text-ink group-hover:translate-x-1 transition-transform">Flake &amp; Chip Systems</h3>
+                <p class="text-[14.5px] text-muted mt-1.5 max-w-[60ch]">Broadcast vinyl flake for a tough, textured, slip-resistant finish that hides everything. Garages, patios, shops.</p>
+              </div>
+            </div>
+          </article>
+          <article class="reveal d2 group border-b border-line py-6 sm:py-7">
+            <div class="flex items-start gap-5 sm:gap-8">
+              <span class="cond font-bold text-[14px] text-muted2 pt-2.5 w-7 shrink-0">03</span>
+              <div class="flex-1 min-w-0">
+                <h3 class="display text-[26px] sm:text-[32px] text-ink group-hover:translate-x-1 transition-transform">Garage &amp; Patio</h3>
+                <p class="text-[14.5px] text-muted mt-1.5 max-w-[60ch]">The classic upgrade. Hot-tire proof, easy to clean, and finished in a day or two.</p>
+              </div>
+            </div>
+          </article>
+          <article class="reveal d2 group border-b border-line py-6 sm:py-7">
+            <div class="flex items-start gap-5 sm:gap-8">
+              <span class="cond font-bold text-[14px] text-muted2 pt-2.5 w-7 shrink-0">04</span>
+              <div class="flex-1 min-w-0">
+                <h3 class="display text-[26px] sm:text-[32px] text-ink group-hover:translate-x-1 transition-transform">Commercial &amp; Industrial</h3>
+                <p class="text-[14.5px] text-muted mt-1.5 max-w-[60ch]">Showrooms, salons, shops and warehouses. Built to take traffic and still shine.</p>
+              </div>
+            </div>
+          </article>
+          <article class="reveal d3 group border-b border-line py-6 sm:py-7">
+            <div class="flex items-start gap-5 sm:gap-8">
+              <span class="cond font-bold text-[14px] text-muted2 pt-2.5 w-7 shrink-0">05</span>
+              <div class="flex-1 min-w-0">
+                <h3 class="display text-[26px] sm:text-[32px] text-ink group-hover:translate-x-1 transition-transform">Custom Ceilings</h3>
+                <p class="text-[14.5px] text-muted mt-1.5 max-w-[60ch]">Yes, ceilings too. The same metallic art overhead, for spaces that want the wow factor everywhere.</p>
+              </div>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <div class="lg:col-span-5 grid sm:grid-cols-2 lg:grid-cols-1 gap-5 sm:gap-6">
-        <article class="card reveal d1 relative rounded-2xl overflow-hidden border border-line group min-h-[200px] flex">
-          <img src="img/patio-after.jpg" alt="Flake epoxy patio floor" class="tile-img absolute inset-0 w-full h-full object-cover" loading="eager" decoding="async" />
-          <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/55 to-transparent"></div>
-          <div class="relative z-10 mt-auto p-6">
-            <h3 class="display text-[26px] text-ink">Flake / Chip Systems</h3>
-            <p class="text-[14px] text-muted mt-1.5 max-w-[42ch]">Broadcast vinyl flake for a tough, textured, slip-resistant finish. Garages, patios, shops.</p>
-          </div>
-        </article>
-        <article class="card reveal d2 relative rounded-2xl overflow-hidden border border-line group min-h-[200px] flex">
-          <img src="img/marble-salon.jpg" alt="White marble metallic floor in a commercial space" class="tile-img absolute inset-0 w-full h-full object-cover object-top" loading="eager" decoding="async" />
-          <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/55 to-transparent"></div>
-          <div class="relative z-10 mt-auto p-6">
-            <h3 class="display text-[26px] text-ink">Commercial &amp; Industrial</h3>
-            <p class="text-[14px] text-muted mt-1.5 max-w-[42ch]">Showrooms, salons, shops and warehouses. Built to take traffic and still shine.</p>
-          </div>
-        </article>
       </div>
-    </div>
-
-    <!-- secondary row -->
-    <div class="grid sm:grid-cols-3 gap-5 sm:gap-6 mt-5 sm:mt-6">
-      <article class="card reveal rounded-2xl border border-line bg-surface p-7">
-        <div class="w-11 h-11 rounded-xl grid place-items-center bg-cyan/10 border border-cyan/25 text-cyan mb-4">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h2l2-7 4 14 3-9 2 4h5"/></svg>
-        </div>
-        <h3 class="display text-[24px] text-ink">Garage &amp; Patio</h3>
-        <p class="text-[14px] text-muted mt-1.5">The classic upgrade. Hot-tire proof, easy to clean, finished in a day or two.</p>
-      </article>
-      <article class="card reveal d1 rounded-2xl border border-line bg-surface p-7">
-        <div class="w-11 h-11 rounded-xl grid place-items-center bg-cyan/10 border border-cyan/25 text-cyan mb-4">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19V8l9-4 9 4v11"/><path d="M3 19h18"/><path d="M8 19v-6h8v6"/></svg>
-        </div>
-        <h3 class="display text-[24px] text-ink">Custom Ceilings</h3>
-        <p class="text-[14px] text-muted mt-1.5">Yes, ceilings too. The same metallic art overhead, for spaces that want the wow factor everywhere.</p>
-      </article>
-      <article class="card reveal d2 rounded-2xl border border-line bg-surface p-7">
-        <div class="w-11 h-11 rounded-xl grid place-items-center bg-cyan/10 border border-cyan/25 text-cyan mb-4">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
-        </div>
-        <h3 class="display text-[24px] text-ink">Repairs &amp; Resurfacing</h3>
-        <p class="text-[14px] text-muted mt-1.5">Cracked, stained or peeling concrete? We grind it back and give it a second life.</p>
-      </article>
     </div>
   </div>
 </section>
@@ -316,7 +320,7 @@
   <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28 relative z-10">
     <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
       <div>
-        <p class="reveal eyebrow text-[12px] text-cyan mb-3">The work</p>
+        <p class="reveal eyebrow text-[12px] text-muted2 mb-3">The work</p>
         <h2 class="reveal d1 display text-[clamp(2rem,5.5vw,3.6rem)] text-ink max-w-[16ch]">Floors we have poured</h2>
       </div>
       <a href="https://www.instagram.com/xclusive.pours/" target="_blank" rel="noopener" class="reveal d2 group inline-flex items-center gap-2 text-[14px] font-semibold text-ink hover:text-cyan transition">
@@ -325,32 +329,43 @@
       </a>
     </div>
 
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 auto-rows-[150px] sm:auto-rows-[200px]">
-      <figure class="group reveal relative rounded-2xl overflow-hidden border border-line col-span-2 row-span-2">
-        <img src="img/floor-orange-room.jpg" alt="Orange and carbon metallic epoxy garage floor" class="tile-img w-full h-full object-cover" loading="lazy" />
-        <figcaption class="absolute inset-0 flex items-end p-5 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[16px] text-ink">Orange &amp; Carbon Metallic <span class="text-muted font-normal">/ Garage</span></span></figcaption>
+        <div class="columns-2 lg:columns-3 gap-3 sm:gap-4">
+      <figure class="group reveal relative rounded-xl overflow-hidden mb-3 sm:mb-4 break-inside-avoid ring-1 ring-white/10">
+        <img src="img/hero-poster.jpg" alt="Lava orange metallic epoxy floor" class="tile-img w-full object-cover aspect-[3/4]" loading="lazy" />
+        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Lava Metallic <span class="text-muted font-normal">· Garage</span></span></figcaption>
       </figure>
-      <figure class="group reveal d1 relative rounded-2xl overflow-hidden border border-line">
-        <img src="img/metallic-blue.jpg" alt="Cambridge blue metallic epoxy interior floor" class="tile-img w-full h-full object-cover" loading="lazy" />
-        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Cambridge Blue Metallic</span></figcaption>
+      <figure class="group reveal d1 relative rounded-xl overflow-hidden mb-3 sm:mb-4 break-inside-avoid ring-1 ring-white/10">
+        <img src="img/floor-orange-long.jpg" alt="High-gloss orange and carbon metallic floor" class="tile-img w-full object-cover aspect-[4/5]" loading="lazy" />
+        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Orange &amp; Carbon Metallic</span></figcaption>
       </figure>
-      <figure class="group reveal d2 relative rounded-2xl overflow-hidden border border-line">
-        <img src="img/marble-salon.jpg" alt="White marble metallic floor in a salon" class="tile-img w-full h-full object-cover" loading="lazy" />
-        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">White Marble / Salon</span></figcaption>
+      <figure class="group reveal d2 relative rounded-xl overflow-hidden mb-3 sm:mb-4 break-inside-avoid ring-1 ring-white/10">
+        <img src="img/metallic-blue.jpg" alt="Cambridge blue metallic interior floor" class="tile-img w-full object-cover aspect-[3/4]" loading="lazy" />
+        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Cambridge Blue Metallic</span></figcaption>
       </figure>
-      <figure class="group reveal d1 relative rounded-2xl overflow-hidden border border-line col-span-2">
-        <img src="img/floor-orange-long.jpg" alt="High gloss metallic epoxy floor" class="tile-img w-full h-full object-cover" loading="lazy" />
-        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Mirror-Gloss Metallic / Showroom</span></figcaption>
+      <figure class="group reveal d1 relative rounded-xl overflow-hidden mb-3 sm:mb-4 break-inside-avoid ring-1 ring-white/10">
+        <img src="img/marble-salon.jpg" alt="White marble metallic floor in a salon" class="tile-img w-full object-cover aspect-[4/5]" loading="lazy" />
+        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">White Marble <span class="text-muted font-normal">· Salon</span></span></figcaption>
       </figure>
-      <figure class="group reveal d2 relative rounded-2xl overflow-hidden border border-line">
-        <img src="img/marble-crouch.jpg" alt="Carrara style metallic living space floor" class="tile-img w-full h-full object-cover" loading="lazy" />
-        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Carrara-Style Metallic</span></figcaption>
+      <figure class="group reveal d2 relative rounded-xl overflow-hidden mb-3 sm:mb-4 break-inside-avoid ring-1 ring-white/10">
+        <img src="img/marble-crouch.jpg" alt="White marble metallic living space floor" class="tile-img w-full object-cover aspect-[3/4]" loading="lazy" />
+        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">White Marble Metallic</span></figcaption>
       </figure>
-      <figure class="group reveal d3 relative rounded-2xl overflow-hidden border border-line">
-        <img src="img/patio-after.jpg" alt="Flake epoxy covered patio" class="tile-img w-full h-full object-cover" loading="lazy" />
-        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Full Flake / Patio</span></figcaption>
+      <figure class="group reveal d3 relative rounded-xl overflow-hidden mb-3 sm:mb-4 break-inside-avoid ring-1 ring-white/10">
+        <img src="img/patio-after.jpg" alt="Flake epoxy covered patio" class="tile-img w-full object-cover aspect-[4/3]" loading="lazy" />
+        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Full Flake <span class="text-muted font-normal">· Patio</span></span></figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<!-- STATEMENT BAND -->
+<section class="relative h-[54vh] min-h-[360px] flex items-center justify-center overflow-hidden border-y border-line">
+  <img src="img/floor-orange-room.jpg" alt="Hand-marbled metallic epoxy floor" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
+  <div class="absolute inset-0 bg-bg/55"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-bg via-transparent to-bg"></div>
+  <div class="relative z-10 text-center px-5">
+    <p class="reveal eyebrow text-[12px] text-cyan mb-4">Hand-poured, never repeated</p>
+    <h2 class="reveal d1 display text-[clamp(2.6rem,9vw,5.6rem)] text-ink leading-[.88]">No two floors<br class="hidden sm:block"> alike.</h2>
   </div>
 </section>
 
@@ -359,7 +374,7 @@
   <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28">
     <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
       <div class="lg:col-span-5">
-        <p class="reveal eyebrow text-[12px] text-cyan mb-3">Before &amp; after</p>
+        <p class="reveal eyebrow text-[12px] text-muted2 mb-3">Before &amp; after</p>
         <h2 class="reveal d1 display text-[clamp(2rem,5vw,3.4rem)] text-ink leading-[.98] max-w-[14ch]">Same slab. New life.</h2>
         <p class="reveal d2 mt-5 text-[16px] leading-relaxed text-muted max-w-[46ch]">
           Tired, stained patio concrete to a full flake system, sealed and bulletproof. Drag the handle and watch it transform.
@@ -388,7 +403,7 @@
   <div class="glow" style="width:440px;height:440px;background:radial-gradient(circle,#2ec5f0,transparent 70%);top:60px;right:-140px;opacity:.16"></div>
   <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28 relative z-10">
     <div class="text-center max-w-[640px] mx-auto mb-12">
-      <p class="reveal eyebrow text-[12px] text-cyan mb-3">Color studio</p>
+      <p class="reveal eyebrow text-[12px] text-muted2 mb-3">Color studio</p>
       <h2 class="reveal d1 display text-[clamp(2rem,5.5vw,3.6rem)] text-ink">Design your floor</h2>
       <p class="reveal d2 mt-4 text-[16px] text-muted">A few of our favorites below. We carry over 100 flake blends, metallic pigments and solid colors, and we color-match almost anything. Don't see it? We will make it.</p>
     </div>
@@ -439,27 +454,27 @@
 <section id="process" class="relative bg-bg2 border-t border-line">
   <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28">
     <div class="mb-14 max-w-[560px]">
-      <p class="reveal eyebrow text-[12px] text-cyan mb-3">How a pour goes</p>
+      <p class="reveal eyebrow text-[12px] text-muted2 mb-3">How a pour goes</p>
       <h2 class="reveal d1 display text-[clamp(2rem,5.5vw,3.6rem)] text-ink">Four steps, one clean result</h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
       <div class="reveal relative">
-        <span class="cond font-extrabold text-[64px] text-grad leading-none">01</span>
+        <span class="cond font-extrabold text-[64px] text-chrome leading-none">01</span>
         <h3 class="display text-[24px] text-ink mt-2">Consult &amp; quote</h3>
         <p class="text-[14.5px] text-muted mt-2 max-w-[34ch]">Call or DM. We look at the space, talk colors and finish, and send a free, honest quote.</p>
       </div>
       <div class="reveal d1 relative">
-        <span class="cond font-extrabold text-[64px] text-grad leading-none">02</span>
+        <span class="cond font-extrabold text-[64px] text-chrome leading-none">02</span>
         <h3 class="display text-[24px] text-ink mt-2">Grind &amp; prep</h3>
         <p class="text-[14.5px] text-muted mt-2 max-w-[34ch]">Diamond-grind the concrete, fix cracks and profile the slab so the coating bonds for good.</p>
       </div>
       <div class="reveal d2 relative">
-        <span class="cond font-extrabold text-[64px] text-grad leading-none">03</span>
+        <span class="cond font-extrabold text-[64px] text-chrome leading-none">03</span>
         <h3 class="display text-[24px] text-ink mt-2">Pour &amp; design</h3>
         <p class="text-[14.5px] text-muted mt-2 max-w-[34ch]">The fun part. We lay the base, marble the metallics or broadcast the flake, and shape the look live.</p>
       </div>
       <div class="reveal d3 relative">
-        <span class="cond font-extrabold text-[64px] text-grad leading-none">04</span>
+        <span class="cond font-extrabold text-[64px] text-chrome leading-none">04</span>
         <h3 class="display text-[24px] text-ink mt-2">Topcoat &amp; cure</h3>
         <p class="text-[14.5px] text-muted mt-2 max-w-[34ch]">A high-build clear seals it glass-hard. Light foot traffic next day, fully cured within the week.</p>
       </div>
@@ -484,7 +499,7 @@
         </div>
       </div>
       <div class="lg:col-span-7 order-1 lg:order-2">
-        <p class="reveal eyebrow text-[12px] text-cyan mb-3">About</p>
+        <p class="reveal eyebrow text-[12px] text-muted2 mb-3">About</p>
         <h2 class="reveal d1 display text-[clamp(2rem,5vw,3.4rem)] text-ink leading-[.98] max-w-[18ch]">We treat every floor like it is the only one.</h2>
         <div class="reveal d2 mt-6 space-y-4 text-[16px] leading-relaxed text-muted max-w-[58ch]">
           <p>Xclusive Pours is a Pomona-based epoxy specialist working across all of Southern California. Metallic, flake, solid, garages, patios, salons, shops and even ceilings, if it can be coated, we can make it look incredible.</p>
