@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Xclusive Pours · Custom Metallic &amp; Flake Epoxy Floors · Pomona &amp; All SoCal</title>
+<meta name="description" content="Xclusive Pours pours custom metallic and flake epoxy floors for garages, patios, interiors and commercial spaces across Southern California. Hand-poured in Pomona, no two floors alike. Free quotes: (626) 465-2093." />
+<meta name="robots" content="noindex,nofollow" />
+<meta property="og:title" content="Xclusive Pours · Poured Like Liquid. Built Like Stone." />
+<meta property="og:description" content="Custom metallic and flake epoxy floors across Southern California. Hand-poured by Xclusive Pours." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="img/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800;900&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      fontFamily: { sans: ['Sora','ui-sans-serif','system-ui','sans-serif'], cond: ['"Saira Condensed"','"Saira"','sans-serif'] },
+      colors: {
+        bg:'#0a0b0d', bg2:'#0d0f13', surface:'#13161c', surface2:'#191d25',
+        line:'rgba(255,255,255,0.09)', ink:'#eef2f6', muted:'#9aa4b2', muted2:'#6b7480',
+        cyan:'#2ec5f0', cyan2:'#16a7d8', blue:'#1f6fe6',
+      },
+    } }
+  }
+</script>
+<style>
+  :root{ --cyan:#2ec5f0; --blue:#1f6fe6; }
+  html{ scroll-behavior:smooth; }
+  body{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; background:#0a0b0d; }
+  section[id]{ scroll-margin-top:84px; }
+  ::selection{ background:rgba(46,197,240,.3); color:#fff; }
+  /* custom scrollbar */
+  ::-webkit-scrollbar{ width:11px; height:11px; }
+  ::-webkit-scrollbar-track{ background:#0a0b0d; }
+  ::-webkit-scrollbar-thumb{ background:#23282f; border-radius:9px; border:2px solid #0a0b0d; }
+  ::-webkit-scrollbar-thumb:hover{ background:#2e353e; }
+
+  .cond{ font-family:"Saira Condensed",sans-serif; }
+  .eyebrow{ font-family:"Saira Condensed",sans-serif; font-weight:700; letter-spacing:.28em; text-transform:uppercase; }
+  .display{ font-family:"Saira Condensed",sans-serif; font-weight:800; line-height:.92; letter-spacing:.005em; text-transform:uppercase; }
+
+  /* electric brand gradient + chrome */
+  .grad-cyan{ background:linear-gradient(100deg,#3ad2fb,#1f6fe6); }
+  .text-grad{ background:linear-gradient(100deg,#5fe0ff,#2ec5f0 35%,#2f86f2); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .text-chrome{ background:linear-gradient(180deg,#ffffff 0%,#cfd8e2 42%,#8a98a8 60%,#eef4fa 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+  /* grain + glow */
+  .grain:before{ content:""; position:absolute; inset:0; pointer-events:none; opacity:.5; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E"); }
+  .glow{ position:absolute; border-radius:50%; filter:blur(90px); opacity:.5; pointer-events:none; z-index:0; }
+
+  .btn{ transition:transform .18s ease, box-shadow .25s ease, background-color .2s ease, border-color .2s ease, color .2s ease; }
+  .btn:active{ transform:translateY(1px) scale(.99); }
+  .btn-cyan{ position:relative; overflow:hidden; box-shadow:0 8px 30px rgba(31,111,230,.35), inset 0 1px 0 rgba(255,255,255,.25); }
+  .btn-cyan:hover{ box-shadow:0 12px 42px rgba(46,197,240,.5), inset 0 1px 0 rgba(255,255,255,.35); transform:translateY(-2px); }
+  .btn-cyan:before{ content:""; position:absolute; top:0; left:-120%; width:60%; height:100%; transform:skewX(-20deg);
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent); transition:left .6s ease; }
+  .btn-cyan:hover:before{ left:130%; }
+
+  .card{ transition:transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease, border-color .3s ease; }
+  .card:hover{ transform:translateY(-4px); border-color:rgba(46,197,240,.35); box-shadow:0 18px 50px rgba(0,0,0,.5), 0 0 0 1px rgba(46,197,240,.12); }
+
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in{ opacity:1; transform:none; }
+  .d1{ transition-delay:.08s } .d2{ transition-delay:.16s } .d3{ transition-delay:.24s } .d4{ transition-delay:.32s } .d5{ transition-delay:.4s }
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none} }
+
+  /* marquee */
+  .marquee{ display:flex; gap:0; white-space:nowrap; will-change:transform; animation:marq 32s linear infinite; }
+  .marquee:hover{ animation-play-state:paused; }
+  @keyframes marq{ to{ transform:translateX(-50%); } }
+  @media (prefers-reduced-motion:reduce){ .marquee{ animation:none; } }
+
+  /* hero video */
+  .hero-video{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 38%; }
+
+  /* before/after */
+  .ba{ position:relative; overflow:hidden; user-select:none; touch-action:pan-y; cursor:ew-resize; }
+  .ba img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none; }
+  .ba .after{ position:relative; }
+  .ba .before{ clip-path:inset(0 50% 0 0); }
+  .ba-handle{ position:absolute; top:0; bottom:0; left:50%; width:2px; background:linear-gradient(180deg,#3ad2fb,#1f6fe6); transform:translateX(-1px); box-shadow:0 0 18px rgba(46,197,240,.7); }
+  .ba-knob{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:46px; height:46px; border-radius:50%;
+    background:rgba(10,11,13,.7); backdrop-filter:blur(6px); border:2px solid rgba(46,197,240,.9); display:grid; place-items:center; box-shadow:0 6px 22px rgba(0,0,0,.5); }
+
+  .tile-img{ transition:transform .6s cubic-bezier(.2,.7,.2,1); }
+  .group:hover .tile-img{ transform:scale(1.06); }
+
+  .col-tab{ transition:color .2s, background-color .2s, border-color .2s; }
+  .chip{ transition:transform .2s ease, box-shadow .2s ease; }
+  .chip:hover{ transform:translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,.45); }
+
+  .hairline{ height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent); }
+  .underglow{ box-shadow:0 0 0 1px rgba(255,255,255,.05), 0 30px 80px -30px rgba(31,111,230,.5); }
+</style>
+</head>
+<body class="bg-bg text-ink font-sans antialiased overflow-x-hidden">
+
+<!-- top bar -->
+<div class="hidden sm:block bg-black text-muted text-[12px] border-b border-line">
+  <div class="max-w-[1280px] mx-auto px-5 h-9 flex items-center justify-between">
+    <p class="eyebrow text-[11px] text-muted/90">Pomona, CA &nbsp;·&nbsp; Serving all Southern California &nbsp;·&nbsp; We travel</p>
+    <div class="flex items-center gap-5">
+      <a href="https://www.instagram.com/xclusive.pours/" target="_blank" rel="noopener" class="hover:text-ink transition">@xclusive.pours</a>
+      <span class="text-muted2">/</span>
+      <a href="tel:+16264652093" class="hover:text-cyan transition font-semibold tracking-wide">(626) 465-2093</a>
+    </div>
+  </div>
+</div>
+
+<!-- header -->
+<header id="hdr" class="sticky top-0 z-50 bg-bg/80 backdrop-blur-xl border-b border-line transition-colors">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-5 h-[68px] flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5 min-w-0 group" aria-label="Xclusive Pours home">
+      <img src="img/logo.png" alt="Xclusive Pours" class="h-11 w-11 rounded-full ring-1 ring-cyan/40 shadow-[0_0_18px_rgba(46,197,240,.25)]" />
+      <span class="leading-none">
+        <span class="cond font-extrabold text-[20px] tracking-wide italic text-ink block">XCLUSIVE POURS</span>
+        <span class="eyebrow text-[9.5px] text-cyan/90 block mt-0.5">Epoxy Flooring Specialist</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-muted">
+      <a href="#work" class="hover:text-ink transition">Work</a>
+      <a href="#systems" class="hover:text-ink transition">Systems</a>
+      <a href="#colors" class="hover:text-ink transition">Colors</a>
+      <a href="#process" class="hover:text-ink transition">Process</a>
+      <a href="#about" class="hover:text-ink transition">About</a>
+      <a href="#quote" class="btn btn-cyan grad-cyan text-white font-semibold text-[14px] px-5 py-2.5 rounded-full">Free Quote</a>
+    </nav>
+    <div class="flex items-center gap-2 lg:hidden">
+      <a href="tel:+16264652093" class="grid place-items-center w-10 h-10 rounded-full grad-cyan text-white shadow-[0_6px_20px_rgba(31,111,230,.4)]" aria-label="Call">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+      </a>
+      <button id="menuBtn" class="grid place-items-center w-10 h-10 rounded-full border border-line text-ink" aria-label="Menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="menu" class="hidden lg:hidden border-t border-line bg-bg/95 backdrop-blur-xl">
+    <nav class="max-w-[1280px] mx-auto px-5 py-3 flex flex-col text-[16px] font-medium">
+      <a href="#work" class="py-3 border-b border-line">Work</a>
+      <a href="#systems" class="py-3 border-b border-line">Systems</a>
+      <a href="#colors" class="py-3 border-b border-line">Colors</a>
+      <a href="#process" class="py-3 border-b border-line">Process</a>
+      <a href="#about" class="py-3 border-b border-line">About</a>
+      <a href="#quote" class="py-3 mt-1 text-cyan font-semibold">Get a free quote →</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="relative min-h-[92vh] sm:min-h-screen flex items-end overflow-hidden grain">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="img/hero-poster.jpg">
+    <source src="img/hero.mp4" type="video/mp4" />
+  </video>
+  <!-- overlays -->
+  <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/55 to-bg/35"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-bg/85 via-bg/30 to-transparent"></div>
+  <div class="glow" style="width:520px;height:520px;background:radial-gradient(circle,#1f6fe6,transparent 70%);top:-120px;right:-80px;opacity:.35"></div>
+
+  <div class="relative z-10 w-full">
+    <div class="max-w-[1280px] mx-auto px-5 pb-14 sm:pb-20 pt-28">
+      <p class="reveal eyebrow text-[12px] text-cyan mb-5 flex items-center gap-3">
+        <span class="inline-block w-8 h-px bg-cyan"></span> Pomona · All SoCal · We travel
+      </p>
+      <h1 class="display text-[clamp(2.9rem,9vw,6.6rem)] text-ink max-w-[16ch]">
+        <span class="reveal d1 block">Poured like <span class="text-grad">liquid.</span></span>
+        <span class="reveal d2 block">Built like <span class="text-chrome">stone.</span></span>
+      </h1>
+      <p class="reveal d3 mt-6 text-[16px] sm:text-[19px] leading-relaxed text-muted max-w-[56ch]">
+        Custom metallic and flake epoxy floors for garages, patios, interiors and commercial spaces. Hand-poured by Xclusive Pours, where no two floors are ever the same.
+      </p>
+      <div class="reveal d4 mt-9 flex flex-col sm:flex-row gap-3.5">
+        <a href="#quote" class="btn btn-cyan grad-cyan text-white font-semibold text-[16px] px-8 py-4 rounded-full text-center">Get a free quote</a>
+        <a href="#work" class="btn border border-white/25 bg-white/5 backdrop-blur text-ink font-semibold text-[16px] px-8 py-4 rounded-full text-center hover:bg-white/10 hover:border-white/50">See the work</a>
+      </div>
+      <div class="reveal d5 mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-muted">
+        <span class="flex items-center gap-2"><span class="text-cyan">✦</span> Metallic &amp; flake systems</span>
+        <span class="flex items-center gap-2"><span class="text-cyan">✦</span> Commercial &amp; residential</span>
+        <span class="flex items-center gap-2"><span class="text-cyan">✦</span> Custom ceilings</span>
+        <span class="flex items-center gap-2"><span class="text-cyan">✦</span> Free quotes</span>
+      </div>
+    </div>
+  </div>
+  <a href="#systems" class="hidden sm:flex absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-2 text-muted/70 hover:text-cyan transition" aria-label="Scroll down">
+    <span class="eyebrow text-[10px]">Scroll</span>
+    <span class="w-px h-8 bg-gradient-to-b from-cyan to-transparent animate-pulse"></span>
+  </a>
+</section>
+
+<!-- MARQUEE -->
+<div class="relative bg-black border-y border-line overflow-hidden py-4">
+  <div class="marquee cond font-extrabold uppercase text-[26px] sm:text-[34px] tracking-wide">
+    <span class="flex shrink-0">
+      <span class="px-6 text-ink">Metallic Epoxy</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Flake Systems</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Garage Floors</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Patios &amp; Pool Decks</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Commercial</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Custom Ceilings</span><span class="px-6 text-cyan">✦</span>
+    </span>
+    <span class="flex shrink-0" aria-hidden="true">
+      <span class="px-6 text-ink">Metallic Epoxy</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Flake Systems</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Garage Floors</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Patios &amp; Pool Decks</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Commercial</span><span class="px-6 text-cyan">✦</span>
+      <span class="px-6 text-ink">Custom Ceilings</span><span class="px-6 text-cyan">✦</span>
+    </span>
+  </div>
+</div>
+
+<!-- INTRO STATEMENT -->
+<section class="relative bg-bg grain overflow-hidden">
+  <div class="glow" style="width:480px;height:480px;background:radial-gradient(circle,#1f6fe6,transparent 70%);top:40px;left:-160px;opacity:.22"></div>
+  <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28 relative z-10 grid lg:grid-cols-12 gap-10 items-end">
+    <div class="lg:col-span-8">
+      <p class="reveal eyebrow text-[12px] text-cyan mb-4">Why Xclusive</p>
+      <h2 class="reveal d1 display text-[clamp(2rem,5vw,3.4rem)] text-ink leading-[.98] max-w-[20ch]">
+        A floor people notice the second they walk in.
+      </h2>
+    </div>
+    <div class="lg:col-span-4">
+      <p class="reveal d2 text-[16px] leading-relaxed text-muted">
+        Epoxy is tougher than the concrete under it. We grind, prep and pour by hand, then seal it to a deep, glass-hard finish that shrugs off hot tires, spills, forklifts and time. The look is yours to design.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-[1280px] mx-auto px-5 pb-20 sm:pb-24 relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-px bg-line rounded-2xl overflow-hidden border border-line">
+    <div class="reveal bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-grad leading-none">100+</p><p class="mt-2 text-[14px] text-muted">Flake, metallic &amp; solid colors on the menu</p></div>
+    <div class="reveal d1 bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-grad leading-none">1 of 1</p><p class="mt-2 text-[14px] text-muted">Every metallic pour is hand-marbled, never repeated</p></div>
+    <div class="reveal d2 bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-grad leading-none">All SoCal</p><p class="mt-2 text-[14px] text-muted">Pomona based, traveling for the right project</p></div>
+    <div class="reveal d3 bg-bg2 p-6 sm:p-8"><p class="cond font-extrabold text-[40px] sm:text-[52px] text-grad leading-none">Free</p><p class="mt-2 text-[14px] text-muted">No-cost quotes, honest pricing, clean work</p></div>
+  </div>
+</section>
+
+<!-- SYSTEMS -->
+<section id="systems" class="relative bg-bg2 border-t border-line">
+  <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+      <div>
+        <p class="reveal eyebrow text-[12px] text-cyan mb-3">What we pour</p>
+        <h2 class="reveal d1 display text-[clamp(2rem,5.5vw,3.6rem)] text-ink max-w-[16ch]">Systems for every slab</h2>
+      </div>
+      <p class="reveal d2 text-[15px] text-muted max-w-[42ch]">From a one-day garage to a full metallic showpiece, we match the system to how the space gets used.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-5 sm:gap-6">
+      <!-- feature: metallic -->
+      <article class="card reveal lg:col-span-7 relative rounded-2xl overflow-hidden border border-line group min-h-[420px] flex">
+        <img src="img/floor-orange-room.jpg" alt="Orange and carbon metallic epoxy garage floor" class="tile-img absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent"></div>
+        <div class="relative z-10 mt-auto p-7 sm:p-9">
+          <span class="eyebrow text-[11px] text-cyan">Signature</span>
+          <h3 class="display text-[34px] sm:text-[44px] text-ink mt-2">Metallic Epoxy</h3>
+          <p class="text-[15px] text-muted mt-2 max-w-[46ch]">Liquid pigment marbled by hand into a deep, three-dimensional, mirror-gloss floor. Lava, marble, ocean, galaxy, your call. Every pour is one of one.</p>
+        </div>
+      </article>
+
+      <div class="lg:col-span-5 grid sm:grid-cols-2 lg:grid-cols-1 gap-5 sm:gap-6">
+        <article class="card reveal d1 relative rounded-2xl overflow-hidden border border-line group min-h-[200px] flex">
+          <img src="img/patio-after.jpg" alt="Flake epoxy patio floor" class="tile-img absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/55 to-transparent"></div>
+          <div class="relative z-10 mt-auto p-6">
+            <h3 class="display text-[26px] text-ink">Flake / Chip Systems</h3>
+            <p class="text-[14px] text-muted mt-1.5 max-w-[42ch]">Broadcast vinyl flake for a tough, textured, slip-resistant finish. Garages, patios, shops.</p>
+          </div>
+        </article>
+        <article class="card reveal d2 relative rounded-2xl overflow-hidden border border-line group min-h-[200px] flex">
+          <img src="img/marble-salon.jpg" alt="White marble metallic floor in a commercial space" class="tile-img absolute inset-0 w-full h-full object-cover object-top" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/55 to-transparent"></div>
+          <div class="relative z-10 mt-auto p-6">
+            <h3 class="display text-[26px] text-ink">Commercial &amp; Industrial</h3>
+            <p class="text-[14px] text-muted mt-1.5 max-w-[42ch]">Showrooms, salons, shops and warehouses. Built to take traffic and still shine.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- secondary row -->
+    <div class="grid sm:grid-cols-3 gap-5 sm:gap-6 mt-5 sm:mt-6">
+      <article class="card reveal rounded-2xl border border-line bg-surface p-7">
+        <div class="w-11 h-11 rounded-xl grid place-items-center bg-cyan/10 border border-cyan/25 text-cyan mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h2l2-7 4 14 3-9 2 4h5"/></svg>
+        </div>
+        <h3 class="display text-[24px] text-ink">Garage &amp; Patio</h3>
+        <p class="text-[14px] text-muted mt-1.5">The classic upgrade. Hot-tire proof, easy to clean, finished in a day or two.</p>
+      </article>
+      <article class="card reveal d1 rounded-2xl border border-line bg-surface p-7">
+        <div class="w-11 h-11 rounded-xl grid place-items-center bg-cyan/10 border border-cyan/25 text-cyan mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19V8l9-4 9 4v11"/><path d="M3 19h18"/><path d="M8 19v-6h8v6"/></svg>
+        </div>
+        <h3 class="display text-[24px] text-ink">Custom Ceilings</h3>
+        <p class="text-[14px] text-muted mt-1.5">Yes, ceilings too. The same metallic art overhead, for spaces that want the wow factor everywhere.</p>
+      </article>
+      <article class="card reveal d2 rounded-2xl border border-line bg-surface p-7">
+        <div class="w-11 h-11 rounded-xl grid place-items-center bg-cyan/10 border border-cyan/25 text-cyan mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
+        </div>
+        <h3 class="display text-[24px] text-ink">Repairs &amp; Resurfacing</h3>
+        <p class="text-[14px] text-muted mt-1.5">Cracked, stained or peeling concrete? We grind it back and give it a second life.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WORK / GALLERY -->
+<section id="work" class="relative bg-bg grain border-t border-line overflow-hidden">
+  <div class="glow" style="width:520px;height:520px;background:radial-gradient(circle,#1f6fe6,transparent 70%);bottom:-160px;right:-120px;opacity:.2"></div>
+  <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28 relative z-10">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+      <div>
+        <p class="reveal eyebrow text-[12px] text-cyan mb-3">The work</p>
+        <h2 class="reveal d1 display text-[clamp(2rem,5.5vw,3.6rem)] text-ink max-w-[16ch]">Floors we have poured</h2>
+      </div>
+      <a href="https://www.instagram.com/xclusive.pours/" target="_blank" rel="noopener" class="reveal d2 group inline-flex items-center gap-2 text-[14px] font-semibold text-ink hover:text-cyan transition">
+        See more on Instagram
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 auto-rows-[150px] sm:auto-rows-[200px]">
+      <figure class="group reveal relative rounded-2xl overflow-hidden border border-line col-span-2 row-span-2">
+        <img src="img/floor-orange-room.jpg" alt="Orange and carbon metallic epoxy garage floor" class="tile-img w-full h-full object-cover" loading="lazy" />
+        <figcaption class="absolute inset-0 flex items-end p-5 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[16px] text-ink">Orange &amp; Carbon Metallic <span class="text-muted font-normal">/ Garage</span></span></figcaption>
+      </figure>
+      <figure class="group reveal d1 relative rounded-2xl overflow-hidden border border-line">
+        <img src="img/metallic-blue.jpg" alt="Cambridge blue metallic epoxy interior floor" class="tile-img w-full h-full object-cover" loading="lazy" />
+        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Cambridge Blue Metallic</span></figcaption>
+      </figure>
+      <figure class="group reveal d2 relative rounded-2xl overflow-hidden border border-line">
+        <img src="img/marble-salon.jpg" alt="White marble metallic floor in a salon" class="tile-img w-full h-full object-cover" loading="lazy" />
+        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">White Marble / Salon</span></figcaption>
+      </figure>
+      <figure class="group reveal d1 relative rounded-2xl overflow-hidden border border-line col-span-2">
+        <img src="img/floor-orange-long.jpg" alt="High gloss metallic epoxy floor" class="tile-img w-full h-full object-cover" loading="lazy" />
+        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Mirror-Gloss Metallic / Showroom</span></figcaption>
+      </figure>
+      <figure class="group reveal d2 relative rounded-2xl overflow-hidden border border-line">
+        <img src="img/marble-crouch.jpg" alt="Carrara style metallic living space floor" class="tile-img w-full h-full object-cover" loading="lazy" />
+        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Carrara-Style Metallic</span></figcaption>
+      </figure>
+      <figure class="group reveal d3 relative rounded-2xl overflow-hidden border border-line">
+        <img src="img/patio-after.jpg" alt="Flake epoxy covered patio" class="tile-img w-full h-full object-cover" loading="lazy" />
+        <figcaption class="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-bg/90 to-transparent opacity-0 group-hover:opacity-100 transition"><span class="cond font-bold text-[14px] text-ink">Full Flake / Patio</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="relative bg-bg2 border-t border-line">
+  <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-5">
+        <p class="reveal eyebrow text-[12px] text-cyan mb-3">Before &amp; after</p>
+        <h2 class="reveal d1 display text-[clamp(2rem,5vw,3.4rem)] text-ink leading-[.98] max-w-[14ch]">Same slab. New life.</h2>
+        <p class="reveal d2 mt-5 text-[16px] leading-relaxed text-muted max-w-[46ch]">
+          Tired, stained patio concrete to a full flake system, sealed and bulletproof. Drag the handle and watch it transform.
+        </p>
+        <a href="#quote" class="reveal d3 btn btn-cyan grad-cyan text-white font-semibold text-[15px] px-7 py-3.5 rounded-full inline-block mt-8">Quote my space</a>
+      </div>
+      <div class="lg:col-span-7">
+        <div class="reveal d1 ba rounded-2xl border border-line shadow-[0_30px_80px_-30px_rgba(0,0,0,.8)] aspect-[4/3]" id="ba">
+          <img class="after" src="img/patio-after.jpg" alt="Patio after flake epoxy coating" />
+          <img class="before" src="img/patio-before.jpg" alt="Patio before, bare concrete" id="baBefore" />
+          <div class="ba-handle" id="baHandle">
+            <div class="ba-knob">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ec5f0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg>
+            </div>
+          </div>
+          <span class="absolute top-3 left-3 eyebrow text-[10px] bg-black/60 backdrop-blur px-2.5 py-1 rounded text-muted">Before</span>
+          <span class="absolute top-3 right-3 eyebrow text-[10px] bg-black/60 backdrop-blur px-2.5 py-1 rounded text-cyan">After</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLOR STUDIO -->
+<section id="colors" class="relative bg-bg grain border-t border-line overflow-hidden">
+  <div class="glow" style="width:440px;height:440px;background:radial-gradient(circle,#2ec5f0,transparent 70%);top:60px;right:-140px;opacity:.16"></div>
+  <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28 relative z-10">
+    <div class="text-center max-w-[640px] mx-auto mb-12">
+      <p class="reveal eyebrow text-[12px] text-cyan mb-3">Color studio</p>
+      <h2 class="reveal d1 display text-[clamp(2rem,5.5vw,3.6rem)] text-ink">Design your floor</h2>
+      <p class="reveal d2 mt-4 text-[16px] text-muted">A few of our favorites below. We carry over 100 flake blends, metallic pigments and solid colors, and we color-match almost anything. Don't see it? We will make it.</p>
+    </div>
+
+    <!-- tabs -->
+    <div class="reveal d2 flex justify-center gap-2 mb-10">
+      <button class="col-tab cond font-bold uppercase tracking-wide text-[15px] px-6 py-2.5 rounded-full border border-cyan/40 bg-cyan/10 text-cyan" data-tab="flake">Flakes</button>
+      <button class="col-tab cond font-bold uppercase tracking-wide text-[15px] px-6 py-2.5 rounded-full border border-line text-muted hover:text-ink" data-tab="metallic">Metallics</button>
+      <button class="col-tab cond font-bold uppercase tracking-wide text-[15px] px-6 py-2.5 rounded-full border border-line text-muted hover:text-ink" data-tab="solid">Solids</button>
+    </div>
+
+    <!-- flakes -->
+    <div class="col-panel" data-panel="flake">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4" id="flakeGrid"></div>
+    </div>
+
+    <!-- metallics -->
+    <div class="col-panel hidden" data-panel="metallic">
+      <div class="grid sm:grid-cols-3 gap-4 mb-6">
+        <figure class="group relative rounded-2xl overflow-hidden border border-line aspect-square">
+          <img src="img/floor-orange-close.jpg" alt="Lava orange metallic" class="tile-img w-full h-full object-cover" loading="lazy"><figcaption class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-bg/90 to-transparent cond font-bold text-[14px] text-ink">Lava Orange</figcaption>
+        </figure>
+        <figure class="group relative rounded-2xl overflow-hidden border border-line aspect-square">
+          <img src="img/metallic-blue.jpg" alt="Cambridge blue metallic" class="tile-img w-full h-full object-cover" loading="lazy"><figcaption class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-bg/90 to-transparent cond font-bold text-[14px] text-ink">Cambridge Blue</figcaption>
+        </figure>
+        <figure class="group relative rounded-2xl overflow-hidden border border-line aspect-square">
+          <img src="img/marble-crouch.jpg" alt="White marble metallic" class="tile-img w-full h-full object-cover" loading="lazy"><figcaption class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-bg/90 to-transparent cond font-bold text-[14px] text-ink">Carrara White</figcaption>
+        </figure>
+      </div>
+      <div class="rounded-2xl border border-line bg-surface p-5 sm:p-7 flex flex-col sm:flex-row gap-6 items-center">
+        <img src="img/pigments.jpg" alt="Metallic pigments mixed on site" class="w-full sm:w-44 h-44 object-cover rounded-xl border border-line" loading="lazy" />
+        <div>
+          <h3 class="display text-[26px] text-ink">60+ metallic pigments</h3>
+          <p class="text-[15px] text-muted mt-2 max-w-[52ch]">Silvers, blues, bronzes, blacks, golds and brights, blended on site to hit the exact look you want. Pick a vibe and we will marble it live the day of the pour.</p>
+          <a href="#quote" class="inline-block mt-4 cond font-bold uppercase tracking-wide text-[14px] text-cyan hover:text-ink transition">Ask for a sample →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- solids -->
+    <div class="col-panel hidden" data-panel="solid">
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-4" id="solidGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="relative bg-bg2 border-t border-line">
+  <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28">
+    <div class="mb-14 max-w-[560px]">
+      <p class="reveal eyebrow text-[12px] text-cyan mb-3">How a pour goes</p>
+      <h2 class="reveal d1 display text-[clamp(2rem,5.5vw,3.6rem)] text-ink">Four steps, one clean result</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
+      <div class="reveal relative">
+        <span class="cond font-extrabold text-[64px] text-grad leading-none">01</span>
+        <h3 class="display text-[24px] text-ink mt-2">Consult &amp; quote</h3>
+        <p class="text-[14.5px] text-muted mt-2 max-w-[34ch]">Call or DM. We look at the space, talk colors and finish, and send a free, honest quote.</p>
+      </div>
+      <div class="reveal d1 relative">
+        <span class="cond font-extrabold text-[64px] text-grad leading-none">02</span>
+        <h3 class="display text-[24px] text-ink mt-2">Grind &amp; prep</h3>
+        <p class="text-[14.5px] text-muted mt-2 max-w-[34ch]">Diamond-grind the concrete, fix cracks and profile the slab so the coating bonds for good.</p>
+      </div>
+      <div class="reveal d2 relative">
+        <span class="cond font-extrabold text-[64px] text-grad leading-none">03</span>
+        <h3 class="display text-[24px] text-ink mt-2">Pour &amp; design</h3>
+        <p class="text-[14.5px] text-muted mt-2 max-w-[34ch]">The fun part. We lay the base, marble the metallics or broadcast the flake, and shape the look live.</p>
+      </div>
+      <div class="reveal d3 relative">
+        <span class="cond font-extrabold text-[64px] text-grad leading-none">04</span>
+        <h3 class="display text-[24px] text-ink mt-2">Topcoat &amp; cure</h3>
+        <p class="text-[14.5px] text-muted mt-2 max-w-[34ch]">A high-build clear seals it glass-hard. Light foot traffic next day, fully cured within the week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="relative bg-bg grain border-t border-line overflow-hidden">
+  <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="reveal lg:col-span-5 order-2 lg:order-1">
+        <div class="relative rounded-2xl overflow-hidden border border-line underglow">
+          <img src="img/marble-crouch.jpg" alt="The craftsman behind Xclusive Pours inspecting a finished metallic floor" class="w-full aspect-[4/5] object-cover" loading="lazy" />
+          <div class="absolute bottom-4 left-4 right-4 flex items-center gap-3 bg-black/55 backdrop-blur rounded-xl border border-white/10 px-4 py-3">
+            <img src="img/logo.png" alt="" class="w-10 h-10 rounded-full ring-1 ring-cyan/40" />
+            <div class="leading-tight">
+              <p class="cond font-bold text-[15px] text-ink">Owner-operated</p>
+              <p class="text-[12px] text-muted">Every floor poured by hand</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-7 order-1 lg:order-2">
+        <p class="reveal eyebrow text-[12px] text-cyan mb-3">About</p>
+        <h2 class="reveal d1 display text-[clamp(2rem,5vw,3.4rem)] text-ink leading-[.98] max-w-[18ch]">We treat every floor like it is the only one.</h2>
+        <div class="reveal d2 mt-6 space-y-4 text-[16px] leading-relaxed text-muted max-w-[58ch]">
+          <p>Xclusive Pours is a Pomona-based epoxy specialist working across all of Southern California. Metallic, flake, solid, garages, patios, salons, shops and even ceilings, if it can be coated, we can make it look incredible.</p>
+          <p>This is hands-on, owner-operated work. No crews phoning it in, no two pours alike. We show up, prep it right, pour it like art and leave you a floor that outlasts everything else in the room.</p>
+        </div>
+        <div class="reveal d3 mt-8 flex flex-wrap items-center gap-4">
+          <a href="https://www.instagram.com/xclusive.pours/" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-5 py-2.5 hover:border-cyan/40 transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="text-cyan"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+            <span class="text-[14px]"><span class="font-semibold text-ink">@xclusive.pours</span> <span class="text-muted">· 1,700+ following the work</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE / CONTACT -->
+<section id="quote" class="relative bg-black border-t border-line overflow-hidden">
+  <div class="glow" style="width:600px;height:600px;background:radial-gradient(circle,#1f6fe6,transparent 70%);top:-200px;left:50%;transform:translateX(-50%);opacity:.28"></div>
+  <div class="max-w-[1280px] mx-auto px-5 py-20 sm:py-28 relative z-10 grid lg:grid-cols-12 gap-10 lg:gap-16">
+    <div class="lg:col-span-5">
+      <p class="reveal eyebrow text-[12px] text-cyan mb-3">Free quote</p>
+      <h2 class="reveal d1 display text-[clamp(2.2rem,6vw,4rem)] text-ink leading-[.95]">Let's pour something exclusive.</h2>
+      <p class="reveal d2 mt-5 text-[16px] leading-relaxed text-muted max-w-[44ch]">Tell us about your space and we will get you a free quote, usually same day. Fastest answers come by call or DM.</p>
+
+      <div class="reveal d3 mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:+16264652093" class="btn btn-cyan grad-cyan text-white font-semibold text-[16px] px-7 py-4 rounded-full text-center flex items-center justify-center gap-2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          (626) 465-2093
+        </a>
+        <a href="https://www.instagram.com/xclusive.pours/" target="_blank" rel="noopener" class="btn border border-white/20 bg-white/5 text-ink font-semibold text-[16px] px-7 py-4 rounded-full text-center hover:bg-white/10 hover:border-white/40">DM on Instagram</a>
+      </div>
+
+      <dl class="reveal d4 mt-10 space-y-4 text-[15px]">
+        <div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg grid place-items-center bg-surface border border-line text-cyan"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="text-muted">Based in <span class="text-ink font-medium">Pomona, CA</span> · serving all of Southern California</span></div>
+        <div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg grid place-items-center bg-surface border border-line text-cyan"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="text-muted">Free quotes, flexible scheduling, we travel for the right project</span></div>
+      </dl>
+    </div>
+
+    <div class="lg:col-span-7">
+      <form id="quoteForm" class="reveal d1 rounded-2xl border border-line bg-surface/80 backdrop-blur p-6 sm:p-8">
+        <h3 class="display text-[26px] text-ink mb-1">Request your free quote</h3>
+        <p class="text-[13.5px] text-muted mb-6">We will text you back with pricing and next steps.</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block"><span class="text-[12.5px] cond font-semibold uppercase tracking-wide text-muted">Name <span class="text-cyan">*</span></span>
+            <input required name="name" type="text" autocomplete="name" class="mt-1.5 w-full bg-bg border border-line rounded-xl px-4 py-3 text-[15px] text-ink outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/25 transition" /></label>
+          <label class="block"><span class="text-[12.5px] cond font-semibold uppercase tracking-wide text-muted">Phone <span class="text-cyan">*</span></span>
+            <input required name="phone" type="tel" autocomplete="tel" class="mt-1.5 w-full bg-bg border border-line rounded-xl px-4 py-3 text-[15px] text-ink outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/25 transition" /></label>
+          <label class="block"><span class="text-[12.5px] cond font-semibold uppercase tracking-wide text-muted">Project type</span>
+            <select name="type" class="mt-1.5 w-full bg-bg border border-line rounded-xl px-4 py-3 text-[15px] text-ink outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/25 transition">
+              <option>Garage floor</option><option>Patio / pool deck</option><option>Interior / living space</option><option>Metallic showpiece</option><option>Commercial / industrial</option><option>Custom ceiling</option><option>Not sure yet</option>
+            </select></label>
+          <label class="block"><span class="text-[12.5px] cond font-semibold uppercase tracking-wide text-muted">Approx. size</span>
+            <input name="size" type="text" placeholder="e.g. 2-car garage, 600 sq ft" class="mt-1.5 w-full bg-bg border border-line rounded-xl px-4 py-3 text-[15px] text-ink outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/25 transition" /></label>
+          <label class="block sm:col-span-2"><span class="text-[12.5px] cond font-semibold uppercase tracking-wide text-muted">City</span>
+            <input name="city" type="text" placeholder="Where is the project?" class="mt-1.5 w-full bg-bg border border-line rounded-xl px-4 py-3 text-[15px] text-ink outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/25 transition" /></label>
+          <label class="block sm:col-span-2"><span class="text-[12.5px] cond font-semibold uppercase tracking-wide text-muted">Tell us the vision</span>
+            <textarea name="msg" rows="3" placeholder="Colors, metallic vs flake, timeline..." class="mt-1.5 w-full bg-bg border border-line rounded-xl px-4 py-3 text-[15px] text-ink outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/25 transition"></textarea></label>
+        </div>
+        <button type="submit" class="btn btn-cyan grad-cyan text-white font-semibold text-[16px] w-full sm:w-auto px-8 py-4 rounded-full mt-6">Text me my quote</button>
+        <p class="text-[12px] text-muted2 mt-4">Opens your messaging app with the details ready to send to (626) 465-2093. Prefer to talk? Call or DM anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-bg border-t border-line">
+  <div class="max-w-[1280px] mx-auto px-5 py-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10 border-b border-line pb-12">
+      <div class="lg:col-span-5 max-w-[40ch]">
+        <div class="flex items-center gap-2.5">
+          <img src="img/logo.png" alt="Xclusive Pours" class="h-11 w-11 rounded-full ring-1 ring-cyan/40" />
+          <span class="cond font-extrabold text-[20px] italic tracking-wide text-ink">XCLUSIVE POURS</span>
+        </div>
+        <p class="mt-4 text-[14.5px] text-muted leading-relaxed">Custom metallic and flake epoxy floors, hand-poured in Pomona and traveling across Southern California. Poured like liquid, built like stone.</p>
+      </div>
+      <div class="lg:col-span-3">
+        <p class="eyebrow text-[11px] text-muted2 mb-4">Systems</p>
+        <ul class="space-y-2.5 text-[14px] text-muted">
+          <li><a href="#systems" class="hover:text-cyan transition">Metallic Epoxy</a></li>
+          <li><a href="#systems" class="hover:text-cyan transition">Flake / Chip Systems</a></li>
+          <li><a href="#systems" class="hover:text-cyan transition">Garage &amp; Patio</a></li>
+          <li><a href="#systems" class="hover:text-cyan transition">Commercial &amp; Industrial</a></li>
+          <li><a href="#systems" class="hover:text-cyan transition">Custom Ceilings</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4">
+        <p class="eyebrow text-[11px] text-muted2 mb-4">Get in touch</p>
+        <ul class="space-y-2.5 text-[14px] text-muted">
+          <li><a href="tel:+16264652093" class="hover:text-cyan transition text-ink font-semibold text-[16px]">(626) 465-2093</a></li>
+          <li><a href="https://www.instagram.com/xclusive.pours/" target="_blank" rel="noopener" class="hover:text-cyan transition">@xclusive.pours</a></li>
+          <li class="text-muted2">Pomona, CA · All Southern California</li>
+          <li class="text-muted2">Free quotes · Owner-operated</li>
+        </ul>
+        <a href="#quote" class="btn btn-cyan grad-cyan text-white font-semibold text-[14px] px-5 py-2.5 rounded-full inline-block mt-5">Get a free quote</a>
+      </div>
+    </div>
+    <div class="pt-6 flex flex-col sm:flex-row justify-between gap-3 text-[12px] text-muted2">
+      <p>Copyright © 2026 Xclusive Pours. All rights reserved.</p>
+      <p>Website preview · not the official site · Preview by <span class="text-muted font-semibold">WestCo App Studio</span> · <a class="underline underline-offset-2 hover:text-cyan transition" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  const menuBtn=document.getElementById('menuBtn'), menu=document.getElementById('menu');
+  menuBtn.addEventListener('click',()=>{const o=menu.classList.toggle('hidden')===false;menuBtn.setAttribute('aria-expanded',String(o));});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.add('hidden')));
+
+  // header shadow on scroll
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>{hdr.classList.toggle('shadow-[0_10px_30px_rgba(0,0,0,.5)]',scrollY>10);},{passive:true});
+
+  // reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // color studio data
+  const flakes=[['orbit','Orbit'],['denali','Denali'],['independence-blue','Independence Blue'],['basalt','Basalt'],
+    ['graphite','Graphite'],['obsidian','Obsidian'],['gravel','Gravel'],['turquoise','Turquoise'],
+    ['acadia','Acadia'],['mountainside','Mountainside'],['desert-sand','Desert Sand'],['desert-mocha','Desert Mocha'],
+    ['outback','Outback'],['rattlesnake','Rattlesnake'],['garnet','Garnet'],['desert-sunset','Desert Sunset']];
+  const solids=[['Light Gray','#c1c2c4'],['Mid Gray','#8c8f94'],['Dark Concrete','#646567'],['Concrete Gray','#93867e'],['Sand','#ddc09f'],
+    ['Beige','#ddab6c'],['Tan','#e8be82'],['Beachwood','#8b604f'],['White','#ece5df'],['Black','#110d0c'],
+    ['Safety Yellow','#ecc01f'],['Safety Red','#e92d2b'],['Brick Red','#b22e22'],['Pale Blue','#89a3a4'],['Sapphire Blue','#303258']];
+  const fg=document.getElementById('flakeGrid');
+  fg.innerHTML=flakes.map(([s,n])=>`<figure class="chip group rounded-xl overflow-hidden border border-line bg-surface">
+    <div class="aspect-square overflow-hidden"><img src="img/sw/${s}.jpg" alt="${n} flake blend" class="tile-img w-full h-full object-cover" loading="lazy"></div>
+    <figcaption class="px-3 py-2.5 cond font-semibold uppercase tracking-wide text-[12.5px] text-ink flex items-center justify-between">${n}<span class="text-muted2">Flake</span></figcaption></figure>`).join('');
+  const sg=document.getElementById('solidGrid');
+  sg.innerHTML=solids.map(([n,h])=>`<figure class="chip rounded-xl overflow-hidden border border-line bg-surface">
+    <div class="aspect-square" style="background:${h}"></div>
+    <figcaption class="px-2.5 py-2 cond font-semibold uppercase tracking-wide text-[11.5px] text-ink">${n}</figcaption></figure>`).join('');
+
+  // tabs
+  const tabs=document.querySelectorAll('.col-tab'), panels=document.querySelectorAll('.col-panel');
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>{x.classList.remove('border-cyan/40','bg-cyan/10','text-cyan');x.classList.add('border-line','text-muted');});
+    t.classList.add('border-cyan/40','bg-cyan/10','text-cyan');t.classList.remove('border-line','text-muted');
+    panels.forEach(p=>p.classList.toggle('hidden',p.dataset.panel!==t.dataset.tab));
+  }));
+
+  // before/after slider
+  (function(){
+    const ba=document.getElementById('ba'), before=document.getElementById('baBefore'), handle=document.getElementById('baHandle');
+    if(!ba) return; let drag=false;
+    const set=p=>{p=Math.max(0,Math.min(100,p));before.style.clipPath=`inset(0 ${100-p}% 0 0)`;handle.style.left=p+'%';};
+    const at=e=>{const r=ba.getBoundingClientRect();const x=((e.touches?e.touches[0].clientX:e.clientX)-r.left)/r.width*100;set(x);};
+    ba.addEventListener('pointerdown',e=>{drag=true;ba.setPointerCapture(e.pointerId);at(e);});
+    ba.addEventListener('pointermove',e=>{if(drag)at(e);});
+    addEventListener('pointerup',()=>drag=false);
+    set(50);
+  })();
+
+  // quote form -> SMS
+  document.getElementById('quoteForm').addEventListener('submit',e=>{
+    e.preventDefault();const f=new FormData(e.target);
+    const body=`Free quote request via website%0a`+
+      `Name: ${f.get('name')}%0a`+`Phone: ${f.get('phone')}%0a`+`Project: ${f.get('type')}%0a`+
+      `Size: ${f.get('size')||'-'}%0a`+`City: ${f.get('city')||'-'}%0a`+`Vision: ${f.get('msg')||'-'}`;
+    window.location.href=`sms:+16264652093?&body=${body}`;
+  });
+
+  // pause hero video for reduced motion
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('video').forEach(v=>{try{v.pause();v.removeAttribute('autoplay');}catch(e){}});
+  }
+</script>
+</body>
+</html>
