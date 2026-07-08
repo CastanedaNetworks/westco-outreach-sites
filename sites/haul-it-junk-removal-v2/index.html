@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haul It Junk Removal &amp; Appliance Moving · Call or Text (562) 414-2841</title>
+<meta name="description" content="Junk removal, trash hauling, appliance pickup and local moving in the 562 and LA County. Free estimates, licensed and insured. Call or text 562-414-2841. Hablamos español.">
+<meta property="og:title" content="Haul It Junk Removal &amp; Appliance Moving">
+<meta property="og:description" content="Need it gone? We haul it all. Call or text 562-414-2841 for a free estimate.">
+<meta property="og:image" content="img/logo.png">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;600;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Haul It Junk Removal & Appliance Moving",
+  "telephone": "+15624142841",
+  "slogan": "You relax, we get it done!",
+  "areaServed": "Los Angeles County, CA",
+  "priceRange": "Free estimates"
+}
+</script>
+<style>
+  :root{
+    --ink:#0c0e0a;
+    --ink2:#13160f;
+    --ink3:#1b1f16;
+    --lime:#a5ce39;
+    --lime2:#c3ef4a;
+    --paper:#f2f3ec;
+    --steel:#9aa38f;
+    --line:rgba(242,243,236,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{overflow-x:clip}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Barlow',sans-serif;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+
+  .display{
+    font-family:'Archivo Black',sans-serif;
+    text-transform:uppercase;
+    font-style:italic;
+    letter-spacing:-.015em;
+    line-height:.92;
+  }
+  .marker{font-family:'Permanent Marker',cursive;color:var(--lime)}
+
+  .wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+  @media (max-width:359px){.wrap{width:calc(100% - 28px)}}
+
+  /* grain */
+  .grain{
+    position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.07;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .hazard{height:10px;background:repeating-linear-gradient(-55deg,var(--lime) 0 16px,var(--ink) 16px 32px)}
+
+  /* ---------- header ---------- */
+  header{
+    position:absolute;top:0;left:0;right:0;z-index:20;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 20px;
+  }
+  header img{height:64px;width:auto;filter:drop-shadow(0 4px 14px rgba(0,0,0,.6))}
+  .phone-pill{
+    font-weight:800;font-size:15px;letter-spacing:.04em;text-decoration:none;
+    border:2px solid var(--lime);color:var(--lime);
+    padding:9px 14px;border-radius:999px;background:rgba(12,14,10,.55);
+    backdrop-filter:blur(4px);white-space:nowrap;
+  }
+  .phone-pill:active{background:var(--lime);color:var(--ink)}
+  @media (min-width:720px){
+    header{padding:20px 32px}
+    header img{height:86px}
+    .phone-pill{font-size:17px;padding:11px 20px}
+  }
+
+  /* ---------- hero: scroll-scrub ---------- */
+  #pbar{position:fixed;top:0;left:0;height:3px;background:var(--lime);width:0;z-index:80}
+  .hero{position:relative;height:100svh}
+  .hero.scrub{height:420vh}
+  .hero-pin{
+    position:sticky;top:0;height:100svh;overflow:clip;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    isolation:isolate;
+  }
+  #scene{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+  .hero-scrim{
+    position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:linear-gradient(to top,rgba(12,14,10,.94) 0%,rgba(12,14,10,.55) 26%,rgba(12,14,10,0) 55%);
+  }
+  .hero-fallback{
+    position:absolute;inset:0;z-index:-2;display:none;
+    align-items:center;justify-content:center;
+    background:radial-gradient(60% 50% at 50% 38%,#1c2413 0%,var(--ink) 75%);
+  }
+  .hero-fallback img{width:min(340px,72vw);opacity:.95}
+  .hero.no3d #scene{display:none}
+  .hero.no3d .hero-fallback{display:flex}
+
+  .hero-inner{padding-bottom:34px;padding-top:120px}
+  .kicker{
+    display:inline-block;
+    background:var(--lime);color:var(--ink);
+    font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.14em;
+    padding:5px 10px;transform:rotate(-1.6deg);
+    box-shadow:3px 3px 0 rgba(0,0,0,.45);
+  }
+  h1{
+    font-family:'Archivo Black',sans-serif;
+    font-style:italic;text-transform:uppercase;
+    letter-spacing:-.015em;line-height:.92;
+    font-size:clamp(3rem,14.5vw,8.2rem);
+    margin:16px 0 14px;
+    text-shadow:0 3px 22px rgba(0,0,0,.55);
+  }
+  h1 .line{display:block}
+  h1 .go{color:var(--lime);-webkit-text-stroke:0}
+  .hero-sub{
+    max-width:34em;font-size:clamp(1rem,2.6vw,1.2rem);color:#d6dacb;
+    margin-bottom:22px;
+    text-shadow:0 1px 12px rgba(0,0,0,.6);
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+  .btn{
+    display:inline-block;text-decoration:none;text-transform:uppercase;
+    font-weight:800;letter-spacing:.05em;font-size:16px;
+    padding:16px 22px;border-radius:6px;text-align:center;
+  }
+  .btn-lime{background:var(--lime);color:var(--ink);box-shadow:4px 4px 0 rgba(0,0,0,.5)}
+  .btn-lime:active{transform:translate(2px,2px);box-shadow:1px 1px 0 rgba(0,0,0,.5)}
+  .btn-ghost{border:2px solid var(--paper);color:var(--paper)}
+  .btn-ghost:active{background:var(--paper);color:var(--ink)}
+  @media (max-width:479px){.cta-row .btn{flex:1 1 100%}}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;font-weight:600;
+    text-transform:uppercase;letter-spacing:.1em;color:var(--steel)}
+  .hero-tags span::before{content:"✓ ";color:var(--lime)}
+
+  /* scrub stages */
+  .stage{transition:opacity .5s ease,transform .5s ease}
+  .stage.off{opacity:0;transform:translateY(-16px);pointer-events:none}
+  .stage-load{
+    position:absolute;left:22px;bottom:30px;z-index:5;
+    font-size:clamp(1.35rem,5.5vw,2.1rem);transform:rotate(-2deg);
+    opacity:0;transition:opacity .4s ease;pointer-events:none;
+  }
+  .stage-load.on{opacity:1}
+  .stage-gone{
+    position:absolute;inset:0;z-index:6;padding:0 20px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;gap:10px;
+    opacity:0;transform:translateY(24px);
+    transition:opacity .5s ease,transform .5s ease;pointer-events:none;
+  }
+  .stage-gone.on{opacity:1;transform:none;pointer-events:auto}
+  .stage-gone .big{font-size:clamp(3.4rem,17vw,9rem);color:var(--lime)}
+  .stage-gone .marker{font-size:clamp(1.2rem,4.8vw,1.8rem);margin-bottom:16px;transform:rotate(-1.5deg)}
+  .stage-gone .cta-row{justify-content:center;margin-bottom:0}
+  .cue{
+    position:absolute;right:18px;bottom:20px;z-index:5;
+    display:flex;flex-direction:column;align-items:center;gap:7px;
+    color:var(--steel);font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+    transition:opacity .4s ease;
+  }
+  .cue i{width:2px;height:26px;background:var(--lime);animation:cuepulse 1.4s ease infinite}
+  @keyframes cuepulse{0%,100%{opacity:.25;transform:scaleY(.5)}50%{opacity:1;transform:scaleY(1)}}
+  .cue.off{opacity:0}
+  @media (prefers-reduced-motion:reduce){.cue i{animation:none}}
+
+  /* ---------- marquee ---------- */
+  .mq{overflow:clip;background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 0}
+  .mq-track{display:flex;width:max-content;animation:mq 26s linear infinite}
+  .mq-chunk{display:flex;flex:none}
+  .mq span{
+    font-family:'Archivo Black',sans-serif;font-style:italic;text-transform:uppercase;
+    font-size:15px;letter-spacing:.08em;color:var(--lime);white-space:nowrap;padding:0 14px;
+  }
+  .mq span i{font-style:normal;color:#57603f;padding-left:28px}
+  @keyframes mq{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
+
+  /* ---------- sections ---------- */
+  section{padding:72px 0}
+  @media (min-width:720px){section{padding:104px 0}}
+  h2{font-size:clamp(2.2rem,7.5vw,4.6rem);margin-bottom:10px}
+  .sec-note{color:var(--steel);max-width:36em;margin-bottom:38px}
+
+  /* services list */
+  .svc{border-top:1px solid var(--line)}
+  .svc-row{
+    display:grid;grid-template-columns:56px 1fr;gap:4px 16px;
+    padding:20px 0;border-bottom:1px solid var(--line);
+    align-items:baseline;
+  }
+  .svc-num{font-family:'Permanent Marker',cursive;color:var(--lime);font-size:22px;grid-row:span 2}
+  .svc-name{
+    font-family:'Archivo Black',sans-serif;font-style:italic;text-transform:uppercase;
+    font-size:clamp(1.15rem,4.4vw,1.7rem);letter-spacing:-.01em;
+  }
+  .svc-desc{color:var(--steel);grid-column:2;max-width:38em}
+  @media (min-width:720px){
+    .svc-row{grid-template-columns:72px 320px 1fr;gap:16px}
+    .svc-desc{grid-column:auto}
+    .svc-num{grid-row:auto}
+    .svc-row:hover{background:linear-gradient(90deg,rgba(165,206,57,.08),transparent 70%)}
+  }
+  .svc-ps{margin-top:26px;font-size:20px;transform:rotate(-1deg)}
+
+  /* photo band */
+  .band{position:relative}
+  .band img{width:100%;height:min(72vh,620px);object-fit:cover}
+  .band-caption{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:22px 20px 26px;
+    background:linear-gradient(to top,rgba(12,14,10,.9),transparent);
+  }
+  .tape{
+    display:inline-block;background:var(--lime);color:var(--ink);
+    font-family:'Archivo Black',sans-serif;font-style:italic;text-transform:uppercase;
+    font-size:clamp(1.05rem,4.5vw,1.9rem);
+    padding:8px 14px;transform:rotate(-1.4deg);
+    box-shadow:4px 4px 0 rgba(0,0,0,.5);
+  }
+  .band .marker{display:block;margin-top:14px;font-size:clamp(1.15rem,4.5vw,1.7rem);transform:rotate(-.6deg)}
+
+  /* steps */
+  .steps{display:grid;gap:26px}
+  .step{display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start}
+  .step-num{
+    font-family:'Permanent Marker',cursive;font-size:44px;color:var(--lime);
+    line-height:1;transform:rotate(-4deg);
+  }
+  .step h3{
+    font-family:'Archivo Black',sans-serif;font-style:italic;text-transform:uppercase;
+    font-size:1.25rem;margin-bottom:6px;
+  }
+  .step p{color:var(--steel);max-width:32em}
+  @media (min-width:900px){
+    .steps{grid-template-columns:repeat(3,1fr);gap:36px}
+    .step{grid-template-columns:1fr;gap:10px}
+  }
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .gal figure{position:relative;overflow:clip;border-radius:4px}
+  .gal img{width:100%;height:100%;object-fit:cover}
+  .gal .tall{grid-row:span 2}
+  .gal figure:nth-child(1){aspect-ratio:3/4}
+  .gal figure:nth-child(2){aspect-ratio:3/2}
+  .gal figure:nth-child(3){aspect-ratio:3/2}
+  .gal figure:nth-child(4){aspect-ratio:3/4}
+  .gal figure:nth-child(5){aspect-ratio:3/2;grid-column:span 2}
+  .gal figcaption{
+    position:absolute;left:10px;bottom:10px;
+    background:var(--ink);color:var(--lime);
+    font-family:'Permanent Marker',cursive;font-size:14px;
+    padding:4px 10px;transform:rotate(-2deg);border:1px solid rgba(165,206,57,.4);
+  }
+  @media (min-width:900px){
+    .gal{grid-template-columns:repeat(4,1fr)}
+    .gal figure:nth-child(1){grid-row:span 2;aspect-ratio:auto}
+    .gal figure:nth-child(4){grid-row:span 2;aspect-ratio:auto}
+    .gal figure:nth-child(5){grid-column:span 2;aspect-ratio:auto}
+  }
+
+  /* español */
+  .esp{background:var(--lime);color:var(--ink)}
+  .esp h2{color:var(--ink)}
+  .esp p{max-width:38em;font-weight:600;font-size:clamp(1.05rem,2.8vw,1.3rem)}
+  .esp .btn{background:var(--ink);color:var(--lime);margin-top:26px;box-shadow:4px 4px 0 rgba(0,0,0,.25)}
+
+  /* big cta */
+  .bigcta{text-align:center}
+  .bigcta .kicker{transform:rotate(1.2deg)}
+  .bigcta a.num{
+    display:block;text-decoration:none;color:var(--paper);
+    font-family:'Archivo Black',sans-serif;font-style:italic;
+    font-size:clamp(2.35rem,10.5vw,6.5rem);letter-spacing:-.02em;line-height:1;
+    margin:26px 0 10px;
+  }
+  .bigcta a.num b{color:var(--lime)}
+  .bigcta .sub{color:var(--steel);font-size:15px;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:34px 0 42px;font-size:14px;color:var(--steel)}
+  .foot{display:flex;flex-direction:column;gap:18px}
+  .foot-brand{display:flex;align-items:center;gap:14px}
+  .foot-brand img{height:56px}
+  .foot a{color:var(--paper)}
+  @media (min-width:720px){
+    .foot{flex-direction:row;justify-content:space-between;align-items:center}
+  }
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<div id="pbar" aria-hidden="true"></div>
+
+<div class="hero" id="hero">
+  <div class="hero-pin">
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-fallback" aria-hidden="true"><img src="img/logo.png" alt=""></div>
+    <noscript><style>#scene{display:none}.hero-fallback{display:flex}</style></noscript>
+
+    <header>
+      <img src="img/logo.png" alt="Haul It Junk Removal and Appliance Moving logo">
+      <a class="phone-pill" href="tel:+15624142841">562-414-2841</a>
+    </header>
+
+    <div class="wrap hero-inner stage" id="stageA">
+      <span class="kicker">Junk removal &amp; appliance moving</span>
+      <h1><span class="line">Need it</span><span class="line go">gone?</span></h1>
+      <p class="hero-sub">We haul it all. Junk, old appliances, furniture, whole garage cleanouts.
+      Call or text a photo, get a free estimate, and it's gone. Same day or next day when the schedule's open.</p>
+      <div class="cta-row">
+        <a class="btn btn-lime" href="tel:+15624142841">Call 562-414-2841</a>
+        <a class="btn btn-ghost" href="sms:+15624142841">Text us a photo</a>
+      </div>
+      <div class="hero-tags">
+        <span>Free estimates</span>
+        <span>Licensed &amp; insured</span>
+        <span>Hablamos español</span>
+      </div>
+    </div>
+
+    <span class="marker stage-load" id="stageLoad">Load it up.</span>
+
+    <div class="stage-gone" id="stageGone">
+      <span class="display big">Gone.</span>
+      <span class="marker">You relax, we get it done.</span>
+      <div class="cta-row">
+        <a class="btn btn-lime" href="tel:+15624142841">Call 562-414-2841</a>
+        <a class="btn btn-ghost" href="sms:+15624142841">Text us a photo</a>
+      </div>
+    </div>
+
+    <div class="cue" id="cue" aria-hidden="true"><i></i>Scroll</div>
+  </div>
+</div>
+
+<div class="hazard" aria-hidden="true"></div>
+
+<div class="mq" aria-hidden="true">
+  <div class="mq-track">
+    <div class="mq-chunk">
+      <span>Junk removal<i>★</i></span><span>Trash hauling<i>★</i></span><span>Appliance pickup<i>★</i></span><span>Furniture removal<i>★</i></span><span>Local moving<i>★</i></span><span>Cleanouts<i>★</i></span><span>Yard debris<i>★</i></span><span>Heavy lifting<i>★</i></span>
+    </div>
+    <div class="mq-chunk">
+      <span>Junk removal<i>★</i></span><span>Trash hauling<i>★</i></span><span>Appliance pickup<i>★</i></span><span>Furniture removal<i>★</i></span><span>Local moving<i>★</i></span><span>Cleanouts<i>★</i></span><span>Yard debris<i>★</i></span><span>Heavy lifting<i>★</i></span>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="display">We haul it all</h2>
+    <p class="sec-note">One old dryer or a whole house worth of stuff. If it needs to go, it goes.</p>
+    <div class="svc">
+      <div class="svc-row">
+        <span class="svc-num">01</span>
+        <span class="svc-name">Junk removal</span>
+        <p class="svc-desc">Old stuff, broken stuff, stuff you swore you'd fix someday. Gone.</p>
+      </div>
+      <div class="svc-row">
+        <span class="svc-num">02</span>
+        <span class="svc-name">Trash hauling</span>
+        <p class="svc-desc">Bagged or loose. One pile or a whole yard of it.</p>
+      </div>
+      <div class="svc-row">
+        <span class="svc-num">03</span>
+        <span class="svc-name">Appliance pickup</span>
+        <p class="svc-desc">Refrigerators, washers, dryers, stoves. We bring the dolly and the muscle.</p>
+      </div>
+      <div class="svc-row">
+        <span class="svc-num">04</span>
+        <span class="svc-name">Furniture removal</span>
+        <p class="svc-desc">Couches, mattresses, dressers, desks. Down any stairs, no drama.</p>
+      </div>
+      <div class="svc-row">
+        <span class="svc-num">05</span>
+        <span class="svc-name">Local moving</span>
+        <p class="svc-desc">Small moves across town. Careful hands, fair price.</p>
+      </div>
+      <div class="svc-row">
+        <span class="svc-num">06</span>
+        <span class="svc-name">Pickup &amp; delivery</span>
+        <p class="svc-desc">Bought something you can't fit in your car? We'll go grab it for you.</p>
+      </div>
+      <div class="svc-row">
+        <span class="svc-num">07</span>
+        <span class="svc-name">Cleanouts</span>
+        <p class="svc-desc">Garages, storage units, estates. We clear it wall to wall.</p>
+      </div>
+      <div class="svc-row">
+        <span class="svc-num">08</span>
+        <span class="svc-name">Yard debris</span>
+        <p class="svc-desc">Branches, green waste, the pile left over from the weekend project.</p>
+      </div>
+    </div>
+    <p class="svc-ps marker">Got something heavy and weird? Ask. We lift it.</p>
+  </div>
+</section>
+
+<div class="band">
+  <img src="img/crew-couch-street.jpg" alt="Hauler carrying a couch across a Los Angeles street" loading="lazy">
+  <div class="band-caption wrap">
+    <span class="tape">No job too big. No job too small.</span>
+    <span class="marker">You relax, we get it done.</span>
+  </div>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <h2 class="display">How it goes</h2>
+    <p class="sec-note">No forms, no waiting around for a callback next week.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1.</span>
+        <div>
+          <h3>Call or text a photo</h3>
+          <p>Snap a picture of whatever needs to go and send it to 562-414-2841.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">2.</span>
+        <div>
+          <h3>Get your price</h3>
+          <p>We text back a free estimate. Most jobs don't even need a visit first.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">3.</span>
+        <div>
+          <h3>We show up, it's gone</h3>
+          <p>We load it, sweep the spot clean, and haul it off. That's it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="display">On the job</h2>
+    <p class="sec-note">Real work, done right. Friendly and professional, every time.</p>
+    <div class="gal">
+      <figure><img src="img/crew-van-load.jpg" alt="Two movers loading a couch into a van" loading="lazy"><figcaption>moving made easy</figcaption></figure>
+      <figure><img src="img/crew-couch-carry.jpg" alt="Two movers carrying a couch through a room" loading="lazy"><figcaption>we haul heavy</figcaption></figure>
+      <figure><img src="img/yard-debris.jpg" alt="Gloved hand bagging yard debris with a shovel" loading="lazy"><figcaption>yard debris too</figcaption></figure>
+      <figure><img src="img/garage-cleanout.jpg" alt="Cluttered garage before a cleanout" loading="lazy"><figcaption>before we get there</figcaption></figure>
+      <figure><img src="img/sofa-carry-hall.jpg" alt="Mover carrying a sofa down a hallway" loading="lazy"><figcaption>big job or small job</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="esp">
+  <div class="wrap">
+    <h2 class="display">¡Hablamos español!</h2>
+    <p>Llámanos o mándanos un mensaje al 562-414-2841. Presupuesto gratis. Sacamos escombro, muebles viejos, aparatos, lo que sea. Usted descanse, nosotros lo hacemos.</p>
+    <a class="btn" href="tel:+15624142841">Llama ahora</a>
+  </div>
+</section>
+
+<section class="bigcta">
+  <div class="wrap">
+    <span class="kicker">Free estimates</span>
+    <a class="num" href="tel:+15624142841">562<b>·</b>414<b>·</b>2841</a>
+    <p class="sub">Call or text today · Same day or next day when available</p>
+  </div>
+</section>
+
+<div class="hazard" aria-hidden="true"></div>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <img src="img/logo.png" alt="">
+      <div>
+        <strong style="color:var(--paper)">Haul It Junk Removal &amp; Appliance Moving</strong><br>
+        Serving the 562 and greater LA County · <a href="tel:+15624142841">562-414-2841</a>
+      </div>
+    </div>
+    <div>
+      Preview by <strong style="color:var(--paper)">WestCo App Studio</strong><br>
+      <a href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a> · <a href="tel:+12135229136">(213) 522-9136</a>
+    </div>
+  </div>
+</footer>
+
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js"}}
+</script>
+<script type="module">
+import * as THREE from 'three';
+
+const hero = document.getElementById('hero');
+const canvas = document.getElementById('scene');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let renderer;
+try{
+  renderer = new THREE.WebGLRenderer({canvas, antialias:true});
+}catch(e){
+  hero.classList.add('no3d');
+}
+
+if(renderer){
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x0c0e0a);
+  scene.fog = new THREE.Fog(0x0c0e0a, 16, 34);
+
+  const camera = new THREE.PerspectiveCamera(33, 1, .1, 60);
+
+  /* ---- lights ---- */
+  scene.add(new THREE.HemisphereLight(0xbdd0e8, 0x11140d, 1.6));
+  const sun = new THREE.DirectionalLight(0xfff4e0, 2.4);
+  sun.position.set(5, 9, 6);
+  scene.add(sun);
+  const rim = new THREE.PointLight(0xa5ce39, 90, 18);
+  rim.position.set(-5, 2.2, 4);
+  scene.add(rim);
+
+  /* ---- helpers ---- */
+  const mat = c => new THREE.MeshLambertMaterial({color:c});
+  const bmat = c => new THREE.MeshBasicMaterial({color:c});
+  function box(g, w, h, d, c, x, y, z){
+    const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat(c));
+    m.position.set(x, y, z);
+    g.add(m);
+    return m;
+  }
+
+  /* ---- ground + road ---- */
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(90, 60), mat(0x151910));
+  ground.rotation.x = -Math.PI/2;
+  scene.add(ground);
+  const road = new THREE.Mesh(new THREE.PlaneGeometry(90, 5.4), mat(0x1d2117));
+  road.rotation.x = -Math.PI/2;
+  road.position.y = .005;
+  scene.add(road);
+  for(let x = -44; x < 45; x += 2.6){
+    const dash = new THREE.Mesh(new THREE.PlaneGeometry(1.1, .14), mat(0x4d5639));
+    dash.rotation.x = -Math.PI/2;
+    dash.position.set(x, .01, 2.95);
+    scene.add(dash);
+  }
+  // curb line behind truck
+  box(scene, 90, .22, .5, 0x232818, 0, .11, -3.1);
+
+  // low block wall
+  box(scene, 40, 1.1, .4, 0x191e12, 0, .55, -7.5);
+
+  /* ---- truck ---- */
+  const truck = new THREE.Group();
+  scene.add(truck);
+  const bodyG = new THREE.Group();   // sprung mass (dips on drops)
+  truck.add(bodyG);
+
+  const BLUE = 0x2f74d8, BLUE_D = 0x2559a8, DARK = 0x14161a, CHROME = 0xb9c0c6, GLASS = 0x0e131c;
+
+  box(bodyG, 5.6, .24, 1.5, 0x191d18, 0, .62, 0);            // frame
+  const bedFloor = box(bodyG, 3.1, .12, 1.7, BLUE_D, -1.4, .98, 0);
+  box(bodyG, 3.1, .5, .09, BLUE, -1.4, 1.28, .845);          // bed side R
+  box(bodyG, 3.1, .5, .09, BLUE, -1.4, 1.28, -.845);         // bed side L
+  box(bodyG, .09, .5, 1.7, BLUE, .11, 1.28, 0);              // bed front wall
+  box(bodyG, .09, .5, 1.7, BLUE, -2.94, 1.28, 0);            // tailgate
+  box(bodyG, 3.12, .07, .03, 0xa5ce39, -1.4, 1.4, .92);      // lime stripe R
+  box(bodyG, 3.12, .07, .03, 0xa5ce39, -1.4, 1.4, -.92);     // lime stripe L
+  box(bodyG, 1.6, 1.04, 1.72, BLUE, .96, 1.53, 0);           // cabin
+  box(bodyG, .92, .44, 1.74, GLASS, 1.0, 1.76, 0);           // side glass band
+  const ws = box(bodyG, .07, .5, 1.5, GLASS, 1.79, 1.72, 0); // windshield
+  ws.rotation.z = .32;
+  box(bodyG, 1.35, .5, 1.68, BLUE, 2.34, 1.28, 0);           // hood
+  box(bodyG, .12, .44, 1.6, DARK, 3.0, 1.14, 0);             // grille
+  box(bodyG, .13, .1, 1.62, CHROME, 3.02, 1.32, 0);          // chrome bar
+  box(bodyG, .1, .15, .3, 0xfff3c4, 3.02, 1.13, .6).material.emissive = new THREE.Color(0xffedb0);
+  box(bodyG, .1, .15, .3, 0xfff3c4, 3.02, 1.13, -.6).material.emissive = new THREE.Color(0xffedb0);
+  box(bodyG, .18, .24, 1.74, CHROME, 3.06, .8, 0);           // front bumper
+  box(bodyG, .16, .24, 1.74, CHROME, -3.0, .8, 0);           // rear bumper
+  box(bodyG, .06, .12, .2, 0xb02020, -2.99, 1.42, .68);      // taillight R
+  box(bodyG, .06, .12, .2, 0xb02020, -2.99, 1.42, -.68);     // taillight L
+  box(bodyG, .1, .18, .1, BLUE, 1.62, 1.95, .93);            // mirror R
+  box(bodyG, .1, .18, .1, BLUE, 1.62, 1.95, -.93);           // mirror L
+
+  // wheels: spinner groups so we can spin around the axle
+  const wheels = [];
+  for(const [wx, wz] of [[2.02, .88], [2.02, -.88], [-1.9, .88], [-1.9, -.88]]){
+    const spin = new THREE.Group();
+    spin.position.set(wx, .46, wz);
+    const tire = new THREE.Mesh(new THREE.CylinderGeometry(.46, .46, .3, 20), mat(0x101216));
+    tire.rotation.x = Math.PI/2;
+    spin.add(tire);
+    const hub = new THREE.Mesh(new THREE.CylinderGeometry(.17, .17, .32, 12), mat(0xaab0b6));
+    hub.rotation.x = Math.PI/2;
+    spin.add(hub);
+    truck.add(spin);
+    wheels.push(spin);
+  }
+
+  // contact shadow
+  const shCanvas = document.createElement('canvas');
+  shCanvas.width = shCanvas.height = 128;
+  const sc = shCanvas.getContext('2d');
+  const grad = sc.createRadialGradient(64, 64, 8, 64, 64, 62);
+  grad.addColorStop(0, 'rgba(0,0,0,.75)');
+  grad.addColorStop(1, 'rgba(0,0,0,0)');
+  sc.fillStyle = grad;
+  sc.fillRect(0, 0, 128, 128);
+  const shadow = new THREE.Mesh(
+    new THREE.PlaneGeometry(7.4, 2.9),
+    new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(shCanvas), transparent:true, depthWrite:false})
+  );
+  shadow.rotation.x = -Math.PI/2;
+  shadow.position.y = .02;
+  scene.add(shadow);
+
+  /* ---- junk items that drop into the bed ---- */
+  function fridge(){
+    const g = new THREE.Group();
+    box(g, .72, 1.5, .78, 0xaeb6ba, 0, 0, 0);
+    box(g, .05, .5, .06, 0x8f979c, .39, .2, .18);
+    box(g, .74, .02, .8, 0xb7bec2, 0, .12, 0);
+    return g;
+  }
+  function washer(){
+    const g = new THREE.Group();
+    box(g, .68, .72, .68, 0xd9d9d3, 0, 0, 0);
+    const door = new THREE.Mesh(new THREE.CylinderGeometry(.22, .22, .05, 18), mat(0x22262c));
+    door.rotation.x = Math.PI/2;
+    door.position.set(0, .04, .35);
+    g.add(door);
+    return g;
+  }
+  function couch(){
+    const g = new THREE.Group();
+    box(g, 1.35, .3, .6, 0x8a5a33, 0, 0, 0);
+    box(g, 1.35, .34, .55, 0x9b6a3e, 0, .1, .01);          // cushions
+    box(g, 1.35, .45, .16, 0x8a5a33, 0, .3, -.24);          // back
+    box(g, .17, .34, .6, 0x774d2a, -.6, .22, 0);            // arm
+    box(g, .17, .34, .6, 0x774d2a, .6, .22, 0);             // arm
+    return g;
+  }
+  function cardboard(s){
+    const g = new THREE.Group();
+    box(g, s, s, s, 0xb58a4f, 0, 0, 0);
+    box(g, s+.02, .05, s+.02, 0x8f6a3a, 0, s/2 - .02, 0);
+    return g;
+  }
+  function tire(){
+    const g = new THREE.Group();
+    const t = new THREE.Mesh(new THREE.TorusGeometry(.3, .13, 10, 22), mat(0x111318));
+    g.add(t);
+    return g;
+  }
+
+  const bedTop = 1.05; // top surface of bed floor (before suspension offset)
+  const items = [
+    {g:fridge(),      pos:[-2.42, bedTop + .75, -.22], rot: .1,  size:1},
+    {g:washer(),      pos:[-1.58, bedTop + .36,  .34], rot:-.15, size:.8},
+    {g:couch(),       pos:[ -.52, bedTop + .15,  .05], rot:-.1,  size:.9},
+    {g:cardboard(.5), pos:[-1.62, bedTop + .97, -.38], rot: .4,  size:.55},
+    {g:tire(),        pos:[ -.2,  bedTop + .34, -.5],  rot: 0,   size:.6, lean:true},
+    {g:cardboard(.42),pos:[ -.75, bedTop + .52,  .12], rot:-.35, size:.5},
+  ];
+  for(const it of items){
+    if(it.lean){ it.g.rotation.y = Math.PI/2; it.g.rotation.z = -.35; }
+    it.g.position.set(it.pos[0], it.pos[1] + 6, it.pos[2]);
+    it.g.visible = false;
+    bodyG.add(it.g);   // ride with the sprung body
+  }
+
+  /* ---- scroll-scrubbed timeline ---- */
+  const pin = hero.querySelector('.hero-pin');
+  const stageA = document.getElementById('stageA');
+  const stageLoad = document.getElementById('stageLoad');
+  const stageGone = document.getElementById('stageGone');
+  const cue = document.getElementById('cue');
+  const pbar = document.getElementById('pbar');
+
+  const DRIVE_END = .28;           // truck parked
+  const DROP0 = .32;               // first drop begins
+  const GAP = .075;
+  const DUR = .07;
+  const OUT0 = .8;                 // drive-off begins
+  const CONTACT = .3636;           // first floor contact in easeOutBounce
+
+  const seg = (p, a, b) => Math.min(Math.max((p - a) / (b - a), 0), 1);
+  const easeOutCubic = p => 1 - Math.pow(1 - p, 3);
+  const smooth = p => p * p * (3 - 2 * p);
+  function bounce(p){
+    const n1 = 7.5625, d1 = 2.75;
+    if(p < 1/d1) return n1*p*p;
+    if(p < 2/d1) return n1*(p -= 1.5/d1)*p + .75;
+    if(p < 2.5/d1) return n1*(p -= 2.25/d1)*p + .9375;
+    return n1*(p -= 2.625/d1)*p + .984375;
+  }
+
+  // deterministic suspension: a damped-sine kernel per landing, so the
+  // truck dips correctly even when the user scrubs backwards
+  const hits = items.map((it, i) => ({pc: DROP0 + i*GAP + DUR*CONTACT, s: it.size}));
+  hits.push({pc: DRIVE_END, s: 1.1});   // brake dip
+  function suspension(p){
+    let y = 0, r = 0;
+    for(const h of hits){
+      const u = p - h.pc;
+      if(u <= 0) continue;
+      const e = Math.exp(-u * 26) * h.s;
+      y -= .14 * e * Math.sin(u * 46);
+      r -= .07 * e * Math.sin(u * 40 + .7);
+    }
+    return [y, r];
+  }
+
+  const pointer = {x:0, y:0};
+  addEventListener('pointermove', e => {
+    pointer.x = (e.clientX / innerWidth) * 2 - 1;
+    pointer.y = (e.clientY / innerHeight) * 2 - 1;
+  }, {passive:true});
+
+  let portrait = false;
+  function layout(){
+    const w = pin.clientWidth, h = pin.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    portrait = camera.aspect < .95;
+    camera.fov = portrait ? 40 : 33;
+    camera.updateProjectionMatrix();
+  }
+  layout();
+  addEventListener('resize', layout);
+
+  function frame(p){
+    // truck: drive in, park, drive off (the junk rides along)
+    const tin = easeOutCubic(seg(p, 0, DRIVE_END));
+    const tout = Math.pow(seg(p, OUT0, 1), 3);
+    truck.position.x = -10 + 10 * tin + 19 * tout;
+    shadow.position.x = truck.position.x;
+    for(const w of wheels) w.rotation.z = -truck.position.x / .46;
+
+    const [sy, sr] = suspension(p);
+    bodyG.position.y = sy;
+    bodyG.rotation.z = sr;
+
+    // drops, fully derived from p so both scrub directions work
+    items.forEach((it, i) => {
+      const lp = seg(p, DROP0 + i*GAP, DROP0 + i*GAP + DUR);
+      it.g.visible = lp > 0;
+      if(lp === 0) return;
+      it.g.position.y = (it.pos[1] + 6) - 6 * bounce(lp);
+      const settle = easeOutCubic(lp);
+      const baseY = it.lean ? Math.PI/2 : 0;
+      it.g.rotation.y = baseY + it.rot * settle + (1 - settle) * 2.2;
+    });
+
+    // camera dollies up and back across the scrub
+    const s = smooth(p);
+    const ax = portrait ? 6.2 : 7.4,  bx = portrait ? 6.8 : 8.2;
+    const ay = portrait ? 5.6 : 2.8,  by = portrait ? 6.0 : 3.6;
+    const az = portrait ? 21 : 11.2, bz = portrait ? 22 : 12.5;
+    camera.position.set(
+      ax + (bx - ax) * s + pointer.x * .5,
+      ay + (by - ay) * s - pointer.y * .25,
+      az + (bz - az) * s
+    );
+    camera.lookAt(portrait ? 0 : -1.85, (portrait ? -1.5 : .95) + .35 * s, 0);
+
+    renderer.render(scene, camera);
+  }
+
+  if(reduced){
+    // no pinned scrub: classic static hero, truck parked and loaded
+    frame(.78);
+    const still = () => { layout(); frame(.78); };
+    addEventListener('resize', still);
+    cue.classList.add('off');
+  }else{
+    hero.classList.add('scrub');
+    let running = true, cur = 0, drawn = -1;
+    new IntersectionObserver(entries => {
+      running = entries[0].isIntersecting;
+    }).observe(pin);
+    addEventListener('scroll', () => {
+      const dh = document.documentElement.scrollHeight - innerHeight;
+      pbar.style.width = (dh > 0 ? (scrollY / dh) * 100 : 0) + '%';
+    }, {passive:true});
+    renderer.setAnimationLoop(() => {
+      if(!running || document.hidden) return;
+      const range = hero.offsetHeight - pin.clientHeight;
+      const target = range > 0 ? Math.min(Math.max(scrollY - hero.offsetTop, 0) / range, 1) : 0;
+      cur += (target - cur) * .14;
+      if(Math.abs(target - cur) < .0004) cur = target;
+
+      stageA.classList.toggle('off', cur > .17);
+      stageLoad.classList.toggle('on', cur > .3 && cur < .76);
+      stageGone.classList.toggle('on', cur > .86);
+      cue.classList.toggle('off', cur > .04);
+
+      const sig = Math.round(cur * 1e5) + pointer.x * 37 + pointer.y * 11;
+      if(sig === drawn) return;
+      drawn = sig;
+      frame(cur);
+    });
+  }
+}
+</script>
+</body>
+</html>
