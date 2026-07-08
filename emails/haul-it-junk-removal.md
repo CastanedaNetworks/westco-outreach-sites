@@ -3,17 +3,28 @@
 - **Phone (call/text):** 562-414-2841
 - **Channel:** text him directly (we know him). Backup: call, or in person.
 - **Preview:** https://castanedanetworks.github.io/westco-outreach-sites/sites/haul-it-junk-removal/
-- **Status:** draft, not sent
+- **Status:** CONVERTED 2026-07-08. Agreed deal: $99 down, $45/mo for first 12 months, $19/mo after. Locked in verbally, working together.
+- **Next steps:** ask which hero version he wants (v1 autoplay / v2 scroll), buy domain, move to AWS stack (S3+CloudFront+ACM+Route53), info@ email forwarding, Google Business Profile, swap in real truck/job photos first month.
 
-## Text draft
+## Text draft (with pricing)
 
-Yo Buddy, saw the flyer, the business looks legit. Made you something real quick so you can see what a site for Haul It could look like:
+Yo Buddy, saw the flyer, business looks legit. So I went ahead and built you something. Open this on your phone:
 
 https://castanedanetworks.github.io/westco-outreach-sites/sites/haul-it-junk-removal/
 
-Open it on your phone. The truck at the top loads itself with junk, wait for it. It's got your logo, your number, call and text buttons, and the Spanish section since you put hablamos español on the flyer.
+Wait for the truck at the top, it loads itself with junk lol. It's all your stuff, your logo on the door, your number, call and text buttons, even the Spanish section since you had hablamos español on the flyer.
 
-If people Google "junk removal near me" right now you don't show up. A site plus a Google Business page fixes that. If you want it, I'll put it on your own domain (haulitjunkremoval.com or whatever's free) and set the whole thing up. If not, no stress, flyer's still solid.
+Real talk: right now if someone Googles junk removal near me, you don't exist. This site plus a Google Business page fixes that, and that's where the calls come from.
+
+If you want it, here's the friend deal. Normally I'd charge like $1,200 for a custom build like this. For you it's $99 to start and $59 a month for a year. That covers everything: your own .com, an info@ email so invoices look pro, hosting, and me personally updating it whenever you text me. New job photos, prices, reviews, plus keeping your Google listing dialed in. After the year the site is paid off and it drops to $45 a month for the upkeep.
+
+One hauling job covers like three months of it.
+
+First month I'll swap the photos for shots of you and your actual truck, so send me some pics from your next couple jobs.
+
+If it's not your thing, zero stress, flyer's still hard. But don't let people Google you and find nothing.
+
+PS I actually made two versions. In this one the truck loads on its own, in this other one it loads as you scroll: https://castanedanetworks.github.io/westco-outreach-sites/sites/haul-it-junk-removal-v2/ tell me which one you like more
 
 ## Notes
 
