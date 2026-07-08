@@ -149,6 +149,16 @@
     text-transform:uppercase;letter-spacing:.1em;color:var(--steel)}
   .hero-tags span::before{content:"✓ ";color:var(--lime)}
 
+  /* short viewports: keep the hero text clear of the header logo */
+  @media (max-height:820px) and (min-width:600px){
+    header img{height:58px}
+    h1{font-size:clamp(2.5rem,12vh,6.2rem)}
+    .hero-inner{padding-bottom:26px}
+    .hero-sub{margin-bottom:16px}
+    .cta-row{margin-bottom:16px}
+    .btn{padding:13px 20px}
+  }
+
   /* scrub stages */
   .stage{transition:opacity .5s ease,transform .5s ease}
   .stage.off{opacity:0;transform:translateY(-16px);pointer-events:none}
