@@ -514,10 +514,12 @@
 </footer>
 
 <script type="importmap">
-{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js"}}
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"}}
 </script>
 <script type="module">
 import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 
 const hero = document.getElementById('hero');
 const canvas = document.getElementById('scene');
@@ -532,24 +534,27 @@ try{
 
 if(renderer){
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
 
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x0c0e0a);
   scene.fog = new THREE.Fog(0x0c0e0a, 16, 34);
+  scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), .04).texture;
 
   const camera = new THREE.PerspectiveCamera(33, 1, .1, 60);
 
   /* ---- lights ---- */
-  scene.add(new THREE.HemisphereLight(0xbdd0e8, 0x11140d, 1.6));
-  const sun = new THREE.DirectionalLight(0xfff4e0, 2.4);
+  scene.add(new THREE.HemisphereLight(0xbdd0e8, 0x11140d, .55));
+  const sun = new THREE.DirectionalLight(0xfff4e0, 1.6);
   sun.position.set(5, 9, 6);
   scene.add(sun);
-  const rim = new THREE.PointLight(0xa5ce39, 90, 18);
+  const rim = new THREE.PointLight(0xa5ce39, 70, 18);
   rim.position.set(-5, 2.2, 4);
   scene.add(rim);
 
   /* ---- helpers ---- */
-  const mat = c => new THREE.MeshLambertMaterial({color:c});
+  const mat = c => new THREE.MeshStandardMaterial({color:c, roughness:.9});
   const bmat = c => new THREE.MeshBasicMaterial({color:c});
   function box(g, w, h, d, c, x, y, z){
     const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat(c));
@@ -584,42 +589,119 @@ if(renderer){
   const bodyG = new THREE.Group();   // sprung mass (dips on drops)
   truck.add(bodyG);
 
-  const BLUE = 0x2f74d8, BLUE_D = 0x2559a8, DARK = 0x14161a, CHROME = 0xb9c0c6, GLASS = 0x0e131c;
+  const paint = new THREE.MeshStandardMaterial({color:0x2f74d8, metalness:.55, roughness:.34});
+  const paintDark = new THREE.MeshStandardMaterial({color:0x1d3f77, metalness:.4, roughness:.6});
+  const chrome = new THREE.MeshStandardMaterial({color:0xd9dee3, metalness:1, roughness:.22});
+  const glass = new THREE.MeshStandardMaterial({color:0x10151d, metalness:.4, roughness:.08});
+  const rubber = new THREE.MeshStandardMaterial({color:0x0e1013, roughness:.95});
+  const trim = new THREE.MeshStandardMaterial({color:0x171a1e, roughness:.65});
+  const limeTrim = new THREE.MeshStandardMaterial({color:0xa5ce39, roughness:.5});
+  const lamp = new THREE.MeshStandardMaterial({color:0xfff2c8, emissive:0xffedb0, emissiveIntensity:1.2});
+  const tail = new THREE.MeshStandardMaterial({color:0x7a1414, emissive:0xb02020, emissiveIntensity:.8});
 
-  box(bodyG, 5.6, .24, 1.5, 0x191d18, 0, .62, 0);            // frame
-  const bedFloor = box(bodyG, 3.1, .12, 1.7, BLUE_D, -1.4, .98, 0);
-  box(bodyG, 3.1, .5, .09, BLUE, -1.4, 1.28, .845);          // bed side R
-  box(bodyG, 3.1, .5, .09, BLUE, -1.4, 1.28, -.845);         // bed side L
-  box(bodyG, .09, .5, 1.7, BLUE, .11, 1.28, 0);              // bed front wall
-  box(bodyG, .09, .5, 1.7, BLUE, -2.94, 1.28, 0);            // tailgate
-  box(bodyG, 3.12, .07, .03, 0xa5ce39, -1.4, 1.4, .92);      // lime stripe R
-  box(bodyG, 3.12, .07, .03, 0xa5ce39, -1.4, 1.4, -.92);     // lime stripe L
-  box(bodyG, 1.6, 1.04, 1.72, BLUE, .96, 1.53, 0);           // cabin
-  box(bodyG, .92, .44, 1.74, GLASS, 1.0, 1.76, 0);           // side glass band
-  const ws = box(bodyG, .07, .5, 1.5, GLASS, 1.79, 1.72, 0); // windshield
-  ws.rotation.z = .32;
-  box(bodyG, 1.35, .5, 1.68, BLUE, 2.34, 1.28, 0);           // hood
-  box(bodyG, .12, .44, 1.6, DARK, 3.0, 1.14, 0);             // grille
-  box(bodyG, .13, .1, 1.62, CHROME, 3.02, 1.32, 0);          // chrome bar
-  box(bodyG, .1, .15, .3, 0xfff3c4, 3.02, 1.13, .6).material.emissive = new THREE.Color(0xffedb0);
-  box(bodyG, .1, .15, .3, 0xfff3c4, 3.02, 1.13, -.6).material.emissive = new THREE.Color(0xffedb0);
-  box(bodyG, .18, .24, 1.74, CHROME, 3.06, .8, 0);           // front bumper
-  box(bodyG, .16, .24, 1.74, CHROME, -3.0, .8, 0);           // rear bumper
-  box(bodyG, .06, .12, .2, 0xb02020, -2.99, 1.42, .68);      // taillight R
-  box(bodyG, .06, .12, .2, 0xb02020, -2.99, 1.42, -.68);     // taillight L
-  box(bodyG, .1, .18, .1, BLUE, 1.62, 1.95, .93);            // mirror R
-  box(bodyG, .1, .18, .1, BLUE, 1.62, 1.95, -.93);           // mirror L
+  function part(g, geo, m, x, y, z, rz = 0){
+    const mesh = new THREE.Mesh(geo, m);
+    mesh.position.set(x, y, z);
+    mesh.rotation.z = rz;
+    g.add(mesh);
+    return mesh;
+  }
+  const rbox = (w, h, d, r = .04) => new RoundedBoxGeometry(w, h, d, 2, r);
+  const bbox = (w, h, d) => new THREE.BoxGeometry(w, h, d);
+
+  // fender band: one extruded side profile with real wheel arches
+  const prof = new THREE.Shape();
+  prof.moveTo(-3.05, 1.05);
+  prof.lineTo(-3.05, .48);
+  prof.lineTo(-2.46, .48);
+  prof.absarc(-1.9, .48, .56, Math.PI, 0, true);
+  prof.lineTo(1.46, .48);
+  prof.absarc(2.02, .48, .56, Math.PI, 0, true);
+  prof.lineTo(3.05, .48);
+  prof.lineTo(3.05, 1.05);
+  prof.lineTo(-3.05, 1.05);
+  const band = new THREE.Mesh(
+    new THREE.ExtrudeGeometry(prof, {depth:1.66, bevelEnabled:true, bevelThickness:.02, bevelSize:.03, bevelSegments:2, steps:1}),
+    paint
+  );
+  band.position.z = -.85;
+  bodyG.add(band);
+
+  part(bodyG, bbox(5.5, .22, 1.3), trim, 0, .44, 0);                   // chassis
+  part(bodyG, bbox(5.92, .05, .02), limeTrim, 0, .95, .88);            // lime pinstripe R
+  part(bodyG, bbox(5.92, .05, .02), limeTrim, 0, .95, -.88);           // lime pinstripe L
+
+  // cab
+  part(bodyG, bbox(1.66, .46, 1.68), paint, .93, 1.28, 0);             // cab base
+  part(bodyG, bbox(1.5, .44, 1.58), glass, .93, 1.72, 0);              // glass band
+  part(bodyG, rbox(1.62, .12, 1.64), paint, .93, 2.0, 0);              // roof
+  part(bodyG, bbox(.07, .44, 1.62), paint, .93, 1.72, 0);              // B pillars
+  part(bodyG, bbox(.06, .56, 1.54), glass, 1.71, 1.71, 0, .42);        // windshield
+  part(bodyG, bbox(.07, .58, .08), paint, 1.71, 1.71, .76, .42);       // A pillar R
+  part(bodyG, bbox(.07, .58, .08), paint, 1.71, 1.71, -.76, .42);      // A pillar L
+  part(bodyG, bbox(.16, .04, .03), chrome, 1.38, 1.4, .85);            // door handle R
+  part(bodyG, bbox(.16, .04, .03), chrome, 1.38, 1.4, -.85);           // door handle L
+  part(bodyG, bbox(.05, .04, .16), paint, 1.62, 1.88, .92);            // mirror arm R
+  part(bodyG, bbox(.05, .04, .16), paint, 1.62, 1.88, -.92);           // mirror arm L
+  part(bodyG, rbox(.08, .18, .12, .02), paint, 1.6, 1.9, 1.0);         // mirror R
+  part(bodyG, rbox(.08, .18, .12, .02), paint, 1.6, 1.9, -1.0);        // mirror L
+
+  // front clip + hood + face
+  part(bodyG, bbox(1.4, .36, 1.66), paint, 2.36, 1.23, 0);             // front clip
+  part(bodyG, rbox(1.36, .16, 1.6), paint, 2.36, 1.48, 0, -.02);       // hood
+  part(bodyG, rbox(.14, .5, 1.46, .03), trim, 3.02, 1.12, 0);          // grille
+  part(bodyG, bbox(.16, .05, 1.48), chrome, 3.04, .98, 0);             // grille bar
+  part(bodyG, bbox(.16, .05, 1.48), chrome, 3.04, 1.12, 0);            // grille bar
+  part(bodyG, bbox(.16, .05, 1.48), chrome, 3.04, 1.26, 0);            // grille bar
+  part(bodyG, rbox(.1, .16, .3, .03), lamp, 3.06, 1.3, .6);            // headlight R
+  part(bodyG, rbox(.1, .16, .3, .03), lamp, 3.06, 1.3, -.6);           // headlight L
+  part(bodyG, rbox(.22, .24, 1.76, .05), chrome, 3.1, .7, 0);          // front bumper
+  part(bodyG, rbox(.2, .22, 1.7, .05), chrome, -3.12, .68, 0);         // rear bumper
+
+  // bed
+  part(bodyG, bbox(3.06, .1, 1.54), paintDark, -1.5, 1.0, 0);          // bed floor
+  part(bodyG, bbox(3.06, .45, .1), paint, -1.5, 1.275, .81);           // bed wall R
+  part(bodyG, bbox(3.06, .45, .1), paint, -1.5, 1.275, -.81);          // bed wall L
+  part(bodyG, bbox(.09, .45, 1.52), paint, .06, 1.275, 0);             // bed front wall
+  part(bodyG, bbox(.09, .45, 1.52), paint, -3.0, 1.275, 0);            // tailgate
+  part(bodyG, bbox(.03, .08, .4), trim, -3.06, 1.38, 0);               // tailgate handle
+  part(bodyG, rbox(3.14, .06, .14, .02), paint, -1.5, 1.53, .81);      // rail cap R
+  part(bodyG, rbox(3.14, .06, .14, .02), paint, -1.5, 1.53, -.81);     // rail cap L
+  part(bodyG, bbox(.06, .14, .22), tail, -3.07, 1.28, .7);             // taillight R
+  part(bodyG, bbox(.06, .14, .22), tail, -3.07, 1.28, -.7);            // taillight L
+  const exh = part(bodyG, new THREE.CylinderGeometry(.05, .05, .35, 12), chrome, -3.15, .55, .5);
+  exh.rotation.z = Math.PI / 2;
+
+  // door decals: his actual logo
+  const decalTex = new THREE.TextureLoader().load('img/logo.png', () => renderer.render(scene, camera));
+  decalTex.colorSpace = THREE.SRGBColorSpace;
+  const decalMat = new THREE.MeshBasicMaterial({map:decalTex, transparent:true});
+  const decalR = new THREE.Mesh(new THREE.PlaneGeometry(.62, .55), decalMat);
+  decalR.position.set(1.0, 1.27, .855);
+  bodyG.add(decalR);
+  const decalL = decalR.clone();
+  decalL.position.z = -.855;
+  decalL.rotation.y = Math.PI;
+  bodyG.add(decalL);
 
   // wheels: spinner groups so we can spin around the axle
   const wheels = [];
-  for(const [wx, wz] of [[2.02, .88], [2.02, -.88], [-1.9, .88], [-1.9, -.88]]){
+  for(const [wx, wz] of [[2.02, .86], [2.02, -.86], [-1.9, .86], [-1.9, -.86]]){
     const spin = new THREE.Group();
-    spin.position.set(wx, .46, wz);
-    const tire = new THREE.Mesh(new THREE.CylinderGeometry(.46, .46, .3, 20), mat(0x101216));
-    tire.rotation.x = Math.PI/2;
+    spin.position.set(wx, .48, wz);
+    const tire = new THREE.Mesh(new THREE.TorusGeometry(.335, .135, 12, 28), rubber);
     spin.add(tire);
-    const hub = new THREE.Mesh(new THREE.CylinderGeometry(.17, .17, .32, 12), mat(0xaab0b6));
-    hub.rotation.x = Math.PI/2;
+    const wall = new THREE.Mesh(new THREE.CylinderGeometry(.34, .34, .26, 24), rubber);
+    wall.rotation.x = Math.PI / 2;
+    spin.add(wall);
+    const rim = new THREE.Mesh(new THREE.CylinderGeometry(.2, .2, .27, 20), chrome);
+    rim.rotation.x = Math.PI / 2;
+    spin.add(rim);
+    const rimCenter = new THREE.Mesh(new THREE.CylinderGeometry(.13, .13, .28, 16), trim);
+    rimCenter.rotation.x = Math.PI / 2;
+    spin.add(rimCenter);
+    const hub = new THREE.Mesh(new THREE.CylinderGeometry(.05, .05, .3, 10), chrome);
+    hub.rotation.x = Math.PI / 2;
     spin.add(hub);
     truck.add(spin);
     wheels.push(spin);
