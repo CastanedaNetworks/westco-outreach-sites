@@ -22,7 +22,7 @@ import html
 import re
 import sys
 from pathlib import Path
-from urllib.parse import quote_plus
+from urllib.parse import quote, quote_plus
 
 ROOT = Path(__file__).resolve().parent.parent
 SITES = ROOT / "sites"
@@ -73,19 +73,25 @@ ALSO = [
     "Tacos Guerrero and Mexican Food",
 ]
 
-# Top banner on every preview. Paste the Stripe payment link here and re-run.
-# While it is empty the banner link dials WestCo instead of going nowhere.
+# Top banner on every preview. Paste a Stripe payment link here and re-run.
+# While it is empty the banner asks for Zelle to the WestCo number.
 STRIPE_LINK = ""
 RESERVE_PRICE = "$250"
 
 
 def preview_banner(display_name: str) -> str:
     """Self-contained (inline styles), so it also drops into hand-built pages."""
-    href = STRIPE_LINK or f"tel:{WESTCO_TEL}"
     target = ' target="_blank" rel="noopener"' if STRIPE_LINK else ""
+    if STRIPE_LINK:
+        href, how = STRIPE_LINK, ""
+    else:
+        # No Stripe link yet: pay by Zelle to the WestCo number. The link opens
+        # a text to that number so the owner can say which site they want.
+        msg = quote(f"I want to reserve the {display_name} website for {RESERVE_PRICE}.")
+        href, how = f"sms:{WESTCO_TEL}?&body={msg}", f" with Zelle to {WESTCO_PHONE}"
     return f"""<!-- PREVIEW BANNER START · delete through PREVIEW BANNER END to remove -->
 <div id="preview-banner" style="background:#111;color:#fff;font:500 14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;display:flex;align-items:center;gap:8px;padding:8px 6px 8px 16px;position:relative;z-index:60;">
-  <p style="margin:0;flex:1;min-width:0;">Preview built for {html.escape(display_name)}. <a href="{html.escape(href, quote=True)}"{target} style="color:#ffd84d;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Want it live? Reserve it for {RESERVE_PRICE} →</a></p>
+  <p style="margin:0;flex:1;min-width:0;">Preview built for {html.escape(display_name)}. <a href="{html.escape(href, quote=True)}"{target} style="color:#ffd84d;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Want it live? Reserve it for {RESERVE_PRICE}{how} →</a></p>
   <button type="button" aria-label="Hide this banner" onclick="this.parentNode.remove()" style="flex:none;width:44px;height:44px;background:none;border:0;color:#fff;font-size:22px;line-height:1;cursor:pointer;">×</button>
 </div>
 <!-- PREVIEW BANNER END -->"""
