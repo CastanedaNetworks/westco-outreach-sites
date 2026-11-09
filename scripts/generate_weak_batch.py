@@ -33,6 +33,7 @@ YEAR = "2026"
 
 # Leads that already have a tailored site. Left untouched.
 EXISTING = {"WRLDWIDEBARBERSHOP": "wrldwide-barbershop-pomona"}
+EXISTING_DISPLAY = {"WRLDWIDEBARBERSHOP": "WRLDWIDE BARBERSHOP"}
 
 
 def unsplash(photo_id: str, w: int = 1400) -> str:
@@ -59,7 +60,45 @@ IMG = {
     "auto_engine":   ("1486262715619-67b85e0b08d3", "Close view of an engine and belts"),
     "auto_tires":    ("1578844251758-2f71da64c96f", "Stacks of tires at a tire shop"),
     "auto_hands":    ("1619642751034-765dfdf7c58e", "Mechanic's hands working on an engine with a wrench"),
+    "auto_hood":     ("1625047509248-ec889cbff17f", "Technician leaning in under the open hood of a car"),
+    "roof_ladder":   ("1632759145351-1d592919f522", "Roofer standing on a house roof with a ladder against the wall"),
+    "roof_shingles": ("1635424710928-0544e8512eae", "Roofer in a safety vest walking a shingle roof"),
 }
+
+# Leads built in addition to the top N (exact Business Name from the sheet).
+ALSO = [
+    "HP Commercial Roofing Pro West Covina",
+    "Energy Collision Center & Auto Body Shop",
+    "Chad Da Barber\U0001F488 HeadSprung Barbershop",
+    "Tacos Guerrero and Mexican Food",
+]
+
+# Top banner on every preview. Paste the Stripe payment link here and re-run.
+# While it is empty the banner link dials WestCo instead of going nowhere.
+STRIPE_LINK = ""
+RESERVE_PRICE = "$250"
+
+
+def preview_banner(display_name: str) -> str:
+    """Self-contained (inline styles), so it also drops into hand-built pages."""
+    href = STRIPE_LINK or f"tel:{WESTCO_TEL}"
+    target = ' target="_blank" rel="noopener"' if STRIPE_LINK else ""
+    return f"""<!-- PREVIEW BANNER START · delete through PREVIEW BANNER END to remove -->
+<div id="preview-banner" style="background:#111;color:#fff;font:500 14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;display:flex;align-items:center;gap:8px;padding:8px 6px 8px 16px;position:relative;z-index:60;">
+  <p style="margin:0;flex:1;min-width:0;">Preview built for {html.escape(display_name)}. <a href="{html.escape(href, quote=True)}"{target} style="color:#ffd84d;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Want it live? Reserve it for {RESERVE_PRICE} →</a></p>
+  <button type="button" aria-label="Hide this banner" onclick="this.parentNode.remove()" style="flex:none;width:44px;height:44px;background:none;border:0;color:#fff;font-size:22px;line-height:1;cursor:pointer;">×</button>
+</div>
+<!-- PREVIEW BANNER END -->"""
+
+
+def rating_line(rating: str, reviews: int) -> tuple[str, str]:
+    """(html, plain). Below 4.0 the stars are dropped and only the count shows."""
+    count = f"{reviews:,} Google reviews"
+    r = float(rating)
+    if r < 4.0:
+        return count, count
+    return (f'<span class="whitespace-nowrap">{r:.1f} <span class="text-accent">★</span></span> · {count}',
+            f"{r:.1f} ★ · {count}")
 
 # --------------------------------------------------------------------------- #
 # Themes. Colors are "r g b" triples so Tailwind opacity modifiers work.
@@ -91,6 +130,15 @@ THEMES = {
         "bg": "19 21 26", "panel": "26 29 36", "ink": "240 236 227",
         "display_css": "font-weight:400; text-transform:uppercase; letter-spacing:0; line-height:0.95;",
         "radius": "0",
+    },
+    "contractor": {
+        "fonts": "family=Archivo:wght@800;900&family=Source+Sans+3:wght@400;500;600;700",
+        "display": "Archivo, 'Arial Black', sans-serif",
+        "sans": "'Source Sans 3', ui-sans-serif, system-ui, sans-serif",
+        "mono": "'Source Sans 3', ui-sans-serif, system-ui, sans-serif",
+        "bg": "247 245 240", "panel": "235 231 222", "ink": "24 28 32",
+        "display_css": "font-weight:900; letter-spacing:-0.015em; line-height:1.02;",
+        "radius": "0.25rem",
     },
 }
 
@@ -283,6 +331,70 @@ CONTENT = {
             ("Check engine light", "We pull the code, find the cause and explain it in plain English."),
         ],
     },
+    "HP Commercial Roofing Pro West Covina": {
+        "slug": "hp-commercial-roofing-pro-west-covina", "short": "HP Roofing Pro",
+        "display": "HP Commercial Roofing Pro",
+        "accent": "178 58 34", "on_accent": "255 250 244",
+        "hero": "roof_shingles", "side": "roof_ladder",
+        "kicker": "Roofing contractor · West Covina, CA",
+        "h1": "Tell us about your roof and get a free estimate.",
+        "sub": "HP Commercial Roofing Pro works on roofs in and around West Covina. Send us the details below or call, and we will come out and take a look.",
+        "cards_heading": "Roofing services",
+        "cards": [
+            ("Commercial roofing", "Flat and low slope roofs for shops, offices and warehouses, done with as little downtime as we can manage."),
+            ("Leak repair", "Water coming in? We track down where it starts and fix that, so you are not patching the same spot every winter."),
+            ("Roof replacement", "When repairs stop making sense we tear off the old roof and put on a new one, with the price agreed before we start."),
+        ],
+        "form_field": "Property address",
+        "form_placeholder": "Leak over the back office, flat roof, about 20 years old",
+    },
+    "Energy Collision Center & Auto Body Shop": {
+        "slug": "energy-collision-center-baldwin-park", "short": "Energy Collision Center",
+        "display": "Energy Collision Center",
+        "accent": "132 214 64", "on_accent": "19 21 26",
+        "hero": "auto_hood", "side": "auto_engine",
+        "kicker": "Collision and auto body · Baldwin Park, CA",
+        "h1": "Got hit? Get a free estimate before you decide anything.",
+        "sub": "Energy Collision Center fixes collision damage, dents and paint in Baldwin Park. Tell us what happened below or call the shop.",
+        "cards_heading": "Body shop services",
+        "cards": [
+            ("Collision repair", "From a parking lot bump to a real accident. We look it over and tell you what it takes to make it right."),
+            ("Dents and body work", "Dented doors, bent fenders and cracked bumpers straightened or replaced."),
+            ("Paint", "Color matched to your car so the repair does not stand out."),
+        ],
+        "form": True,
+        "form_field": "Vehicle (year, make, model)",
+        "form_placeholder": "Rear ended on the driver side, bumper and tail light",
+    },
+    "Chad Da Barber\U0001F488 HeadSprung Barbershop": {
+        "slug": "headsprung-barbershop-pomona", "short": "HeadSprung Barbershop",
+        "display": "HeadSprung Barbershop", "q": "HeadSprung Barbershop",
+        "accent": "40 190 170", "on_accent": "8 12 12",
+        "hero": "barber_cut", "side": "barber_tools",
+        "kicker": "Chad Da Barber · Pomona, CA",
+        "h1": "Get your head right at HeadSprung.",
+        "sub": "Chad Da Barber is cutting in Pomona. Call the shop to book your chair.",
+        "cards_heading": "In the chair",
+        "cards": [
+            ("Cuts", "Tell Chad what you are going for or show him a photo. He takes it from there."),
+            ("Fades", "Tapers, skin fades and blends finished with a clean lineup."),
+            ("Beard", "Trimmed, shaped and edged to match the cut."),
+        ],
+    },
+    "Tacos Guerrero and Mexican Food": {
+        "slug": "tacos-guerrero-azusa", "short": "Tacos Guerrero",
+        "accent": "150 30 90", "on_accent": "255 246 236",
+        "hero": "tacos_paper", "side": "tacos_row",
+        "kicker": "Tacos and Mexican food · Azusa, CA",
+        "h1": "Tacos Guerrero is cooking. Come get a plate.",
+        "sub": "Tacos and Mexican food made fresh in Azusa. Call your order in or stop by and eat.",
+        "cards_heading": "On the menu",
+        "cards": [
+            ("Tacos", "On warm tortillas with onion, cilantro and salsa. Pick your meat and how many."),
+            ("Burritos", "Filled up, wrapped tight and ready to go."),
+            ("Plates", "Your choice of meat with rice, beans and tortillas."),
+        ],
+    },
 }
 
 # Real ordering / booking pages from the sheet's Website column.
@@ -338,7 +450,10 @@ def render(row: dict) -> tuple[str, str]:
     reviews = int(row["Reviews"])
     slug = c["slug"]
     url = f"{PAGES_BASE}/sites/{slug}/"
-    q = quote_plus(f"{name} {city} CA")
+    display = c.get("display", name)
+    has_form = cat == "contractor" or c.get("form", False)
+    stars_html, stars_plain = rating_line(row["Rating"], reviews)
+    q = quote_plus(f'{c.get("q", name)} {city} CA')
     maps_link = f"https://www.google.com/maps/search/?api=1&query={q}"
     maps_embed = f"https://www.google.com/maps?q={q}&output=embed"
     site = row["Website"].strip()
@@ -366,9 +481,15 @@ def render(row: dict) -> tuple[str, str]:
             cta = f'<a href="tel:{phone_tel}" class="{primary}">Book now · {e(phone)}</a>{dir_btn}'
         nav_label, closing_h, closing_p = "Book", "Get in the chair", "Call the shop and we will find you a time that works."
         visit_h = "Find the shop"
+    elif cat == "contractor":
+        cta = (f'<a href="#estimate" class="{primary}">Free estimate</a>'
+               f'<a href="tel:{phone_tel}" class="{ghost}">Call {e(phone)}</a>')
+        nav_label, closing_h, closing_p = "Estimate", "Rather talk it through?", "Call and tell us what is going on with the roof. The estimate is free either way."
+        visit_h = "Where we work"
     else:
-        cta = (f'<a href="tel:{phone_tel}" class="{primary}">Call now · {e(phone)}</a>'
-               f'<a href="#hours" class="{ghost}">Hours</a>{dir_btn}')
+        second = (f'<a href="#estimate" class="{ghost}">Free estimate</a>' if has_form
+                  else f'<a href="#hours" class="{ghost}">Hours</a>')
+        cta = f'<a href="tel:{phone_tel}" class="{primary}">Call now · {e(phone)}</a>{second}{dir_btn}'
         nav_label, closing_h, closing_p = "Call", "Call before you come in", "A two minute call saves you a trip. We will tell you what we can do and when."
         visit_h = "Where to find us"
 
@@ -404,6 +525,19 @@ def render(row: dict) -> tuple[str, str]:
     {h1}
     {sub}
     {ctas}
+  </div>
+</section>"""
+    elif cat == "contractor":
+        hero = f"""
+<section id="top" class="max-w-6xl mx-auto px-4 sm:px-8 pt-10 sm:pt-16 pb-12 sm:pb-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+  <div class="lg:col-span-6 lg:order-2">
+    {kicker}
+    {h1}
+    {sub}
+    {ctas}
+  </div>
+  <div class="lg:col-span-6 lg:order-1">
+    {img_tag(c["hero"], "w-full h-[230px] sm:h-[460px] object-cover photo", eager=True)}
   </div>
 </section>"""
     else:
@@ -447,10 +581,7 @@ def render(row: dict) -> tuple[str, str]:
     reviews_sec = f"""
 <section id="reviews" class="bg-panel border-y border-ink/10">
   <div class="max-w-6xl mx-auto px-4 sm:px-8 py-14 sm:py-20 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-    <p class="display text-[clamp(1.6rem,6.4vw,3.5rem)]">
-      <span class="text-accent whitespace-nowrap" aria-label="5 stars">★★★★★</span>
-      <span class="block md:inline">{reviews:,} Google reviews</span>
-    </p>
+    <p class="display text-[clamp(1.5rem,6vw,3.25rem)]" aria-label="{e(stars_plain)}">{stars_html}</p>
     <a href="{maps_link}" target="_blank" rel="noopener" class="{ghost} self-start md:self-auto shrink-0">Read them on Google</a>
   </div>
 </section>"""
@@ -482,7 +613,7 @@ def render(row: dict) -> tuple[str, str]:
       </div>{hours}
     </div>
     <div class="lg:col-span-7">
-      <iframe title="Map to {e(name)} in {e(city)}, CA" src="{maps_embed}"
+      <iframe title="Map to {e(display)} in {e(city)}, CA" src="{maps_embed}"
               class="card w-full h-[320px] sm:h-[440px] border border-ink/15" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
@@ -498,20 +629,71 @@ def render(row: dict) -> tuple[str, str]:
   </div>
 </section>"""
 
+    # ---- free estimate form (opens the visitor's mail app, fields filled in) --
+    estimate = ""
+    if has_form:
+        field = c.get("form_field", "Address")
+        inp = "mt-1.5 w-full bg-bg border border-ink/25 px-3 py-3 text-base card focus:outline-none focus:border-accent"
+        estimate = f"""
+<section id="estimate" class="bg-panel border-t border-ink/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-14 sm:py-24 grid lg:grid-cols-12 gap-8 lg:gap-14">
+    <div class="lg:col-span-5">
+      <p class="kicker text-accent">No charge, no pressure</p>
+      <h2 class="display mt-3 text-[clamp(1.9rem,6.5vw,3.75rem)]">Get a free estimate</h2>
+      <p class="mt-5 text-ink/70 text-[17px] leading-relaxed max-w-[44ch]">Fill this out and hit the button. It opens an email to us with everything already typed in, so all you do is press send.</p>
+      <p class="mt-5 text-ink/70">In a hurry? <a class="font-semibold underline underline-offset-4 hover:text-accent transition" href="tel:{phone_tel}">Call {e(phone)}</a></p>
+    </div>
+    <form id="estimate-form" class="lg:col-span-7 grid sm:grid-cols-2 gap-4" data-to="{e(c.get('email', ''))}" data-business="{e(display)}" data-field="{e(field)}">
+      <label class="block text-sm font-semibold">Your name
+        <input class="{inp}" name="name" autocomplete="name" required />
+      </label>
+      <label class="block text-sm font-semibold">Phone
+        <input class="{inp}" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+      </label>
+      <label class="block text-sm font-semibold sm:col-span-2">{e(field)}
+        <input class="{inp}" name="extra" />
+      </label>
+      <label class="block text-sm font-semibold sm:col-span-2">What is going on?
+        <textarea class="{inp}" name="details" rows="4" placeholder="{e(c.get('form_placeholder', ''))}" required></textarea>
+      </label>
+      <div class="sm:col-span-2">
+        <button type="submit" class="{primary} w-full sm:w-auto">Free Estimate</button>
+      </div>
+    </form>
+  </div>
+</section>
+<script>
+  document.getElementById('estimate-form').addEventListener('submit', function (ev) {{
+    ev.preventDefault();
+    var f = ev.target, d = f.dataset, v = function (n) {{ return f.elements[n].value.trim(); }};
+    var body = [
+      'Name: ' + v('name'),
+      'Phone: ' + v('phone'),
+      d.field + ': ' + v('extra'),
+      '',
+      v('details')
+    ].join('\\n');
+    location.href = 'mailto:' + encodeURIComponent(d.to) +
+      '?subject=' + encodeURIComponent('Free estimate request for ' + d.business) +
+      '&body=' + encodeURIComponent(body);
+  }});
+</script>"""
+
     top_band = '<div class="hazard h-1.5"></div>' if cat == "auto" else ""
-    desc = f'{name} in {city}, CA. {c["sub"]}'
+    banner = preview_banner(display)
+    desc = f'{display} in {city}, CA. {c["sub"]}'
 
     page = f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>{e(name)} · {e(city)}, CA</title>
+<title>{e(display)} · {e(city)}, CA</title>
 <meta name="description" content="{e(desc)}" />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="{url}" />
 
-<meta property="og:title" content="{e(name)}" />
+<meta property="og:title" content="{e(display)}" />
 <meta property="og:description" content="{e(c["h1"])}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{url}" />
@@ -556,6 +738,7 @@ def render(row: dict) -> tuple[str, str]:
 </head>
 
 <body class="font-sans">
+{banner}
 {top_band}
 <header class="sticky top-0 z-40 bg-bg/95 backdrop-blur border-b border-ink/10">
   <div class="max-w-6xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between gap-3">
@@ -572,6 +755,7 @@ def render(row: dict) -> tuple[str, str]:
 </header>
 {hero}
 {services}
+{estimate}
 {reviews_sec}
 {visit}
 {closing}
@@ -579,7 +763,7 @@ def render(row: dict) -> tuple[str, str]:
 <footer class="border-t border-ink/10">
   <div class="max-w-6xl mx-auto px-4 sm:px-8 py-10 flex flex-col sm:flex-row sm:items-start justify-between gap-6 text-sm">
     <div>
-      <p class="display text-xl">{e(name)}</p>
+      <p class="display text-xl">{e(display)}</p>
       <p class="mt-1 text-ink/60">{e(city)}, CA</p>
       <p class="mt-1"><a class="inline-block py-1.5 hover:text-accent transition" href="tel:{phone_tel}">{e(phone)}</a></p>
     </div>
@@ -593,7 +777,7 @@ def render(row: dict) -> tuple[str, str]:
   </div>
   <div class="border-t border-ink/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex flex-wrap items-center justify-between gap-2 text-[11px] uppercase tracking-[0.18em] text-ink/45">
-      <span>© {YEAR} {e(name)}</span>
+      <span>© {YEAR} {e(display)}</span>
       <span>Website preview · not the official site</span>
     </div>
   </div>
@@ -616,14 +800,31 @@ def main() -> None:
         top = int(sys.argv[sys.argv.index("--top") + 1])
         args = [a for a in args if a != str(top)]
     with open(args[0], newline="", encoding="utf-8-sig") as f:
-        rows = [r for r in csv.DictReader(f) if r["Flag"].strip().upper() == "WEAK"]
+        sheet = list(csv.DictReader(f))
+    rows = [r for r in sheet if r["Flag"].strip().upper() == "WEAK"]
     rows.sort(key=lambda r: int(r["Reviews"]), reverse=True)
     rows = rows[:top]
+    picked = {r["Business Name"].strip() for r in rows}
+    for wanted in ALSO:
+        match = [r for r in sheet if r["Business Name"].strip() == wanted]
+        if not match:
+            sys.exit(f"ALSO entry not found in sheet: {wanted!r}")
+        if wanted not in picked:
+            rows.append(match[0])
 
     for r in rows:
         name = r["Business Name"].strip()
         if name in EXISTING:
             slug = EXISTING[name]
+            # Hand-built page: only keep its preview banner in sync.
+            path = SITES / slug / "index.html"
+            src = path.read_text(encoding="utf-8")
+            block = preview_banner(EXISTING_DISPLAY.get(name, name))
+            if "PREVIEW BANNER START" in src:
+                src = re.sub(r"<!-- PREVIEW BANNER START.*?PREVIEW BANNER END -->", lambda m: block, src, flags=re.S)
+            else:
+                src = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + block, src, count=1)
+            path.write_text(src, encoding="utf-8", newline="\n")
             print(f"KEPT\t{name}\t{PAGES_BASE}/sites/{slug}/")
             continue
         if name not in CONTENT:

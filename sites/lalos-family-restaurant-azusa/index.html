@@ -53,6 +53,12 @@
 </head>
 
 <body class="font-sans">
+<!-- PREVIEW BANNER START · delete through PREVIEW BANNER END to remove -->
+<div id="preview-banner" style="background:#111;color:#fff;font:500 14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;display:flex;align-items:center;gap:8px;padding:8px 6px 8px 16px;position:relative;z-index:60;">
+  <p style="margin:0;flex:1;min-width:0;">Preview built for Lalo&#x27;s Family Restaurant Comida Mexicana. <a href="tel:+12135229136" style="color:#ffd84d;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Want it live? Reserve it for $250 →</a></p>
+  <button type="button" aria-label="Hide this banner" onclick="this.parentNode.remove()" style="flex:none;width:44px;height:44px;background:none;border:0;color:#fff;font-size:22px;line-height:1;cursor:pointer;">×</button>
+</div>
+<!-- PREVIEW BANNER END -->
 
 <header class="sticky top-0 z-40 bg-bg/95 backdrop-blur border-b border-ink/10">
   <div class="max-w-6xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between gap-3">
@@ -108,12 +114,10 @@
   </div>
 </section>
 
+
 <section id="reviews" class="bg-panel border-y border-ink/10">
   <div class="max-w-6xl mx-auto px-4 sm:px-8 py-14 sm:py-20 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-    <p class="display text-[clamp(1.6rem,6.4vw,3.5rem)]">
-      <span class="text-accent whitespace-nowrap" aria-label="5 stars">★★★★★</span>
-      <span class="block md:inline">214 Google reviews</span>
-    </p>
+    <p class="display text-[clamp(1.5rem,6vw,3.25rem)]" aria-label="4.4 ★ · 214 Google reviews"><span class="whitespace-nowrap">4.4 <span class="text-accent">★</span></span> · 214 Google reviews</p>
     <a href="https://www.google.com/maps/search/?api=1&query=Lalo%27s+Family+Restaurant+Comida+Mexicana+Azusa+CA" target="_blank" rel="noopener" class="inline-flex items-center justify-center font-semibold text-sm px-6 py-3.5 transition btn ring-1 ring-ink/25 hover:bg-ink/5 self-start md:self-auto shrink-0">Read them on Google</a>
   </div>
 </section>
