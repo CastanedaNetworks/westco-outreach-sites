@@ -423,7 +423,18 @@ CONTENT = {
     "Mr. Lai's Mobile Detailing Services": {
         "slug": "mr-lais-mobile-detailing-el-monte", "short": "Mr. Lai's Mobile Detailing",
         "display": "Mr. Lai's Mobile Detailing", "mobile": True,
-        "accent": "56 189 248", "on_accent": "8 14 22",
+        # Red and blue badge on white, bold serif wordmark (their Instagram logo).
+        "logo": True,
+        "theme": {
+            "fonts": "family=Zilla+Slab:wght@600;700&family=Public+Sans:wght@400;500;600;700",
+            "display": "'Zilla Slab', Georgia, serif",
+            "sans": "'Public Sans', ui-sans-serif, system-ui, sans-serif",
+            "mono": "'Public Sans', ui-sans-serif, system-ui, sans-serif",
+            "bg": "255 255 255", "panel": "240 244 251", "ink": "24 38 92",
+            "display_css": "font-weight:700; letter-spacing:-0.01em; line-height:1.04;",
+            "radius": "0.375rem", "h1": "clamp(2.1rem,8.2vw,4.5rem)",
+        },
+        "accent": "200 32 44", "on_accent": "255 255 255",
         "hero": "detail_buckets", "side": "detail_foam",
         "kicker": "Mobile detailing · El Monte, CA",
         "h1": "Your car detailed right where it is parked.",
@@ -438,7 +449,18 @@ CONTENT = {
     },
     "Ride & Shine Auto Detail Supplies": {
         "slug": "ride-and-shine-auto-detail-supplies-el-monte", "short": "Ride & Shine",
-        "accent": "250 204 21", "on_accent": "11 16 24",
+        # Green and white on black, heavy italic lettering (their Instagram logo).
+        "logo": True,
+        "theme": {
+            "fonts": "family=Kanit:ital,wght@1,700;1,800&family=Mukta:wght@400;500;600;700",
+            "display": "Kanit, 'Arial Black', sans-serif",
+            "sans": "Mukta, ui-sans-serif, system-ui, sans-serif",
+            "mono": "Mukta, ui-sans-serif, system-ui, sans-serif",
+            "bg": "12 12 12", "panel": "26 26 26", "ink": "246 246 242",
+            "display_css": "font-weight:800; font-style:italic; letter-spacing:-0.005em; line-height:1.02;",
+            "radius": "999px", "h1": "clamp(2rem,8vw,4.5rem)",
+        },
+        "accent": "40 180 90", "on_accent": "6 18 10",
         "hero": "detail_polish", "side": "detail_sponge",
         "kicker": "Auto detail supplies · El Monte, CA",
         "h1": "Detail supplies for people who take care of their own car.",
@@ -452,13 +474,24 @@ CONTENT = {
         "closing": ("Looking for something specific?", "Call and ask. We will tell you if it is on the shelf before you make the drive."),
     },
     "Reservedparkingdetail": {
-        "slug": "reserved-parking-detail-el-monte", "short": "Reserved Parking Detail",
-        "display": "Reserved Parking Detail",
-        "accent": "239 68 68", "on_accent": "255 250 250",
+        "slug": "reserved-parking-detail-el-monte", "short": "Reserved Parking",
+        "display": "Reserved Parking Car Detailing",
+        # Ice blue and white on black, stencil wordmark (their Instagram logo).
+        "logo": True, "logo_shape": "rounded-[10px]",
+        "theme": {
+            "fonts": "family=Saira+Stencil+One&family=Saira:wght@400;500;600;700",
+            "display": "'Saira Stencil One', Impact, sans-serif",
+            "sans": "Saira, ui-sans-serif, system-ui, sans-serif",
+            "mono": "Saira, ui-sans-serif, system-ui, sans-serif",
+            "bg": "0 0 0", "panel": "14 20 28", "ink": "236 244 250",
+            "display_css": "font-weight:400; text-transform:uppercase; letter-spacing:0.01em; line-height:1.02;",
+            "radius": "0.25rem", "h1": "clamp(1.8rem,7.4vw,4.25rem)",
+        },
+        "accent": "104 196 244", "on_accent": "0 10 18",
         "hero": "detail_wheel", "side": "detail_headlight",
         "kicker": "Auto detailing · El Monte, CA",
         "h1": "Your car should look good wherever you park it.",
-        "sub": "Reserved Parking Detail cleans cars inside and out in the El Monte area. Call to get a price for yours and pick a day.",
+        "sub": "Reserved Parking cleans cars inside and out in the El Monte area. Call to get a price for yours and pick a day.",
         "cards_heading": "Services",
         "cards": [
             ("Exterior", "Hand washed and dried, with the wheels, tires and glass done right."),
@@ -470,7 +503,18 @@ CONTENT = {
     "The Hair Lab Pomona": {
         "slug": "the-hair-lab-pomona", "short": "The Hair Lab",
         "display": "The Hair Lab",
-        "accent": "94 234 212", "on_accent": "10 10 10",
+        # Neon green and hot pink on black (their Instagram logo).
+        "logo": True, "logo_shape": "rounded-[14px]",
+        "theme": {
+            "fonts": "family=Rubik:ital,wght@1,800;1,900&family=Rubik:wght@400;500;600",
+            "display": "Rubik, 'Arial Black', sans-serif",
+            "sans": "Rubik, ui-sans-serif, system-ui, sans-serif",
+            "mono": "Rubik, ui-sans-serif, system-ui, sans-serif",
+            "bg": "7 5 12", "panel": "22 16 32", "ink": "248 244 252",
+            "display_css": "font-weight:900; font-style:italic; text-transform:uppercase; letter-spacing:-0.01em; line-height:1;",
+            "radius": "0.875rem", "h1": "clamp(1.9rem,7.6vw,4.5rem)",
+        },
+        "accent": "150 255 40", "on_accent": "7 5 12",
         "hero": "barber_cut", "side": "barber_tools",
         "kicker": "Barbershop · Pomona, CA",
         "h1": "Tell us the cut you want and we will dial it in.",
@@ -484,7 +528,18 @@ CONTENT = {
     },
     "Pomona Barbers": {
         "slug": "pomona-barbers-pomona", "short": "Pomona Barbers",
-        "accent": "234 124 44", "on_accent": "10 10 10",
+        # Black slab lettering in a red ring on white (their sign, from Instagram).
+        "logo": True, "address": "430 W. Holt Ave. #D, Pomona, CA 91766",
+        "theme": {
+            "fonts": "family=Arvo:wght@700&family=Libre+Franklin:wght@400;500;600;700",
+            "display": "Arvo, Rockwell, Georgia, serif",
+            "sans": "'Libre Franklin', ui-sans-serif, system-ui, sans-serif",
+            "mono": "'Libre Franklin', ui-sans-serif, system-ui, sans-serif",
+            "bg": "248 244 236", "panel": "237 230 216", "ink": "22 19 16",
+            "display_css": "font-weight:700; letter-spacing:-0.01em; line-height:1.06;",
+            "radius": "0.125rem", "h1": "clamp(1.9rem,7.6vw,4.25rem)",
+        },
+        "accent": "176 32 36", "on_accent": "255 252 246",
         "hero": "barber_shop", "side": "barber_fade",
         "kicker": "Barbershop · Pomona, CA",
         "h1": "A good haircut close to home in Pomona.",
@@ -500,6 +555,8 @@ CONTENT = {
         "slug": "serge-barbershop-pomona", "short": "Serge Barbershop",
         "display": "Serge Barbershop",
         "action_url": "https://bookedin.com/book/sergio-3",  # from the @serge_fades bio
+        # No logo on their Instagram; the profile photo is Serge cutting in the shop.
+        "logo": True, "logo_alt": "Serge cutting hair in the shop",
         "accent": "200 36 52", "on_accent": "250 246 240",
         "hero": "barber_fade", "side": "barber_shave",
         "kicker": "Barbershop · Pomona, CA",
@@ -562,7 +619,8 @@ def render(row: dict) -> tuple[str, str]:
     name = row["Business Name"].strip()
     c = CONTENT[name]
     cat = category(row["Search"])
-    t = THEMES[cat]
+    t = {**THEMES[cat], **c.get("theme", {})}
+    brand = "logo" in c  # page is led by the business's own logo, colors and type
     city = city_of(row["Search"])
     phone = row["Phone"].strip()
     phone_tel = tel(phone)
@@ -621,11 +679,29 @@ def render(row: dict) -> tuple[str, str]:
 
     # ---- hero variants -----------------------------------------------------
     kicker = f'<p class="kicker text-accent">{e(c["kicker"])}</p>'
-    h1 = f'<h1 class="display mt-4 text-[clamp(2.1rem,8.6vw,5.25rem)] max-w-[18ch]">{e(c["h1"])}</h1>'
+    h1 = f'<h1 class="display mt-4 text-[{t.get("h1", "clamp(2.1rem,8.6vw,5.25rem)")}] max-w-[18ch]">{e(c["h1"])}</h1>'
     sub = f'<p class="mt-6 text-ink/75 text-[17px] sm:text-lg leading-relaxed max-w-[52ch]">{e(c["sub"])}</p>'
     ctas = f'<div class="mt-8 flex flex-col min-[480px]:flex-row min-[480px]:flex-wrap gap-3">{cta}</div>'
 
-    if cat == "taqueria":
+    if brand:
+        logo = (f'<img src="logo.jpg" alt="{e(c.get("logo_alt", display + " logo"))}" width="150" height="150" '
+                f'class="w-[88px] h-[88px] sm:w-[116px] sm:h-[116px] object-cover {c.get("logo_shape", "rounded-full")}" />')
+        rating_inline = (f'<p class="mt-6 text-[15px] text-ink/70"><a class="underline underline-offset-4 decoration-accent decoration-2 hover:text-ink transition" '
+                         f'href="{maps_link}" target="_blank" rel="noopener">{e(stars_plain)}</a></p>')
+        hero = f"""
+<section id="top" class="max-w-6xl mx-auto px-4 sm:px-8 pt-8 sm:pt-14 pb-10 sm:pb-16 grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+  <div class="lg:col-span-7">
+    {logo}
+    {h1.replace("mt-4", "mt-6")}
+    {sub}
+    {ctas}
+    {rating_inline}
+  </div>
+  <figure class="lg:col-span-5 -mx-4 sm:mx-0">
+    {img_tag(c["hero"], "w-full h-[220px] sm:h-[420px] object-cover sm:rounded-[var(--radius)]", eager=True)}
+  </figure>
+</section>"""
+    elif cat == "taqueria":
         hero = f"""
 <section id="top" class="max-w-6xl mx-auto px-4 sm:px-8 pt-10 sm:pt-16 pb-12 sm:pb-20">
   {kicker}
@@ -703,6 +779,24 @@ def render(row: dict) -> tuple[str, str]:
   </div>
 </section>"""
 
+    if brand:  # a ruled list, like a shop's service board, in place of three cards
+        rows_html = "\n".join(
+            f"""      <div class="border-t border-ink/20 py-5 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6">
+        <dt class="display text-xl sm:text-2xl sm:col-span-4">{e(title)}</dt>
+        <dd class="mt-1.5 sm:mt-0 sm:col-span-8 text-ink/75 leading-relaxed">{e(body)}</dd>
+      </div>"""
+            for title, body in c["cards"]
+        )
+        services = f"""
+<section id="services" class="border-t border-ink/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-20 grid lg:grid-cols-12 gap-6 lg:gap-12">
+    <h2 class="lg:col-span-4 display text-[clamp(1.7rem,6vw,3rem)]">{e(c["cards_heading"])}</h2>
+    <dl class="lg:col-span-8 border-b border-ink/20">
+{rows_html}
+    </dl>
+  </div>
+</section>"""
+
     # ---- reviews -----------------------------------------------------------
     reviews_sec = f"""
 <section id="reviews" class="bg-panel border-y border-ink/10">
@@ -731,6 +825,7 @@ def render(row: dict) -> tuple[str, str]:
     <div class="lg:col-span-5">
       <p class="kicker text-accent">{e(city)}, CA</p>
       <h2 class="display mt-3 text-[clamp(1.9rem,6.5vw,3.75rem)]">{e(visit_h)}</h2>
+      {f'<p class="mt-4 text-ink/75">{e(c["address"])}</p>' if c.get("address") else ""}
       <p class="mt-6 kicker text-ink/55">Phone</p>
       <a href="tel:{phone_tel}" class="display block mt-1 text-3xl sm:text-4xl hover:text-accent transition">{e(phone)}</a>
       <div class="mt-6 flex flex-col min-[480px]:flex-row gap-3">
@@ -856,6 +951,7 @@ def render(row: dict) -> tuple[str, str]:
   body {{ background: rgb(var(--bg)); color: rgb(var(--ink)); overflow-x: hidden; -webkit-font-smoothing: antialiased; }}
   .display {{ font-family: {t["display"]}; {t["display_css"]} overflow-wrap: break-word; }}
   .kicker {{ font-family: {t["mono"]}; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }}
+  {".kicker { font-size: 14px; letter-spacing: 0; text-transform: none; }" if brand else ""}
   .btn, .card, .photo {{ border-radius: var(--radius); }}
   .btn {{ min-height: 48px; text-align: center; }}
   .sticker {{ border-radius: var(--radius); transform: rotate(-3deg); }}

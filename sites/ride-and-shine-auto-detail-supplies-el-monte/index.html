@@ -16,14 +16,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700;1,800&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
-        fontFamily: { sans: ['Barlow, ui-sans-serif, system-ui, sans-serif'], mono: ['Barlow, ui-sans-serif, system-ui, sans-serif'] },
+        fontFamily: { sans: ['Mukta, ui-sans-serif, system-ui, sans-serif'], mono: ['Mukta, ui-sans-serif, system-ui, sans-serif'] },
         colors: {
           bg:       'rgb(var(--bg) / <alpha-value>)',
           panel:    'rgb(var(--panel) / <alpha-value>)',
@@ -37,14 +37,15 @@
 </script>
 <style>
   :root {
-    --bg: 11 16 24; --panel: 20 28 40; --ink: 238 242 246;
-    --accent: 250 204 21; --on-accent: 11 16 24;
-    --radius: 0.5rem;
+    --bg: 12 12 12; --panel: 26 26 26; --ink: 246 246 242;
+    --accent: 40 180 90; --on-accent: 6 18 10;
+    --radius: 999px;
   }
   html { scroll-behavior: smooth; background: rgb(var(--bg)); }
   body { background: rgb(var(--bg)); color: rgb(var(--ink)); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-  .display { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.005em; line-height:0.98; overflow-wrap: break-word; }
-  .kicker { font-family: Barlow, ui-sans-serif, system-ui, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+  .display { font-family: Kanit, 'Arial Black', sans-serif; font-weight:800; font-style:italic; letter-spacing:-0.005em; line-height:1.02; overflow-wrap: break-word; }
+  .kicker { font-family: Mukta, ui-sans-serif, system-ui, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+  .kicker { font-size: 14px; letter-spacing: 0; text-transform: none; }
   .btn, .card, .photo { border-radius: var(--radius); }
   .btn { min-height: 48px; text-align: center; }
   .sticker { border-radius: var(--radius); transform: rotate(-3deg); }
@@ -74,40 +75,36 @@
   </div>
 </header>
 
-<section id="top" class="max-w-7xl mx-auto grid lg:grid-cols-12">
-  <div class="lg:col-span-7 px-4 sm:px-8 pt-10 pb-12 sm:pt-20 sm:pb-20">
-    <p class="kicker text-accent">Auto detail supplies · El Monte, CA</p>
-    <h1 class="display mt-4 text-[clamp(2.1rem,8.6vw,5.25rem)] max-w-[18ch]">Detail supplies for people who take care of their own car.</h1>
+<section id="top" class="max-w-6xl mx-auto px-4 sm:px-8 pt-8 sm:pt-14 pb-10 sm:pb-16 grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+  <div class="lg:col-span-7">
+    <img src="logo.jpg" alt="Ride &amp; Shine Auto Detail Supplies logo" width="150" height="150" class="w-[88px] h-[88px] sm:w-[116px] sm:h-[116px] object-cover rounded-full" />
+    <h1 class="display mt-6 text-[clamp(2rem,8vw,4.5rem)] max-w-[18ch]">Detail supplies for people who take care of their own car.</h1>
     <p class="mt-6 text-ink/75 text-[17px] sm:text-lg leading-relaxed max-w-[52ch]">Ride &amp; Shine sells auto detail supplies in El Monte. Call to ask if we carry what you are looking for, then come by.</p>
     <div class="mt-8 flex flex-col min-[480px]:flex-row min-[480px]:flex-wrap gap-3"><a href="tel:+16266720722" class="inline-flex items-center justify-center font-semibold text-sm px-6 py-3.5 transition btn bg-accent text-onaccent hover:brightness-110">Call now · (626) 672-0722</a><a href="https://www.google.com/maps/search/?api=1&query=Ride+%26+Shine+Auto+Detail+Supplies+El+Monte+CA" target="_blank" rel="noopener" class="inline-flex items-center justify-center font-semibold text-sm px-6 py-3.5 transition btn ring-1 ring-ink/25 hover:bg-ink/5">Get directions</a></div>
+    <p class="mt-6 text-[15px] text-ink/70"><a class="underline underline-offset-4 decoration-accent decoration-2 hover:text-ink transition" href="https://www.google.com/maps/search/?api=1&query=Ride+%26+Shine+Auto+Detail+Supplies+El+Monte+CA" target="_blank" rel="noopener">4.9 ★ · 45 Google reviews</a></p>
   </div>
-  <div class="lg:col-span-5 relative min-h-[15rem] sm:min-h-[24rem]">
-    <img src="https://images.pexels.com/photos/5233262/pexels-photo-5233262.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Hands running a polisher over a red car door" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
-  </div>
+  <figure class="lg:col-span-5 -mx-4 sm:mx-0">
+    <img src="https://images.pexels.com/photos/5233262/pexels-photo-5233262.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Hands running a polisher over a red car door" class="w-full h-[220px] sm:h-[420px] object-cover sm:rounded-[var(--radius)]" loading="eager" />
+  </figure>
 </section>
 
 <section id="services" class="border-t border-ink/10">
-  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-14 sm:py-24">
-    <div class="grid lg:grid-cols-12 gap-8 items-end">
-      <h2 class="lg:col-span-7 display text-[clamp(1.9rem,6.5vw,3.75rem)]">On the shelf</h2>
-      <div class="lg:col-span-5">
-        <img src="https://images.pexels.com/photos/4870705/pexels-photo-4870705.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Hand scrubbing a car wheel with a soapy sponge" class="w-full h-40 sm:h-52 object-cover photo" loading="lazy" />
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-20 grid lg:grid-cols-12 gap-6 lg:gap-12">
+    <h2 class="lg:col-span-4 display text-[clamp(1.7rem,6vw,3rem)]">On the shelf</h2>
+    <dl class="lg:col-span-8 border-b border-ink/20">
+      <div class="border-t border-ink/20 py-5 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6">
+        <dt class="display text-xl sm:text-2xl sm:col-span-4">Wash</dt>
+        <dd class="mt-1.5 sm:mt-0 sm:col-span-8 text-ink/75 leading-relaxed">Soaps, mitts and buckets for washing by hand.</dd>
       </div>
-    </div>
-    <div class="mt-8 sm:mt-12 grid md:grid-cols-3 gap-4 sm:gap-6 items-start">
-      <article class="card bg-panel p-6 sm:p-7">
-        <h3 class="display text-2xl sm:text-3xl">Wash</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Soaps, mitts and buckets for washing by hand.</p>
-      </article>
-      <article class="card bg-panel p-6 sm:p-7 md:mt-8">
-        <h3 class="display text-2xl sm:text-3xl">Protect</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Waxes, sealants and sprays that keep the shine after the wash.</p>
-      </article>
-      <article class="card bg-panel p-6 sm:p-7">
-        <h3 class="display text-2xl sm:text-3xl">Interior</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Cleaners, brushes and towels for the inside of the car.</p>
-      </article>
-    </div>
+      <div class="border-t border-ink/20 py-5 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6">
+        <dt class="display text-xl sm:text-2xl sm:col-span-4">Protect</dt>
+        <dd class="mt-1.5 sm:mt-0 sm:col-span-8 text-ink/75 leading-relaxed">Waxes, sealants and sprays that keep the shine after the wash.</dd>
+      </div>
+      <div class="border-t border-ink/20 py-5 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6">
+        <dt class="display text-xl sm:text-2xl sm:col-span-4">Interior</dt>
+        <dd class="mt-1.5 sm:mt-0 sm:col-span-8 text-ink/75 leading-relaxed">Cleaners, brushes and towels for the inside of the car.</dd>
+      </div>
+    </dl>
   </div>
 </section>
 
@@ -124,6 +121,7 @@
     <div class="lg:col-span-5">
       <p class="kicker text-accent">El Monte, CA</p>
       <h2 class="display mt-3 text-[clamp(1.9rem,6.5vw,3.75rem)]">Where to find us</h2>
+      
       <p class="mt-6 kicker text-ink/55">Phone</p>
       <a href="tel:+16266720722" class="display block mt-1 text-3xl sm:text-4xl hover:text-accent transition">(626) 672-0722</a>
       <div class="mt-6 flex flex-col min-[480px]:flex-row gap-3">
