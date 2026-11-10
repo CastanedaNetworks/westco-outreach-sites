@@ -37,6 +37,9 @@ EXISTING_DISPLAY = {"WRLDWIDEBARBERSHOP": "WRLDWIDE BARBERSHOP"}
 
 
 def unsplash(photo_id: str, w: int = 1400) -> str:
+    if photo_id.startswith("pexels:"):
+        n = photo_id.split(":", 1)[1]
+        return f"https://images.pexels.com/photos/{n}/pexels-photo-{n}.jpeg?auto=compress&cs=tinysrgb&w={w}"
     return f"https://images.unsplash.com/photo-{photo_id}?fm=jpg&q=72&w={w}&fit=crop"
 
 
@@ -61,6 +64,13 @@ IMG = {
     "auto_tires":    ("1578844251758-2f71da64c96f", "Stacks of tires at a tire shop"),
     "auto_hands":    ("1619642751034-765dfdf7c58e", "Mechanic's hands working on an engine with a wrench"),
     "auto_hood":     ("1625047509248-ec889cbff17f", "Technician leaning in under the open hood of a car"),
+    "detail_buckets":  ("1607860108855-64acf2078ed9", "Detailer hand washing a dark sports car beside wash buckets"),
+    "detail_wheel":    ("1552930294-6b595f4c2974", "Man pressure washing the wheel of a black convertible"),
+    "detail_headlight": ("1632823469850-2f77dd9c7f93", "Detailer working on the headlight of a silver car"),
+    "detail_foam":     ("1608506375591-b90e1f955e4b", "Soapy wheel and fender of a car mid wash"),
+    "detail_rinse":    ("1520340356584-f9917d1eea6f", "Soap being rinsed off the back of a sports car"),
+    "detail_polish":   ("pexels:5233262", "Hands running a polisher over a red car door"),
+    "detail_sponge":   ("pexels:4870705", "Hand scrubbing a car wheel with a soapy sponge"),
     "roof_ladder":   ("1632759145351-1d592919f522", "Roofer standing on a house roof with a ladder against the wall"),
     "roof_shingles": ("1635424710928-0544e8512eae", "Roofer in a safety vest walking a shingle roof"),
 }
@@ -136,6 +146,15 @@ THEMES = {
         "bg": "19 21 26", "panel": "26 29 36", "ink": "240 236 227",
         "display_css": "font-weight:400; text-transform:uppercase; letter-spacing:0; line-height:0.95;",
         "radius": "0",
+    },
+    "detail": {
+        "fonts": "family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700",
+        "display": "'Barlow Condensed', 'Arial Narrow', sans-serif",
+        "sans": "Barlow, ui-sans-serif, system-ui, sans-serif",
+        "mono": "Barlow, ui-sans-serif, system-ui, sans-serif",
+        "bg": "11 16 24", "panel": "20 28 40", "ink": "238 242 246",
+        "display_css": "font-weight:700; text-transform:uppercase; letter-spacing:0.005em; line-height:0.98;",
+        "radius": "0.5rem",
     },
     "contractor": {
         "fonts": "family=Archivo:wght@800;900&family=Source+Sans+3:wght@400;500;600;700",
@@ -401,6 +420,98 @@ CONTENT = {
             ("Plates", "Your choice of meat with rice, beans and tortillas."),
         ],
     },
+    "Mr. Lai's Mobile Detailing Services": {
+        "slug": "mr-lais-mobile-detailing-el-monte", "short": "Mr. Lai's Mobile Detailing",
+        "display": "Mr. Lai's Mobile Detailing", "mobile": True,
+        "accent": "56 189 248", "on_accent": "8 14 22",
+        "hero": "detail_buckets", "side": "detail_foam",
+        "kicker": "Mobile detailing · El Monte, CA",
+        "h1": "Your car detailed right where it is parked.",
+        "sub": "Mr. Lai's Mobile Detailing comes to your home or your work around El Monte. Call, tell us what you drive, and we will set a time.",
+        "cards_heading": "What we do",
+        "cards": [
+            ("Wash", "A proper hand wash with the wheels and tires done, then dried so it does not spot."),
+            ("Interior", "Vacuumed, wiped down and cleaned out, from the dash to the floor mats."),
+            ("Full detail", "Inside and outside in one visit. Ask what is included for your car and we will quote it on the call."),
+        ],
+        "closing": ("Ready when you are", "Call and tell us what you drive and where it is parked. We will give you a price and a time."),
+    },
+    "Ride & Shine Auto Detail Supplies": {
+        "slug": "ride-and-shine-auto-detail-supplies-el-monte", "short": "Ride & Shine",
+        "accent": "250 204 21", "on_accent": "11 16 24",
+        "hero": "detail_polish", "side": "detail_sponge",
+        "kicker": "Auto detail supplies · El Monte, CA",
+        "h1": "Detail supplies for people who take care of their own car.",
+        "sub": "Ride & Shine sells auto detail supplies in El Monte. Call to ask if we carry what you are looking for, then come by.",
+        "cards_heading": "On the shelf",
+        "cards": [
+            ("Wash", "Soaps, mitts and buckets for washing by hand."),
+            ("Protect", "Waxes, sealants and sprays that keep the shine after the wash."),
+            ("Interior", "Cleaners, brushes and towels for the inside of the car."),
+        ],
+        "closing": ("Looking for something specific?", "Call and ask. We will tell you if it is on the shelf before you make the drive."),
+    },
+    "Reservedparkingdetail": {
+        "slug": "reserved-parking-detail-el-monte", "short": "Reserved Parking Detail",
+        "display": "Reserved Parking Detail",
+        "accent": "239 68 68", "on_accent": "255 250 250",
+        "hero": "detail_wheel", "side": "detail_headlight",
+        "kicker": "Auto detailing · El Monte, CA",
+        "h1": "Your car should look good wherever you park it.",
+        "sub": "Reserved Parking Detail cleans cars inside and out in the El Monte area. Call to get a price for yours and pick a day.",
+        "cards_heading": "Services",
+        "cards": [
+            ("Exterior", "Hand washed and dried, with the wheels, tires and glass done right."),
+            ("Interior", "Seats, carpets, dash and door panels vacuumed and wiped clean."),
+            ("Inside and out", "Get both done in one appointment. Call with your make and model for a quote."),
+        ],
+        "closing": ("Get a price for your car", "Call with the make and model and tell us what it needs. We will quote it and find you a day."),
+    },
+    "The Hair Lab Pomona": {
+        "slug": "the-hair-lab-pomona", "short": "The Hair Lab",
+        "display": "The Hair Lab",
+        "accent": "94 234 212", "on_accent": "10 10 10",
+        "hero": "barber_cut", "side": "barber_tools",
+        "kicker": "Barbershop · Pomona, CA",
+        "h1": "Tell us the cut you want and we will dial it in.",
+        "sub": "The Hair Lab is in Pomona. Call the shop to grab a time, then come see us.",
+        "cards_heading": "What we do",
+        "cards": [
+            ("Cuts", "Bring a photo or just describe it. Your barber will talk it through before the clippers come out."),
+            ("Fades", "Tapers and fades blended smooth and finished with a sharp lineup."),
+            ("Beard", "Trimmed, shaped and edged so it matches the cut."),
+        ],
+    },
+    "Pomona Barbers": {
+        "slug": "pomona-barbers-pomona", "short": "Pomona Barbers",
+        "accent": "234 124 44", "on_accent": "10 10 10",
+        "hero": "barber_shop", "side": "barber_fade",
+        "kicker": "Barbershop · Pomona, CA",
+        "h1": "A good haircut close to home in Pomona.",
+        "sub": "Pomona Barbers does cuts, fades and beard work. Call ahead and we will have a chair ready for you.",
+        "cards_heading": "In the chair",
+        "cards": [
+            ("Cuts", "Regular cuts and clean ups done the way you ask for them."),
+            ("Fades", "Low, mid or high, blended clean with a lineup to finish."),
+            ("Beard", "Beard trims and shape ups to go with the cut."),
+        ],
+    },
+    "SERGE BARBERSHOP": {
+        "slug": "serge-barbershop-pomona", "short": "Serge Barbershop",
+        "display": "Serge Barbershop",
+        "action_url": "https://bookedin.com/book/sergio-3",  # from the @serge_fades bio
+        "accent": "200 36 52", "on_accent": "250 246 240",
+        "hero": "barber_fade", "side": "barber_shave",
+        "kicker": "Barbershop · Pomona, CA",
+        "h1": "Book with Serge and leave with a clean fade.",
+        "sub": "Pick your time online in a minute, or call. Serge Barbershop is in Pomona.",
+        "cards_heading": "At the shop",
+        "cards": [
+            ("Cuts", "Tell Serge what you are going for and he will get you there."),
+            ("Fades", "Skin fades, tapers and blends with a crisp lineup."),
+            ("Beard", "Lined up and trimmed so the whole look comes together."),
+        ],
+    },
 }
 
 # Real ordering / booking pages from the sheet's Website column.
@@ -415,6 +526,8 @@ def category(search: str) -> str:
         return "barber"
     if "auto repair" in s or "tire" in s:
         return "auto"
+    if "detailing" in s:
+        return "detail"
     if "roofing" in s or "contractor" in s:
         return "contractor"
     return "other"
@@ -463,7 +576,8 @@ def render(row: dict) -> tuple[str, str]:
     maps_link = f"https://www.google.com/maps/search/?api=1&query={q}"
     maps_embed = f"https://www.google.com/maps?q={q}&output=embed"
     site = row["Website"].strip()
-    action_url = site if any(h in site for h in ACTION_URL_HINTS) else ""
+    action_url = c.get("action_url") or (site if any(h in site for h in ACTION_URL_HINTS) else "")
+    mobile = c.get("mobile", False)  # comes to the customer, so no directions button
 
     btn = "inline-flex items-center justify-center font-semibold text-sm px-6 py-3.5 transition btn"
     primary = f"{btn} bg-accent text-onaccent hover:brightness-110"
@@ -492,6 +606,12 @@ def render(row: dict) -> tuple[str, str]:
                f'<a href="tel:{phone_tel}" class="{ghost}">Call {e(phone)}</a>')
         nav_label, closing_h, closing_p = "Estimate", "Rather talk it through?", "Call and tell us what is going on with the roof. The estimate is free either way."
         visit_h = "Where we work"
+    elif cat == "detail":
+        second = f'<a href="#services" class="{ghost}">{e(c["cards_heading"])}</a>' if mobile else dir_btn
+        cta = f'<a href="tel:{phone_tel}" class="{primary}">Call now · {e(phone)}</a>{second}'
+        nav_label = "Call"
+        closing_h, closing_p = c["closing"]
+        visit_h = "We come to you" if mobile else "Where to find us"
     else:
         second = (f'<a href="#estimate" class="{ghost}">Free estimate</a>' if has_form
                   else f'<a href="#hours" class="{ghost}">Hours</a>')
@@ -615,7 +735,7 @@ def render(row: dict) -> tuple[str, str]:
       <a href="tel:{phone_tel}" class="display block mt-1 text-3xl sm:text-4xl hover:text-accent transition">{e(phone)}</a>
       <div class="mt-6 flex flex-col min-[480px]:flex-row gap-3">
         {call_btn}
-        {dir_btn}
+        {"" if mobile else dir_btn}
       </div>{hours}
     </div>
     <div class="lg:col-span-7">
@@ -810,8 +930,12 @@ def main() -> None:
     rows = [r for r in sheet if r["Flag"].strip().upper() == "WEAK"]
     rows.sort(key=lambda r: int(r["Reviews"]), reverse=True)
     rows = rows[:top]
+    only = []
+    if "--only" in sys.argv:  # --only "Name A|Name B": build just these, skip top N and ALSO
+        only = [n.strip() for n in sys.argv[sys.argv.index("--only") + 1].split("|")]
+        rows = []
     picked = {r["Business Name"].strip() for r in rows}
-    for wanted in ALSO:
+    for wanted in only or ALSO:
         match = [r for r in sheet if r["Business Name"].strip() == wanted]
         if not match:
             sys.exit(f"ALSO entry not found in sheet: {wanted!r}")
