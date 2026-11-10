@@ -742,6 +742,82 @@ REFRESH = {
 for _name, _over in REFRESH.items():
     CONTENT[_name].update(_over)
 
+# Nov 10: WEAK leads with an Instagram account that had no page yet.
+CONTENT.update({
+    "CSWF Construction": {
+        "slug": "cswf-construction-covina", "short": "CSWF Construction",
+        # Gold lettering on black (their Instagram logo).
+        "logo": True, "logo_shape": "rounded-[10px]",
+        "theme": _theme("family=Bebas+Neue&family=Barlow:wght@400;500;600;700", "'Bebas Neue', Impact, sans-serif",
+                        "Barlow, ui-sans-serif, system-ui, sans-serif", "10 10 10", "26 23 16", "246 241 228",
+                        "font-weight:400; letter-spacing:0.01em; line-height:0.98;", "0.25rem", "clamp(2.4rem,10vw,5.5rem)"),
+        "accent": "214 168 60", "on_accent": "18 13 2",
+        "hero": "roof_ladder", "side": "roof_shingles",
+        "kicker": "General contractor · Covina, CA",
+        "h1": "Tell us what you want built and get a free estimate.",
+        "sub": "CSWF Construction is a general contractor working in and around Covina. Send the details below or call, and we will come take a look.",
+        "cards_heading": "What we build",
+        "cards": [
+            ("Remodels", "Kitchens, bathrooms and whole rooms taken from tired to finished."),
+            ("Additions", "Need more space? We build on to what you have so it looks like it was always there."),
+            ("Repairs and upgrades", "The jobs around the property that are too big for a weekend."),
+        ],
+        "form_field": "Property address",
+        "form_placeholder": "Kitchen remodel, about 150 square feet, hoping to start in spring",
+        "closing": ("Rather talk it through?", "Call and tell us about the job. The estimate is free either way."),
+    },
+    "Avila Auto Repair": {
+        "slug": "avila-auto-repair-baldwin-park", "short": "Avila Auto Repair",
+        # No logo on their Instagram; the profile photo is a truck in a repair bay.
+        "logo": True, "logo_shape": "rounded-[10px]", "logo_alt": "Truck with its hood open in a repair bay",
+        "accent": "72 152 255", "on_accent": "8 14 24",
+        "hero": "auto_hood", "side": "auto_hands",
+        "kicker": "Auto repair · Baldwin Park, CA",
+        "h1": "Bring it to Avila and find out what it really needs.",
+        "sub": "Avila Auto Repair works on cars and trucks in Baldwin Park. Call and tell us what it is doing, and we will tell you when to bring it in.",
+        "cards_heading": "In the bay",
+        "cards": [
+            ("Diagnostics", "Warning light, strange noise or a car that just feels wrong. We find the cause first."),
+            ("Brakes", "Pads, rotors and everything that stops you, checked and replaced when it is time."),
+            ("Maintenance", "Oil, fluids, belts and the regular work that keeps you out of the shop."),
+        ],
+    },
+    "Engine Dynamics": {
+        "slug": "engine-dynamics-baldwin-park", "short": "Engine Dynamics",
+        "accent": "255 96 32", "on_accent": "19 21 26",
+        "hero": "auto_engine", "side": "auto_hands",
+        "kicker": "Auto repair · Baldwin Park, CA",
+        "h1": "Engine trouble? Call before it gets worse.",
+        "sub": "Engine Dynamics is an auto repair shop in Baldwin Park. Tell us what you are hearing or feeling and we will tell you when to bring it in.",
+        "cards_heading": "What we do",
+        "cards": [
+            ("Engine repair", "Rough idle, misfires, leaks or loss of power. We find the cause before we replace anything."),
+            ("Check engine light", "We pull the code, track down what set it off and explain it in plain English."),
+            ("Maintenance", "Oil, belts, fluids and the regular service your engine needs to last."),
+        ],
+    },
+    "Magik Touch Mobile Detailing": {
+        "slug": "magik-touch-mobile-detailing-el-monte", "short": "Magik Touch", "mobile": True,
+        # Gold ring and lettering on black with a red car outline (their Instagram logo).
+        "logo": True,
+        "theme": _theme("family=Rajdhani:wght@600;700&family=Barlow:wght@400;500;600;700", "Rajdhani, 'Arial Narrow', sans-serif",
+                        "Barlow, ui-sans-serif, system-ui, sans-serif", "8 8 8", "24 21 15", "246 242 232",
+                        "font-weight:700; text-transform:uppercase; letter-spacing:0.02em; line-height:1;", "0.375rem", "clamp(2.1rem,8.8vw,4.75rem)"),
+        "accent": "214 168 64", "on_accent": "16 12 2",
+        "hero": "detail_rinse", "side": "detail_foam",
+        "kicker": "Mobile detailing · El Monte, CA",
+        "h1": "A full detail without leaving your driveway.",
+        "sub": "Magik Touch Mobile Detailing comes to you around El Monte. Call, tell us what you drive, and we will set a time.",
+        "cards_heading": "What we do",
+        "cards": [
+            ("Exterior", "Hand wash, wheels, tires and glass, finished so the paint shines."),
+            ("Interior", "Vacuumed, wiped and cleaned out, seats and carpets included."),
+            ("Full detail", "Inside and out in one visit. Call with your make and model for a price."),
+        ],
+        "closing": ("Book your detail", "Call and tell us what you drive and where it is parked. We will give you a price and a time."),
+    },
+})
+
 # Real ordering / booking pages from the sheet's Website column.
 ACTION_URL_HINTS = ("toasttab.com", "clover.com", "getsquire.com")
 
@@ -833,7 +909,8 @@ def render(row: dict) -> tuple[str, str]:
     elif cat == "contractor":
         cta = (f'<a href="#estimate" class="{primary}">Free estimate</a>'
                f'<a href="tel:{phone_tel}" class="{ghost}">Call {e(phone)}</a>')
-        nav_label, closing_h, closing_p = "Estimate", "Rather talk it through?", "Call and tell us what is going on with the roof. The estimate is free either way."
+        nav_label = "Estimate"
+        closing_h, closing_p = c.get("closing", ("Rather talk it through?", "Call and tell us what is going on with the roof. The estimate is free either way."))
         visit_h = "Where we work"
     elif cat == "detail":
         second = f'<a href="#services" class="{ghost}">{e(c["cards_heading"])}</a>' if mobile else dir_btn
