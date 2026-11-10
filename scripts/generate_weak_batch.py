@@ -130,9 +130,9 @@ THEMES = {
         "radius": "0.75rem",
     },
     "barber": {
-        "fonts": "family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700",
+        "fonts": "family=Big+Shoulders+Display:wght@700;800;900&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700",
         "display": "'Big Shoulders Display', Impact, 'Arial Narrow', sans-serif",
-        "sans": "Inter, ui-sans-serif, system-ui, sans-serif",
+        "sans": "Archivo, ui-sans-serif, system-ui, sans-serif",
         "mono": "'JetBrains Mono', ui-monospace, monospace",
         "bg": "10 10 10", "panel": "22 22 22", "ink": "244 241 234",
         "display_css": "font-weight:800; text-transform:uppercase; letter-spacing:0.01em; line-height:0.92;",
@@ -571,6 +571,173 @@ CONTENT = {
     },
 }
 
+def _theme(fonts, display, sans, bg, panel, ink, css, radius, h1="clamp(2rem,8vw,4.5rem)"):
+    return {"fonts": fonts, "display": display, "sans": sans, "mono": sans, "bg": bg, "panel": panel,
+            "ink": ink, "display_css": css, "radius": radius, "h1": h1}
+
+
+# Nov 9 batch, reworked around each shop's own logo and colors (Instagram or
+# Facebook profile picture, saved as sites/<slug>/logo.jpg) and the dishes and
+# services their Google reviewers mention most (the sheet's Hook column).
+REFRESH = {
+    "El Picoso Restaurant": {
+        "logo": True, "logo_shape": "rounded-[10px]",
+        "theme": _theme("family=Rozha+One&family=Karla:wght@400;500;600;700", "'Rozha One', Georgia, serif",
+                        "Karla, ui-sans-serif, system-ui, sans-serif", "164 20 30", "140 14 24", "255 244 220",
+                        "font-weight:400; line-height:1.04;", "0.5rem"),
+        "accent": "252 208 40", "on_accent": "60 16 10",
+        "cards": [
+            ("Asada", "The one people keep coming back for. Get it in tacos, in a burrito or on a plate."),
+            ("Huaraches", "Thick masa off the griddle, topped with beans, your choice of meat and everything that goes with it."),
+            ("Pozole", "A big bowl with the fixings on the side. Call ahead to make sure it is on today."),
+        ],
+    },
+    "Taqueria La Fogata": {
+        "slug": "taqueria-la-fogata-west-covina", "city": "West Covina",
+        "logo": True, "logo_shape": "rounded-[10px]",
+        "theme": _theme("family=Rokkitt:wght@700;800&family=Nunito+Sans:wght@400;600;700", "Rokkitt, Rockwell, Georgia, serif",
+                        "'Nunito Sans', ui-sans-serif, system-ui, sans-serif", "245 237 222", "234 222 200", "74 24 36",
+                        "font-weight:800; line-height:1;", "0.375rem", "clamp(2.2rem,9vw,5rem)"),
+        "accent": "224 98 28", "on_accent": "40 14 6",
+        "kicker": "Taqueria · West Covina, CA",
+        "h1": "Handmade tortillas and birria worth the drive.",
+        "sub": "Taqueria La Fogata makes authentic Mexican food in West Covina. Call ahead or come by and eat.",
+        "cards_heading": "What people come for",
+        "cards": [
+            ("Handmade tortillas", "Pressed and cooked here. You can taste the difference in every taco."),
+            ("Birria", "Slow cooked and rich. Ask how we are serving it today."),
+            ("Catering", "Feeding a party or the office? We cater any occasion. Call and we will set it up."),
+        ],
+    },
+    "Tacos El Superior": {
+        "logo": True, "logo_shape": "rounded-[10px]", "tagline": "Hecho con amor y calidad",
+        "theme": _theme("family=Patua+One&family=Work+Sans:wght@400;500;600;700", "'Patua One', Georgia, serif",
+                        "'Work Sans', ui-sans-serif, system-ui, sans-serif", "247 246 244", "236 233 228", "44 30 30",
+                        "font-weight:400; line-height:1.04;", "0.5rem"),
+        "accent": "212 38 46", "on_accent": "255 255 255",
+        "cards": [
+            ("Quesabirria", "Crisp, cheesy and made for dipping. It is what most people walk in asking for."),
+            ("Tacos", "Corn tortillas, your meat, onion, cilantro and salsa."),
+            ("Burritos", "Big, filling and easy to take with you. Add what you like and leave out what you don't."),
+        ],
+    },
+    "Taco Tapatio": {
+        "logo": True, "logo_shape": "rounded-[10px]",
+        "theme": _theme("family=Bowlby+One&family=Work+Sans:wght@400;500;600;700", "'Bowlby One', Impact, sans-serif",
+                        "'Work Sans', ui-sans-serif, system-ui, sans-serif", "255 248 230", "248 234 204", "64 16 16",
+                        "font-weight:400; line-height:1.03;", "0.5rem", "clamp(1.9rem,7.6vw,4.25rem)"),
+        "accent": "198 28 36", "on_accent": "255 244 214",
+        "cards": [
+            ("Carne asada", "Grilled and chopped to order. Have it in tacos, a burrito or on a plate."),
+            ("Fish tacos", "Done right, with lime and salsa on the side."),
+            ("Burritos and plates", "Rice, beans and your pick of meat when a couple of tacos is not enough."),
+        ],
+    },
+    "Lalo's Family Restaurant Comida Mexicana": {
+        "logo": True, "logo_shape": "rounded-[10px]",
+        "theme": _theme("family=Berkshire+Swash&family=Mulish:wght@400;500;600;700", "'Berkshire Swash', Georgia, serif",
+                        "Mulish, ui-sans-serif, system-ui, sans-serif", "255 247 228", "250 232 196", "56 30 10",
+                        "font-weight:400; line-height:1.08;", "0.75rem"),
+        "accent": "204 84 16", "on_accent": "255 248 232",
+        "sub": "Lalo's is a family-owned restaurant cooking comida mexicana in Azusa. Come in and sit down, or call your order in to go.",
+        "cards": [
+            ("Chilaquiles", "Done the way they should be, and good at any time of day."),
+            ("Wet burritos", "Covered in sauce and melted cheese. You will want a fork."),
+            ("Family orders", "Feeding a group? Call ahead and we will have everything packed and ready."),
+        ],
+    },
+    "El Bukanas Azusa": {
+        "display": "El Bukanas", "q": "El Bukanas",
+        "logo": True,
+        "theme": _theme("family=Lobster+Two:ital,wght@1,700&family=Cabin:wght@400;500;600;700", "'Lobster Two', Georgia, serif",
+                        "Cabin, ui-sans-serif, system-ui, sans-serif", "253 246 238", "246 230 214", "78 32 16",
+                        "font-weight:700; font-style:italic; line-height:1.04;", "0.75rem", "clamp(2.3rem,9.4vw,5rem)"),
+        "accent": "184 76 38", "on_accent": "255 246 236",
+        "cards": [
+            ("Tacos gobernador", "Shrimp and melted cheese folded into a crisp tortilla."),
+            ("Tacos al vapor", "Soft steamed tacos, the kind that are hard to find done right."),
+            ("Burritos and brunch", "Burritos big enough for two meals, plus our new brunch menu. Ask what is on it."),
+        ],
+    },
+    "Sandy’s Cocina": {
+        "logo": True, "logo_alt": "Tacos from Sandy’s Cocina",
+        "cards": [
+            ("Taco Tuesday", "Tuesday is taco day here. Call to ask what the deal is this week."),
+            ("Chilaquiles", "A plate that fills you up, made the way you would get it at home."),
+            ("Burritos and plates", "Made to order, with rice and beans on the side when you want the full meal."),
+        ],
+    },
+    "Main St Barbershop": {
+        "logo": True, "logo_shape": "rounded-none",
+        "theme": _theme("family=Zilla+Slab:wght@700&family=Archivo:wght@400;500;600;700", "'Zilla Slab', Rockwell, serif",
+                        "Archivo, ui-sans-serif, system-ui, sans-serif", "255 255 255", "242 242 240", "14 14 14",
+                        "font-weight:700; text-transform:uppercase; letter-spacing:0.005em; line-height:1;", "0", "clamp(2rem,8.2vw,4.5rem)"),
+        "accent": "196 30 44", "on_accent": "255 255 255",
+        "sub": "Main St Barbershop is in downtown Pomona. Pick your barber and your time online, or call the shop and we will get you in.",
+        "cards": [
+            ("Cuts", "Classic cuts, scissor work and everything in between. Tell your barber what you want or show a photo."),
+            ("Fades", "Low, mid, high or a taper. Blended clean with a sharp lineup to finish."),
+            ("Beard trims", "Shaped, lined up and finished clean. Plenty of our regulars come in just for this."),
+        ],
+    },
+    "El Punto Barbershop Pomona": {
+        "display": "El Punto Barbershop",
+        "logo": True,
+        "theme": _theme("family=Roboto+Slab:wght@800&family=Archivo:wght@400;500;600;700", "'Roboto Slab', Rockwell, serif",
+                        "Archivo, ui-sans-serif, system-ui, sans-serif", "20 17 28", "32 28 44", "238 230 212",
+                        "font-weight:800; text-transform:uppercase; letter-spacing:0.01em; line-height:1.02;", "0.125rem", "clamp(1.8rem,7.4vw,4.25rem)"),
+        "accent": "232 222 198", "on_accent": "20 17 28",
+        "cards": [
+            ("Cuts", "From a quick clean up to a full restyle. Your barber takes the time to get it right."),
+            ("Fades", "Skin fades, tapers and blends with a crisp lineup."),
+            ("Kids' cuts", "Kids are welcome here. Our barbers are patient and know how to keep them still."),
+        ],
+    },
+    "The Bambino Barbershop Pomona": {
+        "display": "The Bambino Barbershop",
+        "logo": True,
+        "theme": _theme("family=Lilita+One&family=Nunito:wght@400;600;700", "'Lilita One', Impact, sans-serif",
+                        "Nunito, ui-sans-serif, system-ui, sans-serif", "5 10 22", "14 26 52", "244 248 255",
+                        "font-weight:400; line-height:1.02;", "0.875rem"),
+        "accent": "255 168 20", "on_accent": "20 10 0",
+        "cards": [
+            ("Cuts", "Whatever you wear, your barber will keep it fresh."),
+            ("Fades", "Low to high and everything between, blended smooth."),
+            ("Kids' cuts", "Parents bring their kids here for a reason. We take our time and keep it fun."),
+        ],
+    },
+    "Christian & Roberto's Barber": {
+        "sub": "Good cuts at a fair price in Pomona. It gets busy, so call the shop before you head over.",
+    },
+    "Erik's Tires": {
+        "cards": [
+            ("New and used tires", "Call with your size or read it to us off the sidewall. We will tell you what we have and what it costs."),
+            ("Flat repair", "Picked up a nail? Bring it in and we will see if it can be patched before you buy anything."),
+            ("Alignment and smog", "Pulling to one side or due for a smog check? We do both here."),
+        ],
+    },
+    "Purrfect Auto Service": {
+        "cards": [
+            ("Oil change", "Oil and filter with a look over the basics while your car is in the bay."),
+            ("Smog check", "Due for smog? Bring it in and we will get it done."),
+            ("Brakes", "Squealing, grinding or a soft pedal. We check it and show you what it needs."),
+        ],
+    },
+    "HP Commercial Roofing Pro West Covina": {
+        "logo": True,
+        "theme": _theme("family=Montserrat:wght@700;800&family=Source+Sans+3:wght@400;500;600;700", "Montserrat, 'Arial Black', sans-serif",
+                        "'Source Sans 3', ui-sans-serif, system-ui, sans-serif", "255 255 255", "238 242 246", "44 52 62",
+                        "font-weight:800; letter-spacing:-0.02em; line-height:1.04;", "0.25rem", "clamp(1.9rem,7.6vw,4.25rem)"),
+        "accent": "18 108 178", "on_accent": "255 255 255",
+    },
+    "Chad Da Barber\U0001F488 HeadSprung Barbershop": {
+        "logo": True, "logo_shape": "rounded-[10px]", "logo_alt": "The HeadSprung Barbershop storefront",
+        "accent": "236 48 60", "on_accent": "255 248 248",
+    },
+}
+for _name, _over in REFRESH.items():
+    CONTENT[_name].update(_over)
+
 # Real ordering / booking pages from the sheet's Website column.
 ACTION_URL_HINTS = ("toasttab.com", "clover.com", "getsquire.com")
 
@@ -620,8 +787,8 @@ def render(row: dict) -> tuple[str, str]:
     c = CONTENT[name]
     cat = category(row["Search"])
     t = {**THEMES[cat], **c.get("theme", {})}
-    brand = "logo" in c  # page is led by the business's own logo, colors and type
-    city = city_of(row["Search"])
+    brand = True  # ruled service list, no all-caps labels; logo shown when we have one
+    city = c.get("city") or city_of(row["Search"])
     phone = row["Phone"].strip()
     phone_tel = tel(phone)
     reviews = int(row["Reviews"])
@@ -684,15 +851,16 @@ def render(row: dict) -> tuple[str, str]:
     ctas = f'<div class="mt-8 flex flex-col min-[480px]:flex-row min-[480px]:flex-wrap gap-3">{cta}</div>'
 
     if brand:
-        logo = (f'<img src="logo.jpg" alt="{e(c.get("logo_alt", display + " logo"))}" width="150" height="150" '
+        tagline = f'<p class="mt-3 text-[15px] italic text-ink/70">{e(c["tagline"])}</p>' if c.get("tagline") else ""
+        logo = "" if not c.get("logo") else (f'<img src="logo.jpg" alt="{e(c.get("logo_alt", display + " logo"))}" width="150" height="150" '
                 f'class="w-[88px] h-[88px] sm:w-[116px] sm:h-[116px] object-cover {c.get("logo_shape", "rounded-full")}" />')
         rating_inline = (f'<p class="mt-6 text-[15px] text-ink/70"><a class="underline underline-offset-4 decoration-accent decoration-2 hover:text-ink transition" '
                          f'href="{maps_link}" target="_blank" rel="noopener">{e(stars_plain)}</a></p>')
         hero = f"""
 <section id="top" class="max-w-6xl mx-auto px-4 sm:px-8 pt-8 sm:pt-14 pb-10 sm:pb-16 grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
   <div class="lg:col-span-7">
-    {logo}
-    {h1.replace("mt-4", "mt-6")}
+    {logo}{tagline}
+    {h1.replace("mt-4", "mt-6" if c.get("logo") else "mt-0")}
     {sub}
     {ctas}
     {rating_inline}

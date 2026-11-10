@@ -16,14 +16,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
-        fontFamily: { sans: ['Inter, ui-sans-serif, system-ui, sans-serif'], mono: ["'JetBrains Mono', ui-monospace, monospace"] },
+        fontFamily: { sans: ['Archivo, ui-sans-serif, system-ui, sans-serif'], mono: ["'JetBrains Mono', ui-monospace, monospace"] },
         colors: {
           bg:       'rgb(var(--bg) / <alpha-value>)',
           panel:    'rgb(var(--panel) / <alpha-value>)',
@@ -38,13 +38,14 @@
 <style>
   :root {
     --bg: 10 10 10; --panel: 22 22 22; --ink: 244 241 234;
-    --accent: 40 190 170; --on-accent: 8 12 12;
+    --accent: 236 48 60; --on-accent: 255 248 248;
     --radius: 0.125rem;
   }
   html { scroll-behavior: smooth; background: rgb(var(--bg)); }
   body { background: rgb(var(--bg)); color: rgb(var(--ink)); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
   .display { font-family: 'Big Shoulders Display', Impact, 'Arial Narrow', sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:0.01em; line-height:0.92; overflow-wrap: break-word; }
   .kicker { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+  .kicker { font-size: 14px; letter-spacing: 0; text-transform: none; }
   .btn, .card, .photo { border-radius: var(--radius); }
   .btn { min-height: 48px; text-align: center; }
   .sticker { border-radius: var(--radius); transform: rotate(-3deg); }
@@ -74,39 +75,36 @@
   </div>
 </header>
 
-<section id="top" class="relative overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=72&w=1400&fit=crop" alt="Barber combing and cutting a client&#x27;s hair" class="absolute inset-0 w-full h-full object-cover opacity-45" loading="eager" />
-  <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/30"></div>
-  <div class="relative max-w-6xl mx-auto px-4 sm:px-8 pt-28 sm:pt-44 pb-12 sm:pb-20">
-    <p class="kicker text-accent">Chad Da Barber · Pomona, CA</p>
-    <h1 class="display mt-4 text-[clamp(2.1rem,8.6vw,5.25rem)] max-w-[18ch]">Get your head right at HeadSprung.</h1>
+<section id="top" class="max-w-6xl mx-auto px-4 sm:px-8 pt-8 sm:pt-14 pb-10 sm:pb-16 grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+  <div class="lg:col-span-7">
+    <img src="logo.jpg" alt="The HeadSprung Barbershop storefront" width="150" height="150" class="w-[88px] h-[88px] sm:w-[116px] sm:h-[116px] object-cover rounded-[10px]" />
+    <h1 class="display mt-6 text-[clamp(2.1rem,8.6vw,5.25rem)] max-w-[18ch]">Get your head right at HeadSprung.</h1>
     <p class="mt-6 text-ink/75 text-[17px] sm:text-lg leading-relaxed max-w-[52ch]">Chad Da Barber is cutting in Pomona. Call the shop to book your chair.</p>
     <div class="mt-8 flex flex-col min-[480px]:flex-row min-[480px]:flex-wrap gap-3"><a href="tel:+19099125291" class="inline-flex items-center justify-center font-semibold text-sm px-6 py-3.5 transition btn bg-accent text-onaccent hover:brightness-110">Book now · (909) 912-5291</a><a href="https://www.google.com/maps/search/?api=1&query=HeadSprung+Barbershop+Pomona+CA" target="_blank" rel="noopener" class="inline-flex items-center justify-center font-semibold text-sm px-6 py-3.5 transition btn ring-1 ring-ink/25 hover:bg-ink/5">Get directions</a></div>
+    <p class="mt-6 text-[15px] text-ink/70"><a class="underline underline-offset-4 decoration-accent decoration-2 hover:text-ink transition" href="https://www.google.com/maps/search/?api=1&query=HeadSprung+Barbershop+Pomona+CA" target="_blank" rel="noopener">4.7 ★ · 33 Google reviews</a></p>
   </div>
+  <figure class="lg:col-span-5 -mx-4 sm:mx-0">
+    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=72&w=1400&fit=crop" alt="Barber combing and cutting a client&#x27;s hair" class="w-full h-[220px] sm:h-[420px] object-cover sm:rounded-[var(--radius)]" loading="eager" />
+  </figure>
 </section>
 
 <section id="services" class="border-t border-ink/10">
-  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-14 sm:py-24">
-    <div class="grid lg:grid-cols-12 gap-8 items-end">
-      <h2 class="lg:col-span-7 display text-[clamp(1.9rem,6.5vw,3.75rem)]">In the chair</h2>
-      <div class="lg:col-span-5">
-        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?fm=jpg&q=72&w=900&fit=crop" alt="Clippers, shears and combs laid out on a mat" class="w-full h-40 sm:h-52 object-cover photo" loading="lazy" />
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-20 grid lg:grid-cols-12 gap-6 lg:gap-12">
+    <h2 class="lg:col-span-4 display text-[clamp(1.7rem,6vw,3rem)]">In the chair</h2>
+    <dl class="lg:col-span-8 border-b border-ink/20">
+      <div class="border-t border-ink/20 py-5 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6">
+        <dt class="display text-xl sm:text-2xl sm:col-span-4">Cuts</dt>
+        <dd class="mt-1.5 sm:mt-0 sm:col-span-8 text-ink/75 leading-relaxed">Tell Chad what you are going for or show him a photo. He takes it from there.</dd>
       </div>
-    </div>
-    <div class="mt-8 sm:mt-12 grid md:grid-cols-3 gap-4 sm:gap-6 items-start">
-      <article class="card bg-panel p-6 sm:p-7">
-        <h3 class="display text-2xl sm:text-3xl">Cuts</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Tell Chad what you are going for or show him a photo. He takes it from there.</p>
-      </article>
-      <article class="card bg-panel p-6 sm:p-7 md:mt-8">
-        <h3 class="display text-2xl sm:text-3xl">Fades</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Tapers, skin fades and blends finished with a clean lineup.</p>
-      </article>
-      <article class="card bg-panel p-6 sm:p-7">
-        <h3 class="display text-2xl sm:text-3xl">Beard</h3>
-        <p class="mt-3 text-ink/70 leading-relaxed">Trimmed, shaped and edged to match the cut.</p>
-      </article>
-    </div>
+      <div class="border-t border-ink/20 py-5 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6">
+        <dt class="display text-xl sm:text-2xl sm:col-span-4">Fades</dt>
+        <dd class="mt-1.5 sm:mt-0 sm:col-span-8 text-ink/75 leading-relaxed">Tapers, skin fades and blends finished with a clean lineup.</dd>
+      </div>
+      <div class="border-t border-ink/20 py-5 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6">
+        <dt class="display text-xl sm:text-2xl sm:col-span-4">Beard</dt>
+        <dd class="mt-1.5 sm:mt-0 sm:col-span-8 text-ink/75 leading-relaxed">Trimmed, shaped and edged to match the cut.</dd>
+      </div>
+    </dl>
   </div>
 </section>
 
@@ -123,6 +121,7 @@
     <div class="lg:col-span-5">
       <p class="kicker text-accent">Pomona, CA</p>
       <h2 class="display mt-3 text-[clamp(1.9rem,6.5vw,3.75rem)]">Find the shop</h2>
+      
       <p class="mt-6 kicker text-ink/55">Phone</p>
       <a href="tel:+19099125291" class="display block mt-1 text-3xl sm:text-4xl hover:text-accent transition">(909) 912-5291</a>
       <div class="mt-6 flex flex-col min-[480px]:flex-row gap-3">
