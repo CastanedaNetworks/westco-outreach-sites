@@ -450,6 +450,7 @@ CONTENT = {
     "Ride & Shine Auto Detail Supplies": {
         "slug": "ride-and-shine-auto-detail-supplies-el-monte", "short": "Ride & Shine",
         # Green and white on black, heavy italic lettering (their Instagram logo).
+        "address": "2229 Durfee Ave, El Monte, CA",
         "logo": True,
         "theme": {
             "fonts": "family=Kanit:ital,wght@1,700;1,800&family=Mukta:wght@400;500;600;700",
@@ -464,7 +465,7 @@ CONTENT = {
         "hero": "detail_polish", "side": "detail_sponge",
         "kicker": "Auto detail supplies · El Monte, CA",
         "h1": "Detail supplies for people who take care of their own car.",
-        "sub": "Ride & Shine sells auto detail supplies in El Monte. Call to ask if we carry what you are looking for, then come by.",
+        "sub": "Ride & Shine sells auto detail supplies at 2229 Durfee Ave in El Monte. Call to ask if we carry what you are looking for, then come by.",
         "cards_heading": "On the shelf",
         "cards": [
             ("Wash", "Soaps, mitts and buckets for washing by hand."),
@@ -476,6 +477,8 @@ CONTENT = {
     "Reservedparkingdetail": {
         "slug": "reserved-parking-detail-el-monte", "short": "Reserved Parking",
         "display": "Reserved Parking Car Detailing",
+        # Their Instagram says they serve the SGV and lists no shop address.
+        "mobile": True, "visit_h": "Serving the SGV",
         # Ice blue and white on black, stencil wordmark (their Instagram logo).
         "logo": True, "logo_shape": "rounded-[10px]",
         "theme": {
@@ -491,7 +494,7 @@ CONTENT = {
         "hero": "detail_wheel", "side": "detail_headlight",
         "kicker": "Auto detailing · El Monte, CA",
         "h1": "Your car should look good wherever you park it.",
-        "sub": "Reserved Parking cleans cars inside and out in the El Monte area. Call to get a price for yours and pick a day.",
+        "sub": "Reserved Parking details cars inside and out around the San Gabriel Valley. Call to get a price for yours and pick a day.",
         "cards_heading": "Services",
         "cards": [
             ("Exterior", "Hand washed and dried, with the wheels, tires and glass done right."),
@@ -556,12 +559,13 @@ CONTENT = {
         "display": "Serge Barbershop",
         "action_url": "https://bookedin.com/book/sergio-3",  # from the @serge_fades bio
         # No logo on their Instagram; the profile photo is Serge cutting in the shop.
+        "address": "929 W Mission Blvd, Pomona, CA",
         "logo": True, "logo_alt": "Serge cutting hair in the shop",
         "accent": "200 36 52", "on_accent": "250 246 240",
         "hero": "barber_fade", "side": "barber_shave",
         "kicker": "Barbershop · Pomona, CA",
         "h1": "Book with Serge and leave with a clean fade.",
-        "sub": "Pick your time online in a minute, or call. Serge Barbershop is in Pomona.",
+        "sub": "Pick your time online in a minute, or call. Serge Barbershop is at 929 W Mission Blvd in Pomona.",
         "cards_heading": "At the shop",
         "cards": [
             ("Cuts", "Tell Serge what you are going for and he will get you there."),
@@ -836,7 +840,7 @@ def render(row: dict) -> tuple[str, str]:
         cta = f'<a href="tel:{phone_tel}" class="{primary}">Call now · {e(phone)}</a>{second}'
         nav_label = "Call"
         closing_h, closing_p = c["closing"]
-        visit_h = "We come to you" if mobile else "Where to find us"
+        visit_h = c.get("visit_h") or ("We come to you" if mobile else "Where to find us")
     else:
         second = (f'<a href="#estimate" class="{ghost}">Free estimate</a>' if has_form
                   else f'<a href="#hours" class="{ghost}">Hours</a>')
