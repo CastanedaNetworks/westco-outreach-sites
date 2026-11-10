@@ -604,6 +604,7 @@ REFRESH = {
                         "font-weight:800; line-height:1;", "0.375rem", "clamp(2.2rem,9vw,5rem)"),
         "accent": "224 98 28", "on_accent": "40 14 6",
         "kicker": "Taqueria · West Covina, CA",
+        "address": "314 N Azusa Ave, West Covina, CA",
         "h1": "Handmade tortillas and birria worth the drive.",
         "sub": "Taqueria La Fogata makes authentic Mexican food in West Covina. Call ahead or come by and eat.",
         "cards_heading": "What people come for",
@@ -644,6 +645,7 @@ REFRESH = {
                         "font-weight:400; line-height:1.08;", "0.75rem"),
         "accent": "204 84 16", "on_accent": "255 248 232",
         "sub": "Lalo's is a family-owned restaurant cooking comida mexicana in Azusa. Come in and sit down, or call your order in to go.",
+        "address": "530 S Citrus Ave, Azusa, CA",
         "cards": [
             ("Chilaquiles", "Done the way they should be, and good at any time of day."),
             ("Wet burritos", "Covered in sauce and melted cheese. You will want a fork."),
@@ -712,11 +714,14 @@ REFRESH = {
     },
     "Christian & Roberto's Barber": {
         "sub": "Good cuts at a fair price in Pomona. It gets busy, so call the shop before you head over.",
+        "address": "1183 W Holt Ave, Pomona, CA",
     },
     "Erik's Tires": {
+        "address": "13900 Ramona Blvd, Baldwin Park, CA",
         "cards": [
             ("New and used tires", "Call with your size or read it to us off the sidewall. We will tell you what we have and what it costs."),
-            ("Flat repair", "Picked up a nail? Bring it in and we will see if it can be patched before you buy anything."),
+            # Their Facebook page says they do not use plugs.
+            ("Flat repair", "Picked up a nail? We patch it properly. We do not use plugs."),
             ("Alignment and smog", "Pulling to one side or due for a smog check? We do both here."),
         ],
     },
