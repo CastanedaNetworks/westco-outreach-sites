@@ -822,6 +822,29 @@ CONTENT.update({
     },
 })
 
+CONTENT.update({
+    "Santa Maria’s Punta Roja": {
+        "slug": "santa-marias-punta-roja-azusa", "short": "Santa Maria’s",
+        "display": "Santa Maria’s Punta Roja",
+        # Anchor mark, dark red blackletter and small caps on cream (their Facebook profile picture).
+        "logo": True, "logo_shape": "rounded-[6px]", "logo_box": "w-[168px] h-auto sm:w-[220px]",
+        "theme": _theme("family=Marcellus+SC&family=Lora:wght@400;500;600;700", "'Marcellus SC', Georgia, serif",
+                        "Lora, Georgia, serif", "246 242 232", "235 228 212", "34 32 40",
+                        "font-weight:400; letter-spacing:0.01em; line-height:1.08;", "0.25rem", "clamp(2rem,8.4vw,4.5rem)"),
+        "accent": "150 24 34", "on_accent": "255 248 240",
+        "hero": "tacos_plate", "side": "tacos_tile",
+        "kicker": "Mexican kitchen · Azusa, CA",
+        "h1": "Authentic Mexican food from our kitchen in Azusa.",
+        "sub": "Santa Maria’s Punta Roja is a Mexican kitchen in Azusa. Call your order in, or come by and eat with us.",
+        "cards_heading": "From the kitchen",
+        "cards": [
+            ("Tacos", "On warm tortillas with onion, cilantro and salsa. Tell us the meat and how many."),
+            ("Burritos", "Rolled to order and filling enough to be the whole meal."),
+            ("Plates", "Your choice with rice, beans and tortillas when you want to sit down and eat."),
+        ],
+    },
+})
+
 # Real ordering / booking pages from the sheet's Website column.
 ACTION_URL_HINTS = ("toasttab.com", "clover.com", "getsquire.com")
 
@@ -938,7 +961,7 @@ def render(row: dict) -> tuple[str, str]:
     if brand:
         tagline = f'<p class="mt-3 text-[15px] italic text-ink/70">{e(c["tagline"])}</p>' if c.get("tagline") else ""
         logo = "" if not c.get("logo") else (f'<img src="logo.jpg" alt="{e(c.get("logo_alt", display + " logo"))}" width="150" height="150" '
-                f'class="w-[88px] h-[88px] sm:w-[116px] sm:h-[116px] object-cover {c.get("logo_shape", "rounded-full")}" />')
+                f'class="{c.get("logo_box", "w-[88px] h-[88px] sm:w-[116px] sm:h-[116px]")} object-cover {c.get("logo_shape", "rounded-full")}" />')
         rating_inline = (f'<p class="mt-6 text-[15px] text-ink/70"><a class="underline underline-offset-4 decoration-accent decoration-2 hover:text-ink transition" '
                          f'href="{maps_link}" target="_blank" rel="noopener">{e(stars_plain)}</a></p>')
         hero = f"""
