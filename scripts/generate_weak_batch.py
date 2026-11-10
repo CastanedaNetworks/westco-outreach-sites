@@ -755,21 +755,20 @@ CONTENT.update({
         "hero": "roof_ladder", "side": "roof_shingles",
         "kicker": "General contractor · Covina, CA",
         "h1": "Tell us what you want built and get a free estimate.",
-        "sub": "CSWF Construction is a general contractor working in and around Covina. Send the details below or call, and we will come take a look.",
+        "sub": "CSWF Construction builds ADUs, custom homes and apartment complexes. Send the details below or call, and we will come take a look.",
         "cards_heading": "What we build",
         "cards": [
-            ("Remodels", "Kitchens, bathrooms and whole rooms taken from tired to finished."),
-            ("Additions", "Need more space? We build on to what you have so it looks like it was always there."),
-            ("Repairs and upgrades", "The jobs around the property that are too big for a weekend."),
+            ("ADUs", "A backyard unit for family or rental income, built from the plans to the final inspection."),
+            ("Custom homes", "Your house built the way you want it, with one contractor responsible for all of it."),
+            ("Apartment complexes", "Multi-unit projects built for owners and investors."),
         ],
         "form_field": "Property address",
-        "form_placeholder": "Kitchen remodel, about 150 square feet, hoping to start in spring",
+        "form_placeholder": "Detached ADU in the backyard, about 600 square feet, hoping to start in spring",
         "closing": ("Rather talk it through?", "Call and tell us about the job. The estimate is free either way."),
     },
     "Avila Auto Repair": {
         "slug": "avila-auto-repair-baldwin-park", "short": "Avila Auto Repair",
-        # No logo on their Instagram; the profile photo is a truck in a repair bay.
-        "logo": True, "logo_shape": "rounded-[10px]", "logo_alt": "Truck with its hood open in a repair bay",
+        # No Instagram: @avilas.inc is a different Avila's Auto Repair in Tracy, CA.
         "accent": "72 152 255", "on_accent": "8 14 24",
         "hero": "auto_hood", "side": "auto_hands",
         "kicker": "Auto repair · Baldwin Park, CA",
@@ -788,12 +787,12 @@ CONTENT.update({
         "hero": "auto_engine", "side": "auto_hands",
         "kicker": "Auto repair · Baldwin Park, CA",
         "h1": "Engine trouble? Call before it gets worse.",
-        "sub": "Engine Dynamics is an auto repair shop in Baldwin Park. Tell us what you are hearing or feeling and we will tell you when to bring it in.",
+        "sub": "Engine Dynamics works on old and new vehicles in Baldwin Park. Tell us what you are hearing or feeling and we will tell you when to bring it in.",
         "cards_heading": "What we do",
         "cards": [
             ("Engine repair", "Rough idle, misfires, leaks or loss of power. We find the cause before we replace anything."),
-            ("Check engine light", "We pull the code, track down what set it off and explain it in plain English."),
-            ("Maintenance", "Oil, belts, fluids and the regular service your engine needs to last."),
+            ("Mufflers and exhaust", "Mufflerville is part of the shop. Bring us anything loud, leaking or rusted through."),
+            ("U-Haul rentals", "We are a U-Haul dealer too. Call to ask what trucks and trailers are on the lot."),
         ],
     },
     "Magik Touch Mobile Detailing": {
@@ -807,7 +806,7 @@ CONTENT.update({
         "hero": "detail_rinse", "side": "detail_foam",
         "kicker": "Mobile detailing · El Monte, CA",
         "h1": "A full detail without leaving your driveway.",
-        "sub": "Magik Touch Mobile Detailing comes to you around El Monte. Call, tell us what you drive, and we will set a time.",
+        "sub": "Magik Touch Mobile Detailing comes to you across LA, the Inland Empire and Orange County. Call, tell us what you drive, and we will set a time.",
         "cards_heading": "What we do",
         "cards": [
             ("Exterior", "Hand wash, wheels, tires and glass, finished so the paint shines."),
