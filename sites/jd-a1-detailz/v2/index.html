@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>JD A1 Detailz | Mobile Detailing, Baldwin Park and West Covina</title>
+<meta name="description" content="JD A1 Detailz is a mobile detailer serving Baldwin Park, West Covina and nearby. Regular wash from $50. Clay bar and 6 month sealant from $140. DM for a free quote." />
+<meta name="robots" content="noindex,nofollow" />
+<meta property="og:title" content="JD A1 Detailz" />
+<meta property="og:description" content="Mobile detailing. We come to you. DM for a free quote." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://castanedanetworks.github.io/westco-outreach-sites/sites/jd-a1-detailz/v2/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#060809;--panel:#0e1316;--line:#1f282e;--ink:#f3f6f7;--soft:#93a4ad;--ice:#a9deee;--iceink:#05212a}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Archivo,Arial,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2{font-weight:800;font-stretch:122%;text-transform:uppercase;letter-spacing:-.01em;line-height:1;margin:0}
+h1{font-size:clamp(2.4rem,11.5vw,5.2rem)}
+h2{font-size:clamp(1.6rem,6.4vw,2.6rem)}
+p{margin:0 0 12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.soft{color:var(--soft)}
+.label{font-size:13px;font-weight:600;font-stretch:112%;letter-spacing:.14em;text-transform:uppercase;color:var(--ice)}
+
+/* top */
+.top{position:absolute;left:0;right:0;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px}
+.who{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-stretch:118%;font-size:15px;letter-spacing:.04em;text-transform:uppercase}
+.who img{width:44px;height:44px;border-radius:50%}
+.top nav{display:none;gap:26px;font-size:15px}
+.top nav a{text-decoration:none}
+.dm{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;background:var(--ice);color:var(--iceink);font-weight:700;font-size:16px;border-radius:999px;text-decoration:none;border:0;cursor:pointer}
+.dm.sm{min-height:40px;padding:0 16px;font-size:14px}
+.line{display:inline-flex;align-items:center;min-height:50px;padding:0 4px;font-weight:600;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px;text-decoration-color:var(--ice)}
+
+/* hero: their own photo, full bleed */
+.hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,8,9,.55) 0,rgba(6,8,9,0) 22%,rgba(6,8,9,0) 42%,rgba(6,8,9,.86) 78%,var(--bg) 100%)}
+.hero .in{position:relative;z-index:2;width:100%;padding-bottom:34px}
+.hero p.lead{font-size:19px;max-width:30ch;margin:14px 0 0}
+.btns{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:22px}
+
+.intro{padding:46px 0 6px}
+.intro p{font-size:clamp(1.25rem,4.6vw,1.9rem);line-height:1.3;font-weight:500;max-width:26ch;margin:0}
+.intro p span{color:var(--soft)}
+
+section{padding:64px 0 0}
+.head{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+
+/* quote builder */
+.builder{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px 18px}
+.q{margin:0 0 20px;padding:0;border:0;min-width:0}
+.q legend{padding:0;margin-bottom:10px;font-weight:600}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{position:relative;display:block}
+.seg input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.seg span{display:flex;flex-direction:column;justify-content:center;min-height:56px;padding:8px 14px;border:1.5px solid var(--line);border-radius:12px;font-weight:600;line-height:1.2}
+.seg span small{font-weight:400;color:var(--soft);font-size:13.5px}
+.seg input:checked + span{border-color:var(--ice);background:rgba(169,222,238,.09)}
+.seg input:focus-visible + span{outline:2px solid var(--ice);outline-offset:2px}
+.seg input:disabled + span{opacity:.35}
+.result{border-top:1px solid var(--line);padding-top:20px;margin-top:4px}
+.result .amt{font-size:clamp(2.6rem,13vw,4rem);font-weight:800;font-stretch:118%;line-height:1;font-variant-numeric:tabular-nums}
+.result .what{margin:8px 0 0;color:var(--soft)}
+.inc{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0;font-size:15.5px}
+.inc li{flex:0 0 50%;padding-left:16px;position:relative}
+.inc li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;border-radius:50%;background:var(--ice)}
+.result .dm{margin-top:20px;width:100%}
+.note{font-size:14px;color:var(--soft);margin:12px 0 0}
+#copied{font-size:14.5px;margin:12px 0 0;color:var(--ice)}
+#fallback{width:100%;margin-top:10px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;font-size:15px}
+
+details.all{margin-top:18px;border-top:1px solid var(--line)}
+details.all summary{cursor:pointer;padding:16px 0;font-weight:600}
+table.pl{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-bottom:8px}
+table.pl th{text-align:left;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);padding:8px 0}
+table.pl th:not(:first-child),table.pl td:not(:first-child){text-align:right}
+table.pl td{padding:11px 0;border-top:1px solid var(--line)}
+table.pl td:not(:first-child){font-weight:700;white-space:nowrap;padding-left:10px}
+
+/* work */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:none;border-radius:999px;padding:8px 16px;font-weight:600;font-size:15px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.work{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+.work button{position:relative;padding:0;border:0;background:var(--panel);border-radius:10px;overflow:hidden;cursor:zoom-in;display:block;text-align:left}
+.work img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.work button span{position:absolute;left:0;right:0;bottom:0;padding:34px 12px 10px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.78));font-size:14px;font-weight:600;line-height:1.25}
+.work button span small{display:block;font-weight:400;color:#cfd9de;font-size:13px}
+.work button.first{grid-column:1 / -1}
+.work button.first img{aspect-ratio:4/5}
+
+/* booking */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.steps li{padding:22px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:54px 1fr;gap:6px}
+.steps li > b{font-size:30px;font-weight:800;font-stretch:118%;color:var(--ice);line-height:1}
+.steps h3{margin:0 0 4px;font-size:19px;font-weight:700}
+.steps p{margin:0;color:var(--soft)}
+.creed{margin:30px 0 0;font-size:clamp(1.2rem,4.4vw,1.7rem);font-weight:500;line-height:1.3;max-width:28ch}
+
+.close{margin-top:70px;border-top:1px solid var(--line);padding:54px 0 0;text-align:left}
+.close h2{font-size:clamp(2rem,9vw,4.2rem)}
+.close p{font-size:18px;margin:14px 0 22px}
+.foot{padding:50px 0 96px;font-size:14px;color:var(--soft)}
+.foot p{margin:0 0 6px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;background:var(--ice);color:var(--iceink);height:54px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+
+/* photo viewer */
+#view{position:fixed;inset:0;z-index:50;background:rgba(3,4,5,.96);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px}
+#view[hidden]{display:none}
+#view img{max-width:100%;max-height:82vh;border-radius:8px}
+#view p{margin:12px 0 0;font-weight:600}
+#view button{position:absolute;top:10px;right:10px;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:var(--panel);font-size:22px;cursor:pointer}
+
+@media(min-width:820px){
+  .top{padding:20px 32px}.top nav{display:flex}
+  .hero{min-height:88vh}.hero > img{object-position:50% 62%}
+  .hero .in{padding-bottom:60px}
+  .intro{padding-top:80px}
+  section{padding-top:110px}
+  .head{flex-direction:row;align-items:flex-end;justify-content:space-between}
+  .builder{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;padding:36px}
+  .result{border-top:0;border-left:1px solid var(--line);padding:0 0 0 44px;margin:0;align-self:stretch}
+  .seg.four{grid-template-columns:repeat(4,1fr)}
+  .work{grid-template-columns:repeat(4,1fr);gap:12px}
+  .work button.first{grid-column:span 2;grid-row:span 2}
+  .work button.first img{aspect-ratio:auto;height:100%}
+  .steps{grid-template-columns:repeat(3,1fr);gap:36px}
+  .steps li{grid-template-columns:1fr}
+  .bar{display:none}.foot{padding-bottom:40px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="who" href="#top"><img src="../logo.jpg" alt="" width="44" height="44" /><span>JD A1 Detailz</span></a>
+  <nav><a href="#quote">Prices</a><a href="#work">Our work</a><a href="#book">How to book</a></nav>
+  <a class="dm sm" href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">DM us</a>
+</header>
+
+<div class="hero" id="top">
+  <img src="hero.jpg" alt="Black Dodge Charger Scat Pack with a deep gloss after a detail, parked in a driveway at sunset" />
+  <div class="in"><div class="wrap">
+    <h1>Ride nice<br />and clean</h1>
+    <p class="lead">Mobile detailing in Baldwin Park, West Covina and nearby. We come to you.</p>
+    <div class="btns">
+      <a class="dm" href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">DM for a free quote</a>
+      <a class="line" href="#quote">Price it yourself</a>
+    </div>
+  </div></div>
+</div>
+
+<main class="wrap">
+
+  <div class="intro">
+    <p>Hand washed at your home or your job. <span>Add a clay bar and a 6 month sealant when you want it to last.</span></p>
+  </div>
+
+  <section id="quote">
+    <div class="head">
+      <div><p class="label">Prices</p><h2>Price your detail</h2></div>
+      <p class="soft" style="margin:0;max-width:34ch">Pick what you drive and what you want done. Same prices we post on Instagram.</p>
+    </div>
+
+    <form class="builder" id="builder">
+      <div>
+        <fieldset class="q">
+          <legend>What do you drive?</legend>
+          <div class="seg four">
+            <label><input type="radio" name="v" value="car" checked /><span>Car</span></label>
+            <label><input type="radio" name="v" value="suv" /><span>SUV</span></label>
+            <label><input type="radio" name="v" value="truck" /><span>Truck</span></label>
+            <label><input type="radio" name="v" value="big" /><span>Big truck<small>box trucks</small></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="q">
+          <legend>What do you want done?</legend>
+          <div class="seg">
+            <label><input type="radio" name="p" value="reg" checked /><span>Regular wash<small>inside and out</small></span></label>
+            <label><input type="radio" name="p" value="seal" /><span>Clay bar and sealant<small>protects for 6 months</small></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="q" style="margin-bottom:0">
+          <legend>Add anything?</legend>
+          <div class="seg">
+            <label><input type="checkbox" name="wax" /><span>Spray wax<small>+$20</small></span></label>
+            <label><input type="checkbox" name="dog" /><span>Dog hair removal<small id="dogp">+$20</small></span></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="result" aria-live="polite">
+        <p class="label" style="margin:0 0 8px">Your price</p>
+        <div class="amt" id="amt">$50</div>
+        <p class="what" id="what">Regular wash on a car</p>
+        <ul class="inc" id="inc"></ul>
+        <button type="button" class="dm" id="send">Copy this and DM us</button>
+        <p id="copied" hidden></p>
+        <textarea id="fallback" rows="4" readonly hidden aria-label="Your quote request"></textarea>
+        <p class="note">We confirm the final price in your DM once we know the car. Really dirty ones can run more.</p>
+      </div>
+    </form>
+
+    <details class="all">
+      <summary>See the full price list</summary>
+      <table class="pl">
+        <tr><th>Regular wash</th><th>Price</th></tr>
+        <tr><td>Cars</td><td>$50</td></tr>
+        <tr><td>SUVs</td><td>$55</td></tr>
+        <tr><td>Trucks</td><td>$60 to $80</td></tr>
+        <tr><td>Big trucks and box trucks</td><td>$150 to $200</td></tr>
+      </table>
+      <table class="pl">
+        <tr><th>Clay bar and sealant</th><th>Price</th></tr>
+        <tr><td>Cars</td><td>$140</td></tr>
+        <tr><td>SUVs</td><td>$150</td></tr>
+        <tr><td>Trucks</td><td>$190 to $220</td></tr>
+      </table>
+      <table class="pl">
+        <tr><th>Extras</th><th>Price</th></tr>
+        <tr><td>Spray wax</td><td>$20</td></tr>
+        <tr><td>Dog hair removal</td><td>$20 to $25</td></tr>
+        <tr><td>Headlight restoration</td><td>Ask</td></tr>
+        <tr><td>Water spot removal</td><td>Ask</td></tr>
+        <tr><td>Mini interior detail</td><td>Ask</td></tr>
+        <tr><td>Maintenance washes</td><td>Ask</td></tr>
+      </table>
+    </details>
+  </section>
+
+  <section id="work">
+    <div class="head">
+      <div><p class="label">Our work</p><h2>Fresh off the hose</h2></div>
+      <div class="chips" role="group" aria-label="Filter photos">
+        <button type="button" class="chip" data-f="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-f="car" aria-pressed="false">Cars</button>
+        <button type="button" class="chip" data-f="suv" aria-pressed="false">SUVs</button>
+        <button type="button" class="chip" data-f="truck" aria-pressed="false">Trucks</button>
+      </div>
+    </div>
+    <div class="work" id="grid">
+      <button type="button" class="first" data-t="car" data-src="w10.jpg" data-cap="BMW M3"><img src="w10.jpg" alt="Blue BMW M3 after a wash" /><span>BMW M3<small>This beautiful M3</small></span></button>
+      <button type="button" data-t="truck" data-src="w05.jpg" data-cap="Chevy Silverado. Wash, clay bar and 6 month sealant"><img src="w05.jpg" alt="Lifted Chevy Silverado after a wash, clay bar and sealant" loading="lazy" /><span>Chevy Silverado<small>Wash, clay bar, 6 month sealant</small></span></button>
+      <button type="button" data-t="car" data-src="w12.jpg" data-cap="Subaru WRX STI"><img src="w12.jpg" alt="Bright blue Subaru WRX STI after a detail" loading="lazy" /><span>Subaru WRX STI<small>This color tho</small></span></button>
+      <button type="button" data-t="suv" data-src="w01.jpg" data-cap="Honda HR-V. Clay bar and sealant"><img src="w01.jpg" alt="Honda HR-V after a clay bar and sealant" loading="lazy" /><span>Honda HR-V<small>Clay bar and sealant</small></span></button>
+      <button type="button" data-t="car" data-src="w03.jpg" data-cap="Mercedes S-Class"><img src="w03.jpg" alt="White Mercedes S-Class shining in the sun" loading="lazy" /><span>Mercedes S-Class</span></button>
+      <button type="button" data-t="truck" data-src="w06.jpg" data-cap="Ford F-150 on Welds"><img src="w06.jpg" alt="Lowered gray Ford F-150 on Weld wheels" loading="lazy" /><span>Ford F-150 on Welds</span></button>
+      <button type="button" data-t="suv" data-src="w02.jpg" data-cap="2026 Toyota Crown"><img src="w02.jpg" alt="White 2026 Toyota Crown, freshly washed" loading="lazy" /><span>2026 Toyota Crown</span></button>
+      <button type="button" data-t="truck" data-src="w04.jpg" data-cap="Ford F-150. Regular wash"><img src="w04.jpg" alt="Gray single cab Ford F-150 after a wash" loading="lazy" /><span>Ford F-150<small>Regular wash</small></span></button>
+      <button type="button" data-t="car" data-src="w11.jpg" data-cap="BMW 340i"><img src="w11.jpg" alt="Gray BMW 340i in a driveway after a wash" loading="lazy" /><span>BMW 340i</span></button>
+      <button type="button" data-t="truck" data-src="w09.jpg" data-cap="2026 Ram"><img src="w09.jpg" alt="Gray 2026 Ram crew cab, freshly washed" loading="lazy" /><span>2026 Ram</span></button>
+      <button type="button" data-t="truck" data-src="w07.jpg" data-cap="Ford F-150 single cab"><img src="w07.jpg" alt="Lowered gray single cab Ford F-150" loading="lazy" /><span>Ford F-150 single cab</span></button>
+      <button type="button" data-t="car" data-src="w08.jpg" data-cap="Dodge Charger Scat Pack"><img src="w08.jpg" alt="Black Dodge Charger Scat Pack with a deep gloss" loading="lazy" /><span>Charger Scat Pack</span></button>
+    </div>
+    <p class="soft" style="margin-top:16px">More on Instagram, <a href="https://www.instagram.com/jd_detailzz/" target="_blank" rel="noopener">@jd_detailzz</a>.</p>
+  </section>
+
+  <section id="book">
+    <div class="head"><div><p class="label">How to book</p><h2>Three messages, done</h2></div></div>
+    <ol class="steps">
+      <li><b>1</b><div><h3>DM us on Instagram</h3><p>Tell us what you drive, what you want done and what city you're in. A photo of the car helps.</p></div></li>
+      <li><b>2</b><div><h3>Get your quote</h3><p>It's free. We send you a price and a day that works.</p></div></li>
+      <li><b>3</b><div><h3>We come to you</h3><p>Home or work. Don't wait till the last minute, weekends fill up.</p></div></li>
+    </ol>
+    <p class="creed">Customer comes first, and so does quality work. That's how we do every car.</p>
+  </section>
+
+  <div class="close">
+    <h2>Free quote<br />today</h2>
+    <p>Message <b>@jd_detailzz</b> on Instagram.</p>
+    <a class="dm" href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">DM for a free quote</a>
+  </div>
+
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p>JD A1 Detailz · Mobile detailing · Baldwin Park, West Covina and nearby</p>
+  <p>God first.</p>
+  <p style="margin-top:12px">Website preview built by WestCo App Studio. Photos and prices are from the JD A1 Detailz Instagram.</p>
+</div></footer>
+
+<a class="bar" href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">DM for a free quote</a>
+
+<div id="view" hidden role="dialog" aria-modal="true" aria-label="Photo">
+  <button type="button" id="viewx" aria-label="Close photo">×</button>
+  <img id="viewimg" src="" alt="" />
+  <p id="viewcap"></p>
+</div>
+
+<script>
+(function () {
+  var PRICE = {
+    reg:  { car: [50], suv: [55], truck: [60, 80], big: [150, 200] },
+    seal: { car: [140], suv: [150], truck: [190, 220] }
+  };
+  var NAME = { car: "car", suv: "SUV", truck: "truck", big: "big truck" };
+  var PKG = { reg: "Regular wash", seal: "Clay bar and sealant" };
+  var INC = {
+    reg: ["Hand wash", "Vacuum", "Wipe down", "Windows cleaned", "Floor mats washed", "Rims cleaned", "Tire shine"],
+    seal: ["Hand wash", "Iron remover", "Clay bar", "6 month sealant", "Vacuum", "Door jambs", "Floor mats", "Plastics treated", "Windows cleaned", "Deep rim clean", "Tire shine", "Air freshener"]
+  };
+  var f = document.getElementById("builder");
+  var msg = "";
+  function money(r) { return r.length > 1 ? "$" + r[0] + " to $" + r[1] : "$" + r[0]; }
+  function update() {
+    var v = f.elements.v.value, sealRadio = f.querySelector('input[name="p"][value="seal"]');
+    sealRadio.disabled = v === "big";
+    if (v === "big" && f.elements.p.value === "seal") f.querySelector('input[name="p"][value="reg"]').checked = true;
+    var p = f.elements.p.value, dog = p === "seal" ? 25 : 20;
+    document.getElementById("dogp").textContent = "+$" + dog;
+    var extra = (f.elements.wax.checked ? 20 : 0) + (f.elements.dog.checked ? dog : 0);
+    var r = PRICE[p][v].map(function (n) { return n + extra; });
+    var adds = [];
+    if (f.elements.wax.checked) adds.push("spray wax");
+    if (f.elements.dog.checked) adds.push("dog hair removal");
+    document.getElementById("amt").textContent = money(r);
+    document.getElementById("what").textContent = PKG[p] + " on a " + NAME[v] + (adds.length ? ", plus " + adds.join(" and ") : "");
+    document.getElementById("inc").innerHTML = INC[p].map(function (x) { return "<li>" + x + "</li>"; }).join("");
+    msg = "Hi, I want a " + PKG[p].toLowerCase() + " for my " + NAME[v] + (adds.length ? " with " + adds.join(" and ") : "") + ". Your site says " + money(r) + ". I'm in ";
+    document.getElementById("copied").hidden = true;
+    document.getElementById("fallback").hidden = true;
+  }
+  f.addEventListener("change", update);
+  update();
+  document.getElementById("send").addEventListener("click", function () {
+    var note = document.getElementById("copied"), fb = document.getElementById("fallback");
+    function ok() { note.innerHTML = 'Copied. <a href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">Open our DMs</a>, paste it and add your city.'; note.hidden = false; }
+    function manual() { fb.value = msg; fb.hidden = false; fb.focus(); fb.select(); note.innerHTML = 'Copy the message below, then <a href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">open our DMs</a> and paste it.'; note.hidden = false; }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(msg).then(ok, manual); else manual();
+  });
+
+  var grid = document.getElementById("grid");
+  document.querySelectorAll(".chip").forEach(function (c) {
+    c.addEventListener("click", function () {
+      document.querySelectorAll(".chip").forEach(function (o) { o.setAttribute("aria-pressed", o === c ? "true" : "false"); });
+      var k = c.dataset.f, first = true;
+      grid.querySelectorAll("button").forEach(function (b) {
+        var show = k === "all" || b.dataset.t === k;
+        b.hidden = !show; b.classList.toggle("first", show && first); if (show) first = false;
+      });
+    });
+  });
+  var view = document.getElementById("view"), last = null;
+  function close() { view.hidden = true; if (last) last.focus(); }
+  grid.addEventListener("click", function (ev) {
+    var b = ev.target.closest("button"); if (!b) return;
+    last = b; document.getElementById("viewimg").src = b.dataset.src; document.getElementById("viewimg").alt = b.querySelector("img").alt;
+    document.getElementById("viewcap").textContent = b.dataset.cap; view.hidden = false; document.getElementById("viewx").focus();
+  });
+  view.addEventListener("click", function (ev) { if (ev.target.id !== "viewimg") close(); });
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape" && !view.hidden) close(); });
+})();
+</script>
+</body>
+</html>
