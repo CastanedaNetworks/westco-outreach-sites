@@ -996,6 +996,69 @@ CONTENT.update({
     },
 })
 
+# Nov 11 sheet: leads with a published email and no real site of their own.
+CONTENT.update({
+    "Saavedra Automotive Specialties": {
+        "slug": "saavedra-automotive-specialties-monrovia", "short": "Saavedra Auto",
+        # Charcoal round badge with crossed wrenches, "S E T 2016" (the logo on their Wix page). Red accents on that page.
+        "logo": True, "no_band": True, "address": "220 E Lime Ave, Monrovia, CA",
+        "theme": _theme("family=Zilla+Slab:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700", "'Zilla Slab', Rockwell, Georgia, serif",
+                        "'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif", "244 242 238", "230 227 221", "32 32 34",
+                        "font-weight:700; letter-spacing:-0.01em; line-height:1.04;", "0.25rem", "clamp(2rem,8.2vw,4.5rem)"),
+        "accent": "190 34 38", "on_accent": "255 255 255",
+        "hero": "auto_engine", "side": "auto_hands",
+        "kicker": "Repair, restoration and custom work · Monrovia, CA",
+        "h1": "New or old, I treat them all like classics.",
+        "sub": "Saavedra Automotive Specialties does everything from regular maintenance to full reconditioning. Call and tell me what you are working with.",
+        "cards_heading": "What I do",
+        "cards": [
+            ("Maintenance and repair", "All makes and models. You get a real cost and a real timeline before any work starts."),
+            ("Parts installation", "Bring me the part you bought and never had time to put in. I will finish that weekend project for you."),
+            ("Restoration or revival", "Back to its former glory, or just running again after sitting for a decade or two."),
+        ],
+    },
+    "Luxe Express Mobile Auto Detail": {
+        "slug": "luxe-express-mobile-auto-detail-fontana", "short": "Luxe Express", "mobile": True, "city": "Fontana",
+        # Thin gold capitals and a gray sports car inside a white ring on black (their Facebook profile picture).
+        "logo": True,
+        "theme": _theme("family=Jost:wght@300;400;500;600", "Jost, 'Century Gothic', sans-serif",
+                        "Jost, ui-sans-serif, system-ui, sans-serif", "6 6 6", "22 20 16", "244 240 230",
+                        "font-weight:300; text-transform:uppercase; letter-spacing:0.04em; line-height:1.1;", "0", "clamp(1.8rem,7.4vw,4rem)"),
+        "accent": "198 162 92", "on_accent": "14 11 4",
+        "hero": "detail_polish", "side": "detail_headlight",
+        "kicker": "Mobile auto detail · Fontana, CA",
+        "h1": "Mobile detailing in Fontana that shows up on time.",
+        "sub": "Luxe Express Mobile Auto Detail comes to your home in Fontana and the cities around it. Call, tell us what you drive, and we will set a time.",
+        "cards_heading": "What we do",
+        "cards": [
+            ("Shampoo and extraction", "Stains pulled out of seats and carpets. It is one of the things our customers mention most."),
+            ("Paint correction", "Swirls and dull paint polished out so the color looks right again."),
+            ("Ceramic coating", "Long-term protection for the paint once it is corrected. Call for the options."),
+        ],
+        "visit_h": "Serving Fontana",
+        "closing": ("Book your detail", "Call and tell us what you drive and where it is parked. We will give you a price and a time."),
+    },
+    "Delia's Barber & Beauty": {
+        "slug": "delias-barber-and-beauty-la-verne", "short": "Delia's",
+        # No logo: the Facebook profile picture is a staff photo, which stays off the page.
+        "address": "2081 3rd St, La Verne, CA",
+        "theme": _theme("family=Young+Serif&family=Nunito+Sans:wght@400;600;700", "'Young Serif', Georgia, serif",
+                        "'Nunito Sans', ui-sans-serif, system-ui, sans-serif", "250 245 239", "239 230 220", "46 32 36",
+                        "font-weight:400; letter-spacing:-0.01em; line-height:1.08;", "0.5rem", "clamp(2rem,8.2vw,4.5rem)"),
+        "accent": "132 44 72", "on_accent": "255 248 244",
+        "hero": "barber_shop", "side": "barber_cut",
+        "kicker": "Barber and beauty shop · La Verne, CA",
+        "h1": "A friendly chair for the whole family in La Verne.",
+        "sub": "Delia's Barber & Beauty is on 3rd Street in old town La Verne. Call ahead and we will have a chair ready for you.",
+        "cards_heading": "In the chair",
+        "cards": [
+            ("Haircuts", "Tell us how you wear it. We take our time and get it right."),
+            ("Kids' cuts", "Parents bring their kids here because we are patient with them."),
+            ("Barber and beauty", "Both under one roof, so the whole family can come in together."),
+        ],
+    },
+})
+
 # Real ordering / booking pages from the sheet's Website column.
 ACTION_URL_HINTS = ("toasttab.com", "clover.com", "getsquire.com")
 
