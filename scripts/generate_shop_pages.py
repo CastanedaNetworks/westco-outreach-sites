@@ -196,6 +196,52 @@ SHOPS = [
                             "We also have a shop in Bloomington."],
          list_h="Services", items=["New tires", "Used tires", "Alignment", "Installation and balancing"], lst="bullets", note="",
          call="Call", cta="pair", rate="stars", foot="solid", info=True),
+    # ------------------------------------------ Facebook Messenger leads (11/11)
+    dict(name="Taqueria Periban Inc.", display="Taqueria Periban", slug="taqueria-periban-south-el-monte", city="South El Monte", hero="center",
+         address="2129 Chico Ave, South El Monte, CA 91733", phone="(626) 444-6923", rating="4.5", reviews=1008,
+         logo=dict(w=210, shape="round"), photo="burrito", bg="#111111", ink="#f6f1e7", soft="#b9b2a4", line="#333333", accent="#e4572e", on="#ffffff",
+         fonts="family=Roboto+Slab:wght@700&family=Roboto:wght@400;500", head="'Roboto Slab', Georgia, serif", body="Roboto, Arial, sans-serif", head_css="font-weight:700;",
+         what="Donde se hacen las mejores carnitas",
+         about_h="", about=["Carnitas are what we're known for. We also do taquizas for parties and events, so call us for your next one."],
+         list_h="Menu", items=["Carnitas", "Tacos", "Burritos", "Tortas", "Asada", "Al pastor", "Pollo", "Platillos", "Taquizas"], lst="cols", note="",
+         call="Call to order", cta="pair", rate="stars", foot="solid", bar=True),
+    dict(name="Upland Barber Shop", slug="upland-barber-shop-upland", city="Upland", hero="cover",
+         address="260 N 2nd Ave, Suite B, Upland, CA 91786", phone="(909) 981-5501", rating="4.7", reviews=236,
+         logo=None, cover="cover.jpg", cover_alt="Old barber tools from the Upland Barber Shop Facebook page",
+         bg="#f6f1e6", ink="#1d2a44", soft="#5b6477", line="#d8d0bf", accent="#1d2a44", on="#ffffff",
+         fonts="family=Arvo:wght@700&family=Lato:wght@400;700", head="Arvo, Georgia, serif", body="Lato, Arial, sans-serif", head_css="font-weight:700;",
+         what="Good ol' fashioned barber shop in downtown Upland",
+         about_h="", about=["Haircuts, fades and a friendly shop on 2nd Ave. Call ahead to check the wait."],
+         items=[], call="Call", cta="big", rate="text", foot="solid"),
+    dict(name="David's Auto Tech", slug="davids-auto-tech-la-puente", city="La Puente", hero="cover",
+         address="121 Turnbull Canyon Rd, La Puente, CA 91745", phone="(626) 330-2536", rating="4.9", reviews=145,
+         logo=None, cover="cover.jpg", cover_alt="A truck in the shop at David's Auto Tech",
+         **WHITE, accent="#1c4e9c", on="#ffffff",
+         fonts="family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500", head="'Roboto Condensed', Arial, sans-serif", body="Roboto, Arial, sans-serif", head_css="font-weight:700;",
+         what="Auto repair in La Puente, foreign and domestic",
+         about_h="", about=["Maintenance and repair on all vehicles, foreign or domestic. Call the shop and tell us what's going on with your car."],
+         items=[], call="Call the shop", cta="pair", rate="stars", foot="solid", footbg="#1a1a1a"),
+    dict(name="Vicente's Barber Shop", short="Vicente's", slug="vicentes-barber-shop-rosemead", city="Rosemead", hero="center",
+         address="3044 San Gabriel Blvd, Rosemead, CA 91770", phone="(626) 573-9644", rating="4.5", reviews=95,
+         logo=None, nologo=True, bg="#0d0d0d", ink="#f3e7c9", soft="#b9ad8e", line="#333026", accent="#b8232c", on="#ffffff",
+         fonts="family=Rye&family=Roboto:wght@400;500", head="Rye, Georgia, serif", body="Roboto, Arial, sans-serif", head_css="font-weight:400;",
+         what="Barber shop on San Gabriel Blvd. Est. 1998.",
+         about_h="", about=["Haircuts in Rosemead since 1998. Call the shop for availability."],
+         items=[], call="Call", cta="big", rate="text", foot="plain"),
+    dict(name="Big Mike's Barber Shop", slug="big-mikes-barber-shop-rosemead", city="Rosemead", hero="left",
+         address="7849 Garvey Ave, Rosemead, CA 91770", phone="(626) 573-0486", rating="4.4", reviews=75,
+         logo=dict(w=180, shape="soft"), **WHITE, accent="#1f3f7a", on="#ffffff",
+         fonts="family=Oswald:wght@500;600&family=Open+Sans:wght@400;600", head="Oswald, 'Arial Narrow', sans-serif", body="'Open Sans', Arial, sans-serif", head_css="font-weight:600;",
+         what="Barbershop on Garvey Ave in Rosemead",
+         about_h="", about=["Haircuts for men and kids. Closed on Sundays. Call the shop for availability."],
+         items=[], call="Call", cta="pair", rate="text", foot="solid", info=True),
+    dict(name="Carlo Barber Shop", slug="carlo-barber-shop-upland", city="Upland", hero="left",
+         address="250 N 2nd Ave, Suite B, Upland, CA 91786", phone="(909) 920-5352", rating="4.7", reviews=64,
+         logo=None, nologo=True, **WHITE, accent="#1565c0", on="#ffffff",
+         fonts="family=Merriweather+Sans:wght@400;700", head="'Merriweather Sans', Arial, sans-serif", body="'Merriweather Sans', Arial, sans-serif", head_css="font-weight:700;",
+         what="Barber shop in downtown Upland",
+         about_h="", about=["We make you feel at home, always. Haircuts on 2nd Ave in downtown Upland. Call the shop for availability."],
+         items=[], call="Call", cta="pair", rate="stars", foot="solid", info=True),
 ]
 
 CSS = """
@@ -384,7 +430,7 @@ def main():
         out = SITES / s["slug"]
         out.mkdir(parents=True, exist_ok=True)
         need = s["cover"] if s.get("cover") else "logo.jpg"
-        if not (out / need).exists():
+        if not s.get("nologo") and not (out / need).exists():
             sys.exit(f"missing {need} for {s['slug']}")
         (out / "index.html").write_text(render(s), encoding="utf-8", newline="\n")
         print(f"BUILT\t{s['name']}\t{PAGES_BASE}/sites/{s['slug']}/")
