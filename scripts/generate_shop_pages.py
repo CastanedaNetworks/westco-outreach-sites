@@ -33,6 +33,8 @@ BLACK = dict(bg="#000000", ink="#f2f2f2", soft="#b0b0b0", line="#333333")
 
 # hero: center | left | cover.   cta: pair | big | text.   lst: bullets | cols | rule
 # rate: stars | text.   foot: plain | solid.   Optional: photo, nav, bar, info, two, action.
+DET = {'logo': None, 'nologo': True, 'mobile': True, 'address': '', 'cta': 'big', 'call': 'Call or text', 'items': ['Exterior hand wash', 'Interior detail', 'Full detail'], 'list_h': 'Services', 'lst': 'bullets', 'note': 'Call or text with your make and model for a price.', 'about_h': ''}
+
 SHOPS = [
     # ------------------------------------------------------------- taquerias
     dict(name="Tacos Los Mismos", slug="tacos-los-mismos-el-monte", city="El Monte", hero="center",
@@ -242,6 +244,56 @@ SHOPS = [
          what="Barber shop in downtown Upland",
          about_h="", about=["We make you feel at home, always. Haircuts on 2nd Ave in downtown Upland. Call the shop for availability."],
          items=[], call="Call", cta="pair", rate="stars", foot="solid", info=True),
+    # ------------------------------------------ mobile detailers to text (11/11)
+    dict(name="MD DETAILING Professional mobile detail", display="MD Detailing", slug="md-detailing-rancho-cucamonga", city="Rancho Cucamonga",
+         hero="center", phone="(909) 346-8041", rating="4.7", reviews=33, **DET, photo="detail_buckets", photo2="detail_headlight",
+         bg="#0f1720", ink="#eef3f7", soft="#9db0c0", line="#243241", accent="#3aa0ff", on="#04121f",
+         fonts="family=Sora:wght@400;600;800", head="Sora, Arial, sans-serif", body="Sora, Arial, sans-serif", head_css="font-weight:800;",
+         what="Professional mobile detailing in Rancho Cucamonga",
+         about=["We come to your home or work in Rancho Cucamonga and the cities around it.", "Call or text Leonardo or Carolina with what you drive and we'll get you a price and a time."],
+         rate="stars", foot="solid", footbg="#0a1017", bar=True),
+    dict(name="Convenient Mobile Detail LLC", display="Convenient Mobile Detail", slug="convenient-mobile-detail-fontana", city="Fontana",
+         hero="left", phone="(909) 441-6963", rating="5.0", reviews=36, **DET, photo="detail_polish", photo2="detail_rinse",
+         **WHITE, accent="#0f766e", on="#ffffff",
+         fonts="family=Manrope:wght@400;600;800", head="Manrope, Arial, sans-serif", body="Manrope, Arial, sans-serif", head_css="font-weight:800;",
+         what="Mobile detailing in Fontana. We come to you.",
+         about=["We bring the detail to your home or work in Fontana and nearby, so you don't have to go anywhere.", "Call or text with what you drive and we'll send you a price."],
+         rate="stars", foot="solid", bar=True),
+    dict(name="Ayman mobile detailing", display="Ayman Mobile Detailing", slug="ayman-mobile-detailing-rancho-cucamonga", city="Rancho Cucamonga",
+         hero="center", phone="(909) 232-9675", rating="5.0", reviews=7, **DET, photo="detail_foam", photo2="detail_headlight",
+         bg="#101010", ink="#f4f4f1", soft="#aaa9a3", line="#2c2c2a", accent="#f2c230", on="#1a1400",
+         fonts="family=Outfit:wght@400;600;800", head="Outfit, Arial, sans-serif", body="Outfit, Arial, sans-serif", head_css="font-weight:800;",
+         what="Mobile detailing in Rancho Cucamonga",
+         about=["Fast, clean work at your home or your job. Call or text Ayman with what you drive for a price."],
+         rate="text", foot="plain"),
+    dict(name="Ontario Mobile Detail", slug="ontario-mobile-detail-ontario", city="Ontario",
+         hero="left", phone="(909) 488-3690", rating="5.0", reviews=22, **DET, photo="detail_foam", photo2="detail_sponge",
+         **WHITE, accent="#c2410c", on="#ffffff",
+         fonts="family=Rubik:wght@400;500;700", head="Rubik, Arial, sans-serif", body="Rubik, Arial, sans-serif", head_css="font-weight:700;",
+         what="Mobile detailing in Ontario",
+         about=["We detail cars at your home or work in Ontario and the cities around it.", "Call or text with what you drive and where it's parked."],
+         rate="stars", foot="solid", footbg="#1a1a1a"),
+    dict(name="Dirty & Clean Mobile Detailing", slug="dirty-and-clean-mobile-detailing-montclair", city="Montclair",
+         hero="center", phone="(909) 260-5283", rating="5.0", reviews=33, **DET, photo="detail_rinse", photo2="detail_buckets",
+         bg="#f4f7fb", ink="#10233b", soft="#566b84", line="#d3dde9", accent="#1d4ed8", on="#ffffff",
+         fonts="family=Lexend:wght@400;600;800", head="Lexend, Arial, sans-serif", body="Lexend, Arial, sans-serif", head_css="font-weight:800;",
+         what="Mobile detailing in Montclair. Dirty to clean.",
+         about=["It shows up dirty and leaves clean. We come to you in Montclair and nearby.", "Call or text with what you drive for a price."],
+         rate="stars", foot="solid", bar=True),
+    dict(name="Johnny's Mobile Auto Wash and Detail", short="Johnny's Mobile Detail", slug="johnnys-mobile-auto-wash-and-detail-el-monte", city="El Monte",
+         hero="left", phone="(626) 561-8532", rating="4.9", reviews=34, **DET, photo="detail_sponge", photo2="detail_polish",
+         bg="#fffaf0", ink="#2b1d0e", soft="#7a6650", line="#e8dcc6", accent="#b91c1c", on="#ffffff",
+         fonts="family=Fredoka:wght@500;700&family=Nunito+Sans:wght@400;600", head="Fredoka, Arial, sans-serif", body="'Nunito Sans', Arial, sans-serif", head_css="font-weight:700;",
+         what="Mobile car wash and detailing in El Monte",
+         about=["Johnny comes to you in El Monte and nearby for a wash or a full detail.", "Call or text with what you drive and we'll set a time."],
+         rate="text", foot="solid", bar=True),
+    dict(name="El Monte Auto Car Detail Wash", slug="el-monte-auto-car-detail-wash-el-monte", city="El Monte",
+         hero="center", phone="(626) 483-0423", rating="4.9", reviews=19, **{**DET, "items": ["Hand wash", "Interior detail", "Full detail"]}, photo="detail_headlight", photo2="detail_foam",
+         bg="#0b1b2b", ink="#eef4fa", soft="#9fb3c7", line="#22384d", accent="#38bdf8", on="#04121c",
+         fonts="family=Kanit:wght@400;500;700", head="Kanit, Arial, sans-serif", body="Kanit, Arial, sans-serif", head_css="font-weight:700;",
+         what="Car wash and detailing in El Monte",
+         about=["Hand washes and details in El Monte. Call or text with what you drive for a price."],
+         rate="stars", foot="plain"),
 ]
 
 CSS = """
@@ -362,15 +414,20 @@ def render(s):
         if items:
             middle += f'<section class="sec" id="menu">{items}</section>'
 
+    photo2 = ""
+    if s.get("photo2"):
+        pid2, alt2 = IMG[s["photo2"]]
+        photo2 = f'<img class="photo" src="{unsplash(pid2, 1200)}" alt="{e(alt2)}" style="border-radius:6px" loading="lazy" />\n'
     find_h = f"Serving {city} and nearby" if mobile else "Location"
     addr = f'{e(s["address"])}<br />' if s["address"] else ""
-    visit = (f'<section class="sec" id="location"><h2>{e(find_h)}</h2><p>{addr}<a href="tel:{t}">{e(phone)}</a></p>'
+    visit = photo2 + (f'<section class="sec" id="location"><h2>{e(find_h)}</h2><p>{addr}<a href="tel:{t}">{e(phone)}</a></p>'
              f'<iframe class="map" title="Map" src="{maps_embed}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></section>')
 
     nav = ""
     if s.get("nav"):
         nav = '<nav><a href="#about">About</a><a href="#location">Location</a></nav>'
-    standin = " Photo is a stand-in until the owner sends their own." if s.get("photo") else ""
+    standin = (" Photos are stand-ins until the owner sends their own." if s.get("photo2")
+               else " Photo is a stand-in until the owner sends their own." if s.get("photo") else "")
     pv = (f'<p class="pv">Website preview · not the official site. Built by WestCo App Studio, '
           f'<a href="tel:{WESTCO_TEL}">{WESTCO_PHONE}</a>.{standin}</p>')
     if s["foot"] == "solid":
