@@ -153,7 +153,8 @@ SHOPS = [
          what="Traditional barber shop on Foothill Blvd",
          about_h="", about=["Haircuts, beard trims and hot towel shaves in Upland. Call for availability."],
          list_h="Services", items=["Haircuts", "Hot towel shaves", "Beard trims"], lst="rule", note="",
-         call="Call", cta="big", rate="text", foot="plain"),
+         call="Call", cta="big", rate="text", foot="plain",
+         price="$350"),  # rebuild on their existing domain, as quoted in the email
     # ------------------------------------------------------------------ auto
     dict(name="Leyva auto repair", display="Leyva Auto Repair", slug="leyva-auto-repair-la-puente", city="La Puente", hero="center",
          address="", phone="(626) 672-5568", rating="5.0", reviews=37, mobile=True,
@@ -359,7 +360,7 @@ def render(s):
 {css}</style>
 </head>
 <body{' class="hasbar"' if bar else ''}>
-{preview_banner(display)}
+{preview_banner(display, s.get("price", ""))}
 <header class="top"><b>{e(short)}</b>{nav}<a href="tel:{t}">{e(phone)}</a></header>
 {cover}
 <div class="wrap">{head}</div>
