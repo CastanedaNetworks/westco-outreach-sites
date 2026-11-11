@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>JD A1 Detailz | Mobile Detailing, Baldwin Park and West Covina</title>
+<meta name="description" content="JD A1 Detailz is a mobile detailer serving Baldwin Park, West Covina and nearby. Regular wash from $50. Clay bar and 6 month sealant from $140. DM for a free quote." />
+<meta name="robots" content="noindex,nofollow" />
+<meta property="og:title" content="JD A1 Detailz" />
+<meta property="og:description" content="Mobile detailing. We come to you. DM for a free quote." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://castanedanetworks.github.io/westco-outreach-sites/sites/jd-a1-detailz/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#07090b;--panel:#11161a;--line:#232c33;--ink:#f1f5f7;--soft:#9fb0ba;--ice:#a9deee;--iceink:#06222b}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Barlow,Arial,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;line-height:1.02;margin:0}
+h1{font-size:clamp(2.3rem,11vw,4rem)}
+h2{font-size:clamp(1.7rem,7vw,2.4rem)}
+h3{font-size:1.45rem}
+p{margin:0 0 12px}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+.soft{color:var(--soft)}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;border-bottom:1px solid var(--line)}
+.top .who{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none}
+.top .who img{width:40px;height:40px;border-radius:50%}
+.top nav{display:none;gap:22px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--soft)}
+.dm{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;background:var(--ice);color:var(--iceink);font-weight:700;font-size:16px;border-radius:6px;text-decoration:none}
+.dm.sm{min-height:40px;padding:0 14px;font-size:14px}
+.ghost{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:2px solid var(--line);font-weight:600;font-size:16px;border-radius:6px;text-decoration:none}
+
+.hero{padding:26px 0 0}
+.hero .logo{width:132px;height:132px;border-radius:50%;margin-bottom:14px}
+.hero p.lead{font-size:19px;margin:12px 0 4px;max-width:34ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.heroimg{margin:26px -18px 0}
+.heroimg img{width:100%;height:auto}
+.heroimg figcaption{font-size:13px;color:var(--soft);padding:8px 18px 0}
+
+section{padding:44px 0 0}
+.two{display:grid;gap:20px}
+.includes{columns:2;column-gap:20px;list-style:none;margin:14px 0 0;padding:0;font-size:16px}
+.includes li{padding:3px 0 3px 18px;position:relative;break-inside:avoid}
+.includes li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:2px;background:var(--ice)}
+
+.pkg{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px}
+.pkg .tag{font-size:13px;color:var(--ice);font-weight:600;margin-bottom:4px}
+.price{width:100%;border-collapse:collapse;margin-top:16px;font-variant-numeric:tabular-nums}
+.price td{padding:10px 0;border-top:1px solid var(--line)}
+.price td:last-child{text-align:right;font-weight:700;font-size:19px;white-space:nowrap}
+.fine{font-size:14px;color:var(--soft);margin:12px 0 0}
+
+.extras{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--line)}
+.extras li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.extras b{white-space:nowrap}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+.grid figure{margin:0}
+.grid img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px}
+.grid figcaption{font-size:13.5px;color:var(--soft);padding:6px 2px 8px;line-height:1.3}
+.grid figcaption b{color:var(--ink);font-weight:600;display:block}
+
+.steps{list-style:none;counter-reset:s;margin:16px 0 0;padding:0}
+.steps li{counter-increment:s;padding:14px 0 14px 46px;border-top:1px solid var(--line);position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:12px;width:32px;height:32px;border-radius:50%;border:2px solid var(--ice);color:var(--ice);display:flex;align-items:center;justify-content:center;font-weight:700}
+.steps b{display:block}
+
+.close{margin-top:48px;background:var(--ice);color:var(--iceink);padding:34px 0}
+.close h2{color:var(--iceink)}
+.close .dm{background:var(--iceink);color:#fff;margin-top:16px}
+.foot{padding:22px 0 90px;font-size:13.5px;color:var(--soft)}
+.foot p{margin:0 0 6px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--ice);color:var(--iceink);height:56px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;text-decoration:none}
+
+@media(min-width:760px){
+  .top{padding:12px 28px}.top nav{display:flex}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-top:44px}
+  .heroimg{margin:0}.heroimg img{border-radius:10px}.heroimg figcaption{padding:8px 0 0}
+  .two{grid-template-columns:1fr 1fr}
+  .grid{grid-template-columns:repeat(4,1fr);gap:12px}
+  .bar{display:none}.foot{padding-bottom:30px}
+  section{padding-top:64px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="who" href="#top"><img src="logo.jpg" alt="" width="40" height="40" /><span>JD A1 Detailz</span></a>
+  <nav><a href="#prices">Prices</a><a href="#work">Our work</a><a href="#book">How to book</a></nav>
+  <a class="dm sm" href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">DM us</a>
+</header>
+
+<main id="top" class="wrap">
+
+  <div class="hero">
+    <div>
+      <img class="logo" src="logo.jpg" alt="JD A1 Detailz logo" width="132" height="132" />
+      <h1>Ride nice and clean</h1>
+      <p class="lead">Mobile detailing in Baldwin Park, West Covina and nearby. We come to you.</p>
+      <p class="soft">Regular wash from $50. Clay bar and 6 month sealant from $140.</p>
+      <div class="btns">
+        <a class="dm" href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">DM for a free quote</a>
+        <a class="ghost" href="#prices">See prices</a>
+      </div>
+    </div>
+    <figure class="heroimg">
+      <img src="hero.jpg" alt="Black Dodge Charger Scat Pack after a detail, parked in a driveway at sunset" width="1080" height="720" />
+      <figcaption>Dodge Charger Scat Pack, one of ours.</figcaption>
+    </figure>
+  </div>
+
+  <section id="prices">
+    <h2>Prices</h2>
+    <p class="soft" style="margin-top:8px">Two packages. The price depends on the size of what you drive.</p>
+    <div class="two" style="margin-top:18px">
+
+      <div class="pkg">
+        <p class="tag">Most booked</p>
+        <h3>Regular wash</h3>
+        <ul class="includes">
+          <li>Hand wash</li>
+          <li>Vacuum</li>
+          <li>Wipe down</li>
+          <li>Windows cleaned</li>
+          <li>Floor mats washed</li>
+          <li>Rims cleaned</li>
+          <li>Tire shine</li>
+        </ul>
+        <table class="price">
+          <tr><td>Cars</td><td>$50</td></tr>
+          <tr><td>SUVs</td><td>$55</td></tr>
+          <tr><td>Trucks</td><td>$60 to $80</td></tr>
+          <tr><td>Big trucks and box trucks</td><td>$150 to $200</td></tr>
+        </table>
+        <p class="fine">Big trucks depend on how dirty it is.</p>
+      </div>
+
+      <div class="pkg">
+        <p class="tag">Lasts 6 months</p>
+        <h3>Clay bar and sealant</h3>
+        <ul class="includes">
+          <li>Hand wash</li>
+          <li>Iron remover</li>
+          <li>Clay bar</li>
+          <li>6 month sealant</li>
+          <li>Vacuum</li>
+          <li>Door jambs</li>
+          <li>Floor mats</li>
+          <li>Plastics treated</li>
+          <li>Windows cleaned</li>
+          <li>Deep rim clean</li>
+          <li>Tire shine</li>
+          <li>Air freshener</li>
+        </ul>
+        <table class="price">
+          <tr><td>Cars</td><td>$140</td></tr>
+          <tr><td>SUVs</td><td>$150</td></tr>
+          <tr><td>Trucks</td><td>$190 to $220</td></tr>
+        </table>
+      </div>
+
+    </div>
+
+    <h3 style="margin-top:34px">Add to any wash</h3>
+    <ul class="extras">
+      <li><span>Spray wax</span><b>$20</b></li>
+      <li><span>Dog hair removal</span><b>$20 to $25</b></li>
+      <li><span>Headlight restoration</span><b>Ask</b></li>
+      <li><span>Water spot removal</span><b>Ask</b></li>
+      <li><span>Mini interior detail</span><b>Ask</b></li>
+      <li><span>Maintenance washes</span><b>Ask</b></li>
+    </ul>
+    <p class="fine">Got something else in mind? Send it in your DM and we'll give you a price.</p>
+  </section>
+
+  <section id="work">
+    <h2>Our work</h2>
+    <p class="soft" style="margin-top:8px">All of these are ours. There's more on Instagram, <a href="https://www.instagram.com/jd_detailzz/" target="_blank" rel="noopener">@jd_detailzz</a>.</p>
+    <div class="grid">
+      <figure><img src="work-12.jpg" alt="Bright blue Subaru WRX STI after a detail" loading="lazy" width="760" height="760" /><figcaption><b>Subaru WRX STI</b>This color tho</figcaption></figure>
+      <figure><img src="work-05.jpg" alt="Lifted blue-gray Chevy Silverado after a wash, clay bar and sealant" loading="lazy" width="760" height="760" /><figcaption><b>Chevy Silverado</b>Wash, clay bar, 6 month sealant</figcaption></figure>
+      <figure><img src="work-10.jpg" alt="Blue BMW M3 after a wash" loading="lazy" width="760" height="760" /><figcaption><b>BMW M3</b></figcaption></figure>
+      <figure><img src="work-01.jpg" alt="Honda HR-V after a clay bar and sealant" loading="lazy" width="760" height="760" /><figcaption><b>Honda HR-V</b>Clay bar and sealant</figcaption></figure>
+      <figure><img src="work-03.jpg" alt="White Mercedes S-Class shining in the sun" loading="lazy" width="760" height="760" /><figcaption><b>Mercedes S-Class</b></figcaption></figure>
+      <figure><img src="work-06.jpg" alt="Lowered gray Ford F-150 on Weld wheels" loading="lazy" width="760" height="760" /><figcaption><b>Ford F-150 on Welds</b></figcaption></figure>
+      <figure><img src="work-02.jpg" alt="White 2026 Toyota Crown, freshly washed" loading="lazy" width="760" height="760" /><figcaption><b>2026 Toyota Crown</b></figcaption></figure>
+      <figure><img src="work-04.jpg" alt="Gray single cab Ford F-150 on white wheels after a wash" loading="lazy" width="760" height="760" /><figcaption><b>Ford F-150</b>Regular wash</figcaption></figure>
+      <figure><img src="work-11.jpg" alt="Gray BMW 340i in a driveway after a wash" loading="lazy" width="760" height="760" /><figcaption><b>BMW 340i</b></figcaption></figure>
+      <figure><img src="work-09.jpg" alt="Gray 2026 Ram crew cab, freshly washed" loading="lazy" width="760" height="760" /><figcaption><b>2026 Ram</b></figcaption></figure>
+      <figure><img src="work-07.jpg" alt="Lowered gray single cab Ford F-150 on black wheels" loading="lazy" width="760" height="760" /><figcaption><b>Ford F-150 single cab</b></figcaption></figure>
+      <figure><img src="work-08.jpg" alt="Black Dodge Charger Scat Pack with a deep gloss" loading="lazy" width="760" height="760" /><figcaption><b>Charger Scat Pack</b></figcaption></figure>
+    </div>
+  </section>
+
+  <section id="book">
+    <h2>How to book</h2>
+    <ol class="steps">
+      <li><b>DM us on Instagram</b>Tell us what you drive, what you want done and what city you're in. A photo of the car helps.</li>
+      <li><b>Get your quote</b>It's free. We'll send you a price and a day that works.</li>
+      <li><b>We come to you</b>Home or work. Don't wait till the last minute, weekends fill up.</li>
+    </ol>
+    <p style="margin-top:22px">Customer comes first, and so does quality work. That's how we do every car.</p>
+  </section>
+
+</main>
+
+<div class="close"><div class="wrap">
+  <h2>Free quote today</h2>
+  <p style="margin:8px 0 0;font-size:18px">Message <b>@jd_detailzz</b> on Instagram.</p>
+  <a class="dm" href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">DM for a free quote</a>
+</div></div>
+
+<footer class="foot"><div class="wrap">
+  <p>JD A1 Detailz · Mobile detailing · Baldwin Park, West Covina and nearby</p>
+  <p>God first.</p>
+  <p>Instagram: <a href="https://www.instagram.com/jd_detailzz/" target="_blank" rel="noopener">@jd_detailzz</a></p>
+  <p style="margin-top:12px">Website preview built by WestCo App Studio. Photos and prices are from the JD A1 Detailz Instagram.</p>
+</div></footer>
+
+<a class="bar" href="https://ig.me/m/jd_detailzz" target="_blank" rel="noopener">DM for a free quote</a>
+
+</body>
+</html>
