@@ -845,6 +845,29 @@ CONTENT.update({
     },
 })
 
+CONTENT.update({
+    "Prestige Mercedes Imports": {
+        "slug": "prestige-mercedes-imports-baldwin-park", "short": "Prestige Mercedes Imports",
+        # Profile photo on their Instagram is a white AMG fender badge; no logo.
+        "logo": True, "logo_shape": "rounded-[10px]", "logo_alt": "V8 Biturbo badge on a white Mercedes-AMG",
+        "no_band": True,
+        "theme": _theme("family=Sora:wght@600;700&family=Figtree:wght@400;500;600;700", "Sora, 'Helvetica Neue', sans-serif",
+                        "Figtree, ui-sans-serif, system-ui, sans-serif", "250 250 248", "237 237 233", "20 22 26",
+                        "font-weight:600; letter-spacing:-0.02em; line-height:1.05;", "0.375rem", "clamp(1.9rem,7.6vw,4.25rem)"),
+        "accent": "20 22 26", "on_accent": "250 250 248",
+        "hero": "auto_hood", "side": "auto_engine",
+        "kicker": "Independent Mercedes-Benz service · Baldwin Park, CA",
+        "h1": "Mercedes-Benz service in Baldwin Park, without the dealership.",
+        "sub": "Prestige Mercedes Imports is an independent Mercedes-Benz shop. Call and tell us what the car is doing, and we will tell you when to bring it in.",
+        "cards_heading": "What we do",
+        "cards": [
+            ("Service and maintenance", "Oil services, fluids, filters and the scheduled work your Mercedes calls for."),
+            ("Diagnostics", "Warning lights and odd behavior tracked down properly before any parts get replaced."),
+            ("Repairs", "Engine, brakes, suspension and electrical work on Mercedes-Benz cars, old and new."),
+        ],
+    },
+})
+
 # Real ordering / booking pages from the sheet's Website column.
 ACTION_URL_HINTS = ("toasttab.com", "clover.com", "getsquire.com")
 
@@ -1176,7 +1199,7 @@ def render(row: dict) -> tuple[str, str]:
   }});
 </script>"""
 
-    top_band = '<div class="hazard h-1.5"></div>' if cat == "auto" else ""
+    top_band = '<div class="hazard h-1.5"></div>' if cat == "auto" and not c.get("no_band") else ""
     banner = preview_banner(display)
     desc = f'{display} in {city}, CA. {c["sub"]}'
 
