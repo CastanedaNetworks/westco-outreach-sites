@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Williz Automotive Repair | Baldwin Park</title>
-<meta name="description" content="Williz Automotive Repair at 5154 Maine Ave in Baldwin Park. Open Monday to Saturday. Call (661) 526-8482." />
+<meta name="description" content="Williz Automotive Repair at 5154 Maine Ave in Baldwin Park. Diagnosis, A/C, clutches and general repair. Open Monday to Saturday. Call (661) 526-8482." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/williz-automotive-repair-baldwin-park/" />
 <meta property="og:title" content="Williz Automotive Repair" />
@@ -13,22 +13,54 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Roboto:wght@400;500&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#0a0a0a;color:#f1f1f1;font:400 17px/1.6 Roboto,Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0a0a0a;color:#f1f1f1;font:400 17px/1.6 Roboto,Arial,sans-serif;padding-bottom:60px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:680px;margin:0 auto;padding:0 20px}
-.hero{text-align:center;padding:24px 0 26px;border-bottom:3px solid #d21f26}
-.hero img{width:190px;height:190px;margin:0 auto}
-.hero p{margin:4px 0 0;color:#bdbdbd}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-.btns a{text-align:center;text-decoration:none;font:700 24px/1 Teko,Impact,sans-serif;letter-spacing:.05em;text-transform:uppercase;padding:15px 6px 12px;border:2px solid #d21f26}
+.w{max-width:920px;margin:0 auto;padding:0 20px}
+.top{border-bottom:1px solid #262626}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px}
+.top b{min-width:0;font:700 21px/1 Teko,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.top a{flex:none;background:#d21f26;color:#fff;text-decoration:none;font:700 19px/1 Teko,Impact,sans-serif;letter-spacing:.03em;padding:10px 10px 7px;white-space:nowrap}
+.hero{text-align:center;padding:26px 0 30px;border-bottom:3px solid #d21f26}
+.hero img{width:200px;height:200px;margin:0 auto}
+h1{font:700 38px/1 Teko,Impact,sans-serif;letter-spacing:.03em;text-transform:uppercase;margin:6px 0 4px}
+.hero p{margin:0 auto;color:#c4c4c4;max-width:28em}
+#open{display:inline-block;margin-top:14px;font:500 20px/1 Teko,Impact,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+#open.on{color:#63d697}#open.off{color:#ff7a80}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px auto 0;max-width:420px}
+.btns a{min-width:0;text-align:center;text-decoration:none;font:700 21px/1 Teko,Impact,sans-serif;letter-spacing:.05em;text-transform:uppercase;padding:15px 6px 12px;border:2px solid #d21f26}
 .btns a.r{background:#d21f26}
-h2{font:700 30px/1 Teko,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#ff4a50;margin:36px 0 8px}
-.ph{width:100%;height:auto;margin-top:28px}
-.h div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #262626;max-width:400px}
-.map{width:100%;height:250px;border:0;margin-top:10px}
-footer{margin-top:44px;border-top:1px solid #262626;padding:20px 0 28px;color:#9c9c9c;font-size:14px}
+h2{font:700 30px/1 Teko,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#ff4a50;margin:44px 0 10px}
+.jobs{margin:0;padding:0;list-style:none}
+.jobs li{padding:12px 0;border-bottom:1px solid #262626}
+.jobs b{display:block;font:700 22px/1.15 Teko,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.jobs span{color:#c4c4c4}
+.ph{width:100%;height:230px;object-fit:cover;margin-top:36px}
+.revs blockquote{margin:0 0 14px;background:#161616;padding:18px 20px}
+.revs p{margin:0 0 6px}
+.revs cite{font-style:normal;font-size:14px;color:#9c9c9c}
+table{border-collapse:collapse;width:100%}
+td{padding:8px 0;border-bottom:1px solid #262626}
+td+td{text-align:right}
+tr.today td{color:#fff;font-weight:500}
+tr.today td:first-child::after{content:" · today";color:#ff4a50}
+.map{width:100%;height:300px;border:0;margin-top:14px}
+.soft{color:#9c9c9c;font-size:15px}
+footer{margin-top:48px;border-top:1px solid #262626;padding:20px 0 28px;color:#9c9c9c;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#0a0a0a;border-top:2px solid #d21f26}
+.dock a{text-align:center;text-decoration:none;font:700 23px/1 Teko,Impact,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:18px 6px 14px}
+.dock a:first-child{background:#d21f26}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  h1{font-size:54px}
+  .ph{height:320px}
+  .jobs li{display:flex;gap:14px}.jobs b{flex:none;width:9em}
+  .revs{display:grid;grid-template-columns:1fr 1fr;gap:14px}.revs blockquote{margin:0}.revs h2,.revs .soft{grid-column:1/-1}
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+  .map{margin-top:0;height:330px}
+}
 </style>
 </head>
 <body>
@@ -39,37 +71,81 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header class="hero"><div class="w">
-  <h1 style="margin:0"><img src="logo.jpg" alt="Williz Automotive" width="190" height="190" /></h1>
+<header class="top"><div class="w"><b>Williz Automotive</b><a href="tel:+16615268482">(661) 526-8482</a></div></header>
+
+<div class="hero"><div class="w">
+  <img src="logo.jpg" alt="Williz Automotive logo" width="200" height="200" />
+  <h1>Williz Automotive Repair</h1>
   <p>5154 Maine Ave · Baldwin Park</p>
+  <span id="open">Open Monday to Saturday</span>
   <div class="btns">
     <a class="r" href="tel:+16615268482">Call</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Williz+Automotive+Repair+5154+Maine+Ave+Baldwin+Park+CA">Directions</a>
+    <a href="#visit">Hours</a>
   </div>
-</div></header>
+</div></div>
 
 <main class="w">
   <h2>Auto repair on Maine Ave</h2>
   <p>Call us at <a href="tel:+16615268482">(661) 526-8482</a> and tell us the year, make and model and what's going on with it. We'll tell you when to bring it in.</p>
   <p>We post our work on Instagram at <a href="https://instagram.com/williz_automotive" rel="noopener">@williz_automotive</a> if you want to see what comes through the shop.</p>
 
-  <img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1200&fit=crop" alt="Close view of an engine and belts" width="1200" height="800" loading="lazy" />
+  <h2>Work we do</h2>
+  <ul class="jobs">
+    <li><b>Diagnosis</b><span>Leaks and warning lights. We test for the problem and track it down.</span></li>
+    <li><b>Air conditioning</b><span>A/C that's blowing warm or not blowing at all.</span></li>
+    <li><b>Clutches</b><span>Clutch problems on manual cars.</span></li>
+    <li><b>General repair</b><span>Older cars and newer ones. Call and ask about yours.</span></li>
+  </ul>
 
-  <h2>Hours</h2>
-  <div class="h">
-    <div><span>Monday to Friday</span><span>9 am to 6 pm</span></div>
-    <div><span>Saturday</span><span>8 am to 4 pm</span></div>
-    <div><span>Sunday</span><span>Closed</span></div>
+  <img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
+
+  <section class="revs">
+    <h2>From our Google reviews</h2>
+    <blockquote><p>"He works so hard and finds the problems and fixes with much respect."</p><cite>Google review · two Mustangs</cite></blockquote>
+    <blockquote><p>"A honest person to talk to about your car problems will not give you the runaround and has great prices"</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"They know exactly what they are doing and they get the job done in a timely manner."</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"Honest and always gives you the best price possible."</p><cite>Google review</cite></blockquote>
+    <p class="soft">Rated 4.8 on Google from 77 reviews.</p>
+  </section>
+
+  <h2 id="visit">Hours and location</h2>
+  <div class="visit">
+    <div>
+      <table>
+        <tr data-d="1"><td>Monday</td><td>9 am to 6 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>9 am to 6 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>9 am to 6 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>9 am to 6 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>9 am to 6 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>8 am to 4 pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p>5154 Maine Ave, Baldwin Park, CA 91706<br /><a href="https://www.google.com/maps/dir/?api=1&destination=Williz+Automotive+Repair+5154+Maine+Ave+Baldwin+Park+CA+91706">Get directions</a></p>
+      <p class="soft">We take credit and debit cards. The entrance and parking are wheelchair accessible.</p>
+    </div>
+    <iframe class="map" title="Map to Williz Automotive Repair" src="https://www.google.com/maps?q=Williz+Automotive+Repair+5154+Maine+Ave+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-
-  <h2>Location</h2>
-  <p>5154 Maine Ave, Baldwin Park, CA 91706. Rated 4.8 on Google from 77 reviews.</p>
-  <iframe class="map" title="Map to Williz Automotive Repair" src="https://www.google.com/maps?q=Williz+Automotive+Repair+5154+Maine+Ave+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </main>
 
 <footer><div class="w">
   <p>© 2026 Williz Automotive Repair · 5154 Maine Ave, Baldwin Park, CA · <a href="tel:+16615268482">(661) 526-8482</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock">
+  <a href="tel:+16615268482">Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Williz+Automotive+Repair+5154+Maine+Ave+Baldwin+Park+CA+91706">Directions</a>
+</div>
+
+<script>
+(function(){var H={1:[9,18],2:[9,18],3:[9,18],4:[9,18],5:[9,18],6:[8,16]};var now;try{now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));}catch(e){return;}
+var d=now.getDay(),t=now.getHours()+now.getMinutes()/60,r=document.querySelector('[data-d="'+d+'"]');if(r)r.className+=" today";
+var el=document.getElementById("open");if(!el)return;var h=H[d];
+function f(x){var hh=Math.floor(x),m=Math.round((x-hh)*60);return (hh>12?hh-12:hh)+(m?":"+(m<10?"0":"")+m:"")+(hh>=12?" pm":" am");}
+if(h&&t>=h[0]&&t<h[1]){el.textContent="Open now until "+f(h[1]);el.className+=" on";}
+else{var n=d,k=0;if(!(h&&t<h[0])){do{n=(n+1)%7;k++;}while(!H[n]&&k<8);}
+var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+el.textContent="Closed now. Opens "+(k===0?"today":k===1?"tomorrow":days[n])+" at "+f(H[n][0]);el.className+=" off";}})();
+</script>
 </body>
 </html>

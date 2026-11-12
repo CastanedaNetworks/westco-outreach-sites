@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>James Auto Repair | Baldwin Park</title>
-<meta name="description" content="James Auto Repair at 5122 Maine Ave in Baldwin Park. Open Monday to Saturday, 8:30 to 6. Call (626) 962-9721." />
+<meta name="description" content="James Auto Repair at 5122 Maine Ave in Baldwin Park. Cars, trucks and fleet vehicles. Open Monday to Saturday, 8:30 to 6. Call (626) 962-9721." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/james-auto-repair-baldwin-park/" />
 <meta property="og:title" content="James Auto Repair" />
@@ -13,22 +13,53 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Source+Sans+3:wght@400;600&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#fbfaf7;color:#1e1b18;font:400 18px/1.6 "Source Sans 3",Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fbfaf7;color:#1e1b18;font:400 18px/1.6 "Source Sans 3",Arial,sans-serif;padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:660px;margin:0 auto;padding:0 20px}
-.hd{padding:30px 0 22px;border-bottom:5px double #1e1b18}
-h1{font:400 40px/1 "Alfa Slab One",Georgia,serif;margin:0;color:#0d3b66}
-.hd p{margin:8px 0 0;font-weight:600}
-.lead{font-size:20px;margin:24px 0 18px}
-.call{display:inline-block;background:#0d3b66;color:#fff;text-decoration:none;font-weight:600;font-size:20px;padding:15px 26px;border-radius:3px}
-.dir{display:inline-block;margin:12px 0 0 14px;font-weight:600}
-.ph{width:100%;height:auto;margin-top:28px;border:1px solid #d9d4ca}
-h2{font:400 23px/1.2 "Alfa Slab One",Georgia,serif;color:#0d3b66;margin:36px 0 8px}
-.open{font-size:20px;font-weight:600;margin:0}
-.map{width:100%;height:250px;border:0;margin-top:10px}
-footer{margin-top:44px;border-top:5px double #1e1b18;padding:20px 0 28px;color:#5e574e;font-size:14px}
+.w{max-width:880px;margin:0 auto;padding:0 20px}
+.mast{border-bottom:5px double #1e1b18}
+.mast .w{padding-top:22px;padding-bottom:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px 20px}
+h1{font:400 36px/1 "Alfa Slab One",Georgia,serif;margin:0;color:#0d3b66}
+.mast p{margin:6px 0 0;font-weight:600}
+.mast a.t{background:#0d3b66;color:#fff;text-decoration:none;font-weight:600;padding:10px 16px;border-radius:3px;white-space:nowrap}
+.sub{border-bottom:1px solid #d9d4ca;font-size:16px}
+.sub .w{padding-top:9px;padding-bottom:9px;display:flex;flex-wrap:wrap;gap:2px 18px}
+#open{font-weight:600}#open.on{color:#177245}#open.off{color:#b3261e}
+.lead{font-size:21px;line-height:1.5;margin:28px 0 20px;max-width:30em}
+.go a{display:inline-block;text-decoration:none;font-weight:600;font-size:19px;padding:14px 24px;border-radius:3px;background:#0d3b66;color:#fff;margin:0 10px 10px 0}
+.go a+a{background:none;color:#0d3b66;border:2px solid #0d3b66}
+.ph{width:100%;height:230px;object-fit:cover;margin-top:24px;border:1px solid #d9d4ca}
+h2{font:400 24px/1.2 "Alfa Slab One",Georgia,serif;color:#0d3b66;margin:46px 0 10px}
+dl.work{margin:0;display:grid;gap:0;border-top:1px solid #1e1b18}
+dl.work div{padding:12px 0;border-bottom:1px solid #d9d4ca}
+dl.work dt{font-weight:600}
+dl.work dd{margin:0;color:#514a41}
+.revs{columns:1;column-gap:36px}
+.revs blockquote{margin:0 0 20px;break-inside:avoid}
+.revs p{margin:0 0 4px;font-size:19px;line-height:1.5}
+.revs p::before{content:"";display:block;width:36px;height:3px;background:#0d3b66;margin-bottom:10px}
+.revs cite{font-style:normal;font-size:15px;color:#6b6358}
+table{border-collapse:collapse;width:100%;max-width:420px}
+td{padding:8px 0;border-bottom:1px solid #d9d4ca}
+td+td{text-align:right}
+tr.today td{font-weight:600;color:#0d3b66}
+.map{width:100%;height:300px;border:0;margin-top:14px}
+.soft{color:#6b6358;font-size:16px}
+footer{margin-top:48px;border-top:5px double #1e1b18;padding:20px 0 28px;color:#5e574e;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#fbfaf7;border-top:2px solid #1e1b18}
+.dock a{text-align:center;text-decoration:none;font-weight:600;padding:18px 6px}
+.dock a:first-child{background:#0d3b66;color:#fff}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  h1{font-size:50px}
+  .ph{height:330px}
+  dl.work{grid-template-columns:1fr 1fr;column-gap:40px}
+  .revs{columns:2}
+  .visit{display:grid;grid-template-columns:420px 1fr;gap:36px}
+  .map{margin-top:0;height:340px}
+}
 </style>
 </head>
 <body>
@@ -39,33 +70,76 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
+<header class="mast"><div class="w">
+  <div><h1>James Auto Repair</h1><p>5122 Maine Ave · Baldwin Park</p></div>
+  <a class="t" href="tel:+16269629721">(626) 962-9721</a>
+</div></header>
+<div class="sub"><div class="w"><span id="open">Open Monday to Saturday</span><span>Se habla español</span></div></div>
+
 <main class="w">
-  <header class="hd">
-    <h1>James Auto Repair</h1>
-    <p>5122 Maine Ave · Baldwin Park</p>
-  </header>
+  <p class="lead">James Sr. and James Jr. work on the cars here. Call, or just drive in and tell us what's wrong.</p>
+  <div class="go">
+    <a href="tel:+16269629721">Call (626) 962-9721</a>
+    <a href="#visit">Hours and directions</a>
+  </div>
+  <img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
 
-  <p class="lead">Auto repair on Maine Ave. Call, or just drive in and tell us what's wrong.</p>
-  <a class="call" href="tel:+16269629721">(626) 962-9721</a>
-  <a class="dir" href="https://www.google.com/maps/search/?api=1&query=James+Auto+Repair+5122+Maine+Ave+Baldwin+Park+CA">Directions</a>
+  <h2>What we work on</h2>
+  <dl class="work">
+    <div><dt>Cars, trucks and SUVs</dt><dd>Daily drivers and older cars, imports and domestics.</dd></div>
+    <div><dt>Fleet and work vehicles</dt><dd>We keep company trucks and vans maintained and running.</dd></div>
+    <div><dt>Noises and squeaks</dt><dd>Belts, pulleys and the sounds that are hard to track down.</dd></div>
+    <div><dt>General repair and maintenance</dt><dd>Tell us what the car is doing and when it happens.</dd></div>
+  </dl>
+  <p class="soft" style="margin-top:12px">Some of our customers bring us every vehicle they own.</p>
 
-  <img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1200&fit=crop" alt="Close view of an engine and belts" width="1200" height="800" loading="lazy" />
+  <h2>From our Google reviews</h2>
+  <div class="revs">
+    <blockquote><p>"James Senior and James Jr are phenomenal mechanics. They know exactly what they're doing and they're honest."</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"James and Jr. are fair. They know what they are doing and don't BS you on what is wrong with your car."</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"Had my idler pulley replaced, I'm very pleased."</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"They service standard road cars up to fleet maintenance vehicles."</p><cite>Google review</cite></blockquote>
+  </div>
+  <p class="soft">4.6 on Google from 35 reviews.</p>
 
-  <h2>Open six days</h2>
-  <p class="open">Monday to Saturday, 8:30 am to 6 pm</p>
-  <p>Closed Sunday. We're here all day Saturday, so you don't have to take time off work to get the car looked at.</p>
-
-  <h2>Before you come in</h2>
-  <p>It helps if you can tell us when the problem started and when it happens, like on cold starts, when you brake or on the freeway.</p>
-
-  <h2>Find the shop</h2>
-  <p>5122 Maine Ave, Baldwin Park, CA 91706. 4.6 on Google from 35 reviews.</p>
-  <iframe class="map" title="Map to James Auto Repair" src="https://www.google.com/maps?q=James+Auto+Repair+5122+Maine+Ave+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <h2 id="visit">Hours and location</h2>
+  <div class="visit">
+    <div>
+      <table>
+        <tr data-d="1"><td>Monday</td><td>8:30 am to 6 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>8:30 am to 6 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>8:30 am to 6 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>8:30 am to 6 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>8:30 am to 6 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>8:30 am to 6 pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p>5122 Maine Ave, Baldwin Park, CA 91706<br /><a href="https://www.google.com/maps/dir/?api=1&destination=James+Auto+Repair+5122+Maine+Ave+Baldwin+Park+CA+91706">Get directions</a></p>
+      <p class="soft">We take credit cards, debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+    </div>
+    <iframe class="map" title="Map to James Auto Repair" src="https://www.google.com/maps?q=James+Auto+Repair+5122+Maine+Ave+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 </main>
 
 <footer><div class="w">
   <p>© 2026 James Auto Repair · 5122 Maine Ave, Baldwin Park, CA · <a href="tel:+16269629721">(626) 962-9721</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock">
+  <a href="tel:+16269629721">Call the shop</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=James+Auto+Repair+5122+Maine+Ave+Baldwin+Park+CA+91706">Directions</a>
+</div>
+
+<script>
+(function(){var H={1:[8.5,18],2:[8.5,18],3:[8.5,18],4:[8.5,18],5:[8.5,18],6:[8.5,18]};var now;try{now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));}catch(e){return;}
+var d=now.getDay(),t=now.getHours()+now.getMinutes()/60,r=document.querySelector('[data-d="'+d+'"]');if(r)r.className+=" today";
+var el=document.getElementById("open");if(!el)return;var h=H[d];
+function f(x){var hh=Math.floor(x),m=Math.round((x-hh)*60);return (hh>12?hh-12:hh)+(m?":"+(m<10?"0":"")+m:"")+(hh>=12?" pm":" am");}
+if(h&&t>=h[0]&&t<h[1]){el.textContent="Open now until "+f(h[1]);el.className+=" on";}
+else{var n=d,k=0;if(!(h&&t<h[0])){do{n=(n+1)%7;k++;}while(!H[n]&&k<8);}
+var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+el.textContent="Closed right now. Opens "+(k===0?"today":k===1?"tomorrow":days[n])+" at "+f(H[n][0]);el.className+=" off";}})();
+</script>
 </body>
 </html>

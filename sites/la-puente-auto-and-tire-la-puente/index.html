@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>La Puente Auto &amp; Tire | Hacienda Blvd</title>
-<meta name="description" content="La Puente Auto &amp; Tire at 1149 N Hacienda Blvd in La Puente. Tires and auto service. Call (626) 917-4101." />
+<title>La Puente Auto &amp; Tire | Tires on Hacienda Blvd</title>
+<meta name="description" content="La Puente Auto &amp; Tire at 1149 N Hacienda Blvd in La Puente. New and used tires, flat repair and auto service. Call (626) 917-4101." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/la-puente-auto-and-tire-la-puente/" />
 <meta property="og:title" content="La Puente Auto &amp; Tire" />
@@ -13,25 +13,58 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Inter:wght@400;600&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#eef1f4;color:#17212b;font:400 17px/1.6 Inter,Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:#eef1f4;color:#17212b;font:400 17px/1.6 Inter,Arial,sans-serif;padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:680px;margin:0 auto;padding:0 20px}
-.top{background:#17212b;color:#fff;padding:24px 0}
-h1{font:700 32px/1.1 "Chakra Petch",Arial,sans-serif;margin:0}
-h1 i{font-style:normal;color:#ff6a2b}
-.top p{margin:6px 0 0;color:#b8c2cc}
-.card{background:#fff;border-radius:8px;padding:20px;margin-top:18px}
-.call{display:block;background:#ff6a2b;color:#17212b;text-align:center;text-decoration:none;font:700 21px/1 "Chakra Petch",Arial,sans-serif;padding:16px 10px;border-radius:6px}
-.dir{display:block;text-align:center;margin-top:12px;font-weight:600}
-h2{font:700 20px/1.2 "Chakra Petch",Arial,sans-serif;margin:0 0 8px}
+.w{max-width:920px;margin:0 auto;padding:0 18px}
+.bar{background:#17212b;color:#fff}
+.bar .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px}
+.bar b{font:700 19px/1.1 "Chakra Petch",Arial,sans-serif}
+.bar b i{font-style:normal;color:#ff6a2b}
+.bar a{flex:none;background:#ff6a2b;color:#17212b;text-decoration:none;font-weight:600;padding:9px 12px;border-radius:6px;font-size:15px;white-space:nowrap}
+.status{background:#fff;border-bottom:1px solid #d8dee5;font-size:15px}
+.status .w{padding-top:9px;padding-bottom:9px}
+#open{font-weight:600}
+#open.on{color:#177245}#open.off{color:#b3261e}
+.hero{display:grid;gap:0;background:#17212b;color:#fff}
+.hero img{width:100%;height:210px;object-fit:cover}
+.hero div{padding:24px 18px 28px}
+h1{font:700 31px/1.12 "Chakra Petch",Arial,sans-serif;margin:0 0 10px}
+.hero p{margin:0 0 18px;color:#c6d0da}
+.btn{display:inline-block;text-decoration:none;font:700 17px/1 "Chakra Petch",Arial,sans-serif;padding:15px 20px;border-radius:6px;background:#ff6a2b;color:#17212b;margin:0 8px 8px 0}
+.btn.o{background:none;color:#fff;border:2px solid #ff6a2b}
+.card{background:#fff;border-radius:8px;padding:22px 20px;margin-top:16px}
+h2{font:700 23px/1.2 "Chakra Petch",Arial,sans-serif;margin:0 0 10px}
 .card p:last-child{margin-bottom:0}
-.ph{border-radius:8px;margin-top:18px;width:100%;height:auto}
-.r{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #e6eaee}
-.r:last-child{border:0}
-.map{width:100%;height:240px;border:0;border-radius:6px;margin-top:10px}
-footer{padding:22px 0 28px;color:#5a6672;font-size:14px}
+.list{margin:0;padding:0;list-style:none}
+.list li{padding:11px 0;border-bottom:1px solid #e6eaee}
+.list li:last-child{border:0;padding-bottom:0}
+.list b{display:block}
+.list span{color:#4f5d6b;font-size:16px}
+.q{margin:0;padding:14px 0;border-bottom:1px solid #e6eaee}
+.q:last-of-type{border:0}
+.q p{margin:0 0 4px}
+.q cite{font-style:normal;font-size:14px;color:#4f5d6b}
+table{border-collapse:collapse;width:100%}
+td{padding:8px 0;border-bottom:1px solid #e6eaee}
+td+td{text-align:right}
+tr.today td{font-weight:600}
+.map{width:100%;height:280px;border:0;border-radius:6px;margin-top:12px}
+.small{font-size:15px;color:#4f5d6b}
+footer{padding:24px 0 28px;color:#5a6672;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#17212b}
+.dock a{text-align:center;text-decoration:none;color:#fff;font-weight:600;padding:18px 6px}
+.dock a:first-child{background:#ff6a2b;color:#17212b}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  .hero{grid-template-columns:1fr 1fr;align-items:stretch}
+  .hero img{height:100%;min-height:360px;order:2}
+  .hero div{padding:48px 40px;align-self:center}
+  h1{font-size:42px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+}
 </style>
 </head>
 <body>
@@ -42,36 +75,65 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header class="top"><div class="w">
-  <h1>La Puente <i>Auto &amp; Tire</i></h1>
-  <p>1149 N Hacienda Blvd</p>
+<header class="bar"><div class="w">
+  <b>La Puente <i>Auto &amp; Tire</i></b>
+  <a href="tel:+16269174101">(626) 917-4101</a>
 </div></header>
+<div class="status"><div class="w"><span id="open">Open Monday to Saturday</span> · 1149 N Hacienda Blvd</div></div>
+
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=72&w=1400&fit=crop" alt="Stacks of tires at a tire shop" />
+  <div>
+    <h1>New and used tires on Hacienda Blvd</h1>
+    <p>Call with your tire size and we'll tell you what we have and what it'll cost. If you don't know the size, tell us what you drive.</p>
+    <a class="btn" href="tel:+16269174101">Call (626) 917-4101</a>
+    <a class="btn o" href="#visit">Hours and map</a>
+  </div>
+</div>
 
 <main class="w">
+  <div class="cols">
+    <section class="card">
+      <h2>Tires</h2>
+      <ul class="list">
+        <li><b>Used tires</b><span>A lot of our customers have been buying used tires here for years.</span></li>
+        <li><b>New tires</b><span>Including sizes that are hard to find. Call and ask.</span></li>
+        <li><b>Flat repair</b><span>If it can be patched, we patch it.</span></li>
+        <li><b>Locked wheels</b><span>Lost the key for your wheel locks? We can get them off.</span></li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Auto service</h2>
+      <p>We work on cars too. If a light is on or something else is going on with it, mention it when you call and we'll tell you if it's something we can take care of.</p>
+      <p class="small">We take debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+    </section>
+  </div>
+
   <section class="card">
-    <a class="call" href="tel:+16269174101">Call (626) 917-4101</a>
-    <a class="dir" href="https://www.google.com/maps/search/?api=1&query=La+Puente+Auto+%26+Tire+1149+N+Hacienda+Blvd+La+Puente+CA">Get directions</a>
+    <h2>From our Google reviews</h2>
+    <blockquote class="q"><p>"I've been getting tires repaired and I've bought countless used tires from here over the last 4 vehicles / 10 years. This is a great place to get used tires or patched."</p><cite>Google review</cite></blockquote>
+    <blockquote class="q"><p>"Got a good deal on hard to find 265 55/r19 size tires. Down to earth staff, not trying to sell you or upgrade your cost."</p><cite>Google review</cite></blockquote>
+    <blockquote class="q"><p>"I had my brake lights / sensor checked and fixed in 15 minutes."</p><cite>Google review</cite></blockquote>
+    <p class="small">4.6 on Google from 51 reviews.</p>
   </section>
 
-  <img class="ph" src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=72&w=1200&fit=crop" alt="Stacks of tires at a tire shop" width="1200" height="800" />
-
-  <section class="card">
-    <h2>Need tires?</h2>
-    <p>Call with your tire size and we'll tell you what we have and what it'll cost. The size is printed on the side of the tire. If you don't know it, just tell us what you drive.</p>
-    <p>We do auto service too, so if something else is going on with the car, mention it.</p>
-  </section>
-
-  <section class="card">
-    <h2>Hours</h2>
-    <div class="r"><span>Monday to Friday</span><span>8 am to 6 pm</span></div>
-    <div class="r"><span>Saturday</span><span>8 am to 4 pm</span></div>
-    <div class="r"><span>Sunday</span><span>Closed</span></div>
-  </section>
-
-  <section class="card">
-    <h2>Location</h2>
-    <p>1149 N Hacienda Blvd, La Puente, CA 91744. 51 Google reviews, 4.6 stars.</p>
-    <iframe class="map" title="Map to La Puente Auto and Tire" src="https://www.google.com/maps?q=La+Puente+Auto+%26+Tire+1149+N+Hacienda+Blvd+La+Puente+CA+91744&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <section class="card" id="visit">
+    <h2>Hours and location</h2>
+    <div class="cols">
+      <table id="hours">
+        <tr data-d="1"><td>Monday</td><td>8 am to 6 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>8 am to 6 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>8 am to 6 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>8 am to 6 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>8 am to 6 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>8 am to 4 pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <div>
+        <p style="margin-top:0">1149 N Hacienda Blvd, La Puente, CA 91744<br /><a href="https://www.google.com/maps/dir/?api=1&destination=La+Puente+Auto+%26+Tire+1149+N+Hacienda+Blvd+La+Puente+CA+91744">Get directions</a></p>
+        <iframe class="map" title="Map to La Puente Auto and Tire" src="https://www.google.com/maps?q=La+Puente+Auto+%26+Tire+1149+N+Hacienda+Blvd+La+Puente+CA+91744&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
   </section>
 </main>
 
@@ -79,5 +141,21 @@ footer p{margin:0 0 6px}
   <p>© 2026 La Puente Auto &amp; Tire · 1149 N Hacienda Blvd, La Puente, CA · <a href="tel:+16269174101">(626) 917-4101</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock">
+  <a href="tel:+16269174101">Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=La+Puente+Auto+%26+Tire+1149+N+Hacienda+Blvd+La+Puente+CA+91744">Directions</a>
+</div>
+
+<script>
+(function(){var H={1:[8,18],2:[8,18],3:[8,18],4:[8,18],5:[8,18],6:[8,16]};var now;try{now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));}catch(e){return;}
+var d=now.getDay(),t=now.getHours()+now.getMinutes()/60,r=document.querySelector('[data-d="'+d+'"]');if(r)r.className+=" today";
+var el=document.getElementById("open");if(!el)return;var h=H[d];
+function f(x){var hh=Math.floor(x),m=Math.round((x-hh)*60);return (hh>12?hh-12:hh)+(m?":"+(m<10?"0":"")+m:"")+(hh>=12?" pm":" am");}
+if(h&&t>=h[0]&&t<h[1]){el.textContent="Open now until "+f(h[1]);el.className+=" on";}
+else{var n=d,k=0;if(!(h&&t<h[0])){do{n=(n+1)%7;k++;}while(!H[n]&&k<8);}
+var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+el.textContent="Closed right now. Opens "+(k===0?"today":k===1?"tomorrow":days[n])+" at "+f(H[n][0]);el.className+=" off";}})();
+</script>
 </body>
 </html>

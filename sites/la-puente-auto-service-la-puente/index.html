@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>La Puente Auto Service | Auto repair on Amar Rd</title>
-<meta name="description" content="La Puente Auto Service, auto repair at 13825 Amar Rd in La Puente. Call (626) 962-7989." />
+<meta name="description" content="La Puente Auto Service, auto repair at 13825 Amar Rd in La Puente. Open Monday to Saturday, 8 to 4. Call (626) 962-7989." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/la-puente-auto-service-la-puente/" />
 <meta property="og:title" content="La Puente Auto Service" />
@@ -13,23 +13,53 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@700;900&family=Public+Sans:wght@400;600&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f2efe9;color:#1f1d1a;font:400 17px/1.6 "Public Sans",Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f2efe9;color:#1f1d1a;font:400 17px/1.6 "Public Sans",Arial,sans-serif;padding-bottom:60px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:680px;margin:0 auto;padding:0 20px}
-.sign{background:#1d3557;color:#fff;padding:26px 0 24px;border-bottom:6px solid #e0a526}
+.w{max-width:900px;margin:0 auto;padding:0 20px}
+.sign{background:#1d3557;color:#fff;border-bottom:6px solid #e0a526}
+.sign .w{padding-top:22px;padding-bottom:20px}
 .sign small{display:block;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:#e0a526;font-weight:600}
-h1{font:900 34px/1.1 Bitter,Georgia,serif;margin:6px 0 0}
-.ph{width:100%;height:240px;object-fit:cover}
-.lead{font-size:19px;margin:24px 0 18px}
-.call{display:block;background:#e0a526;color:#1f1d1a;text-align:center;text-decoration:none;font:900 21px/1 Bitter,Georgia,serif;padding:17px 10px;border-radius:4px}
-.dir{display:block;text-align:center;margin-top:12px;font-weight:600}
-h2{font:700 22px/1.2 Bitter,Georgia,serif;margin:36px 0 8px;color:#1d3557}
-.card{background:#fff;border:1px solid #ddd6c8;border-radius:4px;padding:16px 18px}
-.card p{margin:0}
-.map{width:100%;height:260px;border:0;border-radius:4px;margin-top:10px}
-footer{margin-top:44px;background:#1d3557;color:#c9d3e0;padding:20px 0 28px;font-size:14px}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px 20px}
+h1{font:900 32px/1.1 Bitter,Georgia,serif;margin:6px 0 0}
+.sign a{font:700 20px/1 Bitter,Georgia,serif;text-decoration:none;color:#e0a526;white-space:nowrap}
+.strip{background:#fff;border-bottom:1px solid #ddd6c8;font-size:15px}
+.strip .w{padding-top:10px;padding-bottom:10px}
+#open{font-weight:600}#open.on{color:#177245}#open.off{color:#b3261e}
+.lead{font:700 23px/1.35 Bitter,Georgia,serif;margin:30px 0 18px;max-width:26em}
+.call{display:inline-block;background:#e0a526;color:#1f1d1a;text-decoration:none;font:900 20px/1 Bitter,Georgia,serif;padding:17px 26px;border-radius:4px}
+.dir{display:inline-block;margin:12px 0 0 16px;font-weight:600}
+.ph{width:100%;height:230px;object-fit:cover;margin-top:30px;border-radius:4px}
+h2{font:700 24px/1.2 Bitter,Georgia,serif;margin:44px 0 10px;color:#1d3557}
+.cols{display:grid;gap:0}
+.do{margin:0;padding:0;list-style:none;border-top:2px solid #1d3557}
+.do li{padding:12px 0;border-bottom:1px solid #d6cfc1}
+.do b{display:block}
+.inset{background:#fff;border:1px solid #ddd6c8;border-radius:4px;padding:6px 20px;margin-top:6px}
+.inset blockquote{margin:0;padding:16px 0;border-bottom:1px solid #ebe5d9}
+.inset blockquote:last-child{border:0}
+.inset p{margin:0 0 4px;font:700 18px/1.45 Bitter,Georgia,serif}
+.inset cite{font-style:normal;font-size:14px;color:#6a645a}
+.hours{width:100%;border-collapse:collapse;background:#fff;border:1px solid #ddd6c8}
+.hours td{padding:9px 14px;border-bottom:1px solid #ebe5d9}
+.hours td+td{text-align:right}
+.hours tr.today td{font-weight:600;background:#fdf3d8}
+.map{width:100%;height:300px;border:0;border-radius:4px;margin-top:14px}
+.soft{color:#6a645a;font-size:15px}
+footer{margin-top:48px;background:#1d3557;color:#c9d3e0;padding:22px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#1d3557}
+.dock a{text-align:center;text-decoration:none;color:#fff;font-weight:600;padding:18px 6px}
+.dock a:first-child{background:#e0a526;color:#1f1d1a}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  h1{font-size:44px}
+  .ph{height:320px}
+  .cols{grid-template-columns:1fr 1fr;gap:44px}
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .map{margin-top:0;height:100%;min-height:320px}
+}
 </style>
 </head>
 <body>
@@ -42,30 +72,82 @@ footer p{margin:0 0 6px}
 
 <header class="sign"><div class="w">
   <small>Amar Road · La Puente</small>
-  <h1>La Puente Auto Service</h1>
+  <div class="row">
+    <h1>La Puente Auto Service</h1>
+    <a href="tel:+16269627989">(626) 962-7989</a>
+  </div>
 </div></header>
-<img class="ph" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=72&w=1400&fit=crop" alt="Technician leaning in under the open hood of a car" />
+<div class="strip"><div class="w"><span id="open">Open Monday to Saturday, 8 am to 4 pm</span></div></div>
 
 <main class="w">
-  <p class="lead">Auto repair on Amar Rd. Bring the car by or call first and tell us what it's doing.</p>
+  <p class="lead">Auto repair on Amar Rd. Bring the car by, or call first and tell us what it's doing.</p>
   <a class="call" href="tel:+16269627989">Call (626) 962-7989</a>
-  <a class="dir" href="https://www.google.com/maps/search/?api=1&query=La+Puente+Auto+Service+13825+Amar+Rd+La+Puente+CA">Get directions</a>
+  <a class="dir" href="#visit">Hours and directions</a>
 
-  <h2>Ask for Joe</h2>
-  <p>Joe owns the shop. When people review us they mostly talk about the mechanics and about the price being fair.</p>
-  <p>If you're not sure what's wrong, that's fine. Describe the noise, the light or the leak and we'll take a look.</p>
+  <img class="ph" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=72&w=1400&fit=crop" alt="Technician leaning in under the open hood of a car" />
 
-  <h2>Hours</h2>
-  <div class="card"><p>Call the shop for today's hours: <a href="tel:+16269627989">(626) 962-7989</a></p></div>
+  <div class="cols">
+    <section>
+      <h2>Ask for Joe</h2>
+      <p>Joe owns the shop and he's the one who'll go over your car with you. He tells you what the inspection shows and what your options are, and you decide what to do.</p>
+      <p>If you're not sure what's wrong, describe the noise, the light or the leak and we'll take a look.</p>
+    </section>
+    <section>
+      <h2>What we do</h2>
+      <ul class="do">
+        <li><b>Inspections and diagnosis</b>We find out what's actually wrong before anything gets replaced.</li>
+        <li><b>Check engine lights</b>We track down the cause and fix it.</li>
+        <li><b>General repair</b>Call and ask about your car or truck.</li>
+      </ul>
+    </section>
+  </div>
 
-  <h2>Where we are</h2>
-  <p>13825 Amar Rd, La Puente, CA 91746. We have 80 reviews on Google and a 4.5 rating.</p>
-  <iframe class="map" title="Map to La Puente Auto Service" src="https://www.google.com/maps?q=La+Puente+Auto+Service+13825+Amar+Rd+La+Puente+CA+91746&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <h2>From our Google reviews</h2>
+  <div class="inset">
+    <blockquote><p>"Joe is the owner and he took care of my car asap just in time for work. He's an honest professional and super informative and helpful!"</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"The owner Joe is honest about his inspections."</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"These guys work with you which is rare anymore and they also help out the community by giving jobs to locals."</p><cite>Google review</cite></blockquote>
+  </div>
+  <p class="soft">4.5 on Google from 80 reviews.</p>
+
+  <h2 id="visit">Hours and location</h2>
+  <div class="visit">
+    <div>
+      <table class="hours">
+        <tr data-d="1"><td>Monday</td><td>8 am to 4 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>8 am to 4 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>8 am to 4 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>8 am to 4 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>8 am to 4 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>8 am to 4 pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p>13825 Amar Rd, La Puente, CA 91746<br /><a href="https://www.google.com/maps/dir/?api=1&destination=La+Puente+Auto+Service+13825+Amar+Rd+La+Puente+CA+91746">Get directions</a></p>
+      <p class="soft">We take credit cards, debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+    </div>
+    <iframe class="map" title="Map to La Puente Auto Service" src="https://www.google.com/maps?q=La+Puente+Auto+Service+13825+Amar+Rd+La+Puente+CA+91746&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 </main>
 
 <footer><div class="w">
   <p>© 2026 La Puente Auto Service · 13825 Amar Rd, La Puente, CA · <a href="tel:+16269627989">(626) 962-7989</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock">
+  <a href="tel:+16269627989">Call the shop</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=La+Puente+Auto+Service+13825+Amar+Rd+La+Puente+CA+91746">Directions</a>
+</div>
+
+<script>
+(function(){var H={1:[8,16],2:[8,16],3:[8,16],4:[8,16],5:[8,16],6:[8,16]};var now;try{now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));}catch(e){return;}
+var d=now.getDay(),t=now.getHours()+now.getMinutes()/60,r=document.querySelector('[data-d="'+d+'"]');if(r)r.className+=" today";
+var el=document.getElementById("open");if(!el)return;var h=H[d];
+function f(x){var hh=Math.floor(x),m=Math.round((x-hh)*60);return (hh>12?hh-12:hh)+(m?":"+(m<10?"0":"")+m:"")+(hh>=12?" pm":" am");}
+if(h&&t>=h[0]&&t<h[1]){el.textContent="Open now until "+f(h[1]);el.className+=" on";}
+else{var n=d,k=0;if(!(h&&t<h[0])){do{n=(n+1)%7;k++;}while(!H[n]&&k<8);}
+var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+el.textContent="Closed right now. Opens "+(k===0?"today":k===1?"tomorrow":days[n])+" at "+f(H[n][0]);el.className+=" off";}})();
+</script>
 </body>
 </html>

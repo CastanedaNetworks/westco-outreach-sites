@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Rudy's Auto Repair | La Puente</title>
-<meta name="description" content="Rudy's Auto Repair at 16325 Old Valley Blvd in La Puente. Honest work, done on time. Call (626) 336-2000." />
+<meta name="description" content="Rudy's Auto Repair at 16325 Old Valley Blvd in La Puente. Engine work, head gaskets and general repair. Call (626) 336-2000." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/rudys-auto-repair-la-puente/" />
 <meta property="og:title" content="Rudy's Auto Repair" />
@@ -13,27 +13,51 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lato:wght@400;700&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#161616;color:#f0eee9;font:400 17px/1.6 Lato,Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:#161616;color:#f0eee9;font:400 17px/1.6 Lato,Arial,sans-serif;padding-bottom:60px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:700px;margin:0 auto;padding:0 20px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-block:16px;border-bottom:3px solid #c62828}
-.top b{font:700 25px/1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+.top{border-bottom:3px solid #c62828}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px;padding-bottom:14px}
+.top b{font:700 23px/1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em}
 .top b span{color:#ef5350}
-.top a{font-weight:700;text-decoration:none;white-space:nowrap}
-h1{font:700 40px/1.05 Oswald,Arial,sans-serif;text-transform:uppercase;margin:28px 0 10px}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0 0}
-.btns a{text-align:center;text-decoration:none;font:700 19px/1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;padding:16px 6px;border:2px solid #c62828}
+.top a{flex:none;font:700 17px/1 Oswald,Arial,sans-serif;letter-spacing:.04em;text-decoration:none;border:2px solid #c62828;padding:9px 12px;white-space:nowrap}
+.intro{padding-top:30px}
+#open{display:inline-block;font:500 15px/1.2 Oswald,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border:1px solid #444;margin-bottom:14px}
+#open.on{border-color:#3bb273;color:#7ddca9}#open.off{border-color:#c62828;color:#ff8a80}
+h1{font:700 40px/1.05 Oswald,Arial,sans-serif;text-transform:uppercase;margin:0 0 12px}
+.intro p{margin:0 0 20px;max-width:34em;color:#d5d1c8;font-size:18px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btns a{text-decoration:none;font:700 19px/1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;padding:16px 22px;border:2px solid #c62828}
 .btns a.f{background:#c62828}
-.ph{width:100%;height:auto;margin-top:30px}
-h2{font:700 22px/1.1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#ef5350;margin:36px 0 8px}
-.two{display:grid;gap:12px}
-@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
-.two div{border:1px solid #333;padding:16px}
-.two b{display:block;font:700 18px/1.2 Oswald,Arial,sans-serif;text-transform:uppercase;margin-bottom:4px}
-.map{width:100%;height:260px;border:0;margin-top:10px}
+.ph{width:100%;height:240px;object-fit:cover;margin-top:30px}
+h2{font:700 24px/1.1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#ef5350;margin:40px 0 10px}
+.work{margin:0;padding:0;list-style:none}
+.work li{padding:12px 0;border-bottom:1px solid #2e2e2e}
+.work b{font:700 19px/1.2 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em;display:block}
+.work span{color:#bcb8ae}
+.quote{margin:0 0 22px;padding-top:14px;border-top:1px solid #2e2e2e}
+.quote p{margin:0 0 6px;font-size:19px;line-height:1.5}
+.quote cite{font-style:normal;font-size:14px;color:#9a968c;letter-spacing:.06em;text-transform:uppercase}
+.hrs{width:100%;border-collapse:collapse}
+.hrs td{padding:8px 0;border-bottom:1px solid #2e2e2e}
+.hrs td+td{text-align:right}
+.hrs tr.today td{font-weight:700;color:#fff}
+.map{width:100%;height:290px;border:0;margin-top:14px}
+.note{color:#bcb8ae;font-size:15px}
 footer{margin-top:44px;border-top:1px solid #333;padding:20px 0 28px;color:#a8a49c;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:#161616;border-top:2px solid #c62828}
+.dock a{text-align:center;text-decoration:none;font:700 18px/1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;padding:19px 6px}
+.dock a:first-child{background:#c62828}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  h1{font-size:60px}
+  .ph{height:340px}
+  .split{display:grid;grid-template-columns:5fr 4fr;gap:50px}
+  .work{columns:2;column-gap:40px}.work li{break-inside:avoid}
+}
 </style>
 </head>
 <body>
@@ -44,35 +68,83 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<div class="w top">
+<header class="top"><div class="w">
   <b>Rudy's <span>Auto Repair</span></b>
   <a href="tel:+16263362000">(626) 336-2000</a>
-</div>
+</div></header>
+
+<section class="intro"><div class="w">
+  <span id="open">Monday to Saturday</span>
+  <h1>Auto repair on Old Valley Blvd</h1>
+  <p>Call Rudy, tell him what the car's doing, and he'll give you a price for the work. Some of our customers have been bringing their cars here for more than ten years.</p>
+  <div class="btns">
+    <a class="f" href="tel:+16263362000">Call (626) 336-2000</a>
+    <a href="#visit">Hours and map</a>
+  </div>
+</div></section>
+<img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
 
 <main class="w">
-  <h1>Auto repair on Old Valley Blvd</h1>
-  <p>We're on Old Valley Blvd in La Puente. Tell us what the car's doing and we'll tell you what it needs.</p>
-  <div class="btns">
-    <a class="f" href="tel:+16263362000">Call the shop</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Rudy%27s+Auto+Repair+16325+Old+Valley+Blvd+La+Puente+CA">Directions</a>
+  <h2>What we work on</h2>
+  <ul class="work">
+    <li><b>Engine work</b><span>Head gaskets, valves and other major engine repairs.</span></li>
+    <li><b>GM cars and trucks</b><span>We see a lot of them, including older muscle cars that need to run again.</span></li>
+    <li><b>General repair</b><span>Call and tell us what your car or SUV is doing.</span></li>
+    <li><b>Estimates</b><span>Explain the problem over the phone and we'll give you a price for the work.</span></li>
+  </ul>
+
+  <h2>From our Google reviews</h2>
+  <div class="split">
+    <div>
+      <blockquote class="quote"><p>"I called up and explained what I needed and he gave me a good price for the work and even saved me a little money when he found an easier fix to my problem."</p><cite>Google review</cite></blockquote>
+      <blockquote class="quote"><p>"He and his crew have been keeping my cars running and making them safe for my family."</p><cite>Google review</cite></blockquote>
+    </div>
+    <div>
+      <blockquote class="quote"><p>"Great service, good human relations, fair price and honesty."</p><cite>Google review · head gasket and valve job</cite></blockquote>
+      <p class="note">4.7 on Google from 106 reviews.</p>
+    </div>
   </div>
 
-  <img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1200&fit=crop" alt="Close view of an engine and belts" width="1200" height="800" loading="lazy" />
-
-  <h2>What customers say</h2>
-  <p>We have 106 reviews on Google and a 4.7 rating. People mostly mention that we're honest with them and that their car was ready when we said it would be.</p>
-
-  <h2>Hours</h2>
-  <p>Call for today's hours: <a href="tel:+16263362000">(626) 336-2000</a></p>
-
-  <h2>Location</h2>
-  <p>16325 Old Valley Blvd, La Puente, CA 91744</p>
-  <iframe class="map" title="Map to Rudy's Auto Repair" src="https://www.google.com/maps?q=Rudy%27s+Auto+Repair+16325+Old+Valley+Blvd+La+Puente+CA+91744&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <h2 id="visit">Hours and location</h2>
+  <div class="split">
+    <div>
+      <table class="hrs">
+        <tr data-d="1"><td>Monday</td><td>8 am to 5 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>8 am to 5 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>8 am to 5 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>8 am to 5 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>8 am to 5 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>8 am to 2:30 pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p class="note">We take credit cards, debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+    </div>
+    <div>
+      <p style="margin:0">16325 Old Valley Blvd, La Puente, CA 91744<br /><a href="https://www.google.com/maps/dir/?api=1&destination=Rudy%27s+Auto+Repair+16325+Old+Valley+Blvd+La+Puente+CA+91744">Get directions</a></p>
+      <iframe class="map" title="Map to Rudy's Auto Repair" src="https://www.google.com/maps?q=Rudy%27s+Auto+Repair+16325+Old+Valley+Blvd+La+Puente+CA+91744&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
 </main>
 
 <footer><div class="w">
   <p>© 2026 Rudy's Auto Repair · 16325 Old Valley Blvd, La Puente, CA · <a href="tel:+16263362000">(626) 336-2000</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock">
+  <a href="tel:+16263362000">Call the shop</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Rudy%27s+Auto+Repair+16325+Old+Valley+Blvd+La+Puente+CA+91744">Directions</a>
+</div>
+
+<script>
+(function(){var H={1:[8,17],2:[8,17],3:[8,17],4:[8,17],5:[8,17],6:[8,14.5]};var now;try{now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));}catch(e){return;}
+var d=now.getDay(),t=now.getHours()+now.getMinutes()/60,r=document.querySelector('[data-d="'+d+'"]');if(r)r.className+=" today";
+var el=document.getElementById("open");if(!el)return;var h=H[d];
+function f(x){var hh=Math.floor(x),m=Math.round((x-hh)*60);return (hh>12?hh-12:hh)+(m?":"+(m<10?"0":"")+m:"")+(hh>=12?" pm":" am");}
+if(h&&t>=h[0]&&t<h[1]){el.textContent="Open now until "+f(h[1]);el.className+=" on";}
+else{var n=d,k=0;if(!(h&&t<h[0])){do{n=(n+1)%7;k++;}while(!H[n]&&k<8);}
+var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+el.textContent="Closed now. Opens "+(k===0?"today":k===1?"tomorrow":days[n])+" at "+f(H[n][0]);el.className+=" off";}})();
+</script>
 </body>
 </html>

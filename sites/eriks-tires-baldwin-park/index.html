@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Erik's Tires | Baldwin Park</title>
+<title>Erik's Tires | Baldwin Park tire shop, open 7 days</title>
 <meta name="description" content="Erik's Tires at 13900 Ramona Blvd in Baldwin Park. New and used tires, flat repair, mounting and balancing. Open 7 days. Call (626) 962-4654." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/eriks-tires-baldwin-park/" />
@@ -13,28 +13,60 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@400;600&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:#141414;font:400 18px/1.55 Hind,Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:#141414;font:400 18px/1.55 Hind,Arial,sans-serif;padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:700px;margin:0 auto;padding:0 20px}
-.top{background:#141414;color:#fff;padding:22px 0 18px}
-h1{font:400 56px/.95 Anton,Impact,sans-serif;text-transform:uppercase;margin:0}
-h1 span{color:#ff3b30}
-.top p{margin:8px 0 0;font-weight:600}
-.ph{width:100%;height:240px;object-fit:cover}
-.strip{background:#ff3b30;color:#fff}
-.strip .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 18px;padding-top:13px;padding-bottom:13px}
-.strip a{font:400 27px/1 Anton,Impact,sans-serif;text-decoration:none}
-.strip span{font-weight:600}
-h2{font:400 26px/1 Anton,Impact,sans-serif;text-transform:uppercase;margin:36px 0 10px}
-ul.s{margin:0;padding:0;list-style:none}
-ul.s li{padding:10px 0;border-bottom:1px solid #e3e3e3;font-weight:600}
-table{border-collapse:collapse;width:100%;max-width:400px}
-td{padding:7px 0;border-bottom:1px solid #e3e3e3}
-td+td{text-align:right}
-.map{width:100%;height:250px;border:0;margin-top:10px}
-footer{margin-top:42px;background:#141414;color:#bdbdbd;padding:20px 0 28px;font-size:14px}
+.w{max-width:1000px;margin:0 auto;padding-left:20px;padding-right:20px}
+.top{background:#141414;color:#fff}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:10px}
+.brand{font:400 30px/1 Anton,Impact,sans-serif;text-transform:uppercase;text-decoration:none}
+.brand span{color:#ff3b30}
+.tel{flex:none;background:#ff3b30;color:#fff;text-decoration:none;font:400 20px/1 Anton,Impact,sans-serif;padding:10px 12px 8px;white-space:nowrap}
+.hero{display:grid}
+.hero img{width:100%;height:210px;object-fit:cover}
+.hero .txt{background:#141414;color:#fff;padding:26px 20px 28px}
+h1{font:400 44px/.98 Anton,Impact,sans-serif;text-transform:uppercase;margin:0 0 12px}
+.hero p{margin:0 0 18px;max-width:28em}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 22px;border:2px solid #ff3b30;margin:0 8px 8px 0}
+.btn.r{background:#ff3b30;color:#fff}
+.now{background:#f2f2f2;font-size:16px}
+.now .w{padding-top:12px;padding-bottom:12px;display:flex;flex-wrap:wrap;gap:4px 22px}
+#open{font-weight:600}
+#open.on{color:#147a3d}#open.off{color:#c1271d}
+h2{font:400 30px/1 Anton,Impact,sans-serif;text-transform:uppercase;margin:46px 0 12px}
+.svc{width:100%;border-collapse:collapse}
+.svc th{display:block;text-align:left;font-weight:600;padding:12px 0 0}
+.svc td{display:block;padding:2px 0 12px;border-bottom:1px solid #e3e3e3;color:#444}
+.said{background:#141414;color:#fff;margin-top:46px;padding:10px 0 40px}
+.said h2{color:#fff}
+.said .grid{display:grid;gap:22px}
+.said blockquote{margin:0}
+.said p{margin:0 0 6px}
+.said cite{font-style:normal;font-size:15px;color:#ff7a72;font-weight:600}
+.visit{display:grid;gap:24px}
+.hrs{border-collapse:collapse;width:100%;max-width:380px}
+.hrs td{padding:8px 0;border-bottom:1px solid #e3e3e3}
+.hrs td+td{text-align:right}
+.hrs tr.today td{font-weight:600}
+.map{width:100%;height:300px;border:0}
+.small{font-size:16px;color:#555}
+footer{margin-top:48px;background:#141414;color:#bdbdbd;padding:22px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#141414}
+.dock a{text-align:center;text-decoration:none;font-weight:600;padding:17px 6px;color:#fff}
+.dock a.r{background:#ff3b30}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  .hero{grid-template-columns:5fr 4fr}
+  .hero img{height:100%;min-height:400px;order:2}
+  .hero .txt{padding:60px 40px 60px max(20px,calc((100vw - 1000px)/2 + 20px));display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+  h1{font-size:66px}
+  .svc th{display:table-cell;padding:12px 24px 12px 0;border-bottom:1px solid #e3e3e3;vertical-align:top;white-space:nowrap}
+  .svc td{display:table-cell;padding:12px 0}
+  .said .grid{grid-template-columns:1fr 1fr 1fr}
+  .visit{grid-template-columns:380px 1fr}
+}
 </style>
 </head>
 <body>
@@ -45,42 +77,92 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header>
-  <div class="top"><div class="w"><h1>Erik's <span>Tires</span></h1><p>Baldwin Park · open 7 days</p></div></div>
-  <img class="ph" src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=72&w=1400&fit=crop" alt="Stacks of tires at a tire shop" />
-  <div class="strip"><div class="w"><a href="tel:+16269624654">(626) 962-4654</a><span>13900 Ramona Blvd</span></div></div>
-</header>
+<header class="top"><div class="w">
+  <a class="brand" href="#top">Erik's <span>Tires</span></a>
+  <a class="tel" href="tel:+16269624654">(626) 962-4654</a>
+</div></header>
 
-<main class="w">
-  <h2>Got a flat?</h2>
-  <p>Pull in and we'll look at it. If it can be patched, we patch it. If it can't, we'll show you why and tell you what we have in your size, new or used. Most people are back on the road pretty quick.</p>
+<div class="hero" id="top">
+  <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=72&w=1400&fit=crop" alt="Stacks of tires at a tire shop" />
+  <div class="txt">
+    <h1>Tires and flat repair on Ramona Blvd</h1>
+    <p>New tires, used tires and flats fixed while you wait. We're open every day of the week.</p>
+    <div>
+      <a class="btn r" href="tel:+16269624654">Call the shop</a>
+      <a class="btn" href="#visit">Hours and map</a>
+    </div>
+  </div>
+</div>
+<div class="now"><div class="w">
+  <span id="open">Open 7 days</span>
+  <span>13900 Ramona Blvd, Baldwin Park</span>
+  <span>4.7 on Google from 209 reviews</span>
+</div></div>
 
-  <h2>What we do</h2>
-  <ul class="s">
-    <li>New tires</li>
-    <li>Used tires</li>
-    <li>Flat repair and patches</li>
-    <li>Mounting and balancing</li>
-    <li>Alignments</li>
-    <li>Smog checks</li>
-  </ul>
-  <p>Bought your tires or wheels somewhere else? Bring them in and we'll mount and balance them.</p>
+<main>
+  <div class="w">
+    <h2>What we do</h2>
+    <table class="svc">
+      <tr><th>Flat repair</th><td>Pull in and we'll look at it. If it can be patched we patch it. If it can't, we'll show you the damage and tell you what we have in your size.</td></tr>
+      <tr><th>New tires</th><td>Call with your size, or tell us what you drive, and we'll give you a price.</td></tr>
+      <tr><th>Used tires</th><td>Ask what we have in your size today.</td></tr>
+      <tr><th>Mount and balance</th><td>Bought tires or wheels somewhere else? Bring them in and we'll put them on. We can move your tire pressure sensors over to new wheels too.</td></tr>
+      <tr><th>Alignments</th><td>If the car pulls to one side, have us check it.</td></tr>
+      <tr><th>Smog checks</th><td>Call and ask about getting your smog check done here.</td></tr>
+    </table>
+  </div>
 
-  <h2>Hours</h2>
-  <table>
-    <tr><td>Monday to Friday</td><td>7 am to 6 pm</td></tr>
-    <tr><td>Saturday</td><td>7 am to 4 pm</td></tr>
-    <tr><td>Sunday</td><td>9 am to 2 pm</td></tr>
-  </table>
+  <section class="said"><div class="w">
+    <h2>What customers say</h2>
+    <div class="grid">
+      <blockquote><p>"Getting a tire patch, showed me the damage, installing the new tire, and being on my way was total about 15 minutes!"</p><cite>Google review</cite></blockquote>
+      <blockquote><p>"Went in with four brand new tires asked to have a mounted and balanced done in under a half hour."</p><cite>Google review</cite></blockquote>
+      <blockquote><p>"I should have timed it, but it probably took like 10 minutes. It was pretty fast. I'm happy."</p><cite>Google review</cite></blockquote>
+    </div>
+  </div></section>
 
-  <h2>Location</h2>
-  <p>13900 Ramona Blvd, Baldwin Park, CA 91706. 4.7 on Google from 209 reviews.</p>
-  <iframe class="map" title="Map to Erik's Tires" src="https://www.google.com/maps?q=Erik%27s+Tires+13900+Ramona+Blvd+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="w">
+    <h2 id="visit">Hours and location</h2>
+    <div class="visit">
+      <div>
+        <table class="hrs">
+          <tr data-d="1"><td>Monday</td><td>7 am to 6 pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>7 am to 6 pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>7 am to 6 pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>7 am to 6 pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>7 am to 6 pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>7 am to 4 pm</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>9 am to 2 pm</td></tr>
+        </table>
+        <p>13900 Ramona Blvd<br />Baldwin Park, CA 91706</p>
+        <p class="small">We take credit cards, debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+        <a class="btn r" href="https://www.google.com/maps/dir/?api=1&destination=Erik%27s+Tires+13900+Ramona+Blvd+Baldwin+Park+CA+91706">Get directions</a>
+      </div>
+      <iframe class="map" title="Map to Erik's Tires" src="https://www.google.com/maps?q=Erik%27s+Tires+13900+Ramona+Blvd+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
 </main>
 
 <footer><div class="w">
   <p>© 2026 Erik's Tires · 13900 Ramona Blvd, Baldwin Park, CA · <a href="tel:+16269624654">(626) 962-4654</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock">
+  <a class="r" href="tel:+16269624654">Call Erik's</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Erik%27s+Tires+13900+Ramona+Blvd+Baldwin+Park+CA+91706">Directions</a>
+</div>
+
+<script>
+(function () {
+  var H = { 0: [9, 14], 1: [7, 18], 2: [7, 18], 3: [7, 18], 4: [7, 18], 5: [7, 18], 6: [7, 16] }, now;
+  try { now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })); } catch (e) { return; }
+  var d = now.getDay(), t = now.getHours() + now.getMinutes() / 60, h = H[d];
+  var row = document.querySelector('.hrs tr[data-d="' + d + '"]'); if (row) row.className = "today";
+  var el = document.getElementById("open");
+  if (h && t >= h[0] && t < h[1]) { el.textContent = "Open now"; el.className = "on"; }
+  else { el.textContent = "Closed right now"; el.className = "off"; }
+})();
+</script>
 </body>
 </html>

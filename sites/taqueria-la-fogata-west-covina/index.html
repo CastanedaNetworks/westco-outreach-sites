@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Taqueria La Fogata | West Covina</title>
-<meta name="description" content="Taqueria La Fogata at 314 N Azusa Ave in West Covina. Birria, handmade tortillas and menudo. Open 8 am to 9 pm every day. Call (626) 974-9398." />
+<meta name="description" content="Taqueria La Fogata at 314 N Azusa Ave in West Covina. Birria de res, handmade tortillas, menudo, enchiladas and flautas. Open 8 am to 9 pm every day. Call (626) 974-9398." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/taqueria-la-fogata-west-covina/" />
 <meta property="og:title" content="Taqueria La Fogata" />
@@ -13,24 +13,54 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Nunito+Sans:wght@400;700&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#fff9f0;color:#2a1a12;font:400 18px/1.6 "Nunito Sans",Arial,sans-serif}
+body{margin:0;background:#fff9f0;color:#2a1a12;font:400 18px/1.6 "Nunito Sans",Arial,sans-serif;padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:680px;margin:0 auto;padding:0 20px}
-.hd{display:flex;align-items:center;gap:16px;padding-top:24px;padding-bottom:20px}
-.hd img{width:96px;height:96px;border-radius:10px;flex:none}
-h1{font:900 30px/1.1 Merriweather,Georgia,serif;margin:0;color:#b3311b}
-.hd p{margin:4px 0 0}
-.ph{width:100%;height:260px;object-fit:cover}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
-.btns a{text-align:center;text-decoration:none;font-weight:700;padding:15px 8px;border-radius:6px;background:#b3311b;color:#fff}
-.btns a+a{background:none;color:#b3311b;border:2px solid #b3311b}
-h2{font:700 24px/1.2 Merriweather,Georgia,serif;color:#b3311b;margin:36px 0 8px}
-ul.s{margin:0;padding:0;list-style:none;columns:2;column-gap:24px}
-ul.s li{padding:8px 0;border-bottom:1px dotted #d9c3a5;break-inside:avoid;font-weight:700}
-.map{width:100%;height:250px;border:0;border-radius:6px;margin-top:10px}
-footer{margin-top:44px;background:#2a1a12;color:#e2d5c2;padding:20px 0 28px;font-size:14px}
+.w{max-width:980px;margin:0 auto;padding:0 20px}
+.hd{display:flex;align-items:center;gap:14px;padding-top:16px;padding-bottom:16px}
+.hd img{width:76px;height:76px;border-radius:10px;flex:none}
+.hd div{flex:1;min-width:0}
+h1{font:900 23px/1.1 Merriweather,Georgia,serif;margin:0;color:#b3311b}
+.hd p{margin:2px 0 0;font-size:15px}
+.hd a{display:none}
+.photo{position:relative}
+.photo img{width:100%;height:230px;object-fit:cover}
+.float{background:#fff;border:1px solid #ead9bf;border-radius:10px;margin:-34px 20px 0;padding:18px 18px 14px;position:relative}
+.float p{margin:0 0 10px}
+.float .st{font-weight:700}
+.st .on{color:#27794a}.st .off{color:#b3311b}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 20px;border-radius:6px;background:#b3311b;color:#fff;margin:0 8px 6px 0}
+.btn.o{background:none;color:#b3311b;border:2px solid #b3311b}
+section{padding-top:44px}
+h2{font:700 25px/1.2 Merriweather,Georgia,serif;color:#b3311b;margin:0 0 10px}
+.dish{margin:0;padding:0;list-style:none}
+.dish li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px dotted #d9c3a5}
+.dish b{font-size:19px}
+.dish span{font-size:15px;color:#6b5646;text-align:right}
+.say{border-top:3px double #d9c3a5;border-bottom:3px double #d9c3a5;padding:20px 0;margin:0}
+.say p{font:700 20px/1.5 Merriweather,Georgia,serif;margin:0 0 6px}
+.say cite{font-style:normal;font-size:14px;color:#6b5646;display:block;margin-bottom:18px}
+.say cite:last-child{margin-bottom:0}
+.hours{background:#fff;border:1px solid #ead9bf;border-radius:10px;padding:6px 18px}
+.hours div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f1e6d3}
+.hours div:last-child{border:0}
+.hours .today{font-weight:700;color:#b3311b}
+.map{width:100%;height:300px;border:0;border-radius:10px}
+.fine{color:#6b5646;font-size:16px}
+footer{margin-top:50px;background:#2a1a12;color:#e2d5c2;padding:20px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a1a12}
+.dock a{text-align:center;text-decoration:none;font-weight:700;padding:17px 6px;background:#b3311b;color:#fff}
+.dock a+a{background:#fff9f0;color:#b3311b}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  .hd img{width:104px;height:104px}h1{font-size:34px}
+  .hd a{display:inline-block;text-decoration:none;font-weight:700;background:#b3311b;color:#fff;padding:11px 18px;border-radius:6px;white-space:nowrap}
+  .photo img{height:400px}
+  .float{max-width:520px;margin:-120px 0 0 max(20px,calc((100vw - 980px)/2 + 20px))}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
+  .vis{display:grid;grid-template-columns:400px 1fr;gap:36px;align-items:start}
+}
 </style>
 </head>
 <body>
@@ -42,41 +72,88 @@ footer p{margin:0 0 6px}
 <!-- PREVIEW BANNER END -->
 
 <header class="w hd">
-  <img src="logo.jpg" alt="Taqueria La Fogata logo" width="96" height="96" />
+  <img src="logo.jpg" alt="Taqueria La Fogata logo" width="104" height="104" />
   <div><h1>Taqueria La Fogata</h1><p>314 N Azusa Ave · West Covina</p></div>
+  <a href="tel:+16269749398">(626) 974-9398</a>
 </header>
-<img class="ph" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?fm=jpg&q=72&w=1400&fit=crop" alt="Row of beef tacos topped with onion and cilantro" />
+
+<div class="photo">
+  <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?fm=jpg&q=72&w=1400&fit=crop" alt="Row of beef tacos topped with onion and cilantro" />
+  <div class="float">
+    <p>We're open from 8 in the morning to 9 at night, seven days a week. Come in and sit down, or call your order in and pick it up.</p>
+    <p class="st"><span id="open">Open every day</span> <span id="openline">· 8 am to 9 pm</span></p>
+    <a class="btn" href="tel:+16269749398">Call (626) 974-9398</a>
+    <a class="btn o" href="https://www.google.com/maps/search/?api=1&query=Taqueria+La+Fogata+314+N+Azusa+Ave+West+Covina+CA">Directions</a>
+  </div>
+</div>
 
 <main class="w">
-  <div class="btns">
-    <a href="tel:+16269749398">Call (626) 974-9398</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Taqueria+La+Fogata+314+N+Azusa+Ave+West+Covina+CA">Directions</a>
+  <div class="cols">
+    <section>
+      <h2>What people order</h2>
+      <ul class="dish">
+        <li><b>Birria de res</b><span>soft and tender</span></li>
+        <li><b>Handmade tortillas</b><span>made here</span></li>
+        <li><b>Menudo</b></li>
+        <li><b>Enchiladas</b></li>
+        <li><b>Flautas</b></li>
+      </ul>
+      <p class="fine">We serve breakfast, lunch and dinner, and we have beer. Ask for the full menu at the counter.</p>
+    </section>
+
+    <section>
+      <h2>From our Google reviews</h2>
+      <blockquote class="say">
+        <p>"Birria De Res absolutely soft and Tender to the touch. Hard to find! Handmade tortillas."</p><cite>Google review</cite>
+        <p>"We love Mexican food and they had the best, menudo, enchiladas, flautas."</p><cite>Google review</cite>
+      </blockquote>
+      <p class="fine">We have 555 reviews on Google.</p>
+    </section>
   </div>
 
-  <h2>Open at 8, every day</h2>
-  <p>We're on Azusa Ave in West Covina, open from 8 in the morning to 9 at night, seven days a week. Come in and sit down, or call your order in and pick it up.</p>
-
-  <h2>What people order</h2>
-  <ul class="s">
-    <li>Birria de res</li>
-    <li>Handmade tortillas</li>
-    <li>Menudo</li>
-    <li>Enchiladas</li>
-    <li>Flautas</li>
-  </ul>
-  <p>The tortillas are made by hand here. Ask for the full menu at the counter.</p>
-
-  <h2>Hours</h2>
-  <p>Monday to Sunday, 8 am to 9 pm</p>
-
-  <h2>Find us</h2>
-  <p>314 N Azusa Ave, West Covina, CA 91791</p>
-  <iframe class="map" title="Map to Taqueria La Fogata" src="https://www.google.com/maps?q=Taqueria+La+Fogata+314+N+Azusa+Ave+West+Covina+CA+91791&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <section id="visit">
+    <h2>Hours and location</h2>
+    <div class="vis">
+      <div>
+        <div class="hours" id="hours">
+          <div data-d="1"><span>Monday</span><span>8 am to 9 pm</span></div>
+          <div data-d="2"><span>Tuesday</span><span>8 am to 9 pm</span></div>
+          <div data-d="3"><span>Wednesday</span><span>8 am to 9 pm</span></div>
+          <div data-d="4"><span>Thursday</span><span>8 am to 9 pm</span></div>
+          <div data-d="5"><span>Friday</span><span>8 am to 9 pm</span></div>
+          <div data-d="6"><span>Saturday</span><span>8 am to 9 pm</span></div>
+          <div data-d="0"><span>Sunday</span><span>8 am to 9 pm</span></div>
+        </div>
+        <p>314 N Azusa Ave, West Covina, CA 91791</p>
+        <p class="fine">There's a parking lot. We take credit and debit cards and tap to pay. The entrance, seating and restroom are wheelchair accessible.</p>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Taqueria+La+Fogata+314+N+Azusa+Ave+West+Covina+CA">Get directions</a>
+      </div>
+      <iframe class="map" title="Map to Taqueria La Fogata" src="https://www.google.com/maps?q=Taqueria+La+Fogata+314+N+Azusa+Ave+West+Covina+CA+91791&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
 </main>
 
 <footer><div class="w">
   <p>© 2026 Taqueria La Fogata · 314 N Azusa Ave, West Covina, CA · <a href="tel:+16269749398">(626) 974-9398</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock">
+  <a href="tel:+16269749398">Call to order</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Taqueria+La+Fogata+314+N+Azusa+Ave+West+Covina+CA">Directions</a>
+</div>
+
+<script>
+// Open or closed right now, Pacific time. Same hours every day.
+(function () {
+  var now;
+  try { now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })); } catch (e) { return; }
+  var d = now.getDay(), t = now.getHours() + now.getMinutes() / 60;
+  var row = document.querySelector('[data-d="' + d + '"]'); if (row) row.classList.add("today");
+  var el = document.getElementById("open"), ln = document.getElementById("openline"); if (!el || !ln) return;
+  if (t >= 8 && t < 21) { el.textContent = "Open now"; el.className = "on"; ln.textContent = "until 9 pm"; }
+  else { el.textContent = "Closed right now"; el.className = "off"; ln.textContent = t < 8 ? "· opens at 8 am" : "· opens tomorrow at 8 am"; }
+})();
+</script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Daniel's Auto Center Repair | La Puente</title>
-<meta name="description" content="Daniel's Auto Center Repair at 13931 Amar Rd in La Puente. Diagnosis and repair from mechanics people call honest. (626) 814-4694." />
+<meta name="description" content="Daniel's Auto Center Repair at 13931 Amar Rd in La Puente. Diagnosis, brakes, batteries and repair for cars and trucks. Call (626) 814-4694." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/daniels-auto-center-la-puente/" />
 <meta property="og:title" content="Daniel's Auto Center Repair" />
@@ -13,25 +13,53 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;800&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:#18222d;font:400 17px/1.6 Rubik,Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:#18222d;font:400 17px/1.6 Rubik,Arial,sans-serif;padding-bottom:74px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:680px;margin:0 auto;padding:0 20px}
-.hd{padding:22px 0 18px}
-.hd b{font-weight:800;font-size:26px;line-height:1.1;display:block}
-.hd span{color:#52606d}
-.ph{width:100%;height:250px;object-fit:cover;border-radius:10px}
-h1{font-weight:800;font-size:30px;line-height:1.15;margin:26px 0 10px}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.cta a{flex:1 1 160px;text-align:center;text-decoration:none;font-weight:800;padding:15px 10px;border-radius:10px;background:#0f6fb5;color:#fff}
+.w{max-width:900px;margin:0 auto;padding:0 20px}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px;padding-bottom:14px}
+.top b{font-weight:800;font-size:19px;line-height:1.15}
+.top a{flex:none;background:#0f6fb5;color:#fff;text-decoration:none;font-weight:500;padding:10px 14px;border-radius:99px;white-space:nowrap;font-size:15px}
+.hero{padding-top:18px}
+.pill{display:inline-block;background:#e8f1f8;border-radius:99px;padding:5px 14px;font-weight:500;font-size:15px}
+.pill.on{background:#e3f4ea;color:#12613a}.pill.off{background:#fbe9e7;color:#9c2a1f}
+h1{font-weight:800;font-size:33px;line-height:1.12;margin:14px 0 10px}
+.hero p{margin:0 0 20px;font-size:18px;max-width:32em}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.cta a{text-decoration:none;font-weight:800;padding:15px 22px;border-radius:12px;background:#0f6fb5;color:#fff}
 .cta a+a{background:#e8f1f8;color:#0f6fb5}
-h2{font-weight:800;font-size:21px;margin:36px 0 8px}
-.steps{list-style:none;margin:0;padding:0;counter-reset:s}
-.steps li{counter-increment:s;padding:12px 0 12px 46px;position:relative;border-bottom:1px solid #e4e9ee}
-.steps li::before{content:counter(s);position:absolute;left:0;top:12px;width:30px;height:30px;border-radius:50%;background:#0f6fb5;color:#fff;font-weight:800;display:grid;place-items:center}
-.map{width:100%;height:260px;border:0;border-radius:10px;margin-top:10px}
-footer{margin-top:44px;background:#f3f6f9;padding:20px 0 28px;color:#52606d;font-size:14px}
+.ph{width:100%;height:230px;object-fit:cover;border-radius:16px;margin-top:26px}
+h2{font-weight:800;font-size:24px;margin:44px 0 10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{border:1.5px solid #c9d6e2;border-radius:99px;padding:6px 14px;font-weight:500}
+.say{display:grid;gap:14px}
+.say blockquote{margin:0;background:#f3f6f9;border-radius:16px 16px 16px 4px;padding:18px 20px}
+.say blockquote:nth-child(even){border-radius:16px 16px 4px 16px;background:#e8f1f8}
+.say p{margin:0 0 6px}
+.say cite{font-style:normal;font-size:14px;color:#52606d}
+.box{background:#f3f6f9;border-radius:16px;padding:20px}
+table{border-collapse:collapse;width:100%}
+td{padding:8px 0;border-bottom:1px solid #dbe3ea}
+tr:last-child td{border:0}
+td+td{text-align:right}
+tr.today td{font-weight:800;color:#0f6fb5}
+.map{width:100%;height:300px;border:0;border-radius:16px;margin-top:14px}
+.soft{color:#52606d;font-size:15px}
+footer{margin-top:48px;background:#f3f6f9;padding:22px 0 28px;color:#52606d;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dock a{text-align:center;text-decoration:none;font-weight:800;padding:15px 6px;border-radius:12px;background:#0f6fb5;color:#fff;box-shadow:0 4px 14px rgba(15,40,70,.25)}
+.dock a+a{background:#fff;color:#0f6fb5}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding-top:30px}
+  h1{font-size:46px}
+  .ph{height:360px;margin-top:0}
+  .say{grid-template-columns:1fr 1fr}
+  .visit{display:grid;grid-template-columns:360px 1fr;gap:30px;align-items:start}
+  .map{margin-top:0;height:340px}
+}
 </style>
 </head>
 <body>
@@ -42,31 +70,87 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<main class="w">
-  <div class="hd"><b>Daniel's Auto Center Repair</b><span>13931 Amar Rd · La Puente</span></div>
-  <img class="ph" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=72&w=1400&fit=crop" alt="Technician leaning in under the open hood of a car" />
+<header class="top"><div class="w">
+  <b>Daniel's Auto Center Repair</b>
+  <a href="tel:+16268144694">(626) 814-4694</a>
+</div></header>
 
-  <h1>Auto repair on Amar Rd in La Puente</h1>
-  <p>Call or stop by and tell us what the car is doing. We'll look at it and tell you what we found before we do any work.</p>
-  <div class="cta">
-    <a href="tel:+16268144694">Call (626) 814-4694</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Daniel%27s+Auto+Center+Repair+13931+Amar+Rd+La+Puente+CA">Directions</a>
+<div class="w hero">
+  <div>
+    <span class="pill" id="open">Open Monday to Saturday</span>
+    <h1>Auto repair on Amar Rd in La Puente</h1>
+    <p>Call or stop by and tell us what the car is doing. We'll look at it and tell you what we found before we do any work.</p>
+    <div class="cta">
+      <a href="tel:+16268144694">Call (626) 814-4694</a>
+      <a href="#visit">Hours and map</a>
+    </div>
   </div>
+  <img class="ph" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=72&w=1400&fit=crop" alt="Technician leaning in under the open hood of a car" />
+</div>
 
-  <h2>What people say about us</h2>
-  <p>We have 68 reviews on Google and a 4.7 rating. A lot of them call us honest, and several mention how we diagnosed the problem.</p>
+<main class="w">
+  <h2>What we work on</h2>
+  <p>Cars and trucks, including heavy-duty pickups. These are some of the jobs our customers have written about.</p>
+  <ul class="tags">
+    <li>Diagnosis</li>
+    <li>No-start problems</li>
+    <li>Fuel pumps</li>
+    <li>Brakes</li>
+    <li>Batteries</li>
+    <li>Catalytic converter shields</li>
+    <li>Service and maintenance</li>
+  </ul>
+  <p class="soft" style="margin-top:14px">If it's a job we don't do, we'll tell you and point you to a shop that does.</p>
 
-  <h2>Hours</h2>
-  <p>Call for today's hours: <a href="tel:+16268144694">(626) 814-4694</a></p>
+  <h2>From our Google reviews</h2>
+  <div class="say">
+    <blockquote><p>"They diagnosed it quickly that it was a bad fuel pump. Gave them the ok and they had it fix just as fast!"</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"The workshop is clean and well organized, and the overall experience was smooth and stress-free."</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"I've had all my cars been worked on in this place. They do such an amazing job and the price is very reasonable."</p><cite>Google review</cite></blockquote>
+    <blockquote><p>"Great and honest work!"</p><cite>Google review · brakes on a Honda Accord</cite></blockquote>
+  </div>
+  <p class="soft" style="margin-top:14px">4.7 on Google from 68 reviews.</p>
 
-  <h2>Location</h2>
-  <p>13931 Amar Rd, La Puente, CA 91746</p>
-  <iframe class="map" title="Map to Daniel's Auto Center Repair" src="https://www.google.com/maps?q=Daniel%27s+Auto+Center+Repair+13931+Amar+Rd+La+Puente+CA+91746&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <h2 id="visit">Hours and location</h2>
+  <div class="visit">
+    <div class="box">
+      <table>
+        <tr data-d="1"><td>Monday</td><td>8:30 am to 5:30 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>8:30 am to 5:30 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>8:30 am to 5:30 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>8:30 am to 5:30 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>8:30 am to 5:30 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>8:30 am to 2 pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+    <div>
+      <p style="margin:0">13931 Amar Rd, La Puente, CA 91746 · <a href="https://www.google.com/maps/dir/?api=1&destination=Daniel%27s+Auto+Center+Repair+13931+Amar+Rd+La+Puente+CA+91746">Get directions</a></p>
+      <iframe class="map" title="Map to Daniel's Auto Center Repair" src="https://www.google.com/maps?q=Daniel%27s+Auto+Center+Repair+13931+Amar+Rd+La+Puente+CA+91746&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="soft">We take credit cards, debit cards and tap to pay.</p>
+    </div>
+  </div>
 </main>
 
 <footer><div class="w">
   <p>© 2026 Daniel's Auto Center Repair · 13931 Amar Rd, La Puente, CA · <a href="tel:+16268144694">(626) 814-4694</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock">
+  <a href="tel:+16268144694">Call</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Daniel%27s+Auto+Center+Repair+13931+Amar+Rd+La+Puente+CA+91746">Directions</a>
+</div>
+
+<script>
+(function(){var H={1:[8.5,17.5],2:[8.5,17.5],3:[8.5,17.5],4:[8.5,17.5],5:[8.5,17.5],6:[8.5,14]};var now;try{now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));}catch(e){return;}
+var d=now.getDay(),t=now.getHours()+now.getMinutes()/60,r=document.querySelector('[data-d="'+d+'"]');if(r)r.className+=" today";
+var el=document.getElementById("open");if(!el)return;var h=H[d];
+function f(x){var hh=Math.floor(x),m=Math.round((x-hh)*60);return (hh>12?hh-12:hh)+(m?":"+(m<10?"0":"")+m:"")+(hh>=12?" pm":" am");}
+if(h&&t>=h[0]&&t<h[1]){el.textContent="Open now until "+f(h[1]);el.className+=" on";}
+else{var n=d,k=0;if(!(h&&t<h[0])){do{n=(n+1)%7;k++;}while(!H[n]&&k<8);}
+var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+el.textContent="Closed now. Opens "+(k===0?"today":k===1?"tomorrow":days[n])+" at "+f(H[n][0]);el.className+=" off";}})();
+</script>
 </body>
 </html>

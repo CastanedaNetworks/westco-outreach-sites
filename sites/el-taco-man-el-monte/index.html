@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>El Taco Man | El Monte</title>
-<meta name="description" content="El Taco Man at 11741 Magnolia St in El Monte. Carnitas, asada burritos and fried quesadillas. Call (626) 453-0112." />
+<meta name="description" content="El Taco Man at 11741 Magnolia St in El Monte. Street tacos, wet burritos, tortas and fried quesadillas. Tuesday to Saturday, 11 to 6:30. Call (626) 453-0112." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/el-taco-man-el-monte/" />
 <meta property="og:title" content="El Taco Man" />
@@ -13,24 +13,53 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#fff6e5;color:#2a1c10;font:400 18px/1.6 Nunito,Arial,sans-serif}
+body{margin:0;background:#fff6e5;color:#2a1c10;font:400 18px/1.6 Nunito,Arial,sans-serif;padding-bottom:64px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:660px;margin:0 auto;padding:0 20px}
-.sign{background:#167a4a;color:#fff;text-align:center;padding:28px 0 24px;border-bottom:8px solid #d62828}
-h1{font:400 54px/1 "Lilita One",Impact,sans-serif;margin:0}
-.sign p{margin:8px 0 0;font-weight:700}
-.call{display:block;margin-top:24px;background:#d62828;color:#fff;text-align:center;text-decoration:none;font-weight:700;font-size:21px;padding:16px 10px;border-radius:12px}
-.dir{display:block;text-align:center;margin-top:12px;font-weight:700}
-h2{font:400 28px/1.1 "Lilita One",Impact,sans-serif;color:#167a4a;margin:36px 0 8px}
-.fav{margin:0;padding:0;list-style:none}
-.fav li{background:#fff;border:2px solid #f0dfbf;border-radius:12px;padding:13px 16px;margin-bottom:8px;font-weight:700}
-.ph{width:100%;height:auto;border-radius:12px;margin-top:22px}
-.note{background:#ffe9b8;border-radius:12px;padding:14px 16px}
-.note p{margin:0}
-.map{width:100%;height:250px;border:0;border-radius:12px;margin-top:10px}
-footer{margin-top:44px;background:#2a1c10;color:#e6d8c2;padding:20px 0 28px;font-size:14px}
+.w{max-width:980px;margin:0 auto;padding:0 20px}
+.sign{background:#167a4a;color:#fff;border-bottom:8px solid #d62828}
+.sign .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding-top:18px;padding-bottom:16px}
+h1{font:400 44px/1 "Lilita One",Impact,sans-serif;margin:0}
+.sign a{background:#fff;color:#167a4a;text-decoration:none;font-weight:700;padding:10px 16px;border-radius:10px;white-space:nowrap}
+.lead{display:grid;gap:20px;padding-top:26px}
+.lead p{margin:0 0 12px;font-size:19px}
+.open{font-weight:700}
+.open .on{color:#167a4a}.open .off{color:#d62828}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px;background:#d62828;color:#fff;margin:4px 8px 4px 0}
+.btn.g{background:none;color:#167a4a;border:2px solid #167a4a}
+.lead img{width:100%;height:240px;object-fit:cover;border-radius:14px}
+section{padding-top:42px}
+h2{font:400 30px/1.1 "Lilita One",Impact,sans-serif;color:#167a4a;margin:0 0 12px}
+.chalk{background:#1d3b2c;color:#f4f1e6;border-radius:14px;padding:22px 22px 14px}
+.chalk h3{font:400 20px/1.2 "Lilita One",Impact,sans-serif;color:#ffd166;margin:0 0 4px}
+.chalk ul{margin:0 0 16px;padding:0;list-style:none}
+.chalk li{padding:5px 0;border-bottom:1px dashed #40604f}
+.chalk p{margin:0 0 8px;font-size:16px;color:#cfd8cf}
+.said{display:grid;gap:14px}
+.said figure{margin:0;background:#fff;border:2px solid #f0dfbf;border-radius:14px 14px 14px 2px;padding:16px 18px}
+.said blockquote{margin:0 0 6px}
+.said figcaption{font-size:14px;color:#7a6650}
+.hrs{display:grid;gap:22px}
+table{border-collapse:collapse;width:100%;max-width:420px;background:#fff;border-radius:12px;overflow:hidden}
+td{padding:9px 14px;border-bottom:1px solid #f0dfbf}
+td+td{text-align:right}
+tr.today td{font-weight:700;background:#ffe9b8}
+tr.shut td{color:#8b7a66}
+.map{width:100%;height:300px;border:0;border-radius:14px}
+.fine{font-size:16px;color:#5d4a36}
+footer{margin-top:48px;background:#2a1c10;color:#e6d8c2;padding:20px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:8px;padding:8px;background:#fff6e5;border-top:2px solid #167a4a}
+.dock a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px 6px;border-radius:10px;background:#d62828;color:#fff}
+.dock a+a{background:#167a4a}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  h1{font-size:58px}
+  .lead{grid-template-columns:1fr 1fr;align-items:center;gap:40px}.lead img{height:340px}
+  .cols{display:grid;grid-template-columns:5fr 4fr;gap:40px;align-items:start}
+  .chalk ul{columns:2;column-gap:30px}.chalk li{break-inside:avoid}
+  .hrs{grid-template-columns:420px 1fr;align-items:start}
+}
 </style>
 </head>
 <body>
@@ -43,34 +72,103 @@ footer p{margin:0 0 6px}
 
 <header class="sign"><div class="w">
   <h1>El Taco Man</h1>
-  <p>11741 Magnolia St · El Monte</p>
+  <a href="tel:+16264530112">(626) 453-0112</a>
 </div></header>
 
 <main class="w">
-  <a class="call" href="tel:+16264530112">Call (626) 453-0112</a>
-  <a class="dir" href="https://www.google.com/maps/search/?api=1&query=El+Taco+Man+11741+Magnolia+St+El+Monte+CA">Get directions</a>
+  <div class="lead">
+    <div>
+      <p>Street tacos and burritos on Magnolia St in El Monte. Order at the front and we'll bring it out, or get it to go.</p>
+      <p class="open"><span id="open">Tuesday to Saturday</span> <span id="openline">11 am to 6:30 pm</span></p>
+      <a class="btn" href="tel:+16264530112">Call (626) 453-0112</a>
+      <a class="btn g" href="https://www.google.com/maps/search/?api=1&query=El+Taco+Man+11741+Magnolia+St+El+Monte+CA">Directions</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?fm=jpg&q=72&w=1400&fit=crop" alt="Burrito cut in half on a wooden board" />
+  </div>
 
-  <h2>The favorites</h2>
-  <ul class="fav">
-    <li>Carnitas</li>
-    <li>Asada burrito</li>
-    <li>Fried quesadillas</li>
-  </ul>
-  <p>Those are what people mention most in our Google reviews.</p>
+  <section class="cols">
+    <div>
+      <h2>The menu</h2>
+      <div class="chalk">
+        <h3>Tacos</h3>
+        <ul>
+          <li>Asada</li>
+          <li>Carnitas</li>
+          <li>Fish</li>
+          <li>Shrimp</li>
+        </ul>
+        <h3>Burritos and more</h3>
+        <ul>
+          <li>Asada burrito</li>
+          <li>Wet burrito (burrito mojado)</li>
+          <li>Birria wet burrito</li>
+          <li>Asada torta</li>
+          <li>Fried quesadillas</li>
+          <li>Asada quesadilla</li>
+        </ul>
+        <p>Tacos come with red and green salsa. Ask for both.</p>
+      </div>
+    </div>
+    <div>
+      <h2 style="margin-top:42px">People keep saying</h2>
+      <div class="said">
+        <figure><blockquote>"Omg the best wet burrito ever! I got the birria one, super delicious and well packed with flavor and meat!"</blockquote><figcaption>Google review</figcaption></figure>
+        <figure><blockquote>"The lady who took our order was super sweet and the food was delicious! We ordered the asada torta with everything on it."</blockquote><figcaption>Google review</figcaption></figure>
+        <figure><blockquote>"A local recommended this spot and it did not disappoint. Got the burrito mojado. So good!"</blockquote><figcaption>Google review</figcaption></figure>
+      </div>
+      <p class="fine">4.6 on Google from 358 reviews.</p>
+    </div>
+  </section>
 
-  <img class="ph" src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?fm=jpg&q=72&w=1200&fit=crop" alt="Burrito cut in half on a wooden board" width="1200" height="800" loading="lazy" />
-
-  <h2>Hours</h2>
-  <div class="note"><p><b>Tuesday to Saturday, 11 am to 6:30 pm.</b><br />Closed Sunday and Monday.</p></div>
-
-  <h2>Where</h2>
-  <p>11741 Magnolia St, El Monte, CA 91732. 4.6 on Google from 358 reviews.</p>
-  <iframe class="map" title="Map to El Taco Man" src="https://www.google.com/maps?q=El+Taco+Man+11741+Magnolia+St+El+Monte+CA+91732&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <section id="visit">
+    <h2>Hours and where to find us</h2>
+    <div class="hrs">
+      <div>
+        <table id="hours">
+          <tr data-d="1" class="shut"><td>Monday</td><td>Closed</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>11 am to 6:30 pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>11 am to 6:30 pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>11 am to 6:30 pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>11 am to 6:30 pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>11 am to 6:30 pm</td></tr>
+          <tr data-d="0" class="shut"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p>11741 Magnolia St, El Monte, CA 91732</p>
+        <p class="fine">Eat inside or at the tables outside, take it to go, or get it delivered. We take credit and debit cards. There's a parking lot, and the entrance and seating are wheelchair accessible.</p>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=El+Taco+Man+11741+Magnolia+St+El+Monte+CA">Get directions</a>
+      </div>
+      <iframe class="map" title="Map to El Taco Man" src="https://www.google.com/maps?q=El+Taco+Man+11741+Magnolia+St+El+Monte+CA+91732&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
 </main>
 
 <footer><div class="w">
   <p>© 2026 El Taco Man · 11741 Magnolia St, El Monte, CA · <a href="tel:+16264530112">(626) 453-0112</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock">
+  <a href="tel:+16264530112">Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=El+Taco+Man+11741+Magnolia+St+El+Monte+CA">Directions</a>
+</div>
+
+<script>
+// Open or closed right now, Pacific time.
+(function () {
+  var H = { 2: [11, 18.5], 3: [11, 18.5], 4: [11, 18.5], 5: [11, 18.5], 6: [11, 18.5] };
+  var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var now;
+  try { now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })); } catch (e) { return; }
+  var d = now.getDay(), t = now.getHours() + now.getMinutes() / 60;
+  var row = document.querySelector('[data-d="' + d + '"]'); if (row) row.classList.add("today");
+  var el = document.getElementById("open"), ln = document.getElementById("openline"); if (!el || !ln) return;
+  function f(x) { x = x % 24; var h = Math.floor(x), m = Math.round((x - h) * 60); if (h === 0 && m === 0) return "midnight"; return (h % 12 || 12) + (m ? ":" + (m < 10 ? "0" : "") + m : "") + (h >= 12 ? " pm" : " am"); }
+  var h = H[d];
+  if (h && t >= h[0] && t < h[1]) { el.textContent = "Open now"; el.className = "on"; ln.textContent = "until " + f(h[1]); return; }
+  el.textContent = "Closed right now."; el.className = "off";
+  if (h && t < h[0]) { ln.textContent = "Opens at " + f(h[0]) + " today."; return; }
+  for (var i = 1; i <= 7; i++) { var n = (d + i) % 7; if (H[n]) { ln.textContent = "Opens " + (i === 1 ? "tomorrow" : DAYS[n]) + " at " + f(H[n][0]) + "."; break; } }
+})();
+</script>
 </body>
 </html>

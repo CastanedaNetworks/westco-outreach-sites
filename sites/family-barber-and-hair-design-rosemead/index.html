@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Family Barber &amp; Hair Design | Rosemead</title>
-<meta name="description" content="Family Barber &amp; Hair Design at 7940 Garvey Ave, #104, in Rosemead. Haircuts for the whole family. Call (626) 288-2737." />
+<meta name="description" content="Family Barber &amp; Hair Design at 7940 Garvey Ave, #104, in Rosemead. Haircuts and fades with Susan. Open six days. Call (626) 288-2737." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/family-barber-and-hair-design-rosemead/" />
 <meta property="og:title" content="Family Barber &amp; Hair Design" />
@@ -13,22 +13,58 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" />
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f3f8f7;color:#1c2b2a;font:500 17px/1.65 Quicksand,Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f3f8f7;color:#1c2b2a;font:500 17px/1.65 Quicksand,Arial,sans-serif;padding-bottom:70px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:640px;margin:0 auto;padding:0 20px}
-.hd{background:#1f6f6b;color:#fff;border-radius:0 0 26px 26px;padding:32px 0 30px;text-align:center}
-h1{font-weight:700;font-size:32px;line-height:1.15;margin:0}
-.hd p{margin:8px 0 0;color:#cfe6e4}
-.hd a{display:inline-block;margin-top:18px;background:#fff;color:#1f6f6b;text-decoration:none;font-weight:700;font-size:19px;padding:14px 26px;border-radius:99px}
-.ph{width:100%;height:auto;border-radius:18px;margin-top:22px}
-h2{font-weight:700;font-size:22px;margin:34px 0 8px;color:#1f6f6b}
-.hrs{background:#fff;border-radius:18px;padding:8px 18px}
-.hrs div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #e2eeec}
-.hrs div:last-child{border:0}
-.map{width:100%;height:250px;border:0;border-radius:18px;margin-top:10px}
-footer{padding:26px 0 30px;color:#566a68;font-size:14px}
+.w{max-width:920px;margin:0 auto;padding-left:18px;padding-right:18px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px;padding-bottom:14px}
+.top b{font-weight:700;font-size:18px;line-height:1.15;color:#1f6f6b}
+.top a{flex:none;background:#1f6f6b;color:#fff;text-decoration:none;font-weight:700;padding:10px 16px;border-radius:99px;font-size:15px;white-space:nowrap}
+.hero{background:#1f6f6b;color:#fff;border-radius:24px;overflow:hidden;display:grid}
+.hero .t{padding:28px 22px 26px}
+h1{font-weight:700;font-size:33px;line-height:1.12;margin:0 0 10px}
+.hero p{margin:0;color:#d6ebe9}
+.pill{display:inline-block;margin-top:16px;background:#fff;color:#1c2b2a;border-radius:99px;padding:6px 16px;font-size:15px;font-weight:700}
+#st.on{color:#177245}#st.off{color:#b3261e}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btns a{text-decoration:none;font-weight:700;padding:13px 22px;border-radius:99px;border:2px solid #fff}
+.btns a.f{background:#fff;color:#1f6f6b}
+.hero img{width:100%;height:230px;object-fit:cover}
+section{padding-top:42px}
+h2{font-weight:700;font-size:25px;margin:0 0 8px;color:#1f6f6b}
+.panel{background:#fff;border-radius:20px;padding:22px}
+.panel p:last-child{margin-bottom:0}
+.does{margin:12px 0 0;padding-left:20px}
+.does li{margin:6px 0}
+.q{margin:0;padding:22px 0;border-bottom:2px dotted #b9d6d3}
+.q:first-of-type{padding-top:6px}
+.q p{margin:0 0 6px;font-size:19px;line-height:1.5}
+.q cite{font-style:normal;font-size:14px;color:#5b706e}
+.week{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0;padding:0;list-style:none}
+.week li{background:#fff;border-radius:14px;padding:11px 12px}
+.week b{display:block;font-size:15px;color:#1f6f6b}
+.week li.off{background:none;border:2px dashed #b9d6d3;color:#5b706e}
+.week li.today{background:#1f6f6b;color:#fff}
+.week li.today b{color:#fff}
+.soft{color:#5b706e;font-size:15px}
+.map{width:100%;height:300px;border:0;border-radius:20px;margin-top:16px}
+footer{padding:30px 0 28px;color:#566a68;font-size:14px}
 footer p{margin:0 0 6px}
+.dock{position:fixed;left:10px;right:10px;bottom:10px;z-index:40;display:flex;gap:8px}
+.dock a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:15px 6px;border-radius:99px;background:#fff;color:#1f6f6b;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.dock a.f{background:#1f6f6b;color:#fff;flex:1.5}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}
+  .top b{font-size:21px}
+  .hero{grid-template-columns:1.1fr .9fr}
+  .hero .t{padding:48px 40px}
+  h1{font-size:44px}
+  .hero img{height:100%}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .week{grid-template-columns:repeat(4,1fr)}
+  section{padding-top:60px}
+}
 </style>
 </head>
 <body>
@@ -39,33 +75,88 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header class="hd"><div class="w">
-  <h1>Family Barber &amp; Hair Design</h1>
-  <p>7940 Garvey Ave, #104 · Rosemead</p>
-  <a href="tel:+16262882737">Call (626) 288-2737</a>
-</div></header>
+<header class="w top"><b>Family Barber<br />&amp; Hair Design</b><a href="tel:+16262882737">(626) 288-2737</a></header>
+
+<div class="w">
+  <div class="hero">
+    <div class="t">
+      <h1>Haircuts for the whole family on Garvey Ave</h1>
+      <p>7940 Garvey Ave, #104, Rosemead. Come in for a cut, a fade or a trim.</p>
+      <span class="pill"><span id="st">Open six days</span> · <span id="stl">closed Tuesday</span></span>
+      <div class="btns">
+        <a class="f" href="tel:+16262882737">Call (626) 288-2737</a>
+        <a href="#visit">Hours and map</a>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=72&w=1200&fit=crop" alt="Barber combing and cutting a client's hair" />
+  </div>
+</div>
 
 <main class="w">
-  <img class="ph" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpg&q=72&w=1200&fit=crop" alt="Barbershop interior with a row of chairs and mirrors" width="1200" height="800" />
+  <section class="cols">
+    <div class="panel">
+      <h2>Susan cuts your hair</h2>
+      <p>Most people who come here ask for Susan. She takes her time, and she'll make sure she understands what you want before she starts.</p>
+      <ul class="does">
+        <li>Haircuts and fades</li>
+        <li>Kids' haircuts</li>
+        <li>Hair wash with a scalp massage</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="margin-top:28px">What customers say</h2>
+      <blockquote class="q"><p>"Susan is a professional and takes her time to get it right."</p><cite>Google review</cite></blockquote>
+      <blockquote class="q"><p>"She's very kind and fun to talk to. She also washes and massages your hair."</p><cite>Google review</cite></blockquote>
+      <blockquote class="q"><p>"Susan really understands me what I need."</p><cite>Google review, from a visitor from Thailand</cite></blockquote>
+      <p class="soft" style="margin:14px 0 0">4.8 on Google from 35 reviews.</p>
+    </div>
+  </section>
 
-  <h2>Haircuts for everybody</h2>
-  <p>We cut hair for the whole family, kids included. People tell us they come for the haircut and come back because the staff is friendly. Several reviews mention Susan by name.</p>
+  <section id="visit">
+    <h2>Hours</h2>
+    <ul class="week" id="week">
+      <li data-d="1"><b>Monday</b>10 am to 7 pm</li>
+      <li data-d="2" class="off"><b>Tuesday</b>Closed</li>
+      <li data-d="3"><b>Wednesday</b>10 am to 7 pm</li>
+      <li data-d="4"><b>Thursday</b>10 am to 7 pm</li>
+      <li data-d="5"><b>Friday</b>10 am to 7 pm</li>
+      <li data-d="6"><b>Saturday</b>10 am to 7 pm</li>
+      <li data-d="0"><b>Sunday</b>10 am to 7 pm</li>
+    </ul>
+    <p class="soft" style="margin:14px 0 0">We're open until 7 every evening, weekends included.</p>
+  </section>
 
-  <h2>Hours</h2>
-  <div class="hrs">
-    <div><span>Wednesday to Monday</span><span>10 am to 7 pm</span></div>
-    <div><span>Tuesday</span><span>Closed</span></div>
-  </div>
-  <p>We're open late and on weekends, so come after work or bring the kids on Sunday.</p>
-
-  <h2>Where we are</h2>
-  <p>7940 Garvey Ave, #104, Rosemead, CA 91770. 4.8 on Google from 35 reviews.</p>
-  <iframe class="map" title="Map to Family Barber and Hair Design" src="https://www.google.com/maps?q=Family+Barber+%26+Hair+Design+7940+Garvey+Ave+Rosemead+CA+91770&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <section>
+    <h2>Where we are</h2>
+    <p>7940 Garvey Ave, #104, Rosemead, CA 91770. The entrance and parking are wheelchair accessible. <a href="https://www.google.com/maps/dir/?api=1&destination=Family+Barber+%26+Hair+Design+7940+Garvey+Ave+Rosemead+CA+91770"><b>Get directions</b></a></p>
+    <iframe class="map" title="Map to Family Barber and Hair Design" src="https://www.google.com/maps?q=Family+Barber+%26+Hair+Design+7940+Garvey+Ave+Rosemead+CA+91770&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
 </main>
 
 <footer><div class="w">
   <p>© 2026 Family Barber &amp; Hair Design · 7940 Garvey Ave, #104, Rosemead, CA · <a href="tel:+16262882737">(626) 288-2737</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
 </div></footer>
+
+<div class="dock"><a class="f" href="tel:+16262882737">Call the shop</a><a href="https://www.google.com/maps/dir/?api=1&destination=Family+Barber+%26+Hair+Design+7940+Garvey+Ave+Rosemead+CA+91770">Directions</a></div>
+
+<script>
+// Open or closed right now, in Pacific time. Hours are minutes after midnight, keyed by day (0 is Sunday).
+(function () {
+  var H = { 0: [600, 1140], 1: [600, 1140], 3: [600, 1140], 4: [600, 1140], 5: [600, 1140], 6: [600, 1140] };
+  var now; try { now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })); } catch (e) { return; }
+  var d = now.getDay(), m = now.getHours() * 60 + now.getMinutes();
+  var row = document.querySelector('#week [data-d="' + d + '"]'); if (row && H[d]) row.className = "today";
+  function t(x) { x = x % 1440; var h = Math.floor(x / 60), mm = x % 60; return ((h + 11) % 12 + 1) + (mm ? ":" + (mm < 10 ? "0" : "") + mm : "") + (h < 12 ? " am" : " pm"); }
+  var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var s = document.getElementById("st"), l = document.getElementById("stl"), h = H[d], y = H[(d + 6) % 7], until = 0;
+  if (y && y[1] > 1440 && m < y[1] - 1440) until = y[1];
+  else if (h && m >= h[0] && m < h[1]) until = h[1];
+  if (until) { s.textContent = "Open now"; s.className = "on"; l.textContent = "until " + (until % 1440 === 0 ? "midnight" : t(until)); return; }
+  s.textContent = "Closed right now"; s.className = "off";
+  if (h && m < h[0]) { l.textContent = "opens today at " + t(h[0]); return; }
+  for (var i = 1; i <= 7; i++) { var n = (d + i) % 7; if (H[n]) { l.textContent = "opens " + (i === 1 ? "tomorrow" : DAYS[n]) + " at " + t(H[n][0]); break; } }
+})();
+</script>
 </body>
 </html>
