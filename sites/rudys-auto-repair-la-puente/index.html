@@ -10,53 +10,110 @@
 <meta property="og:title" content="Rudy's Auto Repair" />
 <meta property="og:description" content="Auto repair in La Puente" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lato:wght@400;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Courier+Prime:wght@400;700&display=swap" />
 <style>
+/* The page is a shop repair order: a white customer copy, a canary shop copy and a pink file copy, on a steel bench. */
+:root{
+  --bench:#2a2e31; --ink:#14244a; --red:#c3271d; --rule:#9aa6c4;
+  --white:#fbfaf5; --canary:#f6e9a6; --pink:#f3d3d2; --hl:#ffe45c;
+  --disp:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;
+  --type:"Courier Prime","Courier New",monospace;
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#161616;color:#f0eee9;font:400 17px/1.6 Lato,Arial,sans-serif;padding-bottom:60px}
+body{margin:0;background:var(--bench);color:var(--ink);font:400 17px/1.55 var(--type);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:960px;margin:0 auto;padding:0 20px}
-.top{border-bottom:3px solid #c62828}
-.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px;padding-bottom:14px}
-.top b{font:700 23px/1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em}
-.top b span{color:#ef5350}
-.top a{flex:none;font:700 17px/1 Oswald,Arial,sans-serif;letter-spacing:.04em;text-decoration:none;border:2px solid #c62828;padding:9px 12px;white-space:nowrap}
-.intro{padding-top:30px}
-#open{display:inline-block;font:500 15px/1.2 Oswald,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border:1px solid #444;margin-bottom:14px}
-#open.on{border-color:#3bb273;color:#7ddca9}#open.off{border-color:#c62828;color:#ff8a80}
-h1{font:700 40px/1.05 Oswald,Arial,sans-serif;text-transform:uppercase;margin:0 0 12px}
-.intro p{margin:0 0 20px;max-width:34em;color:#d5d1c8;font-size:18px}
+.sheet{max-width:780px;margin:0 auto;padding:22px 18px 14px;position:relative}
+.sheet.w{background:var(--white)}
+.sheet.c{background:var(--canary)}
+.sheet.p{background:var(--pink)}
+.sheet + .sheet{border-top:2px dashed rgba(20,36,74,.35)}
+.copy{margin:20px 0 0;font:500 11px/1 var(--disp);letter-spacing:.2em;text-transform:uppercase;opacity:.6;text-align:right}
+.lbl{display:block;font:500 11px/1.2 var(--disp);letter-spacing:.16em;text-transform:uppercase;color:var(--ink);opacity:.72;margin-bottom:3px}
+
+/* letterhead */
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;border-bottom:3px solid var(--ink);padding-bottom:12px}
+.name{font:800 30px/.95 var(--disp);letter-spacing:-.01em;text-transform:uppercase;margin:0}
+.name small{display:block;font:400 14px/1.4 var(--type);letter-spacing:0;text-transform:none;margin-top:7px}
+.no{flex:none;text-align:right}
+.no b{display:block;font:700 22px/1 var(--type);color:var(--red)}
+
+/* form grid */
+.grid{display:grid;grid-template-columns:1fr;border:1.5px solid var(--ink);border-top:0}
+.cell{padding:9px 11px;border-top:1.5px solid var(--ink);min-width:0}
+.cell b{font:700 19px/1.25 var(--type)}
+.cell a{text-decoration-thickness:1.5px;text-underline-offset:3px}
+.stampcell{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:74px}
+.stamp{flex:none;font:800 15px/1.05 var(--disp);letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:7px 10px 6px;border:3px double currentColor;border-radius:4px;transform:rotate(-5deg);color:var(--ink);opacity:.9}
+.stamp span{display:block;font:500 11px/1.2 var(--disp);letter-spacing:.08em;margin-top:2px}
+.stamp.on{color:#1d7a3e}.stamp.off{color:var(--red)}
+@media (prefers-reduced-motion:no-preference){.stamp.on,.stamp.off{animation:thunk .35s cubic-bezier(.2,1.4,.4,1) .25s both}}
+@keyframes thunk{from{transform:rotate(-5deg) scale(1.7);opacity:0}to{transform:rotate(-5deg) scale(1);opacity:.9}}
+
+h1{font:800 34px/1.02 var(--disp);letter-spacing:-.015em;margin:22px 0 10px}
+.say{margin:0 0 18px;max-width:33em}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
-.btns a{text-decoration:none;font:700 19px/1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;padding:16px 22px;border:2px solid #c62828}
-.btns a.f{background:#c62828}
-.ph{width:100%;height:240px;object-fit:cover;margin-top:30px}
-h2{font:700 24px/1.1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#ef5350;margin:40px 0 10px}
-.work{margin:0;padding:0;list-style:none}
-.work li{padding:12px 0;border-bottom:1px solid #2e2e2e}
-.work b{font:700 19px/1.2 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em;display:block}
-.work span{color:#bcb8ae}
-.quote{margin:0 0 22px;padding-top:14px;border-top:1px solid #2e2e2e}
-.quote p{margin:0 0 6px;font-size:19px;line-height:1.5}
-.quote cite{font-style:normal;font-size:14px;color:#9a968c;letter-spacing:.06em;text-transform:uppercase}
-.hrs{width:100%;border-collapse:collapse}
-.hrs td{padding:8px 0;border-bottom:1px solid #2e2e2e}
+.btn{display:inline-block;font:800 17px/1 var(--disp);text-decoration:none;padding:15px 20px;border:2px solid var(--ink);border-radius:3px}
+.btn.f{background:var(--ink);color:var(--white)}
+.btn:focus-visible,.dock a:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+.clip{position:relative;margin:26px 0 0;padding:8px 8px 10px;background:#fff;border:1px solid #d9d6cb;box-shadow:0 2px 0 rgba(0,0,0,.12);max-width:520px}
+.clip img{width:100%;height:210px;object-fit:cover}
+.clip figcaption{font-size:13px;margin-top:7px;opacity:.75}
+.clip::before{content:"";position:absolute;top:-13px;left:26px;width:16px;height:44px;border:3px solid #8b9198;border-radius:9px;background:transparent}
+
+h2{font:800 22px/1.1 var(--disp);letter-spacing:-.005em;text-transform:uppercase;margin:0 0 12px}
+/* itemized work */
+.items{width:100%;border-collapse:collapse;border:1.5px solid var(--ink)}
+.items th{font:500 11px/1 var(--disp);letter-spacing:.16em;text-transform:uppercase;text-align:left;padding:7px 10px;border-bottom:1.5px solid var(--ink)}
+.items td{padding:10px;border-bottom:1px solid rgba(20,36,74,.4);vertical-align:top}
+.items tr:last-child td{border-bottom:0}
+.items td:first-child{width:2.6em;font-weight:700;color:var(--red)}
+.items b{display:block;font:800 17px/1.2 var(--disp)}
+.total{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:12px;font-weight:700}
+
+/* comments */
+.cmt{margin:0;padding:12px 0;border-bottom:1px solid rgba(20,36,74,.4)}
+.cmt:first-of-type{border-top:1.5px solid var(--ink)}
+.cmt p{margin:0 0 4px;font-size:17px}
+.cmt cite{font:500 11px/1 var(--disp);letter-spacing:.16em;text-transform:uppercase;font-style:normal;opacity:.72}
+.rate{margin:12px 0 0;font-weight:700}
+
+/* hours */
+.two{display:grid;gap:20px}
+.hrs{width:100%;border-collapse:collapse;border:1.5px solid var(--ink)}
+.hrs td{padding:8px 10px;border-bottom:1px solid rgba(20,36,74,.4)}
+.hrs tr:last-child td{border-bottom:0}
 .hrs td+td{text-align:right}
-.hrs tr.today td{font-weight:700;color:#fff}
-.map{width:100%;height:290px;border:0;margin-top:14px}
-.note{color:#bcb8ae;font-size:15px}
-footer{margin-top:44px;border-top:1px solid #333;padding:20px 0 28px;color:#a8a49c;font-size:14px}
+.hrs tr.today td{background:var(--hl);font-weight:700}
+.checks{list-style:none;margin:14px 0 0;padding:0}
+.checks li{position:relative;padding-left:28px;margin:6px 0}
+.checks li::before{content:"";position:absolute;left:0;top:3px;width:16px;height:16px;border:1.5px solid var(--ink)}
+.checks li::after{content:"";position:absolute;left:3px;top:1px;width:15px;height:9px;border-left:3px solid var(--red);border-bottom:3px solid var(--red);transform:rotate(-48deg)}
+.addr{margin:0 0 10px}
+.map{width:100%;height:270px;border:1.5px solid var(--ink)}
+
+footer{max-width:780px;margin:0 auto;padding:18px 18px 26px;color:#c3c8cd;font:400 13px/1.5 Arial,sans-serif}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:#161616;border-top:2px solid #c62828}
-.dock a{text-align:center;text-decoration:none;font:700 18px/1 Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;padding:19px 6px}
-.dock a:first-child{background:#c62828}
-@media(min-width:760px){
-  body{padding-bottom:0}.dock{display:none}
-  h1{font-size:60px}
-  .ph{height:340px}
-  .split{display:grid;grid-template-columns:5fr 4fr;gap:50px}
-  .work{columns:2;column-gap:40px}.work li{break-inside:avoid}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:var(--ink);border-top:3px solid var(--red)}
+.dock a{text-align:center;text-decoration:none;color:var(--white);font:800 17px/1 var(--disp);padding:19px 6px}
+.dock a:first-child{background:var(--red)}
+
+@media(min-width:720px){
+  body{padding-bottom:0}
+  main{padding-top:26px}
+  .dock{display:none}
+  .sheet{padding:34px 40px 18px;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+  .name{font-size:44px}
+  .grid{grid-template-columns:1.2fr 1fr}
+  .cell:nth-child(odd){border-right:1.5px solid var(--ink)}
+  .cell.wide{grid-column:1 / -1;border-right:0}
+  h1{font-size:52px;margin-top:30px}
+  .two{grid-template-columns:5fr 6fr;gap:30px}
+  .lead{display:grid;grid-template-columns:1fr 300px;gap:30px;align-items:start}
+  .clip{margin-top:34px;transform:rotate(1.5deg)}
+  .clip img{height:200px}
 }
 </style>
 </head>
@@ -68,68 +125,95 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header class="top"><div class="w">
-  <b>Rudy's <span>Auto Repair</span></b>
-  <a href="tel:+16263362000">(626) 336-2000</a>
-</div></header>
-
-<section class="intro"><div class="w">
-  <span id="open">Monday to Saturday</span>
-  <h1>Auto repair on Old Valley Blvd</h1>
-  <p>Call Rudy, tell him what the car's doing, and he'll give you a price for the work. Some of our customers have been bringing their cars here for more than ten years.</p>
-  <div class="btns">
-    <a class="f" href="tel:+16263362000">Call (626) 336-2000</a>
-    <a href="#visit">Hours and map</a>
-  </div>
-</div></section>
-<img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
-
-<main class="w">
-  <h2>What we work on</h2>
-  <ul class="work">
-    <li><b>Engine work</b><span>Head gaskets, valves and other major engine repairs.</span></li>
-    <li><b>GM cars and trucks</b><span>We see a lot of them, including older muscle cars that need to run again.</span></li>
-    <li><b>General repair</b><span>Call and tell us what your car or SUV is doing.</span></li>
-    <li><b>Estimates</b><span>Explain the problem over the phone and we'll give you a price for the work.</span></li>
-  </ul>
-
-  <h2>From our Google reviews</h2>
-  <div class="split">
-    <div>
-      <blockquote class="quote"><p>"I called up and explained what I needed and he gave me a good price for the work and even saved me a little money when he found an easier fix to my problem."</p><cite>Google review</cite></blockquote>
-      <blockquote class="quote"><p>"He and his crew have been keeping my cars running and making them safe for my family."</p><cite>Google review</cite></blockquote>
+<main>
+  <section class="sheet w">
+    <header class="head">
+      <p class="name">Rudy's Auto Repair<small>16325 Old Valley Blvd<br />La Puente, CA 91744</small></p>
+      <p class="no" style="margin:0"><span class="lbl">Repair order</span><b>No. 16325</b></p>
+    </header>
+    <div class="grid">
+      <div class="cell"><span class="lbl">Shop phone</span><b><a href="tel:+16263362000">(626) 336-2000</a></b></div>
+      <div class="cell stampcell"><div><span class="lbl">Shop status</span><b id="openline">Mon to Sat</b></div><div class="stamp" id="stamp">Rudy's<span>La Puente</span></div></div>
+      <div class="cell"><span class="lbl">Ask for</span><b>Rudy</b></div>
+      <div class="cell"><span class="lbl">Vehicle</span><b>Cars, trucks and SUVs</b></div>
     </div>
-    <div>
-      <blockquote class="quote"><p>"Great service, good human relations, fair price and honesty."</p><cite>Google review · head gasket and valve job</cite></blockquote>
-      <p class="note">4.7 on Google from 106 reviews.</p>
-    </div>
-  </div>
 
-  <h2 id="visit">Hours and location</h2>
-  <div class="split">
-    <div>
-      <table class="hrs">
-        <tr data-d="1"><td>Monday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="2"><td>Tuesday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="3"><td>Wednesday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="4"><td>Thursday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="5"><td>Friday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="6"><td>Saturday</td><td>8 am to 2:30 pm</td></tr>
-        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
-      </table>
-      <p class="note">We take credit cards, debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+    <div class="lead">
+      <div>
+      <h1>Auto repair on Old Valley Blvd</h1>
+      <p class="say">Call Rudy and tell him what the car's doing. He'll give you a price for the work before you bring it in.</p>
+      <p class="say">Some of our customers have been bringing their cars here for more than ten years.</p>
+      <div class="btns">
+        <a class="btn f" href="tel:+16263362000">Call (626) 336-2000</a>
+        <a class="btn" href="#visit">Hours and map</a>
+      </div>
+      </div>
+      <figure class="clip">
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=900&fit=crop" alt="Close view of an engine and belts" width="900" height="600" />
+        <figcaption>Photo is a stand-in until the shop sends its own.</figcaption>
+      </figure>
     </div>
-    <div>
-      <p style="margin:0">16325 Old Valley Blvd, La Puente, CA 91744<br /><a href="https://www.google.com/maps/dir/?api=1&destination=Rudy%27s+Auto+Repair+16325+Old+Valley+Blvd+La+Puente+CA+91744">Get directions</a></p>
-      <iframe class="map" title="Map to Rudy's Auto Repair" src="https://www.google.com/maps?q=Rudy%27s+Auto+Repair+16325+Old+Valley+Blvd+La+Puente+CA+91744&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p class="copy">White · customer copy</p>
+  </section>
+
+  <section class="sheet c" id="work">
+    <h2>Work we do</h2>
+    <table class="items">
+      <thead><tr><th>Line</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>01</td><td><b>Engine work</b>Head gaskets, valves and other major engine repairs.</td></tr>
+        <tr><td>02</td><td><b>GM cars and trucks</b>We see a lot of them, including older muscle cars that need to run again.</td></tr>
+        <tr><td>03</td><td><b>General repair</b>Call and tell us what your car or SUV is doing.</td></tr>
+        <tr><td>04</td><td><b>Estimates</b>Explain the problem over the phone and we'll give you a price.</td></tr>
+      </tbody>
+    </table>
+    <p class="total"><span>For a price on your car</span><a href="tel:+16263362000">call (626) 336-2000</a></p>
+    <p class="copy">Canary · shop copy</p>
+  </section>
+
+  <section class="sheet p" id="reviews">
+    <h2>Customer comments</h2>
+    <blockquote class="cmt"><p>"I called up and explained what I needed and he gave me a good price for the work and even saved me a little money when he found an easier fix to my problem."</p><cite>Google review</cite></blockquote>
+    <blockquote class="cmt"><p>"They got my clapped out muscle car running and driving again. I couldn't be happier."</p><cite>Google review · same customer</cite></blockquote>
+    <blockquote class="cmt"><p>"He and his crew have been keeping my cars running and making them safe for my family."</p><cite>Google review</cite></blockquote>
+    <blockquote class="cmt"><p>"Great service, good human relations, fair price and honesty."</p><cite>Google review · head gasket and valve job</cite></blockquote>
+    <p class="rate">4.7 on Google from 106 reviews.</p>
+    <p class="copy">Pink · file copy</p>
+  </section>
+
+  <section class="sheet w" id="visit">
+    <h2>Shop hours and location</h2>
+    <div class="two">
+      <div>
+        <table class="hrs">
+          <tr data-d="1"><td>Monday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>8 am to 2:30 pm</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <ul class="checks">
+          <li>Credit cards</li>
+          <li>Debit cards</li>
+          <li>Tap to pay</li>
+          <li>Wheelchair accessible entrance and parking</li>
+        </ul>
+      </div>
+      <div>
+        <p class="addr"><span class="lbl">Bring the car to</span><b>16325 Old Valley Blvd, La Puente, CA 91744</b></p>
+        <iframe class="map" title="Map to Rudy's Auto Repair" src="https://www.google.com/maps?q=Rudy%27s+Auto+Repair+16325+Old+Valley+Blvd+La+Puente+CA+91744&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p style="margin:12px 0 0"><a class="btn f" href="https://www.google.com/maps/dir/?api=1&destination=Rudy%27s+Auto+Repair+16325+Old+Valley+Blvd+La+Puente+CA+91744">Get directions</a></p>
+      </div>
     </div>
-  </div>
+  </section>
 </main>
 
-<footer><div class="w">
+<footer>
   <p>© 2026 Rudy's Auto Repair · 16325 Old Valley Blvd, La Puente, CA · <a href="tel:+16263362000">(626) 336-2000</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
-</div></footer>
+</footer>
 
 <div class="dock">
   <a href="tel:+16263362000">Call the shop</a>
@@ -137,14 +221,26 @@ footer p{margin:0 0 6px}
 </div>
 
 <script>
-(function(){var H={1:[8,17],2:[8,17],3:[8,17],4:[8,17],5:[8,17],6:[8,14.5]};var now;try{now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));}catch(e){return;}
-var d=now.getDay(),t=now.getHours()+now.getMinutes()/60,r=document.querySelector('[data-d="'+d+'"]');if(r)r.className+=" today";
-var el=document.getElementById("open");if(!el)return;var h=H[d];
-function f(x){var hh=Math.floor(x),m=Math.round((x-hh)*60);return (hh>12?hh-12:hh)+(m?":"+(m<10?"0":"")+m:"")+(hh>=12?" pm":" am");}
-if(h&&t>=h[0]&&t<h[1]){el.textContent="Open now until "+f(h[1]);el.className+=" on";}
-else{var n=d,k=0;if(!(h&&t<h[0])){do{n=(n+1)%7;k++;}while(!H[n]&&k<8);}
-var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-el.textContent="Closed now. Opens "+(k===0?"today":k===1?"tomorrow":days[n])+" at "+f(H[n][0]);el.className+=" off";}})();
+// Stamps the order OPEN or CLOSED from the shop's real hours (Pacific time) and highlights today's row.
+(function () {
+  var H = { 1: [8, 17], 2: [8, 17], 3: [8, 17], 4: [8, 17], 5: [8, 17], 6: [8, 14.5] };
+  var now;
+  try { now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })); } catch (e) { return; }
+  var d = now.getDay(), t = now.getHours() + now.getMinutes() / 60;
+  var row = document.querySelector('.hrs tr[data-d="' + d + '"]');
+  if (row) row.className = "today";
+  function f(x) { var h = Math.floor(x), m = Math.round((x - h) * 60); return (h > 12 ? h - 12 : h) + (m ? ":" + (m < 10 ? "0" : "") + m : "") + (h >= 12 ? " pm" : " am"); }
+  var stamp = document.getElementById("stamp"), line = document.getElementById("openline"), h = H[d];
+  if (h && t >= h[0] && t < h[1]) {
+    stamp.innerHTML = "Open<span>now</span>"; stamp.className = "stamp on"; line.textContent = "Until " + f(h[1]) + " today";
+  } else {
+    var n = d, k = 0;
+    if (!(h && t < h[0])) { do { n = (n + 1) % 7; k++; } while (!H[n] && k < 8); }
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    stamp.innerHTML = "Closed<span>right now</span>"; stamp.className = "stamp off";
+    line.textContent = "Opens " + (k === 0 ? "today" : k === 1 ? "tomorrow" : days[n]) + " at " + f(H[n][0]);
+  }
+})();
 </script>
 </body>
 </html>
