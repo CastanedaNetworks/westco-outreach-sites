@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Carnicería El Chikilin | Long Beach</title>
+<meta name="description" content="Carnicería El Chikilin, 617 East 7th Street in Long Beach. Ranchera preparada or regular, tomahawks and USDA Prime cuts. Open every day." />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/carniceria-el-chikilin-long-beach/" />
+<meta property="og:title" content="Carnicería El Chikilin" />
+<meta property="og:description" content="Meat market on East 7th Street, Long Beach" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Martian+Mono:wght@400;700&family=Public+Sans:wght@400;600;800&display=swap" />
+<style>
+/* The page borrows from the counter: white tile, a price board, and the sticker the scale prints for your order. */
+:root{
+  --red:#c5202c; --green:#1c7c45; --ink:#1b1a18; --tile:#f4f1ea; --grout:#dcd6c9; --paper:#fffdf8; --soft:#5d584f;
+  --slab:"Alfa Slab One",Rockwell,Georgia,serif; --body:"Public Sans",Verdana,sans-serif; --mono:"Martian Mono","Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--tile);color:var(--ink);font:400 17px/1.6 var(--body);padding-bottom:72px;
+  background-image:linear-gradient(var(--grout) 2px,transparent 2px),linear-gradient(90deg,var(--grout) 2px,transparent 2px);background-size:64px 64px}
+a{color:inherit}
+img{max-width:100%;display:block}
+.w{max-width:1040px;margin-inline:auto;padding-inline:18px}
+.es{color:var(--soft);font-style:italic}
+
+/* awning */
+.awning{height:18px;background:repeating-linear-gradient(90deg,var(--red) 0 28px,#fff 28px 56px,var(--green) 56px 84px,#fff 84px 112px)}
+.top{background:var(--paper);border-bottom:3px solid var(--ink)}
+.top .w{display:flex;align-items:center;gap:12px;padding-block:10px}
+.top img{width:58px;height:58px;border-radius:50%;border:2px solid var(--ink)}
+.top b{font:400 19px/1.1 var(--slab);letter-spacing:.01em}
+.top span{display:none;font:600 13px/1.3 var(--body);color:var(--soft)}
+.top b{white-space:nowrap}
+@media (min-width:480px){.top span{display:block}}
+.status{margin-left:auto;font:700 11px/1 var(--mono);padding:8px 8px;border:2px solid var(--ink);background:#fff;max-width:104px;text-align:center;line-height:1.35}
+@media (min-width:480px){.status{max-width:none;white-space:nowrap}}
+.status.on{background:var(--green);color:#fff;border-color:var(--green)}
+.status.off{background:var(--ink);color:#fff}
+
+.hero{background:var(--paper);border-bottom:3px solid var(--ink)}
+.hero .w{display:grid;gap:22px;padding-block:28px 34px}
+.hero .mark{width:min(78%,330px);margin-inline:auto}
+h1{font:400 clamp(34px,9.6vw,62px)/1.02 var(--slab);margin:0 0 12px;letter-spacing:.005em}
+h1 em{font-style:normal;color:var(--red)}
+.lead{margin:0 0 6px;font-size:18px;max-width:34em}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 18px;font:800 16px/1 var(--body);text-decoration:none;border:3px solid var(--ink);background:var(--ink);color:#fff}
+.btn.alt{background:#fff;color:var(--ink)}
+.btn:active{transform:translateY(2px)}
+
+section{padding-block:38px}
+h2{font:400 clamp(26px,7vw,40px)/1.08 var(--slab);margin:0 0 4px}
+.sub{margin:0 0 20px;color:var(--soft);font-weight:600}
+
+/* price board */
+.board{background:var(--ink);color:#fff;padding:20px 18px 12px;border:6px solid #3a3733;outline:3px solid var(--ink)}
+.board h2{color:#fff}
+.board .sub{color:#cfc9bd}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:end;padding:16px 0;border-top:2px dashed #55514b}
+.row h3{margin:0;font:400 23px/1.1 var(--slab);letter-spacing:.01em}
+.row p{margin:4px 0 0;font-size:15px;color:#d9d3c7;grid-column:1}
+.price{grid-row:1 / span 2;grid-column:2;text-align:right;font:400 40px/1 var(--slab);color:#ffd43a}
+.price small{display:block;font:700 12px/1.4 var(--mono);color:#fff;letter-spacing:.04em}
+.tag{display:inline-block;font:700 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:6px 7px;margin-bottom:8px;background:var(--red);color:#fff}
+.tag.g{background:var(--green)}
+.fine{font-size:14px;color:#cfc9bd;margin:14px 0 6px}
+
+/* scale */
+.scale{display:grid;gap:22px}
+.ask{background:var(--paper);border:3px solid var(--ink);padding:20px 18px}
+.ask label{display:block;font-weight:800;margin-bottom:10px}
+.step{display:flex;align-items:stretch;border:3px solid var(--ink);width:max-content;max-width:100%}
+.step button{width:56px;min-height:56px;border:0;background:var(--ink);color:#fff;font:400 28px/1 var(--slab);cursor:pointer}
+.step output{min-width:86px;display:grid;place-items:center;font:400 30px/1 var(--slab);background:#fff}
+.picks{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.picks label{margin:0;font-weight:600}
+.picks input{position:absolute;opacity:0}
+.picks span{display:inline-flex;align-items:center;min-height:46px;padding:0 14px;border:2px solid var(--ink);background:#fff;cursor:pointer}
+.picks input:checked + span{background:var(--green);border-color:var(--green);color:#fff}
+.picks input:focus-visible + span{outline:3px solid var(--red);outline-offset:2px}
+.label{background:#fff;border:1px solid #bdb7aa;box-shadow:0 2px 0 #bdb7aa;padding:16px 16px 14px;font-family:var(--mono);font-size:13px;line-height:1.5;max-width:420px;transform:rotate(-1.2deg);justify-self:start}
+.label .nm{font:400 22px/1.1 var(--slab);border-bottom:3px solid var(--ink);padding-bottom:8px;margin-bottom:10px}
+.label dl{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:6px;margin:0}
+.label dt{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.label dd{margin:0;font-weight:700;font-size:17px}
+.label dd.tot{font-size:24px}
+.label .bars{height:34px;margin-top:12px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,#fff 2px 5px,var(--ink) 5px 6px,#fff 6px 10px,var(--ink) 10px 13px,#fff 13px 15px)}
+.label .ft{margin:8px 0 0;font-size:11px;color:var(--soft)}
+
+/* counter talk */
+.say{background:var(--red);color:#fff;border-block:3px solid var(--ink)}
+.say p{margin:0;font-size:18px;max-width:36em}
+.say .big{font:400 clamp(34px,10vw,64px)/1 var(--slab);margin-bottom:12px}
+.tray{display:grid;gap:18px;align-items:center}
+.tray img{width:100%;border:3px solid var(--ink);background:#fff}
+.tray p{margin:0;font-size:18px}
+
+/* visit */
+.visit{display:grid;gap:22px}
+.card{background:var(--paper);border:3px solid var(--ink);padding:18px}
+table{width:100%;border-collapse:collapse;font-size:16px}
+td{padding:9px 0;border-bottom:1px solid var(--grout)}
+td:last-child{text-align:right;font-family:var(--mono);font-size:14px}
+tr.today td{font-weight:800}
+tr.today td:first-child::after{content:"hoy";margin-left:8px;font:700 10px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;background:var(--green);color:#fff;padding:4px 5px;vertical-align:2px}
+iframe{width:100%;height:300px;border:3px solid var(--ink);display:block}
+address{font-style:normal;font-weight:800;font-size:19px;line-height:1.35;margin-bottom:12px}
+
+footer{background:var(--ink);color:#e9e4d9;font-size:14px;padding:22px 0 26px}
+footer p{margin:0 0 8px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.25fr 1fr;border-top:3px solid var(--ink)}
+.dock a{display:grid;place-items:center;min-height:56px;font:800 16px/1 var(--body);text-decoration:none;background:var(--green);color:#fff}
+.dock a + a{background:#fff;color:var(--ink)}
+
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .dock{display:none}
+  .hero .w{grid-template-columns:1.25fr .75fr;align-items:center;padding-block:46px}
+  .hero .mark{width:100%}
+  .rows{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+  .scale{grid-template-columns:1fr 1fr;align-items:center}
+  .tray{grid-template-columns:.8fr 1.2fr}
+  .visit{grid-template-columns:.9fr 1.1fr}
+  iframe{height:100%;min-height:340px}
+}
+</style>
+</head>
+<body>
+<!-- PREVIEW BANNER START · delete through PREVIEW BANNER END to remove -->
+<div id="preview-banner" style="background:#111;color:#fff;font:500 14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;display:flex;align-items:center;gap:8px;padding:8px 6px 8px 16px;position:relative;z-index:60;border-bottom:1px solid #333;">
+  <p style="margin:0;flex:1;min-width:0;">Preview built for Carnicería El Chikilin. <a href="sms:+12135229136?&amp;body=I%20want%20to%20reserve%20the%20Carniceria%20El%20Chikilin%20website%20for%20%24250." style="color:#ffd84d;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Want it live? Reserve it for $250 with Zelle to (213) 522-9136 →</a></p>
+  <button type="button" aria-label="Hide this banner" onclick="this.parentNode.remove()" style="flex:none;width:44px;height:44px;background:none;border:0;color:#fff;font-size:22px;line-height:1;cursor:pointer;">×</button>
+</div>
+<!-- PREVIEW BANNER END -->
+
+<div class="awning" aria-hidden="true"></div>
+<header class="top">
+  <div class="w">
+    <img src="logo.png" alt="" width="58" height="58" />
+    <div><b>El Chikilin</b><span>617 E 7th St, Long Beach</span></div>
+    <div class="status" id="status">Open daily</div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="w">
+      <div>
+        <h1>Carne fresca on <em>7th Street.</em></h1>
+        <p class="lead">We're Carnicería El Chikilin, the new meat market at 617 East 7th in Long Beach. Ranchera cut regular or preparada, tomahawks on the weekend, and USDA Prime in the case.</p>
+        <p class="lead es">Su carnicería nueva en Long Beach. Abierto todos los días.</p>
+        <div class="btns">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=617+E+7th+St+Long+Beach+CA+90813">Get directions</a>
+          <a class="btn alt" href="#cuanta">How much do I need?</a>
+        </div>
+      </div>
+      <img class="mark" src="logo-full.jpg" alt="Carnicería El Chikilin logo, a winking kid in a cap holding a steak" width="437" height="419" />
+    </div>
+  </div>
+
+  <section class="w" id="especiales">
+    <div class="board">
+      <h2>On special</h2>
+      <p class="sub">Especiales de la semana</p>
+      <div class="rows">
+        <div class="row">
+          <div><span class="tag g">This week · Esta semana</span><h3>Ranchera</h3></div>
+          <p>Preparada o regular. Tell us which one at the counter.</p>
+          <div class="price">$11.99<small>la libra</small></div>
+        </div>
+        <div class="row">
+          <div><span class="tag">Weekend · Fin de semana</span><h3>Tomahawks</h3></div>
+          <p>Thick cut, bone in. Weekend special while they last.</p>
+          <div class="price">$35<small>each · c/u</small></div>
+        </div>
+      </div>
+      <p class="fine">These are our latest posted specials. Specials change, so check the board in the shop or our Instagram for today's.</p>
+    </div>
+  </section>
+
+  <section class="w" id="cuanta">
+    <h2>How much ranchera?</h2>
+    <p class="sub">¿Cuánta carne necesito?</p>
+    <div class="scale">
+      <div class="ask">
+        <label id="pl">How many people are you feeding?</label>
+        <div class="step" role="group" aria-labelledby="pl">
+          <button type="button" id="less" aria-label="One less person">-</button>
+          <output id="ppl" aria-live="polite">8</output>
+          <button type="button" id="more" aria-label="One more person">+</button>
+        </div>
+        <div class="picks" role="radiogroup" aria-label="Appetite">
+          <label><input type="radio" name="ap" value="0.5" checked /><span>Regular plates</span></label>
+          <label><input type="radio" name="ap" value="0.75" /><span>Big eaters</span></label>
+        </div>
+        <div class="picks" role="radiogroup" aria-label="Cut">
+          <label><input type="radio" name="cut" value="Preparada" checked /><span>Preparada</span></label>
+          <label><input type="radio" name="cut" value="Regular" /><span>Regular</span></label>
+        </div>
+      </div>
+      <div class="label" aria-live="polite">
+        <div class="nm">Ranchera <span id="cutname">Preparada</span></div>
+        <dl>
+          <div><dt>Net wt</dt><dd id="lbs">4.00 lb</dd></div>
+          <div><dt>Price / lb</dt><dd>$11.99</dd></div>
+          <div><dt>Total</dt><dd class="tot" id="tot">$47.96</dd></div>
+        </dl>
+        <div class="bars" aria-hidden="true"></div>
+        <p class="ft">Figured at half a pound a person, or three quarters for big eaters, at the posted special. We'll weigh the real thing for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="say">
+    <div class="w">
+      <p class="big">Best meat in LB.</p>
+      <p>That's the goal every day we open. Good quality meat, USDA Prime in the case, and a counter where you can ask for exactly what you want. Carne de buena calidad, todos los días.</p>
+    </div>
+  </section>
+
+  <section class="w">
+    <div class="tray">
+      <img src="ranchera-tray.jpg" alt="A foil tray of ranchera preparada with onions, labeled Carnicería El Chikilin" width="350" height="221" />
+      <div>
+        <h2>By the tray</h2>
+        <p class="sub">Para la carne asada</p>
+        <p>Cooking for the whole family? Get your ranchera preparada by the tray, like the one in the photo, ready for the grill when you get home. Ask at the counter.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="w" id="visit">
+    <h2>Come by</h2>
+    <p class="sub">Abierto los siete días</p>
+    <div class="visit">
+      <div class="card">
+        <address>617 East 7th Street<br />Long Beach, CA 90813</address>
+        <table id="hours">
+          <tr data-d="1"><td>Monday</td><td>8am to 7pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>8am to 7pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>8am to 7pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>8am to 7pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>8am to 7pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>8am to 7pm</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>8am to 6pm</td></tr>
+        </table>
+        <div class="btns">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=617+E+7th+St+Long+Beach+CA+90813">Directions</a>
+          <a class="btn alt" href="https://www.instagram.com/carniceriaelchikilin/">Instagram</a>
+        </div>
+      </div>
+      <iframe title="Map to Carnicería El Chikilin" loading="lazy" src="https://www.google.com/maps?q=617+E+7th+St,+Long+Beach,+CA+90813&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="w">
+    <p>© 2026 Carnicería El Chikilin · 617 East 7th Street, Long Beach, CA 90813 · <a href="https://www.instagram.com/carniceriaelchikilin/">@carniceriaelchikilin</a></p>
+    <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Logo, photo, hours and specials are from the shop's Instagram.</p>
+  </div>
+</footer>
+
+<div class="dock">
+  <a href="https://www.google.com/maps/dir/?api=1&destination=617+E+7th+St+Long+Beach+CA+90813">Directions</a>
+  <a href="#especiales">Specials</a>
+</div>
+
+<script>
+// Open or closed from the posted hours (Pacific time), today's row, and the scale label math.
+(function () {
+  var H = { 0: [8, 18], 1: [8, 19], 2: [8, 19], 3: [8, 19], 4: [8, 19], 5: [8, 19], 6: [8, 19] };
+  try {
+    var now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+    var d = now.getDay(), t = now.getHours() + now.getMinutes() / 60, s = document.getElementById("status");
+    var row = document.querySelector('#hours tr[data-d="' + d + '"]');
+    if (row) row.className = "today";
+    if (t >= H[d][0] && t < H[d][1]) { s.textContent = "Open till " + (H[d][1] - 12) + "pm"; s.className = "status on"; }
+    else { s.textContent = "Closed · opens 8am"; s.className = "status off"; }
+  } catch (e) {}
+
+  var n = 8, PRICE = 11.99;
+  function draw() {
+    var per = parseFloat(document.querySelector('input[name="ap"]:checked').value);
+    var lb = n * per;
+    document.getElementById("ppl").textContent = n;
+    document.getElementById("lbs").textContent = lb.toFixed(2) + " lb";
+    document.getElementById("tot").textContent = "$" + (lb * PRICE).toFixed(2);
+    document.getElementById("cutname").textContent = document.querySelector('input[name="cut"]:checked').value;
+  }
+  document.getElementById("less").onclick = function () { if (n > 1) { n--; draw(); } };
+  document.getElementById("more").onclick = function () { if (n < 60) { n++; draw(); } };
+  [].forEach.call(document.querySelectorAll(".picks input"), function (i) { i.onchange = draw; });
+  draw();
+})();
+</script>
+</body>
+</html>

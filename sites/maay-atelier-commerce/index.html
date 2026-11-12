@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M.A.A.Y Atelier | Custom embroidery in Commerce</title>
+<meta name="description" content="M.A.A.Y Atelier. Custom embroidery made to order in Commerce, plus live embroidery at events in LA and the IE. DM to get started." />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/maay-atelier-commerce/" />
+<meta property="og:title" content="M.A.A.Y Atelier" />
+<meta property="og:description" content="Stitching your ideas into something you'll love" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Parisienne&display=swap" />
+<style>
+/* The logo is one unbroken thread that draws a sewing machine. The page keeps that thread running down the left edge
+   and lets you try a name in stitches before you order. */
+:root{
+  --cloth:#efece6; --paper:#f8f6f1; --ink:#2b2a28; --soft:#6b6862; --line:#cfcabf; --thread:#7f9aa8;
+  --caps:"Josefin Sans","Century Gothic",sans-serif; --text:"Newsreader",Georgia,serif; --script:"Parisienne","Brush Script MT",cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cloth);color:var(--ink);font:400 18px/1.6 var(--text);padding-bottom:70px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.w{max-width:1000px;margin-inline:auto;padding-inline:20px}
+.caps{font:400 13px/1.4 var(--caps);letter-spacing:.34em;text-transform:uppercase;color:var(--soft);margin:0}
+.seam{border:0;border-top:2px dashed var(--ink);opacity:.55;margin:0}
+
+.top .w{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.top a{font:600 13px/1 var(--caps);letter-spacing:.22em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;min-height:46px;padding:2px 14px 0;border:1px solid var(--ink)}
+
+.hero{text-align:center;padding-block:26px 46px}
+.hero img{width:min(62vw,250px);margin:0 auto 22px;border-radius:50%}
+h1{font:300 clamp(30px,8.6vw,58px)/1.16 var(--caps);letter-spacing:.02em;margin:14px auto 16px;max-width:15em}
+h1 em{font:400 1.2em/1 var(--script);letter-spacing:0;text-transform:none}
+.hero p.lead{max-width:26em;margin:0 auto 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:3px 22px 0;background:var(--ink);color:var(--paper);font:600 14px/1 var(--caps);letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);cursor:pointer}
+.btn.o{background:transparent;color:var(--ink)}
+
+section{padding-block:48px}
+h2{font:300 clamp(26px,7vw,42px)/1.15 var(--caps);letter-spacing:.03em;margin:10px 0 12px}
+.sub{margin:0 0 24px;max-width:30em;color:var(--soft)}
+
+/* try it */
+.try{background:var(--paper)}
+.bench{display:grid;gap:22px}
+.hoop{position:relative;aspect-ratio:1;width:min(100%,400px);margin-inline:auto;border-radius:50%;display:grid;place-items:center;
+  border:12px solid #c8a57a;box-shadow:inset 0 0 0 3px #a98558,0 0 0 2px #a98558;overflow:hidden;transition:background .25s}
+.hoop::before{content:"";position:absolute;inset:0;opacity:.5;background:
+  repeating-linear-gradient(0deg,rgba(255,255,255,.14) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 3px)}
+.hoop span{position:relative;max-width:86%;text-align:center;overflow-wrap:anywhere;font:400 clamp(34px,13vw,64px)/1.05 var(--script);
+  text-shadow:0 1px 0 rgba(0,0,0,.28),0 -1px 0 rgba(255,255,255,.25)}
+.hoop span.block{font:600 clamp(26px,9.4vw,46px)/1.1 var(--caps);letter-spacing:.14em;text-transform:uppercase}
+form{display:grid;gap:18px}
+label.l,legend{display:block;font:600 13px/1.3 var(--caps);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;padding:0}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+input[type=text]{width:100%;min-height:54px;padding:0 14px;border:1px solid var(--ink);background:#fff;font:400 20px/1 var(--text);color:var(--ink);border-radius:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{margin:0}
+.chips input{position:absolute;opacity:0}
+.chips span{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 14px;border:1px solid var(--ink);background:#fff;cursor:pointer;font-size:17px}
+.chips span i{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.35)}
+.chips input:checked + span{background:var(--ink);color:var(--paper)}
+.chips input:focus-visible + span{outline:2px solid var(--thread);outline-offset:3px}
+.order{border:2px dashed var(--ink);padding:18px;background:var(--cloth)}
+.order pre{margin:8px 0 16px;white-space:pre-wrap;font:400 18px/1.5 var(--text)}
+.order .btn{width:100%}
+.order small{display:block;margin-top:10px;color:var(--soft);font-size:15px}
+.fine{font:italic 400 16px/1.5 var(--text);color:var(--soft);margin:14px 0 0}
+
+/* what we stitch */
+.rows{border-top:1px solid var(--ink)}
+.rows div{display:grid;gap:4px;padding:18px 0;border-bottom:1px solid var(--ink)}
+.rows h3{margin:0;font:400 20px/1.2 var(--caps);letter-spacing:.2em;text-transform:uppercase}
+.rows p{margin:0;color:var(--soft)}
+
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pics figure{margin:0}
+.pics img{width:100%;aspect-ratio:1/1.16;object-fit:cover}
+.pics figcaption{font:italic 400 15px/1.4 var(--text);color:var(--soft);margin-top:6px}
+
+.live{background:var(--ink);color:var(--paper)}
+.live .caps{color:#b9b5ad}
+.live p{max-width:30em;margin:0 0 22px}
+.live .btn{background:var(--paper);color:var(--ink)}
+
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:54px 1fr;gap:6px;padding:16px 0;border-bottom:1px dashed var(--soft)}
+.steps li::before{content:counter(s);font:400 42px/1 var(--script)}
+.steps b{font:600 15px/1.4 var(--caps);letter-spacing:.14em;text-transform:uppercase;display:block}
+
+footer{background:var(--paper);border-top:1px solid var(--line);font:400 15px/1.55 var(--text);color:var(--soft);padding:22px 0 26px}
+footer p{margin:0 0 8px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.2fr 1fr;border-top:1px solid var(--ink)}
+.dock a{display:grid;place-items:center;min-height:56px;padding-top:3px;font:600 13px/1 var(--caps);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;background:var(--ink);color:var(--paper)}
+.dock a + a{background:var(--paper);color:var(--ink)}
+
+@media (min-width:800px){
+  body{padding-bottom:0}
+  .dock{display:none}
+  .hero{padding-block:44px 70px}
+  .bench{grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+  .rows div{grid-template-columns:.8fr 1.2fr;align-items:baseline}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
+  .pics img{aspect-ratio:1/1.05}
+}
+</style>
+</head>
+<body>
+<!-- PREVIEW BANNER START · delete through PREVIEW BANNER END to remove -->
+<div id="preview-banner" style="background:#111;color:#fff;font:500 14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;display:flex;align-items:center;gap:8px;padding:8px 6px 8px 16px;position:relative;z-index:60;border-bottom:1px solid #333;">
+  <p style="margin:0;flex:1;min-width:0;">Preview built for M.A.A.Y Atelier. <a href="sms:+12135229136?&amp;body=I%20want%20to%20reserve%20the%20M.A.A.Y%20Atelier%20website%20for%20%24250." style="color:#ffd84d;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Want it live? Reserve it for $250 with Zelle to (213) 522-9136 →</a></p>
+  <button type="button" aria-label="Hide this banner" onclick="this.parentNode.remove()" style="flex:none;width:44px;height:44px;background:none;border:0;color:#fff;font-size:22px;line-height:1;cursor:pointer;">×</button>
+</div>
+<!-- PREVIEW BANNER END -->
+
+<header class="top">
+  <div class="w">
+    <p class="caps" style="color:var(--ink)">M · A · A · Y Atelier</p>
+    <a href="#try">Start an order</a>
+  </div>
+</header>
+<hr class="seam" />
+
+<main>
+  <div class="hero w">
+    <img src="logo.png" alt="M.A.A.Y Atelier Embroidery logo, a sewing machine drawn with a single thread" width="240" height="240" />
+    <p class="caps">Custom embroidery · Commerce, CA</p>
+    <h1>Stitching your ideas into something you'll <em>love.</em></h1>
+    <p class="lead">Names, dates, little drawings, inside jokes. Everything is made to order, one piece at a time.</p>
+    <a class="btn" href="#try">Try your name in thread</a>
+  </div>
+  <hr class="seam" />
+
+  <section class="try" id="try">
+    <div class="w">
+      <p class="caps">Personalization</p>
+      <h2>See it before it's stitched</h2>
+      <p class="sub">Type a name or a word, pick a thread, and send it over. It's a rough idea of the look, and the real thing comes off the machine much prettier.</p>
+      <div class="bench">
+        <div class="hoop" id="hoop" aria-hidden="true"><span id="stitch">Melody</span></div>
+        <form id="f" onsubmit="return false">
+          <div><label class="l" for="txt">Your word</label><input type="text" id="txt" maxlength="18" value="Melody" autocomplete="off" /></div>
+          <fieldset>
+            <legend>Lettering</legend>
+            <div class="chips">
+              <label><input type="radio" name="st" value="script" checked /><span>Script</span></label>
+              <label><input type="radio" name="st" value="block" /><span>Block</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Thread</legend>
+            <div class="chips">
+              <label><input type="radio" name="th" value="sky blue|#7fb4d6" checked /><span><i style="background:#7fb4d6"></i>Sky</span></label>
+              <label><input type="radio" name="th" value="gold|#c9a23f" /><span><i style="background:#c9a23f"></i>Gold</span></label>
+              <label><input type="radio" name="th" value="white|#f7f5ef" /><span><i style="background:#f7f5ef"></i>White</span></label>
+              <label><input type="radio" name="th" value="black|#1f1e1c" /><span><i style="background:#1f1e1c"></i>Black</span></label>
+              <label><input type="radio" name="th" value="rose|#d98a9b" /><span><i style="background:#d98a9b"></i>Rose</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>On a</legend>
+            <div class="chips">
+              <label><input type="radio" name="it" value="tote|#e9e2d2" checked /><span>Tote</span></label>
+              <label><input type="radio" name="it" value="tee|#26272b" /><span>Tee</span></label>
+              <label><input type="radio" name="it" value="crewneck|#b9bcc2" /><span>Crewneck</span></label>
+            </div>
+          </fieldset>
+          <div class="order">
+            <p class="caps">Your message</p>
+            <pre id="msg"></pre>
+            <button class="btn" type="button" id="copy">Copy and DM us</button>
+            <small id="hint">Copies the message and opens our Instagram inbox.</small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <hr class="seam" />
+
+  <section class="w">
+    <div class="two">
+      <div>
+        <p class="caps">What we stitch</p>
+        <h2>Made to order</h2>
+        <div class="rows">
+          <div><h3>Totes</h3><p>Everyday bags with a name, a word or a small design.</p></div>
+          <div><h3>Tees and crewnecks</h3><p>Chest stitching and appliqué letters.</p></div>
+          <div><h3>Personalized gifts</h3><p>For a birthday, a new baby, or someone you love. Tell us who it's for.</p></div>
+          <div><h3>Seasonal collections</h3><p>Small drops through the year. The fall collection is on our Instagram now.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="caps" style="margin-top:34px">From the machine</p>
+        <div class="pics" style="margin-top:14px">
+          <figure><img src="stitch-name.jpg" alt="An embroidery machine stitching the name Melody in light blue script on white fabric" width="437" height="506" loading="lazy" /><figcaption>A name in sky blue script.</figcaption></figure>
+          <figure><img src="stitch-gold.jpg" alt="An embroidery machine stitching a gold script logo inside a wreath on black fabric" width="437" height="506" loading="lazy" /><figcaption>Gold thread on black.</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="live">
+    <div class="w">
+      <p class="caps">Live events · LA and the IE</p>
+      <h2>We bring the machine to you</h2>
+      <p>Book us for your event and we embroider live, right there. We do events across Los Angeles and the Inland Empire.</p>
+      <a class="btn" href="https://ig.me/m/maayatelier">Ask about your date</a>
+    </div>
+  </section>
+
+  <section class="w">
+    <p class="caps">How it works</p>
+    <h2>Three messages, more or less</h2>
+    <ol class="steps">
+      <li><div><b>DM us your idea</b>A name, a sketch, a screenshot. Whatever you've got.</div></li>
+      <li><div><b>We work out the details</b>The piece, the thread colors, the size and when you need it.</div></li>
+      <li><div><b>We stitch it</b>Made to order, just for you.</div></li>
+    </ol>
+    <p style="margin-top:26px"><a class="btn" href="https://ig.me/m/maayatelier">DM to get started</a> <a class="btn o" href="https://www.instagram.com/maayatelier/" style="margin-top:8px">See reviews on Instagram</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="w">
+    <p>© 2026 M.A.A.Y Atelier · Commerce, CA · <a href="https://www.instagram.com/maayatelier/">@maayatelier</a></p>
+    <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Logo and photos are from the business's Instagram.</p>
+  </div>
+</footer>
+
+<div class="dock">
+  <a href="#try">Start an order</a>
+  <a href="https://ig.me/m/maayatelier">DM us</a>
+</div>
+
+<script>
+// The hoop preview and the order message.
+(function () {
+  var f = document.getElementById("f"), hoop = document.getElementById("hoop"), st = document.getElementById("stitch"), out = document.getElementById("msg");
+  function pick(n) { return f.querySelector('input[name="' + n + '"]:checked').value; }
+  function draw() {
+    var word = document.getElementById("txt").value.trim() || "Your word";
+    var th = pick("th").split("|"), it = pick("it").split("|"), style = pick("st");
+    st.textContent = word;
+    st.className = style === "block" ? "block" : "";
+    st.style.color = th[1];
+    hoop.style.background = it[1];
+    out.textContent = 'Hi! I\'d like "' + word + '" in ' + th[0] + " " + style + " lettering on a " + it[0] + ".";
+  }
+  f.addEventListener("input", draw); draw();
+  document.getElementById("copy").onclick = function () {
+    var go = function () { window.open("https://ig.me/m/maayatelier", "_blank"); };
+    if (navigator.clipboard) navigator.clipboard.writeText(out.textContent).then(function () { document.getElementById("hint").textContent = "Copied. Paste it into the chat that just opened."; go(); }, go); else go();
+  };
+})();
+</script>
+</body>
+</html>
