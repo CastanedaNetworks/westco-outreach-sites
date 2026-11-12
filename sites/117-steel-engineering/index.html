@@ -57,6 +57,23 @@ h2{font:700 clamp(28px,8vw,48px)/1 var(--sans);text-transform:uppercase;margin:6
 .scope b{display:block;font:700 20px/1.2 var(--sans);text-transform:uppercase}
 .scope span{color:var(--soft);font-size:17px}
 
+.who{display:grid;gap:0;background:#fff;border:2px solid var(--ink)}
+.who > div{padding:18px 16px}
+.who > div + div{border-top:2px solid var(--ink)}
+.who h3{margin:0 0 4px;font:700 26px/1.1 var(--sans);text-transform:uppercase}
+.who ul{margin:10px 0 0;padding:0;list-style:none}
+.who li{padding:8px 0 8px 22px;border-top:1px solid var(--grid);position:relative}
+.who li::before{content:"";position:absolute;left:0;top:21px;width:10px;height:2px;background:var(--red)}
+.motor{margin:22px 0 0;padding:16px;border:2px dashed var(--ink);background:var(--sheet);max-width:44em}
+.motor b{display:block;font:700 22px/1.15 var(--sans);text-transform:uppercase}
+.qa{border-top:2px solid var(--ink);max-width:780px;background:#fff;border-inline:2px solid var(--ink)}
+.qa details{border-bottom:2px solid var(--ink);padding-inline:14px}
+.qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:56px;padding:12px 0;font:700 20px/1.2 var(--sans);cursor:pointer}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font:600 24px/1 var(--mono);color:var(--red);flex:none}
+.qa details[open] summary::after{content:"\2212"}
+.qa p{margin:0 0 16px;max-width:34em;color:var(--soft)}
+@media (min-width:800px){.who{grid-template-columns:1fr 1fr}.who > div + div{border-top:0;border-left:2px solid var(--ink)}.who > div{padding:24px}}
 /* jobs */
 .jobs{display:grid;gap:26px}
 .job{margin:0;background:#fff;border:2px solid var(--ink)}
@@ -176,6 +193,32 @@ footer{padding:0 0 30px}
   </section>
 
   <section class="w">
+    <p class="m">Sheet 1A · Who we build for</p>
+    <h2>Job sites and homes</h2>
+    <div class="who">
+      <div>
+        <p class="m">Commercial</p>
+        <h3>Contractors and businesses</h3>
+        <ul>
+          <li>Structural steel erection on your job site</li>
+          <li>Long fence runs, like 700 ft around a warehouse lot in San Bernardino</li>
+          <li>Miscellaneous metals for the pieces the plans call out</li>
+        </ul>
+      </div>
+      <div>
+        <p class="m">Residential</p>
+        <h3>Homeowners</h3>
+        <ul>
+          <li>Driveway and pedestrian gates, designed by us</li>
+          <li>Ornamental iron fence</li>
+          <li>Cable railing, like the matte black patio rail in Rancho Cucamonga</li>
+        </ul>
+      </div>
+    </div>
+    <p class="motor"><b>Gates with the motor installed</b>We build the custom iron gate, add lettering to the pedestrian door if you want it, and install the electric motor so it opens for you.</p>
+  </section>
+
+  <section class="w">
     <p class="m">Sheet 2 · Completed work</p>
     <h2>Off the truck and in the ground</h2>
     <p class="sub">A few of our jobs, with the piece mark from the list above.</p>
@@ -241,6 +284,17 @@ footer{padding:0 0 30px}
         </div>
         <small>Opens your messages app with this already typed in.</small>
       </div>
+    </div>
+  </section>
+  <section class="w">
+    <p class="m">Sheet 5 · General notes</p>
+    <h2>Questions</h2>
+    <div class="qa">
+        <details><summary>Do you do both commercial and residential?</summary><p>Yes. We erect structural steel and run commercial fence, and we build gates, fences and railings for homes.</p></details>
+        <details><summary>Can you design it, or do I need a drawing?</summary><p>Either one. Our gates are designed by us, and if you already have a drawing or a photo of what you want, send it.</p></details>
+        <details><summary>What finishes do you offer?</summary><p>Powder coating and galvanized.</p></details>
+        <details><summary>Do you install gate motors?</summary><p>Yes. We install electric motors on the gates we build.</p></details>
+        <details><summary>How do I get a quote?</summary><p>Text or call <a href="tel:+19097615428">(909) 761-5428</a> with the type of work, about how many feet, and the city. Photos help.</p></details>
     </div>
   </section>
 </main>

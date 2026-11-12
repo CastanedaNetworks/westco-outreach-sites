@@ -77,6 +77,25 @@ h2 i{font:400 1.12em/.9 var(--script);color:var(--ink)}
 .steps{margin:0 0 30px;padding:0;list-style:none;counter-reset:s}
 .steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;align-items:baseline;padding:10px 0;border-bottom:2px solid #eadfcb}
 .steps li::before{content:counter(s);font:400 32px/1 var(--script);color:var(--red)}
+.signs{background:var(--tile);background-image:repeating-linear-gradient(90deg,transparent 0 30px,rgba(255,255,255,.55) 30px 32px),repeating-linear-gradient(0deg,transparent 0 92px,rgba(255,255,255,.55) 92px 94px)}
+.signs h2{background:var(--cream);display:inline-block;padding:4px 10px;margin-bottom:6px}
+.signs .sub{background:var(--cream);padding:4px 10px;width:max-content;max-width:100%;color:var(--ink);margin-bottom:0}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.tabs button{min-height:46px;padding:0 14px;border:2px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink);font:800 15px/1 var(--disp);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff}
+.frame{max-width:520px;background:var(--white);border:10px solid #c9a24a;outline:2px solid #a8843a;box-shadow:inset 0 0 0 2px #a8843a,0 8px 0 var(--tile2);padding:22px 20px 24px;text-align:center}
+.frame h3{margin:0 0 2px;font:400 36px/1 var(--script);color:var(--red)}
+.frame .t{margin:0 0 14px;font:800 13px/1.3 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.frame dl{margin:0}
+.frame dt{margin-top:12px;font:800 15px/1.3 var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.frame dd{margin:2px 0 0}
+.qa{border-top:2px solid var(--ink);max-width:760px}
+.qa details{border-bottom:2px solid var(--ink)}
+.qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:56px;padding:14px 0;font:800 19px/1.25 var(--disp);cursor:pointer}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font:800 26px/1 var(--disp);color:var(--red);flex:none}
+.qa details[open] summary::after{content:"\2212"}
+.qa p{margin:0 0 18px;max-width:34em}
 .where{background:var(--white);border-block:2px solid #eadfcb}
 .where ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
 .where li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 0;border-bottom:2px solid var(--ink)}
@@ -220,6 +239,24 @@ footer p{margin:0 0 8px}
     </div>
   </section>
 
+  <section class="signs">
+    <div class="w">
+      <h2>Menus <i>we've made</i></h2>
+      <p class="sub">Every event gets its own menu sign. These are from real parties.</p>
+      <div class="tabs" role="tablist" aria-label="Sample menus">
+        <button role="tab" aria-selected="true" data-m="snack">Snack cart</button>
+        <button role="tab" aria-selected="false" data-m="tosti">Tostilocos</button>
+        <button role="tab" aria-selected="false" data-m="maru">Maruchan</button>
+        <button role="tab" aria-selected="false" data-m="gummy">Gummies bar</button>
+      </div>
+      <div class="frame" aria-live="polite">
+        <h3 id="m-name"></h3>
+        <p class="t">Menu</p>
+        <dl id="m-list"></dl>
+      </div>
+    </div>
+  </section>
+
   <section class="where">
     <div class="w">
       <div>
@@ -309,6 +346,18 @@ footer p{margin:0 0 8px}
       </div>
     </div>
   </section>
+  <section class="w">
+    <h2>Good <i>to know</i></h2>
+    <div class="qa" style="margin-top:14px">
+        <details><summary>How long are you at my event?</summary><p>Every cart comes with 2 hours of service.</p></details>
+        <details><summary>Do you bring the alcohol for palomas and miches?</summary><p>No. Those carts are a dry hire. You bring the tequila or the beer and we bring everything else to make the drinks.</p></details>
+        <details><summary>How fast will I hear back?</summary><p>We answer with a quote within 24 hours.</p></details>
+        <details><summary>How do I hold my date?</summary><p>Once you have your quote, you send a deposit and get your confirmation right away.</p></details>
+        <details><summary>Can the menu match my theme?</summary><p>Yes. Every cart comes with a customized menu, plus customized cup stickers or fork toppers.</p></details>
+        <details><summary>Are you licensed and insured?</summary><p>We're an LLC, we're insured, and we're food handler certified.</p></details>
+        <details><summary>Where do you go?</summary><p>Los Angeles, Orange County, the Inland Empire and the San Fernando Valley.</p></details>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -343,6 +392,20 @@ footer p{margin:0 0 8px}
     var go = function () { window.open("https://ig.me/m/nomancheeescarts", "_blank"); };
     if (navigator.clipboard) navigator.clipboard.writeText(out.textContent).then(function () { document.getElementById("hint").textContent = "Copied. Paste it into the chat that just opened."; go(); }, go); else go();
   };
+  var M = {
+    snack: ["Snack Cart", [["Chips", "Hot Cheetos, Takis, Tostitos"], ["Fruit", "Pepino, sandía, jícama"], ["Candy", "Peach rings, gummy bears, watermelon slices"], ["Toppings", "Tapatío, Valentina, chamoy, limón, cacahuates japoneses"]]],
+    tosti: ["Tostilocos Cart", [["Chips", "Tostitos, Takis, Cheese Doritos"], ["Gummies", "Peach rings, watermelons, sharks"], ["Fruit", "Mango, cucumber, jícama"], ["Sauces and toppings", "Tapatío, chamoy, Botanera, Valentina, limón, Chaka Chaka, Japanese peanuts"]]],
+    maru: ["Maruchan Cart", [["Noodles", "Chicken, shrimp"], ["Chips", "Takis, Hot Cheetos, Cheese Doritos"], ["Toppings", "Japanese peanuts, Chaka Chaka, cilantro, cebolla, chile serrano"], ["Sauces", "Tapatío, Valentina, Botanera, chili oil, limón"]]],
+    gummy: ["Gummies Bar", [["Gummies", "Gummy bears, gummy worms, watermelon slices, watermelon rings, peach rings, mangitos, sharks, sour belts, Skwinkles"], ["On top", "Tamarindo chamoy, chamoy, Tajín, Miguelito"]]]
+  };
+  var mt = document.querySelectorAll(".tabs button");
+  function menu(k) {
+    document.getElementById("m-name").textContent = M[k][0];
+    document.getElementById("m-list").innerHTML = M[k][1].map(function (r) { return "<dt>" + r[0] + "</dt><dd>" + r[1] + "</dd>"; }).join("");
+    [].forEach.call(mt, function (b) { b.setAttribute("aria-selected", b.dataset.m === k ? "true" : "false"); });
+  }
+  [].forEach.call(mt, function (b) { b.onclick = function () { menu(b.dataset.m); }; });
+  menu("snack");
   try {
     var now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
     if (now > new Date(2026, 11, 12, 21, 0)) document.getElementById("event").style.display = "none";

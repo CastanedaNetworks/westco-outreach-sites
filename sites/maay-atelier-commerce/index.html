@@ -83,7 +83,17 @@ input[type=text]{width:100%;min-height:54px;padding:0 14px;border:1px solid var(
 .live{background:var(--ink);color:var(--paper)}
 .live .caps{color:#b9b5ad}
 .live p{max-width:30em;margin:0 0 22px}
-.live .btn{background:var(--paper);color:var(--ink)}
+.lv{display:grid;gap:34px}
+.live .day{margin-top:8px}
+.live .day li{border-color:#6f6c66}
+.live .chips span{color:var(--ink)}
+.live .chips input:checked + span{background:var(--thread);border-color:var(--thread);color:var(--ink)}
+.live .order{color:var(--ink)}
+.live .order .caps{color:var(--soft)}
+.live form > .caps{color:var(--paper)}
+.pair{display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+@media (min-width:800px){.lv{grid-template-columns:1fr 1fr;gap:54px;align-items:start}}
+.live .btn{background:var(--ink);color:var(--paper)}
 
 .steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:0}
 .steps li{counter-increment:s;display:grid;grid-template-columns:54px 1fr;gap:6px;padding:16px 0;border-bottom:1px dashed var(--soft)}
@@ -205,10 +215,44 @@ footer p{margin:0 0 8px}
 
   <section class="live">
     <div class="w">
-      <p class="caps">Live events · LA and the IE</p>
-      <h2>We bring the machine to you</h2>
-      <p>Book us for your event and we embroider live, right there. We do events across Los Angeles and the Inland Empire.</p>
-      <a class="btn" href="https://ig.me/m/maayatelier">Ask about your date</a>
+      <div class="lv">
+        <div>
+          <p class="caps">Live events · LA and the IE</p>
+          <h2>We bring the machine to you</h2>
+          <p>Book us for your event and we embroider live, right there, while your guests watch. We do events across Los Angeles and the Inland Empire.</p>
+          <ol class="steps day">
+            <li><div><b>We plan it with you</b>The pieces, the lettering and the thread colors your guests get to pick from.</div></li>
+            <li><div><b>We set up the machine</b>At your venue, before your guests arrive.</div></li>
+            <li><div><b>Guests choose</b>A name, a word or initials, and their thread.</div></li>
+            <li><div><b>We stitch it while they watch</b>And they take it home that day.</div></li>
+          </ol>
+        </div>
+        <form id="ef" onsubmit="return false">
+          <p class="caps">Ask about your date</p>
+          <fieldset>
+            <legend>What kind of event?</legend>
+            <div class="chips">
+              <label><input type="radio" name="ev" value="birthday" checked /><span>Birthday</span></label>
+              <label><input type="radio" name="ev" value="baby shower" /><span>Baby shower</span></label>
+              <label><input type="radio" name="ev" value="bridal shower" /><span>Bridal shower</span></label>
+              <label><input type="radio" name="ev" value="wedding" /><span>Wedding</span></label>
+              <label><input type="radio" name="ev" value="pop-up" /><span>Pop-up</span></label>
+              <label><input type="radio" name="ev" value="company event" /><span>Company event</span></label>
+            </div>
+          </fieldset>
+          <div class="pair">
+            <div><label class="l" for="edate">Date</label><input type="text" id="edate" placeholder="March 14" autocomplete="off" /></div>
+            <div><label class="l" for="eg">Guests</label><input type="text" id="eg" inputmode="numeric" placeholder="40" autocomplete="off" /></div>
+          </div>
+          <div><label class="l" for="ecity">City</label><input type="text" id="ecity" placeholder="Commerce" autocomplete="off" /></div>
+          <div class="order">
+            <p class="caps">Your message</p>
+            <pre id="emsg"></pre>
+            <button class="btn" type="button" id="ecopy">Copy and DM us</button>
+            <small id="ehint">Copies the message and opens our Instagram inbox.</small>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -251,6 +295,18 @@ footer p{margin:0 0 8px}
     out.textContent = 'Hi! I\'d like "' + word + '" in ' + th[0] + " " + style + " lettering on a " + it[0] + ".";
   }
   f.addEventListener("input", draw); draw();
+  var ef = document.getElementById("ef"), eout = document.getElementById("emsg");
+  function edraw() {
+    var ev = ef.querySelector('input[name="ev"]:checked').value, d = document.getElementById("edate").value.trim(), g = document.getElementById("eg").value.trim(), c = document.getElementById("ecity").value.trim();
+    var t = "Hi! I'd like live embroidery at a " + ev + (d ? " on " + d : "") + (c ? " in " + c : "") + ".";
+    if (g) t += " About " + g + " guests.";
+    eout.textContent = t;
+  }
+  ef.addEventListener("input", edraw); edraw();
+  document.getElementById("ecopy").onclick = function () {
+    var go = function () { window.open("https://ig.me/m/maayatelier", "_blank"); };
+    if (navigator.clipboard) navigator.clipboard.writeText(eout.textContent).then(function () { document.getElementById("ehint").textContent = "Copied. Paste it into the chat that just opened."; go(); }, go); else go();
+  };
   document.getElementById("copy").onclick = function () {
     var go = function () { window.open("https://ig.me/m/maayatelier", "_blank"); };
     if (navigator.clipboard) navigator.clipboard.writeText(out.textContent).then(function () { document.getElementById("hint").textContent = "Copied. Paste it into the chat that just opened."; go(); }, go); else go();

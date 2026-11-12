@@ -56,6 +56,19 @@ section{padding-block:46px}
 .also h3{margin:0 0 2px;font:900 22px/1.15 var(--f)}
 .also p{margin:0}
 
+.how{list-style:none;margin:24px 0 0;padding:0;counter-reset:h;display:grid;gap:0;border-top:2px solid var(--road2)}
+.how li{counter-increment:h;display:grid;grid-template-columns:54px 1fr;gap:0 6px;padding:16px 0;border-bottom:2px solid var(--road2)}
+.how li::before{content:counter(h);grid-row:span 2;font:900 40px/1 var(--f);color:var(--line)}
+.how b{font:800 20px/1.2 var(--f)}
+.how span{color:var(--soft)}
+.qa{margin-top:22px;border-top:2px solid var(--road2);max-width:780px}
+.qa details{border-bottom:2px solid var(--road2)}
+.qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:56px;padding:14px 0;font:800 19px/1.25 var(--f);cursor:pointer}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font:800 26px/1 var(--f);color:var(--line);flex:none}
+.qa details[open] summary::after{content:"\2212"}
+.qa p{margin:0 0 18px;max-width:34em;color:#d5d9de}
+@media (min-width:800px){.how{grid-template-columns:1fr 1fr;column-gap:48px}}
 .shots{background:var(--road2)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .grid img{width:100%;aspect-ratio:1/1.1;object-fit:cover}
@@ -160,6 +173,18 @@ footer p{margin:0 0 8px}
     </div>
   </section>
 
+  <section>
+    <div class="w">
+      <p class="blade">How Mobile Tint Works</p>
+      <ol class="how">
+        <li><b>Text me the car or the windows</b><span>Year and model, or a photo of the glass.</span></li>
+        <li><b>I send you a price</b><span>For exactly what you asked for.</span></li>
+        <li><b>We pick a day and I come to you</b><span>Home, work, the yard, wherever it's parked.</span></li>
+        <li><b>I tint it right there</b><span>You don't drive anywhere or wait in a lobby.</span></li>
+      </ol>
+    </div>
+  </section>
+
   <section class="shots">
     <div class="w">
       <p class="blade">Recent Work</p>
@@ -206,6 +231,20 @@ footer p{margin:0 0 8px}
           <a href="tel:+13239262512">Or call (323) 926-2512</a>
           <small>Opens your messages app with this already typed in.</small>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="w">
+      <p class="blade">Questions</p>
+      <div class="qa">
+        <details><summary>Do I have to bring my car in?</summary><p>No. It's a mobile service, so I come to you.</p></details>
+        <details><summary>Is tint legal in California?</summary><p>The front side windows have to let in at least 70% of the light, and the windshield can only have a strip across the top. The back side windows and the rear glass can go darker. Tell me what you want and I'll tell you what's legal.</p></details>
+        <details><summary>When can I roll the windows down?</summary><p>New film needs a few days to cure. I'll tell you how long for your car before I leave.</p></details>
+        <details><summary>Can you take off my old tint?</summary><p>Yes. Old tint that's bubbling, purple or peeling comes off first.</p></details>
+        <details><summary>Do you do homes and businesses?</summary><p>Yes. Homes, storefronts and offices, plus anti graffiti film for glass that gets tagged.</p></details>
+        <details><summary>¿Hablan español?</summary><p>Sí. Mándanos un mensaje o llámanos.</p></details>
       </div>
     </div>
   </section>

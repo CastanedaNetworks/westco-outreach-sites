@@ -68,6 +68,20 @@ h2{font:900 clamp(28px,8vw,52px)/.95 var(--wide);font-stretch:120%;text-transfor
 .sheet li::before{content:"";position:absolute;left:0;top:11px;width:11px;height:11px;border:2px solid var(--red)}
 .sheet footer{padding:14px 18px;font-size:15px;color:var(--soft);background:none}
 
+.vs{display:grid;gap:0;border-block:2px solid var(--ink)}
+.vs > div{padding:20px 0}
+.vs > div + div{border-top:2px solid var(--ink)}
+.vs h3{margin:0;font:900 clamp(24px,7vw,34px)/1 var(--wide);font-stretch:120%;text-transform:uppercase}
+.vs .for{margin:8px 0 10px;font:700 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.vs p{margin:0;max-width:30em}
+.qa{border-top:2px solid var(--ink);max-width:760px}
+.qa details{border-bottom:2px solid var(--ink)}
+.qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:56px;padding:14px 0;font:800 18px/1.25 var(--wide);cursor:pointer}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font:700 24px/1 var(--mono);color:var(--red);flex:none}
+.qa details[open] summary::after{content:"\2212"}
+.qa p{margin:0 0 18px;max-width:34em}
+@media (min-width:800px){.vs{grid-template-columns:1fr 1fr}.vs > div{padding:28px 32px 28px 0}.vs > div + div{border-top:0;border-left:2px solid var(--ink);padding-left:32px}}
 .promise{background:var(--ink);color:#fff}
 .promise .w{display:grid;gap:22px}
 .promise blockquote{margin:0;font:800 clamp(22px,6vw,36px)/1.18 var(--wide);font-stretch:108%}
@@ -193,6 +207,24 @@ footer.site p{margin:0 0 8px}
     </article>
   </section>
 
+  <section class="w" id="which">
+    <p class="k">Which one do I need</p>
+    <h2>OEM rebuild or Stage 2?</h2>
+    <div class="vs">
+      <div>
+        <h3>OEM rebuild</h3>
+        <p class="for">Stock truck or daily driver</p>
+        <p>The unit comes apart, the worn parts get replaced, and the known weak spots get handled while it's open. Our 6L80E rebuild gets a billet torque converter, a new 3-5-R drum and an oversized PR valve.</p>
+      </div>
+      <div>
+        <h3>Stage 2</h3>
+        <p class="for">More power, towing or hard use</p>
+        <p>A full rebuild with parts picked to hold more than stock. On our 4L60E that means performance clutches and pistons, a dual cage sprag, a Beast sun shell and a Sonnax shift kit.</p>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:18px">Not sure? Tell Jorge what the truck does and how you drive it.</p>
+  </section>
+
   <section class="promise">
     <div class="w">
       <div>
@@ -247,6 +279,17 @@ footer.site p{margin:0 0 8px}
         <a href="tel:+13236136347">Or call (323) 613-6347</a>
         <small>Opens your messages app with this already typed in.</small>
       </div>
+    </div>
+  </section>
+
+  <section class="w">
+    <p class="k">Before you call</p>
+    <h2>Questions</h2>
+    <div class="qa">
+        <details><summary>Do you install it too?</summary><p>Yes. Every transmission is professionally rebuilt and installed by our team.</p></details>
+        <details><summary>My transmission isn't on this page.</summary><p>Ask anyway. The ones here are the ones we post the most.</p></details>
+        <details><summary>How do I get a price?</summary><p>Text or call Jorge at <a href="tel:+13236136347">(323) 613-6347</a> with your year, make and model and what the truck is doing. The form above writes the text for you.</p></details>
+        <details><summary>Where's the shop?</summary><p>9127 Painter Ave in Whittier. Call or text before you come so we can make room for your truck.</p></details>
     </div>
   </section>
 

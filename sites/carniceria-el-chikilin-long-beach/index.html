@@ -94,11 +94,18 @@ h2{font:400 clamp(26px,7vw,40px)/1.08 var(--slab);margin:0 0 4px}
 .say{background:var(--red);color:#fff;border-block:3px solid var(--ink)}
 .say p{margin:0;font-size:18px;max-width:36em}
 .say .big{font:400 clamp(34px,10vw,64px)/1 var(--slab);margin-bottom:12px}
-.say .story{margin-top:18px;padding-top:18px;border-top:2px dashed rgba(255,255,255,.6)}
 .tray{display:grid;gap:18px;align-items:center}
 .tray img{width:100%;border:3px solid var(--ink);background:#fff}
 .tray p{margin:0;font-size:18px}
 
+.fam{background:var(--paper);border:3px solid var(--ink);padding:22px 18px;display:grid;gap:18px}
+.fam .tagline{margin:0;font:700 11px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
+.fam blockquote{margin:12px 0 0;font:400 clamp(22px,6vw,32px)/1.25 var(--slab)}
+.fam p{max-width:34em}
+.why{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
+.why li{padding:12px 0;border-bottom:1px solid var(--grout);font-weight:800}
+.why li span{display:block;font-weight:400;color:var(--soft)}
+@media (min-width:760px){.fam{grid-template-columns:1.3fr .7fr;gap:40px;padding:34px;align-items:start}}
 /* visit */
 .visit{display:grid;gap:22px}
 .card{background:var(--paper);border:3px solid var(--ink);padding:18px}
@@ -219,7 +226,6 @@ footer p{margin:0 0 8px}
     <div class="w">
       <p class="big">Best meat in LB.</p>
       <p>That's the goal every day we open. Good quality meat, USDA Prime in the case, and a counter where you can ask for exactly what you want. Carne de buena calidad, todos los días.</p>
-      <p class="story">We're not a big company, just a small carnicería with big dreams, working hard every day to bring you fresh meat, great quality, and the kind of service you deserve. De todo corazón, muchísimas gracias por apoyarnos y confiar en nosotros.</p>
     </div>
   </section>
 
@@ -231,6 +237,22 @@ footer p{margin:0 0 8px}
         <p class="sub">Para la carne asada</p>
         <p>Cooking for the whole family? Get your ranchera preparada by the tray, like the one in the photo, ready for the grill when you get home. Ask at the counter.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="w">
+    <div class="fam">
+      <div>
+        <p class="tagline">Opened October 2026 · From our family to yours</p>
+        <blockquote>We're not a big company, just a small carnicería with big dreams.</blockquote>
+        <p style="margin:14px 0 0">We work hard every day to bring you fresh meat, great quality, and the kind of service you deserve. Whether you've stopped by once or come back every week, we don't take a single customer for granted.</p>
+        <p class="es" style="margin:10px 0 0;font-size:18px">De todo corazón, muchísimas gracias por apoyarnos y confiar en nosotros.</p>
+      </div>
+      <ul class="why">
+        <li>Quality over anything<span>USDA Prime in the case.</span></li>
+        <li>Great prices every day<span>Quality at affordable prices.</span></li>
+        <li>LA to LB<span>Customers make the drive for it.</span></li>
+      </ul>
     </div>
   </section>
 
