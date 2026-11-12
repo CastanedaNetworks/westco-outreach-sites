@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>RJ Transmission | Whittier</title>
-<meta name="description" content="RJ Transmission in Whittier. Transmissions professionally rebuilt and installed: 4L60E Stage 2, 6L80E, 6L90E, 8L90E and 68RFE." />
+<meta name="description" content="RJ Transmission in Whittier. Transmissions professionally rebuilt and installed at 9127 Painter Ave: 4L60E Stage 2, 545RFE, 6L80E and more. (323) 613-6347." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/rj-transmission-whittier/" />
 <meta property="og:title" content="RJ Transmission" />
@@ -51,6 +51,8 @@ h2{font:900 clamp(28px,8vw,52px)/.95 var(--wide);font-stretch:120%;text-transfor
 .units{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:10px}
 .units button{flex:1 1 auto;min-height:52px;padding:0 14px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:800 17px/1 var(--wide);font-stretch:115%;cursor:pointer}
 .units button[aria-selected=true]{background:var(--ink);color:#fff}
+.sale{display:inline-block;margin:0 0 18px;padding:10px 12px;background:var(--red);color:#fff;font:400 15px/1.3 var(--mono)}
+.sale b{text-transform:uppercase;letter-spacing:.06em;margin-right:6px}
 .sheet{background:var(--plate);border:2px solid var(--ink);margin-top:8px;position:relative}
 .sheet::before,.sheet::after{content:"";position:absolute;top:12px;width:12px;height:12px;border-radius:50%;background:var(--alu2);box-shadow:inset 0 2px 0 rgba(0,0,0,.35)}
 .sheet::before{left:12px}.sheet::after{right:12px}
@@ -96,6 +98,7 @@ input[type=text],input[type=number]{width:100%;min-height:52px;padding:0 12px;bo
 .ticket pre{margin:6px 0 16px;white-space:pre-wrap;font:400 15px/1.55 var(--mono)}
 .ticket button,.ticket a{display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;font:800 16px/1 var(--wide);border:2px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;text-decoration:none}
 .ticket a{background:#fff;color:var(--ink);margin-top:8px}
+.ticket a.pri{background:var(--ink);color:#fff;margin-top:0}
 .ticket small{display:block;margin-top:10px;font-size:14px;color:var(--soft)}
 
 .find{border-top:2px solid var(--ink)}
@@ -119,8 +122,10 @@ footer.site p{margin:0 0 8px}
   .sheet header{border-bottom:0;border-right:2px solid var(--ink);padding:40px 26px}
   .sheet footer{grid-column:1 / -1;border-top:2px solid var(--ink)}
   .promise .w{grid-template-columns:1.2fr .8fr;align-items:center;gap:44px}
-  .bench{grid-template-columns:1.4fr 1fr 1fr}
-  .bench figure:first-child{grid-column:auto;grid-row:span 1}
+  .bench{grid-template-columns:repeat(6,1fr)}
+  .bench figure,.bench figure:first-child{grid-column:span 2}
+  .bench figure:nth-child(n+4){grid-column:span 3}
+  .bench figure:nth-child(n+4) img{aspect-ratio:16/10}
   .bench figure:first-child img,.bench img{aspect-ratio:1/1.05}
   .quote{grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
 }
@@ -138,7 +143,7 @@ footer.site p{margin:0 0 8px}
   <div class="w">
     <img src="logo.png" alt="RJ Transmission logo" width="54" height="54" />
     <b>RJ Transmission<small>WHITTIER, CA</small></b>
-    <a href="#quote">Get a quote</a>
+    <a href="tel:+13236136347">(323) 613-6347</a>
   </div>
 </header>
 
@@ -146,12 +151,12 @@ footer.site p{margin:0 0 8px}
   <div class="hero">
     <div class="w">
       <div>
-        <p class="k">Rebuilt and installed in Whittier</p>
+        <p class="k">9127 Painter Ave · Whittier</p>
         <h1>Built to <span>hold.</span></h1>
-        <p class="lead">We rebuild transmissions and put them back in your truck ourselves. Stock rebuilds for daily drivers, Stage 2 builds for trucks that make power.</p>
+        <p class="lead">We rebuild transmissions and put them back in your truck ourselves. OEM rebuilds for daily drivers, Stage 2 builds for trucks that make power. Ask for Jorge.</p>
         <div class="btns">
           <a class="btn" href="#quote">Tell us what it's doing</a>
-          <a class="btn o" href="#builds">See the builds</a>
+          <a class="btn o" href="tel:+13236136347">Call (323) 613-6347</a>
         </div>
       </div>
       <figure class="heroimg">
@@ -165,8 +170,10 @@ footer.site p{margin:0 0 8px}
     <p class="k">What we build</p>
     <h2>Pick your unit</h2>
     <p class="sub">These are the ones we post the most. Don't see yours? Ask us anyway.</p>
+    <p class="sale" id="sale"><b>November sale</b> $500 off all OEM rebuilds.</p>
     <div class="units" role="tablist" aria-label="Transmission models">
       <button role="tab" aria-selected="true" data-u="4l60e">4L60E</button>
+      <button role="tab" aria-selected="false" data-u="545rfe">545RFE</button>
       <button role="tab" aria-selected="false" data-u="6l80e">6L80E</button>
       <button role="tab" aria-selected="false" data-u="6l90e">6L90E</button>
       <button role="tab" aria-selected="false" data-u="8l90e">8L90E</button>
@@ -204,6 +211,8 @@ footer.site p{margin:0 0 8px}
       <figure><img src="build-red.jpg" alt="A rebuilt transmission painted red, on the shop floor" width="437" height="506" loading="lazy" /><figcaption>Painted red and ready</figcaption></figure>
       <figure><img src="build-black.jpg" alt="A rebuilt transmission in gloss black" width="437" height="506" loading="lazy" /><figcaption>Gloss black</figcaption></figure>
       <figure><img src="build-badge.jpg" alt="Close view of the RJ Transmission badge on a finished case" width="437" height="506" loading="lazy" /><figcaption>Our badge on the case</figcaption></figure>
+      <figure><img src="build-bench.jpg" alt="A black 4L60E Stage 2 build sitting on the shop bench" width="372" height="310" loading="lazy" /><figcaption>4L60E Stage 2 on the bench</figcaption></figure>
+      <figure><img src="build-6l80.jpg" alt="A rebuilt 6L80E on a transmission jack under a truck" width="263" height="430" loading="lazy" /><figcaption>6L80E going back in</figcaption></figure>
     </div>
   </section>
 
@@ -234,56 +243,65 @@ footer.site p{margin:0 0 8px}
       <div class="ticket">
         <p class="k">Your message</p>
         <pre id="msg"></pre>
-        <button type="button" id="copy">Copy and message us</button>
-        <a href="https://www.instagram.com/rj_transmission/">See more builds on Instagram</a>
-        <small id="hint">Copies the message and opens our Instagram inbox.</small>
+        <a id="send" class="pri" href="sms:+13236136347">Text it to Jorge</a>
+        <a href="tel:+13236136347">Or call (323) 613-6347</a>
+        <small>Opens your messages app with this already typed in.</small>
       </div>
     </div>
   </section>
 
   <section class="w find">
     <p class="k">Find us</p>
-    <h2>Whittier, CA</h2>
-    <p>Message us before you come by so we can make room for your truck and tell you what to bring.</p>
+    <h2>9127 Painter Ave, Whittier</h2>
+    <p>Call or text Jorge at <a href="tel:+13236136347">(323) 613-6347</a> before you come by so we can make room for your truck.</p>
+    <div class="btns">
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=9127+Painter+Ave+Whittier+CA">Get directions</a>
+      <a class="btn o" href="https://www.instagram.com/rj_transmission/">Instagram</a>
+      <a class="btn o" href="https://yelp.to/PkBiwRk_Iz">Yelp</a>
+    </div>
   </section>
 </main>
 
 <footer class="site">
   <div class="w">
-    <p>© 2026 RJ Transmission · Whittier, CA · <a href="https://www.instagram.com/rj_transmission/">@rj_transmission</a></p>
+    <p>© 2026 RJ Transmission · 9127 Painter Ave, Whittier, CA · <a href="tel:+13236136347">(323) 613-6347</a> · <a href="https://www.instagram.com/rj_transmission/">@rj_transmission</a></p>
     <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Logo, photos and build details are from the shop's Instagram.</p>
   </div>
 </footer>
 
 <div class="dock">
   <a href="#quote">Get a quote</a>
-  <a href="https://www.instagram.com/rj_transmission/">Instagram</a>
+  <a href="tel:+13236136347">Call</a>
 </div>
 
 <script>
-// Build sheet tabs and the quote message.
+// Build sheet tabs, the quote text, and the sale line that hides when November ends.
 (function () {
   var U = {
     "4l60e": { no: "4L60E", tag: "Stage 2 build", lt: "What goes into our Stage 2",
       where: "GM half-ton trucks, SUVs and cars from the 90s and 2000s. Silverado, Sierra, Tahoe, Camaro.",
-      list: ["5 pinion planetary", "Red Alto clutches", "Kolene steels", "Corvette servo and wide band", "Billet accumulators", "And much more"],
+      list: ["Performance clutches and pistons", "New input drum", "Sonnax performance shift kit", "Dual cage sprag", "Beast sun shell", "Wide band and Corvette servo", "Billet pinless accumulators", "Complete bushing kit"],
       ft: "The Stage 2 is for trucks that make more than stock power or work hard. Tell us your setup and we'll tell you if you need it." },
-    "6l80e": { no: "6L80E", tag: "OEM rebuild", lt: "What we do",
+    "545rfe": { no: "545RFE", tag: "Stage 1.5 build", lt: "What goes into our Stage 1.5",
+      where: "Ram trucks, Durango and Jeep from the 2000s and 2010s.",
+      list: ["Sonnax upgraded valves", "New solenoid pack", "Sonnax Sure Cure Zip Kit", "Full bushing kit", "Thermal bypass eliminator", "Complete piston kit"],
+      ft: "Call or text Jorge with your year and model for a price." },
+    "6l80e": { no: "6L80E", tag: "OEM rebuild", lt: "What goes into our OEM rebuild",
       where: "GM trucks and SUVs from 2007 on, plus Camaro and other rear-drive cars.",
-      list: ["Full rebuild", "Installed by us"],
-      ft: "Message us your year and model for a price." },
+      list: ["Billet torque converter", "New 3-5-R drum", "Pump resurfacing", "Oversized PR valve", "Billet piston", "Thermostat bypass", "TEHCM programming"],
+      ft: "Call or text Jorge with your year and model for a price." },
     "6l90e": { no: "6L90E", tag: "Rebuild", lt: "What we do",
       where: "GM 2500 and 3500 trucks and vans, the heavier-duty version of the 6L80E.",
       list: ["Full rebuild", "Installed by us"],
-      ft: "Message us your year and model for a price." },
+      ft: "Call or text Jorge with your year and model for a price." },
     "8l90e": { no: "8L90E", tag: "Rebuild", lt: "What we do",
       where: "GM trucks and SUVs from about 2015 on, plus Corvette, Camaro and Cadillac.",
       list: ["Full rebuild", "Installed by us"],
-      ft: "Message us your year and model for a price." },
+      ft: "Call or text Jorge with your year and model for a price." },
     "68rfe": { no: "68RFE", tag: "Rebuild", lt: "What we do",
       where: "Ram 2500 and 3500 with the 6.7 Cummins.",
       list: ["Full rebuild", "Installed by us"],
-      ft: "Message us your year and model for a price." }
+      ft: "Call or text Jorge with your year and model for a price." }
   };
   var tabs = document.querySelectorAll(".units button");
   function show(k) {
@@ -308,12 +326,13 @@ footer.site p{margin:0 0 8px}
     if (probs.length) t += " It's " + probs.join(", ") + ".";
     if (nt) t += " " + nt + ".";
     out.textContent = t;
+    document.getElementById("send").href = "sms:+13236136347?&body=" + encodeURIComponent(t);
   }
   f.addEventListener("input", draw); draw();
-  document.getElementById("copy").onclick = function () {
-    var go = function () { window.open("https://ig.me/m/rj_transmission", "_blank"); };
-    if (navigator.clipboard) navigator.clipboard.writeText(out.textContent).then(function () { document.getElementById("hint").textContent = "Copied. Paste it into the chat that just opened."; go(); }, go); else go();
-  };
+  try {
+    var now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+    if (now > new Date(2026, 10, 30, 23, 59)) document.getElementById("sale").style.display = "none";
+  } catch (e) {}
 })();
 </script>
 </body>

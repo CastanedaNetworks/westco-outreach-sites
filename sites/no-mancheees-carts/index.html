@@ -64,6 +64,19 @@ h2 i{font:400 1.12em/.9 var(--script);color:var(--ink)}
 .shots img{width:100%;aspect-ratio:3/3.4;object-fit:cover;border-radius:4px}
 .shots figcaption{font-size:15px;color:var(--soft);margin-top:6px}
 
+.menu .w{display:grid;gap:26px}
+.carts{list-style:none;margin:0;padding:0;columns:2;column-gap:22px}
+.carts li{break-inside:avoid;padding:9px 0;border-bottom:2px dotted var(--red);font:800 clamp(19px,5.4vw,26px)/1.15 var(--disp)}
+.carts small{display:block;font:400 14px/1.3 var(--body);color:var(--soft)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px}
+.trio img{width:100%;aspect-ratio:3/4.4;object-fit:cover;border-radius:4px}
+.inc h3{margin:0 0 6px;font:400 30px/1 var(--script);color:var(--red)}
+.with{margin:0 0 16px;padding:0 0 0 20px}
+.with li{padding:2px 0}
+.dry{margin:0;padding-top:14px;border-top:2px solid var(--ink);max-width:30em}
+.steps{margin:0 0 30px;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;align-items:baseline;padding:10px 0;border-bottom:2px solid #eadfcb}
+.steps li::before{content:counter(s);font:400 32px/1 var(--script);color:var(--red)}
 .where{background:var(--white);border-block:2px solid #eadfcb}
 .where ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
 .where li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 0;border-bottom:2px solid var(--ink)}
@@ -117,6 +130,8 @@ footer p{margin:0 0 8px}
   .tiles{display:grid;place-items:center}
   .shots{grid-template-columns:1fr 1fr;gap:22px;align-items:start}
   .shots figure:last-child{margin-top:60px}
+  .menu .w{grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .steps{max-width:560px}
   .where .w{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
   .event .w{grid-template-columns:auto 1fr;align-items:center;gap:44px}
   .book{grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
@@ -144,7 +159,7 @@ footer p{margin:0 0 8px}
   <div class="canopy">
     <div class="w">
       <h1>A snack cart <i>for every</i> antojo.</h1>
-      <p class="lead">We bring a customized snack cart to your party, pop-up or event, umbrella and all.</p>
+      <p class="lead">We bring a customized cart to your party, wedding or event, umbrella and all. Tostilocos, esquites, palomas, miches and more.</p>
       <p class="areas">LA · OC · IE · SFV</p>
     </div>
   </div>
@@ -163,10 +178,45 @@ footer p{margin:0 0 8px}
 
   <section class="w">
     <h2>The cart, <i>set up</i></h2>
-    <p class="sub">Every setup is customized to the event. These are from recent ones.</p>
+    <p class="sub">We started in March with nothing. Isaac built the cart, and our first month was fully booked. Every setup since has been customized to the event.</p>
     <div class="shots">
       <figure><img src="cart-setup.jpg" alt="Close view of the cart counter with a framed menu, sauces and snack cups" width="438" height="506" loading="lazy" /><figcaption>A framed menu on the counter so guests know what to ask for.</figcaption></figure>
       <figure><img src="cart-turf.jpg" alt="The cart on a lawn under its umbrella, stocked with bottles and snacks" width="437" height="506" loading="lazy" /><figcaption>Set up on the lawn, umbrella open.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="menu" id="carts">
+    <div class="w">
+      <div>
+        <h2>Pick <i>your cart</i></h2>
+        <p class="sub">Nine carts, and each one is built around your event.</p>
+        <ul class="carts">
+          <li>Snack cart</li>
+          <li>Tostilocos</li>
+          <li>Esquites</li>
+          <li>Fruit</li>
+          <li>Maruchan</li>
+          <li>Palomas</li>
+          <li>Palomas <small>cantarito cups included</small></li>
+          <li>Miches</li>
+          <li>Charcuterie</li>
+        </ul>
+      </div>
+      <div class="inc">
+        <div class="trio">
+          <img src="cantarito.jpg" alt="A paloma in a clay cantarito cup with lime and dried orange" width="219" height="350" loading="lazy" />
+          <img src="toppings.jpg" alt="Squeeze bottles of chamoy and limon next to trays of peanuts, chips and fruit" width="263" height="400" loading="lazy" />
+          <img src="cart-sign.jpg" alt="The cart counter with a framed menu and the round No Mancheees sign on the tile front" width="263" height="420" loading="lazy" />
+        </div>
+        <h3>Every cart comes with</h3>
+        <ul class="with">
+          <li>2 hours of service</li>
+          <li>The umbrella</li>
+          <li>A customized menu for your event</li>
+          <li>Customized cup stickers or fork toppers</li>
+        </ul>
+        <p class="dry"><b>Palomas and miches are a dry hire.</b> You bring the tequila or the beer, and we bring everything else to make the drinks.</p>
+      </div>
     </div>
   </section>
 
@@ -174,7 +224,7 @@ footer p{margin:0 0 8px}
     <div class="w">
       <div>
         <h2>Where <i>we roll</i></h2>
-        <p class="sub">Not sure if you're in range? Put your city on the booking form and we'll tell you.</p>
+        <p class="sub">Not sure if you're in range? Put your city on the inquiry form and we'll tell you.</p>
       </div>
       <ul>
         <li><b>LA</b><span>Los Angeles</span></li>
@@ -187,25 +237,46 @@ footer p{margin:0 0 8px}
 
   <section class="event" id="event">
     <div class="w">
-      <div class="date"><b>Dec 12</b><span>2026 · 6PM to 9PM</span></div>
+      <div class="date"><b>Dec 12</b><span>2026 · 6PM to 9PM · $30</span></div>
       <div>
         <h2>Grinchmas <i>Sip N' Paint</i></h2>
-        <p>Our own holiday night. Drinks, food, music and more. Tickets are through the link in our Instagram bio.</p>
-        <p style="margin-top:16px"><a href="https://www.instagram.com/nomancheeescarts/">Reserve on Instagram</a></p>
+        <p>Our own holiday night in South Gate, all ages. Doors open at 6:00 and painting starts at 6:30. Your $30 ticket covers a canvas of your choice, all the painting supplies and one drink from our menu. Tickets are limited.</p>
+        <p style="margin-top:16px"><a href="https://gforms.app/JAm6mX9">Get tickets</a></p>
       </div>
     </div>
   </section>
 
   <section class="w" id="book">
     <h2>Book <i>your date</i></h2>
-    <p class="sub">Tell us about the event and we'll write the message for you. Booking itself happens on our form.</p>
+    <p class="sub">Tell us about the event and we'll write the message for you. Send it by DM or fill out our inquiry form, and we answer with a quote within 24 hours.</p>
+    <ol class="steps">
+      <li>Choose your cart</li>
+      <li>Send us a DM or fill out our inquiry form</li>
+      <li>We answer with a quote within 24 hours</li>
+      <li>Send your deposit</li>
+      <li>You get your confirmation right away</li>
+    </ol>
     <div class="book">
       <form id="f" onsubmit="return false">
+        <fieldset>
+          <legend>Which cart?</legend>
+          <div class="chips">
+            <label><input type="radio" name="cart" value="snack cart" checked /><span>Snack</span></label>
+            <label><input type="radio" name="cart" value="tostilocos cart" /><span>Tostilocos</span></label>
+            <label><input type="radio" name="cart" value="esquites cart" /><span>Esquites</span></label>
+            <label><input type="radio" name="cart" value="fruit cart" /><span>Fruit</span></label>
+            <label><input type="radio" name="cart" value="Maruchan cart" /><span>Maruchan</span></label>
+            <label><input type="radio" name="cart" value="paloma cart" /><span>Palomas</span></label>
+            <label><input type="radio" name="cart" value="miches cart" /><span>Miches</span></label>
+            <label><input type="radio" name="cart" value="charcuterie cart" /><span>Charcuterie</span></label>
+          </div>
+        </fieldset>
         <fieldset>
           <legend>What's the occasion?</legend>
           <div class="chips">
             <label><input type="radio" name="occ" value="birthday" checked /><span>Birthday</span></label>
             <label><input type="radio" name="occ" value="baby shower" /><span>Baby shower</span></label>
+            <label><input type="radio" name="occ" value="bridal shower" /><span>Bridal shower</span></label>
             <label><input type="radio" name="occ" value="wedding" /><span>Wedding</span></label>
             <label><input type="radio" name="occ" value="quinceañera" /><span>Quinceañera</span></label>
             <label><input type="radio" name="occ" value="work event" /><span>Work event</span></label>
@@ -231,7 +302,7 @@ footer p{margin:0 0 8px}
         <h3>Your message</h3>
         <pre id="msg"></pre>
         <div class="acts">
-          <a href="https://gforms.app/JAm6mX9">Go to the booking form</a>
+          <a href="https://gforms.app/rRNRNDU">Go to the inquiry form</a>
           <button type="button" id="copy">Copy this and DM us</button>
         </div>
         <p class="hint" id="hint">The copy button puts the message on your clipboard and opens our Instagram.</p>
@@ -243,12 +314,12 @@ footer p{margin:0 0 8px}
 <footer>
   <div class="w">
     <p>© 2026 No Mancheees Carts LLC · LA, OC, IE and SFV · <a href="https://www.instagram.com/nomancheeescarts/">@nomancheeescarts</a></p>
-    <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Logo, photos and event details are from the business's Instagram.</p>
+    <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Logo, photos, cart menu and event details are from the business's Instagram.</p>
   </div>
 </footer>
 
 <div class="dock">
-  <a href="https://gforms.app/JAm6mX9">Booking form</a>
+  <a href="https://gforms.app/rRNRNDU">Inquiry form</a>
   <a href="https://www.instagram.com/nomancheeescarts/">Instagram</a>
 </div>
 
@@ -262,7 +333,7 @@ footer p{margin:0 0 8px}
     var when = "";
     if (d) { var p = d.split("-"); when = " on " + new Date(p[0], p[1] - 1, p[2]).toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" }); }
     var a = /^[aeiou]/.test(val("occ")) ? "an " : "a ";
-    var t = "Hi! I'd like a snack cart for " + a + val("occ") + when + " in " + val("area") + ".";
+    var t = "Hi! I'd like a " + val("cart") + " for " + a + val("occ") + when + " in " + val("area") + ".";
     if (g) t += " About " + g + " guests.";
     if (n) t += " " + n;
     out.textContent = t;
