@@ -10,53 +10,71 @@
 <meta property="og:title" content="Dat DG Hair Salon" />
 <meta property="og:description" content="Walk-in haircuts in Rosemead, open 7 days" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Karla:wght@400;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Share+Tech+Mono&family=Hanken+Grotesk:wght@400;600&display=swap" />
 <style>
+/* Take a number: a paper ticket from the dispenser and a "now serving" sign that shows whether the salon is open. */
+:root{--wall:#f4f2ee;--ink:#1c1a1a;--red:#b3202f;--pink:#f6ccd2;--led:#ff4136;--sign:#0e0e0e;--line:#d8d3ca;
+--num:"Dela Gothic One","Arial Black",sans-serif;--mono:"Share Tech Mono",Consolas,monospace;--body:"Hanken Grotesk",Helvetica,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fdf7f2;color:#2a2320;font:400 18px/1.6 Karla,Arial,sans-serif;padding-bottom:64px}
+body{margin:0;background:var(--wall);color:var(--ink);font:400 17px/1.6 var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:900px;margin:0 auto;padding-left:20px;padding-right:20px}
-.bar .w{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:16px;padding-bottom:12px;border-bottom:1px solid #ecdfd3}
-.brand{font:800 22px/1.1 Fraunces,Georgia,serif;color:#a8322c;text-decoration:none}
-.tel{flex:none;font-weight:700;text-decoration:none;border-bottom:2px solid #a8322c;white-space:nowrap}
-.hero{padding-top:30px}
-h1{font:800 38px/1.04 Fraunces,Georgia,serif;margin:0 0 14px;max-width:13em}
-.hero p{margin:0 0 20px;max-width:32em}
-.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:10px;border:2px solid #a8322c;color:#a8322c;margin:0 8px 8px 0}
-.btn.r{background:#a8322c;color:#fff}
-.photo{width:100%;height:240px;object-fit:cover;border-radius:10px;margin-top:22px}
-.meta{margin:18px 0 0;font-size:16px;color:#6d625b}
-#open{font-weight:700}
-#open.on{color:#1d7a46}#open.off{color:#a8322c}
-h2{font:600 27px/1.15 Fraunces,Georgia,serif;margin:50px 0 10px}
-.menu{margin:0;padding:0;list-style:none;border-top:1px solid #ecdfd3}
-.menu li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #ecdfd3}
-.menu span{color:#6d625b;text-align:right;font-size:16px}
-.about{display:grid;gap:22px;align-items:start}
-.about img{border-radius:10px;width:100%;height:auto}
-.rv{display:grid;gap:26px}
-.rv blockquote{margin:0}
-.rv p{margin:0 0 6px;font:600 20px/1.4 Fraunces,Georgia,serif}
-.rv cite{font-style:normal;font-size:15px;color:#6d625b}
-.visit{display:grid;gap:24px}
-.card{background:#fff;border:1px solid #ecdfd3;border-radius:10px;padding:8px 18px}
-.card div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #f1e8de}
-.card div:last-child{border:0}
-.card div.today{font-weight:700;color:#a8322c}
-.map{width:100%;height:300px;border:0;border-radius:10px}
-.small{font-size:16px;color:#6d625b}
-footer{margin-top:50px;border-top:1px solid #ecdfd3;padding:22px 0 28px;color:#6d625b;font-size:14px}
+.w{max-width:900px;margin:0 auto;padding-left:18px;padding-right:18px}
+.bar{background:var(--red);color:#fff}
+.bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.brand{font:400 17px/1.15 var(--num);text-decoration:none}
+.tel{flex:none;background:#fff;color:var(--red);font:600 15px/1 var(--body);text-decoration:none;padding:14px 12px;white-space:nowrap;border-radius:4px}
+.hero{display:grid;gap:26px;padding-top:28px}
+h1{font:400 30px/1.15 var(--num);margin:0 0 12px}
+.hero p{margin:0 0 16px;font-size:18px;max-width:30em}
+.btn{display:inline-block;text-decoration:none;font:600 17px/1 var(--body);padding:16px 20px;border:2px solid var(--ink);border-radius:4px;margin:0 8px 8px 0}
+.btn.r{background:var(--red);border-color:var(--red);color:#fff}
+.dispenser{display:grid;gap:16px;justify-items:center}
+.sign{width:100%;max-width:340px;background:var(--sign);border:6px solid #2c2c2c;border-radius:6px;padding:12px 14px;text-align:center}
+.sign small{display:block;font:400 13px/1 var(--mono);letter-spacing:.3em;color:#bdbdbd;text-transform:uppercase;margin-bottom:8px}
+#open{display:block;font:400 30px/1.1 var(--mono);color:var(--led);text-transform:uppercase;text-shadow:0 0 8px rgba(255,65,54,.55)}
+#open.on{color:#56f08a;text-shadow:0 0 8px rgba(86,240,138,.5)}
+.ticket{width:230px;background:var(--pink);color:var(--red);text-align:center;padding:26px 14px 18px;position:relative;transform:rotate(-3deg);box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.ticket::before{content:"";position:absolute;left:0;right:0;top:-8px;height:16px;background:radial-gradient(circle at 8px 0,transparent 7px,var(--pink) 7.5px) 0 0/16px 16px repeat-x}
+.ticket small{display:block;font:600 12px/1.2 var(--body);letter-spacing:.2em;text-transform:uppercase}
+.ticket b{display:block;font:400 82px/1 var(--num);margin:6px 0 4px}
+.ticket i{display:block;font:400 14px/1.3 var(--mono);font-style:normal}
+@media (prefers-reduced-motion:no-preference){.ticket{animation:feed .5s ease-out .2s both}}
+@keyframes feed{from{transform:translateY(-34px) rotate(-3deg);opacity:0}to{transform:translateY(0) rotate(-3deg);opacity:1}}
+.photo{width:100%;height:220px;object-fit:cover;border-radius:4px}
+.meta{margin:14px 0 0;font-size:15px}
+h2{font:400 22px/1.2 var(--num);margin:46px 0 12px}
+h2::before{content:"";display:inline-block;width:14px;height:14px;background:var(--red);border-radius:50%;margin-right:10px}
+.menu{margin:0;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.menu li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:19px}
+.menu span{font-weight:400;font-size:15px;color:#5a5551;text-align:right}
+.small{font-size:15px;color:#5a5551}
+.about{display:grid;gap:20px}
+.about img{width:100%;height:auto;border-radius:4px}
+.rv{display:grid;gap:12px}
+blockquote{margin:0;background:#fff;border:1px solid var(--line);border-left:0;padding:14px 16px 14px 26px;position:relative}
+blockquote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:radial-gradient(circle at 0 8px,var(--wall) 6px,#fff 6.5px) 0 0/10px 16px repeat-y;border-right:1px dashed var(--line)}
+blockquote p{margin:0 0 6px}
+blockquote cite{font:400 13px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;font-style:normal;color:var(--red)}
+.visit{display:grid;gap:22px}
+.card{background:var(--sign);border:6px solid #2c2c2c;border-radius:6px;padding:8px 14px;font:400 17px/1 var(--mono);color:#f1c9c6}
+.card div{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #262626}
+.card div:last-child{border-bottom:0}
+.card div.today{color:#56f08a}
+.map{width:100%;height:300px;border:1px solid var(--line);border-radius:4px}
+footer{margin-top:46px;background:var(--ink);color:#c9c4bd;padding:22px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#fff;border-top:1px solid #ecdfd3}
-.dock a{text-align:center;text-decoration:none;font-weight:700;padding:18px 6px;color:#a8322c}
-.dock a.r{background:#a8322c;color:#fff}
-@media(min-width:740px){
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:#fff;border-top:2px solid var(--red)}
+.dock a{text-align:center;text-decoration:none;font:600 17px/1 var(--body);padding:20px 6px;color:var(--red)}
+.dock a.r{background:var(--red);color:#fff}
+a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@media(min-width:720px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:58px}
-  .photo{height:420px}
-  .about{grid-template-columns:3fr 2fr}
+  .hero{grid-template-columns:1.3fr 1fr;align-items:center;padding-top:50px}
+  h1{font-size:46px}
+  .photo{height:340px}
+  .about{grid-template-columns:3fr 2fr;align-items:start}
   .rv{grid-template-columns:1fr 1fr}
   .visit{grid-template-columns:360px 1fr}
 }
@@ -77,13 +95,19 @@ footer p{margin:0 0 6px}
 
 <main class="w" id="top">
   <section class="hero">
-    <h1>Haircuts on Valley Blvd in Rosemead</h1>
-    <p>Walk in any day of the week. If you'd rather not wait, call first and we'll tell you how busy we are.</p>
-    <a class="btn r" href="tel:+16269416532">Call (626) 941-6532</a>
-    <a class="btn" href="#visit">Hours and map</a>
-    <img class="photo" src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=72&w=1400&fit=crop" alt="Barber combing and cutting a client's hair" />
-    <p class="meta"><span id="open">Open 7 days.</span> 9368 E Valley Blvd, Suite 102. Rated 4.7 on Google from 116 reviews.</p>
+    <div>
+      <h1>Haircuts on Valley Blvd in Rosemead</h1>
+      <p>Walk in any day of the week. If you'd rather not wait, call first and we'll tell you how busy we are.</p>
+      <a class="btn r" href="tel:+16269416532">Call (626) 941-6532</a>
+      <a class="btn" href="#visit">Hours and map</a>
+    </div>
+    <div class="dispenser">
+      <div class="sign"><small>Now serving</small><span id="open">Open 7 days.</span></div>
+      <div class="ticket" aria-hidden="true"><small>Take a number</small><b>102</b><i>Suite 102<br />9368 E Valley Blvd</i></div>
+    </div>
   </section>
+  <img class="photo" style="margin-top:30px" src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=72&w=1400&fit=crop" alt="Barber combing and cutting a client's hair" />
+  <p class="meta">9368 E Valley Blvd, Suite 102. Rated 4.7 on Google from 116 reviews.</p>
 
   <h2>What we do</h2>
   <ul class="menu">
@@ -96,7 +120,7 @@ footer p{margin:0 0 6px}
   <h2>About the salon</h2>
   <div class="about">
     <div>
-      <p>Dat owns the salon and cuts hair here himself, along with the other barbers. Customers write that the stations are clean, that each barber takes their time, and that the prices are fair.</p>
+      <p style="margin-top:0">Dat owns the salon and cuts hair here himself, along with the other barbers. Customers write that the stations are clean, that each barber takes their time, and that the prices are fair.</p>
       <p>We do get busy. If you call ahead, Dat will do what he can so you aren't waiting long.</p>
     </div>
     <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?fm=jpg&q=72&w=1000&fit=crop" alt="Clippers, shears and combs laid out on a mat" width="1000" height="667" loading="lazy" />

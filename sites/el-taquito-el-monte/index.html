@@ -10,61 +10,77 @@
 <meta property="og:title" content="El Taquito" />
 <meta property="og:description" content="Mexican restaurant in El Monte" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,500&family=Lato:wght@400;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,500&family=EB+Garamond:wght@400;600&display=swap" />
 <style>
+/* Concept: the printed menu you're handed at the table. A green cover, an ivory page with a ruled border, centered type, and a table tent for the menudo. */
+:root{
+  --cover:#123a2c; --page:#fbf7ec; --ink:#1d1a14; --wine:#7b1f24; --gold:#a8843a; --soft:#5a5346;
+  --disp:"Bodoni Moda","Bodoni MT",Didot,serif; --body:"EB Garamond",Georgia,serif;
+}
 *{box-sizing:border-box}
-body{margin:0;background:#fffdf8;color:#2b211c;font:400 17px/1.65 Lato,Arial,sans-serif;padding-bottom:60px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cover);color:var(--ink);font:400 19px/1.55 var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:940px;margin:0 auto;padding:0 20px}
-.nav{border-bottom:1px solid #ece3d6}
-.nav .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px}
-.nav b{font:900 22px/1 "Playfair Display",Georgia,serif;color:#b5451b}
-.nav a{text-decoration:none;font-weight:700;background:#b5451b;color:#fff;padding:9px 14px;white-space:nowrap}
-.hd{text-align:center;padding-top:30px;padding-bottom:24px}
-.hd small{letter-spacing:.24em;text-transform:uppercase;font-size:13px;color:#b5451b;font-weight:700}
-h1{font:900 46px/1.02 "Playfair Display",Georgia,serif;margin:8px 0 10px;color:#b5451b}
-.hd p{margin:0 auto;max-width:28em}
-.live{margin-top:12px !important;font-weight:700}
-.live .on{color:#2e7d4f}.live .off{color:#a23b2a}
-.ph{width:100%;height:250px;object-fit:cover}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.cta a{flex:1 1 150px;text-align:center;text-decoration:none;font-weight:700;padding:15px 10px;background:#b5451b;color:#fff}
-.cta a+a{background:none;color:#b5451b;border:2px solid #b5451b}
-section{padding-top:46px}
-h2{font:700 27px/1.15 "Playfair Display",Georgia,serif;margin:0 0 6px;text-align:center}
-.rule{width:54px;height:3px;background:#b5451b;margin:0 auto 20px}
-.card{border:1px solid #d9cbb6;padding:6px;background:#fff}
-.card .in{border:1px solid #d9cbb6;padding:20px 18px 10px}
-.card h3{font:700 15px/1 Lato,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#b5451b;margin:0 0 8px;text-align:center}
-.card ul{margin:0 0 18px;padding:0;list-style:none;text-align:center}
-.card li{font:700 20px/1.3 "Playfair Display",Georgia,serif;padding:5px 0}
-.card li span{display:block;font:400 15px/1.4 Lato,Arial,sans-serif;color:#6f6157}
-.about p{margin:0 0 12px}
-.words{display:grid;gap:26px}
-.words blockquote{margin:0;text-align:center}
-.words p{font:italic 500 21px/1.45 "Playfair Display",Georgia,serif;margin:0 0 6px}
-.words cite{font-style:normal;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#6f6157}
-table{border-collapse:collapse;width:100%;max-width:420px;margin:0 auto}
-td{padding:8px 0;border-bottom:1px solid #ece3d6}
+.nav{color:#f1e8cf}
+.nav .w{display:flex;justify-content:space-between;align-items:center;gap:10px;max-width:780px;margin:0 auto;padding:12px 16px}
+.nav b{font:800 19px/1 var(--disp);letter-spacing:.04em}
+.nav a{font:600 18px/1 var(--body);text-decoration:none;border:1px solid var(--gold);padding:12px 14px;white-space:nowrap}
+.menu{max-width:780px;margin:0 auto;background:var(--page);padding:10px}
+.frame{border:2px solid var(--wine);outline:1px solid var(--gold);outline-offset:-7px;padding:26px 16px 30px}
+.c{text-align:center}
+.orn{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--gold);margin:10px auto}
+.orn::before,.orn::after{content:"";height:1px;width:56px;background:var(--gold)}
+.orn i{width:8px;height:8px;background:var(--wine);transform:rotate(45deg);display:block}
+.hd small{font:500 13px/1 var(--disp);letter-spacing:.3em;text-transform:uppercase;color:var(--wine)}
+h1{font:800 54px/1 var(--disp);margin:10px 0 0;color:var(--wine)}
+.hd p{margin:0 auto;max-width:27em}
+.live{margin-top:10px !important;font:italic 500 19px/1.3 var(--disp)}
+.live .on{color:#1c6b3a;font-style:normal;font-weight:800}
+.live .off{color:var(--wine);font-style:normal;font-weight:800}
+.cta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:18px 0 0}
+.cta a{text-decoration:none;font:800 16px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;padding:16px 18px;border:2px solid var(--wine);color:var(--wine)}
+.cta a:first-child{background:var(--wine);color:var(--page)}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.ph{width:100%;height:210px;object-fit:cover;margin:26px 0 0;border:1px solid var(--gold);padding:4px;background:var(--page)}
+
+section{padding-top:36px}
+h2{font:800 27px/1.1 var(--disp);margin:0;text-align:center}
+h3{font:500 14px/1 var(--disp);letter-spacing:.3em;text-transform:uppercase;color:var(--wine);margin:22px 0 8px;text-align:center}
+.list{list-style:none;margin:0;padding:0;text-align:center}
+.list li{font:500 22px/1.25 var(--disp);padding:7px 0}
+.list span{display:block;font:italic 400 16px/1.3 var(--body);color:var(--soft)}
+.about p{margin:0 auto 12px;max-width:30em;text-align:center}
+.fine{font-size:16px;color:var(--soft)}
+/* table tent */
+.tent{max-width:330px;margin:20px auto 0;position:relative;background:#fff;border:1px solid var(--gold);padding:18px 18px 16px;text-align:center;box-shadow:0 10px 0 -4px #e9dfc6,0 11px 0 -4px var(--gold)}
+.tent b{display:block;font:800 22px/1.1 var(--disp);color:var(--wine);margin-bottom:6px}
+.tent p{margin:0;font-size:18px}
+.words blockquote{margin:0;padding:16px 0;border-bottom:1px solid #dfd3b6;text-align:center}
+.words blockquote:first-child{border-top:1px solid #dfd3b6}
+.words p{margin:0 auto 4px;max-width:30em;font-style:italic}
+.words cite{font:500 12px/1 var(--disp);letter-spacing:.24em;text-transform:uppercase;font-style:normal;color:var(--soft)}
+table{border-collapse:collapse;width:100%;max-width:380px;margin:14px auto 0}
+td{padding:8px 0;border-bottom:1px dotted var(--gold)}
 td+td{text-align:right}
-tr.today td{font-weight:700;color:#b5451b}
-.where{text-align:center}
-.map{width:100%;height:300px;border:0;margin-top:14px}
-.fine{color:#6f6157;font-size:15px}
-footer{margin-top:50px;border-top:1px solid #ece3d6;padding:20px 0 28px;color:#6f6157;font-size:14px}
+tr.today td{font-weight:600;color:var(--wine)}
+.where p{text-align:center;margin:12px 0}
+.map{width:100%;height:280px;border:1px solid var(--gold);padding:4px;background:var(--page)}
+footer{max-width:780px;margin:0 auto;padding:18px 16px 26px;color:#cfd8cf;font:400 14px/1.5 Georgia,serif}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#fffdf8;border-top:2px solid #b5451b}
-.dock a{text-align:center;text-decoration:none;font-weight:700;padding:17px 6px;color:#b5451b}
-.dock a:first-child{background:#b5451b;color:#fff}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--cover);border-top:2px solid var(--gold)}
+.dock a{text-align:center;text-decoration:none;font:800 16px/1 var(--disp);letter-spacing:.08em;text-transform:uppercase;color:#f1e8cf;padding:19px 6px}
+.dock a:first-child{background:var(--wine)}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:68px}.ph{height:400px}
-  .cta{max-width:520px;margin-left:auto;margin-right:auto}
+  main{padding:18px 0 0}
+  .menu{padding:16px}
+  .frame{padding:50px 56px 54px}
+  h1{font-size:88px}
+  .ph{height:320px}
   .pair{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
-  .pair h2{text-align:left}.pair .rule{margin-left:0}
-  .card ul{columns:2}.card li{break-inside:avoid}
-  .words{grid-template-columns:1fr 1fr;gap:36px 50px}
+  .words{display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
+  .words blockquote:nth-child(2){border-top:1px solid #dfd3b6}
 }
 </style>
 </head>
@@ -81,55 +97,57 @@ footer p{margin:0 0 6px}
   <a href="tel:+16264010441">(626) 401-0441</a>
 </div></div>
 
-<header class="hd w">
-  <small>Valley Blvd · El Monte</small>
-  <h1>El Taquito</h1>
-  <p>A sit-down Mexican restaurant on Valley Blvd. We open at 8 in the morning, and at 7 on the weekend.</p>
-  <p class="live"><span id="open">Closed Tuesdays</span> <span id="openline"></span></p>
-</header>
-<img class="ph" src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?fm=jpg&q=72&w=1400&fit=crop" alt="Tacos with cilantro, lime and radish" />
-
-<main class="w">
-  <div class="cta">
-    <a href="tel:+16264010441">Call (626) 401-0441</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=El+Taquito+10217+Valley+Blvd+El+Monte+CA">Directions</a>
-  </div>
+<main>
+<div class="menu"><div class="frame">
+  <header class="hd c">
+    <small>Valley Blvd · El Monte</small>
+    <h1>El Taquito</h1>
+    <div class="orn" aria-hidden="true"><i></i></div>
+    <p>A sit-down Mexican restaurant on Valley Blvd. We open at 8 in the morning, and at 7 on the weekend.</p>
+    <p class="live"><span id="open">Closed Tuesdays</span> <span id="openline"></span></p>
+    <div class="cta">
+      <a href="tel:+16264010441">Call (626) 401-0441</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=El+Taquito+10217+Valley+Blvd+El+Monte+CA">Directions</a>
+    </div>
+  </header>
+  <img class="ph" src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?fm=jpg&q=72&w=1400&fit=crop" alt="Tacos with cilantro, lime and radish" />
 
   <div class="pair">
     <section>
       <h2>From the kitchen</h2>
-      <div class="rule"></div>
-      <div class="card"><div class="in">
-        <h3>Platos</h3>
-        <ul>
-          <li>Pozole</li>
-          <li>Chilaquiles</li>
-          <li>Menudo<span>served every day</span></li>
-          <li>Wet burritos</li>
-          <li>Enchiladas</li>
-          <li>Tortas</li>
-          <li>Taquitos plate</li>
-          <li>Asada burrito</li>
-        </ul>
-        <h3>Para tomar</h3>
-        <ul>
-          <li>Aguas frescas<span>sandía and other flavors</span></li>
-        </ul>
-      </div></div>
+      <div class="orn" aria-hidden="true"><i></i></div>
+      <h3>Platos</h3>
+      <ul class="list">
+        <li>Pozole</li>
+        <li>Chilaquiles</li>
+        <li>Menudo<span>served every day</span></li>
+        <li>Wet burritos</li>
+        <li>Enchiladas</li>
+        <li>Tortas</li>
+        <li>Taquitos plate</li>
+        <li>Asada burrito</li>
+      </ul>
+      <h3>Para tomar</h3>
+      <ul class="list">
+        <li>Aguas frescas<span>sandía and other flavors</span></li>
+      </ul>
     </section>
 
     <section class="about">
       <h2>When you come in</h2>
-      <div class="rule"></div>
+      <div class="orn" aria-hidden="true"><i></i></div>
       <p>We bring salsa and tostadas to the table while you look at the menu. Pozole and chilaquiles are what people write about most.</p>
-      <p>We make menudo every day. You can bring your own pot and we'll fill it for you to take home.</p>
-      <p class="fine">There's a parking lot. The seating and restroom are wheelchair accessible.</p>
+      <div class="tent">
+        <b>Menudo, every day</b>
+        <p>We make menudo every day. You can bring your own pot and we'll fill it for you to take home.</p>
+      </div>
+      <p class="fine" style="margin-top:22px">There's a parking lot. The seating and restroom are wheelchair accessible.</p>
     </section>
   </div>
 
   <section>
     <h2>What our customers say</h2>
-    <div class="rule"></div>
+    <div class="orn" aria-hidden="true"><i></i></div>
     <div class="words">
       <blockquote><p>"Menudo was so good. Reminds me of eating at my grandma's table."</p><cite>Google review</cite></blockquote>
       <blockquote><p>"They have the best tortas I've ever had and the people here are always so welcoming and attentive as well!"</p><cite>Google review</cite></blockquote>
@@ -141,7 +159,7 @@ footer p{margin:0 0 6px}
 
   <section id="visit">
     <h2>Hours</h2>
-    <div class="rule"></div>
+    <div class="orn" aria-hidden="true"><i></i></div>
     <table id="hours">
       <tr data-d="1"><td>Monday</td><td>8 am to 7 pm</td></tr>
       <tr data-d="2"><td>Tuesday</td><td>Closed</td></tr>
@@ -155,16 +173,17 @@ footer p{margin:0 0 6px}
 
   <section class="where">
     <h2>Location</h2>
-    <div class="rule"></div>
+    <div class="orn" aria-hidden="true"><i></i></div>
     <p>10217 Valley Blvd, El Monte, CA 91731</p>
     <iframe class="map" title="Map to El Taquito" src="https://www.google.com/maps?q=El+Taquito+10217+Valley+Blvd+El+Monte+CA+91731&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
+</div></div>
 </main>
 
-<footer><div class="w">
+<footer>
   <p>© 2026 El Taquito · 10217 Valley Blvd, El Monte, CA · <a href="tel:+16264010441">(626) 401-0441</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
-</div></footer>
+</footer>
 
 <div class="dock">
   <a href="tel:+16264010441">Call</a>

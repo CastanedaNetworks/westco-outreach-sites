@@ -10,60 +10,78 @@
 <meta property="og:title" content="Buddy's Garage Auto Repair" />
 <meta property="og:description" content="Auto repair in Baldwin Park" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans:wght@400;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@600;800&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&family=Libre+Barcode+39&display=swap" />
 <style>
+/* The page is a parts box: corrugated cardboard, white printed labels with ruled fields, packing tape. */
+:root{--card:#b8895a;--card2:#a97b4d;--ink:#2a1c10;--label:#fbfaf6;--rule:#1b1b1b;--go:#1c7a43;--stop:#b3261e;--or:#e2571c;
+--disp:"Sofia Sans Extra Condensed","Arial Narrow",sans-serif;--body:"IBM Plex Sans",Helvetica,sans-serif;--mono:"IBM Plex Mono",Consolas,monospace}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#f4f1e8;color:#1f2a24;font:400 17px/1.6 "Nunito Sans",Arial,sans-serif;padding-bottom:62px}
+body{margin:0;color:#1b1b1b;font:400 17px/1.6 var(--body);padding-bottom:62px;
+background:var(--card) repeating-linear-gradient(90deg,transparent 0 5px,rgba(0,0,0,.045) 5px 6px)}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:980px;margin:0 auto;padding-left:20px;padding-right:20px}
-.bar{background:#1f2a24;color:#f3efe4}
-.bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
-.brand{font:400 19px/1.1 Bungee,Impact,sans-serif;color:#f6c443;text-decoration:none}
-.brand small{display:block;font:700 11px/1.4 "Nunito Sans",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#c5cdbf}
-.tel{flex:none;background:#f6c443;color:#1f2a24;font-weight:700;text-decoration:none;padding:9px 13px;border-radius:6px;white-space:nowrap;font-size:15px}
-.hero{background:#1f2a24;color:#f3efe4}
-.hero .w{padding-top:30px;padding-bottom:30px}
-h1{font:400 30px/1.12 Bungee,Impact,sans-serif;margin:0 0 12px;color:#fff}
-.hero p{margin:0 0 20px;max-width:32em;font-size:18px}
-.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:6px;border:2px solid #f6c443;margin:0 8px 8px 0}
-.btn.y{background:#f6c443;color:#1f2a24}
-.pic{width:100%;height:230px;object-fit:cover}
-dl.facts{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;padding:22px 0;border-bottom:2px solid #1f2a24}
-dl.facts dt{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#5d6a61;font-weight:700}
-dl.facts dd{margin:2px 0 0;font-weight:700}
-#open.on{color:#1d7a46}#open.off{color:#b3261e}
-h2{font:400 22px/1.2 Bungee,Impact,sans-serif;margin:44px 0 10px}
-.fix{margin:0;padding:0;list-style:none;columns:2;column-gap:28px}
-.fix li{padding:9px 0;border-bottom:1px solid #d9d3c3;break-inside:avoid}
-.omar{display:grid;gap:22px;align-items:start}
-.omar img{border-radius:8px;width:100%;height:auto}
-.q{margin:0 0 18px;padding:0}
-.q p{margin:0;font-size:18px;line-height:1.5}
-.q p::before{content:"\201C"}.q p::after{content:"\201D"}
-.q cite{font-style:normal;font-size:14px;color:#5d6a61;font-weight:700}
-.visit{display:grid;gap:24px}
-table{border-collapse:collapse;width:100%;max-width:380px}
-td{padding:8px 0;border-bottom:1px solid #d9d3c3}
-td+td{text-align:right}
-tr.today td{font-weight:700}
-.map{width:100%;height:300px;border:0;border-radius:8px}
-.small{font-size:15px;color:#5d6a61}
-footer{margin-top:50px;background:#1f2a24;color:#a5af9f;padding:22px 0 28px;font-size:14px}
+.w{max-width:860px;margin:0 auto;padding-left:16px;padding-right:16px}
+.flap{border-bottom:3px solid var(--card2);box-shadow:0 2px 0 rgba(255,255,255,.14)}
+.flap .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px}
+.brand{font:800 30px/.9 var(--disp);text-transform:uppercase;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand small{display:block;font:500 11px/1.5 var(--mono);letter-spacing:.14em;margin-top:4px}
+.tel{flex:none;background:var(--ink);color:#fff;font:500 15px/1 var(--mono);text-decoration:none;padding:13px 12px;white-space:nowrap}
+.label{background:var(--label);border:2px solid var(--rule);margin-top:22px;position:relative}
+.label::before{content:"";position:absolute;top:-13px;left:8%;width:120px;height:24px;background:rgba(232,214,170,.78);border-left:1px dashed rgba(0,0,0,.2);border-right:1px dashed rgba(0,0,0,.2);transform:rotate(-2deg)}
+.lh{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--rule);color:#fff;padding:7px 12px;font:500 12px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.pad{padding:16px 14px}
+h1{font:800 46px/.92 var(--disp);text-transform:uppercase;margin:0 0 10px;letter-spacing:.005em}
+.btn{display:inline-block;text-decoration:none;font:800 22px/1 var(--disp);letter-spacing:.05em;text-transform:uppercase;padding:14px 20px;border:2px solid var(--rule);margin:6px 8px 0 0}
+.btn.f{background:var(--or);border-color:var(--or);color:#fff}
+.fields{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--rule)}
+.fields div{padding:9px 12px;border-bottom:1px solid var(--rule);min-width:0}
+.fields div:nth-child(odd){border-right:1px solid var(--rule)}
+.k{display:block;font:500 11px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#555}
+.fields b{font-weight:600}
+#open.on{color:var(--go)}#open.off{color:var(--stop)}
+.code{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 12px 4px;overflow:hidden}
+.code span{display:block;flex:1;min-width:0;overflow:hidden;font:400 46px/1 "Libre Barcode 39",monospace;white-space:nowrap}
+.code i{display:none;flex:none;font:500 12px/1.3 var(--mono);font-style:normal;text-align:right}
+.pic{width:100%;height:210px;object-fit:cover;border-top:2px solid var(--rule)}
+h2{font:800 30px/1 var(--disp);text-transform:uppercase;letter-spacing:.03em;margin:0}
+.contents{margin:0;padding:0;list-style:none}
+.contents li{display:flex;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid #cfcac0}
+.contents li:last-child{border-bottom:0}
+.contents li::before{content:"";flex:none;width:13px;height:13px;border:2px solid var(--rule);transform:translateY(2px)}
+.omar{display:grid;gap:18px}
+.omar img{width:100%;height:auto;border:2px solid var(--rule)}
+.slip{margin:0;padding:14px 0;border-bottom:1px dashed #8d8a83}
+.slip:last-of-type{border-bottom:0}
+.slip p{margin:0 0 4px;font-size:18px;line-height:1.5}
+.slip p::before{content:"\201C"}.slip p::after{content:"\201D"}
+.slip cite{font:500 12px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;font-style:normal;color:#555}
+.visit{display:grid;gap:20px}
+table{border-collapse:collapse;width:100%;border:1px solid var(--rule)}
+td{padding:8px 10px;border-bottom:1px solid #cfcac0}
+td+td{text-align:right;font-family:var(--mono);font-size:15px}
+tr.today td{font-weight:600;background:#ffe9d9}
+.map{width:100%;height:290px;border:2px solid var(--rule)}
+.small{font-size:15px;color:#444}
+footer{margin-top:30px;background:var(--ink);color:#d8c7b2;padding:22px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:#1f2a24}
-.dock a{text-align:center;text-decoration:none;font-weight:700;padding:17px 6px;color:#f3efe4}
-.dock a.y{background:#f6c443;color:#1f2a24}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:var(--ink)}
+.dock a{text-align:center;text-decoration:none;font:800 21px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;padding:19px 6px;color:#fff}
+.dock a.y{background:var(--or)}
+a:focus-visible{outline:3px solid var(--or);outline-offset:2px}
 @media(min-width:720px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:42px}
-  .hero{display:grid;grid-template-columns:1fr 1fr}
-  .hero .w{margin:0;padding:56px 40px 56px max(20px,calc((100vw - 980px)/2 + 20px));max-width:none}
-  .pic{height:100%;min-height:380px}
-  dl.facts{grid-template-columns:repeat(4,1fr)}
-  .omar{grid-template-columns:3fr 2fr}
-  .visit{grid-template-columns:380px 1fr}
+  .pad{padding:24px 26px}
+  .code i{display:block}
+  h1{font-size:72px}
+  .top{display:grid;grid-template-columns:1.25fr 1fr}
+  .top .pic{height:100%;min-height:300px;border-top:0;border-left:2px solid var(--rule)}
+  .fields{grid-template-columns:repeat(4,1fr)}
+  .fields div{border-right:1px solid var(--rule);border-bottom:0}
+  .fields div:last-child{border-right:0}
+  .contents{columns:2;column-gap:36px}.contents li{break-inside:avoid}
+  .omar{grid-template-columns:3fr 2fr;align-items:start}
+  .visit{grid-template-columns:360px 1fr}
 }
 </style>
 </head>
@@ -75,74 +93,97 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header class="bar"><div class="w">
-  <a class="brand" href="#top">Buddy's Garage<small>Auto repair · Baldwin Park</small></a>
+<header class="flap"><div class="w">
+  <a class="brand" href="#top">Buddy's Garage<small>AUTO REPAIR · BALDWIN PARK</small></a>
   <a class="tel" href="tel:+16266992099">(626) 699-2099</a>
 </div></header>
 
-<div class="hero" id="top">
-  <div class="w">
-    <h1>Auto repair on Arrow Highway</h1>
-    <p>Omar owns the shop and works on the cars. Bring yours in and he'll show you what's wrong with it before he fixes anything.</p>
-    <a class="btn y" href="tel:+16266992099">Call (626) 699-2099</a>
-    <a class="btn" href="#visit">Hours and map</a>
-  </div>
-  <img class="pic" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=72&w=1400&fit=crop" alt="Technician leaning in under the open hood of a car" />
-</div>
-
-<main class="w">
-  <dl class="facts">
-    <div><dt>Right now</dt><dd id="open">Mon to Sat</dd></div>
-    <div><dt>Google</dt><dd>4.6 from 38 reviews</dd></div>
-    <div><dt>Address</dt><dd>15232 Arrow Hwy, Unit B</dd></div>
-    <div><dt>Payment</dt><dd>Cards and tap to pay</dd></div>
-  </dl>
-
-  <h2>What we fix</h2>
-  <p>These are jobs our customers have written about. If yours isn't on the list, call and ask.</p>
-  <ul class="fix">
-    <li>Oil leaks</li>
-    <li>Transmission fluid leaks</li>
-    <li>Power steering leaks</li>
-    <li>Belts and worn parts</li>
-    <li>Starting problems</li>
-    <li>Electrical connections</li>
-    <li>Getting an older car ready for a long trip</li>
-  </ul>
-
-  <h2>About Omar</h2>
-  <div class="omar">
-    <div>
-      <p>Omar opened Buddy's Garage and still runs it. Customers say he takes the time to walk them through what he found, and that he shows them the old parts next to the new ones when the job is done.</p>
-      <p>One customer came in sure he needed a new starter. It turned out to be a bad electrical connection, so Omar cleaned it up and charged him less than half of what the starter would have cost.</p>
-      <p>The shop stays busy, so call before you come by and we'll tell you when we can get your car in.</p>
+<main class="w" id="top">
+  <section class="label">
+    <div class="lh"><span>Auto repair</span><span>From: Arrow Hwy</span></div>
+    <div class="top">
+      <div class="pad">
+        <h1>Auto repair on Arrow Highway</h1>
+        <p style="margin:0 0 12px">Omar owns the shop and works on the cars. Bring yours in and he'll show you what's wrong with it before he fixes anything.</p>
+        <a class="btn f" href="tel:+16266992099">Call (626) 699-2099</a>
+        <a class="btn" href="#visit">Hours and map</a>
+      </div>
+      <img class="pic" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=72&w=1400&fit=crop" alt="Technician leaning in under the open hood of a car" />
     </div>
-    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1000&fit=crop" alt="Close view of an engine and belts" width="1000" height="667" loading="lazy" />
-  </div>
-
-  <h2>From our Google reviews</h2>
-  <blockquote class="q"><p>Omar took the time to show me everything that was wrong with the van, explaining everything in detail and he made a clear step by step list of what he recommended to fix.</p><cite>Google review · 2000 GMC Safari</cite></blockquote>
-  <blockquote class="q"><p>He is nice, honest, and kind. He won't rip you off like other mechanics or try take advantage of you.</p><cite>Google review</cite></blockquote>
-  <blockquote class="q"><p>He really does go out of his way to make sure you are satisfied.</p><cite>Google review</cite></blockquote>
-
-  <h2 id="visit">Hours and location</h2>
-  <div class="visit">
-    <div>
-      <table>
-        <tr data-d="1"><td>Monday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="2"><td>Tuesday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="3"><td>Wednesday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="4"><td>Thursday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="5"><td>Friday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="6"><td>Saturday</td><td>8 am to 2 pm</td></tr>
-        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
-      </table>
-      <p>15232 Arrow Hwy, Unit B<br />Baldwin Park, CA 91706</p>
-      <p class="small">We take credit and debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
-      <a class="btn y" href="https://www.google.com/maps/dir/?api=1&destination=Buddy%27s+Garage+Auto+Repair+15232+Arrow+Hwy+Baldwin+Park+CA+91706">Get directions</a>
+    <div class="fields">
+      <div><span class="k">Right now</span><b id="open">Mon to Sat</b></div>
+      <div><span class="k">Google</span><b>4.6 from 38 reviews</b></div>
+      <div><span class="k">Address</span><b>15232 Arrow Hwy, Unit B</b></div>
+      <div><span class="k">Payment</span><b>Cards and tap to pay</b></div>
     </div>
-    <iframe class="map" title="Map to Buddy's Garage Auto Repair" src="https://www.google.com/maps?q=Buddy%27s+Garage+Auto+Repair+15232+Arrow+Hwy+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+    <div class="code" aria-hidden="true"><span style="font-size:min(8.2vw,40px);white-space:nowrap">*6266992099*</span><i>BUDDY'S GARAGE<br />UNIT B</i></div>
+  </section>
+
+  <section class="label">
+    <div class="lh"><span>Contents</span><span>7 items</span></div>
+    <div class="pad">
+      <h2>What we fix</h2>
+      <p>These are jobs our customers have written about. If yours isn't on the list, call and ask.</p>
+      <ul class="contents">
+        <li>Oil leaks</li>
+        <li>Transmission fluid leaks</li>
+        <li>Power steering leaks</li>
+        <li>Belts and worn parts</li>
+        <li>Starting problems</li>
+        <li>Electrical connections</li>
+        <li>Getting an older car ready for a long trip</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="label">
+    <div class="lh"><span>Old part / new part</span><span>Inspected by Omar</span></div>
+    <div class="pad">
+      <h2 style="margin-bottom:10px">About Omar</h2>
+      <div class="omar">
+        <div>
+          <p style="margin-top:0">Omar opened Buddy's Garage and still runs it. Customers say he takes the time to walk them through what he found, and that he shows them the old parts next to the new ones when the job is done.</p>
+          <p>One customer came in sure he needed a new starter. It turned out to be a bad electrical connection, so Omar cleaned it up and charged him less than half of what the starter would have cost.</p>
+          <p style="margin-bottom:0">The shop stays busy, so call before you come by and we'll tell you when we can get your car in.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1000&fit=crop" alt="Close view of an engine and belts" width="1000" height="667" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="label">
+    <div class="lh"><span>Packing slips</span><span>Google</span></div>
+    <div class="pad">
+      <h2>From our Google reviews</h2>
+      <blockquote class="slip"><p>Omar took the time to show me everything that was wrong with the van, explaining everything in detail and he made a clear step by step list of what he recommended to fix.</p><cite>Google review · 2000 GMC Safari</cite></blockquote>
+      <blockquote class="slip"><p>He is nice, honest, and kind. He won't rip you off like other mechanics or try take advantage of you.</p><cite>Google review</cite></blockquote>
+      <blockquote class="slip"><p>He really does go out of his way to make sure you are satisfied.</p><cite>Google review</cite></blockquote>
+    </div>
+  </section>
+
+  <section class="label" id="visit">
+    <div class="lh"><span>Deliver car to</span><span>Unit B</span></div>
+    <div class="pad">
+      <h2 style="margin-bottom:12px">Hours and location</h2>
+      <div class="visit">
+        <div>
+          <table>
+            <tr data-d="1"><td>Monday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="5"><td>Friday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>8 am to 2 pm</td></tr>
+            <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+          </table>
+          <p>15232 Arrow Hwy, Unit B<br />Baldwin Park, CA 91706</p>
+          <p class="small">We take credit and debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+          <a class="btn f" href="https://www.google.com/maps/dir/?api=1&destination=Buddy%27s+Garage+Auto+Repair+15232+Arrow+Hwy+Baldwin+Park+CA+91706">Get directions</a>
+        </div>
+        <iframe class="map" title="Map to Buddy's Garage Auto Repair" src="https://www.google.com/maps?q=Buddy%27s+Garage+Auto+Repair+15232+Arrow+Hwy+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer><div class="w">

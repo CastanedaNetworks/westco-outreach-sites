@@ -10,54 +10,73 @@
 <meta property="og:title" content="El Taco Man" />
 <meta property="og:description" content="Mexican food in El Monte" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Karla:wght@400;600;800&display=swap" />
 <style>
+/* Concept: the stand's front window. Day-glo poster board signs, lettered in marker and taped to the glass. */
+:root{
+  --glass:#1f2b33; --frame:#0f161b; --paper:#fdfcf7; --mk:#111;
+  --yellow:#fff04d; --pink:#ff6fae; --lime:#c9f24a; --orange:#ffa53a;
+  --marker:"Permanent Marker","Comic Sans MS",cursive; --body:Karla,"Trebuchet MS",sans-serif;
+}
 *{box-sizing:border-box}
-body{margin:0;background:#fff6e5;color:#2a1c10;font:400 18px/1.6 Nunito,Arial,sans-serif;padding-bottom:64px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--glass);color:var(--mk);font:400 17px/1.6 var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:980px;margin:0 auto;padding:0 20px}
-.sign{background:#167a4a;color:#fff;border-bottom:8px solid #d62828}
-.sign .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding-top:18px;padding-bottom:16px}
-h1{font:400 44px/1 "Lilita One",Impact,sans-serif;margin:0}
-.sign a{background:#fff;color:#167a4a;text-decoration:none;font-weight:700;padding:10px 16px;border-radius:10px;white-space:nowrap}
-.lead{display:grid;gap:20px;padding-top:26px}
-.lead p{margin:0 0 12px;font-size:19px}
-.open{font-weight:700}
-.open .on{color:#167a4a}.open .off{color:#d62828}
-.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px;background:#d62828;color:#fff;margin:4px 8px 4px 0}
-.btn.g{background:none;color:#167a4a;border:2px solid #167a4a}
-.lead img{width:100%;height:240px;object-fit:cover;border-radius:14px}
-section{padding-top:42px}
-h2{font:400 30px/1.1 "Lilita One",Impact,sans-serif;color:#167a4a;margin:0 0 12px}
-.chalk{background:#1d3b2c;color:#f4f1e6;border-radius:14px;padding:22px 22px 14px}
-.chalk h3{font:400 20px/1.2 "Lilita One",Impact,sans-serif;color:#ffd166;margin:0 0 4px}
-.chalk ul{margin:0 0 16px;padding:0;list-style:none}
-.chalk li{padding:5px 0;border-bottom:1px dashed #40604f}
-.chalk p{margin:0 0 8px;font-size:16px;color:#cfd8cf}
-.said{display:grid;gap:14px}
-.said figure{margin:0;background:#fff;border:2px solid #f0dfbf;border-radius:14px 14px 14px 2px;padding:16px 18px}
-.said blockquote{margin:0 0 6px}
-.said figcaption{font-size:14px;color:#7a6650}
+.w{max-width:940px;margin:0 auto;padding:0 16px}
+/* a taped card */
+.card{position:relative;padding:20px 18px 18px;box-shadow:0 2px 0 rgba(0,0,0,.35)}
+.card::before,.card::after{content:"";position:absolute;top:-9px;width:64px;height:20px;background:rgba(255,255,255,.55);border-left:1px dashed rgba(0,0,0,.15);border-right:1px dashed rgba(0,0,0,.15)}
+.card::before{left:14px;transform:rotate(-4deg)}
+.card::after{right:14px;transform:rotate(3deg)}
+.y{background:var(--yellow)}.pk{background:var(--pink)}.lm{background:var(--lime)}.or{background:var(--orange)}.wh{background:var(--paper)}
+
+.name{margin-top:26px;text-align:center}
+.name h1{font:400 50px/1 var(--marker);margin:0}
+.name a{display:inline-block;margin-top:8px;font:800 20px/1 var(--body);padding:10px 4px;text-decoration-thickness:3px;text-underline-offset:4px}
+.lead{display:grid;gap:22px;margin-top:26px}
+.lead .card p{margin:0 0 14px}
+.open{font-weight:800}
+#open{font:400 26px/1.2 var(--marker);display:block;margin-bottom:10px}
+#open.off{text-decoration:underline wavy;text-decoration-thickness:2px;text-underline-offset:5px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 18px;border:3px solid var(--mk);background:var(--mk);color:#fff;margin:0 8px 8px 0;min-height:48px}
+.btn.g{background:transparent;color:var(--mk)}
+.btn:focus-visible,.dock a:focus-visible,.name a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.lead img{width:100%;height:230px;object-fit:cover;border:8px solid var(--paper);box-shadow:0 2px 0 rgba(0,0,0,.35)}
+
+section{padding-top:38px}
+h2{font:400 30px/1.05 var(--marker);margin:0 0 12px}
+.cols{display:grid;gap:34px}
+.menu h3{font:400 23px/1 var(--marker);margin:14px 0 6px;display:inline-block;border-bottom:4px solid var(--mk);padding-bottom:3px}
+.menu h3:first-of-type{margin-top:0}
+.menu ul{margin:0 0 6px;padding:0;list-style:none}
+.menu li{padding:7px 0;border-bottom:2px dashed rgba(0,0,0,.35);font-weight:800;font-size:18px}
+.menu p{margin:12px 0 0;font-weight:600}
+.said figure{margin:0 0 14px;padding:0 0 14px;border-bottom:2px dashed rgba(0,0,0,.25)}
+.said blockquote{margin:0 0 4px;font-size:18px;line-height:1.5}
+.said figcaption{font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.fine{font-size:15px;margin:10px 0 0}
 .hrs{display:grid;gap:22px}
-table{border-collapse:collapse;width:100%;max-width:420px;background:#fff;border-radius:12px;overflow:hidden}
-td{padding:9px 14px;border-bottom:1px solid #f0dfbf}
+table{border-collapse:collapse;width:100%}
+td{padding:9px 0;border-bottom:2px dashed rgba(0,0,0,.3);font-weight:600}
 td+td{text-align:right}
-tr.today td{font-weight:700;background:#ffe9b8}
-tr.shut td{color:#8b7a66}
-.map{width:100%;height:300px;border:0;border-radius:14px}
-.fine{font-size:16px;color:#5d4a36}
-footer{margin-top:48px;background:#2a1c10;color:#e6d8c2;padding:20px 0 28px;font-size:14px}
+tr.shut td{opacity:.7}
+tr.today td{font-weight:800;background:rgba(255,255,255,.55);opacity:1}
+tr.today td:first-child{padding-left:8px}tr.today td:last-child{padding-right:8px}
+.map{width:100%;height:290px;border:8px solid var(--paper);box-shadow:0 2px 0 rgba(0,0,0,.35)}
+footer{margin-top:44px;background:var(--frame);color:#c4ced4;padding:20px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:8px;padding:8px;background:#fff6e5;border-top:2px solid #167a4a}
-.dock a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px 6px;border-radius:10px;background:#d62828;color:#fff}
-.dock a+a{background:#167a4a}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--frame)}
+.dock a{text-align:center;text-decoration:none;font-weight:800;color:var(--mk);background:var(--yellow);padding:18px 6px}
+.dock a + a{background:var(--lime)}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:58px}
-  .lead{grid-template-columns:1fr 1fr;align-items:center;gap:40px}.lead img{height:340px}
-  .cols{display:grid;grid-template-columns:5fr 4fr;gap:40px;align-items:start}
-  .chalk ul{columns:2;column-gap:30px}.chalk li{break-inside:avoid}
+  .name{max-width:520px;margin-left:auto;margin-right:auto;transform:rotate(-1.2deg)}
+  .name h1{font-size:76px}
+  .lead{grid-template-columns:1fr 1fr;align-items:center;gap:36px}
+  .lead img{height:330px;transform:rotate(1deg)}
+  .cols{grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .menu ul{columns:2;column-gap:28px}.menu li{break-inside:avoid}
   .hrs{grid-template-columns:420px 1fr;align-items:start}
 }
 </style>
@@ -70,14 +89,14 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header class="sign"><div class="w">
+<header class="w"><div class="card y name">
   <h1>El Taco Man</h1>
   <a href="tel:+16264530112">(626) 453-0112</a>
 </div></header>
 
 <main class="w">
   <div class="lead">
-    <div>
+    <div class="card wh">
       <p>Street tacos and burritos on Magnolia St in El Monte. Order at the front and we'll bring it out, or get it to go.</p>
       <p class="open"><span id="open">Tuesday to Saturday</span> <span id="openline">11 am to 6:30 pm</span></p>
       <a class="btn" href="tel:+16264530112">Call (626) 453-0112</a>
@@ -87,30 +106,28 @@ footer p{margin:0 0 6px}
   </div>
 
   <section class="cols">
-    <div>
+    <div class="card pk menu">
       <h2>The menu</h2>
-      <div class="chalk">
-        <h3>Tacos</h3>
-        <ul>
-          <li>Asada</li>
-          <li>Carnitas</li>
-          <li>Fish</li>
-          <li>Shrimp</li>
-        </ul>
-        <h3>Burritos and more</h3>
-        <ul>
-          <li>Asada burrito</li>
-          <li>Wet burrito (burrito mojado)</li>
-          <li>Birria wet burrito</li>
-          <li>Asada torta</li>
-          <li>Fried quesadillas</li>
-          <li>Asada quesadilla</li>
-        </ul>
-        <p>Tacos come with red and green salsa. Ask for both.</p>
-      </div>
+      <h3>Tacos</h3>
+      <ul>
+        <li>Asada</li>
+        <li>Carnitas</li>
+        <li>Fish</li>
+        <li>Shrimp</li>
+      </ul>
+      <h3>Burritos and more</h3>
+      <ul>
+        <li>Asada burrito</li>
+        <li>Wet burrito (burrito mojado)</li>
+        <li>Birria wet burrito</li>
+        <li>Asada torta</li>
+        <li>Fried quesadillas</li>
+        <li>Asada quesadilla</li>
+      </ul>
+      <p>Tacos come with red and green salsa. Ask for both.</p>
     </div>
-    <div>
-      <h2 style="margin-top:42px">People keep saying</h2>
+    <div class="card wh">
+      <h2>People keep saying</h2>
       <div class="said">
         <figure><blockquote>"Omg the best wet burrito ever! I got the birria one, super delicious and well packed with flavor and meat!"</blockquote><figcaption>Google review</figcaption></figure>
         <figure><blockquote>"The lady who took our order was super sweet and the food was delicious! We ordered the asada torta with everything on it."</blockquote><figcaption>Google review</figcaption></figure>
@@ -121,9 +138,9 @@ footer p{margin:0 0 6px}
   </section>
 
   <section id="visit">
-    <h2>Hours and where to find us</h2>
     <div class="hrs">
-      <div>
+      <div class="card lm">
+        <h2>Hours and where to find us</h2>
         <table id="hours">
           <tr data-d="1" class="shut"><td>Monday</td><td>Closed</td></tr>
           <tr data-d="2"><td>Tuesday</td><td>11 am to 6:30 pm</td></tr>
@@ -133,9 +150,9 @@ footer p{margin:0 0 6px}
           <tr data-d="6"><td>Saturday</td><td>11 am to 6:30 pm</td></tr>
           <tr data-d="0" class="shut"><td>Sunday</td><td>Closed</td></tr>
         </table>
-        <p>11741 Magnolia St, El Monte, CA 91732</p>
+        <p style="font-weight:800">11741 Magnolia St, El Monte, CA 91732</p>
         <p class="fine">Eat inside or at the tables outside, take it to go, or get it delivered. We take credit and debit cards. There's a parking lot, and the entrance and seating are wheelchair accessible.</p>
-        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=El+Taco+Man+11741+Magnolia+St+El+Monte+CA">Get directions</a>
+        <p style="margin:14px 0 0"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=El+Taco+Man+11741+Magnolia+St+El+Monte+CA">Get directions</a></p>
       </div>
       <iframe class="map" title="Map to El Taco Man" src="https://www.google.com/maps?q=El+Taco+Man+11741+Magnolia+St+El+Monte+CA+91732&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>

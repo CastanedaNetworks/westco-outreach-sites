@@ -10,56 +10,82 @@
 <meta property="og:title" content="Williz Automotive Repair" />
 <meta property="og:description" content="Auto repair in Baldwin Park" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Roboto:wght@400;500&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Barlow:wght@400;600;700&display=swap" />
 <style>
+/* Concept: the painted markings on a shop floor. Sealed black concrete, white bay lines with painted corners,
+   stencil lettering, and one band of red and white hazard stripe. Colors are the three in the Williz logo. */
+:root{--floor:#0d0d0e;--slab:#17181a;--paint:#f4f2ec;--soft:#b5b3ad;--red:#d21f26;--seam:#2a2b2e;
+  --disp:"Allerta Stencil","Arial Black",sans-serif;--body:Barlow,Verdana,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#0a0a0a;color:#f1f1f1;font:400 17px/1.6 Roboto,Arial,sans-serif;padding-bottom:60px}
+body{margin:0;background:var(--floor);color:var(--paint);font:400 18px/1.55 var(--body);padding-bottom:64px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:920px;margin:0 auto;padding:0 20px}
-.top{border-bottom:1px solid #262626}
-.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px}
-.top b{min-width:0;font:700 21px/1 Teko,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase}
-.top a{flex:none;background:#d21f26;color:#fff;text-decoration:none;font:700 19px/1 Teko,Impact,sans-serif;letter-spacing:.03em;padding:10px 10px 7px;white-space:nowrap}
-.hero{text-align:center;padding:26px 0 30px;border-bottom:3px solid #d21f26}
-.hero img{width:200px;height:200px;margin:0 auto}
-h1{font:700 38px/1 Teko,Impact,sans-serif;letter-spacing:.03em;text-transform:uppercase;margin:6px 0 4px}
-.hero p{margin:0 auto;color:#c4c4c4;max-width:28em}
-#open{display:inline-block;margin-top:14px;font:500 20px/1 Teko,Impact,sans-serif;letter-spacing:.08em;text-transform:uppercase}
-#open.on{color:#63d697}#open.off{color:#ff7a80}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px auto 0;max-width:420px}
-.btns a{min-width:0;text-align:center;text-decoration:none;font:700 21px/1 Teko,Impact,sans-serif;letter-spacing:.05em;text-transform:uppercase;padding:15px 6px 12px;border:2px solid #d21f26}
-.btns a.r{background:#d21f26}
-h2{font:700 30px/1 Teko,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#ff4a50;margin:44px 0 10px}
-.jobs{margin:0;padding:0;list-style:none}
-.jobs li{padding:12px 0;border-bottom:1px solid #262626}
-.jobs b{display:block;font:700 22px/1.15 Teko,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase}
-.jobs span{color:#c4c4c4}
-.ph{width:100%;height:230px;object-fit:cover;margin-top:36px}
-.revs blockquote{margin:0 0 14px;background:#161616;padding:18px 20px}
-.revs p{margin:0 0 6px}
-.revs cite{font-style:normal;font-size:14px;color:#9c9c9c}
+.w{max-width:940px;margin:0 auto;padding:0 18px}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.top b{font:400 17px/1.1 var(--disp);text-transform:uppercase;letter-spacing:.04em}
+.top a{flex:none;font-weight:700;text-decoration:none;background:var(--red);padding:11px 13px;white-space:nowrap}
+.stripe{height:14px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--paint) 14px 28px)}
+/* a painted bay: four white corners */
+.bay{position:relative;padding:26px 18px;margin-top:26px;
+  background:
+    linear-gradient(var(--paint),var(--paint)) left top/34px 5px no-repeat,
+    linear-gradient(var(--paint),var(--paint)) left top/5px 34px no-repeat,
+    linear-gradient(var(--paint),var(--paint)) right top/34px 5px no-repeat,
+    linear-gradient(var(--paint),var(--paint)) right top/5px 34px no-repeat,
+    linear-gradient(var(--paint),var(--paint)) left bottom/34px 5px no-repeat,
+    linear-gradient(var(--paint),var(--paint)) left bottom/5px 34px no-repeat,
+    linear-gradient(var(--paint),var(--paint)) right bottom/34px 5px no-repeat,
+    linear-gradient(var(--paint),var(--paint)) right bottom/5px 34px no-repeat,
+    var(--slab)}
+.hero{text-align:center}
+.hero img{width:180px;height:180px;margin:0 auto}
+h1{font:400 27px/1.1 var(--disp);text-transform:uppercase;letter-spacing:.03em;margin:10px 0 6px}
+.hero p{margin:0;color:var(--soft)}
+#open{display:inline-block;margin-top:14px;font:400 15px/1.3 var(--disp);letter-spacing:.08em;text-transform:uppercase;border:2px solid var(--paint);padding:8px 12px}
+#open.off{border-color:var(--red);color:#ff8f93}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.btns a{text-align:center;text-decoration:none;font:400 19px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;padding:17px 6px;border:2px solid var(--paint)}
+.btns a.r{background:var(--red);border-color:var(--red)}
+h2{font:400 24px/1.1 var(--disp);text-transform:uppercase;letter-spacing:.04em;margin:0 0 12px}
+main > h2{margin-top:44px}
+main p a{text-decoration-color:var(--red);text-underline-offset:3px}
+.jobs{list-style:none;margin:0;padding:0}
+.jobs li{padding:13px 0 13px 16px;border-bottom:1px solid var(--seam);box-shadow:inset 0 0 0 0 transparent;position:relative}
+.jobs li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:8px;background:var(--red)}
+.jobs b{display:block;font-weight:700;font-size:20px}
+.jobs span{color:var(--soft)}
+.ph{width:100%;height:220px;object-fit:cover;margin-top:30px}
+.revs blockquote{margin:0;padding:14px 0;border-top:1px solid var(--seam)}
+.revs p{margin:0 0 4px;font-size:19px;line-height:1.5}
+cite{font-style:normal;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.soft{color:var(--soft);font-size:16px}
+.visit{display:grid;gap:22px}
 table{border-collapse:collapse;width:100%}
-td{padding:8px 0;border-bottom:1px solid #262626}
+td{padding:9px 0;border-bottom:1px solid var(--seam)}
 td+td{text-align:right}
-tr.today td{color:#fff;font-weight:500}
-tr.today td:first-child::after{content:" · today";color:#ff4a50}
-.map{width:100%;height:300px;border:0;margin-top:14px}
-.soft{color:#9c9c9c;font-size:15px}
-footer{margin-top:48px;border-top:1px solid #262626;padding:20px 0 28px;color:#9c9c9c;font-size:14px}
+tr.today td{font-weight:700;color:#fff;box-shadow:inset 0 -3px 0 var(--red)}
+.map{width:100%;height:300px;border:0}
+footer{margin-top:50px;padding:20px 0 28px;color:var(--soft);font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#0a0a0a;border-top:2px solid #d21f26}
-.dock a{text-align:center;text-decoration:none;font:700 23px/1 Teko,Impact,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:18px 6px 14px}
-.dock a:first-child{background:#d21f26}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--slab);border-top:2px solid var(--paint)}
+.dock a{text-align:center;text-decoration:none;font:400 16px/1 var(--disp);letter-spacing:.02em;text-transform:uppercase;padding:19px 6px}
+.dock a:first-child{background:var(--red)}
+a:focus-visible{outline:3px solid #fff;outline-offset:2px}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:54px}
+  .top b{font-size:20px}
+  .bay{padding:40px 44px}
+  .hero{display:grid;grid-template-columns:220px 1fr;gap:36px;text-align:left;align-items:center}
+  .hero img{width:220px;height:220px}
+  h1{font-size:44px}
+  .btns{max-width:380px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .cols .bay{margin-top:26px}
   .ph{height:320px}
-  .jobs li{display:flex;gap:14px}.jobs b{flex:none;width:9em}
-  .revs{display:grid;grid-template-columns:1fr 1fr;gap:14px}.revs blockquote{margin:0}.revs h2,.revs .soft{grid-column:1/-1}
-  .visit{display:grid;grid-template-columns:1fr 1fr;gap:36px}
-  .map{margin-top:0;height:330px}
+  .revs .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+  .visit{grid-template-columns:1fr 1fr;gap:40px}
+  .map{height:100%;min-height:360px}
 }
 </style>
 </head>
@@ -72,39 +98,51 @@ footer p{margin:0 0 6px}
 <!-- PREVIEW BANNER END -->
 
 <header class="top"><div class="w"><b>Williz Automotive</b><a href="tel:+16615268482">(661) 526-8482</a></div></header>
+<div class="stripe"></div>
 
-<div class="hero"><div class="w">
-  <img src="logo.jpg" alt="Williz Automotive logo" width="200" height="200" />
-  <h1>Williz Automotive Repair</h1>
-  <p>5154 Maine Ave · Baldwin Park</p>
-  <span id="open">Open Monday to Saturday</span>
-  <div class="btns">
-    <a class="r" href="tel:+16615268482">Call</a>
-    <a href="#visit">Hours</a>
+<div class="w">
+  <div class="bay hero">
+    <img src="logo.jpg" alt="Williz Automotive logo" width="200" height="200" />
+    <div>
+      <h1>Williz Automotive Repair</h1>
+      <p>5154 Maine Ave · Baldwin Park</p>
+      <span id="open">Open Monday to Saturday</span>
+      <div class="btns">
+        <a class="r" href="tel:+16615268482">Call</a>
+        <a href="#visit">Hours</a>
+      </div>
+    </div>
   </div>
-</div></div>
+</div>
 
 <main class="w">
-  <h2>Auto repair on Maine Ave</h2>
-  <p>Call us at <a href="tel:+16615268482">(661) 526-8482</a> and tell us the year, make and model and what's going on with it. We'll tell you when to bring it in.</p>
-  <p>We post our work on Instagram at <a href="https://instagram.com/williz_automotive" rel="noopener">@williz_automotive</a> if you want to see what comes through the shop.</p>
-
-  <h2>Work we do</h2>
-  <ul class="jobs">
-    <li><b>Diagnosis</b><span>Leaks and warning lights. We test for the problem and track it down.</span></li>
-    <li><b>Air conditioning</b><span>A/C that's blowing warm or not blowing at all.</span></li>
-    <li><b>Clutches</b><span>Clutch problems on manual cars.</span></li>
-    <li><b>General repair</b><span>Older cars and newer ones. Call and ask about yours.</span></li>
-  </ul>
+  <div class="cols">
+    <section class="bay">
+      <h2>Auto repair on Maine Ave</h2>
+      <p>Call us at <a href="tel:+16615268482">(661) 526-8482</a> and tell us the year, make and model and what's going on with it. We'll tell you when to bring it in.</p>
+      <p style="margin-bottom:0">We post our work on Instagram at <a href="https://instagram.com/williz_automotive" rel="noopener">@williz_automotive</a> if you want to see what comes through the shop.</p>
+    </section>
+    <section class="bay">
+      <h2>Work we do</h2>
+      <ul class="jobs">
+        <li><b>Diagnosis</b><span>Leaks and warning lights. We test for the problem and track it down.</span></li>
+        <li><b>Air conditioning</b><span>A/C that's blowing warm or not blowing at all.</span></li>
+        <li><b>Clutches</b><span>Clutch problems on manual cars.</span></li>
+        <li><b>General repair</b><span>Older cars and newer ones. Call and ask about yours.</span></li>
+      </ul>
+    </section>
+  </div>
 
   <img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
 
-  <section class="revs">
+  <section class="revs" style="margin-top:44px">
     <h2>From our Google reviews</h2>
-    <blockquote><p>"He works so hard and finds the problems and fixes with much respect."</p><cite>Google review · two Mustangs</cite></blockquote>
-    <blockquote><p>"A honest person to talk to about your car problems will not give you the runaround and has great prices"</p><cite>Google review</cite></blockquote>
-    <blockquote><p>"They know exactly what they are doing and they get the job done in a timely manner."</p><cite>Google review</cite></blockquote>
-    <blockquote><p>"Honest and always gives you the best price possible."</p><cite>Google review</cite></blockquote>
+    <div class="grid">
+      <blockquote><p>"He works so hard and finds the problems and fixes with much respect."</p><cite>Google review · two Mustangs</cite></blockquote>
+      <blockquote><p>"A honest person to talk to about your car problems will not give you the runaround and has great prices"</p><cite>Google review</cite></blockquote>
+      <blockquote><p>"They know exactly what they are doing and they get the job done in a timely manner."</p><cite>Google review</cite></blockquote>
+      <blockquote><p>"Honest and always gives you the best price possible."</p><cite>Google review</cite></blockquote>
+    </div>
     <p class="soft">Rated 4.8 on Google from 77 reviews.</p>
   </section>
 
@@ -127,6 +165,7 @@ footer p{margin:0 0 6px}
   </div>
 </main>
 
+<div class="stripe" style="margin-top:50px"></div>
 <footer><div class="w">
   <p>© 2026 Williz Automotive Repair · 5154 Maine Ave, Baldwin Park, CA · <a href="tel:+16615268482">(661) 526-8482</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>

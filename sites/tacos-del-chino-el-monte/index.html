@@ -10,59 +10,78 @@
 <meta property="og:title" content="Tacos Del Chino" />
 <meta property="og:description" content="Tacos in El Monte, open late" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Work+Sans:wght@400;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bevan&family=Kalam:wght@700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" />
 <style>
+/* Concept: the green guest check pad from the counter. Printed parts are green ink, the order is written in pen. */
+:root{
+  --counter:#22302a; --pad:#e3efdc; --ink:#1c5a34; --rule:#8fb898; --pen:#16233f; --red:#c2281c; --text:#17271d;
+  --print:Bevan,Georgia,serif; --hand:Kalam,"Comic Sans MS",cursive; --body:"Atkinson Hyperlegible",Verdana,sans-serif;
+}
 *{box-sizing:border-box}
-body{margin:0;background:#161210;color:#f6efe6;font:400 17px/1.6 "Work Sans",Arial,sans-serif;padding-bottom:60px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--counter);color:var(--text);font:400 17px/1.6 var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:1000px;margin:0 auto;padding:0 20px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:12px;padding-bottom:12px}
-.top b{font:400 19px/1.1 "Bowlby One",Impact,sans-serif;color:#ffcf33}
-.top a{flex:none;text-decoration:none;font-weight:600;border:2px solid #ffcf33;color:#ffcf33;padding:8px 12px;border-radius:6px;font-size:15px;white-space:nowrap}
-.hero{display:grid}
-.hero img{width:100%;height:240px;object-fit:cover}
-.hero .txt{padding:24px 20px 6px}
-h1{font:400 38px/1.02 "Bowlby One",Impact,sans-serif;margin:0 0 10px;color:#ffcf33}
-.hero p{margin:0 0 14px;max-width:28em}
-.now{margin:0 0 16px;font-weight:600}
-.now .on{color:#7ddc8b}.now .off{color:#ff9d8a}
-.btn{display:inline-block;text-decoration:none;font-weight:600;padding:14px 20px;border-radius:6px;background:#e4572e;color:#fff;margin:0 8px 8px 0}
-.btn.o{background:none;border:2px solid #e4572e}
-section{padding-top:46px}
-h2{font:400 25px/1.1 "Bowlby One",Impact,sans-serif;color:#ffcf33;margin:0 0 12px}
-.menu{display:grid;gap:26px}
-.menu h3{margin:0 0 8px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#c3b6a8;font-weight:600}
-.meats{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-.meats li{border:1px solid #5b4a3d;border-radius:99px;padding:6px 14px;font-weight:600}
-.plain{margin:0;padding:0;list-style:none;font-size:19px;font-weight:600}
-.plain li{padding:6px 0;border-bottom:1px solid #3a2f28}
-.note{color:#c3b6a8;font-size:15px;margin:14px 0 0}
-.quotes{display:grid;gap:22px}
-blockquote{margin:0;padding-left:44px;position:relative}
-blockquote::before{content:"\201C";position:absolute;left:0;top:-12px;font:400 60px/1 "Bowlby One",Impact,sans-serif;color:#e4572e}
-blockquote p{margin:0 0 4px;font-size:18px;line-height:1.5}
-blockquote cite{font-style:normal;font-size:14px;color:#c3b6a8}
-.days{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0;padding:0;list-style:none}
-.days li{border:1px solid #3a2f28;border-radius:6px;padding:10px 12px}
-.days b{display:block}
-.days span{color:#c3b6a8;font-size:15px}
-.days li.today{border-color:#ffcf33;background:#241d18}
-.days li.today span{color:#f6efe6}
-.map{width:100%;height:290px;border:0;border-radius:6px;margin-top:18px}
-footer{margin-top:50px;border-top:1px solid #3a2f28;padding:20px 0 28px;color:#b3a698;font-size:14px}
+.pad{max-width:760px;margin:0 auto;background:var(--pad);position:relative}
+.in{padding:0 18px}
+.print{font:400 12px/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:700}
+
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding:20px 18px 10px;border-bottom:3px double var(--ink)}
+.top h1{margin:0;font:400 30px/1 var(--print);color:var(--ink)}
+.top h1 small{display:block;font:700 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;margin-bottom:7px}
+.no{flex:none;text-align:right;font:700 20px/1 var(--body);color:var(--red);letter-spacing:.04em}
+.no span{display:block;margin-bottom:4px}
+
+.fields{display:grid;grid-template-columns:1fr 1fr;border-bottom:2px solid var(--ink)}
+.f{padding:8px 12px 9px;border-top:1px solid var(--rule);min-width:0}
+.f:nth-child(odd){border-right:1px solid var(--rule)}
+.f.wide{grid-column:1 / -1;border-right:0}
+.f b{display:block;font:700 21px/1.25 var(--hand);color:var(--pen);overflow-wrap:anywhere}
+.f a{text-decoration-thickness:2px;text-underline-offset:3px}
+.f b.on{color:#136b33}.f b.off{color:var(--red)}
+
+.say{padding:18px 18px 4px}
+.say h2{font:400 25px/1.15 var(--print);color:var(--ink);margin:0 0 8px}
+.say p{margin:0 0 16px;max-width:34em}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 18px;border-radius:3px;border:2px solid var(--ink);color:var(--ink);margin:0 8px 8px 0;min-height:48px}
+.btn.f1{background:var(--ink);color:#fff}
+.btn:focus-visible,.dock a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.strip{width:100%;height:190px;object-fit:cover;margin-top:14px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+
+section{padding:26px 18px 0}
+h2.h{font:400 22px/1.1 var(--print);color:var(--ink);margin:0 0 4px}
+/* ruled order lines */
+.lines{list-style:none;margin:8px 0 0;padding:0;border-top:2px solid var(--ink)}
+.lines li{display:flex;align-items:center;gap:12px;min-height:46px;border-bottom:1px solid var(--rule);font:700 22px/1.2 var(--hand);color:var(--pen)}
+.lines li::before{content:"";flex:none;width:20px;height:20px;border:2px solid var(--ink);background:#f4faf0}
+.cols{display:grid;gap:22px}
+.note{font-size:15px;margin:10px 0 0}
+.total{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:22px;padding:12px 0;border-top:3px double var(--ink);border-bottom:3px double var(--ink)}
+.total a{font:700 23px/1.2 var(--hand);color:var(--pen)}
+
+.q{margin:0;padding:12px 0;border-bottom:1px solid var(--rule)}
+.q:first-of-type{border-top:2px solid var(--ink);margin-top:8px}
+.q p{margin:0 0 3px;font-size:17px}
+.days{list-style:none;margin:8px 0 0;padding:0;border-top:2px solid var(--ink)}
+.days li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule)}
+.days li.today{background:#fff7a8;font-weight:700;margin:0 -8px;padding-left:8px;padding-right:8px}
+.map{width:100%;height:280px;border:2px solid var(--ink);margin-top:14px}
+.thanks{text-align:center;padding:26px 18px 22px;font:400 22px/1.2 var(--print);color:var(--ink)}
+.tear{height:12px;background:linear-gradient(135deg,var(--pad) 6px,transparent 0) 0 0/12px 12px repeat-x,linear-gradient(225deg,var(--pad) 6px,transparent 0) 0 0/12px 12px repeat-x;background-color:var(--counter)}
+footer{max-width:760px;margin:0 auto;padding:16px 18px 26px;color:#c0cdc4;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;border-top:2px solid #ffcf33;background:#161210}
-.dock a{text-align:center;text-decoration:none;font-weight:600;padding:16px 6px}
-.dock a:first-child{background:#ffcf33;color:#161210}
-@media(min-width:760px){
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--ink);border-top:3px solid var(--red)}
+.dock a{text-align:center;text-decoration:none;font-weight:700;color:#fff;padding:18px 6px}
+.dock a:first-child{background:var(--red)}
+@media(min-width:720px){
   body{padding-bottom:0}.dock{display:none}
-  .hero{grid-template-columns:1fr 1fr;align-items:center;max-width:1000px;margin:0 auto}
-  .hero img{height:420px;order:2;border-radius:6px}
-  h1{font-size:54px}
-  .menu{grid-template-columns:1fr 1fr;gap:50px}
-  .quotes{grid-template-columns:1fr 1fr;gap:30px 50px}
-  .days{grid-template-columns:repeat(4,1fr)}
+  main{padding-top:26px}
+  .top{padding:30px 36px 12px}.top h1{font-size:46px}
+  .in,.say,section{padding-left:36px;padding-right:36px}
+  .say h2{font-size:32px}
+  .strip{height:260px}
+  .cols{grid-template-columns:1fr 1fr;gap:40px}
+  footer{padding-left:36px;padding-right:36px}
 }
 </style>
 </head>
@@ -74,29 +93,31 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<div class="w top">
-  <b>Tacos Del Chino</b>
-  <a href="tel:+16264528919">(626) 452-8919</a>
-</div>
-
-<header class="hero">
-  <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?fm=jpg&q=72&w=1400&fit=crop" alt="Row of beef tacos topped with onion and cilantro" />
-  <div class="txt">
-    <h1>Tacos, burritos and nachos on Elliott Ave</h1>
-    <p>We're a taco shop in El Monte. Eat here or take it to go. We stay open until 10, and until 11 on Friday and Saturday.</p>
-    <p class="now"><span id="open">Closed Tuesdays</span> <span id="openline"></span></p>
-    <a class="btn" href="tel:+16264528919">Call (626) 452-8919</a>
-    <a class="btn o" href="https://www.google.com/maps/search/?api=1&query=Tacos+Del+Chino+12301+Elliott+Ave+El+Monte+CA">Directions</a>
+<main>
+<div class="pad">
+  <header class="top">
+    <h1><small>Guest check</small>Tacos Del Chino</h1>
+    <p class="no" style="margin:0"><span class="print">No.</span>12301</p>
+  </header>
+  <div class="fields">
+    <div class="f"><span class="print">Phone</span><b><a href="tel:+16264528919">(626) 452-8919</a></b></div>
+    <div class="f"><span class="print">Right now</span><b id="open">Closed Tuesdays</b></div>
+    <div class="f wide"><span class="print">Note</span><b id="openline">12301 Elliott Ave, El Monte</b></div>
   </div>
-</header>
 
-<main class="w">
+  <div class="say">
+    <h2>Tacos, burritos and nachos on Elliott Ave</h2>
+    <p>We're a taco shop in El Monte. Eat here or take it to go. We stay open until 10, and until 11 on Friday and Saturday.</p>
+    <a class="btn f1" href="tel:+16264528919">Call (626) 452-8919</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Tacos+Del+Chino+12301+Elliott+Ave+El+Monte+CA">Directions</a>
+  </div>
+  <img class="strip" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?fm=jpg&q=72&w=1400&fit=crop" alt="Row of beef tacos topped with onion and cilantro" />
+
   <section>
-    <h2>On the menu</h2>
-    <div class="menu">
+    <h2 class="h">On the menu</h2>
+    <div class="cols">
       <div>
-        <h3>Pick your meat</h3>
-        <ul class="meats">
+        <ul class="lines" aria-label="Pick your meat">
           <li>Carne asada</li>
           <li>Al pastor</li>
           <li>Cabeza</li>
@@ -104,56 +125,59 @@ footer p{margin:0 0 6px}
           <li>Tripas</li>
           <li>Chicken</li>
         </ul>
+        <p class="print" style="margin:8px 0 0">Pick your meat</p>
         <p class="note">Carne asada is what our reviews mention most. You can go half and half on the nachos.</p>
       </div>
       <div>
-        <h3>How you want it</h3>
-        <ul class="plain">
+        <ul class="lines" aria-label="How you want it">
           <li>Tacos</li>
           <li>Burritos</li>
           <li>Nachos</li>
         </ul>
+        <p class="print" style="margin:8px 0 0">How you want it</p>
         <p class="note">Salsa comes with your order, and there are pickled onions and carrots on the side.</p>
       </div>
     </div>
+    <p class="total"><span class="print">To order</span><a href="tel:+16264528919">call (626) 452-8919</a></p>
   </section>
 
   <section>
-    <h2>What customers wrote</h2>
-    <div class="quotes">
-      <blockquote><p>The service is really good the carne asada nacho is the BOMB n they not cheap with their portion.</p><cite>Google review</cite></blockquote>
-      <blockquote><p>I had the nachos with half cabeza (cooked perfectly) and half al pastor (nice slight spice to it).</p><cite>Google review</cite></blockquote>
-      <blockquote><p>Good quality, no frills, taco shop. The meat was fresh and everything was delicious.</p><cite>Google review</cite></blockquote>
-      <blockquote><p>My mom love the chicken burrito with everything inside.</p><cite>Google review</cite></blockquote>
-    </div>
+    <h2 class="h">What customers wrote</h2>
+    <blockquote class="q"><p>The service is really good the carne asada nacho is the BOMB n they not cheap with their portion.</p><cite class="print">Google review</cite></blockquote>
+    <blockquote class="q"><p>I had the nachos with half cabeza (cooked perfectly) and half al pastor (nice slight spice to it).</p><cite class="print">Google review</cite></blockquote>
+    <blockquote class="q"><p>Good quality, no frills, taco shop. The meat was fresh and everything was delicious.</p><cite class="print">Google review</cite></blockquote>
+    <blockquote class="q"><p>My mom love the chicken burrito with everything inside.</p><cite class="print">Google review</cite></blockquote>
     <p class="note">4.5 on Google from 438 reviews.</p>
   </section>
 
   <section id="visit">
-    <h2>Hours</h2>
+    <h2 class="h">Hours</h2>
     <ul class="days" id="hours">
-      <li data-d="1"><b>Monday</b><span>10:30 am to 10 pm</span></li>
-      <li data-d="2"><b>Tuesday</b><span>Closed</span></li>
-      <li data-d="3"><b>Wednesday</b><span>10:30 am to 10 pm</span></li>
-      <li data-d="4"><b>Thursday</b><span>10:30 am to 10 pm</span></li>
-      <li data-d="5"><b>Friday</b><span>10:30 am to 11 pm</span></li>
-      <li data-d="6"><b>Saturday</b><span>10:30 am to 11 pm</span></li>
-      <li data-d="0"><b>Sunday</b><span>10:30 am to 10 pm</span></li>
+      <li data-d="1"><span>Monday</span><span>10:30 am to 10 pm</span></li>
+      <li data-d="2"><span>Tuesday</span><span>Closed</span></li>
+      <li data-d="3"><span>Wednesday</span><span>10:30 am to 10 pm</span></li>
+      <li data-d="4"><span>Thursday</span><span>10:30 am to 10 pm</span></li>
+      <li data-d="5"><span>Friday</span><span>10:30 am to 11 pm</span></li>
+      <li data-d="6"><span>Saturday</span><span>10:30 am to 11 pm</span></li>
+      <li data-d="0"><span>Sunday</span><span>10:30 am to 10 pm</span></li>
     </ul>
   </section>
 
   <section>
-    <h2>Find us</h2>
+    <h2 class="h">Find us</h2>
     <p>12301 Elliott Ave, El Monte, CA 91732. We have a parking lot, and there's street parking too. We take cards and tap to pay, and the entrance, seating and restroom are wheelchair accessible.</p>
-    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Tacos+Del+Chino+12301+Elliott+Ave+El+Monte+CA">Get directions</a>
+    <a class="btn f1" href="https://www.google.com/maps/search/?api=1&query=Tacos+Del+Chino+12301+Elliott+Ave+El+Monte+CA">Get directions</a>
     <iframe class="map" title="Map to Tacos Del Chino" src="https://www.google.com/maps?q=Tacos+Del+Chino+12301+Elliott+Ave+El+Monte+CA+91732&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
+  <p class="thanks">Thank you</p>
+</div>
+<div class="tear" aria-hidden="true"></div>
 </main>
 
-<footer><div class="w">
+<footer>
   <p>© 2026 Tacos Del Chino · 12301 Elliott Ave, El Monte, CA · <a href="tel:+16264528919">(626) 452-8919</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p>
-</div></footer>
+</footer>
 
 <div class="dock">
   <a href="tel:+16264528919">Call to order</a>
@@ -161,7 +185,7 @@ footer p{margin:0 0 6px}
 </div>
 
 <script>
-// Open or closed right now, Pacific time.
+// Writes "Open now" or "Closed right now" on the check from the real hours, Pacific time.
 (function () {
   var H = { 0: [10.5, 22], 1: [10.5, 22], 3: [10.5, 22], 4: [10.5, 22], 5: [10.5, 23], 6: [10.5, 23] };
   var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -173,10 +197,10 @@ footer p{margin:0 0 6px}
   function f(x) { x = x % 24; var h = Math.floor(x), m = Math.round((x - h) * 60); if (h === 0 && m === 0) return "midnight"; return (h % 12 || 12) + (m ? ":" + (m < 10 ? "0" : "") + m : "") + (h >= 12 ? " pm" : " am"); }
   var y = H[(d + 6) % 7], h = H[d], until = null;
   if (y && y[1] > 24 && t < y[1] - 24) until = y[1]; else if (h && t >= h[0] && t < h[1]) until = h[1];
-  if (until !== null) { el.textContent = "Open now"; el.className = "on"; ln.textContent = "until " + f(until); return; }
-  el.textContent = "Closed right now."; el.className = "off";
-  if (h && t < h[0]) { ln.textContent = "Opens at " + f(h[0]) + " today."; return; }
-  for (var i = 1; i <= 7; i++) { var n = (d + i) % 7; if (H[n]) { ln.textContent = "Opens " + (i === 1 ? "tomorrow" : DAYS[n]) + " at " + f(H[n][0]) + "."; break; } }
+  if (until !== null) { el.textContent = "Open now"; el.className = "on"; ln.textContent = "Open until " + f(until) + " tonight"; return; }
+  el.textContent = "Closed right now"; el.className = "off";
+  if (h && t < h[0]) { ln.textContent = "Opens at " + f(h[0]) + " today"; return; }
+  for (var i = 1; i <= 7; i++) { var n = (d + i) % 7; if (H[n]) { ln.textContent = "Opens " + (i === 1 ? "tomorrow" : DAYS[n]) + " at " + f(H[n][0]); break; } }
 })();
 </script>
 </body>

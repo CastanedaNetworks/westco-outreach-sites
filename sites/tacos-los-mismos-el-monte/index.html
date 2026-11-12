@@ -10,59 +10,80 @@
 <meta property="og:title" content="Tacos Los Mismos" />
 <meta property="og:description" content="Taqueria on Tyler Ave in El Monte" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,900&display=swap" />
 <style>
+/* Concept: the tiled counter. Square white tile with blue grout lines, a blue and white checker trim, enamel plaques for the words. */
+:root{
+  --blue:#1b4bb5; --deep:#12337d; --tile:#f6f8fb; --grout:#c9d6ee; --ink:#0f1f45; --soft:#44557d; --cash:#ffd633;
+  --disp:Gloock,Georgia,serif; --body:"Nunito Sans","Trebuchet MS",sans-serif;
+  --tiles:linear-gradient(var(--grout) 2px,transparent 2px) 0 0/44px 44px,linear-gradient(90deg,var(--grout) 2px,transparent 2px) 0 0/44px 44px;
+  --checker:repeating-conic-gradient(var(--blue) 0 25%,#fff 0 50%) 0 0/22px 22px;
+}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:#1a1a1a;font:400 17px/1.6 Nunito,Arial,sans-serif;padding-bottom:62px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--tile);color:var(--ink);font:400 17px/1.6 var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:1000px;margin:0 auto;padding:0 20px}
-.head{background:#0d0d0d;color:#fff}
-.head .w{display:grid;grid-template-columns:104px minmax(0,1fr);gap:16px;align-items:center;padding-top:18px;padding-bottom:18px}
-.head img{width:104px;height:104px;border-radius:50%}
-h1{font-weight:800;font-size:27px;line-height:1.1;margin:0 0 4px}
-.head p{margin:0;color:#cfcfcf;font-size:15px}
-.strip{background:#1f55b5;color:#fff}
-.strip .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 16px;padding-top:11px;padding-bottom:11px}
-.strip a{font-weight:800;font-size:19px;text-decoration:none}
-.strip .off{color:#ffd0d0}
-.intro{display:grid;gap:20px;padding-top:26px}
-.intro p{margin:0 0 12px;font-size:19px}
-.intro img{width:100%;height:230px;object-fit:cover;border-radius:10px}
-.btn{display:inline-block;text-decoration:none;font-weight:800;padding:13px 20px;border-radius:10px;background:#1f55b5;color:#fff;margin:4px 8px 4px 0}
-.btn.l{background:#eef3fc;color:#1f55b5}
-section{padding-top:44px}
-h2{font-weight:800;font-size:26px;line-height:1.15;margin:0 0 10px}
-.pop{margin:0;padding:0;list-style:none;border-top:3px solid #1a1a1a}
-.pop li{display:grid;gap:2px;padding:14px 0;border-bottom:1px solid #d9d9d9}
-.pop b{font-size:21px;font-weight:800}
-.pop span{color:#555}
-.also{margin:16px 0 0}
-.cash{display:inline-block;background:#fff2a8;border-radius:8px;padding:8px 14px;font-weight:700;margin-top:6px}
-.rev{display:grid;gap:0}
-.rev div{padding:16px 0;border-bottom:1px solid #d9d9d9}
-.rev p{margin:0 0 4px;font-size:18px}
-.rev small{color:#555;font-size:14px}
+.w{max-width:960px;margin:0 auto;padding:0 18px}
+.trim{height:22px;background:var(--checker)}
+.wall{background:var(--tiles),var(--tile)}
+.plaque{background:#fff;border:3px solid var(--blue);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--blue)}
+
+.head{padding:26px 0 24px}
+.head .plaque{display:flex;align-items:center;gap:14px;padding:14px;margin:5px}
+.head img{width:96px;height:96px;border-radius:50%;flex:none}
+h1{font:400 30px/1.05 var(--disp);margin:0 0 4px;color:var(--blue)}
+.head p{margin:0;font-size:16px}
+.strip{background:var(--blue);color:#fff}
+.strip .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 18px;padding-top:6px;padding-bottom:6px}
+.strip a{font:900 21px/1 var(--body);text-decoration:none;padding:12px 0}
+.strip .off{color:#ffe3e3}
+
+.intro{display:grid;gap:22px;padding-top:28px}
+.intro p{margin:0 0 14px}
+.btn{display:inline-block;text-decoration:none;font-weight:900;padding:14px 20px;background:var(--blue);color:#fff;border:3px solid var(--blue);margin:0 8px 8px 0;min-height:48px}
+.btn.l{background:#fff;color:var(--blue)}
+.btn:focus-visible,.strip a:focus-visible,.dock a:focus-visible{outline:3px solid var(--cash);outline-offset:2px}
+.cash{display:inline-block;background:var(--cash);color:var(--ink);font:900 20px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;padding:12px 16px;border:3px solid var(--ink)}
+.intro img{width:100%;height:230px;object-fit:cover;border:3px solid var(--blue);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--blue);margin:5px;width:calc(100% - 10px)}
+
+section{padding-top:40px}
+h2{font:400 27px/1.1 var(--disp);color:var(--blue);margin:0 0 12px}
+.split{display:grid;gap:4px}
+/* dishes as a row of tiles */
+.pop{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--grout);border:4px solid var(--grout)}
+.pop li{background:#fff;padding:14px 12px;min-height:104px}
+.pop li:nth-child(4n+2),.pop li:nth-child(4n+3){background:var(--blue);color:#fff}
+.pop b{display:block;font:400 20px/1.15 var(--disp)}
+.pop span{display:block;font-size:14px;margin-top:4px}
+.also{margin:14px 0 0}
+.rev > div{padding:14px 0;border-bottom:2px solid var(--grout)}
+.rev > div:first-child{border-top:2px solid var(--grout)}
+.rev p{margin:0 0 3px;font-size:18px;line-height:1.5}
+.rev small{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.soft{color:var(--soft);font-size:15px}
 .when{display:grid;gap:24px}
-dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:0}
-dt,dd{margin:0;padding:8px 0;border-bottom:1px solid #d9d9d9}
+dl{margin:0 0 16px;display:grid;grid-template-columns:1fr auto;background:#fff;border:3px solid var(--blue)}
+dt,dd{margin:0;padding:9px 12px;border-bottom:1px solid var(--grout)}
 dd{text-align:right}
-.today{font-weight:800;color:#1f55b5}
-.map{width:100%;height:300px;border:0;border-radius:10px}
-.soft{color:#555;font-size:15px}
-footer{margin-top:50px;background:#1f55b5;color:#dbe6fa;padding:24px 0 30px;font-size:14px}
+dt:nth-last-of-type(1),dd:nth-last-of-type(1){border-bottom:0}
+dt.today,dd.today{background:var(--blue);color:#fff;font-weight:900}
+.map{width:100%;height:300px;border:3px solid var(--blue)}
+footer{margin-top:46px;background:var(--deep);color:#d5def2;padding:22px 0 30px;font-size:14px}
 footer p{margin:0 0 5px}
-footer .name{font-weight:800;font-size:17px;color:#fff}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#0d0d0d}
-.dock a{text-align:center;text-decoration:none;font-weight:800;color:#fff;padding:17px 6px}
-.dock a:first-child{background:#1f55b5}
+footer .name{font:400 20px/1.2 var(--disp);color:#fff}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.2fr 1fr;background:var(--deep);border-top:4px solid #fff}
+.dock a{text-align:center;text-decoration:none;font-weight:900;color:#fff;padding:18px 6px}
+.dock a:first-child{background:var(--blue)}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  .head .w{grid-template-columns:140px minmax(0,1fr)}.head img{width:140px;height:140px}
-  h1{font-size:40px}
-  .intro{grid-template-columns:1fr 1fr;align-items:center;gap:40px}.intro img{height:320px}
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-  .when{grid-template-columns:400px 1fr;align-items:start}
+  .head .plaque{max-width:560px;padding:20px 24px;gap:22px}
+  .head img{width:132px;height:132px}
+  h1{font-size:46px}
+  .intro{grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+  .intro img{height:320px}
+  .split{grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  .when{grid-template-columns:400px 1fr;gap:36px;align-items:start}
 }
 </style>
 </head>
@@ -74,9 +95,12 @@ footer .name{font-weight:800;font-size:17px;color:#fff}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header class="head"><div class="w">
-  <img src="logo.jpg" alt="Tacos Los Mismos logo" width="140" height="140" />
-  <div><h1>Tacos Los Mismos</h1><p>Taqueria on Tyler Ave in El Monte</p></div>
+<div class="trim" aria-hidden="true"></div>
+<header class="head wall"><div class="w">
+  <div class="plaque">
+    <img src="logo.jpg" alt="Tacos Los Mismos logo" width="132" height="132" />
+    <div><h1>Tacos Los Mismos</h1><p>Taqueria on Tyler Ave in El Monte</p></div>
+  </div>
 </div></header>
 <div class="strip"><div class="w">
   <a href="tel:+16265423257">(626) 542-3257</a>
@@ -89,7 +113,7 @@ footer .name{font-weight:800;font-size:17px;color:#fff}
       <p>Stop by for tacos, burritos and plates. Eat at the tables outside or call ahead and we'll have your order ready.</p>
       <a class="btn" href="tel:+16265423257">Call ahead</a>
       <a class="btn l" href="https://www.google.com/maps/search/?api=1&query=Tacos+Los+Mismos+3057+Tyler+Ave%2C+El+Monte%2C+CA+91731">Directions</a>
-      <p><span class="cash">Cash only</span></p>
+      <p style="margin-top:8px"><span class="cash">Cash only</span></p>
     </div>
     <img src="https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?fm=jpg&q=72&w=1400&fit=crop" alt="Steak tacos with lime and cilantro on butcher paper" />
   </div>
@@ -139,7 +163,8 @@ footer .name{font-weight:800;font-size:17px;color:#fff}
   </section>
 </main>
 
-<footer class="foot solid"><div class="w"><p class="name">Tacos Los Mismos</p><p>3057 Tyler Ave, El Monte, CA 91731</p><p><a href="tel:+16265423257">(626) 542-3257</a></p><p style="margin-top:14px">© 2026 Tacos Los Mismos</p><p class="pv">Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p></div></footer>
+<div class="trim" aria-hidden="true" style="margin-top:46px"></div>
+<footer class="foot solid" style="margin-top:0"><div class="w"><p class="name">Tacos Los Mismos</p><p>3057 Tyler Ave, El Monte, CA 91731</p><p><a href="tel:+16265423257">(626) 542-3257</a></p><p style="margin-top:14px">© 2026 Tacos Los Mismos</p><p class="pv">Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p></div></footer>
 
 <div class="dock">
   <a href="tel:+16265423257">Call ahead</a>

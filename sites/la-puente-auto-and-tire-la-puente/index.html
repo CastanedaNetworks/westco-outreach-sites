@@ -10,60 +10,69 @@
 <meta property="og:title" content="La Puente Auto &amp; Tire" />
 <meta property="og:description" content="Tires and auto service in La Puente" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Inter:wght@400;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona+One&family=Figtree:wght@400;600;800&family=Permanent+Marker&display=swap" />
 <style>
+/* Concept: a tire sidewall and the yellow crayon a tire shop writes with. Raised black-on-black lettering for the
+   shop name and size code, crayon yellow for anything written by hand (status, labels, today's hours). */
+:root{--rubber:#121212;--tread:#1d1d1d;--edge:#333;--ink:#f1efe8;--soft:#b3b0a6;--crayon:#ffd21f;
+  --disp:"Krona One","Arial Black",sans-serif;--body:Figtree,Verdana,sans-serif;--hand:"Permanent Marker","Comic Sans MS",cursive}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#eef1f4;color:#17212b;font:400 17px/1.6 Inter,Arial,sans-serif;padding-bottom:62px}
+body{margin:0;background:var(--rubber);color:var(--ink);font:400 17px/1.6 var(--body);padding-bottom:64px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:920px;margin:0 auto;padding:0 18px}
-.bar{background:#17212b;color:#fff}
-.bar .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px}
-.bar b{font:700 19px/1.1 "Chakra Petch",Arial,sans-serif}
-.bar b i{font-style:normal;color:#ff6a2b}
-.bar a{flex:none;background:#ff6a2b;color:#17212b;text-decoration:none;font-weight:600;padding:9px 12px;border-radius:6px;font-size:15px;white-space:nowrap}
-.status{background:#fff;border-bottom:1px solid #d8dee5;font-size:15px}
-.status .w{padding-top:9px;padding-bottom:9px}
-#open{font-weight:600}
-#open.on{color:#177245}#open.off{color:#b3261e}
-.hero{display:grid;gap:0;background:#17212b;color:#fff}
-.hero img{width:100%;height:210px;object-fit:cover}
-.hero div{padding:24px 18px 28px}
-h1{font:700 31px/1.12 "Chakra Petch",Arial,sans-serif;margin:0 0 10px}
-.hero p{margin:0 0 18px;color:#c6d0da}
-.btn{display:inline-block;text-decoration:none;font:700 17px/1 "Chakra Petch",Arial,sans-serif;padding:15px 20px;border-radius:6px;background:#ff6a2b;color:#17212b;margin:0 8px 8px 0}
-.btn.o{background:none;color:#fff;border:2px solid #ff6a2b}
-.card{background:#fff;border-radius:8px;padding:22px 20px;margin-top:16px}
-h2{font:700 23px/1.2 "Chakra Petch",Arial,sans-serif;margin:0 0 10px}
-.card p:last-child{margin-bottom:0}
-.list{margin:0;padding:0;list-style:none}
-.list li{padding:11px 0;border-bottom:1px solid #e6eaee}
-.list li:last-child{border:0;padding-bottom:0}
-.list b{display:block}
-.list span{color:#4f5d6b;font-size:16px}
-.q{margin:0;padding:14px 0;border-bottom:1px solid #e6eaee}
-.q:last-of-type{border:0}
-.q p{margin:0 0 4px}
-.q cite{font-style:normal;font-size:14px;color:#4f5d6b}
-table{border-collapse:collapse;width:100%}
-td{padding:8px 0;border-bottom:1px solid #e6eaee}
+.w{max-width:940px;margin:0 auto;padding:0 20px}
+.bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px}
+.bar b{font:400 15px/1.25 var(--disp);text-transform:uppercase}
+.bar a{flex:none;font-weight:800;text-decoration:none;background:var(--crayon);color:#111;padding:11px 13px;border-radius:3px;white-space:nowrap}
+/* raised sidewall lettering */
+.wall{background:var(--tread);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);overflow:hidden;white-space:nowrap;padding:14px 0 12px}
+.wall span{display:block;overflow:hidden;text-overflow:clip;font:400 30px/1 var(--disp);text-transform:uppercase;letter-spacing:.04em;color:#262626;text-shadow:-1px -1px 0 #3e3e3e,1px 1px 0 #000;padding-left:20px}
+.hero{padding-top:28px}
+.mark{display:inline-block;font:400 22px/1.15 var(--hand);color:var(--crayon);transform:rotate(-2deg);margin-bottom:12px}
+.mark.off{color:#ff9d8a}
+h1{font:400 28px/1.15 var(--disp);text-transform:uppercase;margin:0 0 14px}
+.hero p{margin:0 0 20px;max-width:32em;font-size:18px;color:#dedbd2}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:15px 20px;border:2px solid var(--crayon);border-radius:3px}
+.btn.f{background:var(--crayon);color:#111}
+.ph{width:100%;height:230px;object-fit:cover;margin-top:30px;border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+section{padding-top:44px}
+h2{font:400 20px/1.2 var(--disp);text-transform:uppercase;margin:0 0 14px}
+.tires{list-style:none;margin:0;padding:0}
+.tires li{display:grid;grid-template-columns:86px 1fr;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--edge)}
+.tires li:last-child{border-bottom:1px solid var(--edge)}
+.tires i{font:400 21px/1 var(--hand);font-style:normal;color:var(--crayon);background:var(--tread);border:1px solid var(--edge);border-radius:6px;text-align:center;padding:16px 4px 13px;transform:rotate(-1.5deg)}
+.tires b{display:block;font-weight:800;font-size:18px}
+.tires span{color:var(--soft)}
+.size{margin:22px 0 0;background:var(--tread);border:1px solid var(--edge);border-radius:6px;padding:18px}
+.size strong{display:block;font:400 26px/1 var(--disp);letter-spacing:.03em;color:#2b2b2b;text-shadow:-1px -1px 0 #454545,1px 1px 0 #000;margin-bottom:10px;overflow-wrap:anywhere}
+.size p{margin:0;color:var(--soft)}
+.small{color:var(--soft);font-size:15px}
+.q{margin:0;padding:16px 0;border-top:1px solid var(--edge)}
+.q p{margin:0 0 6px;font-size:18px;line-height:1.5}
+.q cite{font-style:normal;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+table{border-collapse:collapse;width:100%;max-width:400px}
+td{padding:9px 10px;border-bottom:1px solid var(--edge)}
 td+td{text-align:right}
-tr.today td{font-weight:600}
-.map{width:100%;height:280px;border:0;border-radius:6px;margin-top:12px}
-.small{font-size:15px;color:#4f5d6b}
-footer{padding:24px 0 28px;color:#5a6672;font-size:14px}
+tr.today td{color:var(--crayon);font-weight:800}
+tr.today td:first-child{box-shadow:inset 4px 0 0 var(--crayon)}
+.map{width:100%;height:290px;border:1px solid var(--edge);margin-top:12px}
+footer{margin-top:50px;border-top:1px solid var(--edge);padding:20px 0 28px;color:var(--soft);font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#17212b}
-.dock a{text-align:center;text-decoration:none;color:#fff;font-weight:600;padding:18px 6px}
-.dock a:first-child{background:#ff6a2b;color:#17212b}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--tread);border-top:1px solid var(--edge)}
+.dock a{text-align:center;text-decoration:none;font-weight:800;padding:18px 6px}
+.dock a:first-child{background:var(--crayon);color:#111}
+a:focus-visible{outline:3px solid #fff;outline-offset:2px}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  .hero{grid-template-columns:1fr 1fr;align-items:stretch}
-  .hero img{height:100%;min-height:360px;order:2}
-  .hero div{padding:48px 40px;align-self:center}
-  h1{font-size:42px}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+  .bar b{font-size:18px}
+  .wall span{font-size:46px}
+  h1{font-size:44px}
+  .hero{padding-top:44px}
+  .ph{height:340px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  .size strong{font-size:34px}
 }
 </style>
 </head>
@@ -76,40 +85,41 @@ footer p{margin:0 0 6px}
 <!-- PREVIEW BANNER END -->
 
 <header class="bar"><div class="w">
-  <b>La Puente <i>Auto &amp; Tire</i></b>
+  <b>La Puente Auto &amp; Tire</b>
   <a href="tel:+16269174101">(626) 917-4101</a>
 </div></header>
-<div class="status"><div class="w"><span id="open">Open Monday to Saturday</span> · 1149 N Hacienda Blvd</div></div>
+<div class="wall" aria-hidden="true"><span>La Puente Auto &amp; Tire · 1149 N Hacienda Blvd · La Puente Auto &amp; Tire · 1149 N Hacienda Blvd</span></div>
 
-<div class="hero">
-  <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=72&w=1400&fit=crop" alt="Stacks of tires at a tire shop" />
-  <div>
-    <h1>New and used tires on Hacienda Blvd</h1>
-    <p>Call with your tire size and we'll tell you what we have and what it'll cost. If you don't know the size, tell us what you drive.</p>
-    <a class="btn" href="tel:+16269174101">Call (626) 917-4101</a>
-    <a class="btn o" href="#visit">Hours and map</a>
+<div class="w hero">
+  <span class="mark" id="open">Open Monday to Saturday</span>
+  <h1>New and used tires on Hacienda Blvd</h1>
+  <p>Call with your tire size and we'll tell you what we have and what it'll cost. If you don't know the size, tell us what you drive.</p>
+  <div class="btns">
+    <a class="btn f" href="tel:+16269174101">Call (626) 917-4101</a>
+    <a class="btn" href="#visit">Hours and map</a>
   </div>
 </div>
+<img class="ph" src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=72&w=1400&fit=crop" alt="Stacks of tires at a tire shop" />
 
 <main class="w">
   <div class="cols">
-    <section class="card">
+    <section>
       <h2>Tires</h2>
-      <ul class="list">
-        <li><b>Used tires</b><span>A lot of our customers have been buying used tires here for years.</span></li>
-        <li><b>New tires</b><span>Including sizes that are hard to find. Call and ask.</span></li>
-        <li><b>Flat repair</b><span>If it can be patched, we patch it.</span></li>
-        <li><b>Locked wheels</b><span>Lost the key for your wheel locks? We can get them off.</span></li>
+      <ul class="tires">
+        <li><i>USED</i><div><b>Used tires</b><span>A lot of our customers have been buying used tires here for years.</span></div></li>
+        <li><i>NEW</i><div><b>New tires</b><span>Including sizes that are hard to find. Call and ask.</span></div></li>
+        <li><i>FLAT</i><div><b>Flat repair</b><span>If it can be patched, we patch it.</span></div></li>
+        <li><i>LOCKS</i><div><b>Locked wheels</b><span>Lost the key for your wheel locks? We can get them off.</span></div></li>
       </ul>
     </section>
-    <section class="card">
+    <section>
       <h2>Auto service</h2>
       <p>We work on cars too. If a light is on or something else is going on with it, mention it when you call and we'll tell you if it's something we can take care of.</p>
       <p class="small">We take debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
     </section>
   </div>
 
-  <section class="card">
+  <section>
     <h2>From our Google reviews</h2>
     <blockquote class="q"><p>"I've been getting tires repaired and I've bought countless used tires from here over the last 4 vehicles / 10 years. This is a great place to get used tires or patched."</p><cite>Google review</cite></blockquote>
     <blockquote class="q"><p>"Got a good deal on hard to find 265 55/r19 size tires. Down to earth staff, not trying to sell you or upgrade your cost."</p><cite>Google review</cite></blockquote>
@@ -117,7 +127,7 @@ footer p{margin:0 0 6px}
     <p class="small">4.6 on Google from 51 reviews.</p>
   </section>
 
-  <section class="card" id="visit">
+  <section id="visit">
     <h2>Hours and location</h2>
     <div class="cols">
       <table id="hours">

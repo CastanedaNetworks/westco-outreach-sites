@@ -10,67 +10,70 @@
 <meta property="og:title" content="Tier 1 Barbers" />
 <meta property="og:description" content="Barbershop in San Gabriel" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Mulish:wght@400;600;800&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@600;800;900&family=Sofia+Sans:wght@400;600;800&display=swap" />
 <style>
+/* The page is the shop's lineup card: a printed roster sheet on a navy clipboard, amber for what's filled in. */
+:root{--navy:#0f1c2e;--deep:#0a1422;--card:#f4f1e6;--ink:#142238;--amber:#f2a900;--rule:#b9bfc9;--soft:#5a6677;
+  --d:"Sofia Sans Extra Condensed","Arial Narrow",Arial,sans-serif;--b:"Sofia Sans",Verdana,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#101820;color:#eef2f6;font:400 17px/1.6 Mulish,Arial,sans-serif;padding-bottom:62px}
+body{margin:0;background:var(--navy);color:var(--ink);font:400 17px/1.55 var(--b);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:1000px;margin:0 auto;padding-left:20px;padding-right:20px}
-.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px}
-.bar b{font:900 26px/1 "Big Shoulders Display",Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em}
-.bar b i{font-style:normal;color:#f2a900}
-.bar nav{display:none;gap:24px;font-weight:600;font-size:15px}
-.bar nav a{text-decoration:none}
-.bar .tel{background:#f2a900;color:#101820;text-decoration:none;font-weight:800;padding:9px 14px;border-radius:3px;white-space:nowrap;font-size:15px}
-.hero{display:grid;gap:0}
-.hero .txt{padding-top:18px;padding-bottom:26px}
-h1{font:900 64px/.9 "Big Shoulders Display",Impact,sans-serif;text-transform:uppercase;margin:0 0 12px}
-h1 i{font-style:normal;color:#f2a900}
-.hero p{margin:0 0 6px;max-width:26em}
-.status{margin-top:14px;font-weight:600}
-#st.on{color:#6fd39a}#st.off{color:#ff8f86}
+.w{max-width:860px;margin:0 auto;padding-left:14px;padding-right:14px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px;color:#fff}
+.bar b{font:900 30px/1 var(--d);text-transform:uppercase;letter-spacing:.03em}
+.bar b i{font-style:normal;color:var(--amber)}
+.bar .tel{background:var(--amber);color:var(--deep);text-decoration:none;font-weight:800;padding:11px 14px;white-space:nowrap;font-size:15px}
+.card{background:var(--card);border-top:10px solid var(--amber);padding:20px 16px 22px;margin-bottom:14px}
+.tag{font:600 15px/1 var(--d);letter-spacing:.2em;text-transform:uppercase;color:var(--soft);display:flex;justify-content:space-between;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:8px}
+h1{font:900 76px/.86 var(--d);text-transform:uppercase;margin:16px 0 12px;letter-spacing:.005em}
+h1 i{font-style:normal;color:var(--amber);-webkit-text-stroke:1.5px var(--ink)}
+.lead{margin:0 0 14px;max-width:27em}
+.score{display:inline-flex;flex-wrap:wrap;max-width:100%;border:2px solid var(--ink);font:800 20px/1 var(--d);text-transform:uppercase;letter-spacing:.06em}
+.score span{padding:9px 12px 7px}
+#st{background:var(--ink);color:#fff}
+#st.on{background:#1c7a45}#st.off{background:#b3261e}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.btn{display:inline-block;text-decoration:none;font-weight:800;padding:13px 20px;border-radius:3px;border:2px solid #f2a900}
-.btn.y{background:#f2a900;color:#101820}
-.hero img{width:100%;height:280px;object-fit:cover}
-section{padding-top:46px}
-h2{font:700 34px/1 "Big Shoulders Display",Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em;color:#f2a900;margin:0 0 12px}
-.cuts{margin:0;padding:0;list-style:none;border-top:1px solid #2a3948}
-.cuts li{padding:14px 0;border-bottom:1px solid #2a3948}
-.cuts b{display:block;font-size:18px}
-.cuts span{color:#aab7c4}
-.names{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0;padding:0;list-style:none}
-.names li{border:1px solid #f2a900;border-radius:99px;padding:5px 16px;font-weight:800}
-.said{display:grid;gap:26px}
-.said figure{margin:0;padding-top:16px;border-top:3px solid #f2a900}
-.said blockquote{margin:0 0 8px;font-size:19px;line-height:1.5}
-.said figcaption{font-size:14px;color:#aab7c4}
-.visit{display:grid;gap:24px}
-table{border-collapse:collapse;width:100%}
-td{padding:8px 0;border-bottom:1px solid #2a3948}
-td+td{text-align:right}
-tr.today td{font-weight:800;color:#f2a900}
-.small{color:#aab7c4;font-size:15px;margin:14px 0 0}
-.map{width:100%;height:300px;border:0}
-footer{margin-top:54px;border-top:1px solid #2a3948;padding:22px 0 28px;color:#93a1b0;font-size:14px}
+.btn{display:inline-block;text-decoration:none;font:800 22px/1 var(--d);text-transform:uppercase;letter-spacing:.05em;padding:14px 20px 12px;border:2px solid var(--ink)}
+.btn.y{background:var(--ink);color:#fff}
+.btn:focus-visible,.tel:focus-visible,.dock a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.shot{width:100%;height:230px;object-fit:cover;margin-top:20px;filter:grayscale(1) contrast(1.05)}
+h2{font:900 34px/1 var(--d);text-transform:uppercase;letter-spacing:.03em;margin:0 0 4px}
+.sub{margin:0 0 12px;color:var(--soft)}
+/* roster grid */
+.roster{width:100%;border-collapse:collapse;border:2px solid var(--ink);table-layout:fixed}
+.roster td{overflow-wrap:anywhere}
+.roster th:first-child{width:46px}
+.roster th{font:600 13px/1 var(--d);letter-spacing:.2em;text-transform:uppercase;text-align:left;padding:7px 10px;background:var(--ink);color:#fff}
+.roster td{padding:10px;border-top:1px solid var(--rule);vertical-align:top}
+.roster td:first-child{width:46px;font:900 26px/1 var(--d);color:var(--amber);-webkit-text-stroke:1px var(--ink);border-right:1px solid var(--rule)}
+.roster b{display:block;font:800 26px/1 var(--d);text-transform:uppercase;letter-spacing:.03em}
+.roster.names b{font-size:36px}
+.note{margin:12px 0 0;color:var(--soft);font-size:15px}
+.said{margin:0;padding:14px 0;border-top:1px solid var(--rule)}
+.said:first-of-type{border-top:2px solid var(--ink)}
+.said blockquote{margin:0 0 4px;font-size:18px}
+.said figcaption{font:600 13px/1 var(--d);letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
+.sched{width:100%;border-collapse:collapse;border:2px solid var(--ink)}
+.sched td{padding:8px 10px;border-top:1px solid var(--rule)}
+.sched tr:first-child td{border-top:0}
+.sched td+td{text-align:right}
+.sched tr.today td{background:var(--amber);font-weight:800}
+.visit{display:grid;gap:18px}
+.map{width:100%;height:290px;border:2px solid var(--ink)}
+footer{color:#aeb9c7;padding:10px 0 26px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;border-top:2px solid #f2a900;background:#101820}
-.dock a{text-align:center;text-decoration:none;font-weight:800;padding:17px 6px}
-.dock a.y{background:#f2a900;color:#101820}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;border-top:3px solid var(--amber);background:var(--deep)}
+.dock a{text-align:center;text-decoration:none;color:#fff;font:800 21px/1 var(--d);text-transform:uppercase;letter-spacing:.05em;padding:19px 6px 17px}
+.dock a.y{background:var(--amber);color:var(--deep)}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  .bar nav{display:flex}
-  .hero{grid-template-columns:1fr 1fr;align-items:stretch;max-width:1000px;margin:0 auto}
-  .hero .txt{padding:40px 30px 46px 20px}
-  .hero img{height:100%;min-height:420px}
-  h1{font-size:92px}
-  .cuts{columns:2;column-gap:40px;border-top:0}
-  .cuts li{break-inside:avoid}
-  .said{grid-template-columns:1fr 1fr 1fr}
-  .visit{grid-template-columns:360px 1fr}
-  section{padding-top:64px}
+  .card{padding:30px 34px 32px}
+  h1{font-size:132px}
+  .top{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:30px;align-items:end}
+  .shot{height:300px;margin-top:0}
+  .visit{grid-template-columns:340px 1fr}
 }
 </style>
 </head>
@@ -84,55 +87,65 @@ footer p{margin:0 0 6px}
 
 <header class="w bar">
   <b>Tier <i>1</i></b>
-  <nav aria-label="Sections"><a href="#cuts">Services</a><a href="#barbers">Barbers</a><a href="#reviews">Reviews</a><a href="#visit">Hours</a></nav>
   <a class="tel" href="tel:+16264641810">(626) 464-1810</a>
 </header>
 
-<div class="hero">
-  <div class="txt w">
-    <h1>Tier <i>1</i> Barbers</h1>
-    <p>Barbershop on S San Gabriel Blvd in San Gabriel. Call to book a chair or to ask who's in today.</p>
-    <p class="status"><span id="st">Open six days a week</span> · <span id="stl">closed Sunday</span></p>
-    <div class="cta">
-      <a class="btn y" href="tel:+16264641810">Call (626) 464-1810</a>
-      <a class="btn" href="#visit">Hours and map</a>
-    </div>
-  </div>
-  <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=jpg&q=72&w=1400&fit=crop" alt="Barber giving a straight razor shave" />
-</div>
-
 <main class="w">
-  <section id="cuts">
-    <h2>Services</h2>
-    <ul class="cuts">
-      <li><b>Haircuts and fades</b><span>Tell your barber what you want. They'll ask questions before they start cutting.</span></li>
-      <li><b>The VIP haircut</b><span>A haircut with a hot towel, eyebrow cleanup, a facial and a facial massage.</span></li>
-      <li><b>Kids' cuts</b><span>Bring them in. The shop is good with kids.</span></li>
-    </ul>
-    <p class="small">Call the shop for prices and to book.</p>
-  </section>
-
-  <section id="barbers">
-    <h2>The barbers</h2>
-    <p>We're a shop of young barbers who take their time. These are the names that come up most in our reviews, so ask for whoever you've heard about.</p>
-    <ul class="names"><li>Ed</li><li>Jeremiah</li><li>Omar</li></ul>
-  </section>
-
-  <section id="reviews">
-    <h2>From our Google reviews</h2>
-    <div class="said">
-      <figure><blockquote>"The attention to detail is on point, and you can tell the barbers actually care about how you look walking out the door."</blockquote><figcaption>Google review</figcaption></figure>
-      <figure><blockquote>"Very much a chill laid back environment with a bunch of young talented barbers!"</blockquote><figcaption>Google review</figcaption></figure>
-      <figure><blockquote>"I've been going to Omar for the past two years, and I actually drive an extra 20 minutes just to get my haircut from him."</blockquote><figcaption>Google review</figcaption></figure>
+  <section class="card">
+    <div class="tag"><span>Lineup card</span><span>San Gabriel</span></div>
+    <div class="top">
+      <div>
+        <h1>Tier <i>1</i> Barbers</h1>
+        <p class="lead">Barbershop on S San Gabriel Blvd in San Gabriel. Call to book a chair or to ask who's in today.</p>
+        <p class="score" style="margin:0"><span id="st">Open six days a week</span><span id="stl">closed Sunday</span></p>
+        <div class="cta">
+          <a class="btn y" href="tel:+16264641810">Call (626) 464-1810</a>
+          <a class="btn" href="#visit">Hours and map</a>
+        </div>
+      </div>
+      <img class="shot" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=jpg&q=72&w=1400&fit=crop" alt="Barber giving a straight razor shave" />
     </div>
-    <p class="small">4.9 on Google from 78 reviews.</p>
   </section>
 
-  <section id="visit">
+  <section class="card" id="barbers">
+    <h2>The barbers</h2>
+    <p class="sub">We're a shop of young barbers who take their time. These are the names that come up most in our reviews, so ask for whoever you've heard about.</p>
+    <table class="roster names">
+      <thead><tr><th></th><th>Barber</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><b>Ed</b></td></tr>
+        <tr><td>2</td><td><b>Jeremiah</b></td></tr>
+        <tr><td>3</td><td><b>Omar</b></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card" id="cuts">
+    <h2>Services</h2>
+    <table class="roster">
+      <thead><tr><th></th><th>What you get</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td><b>Haircuts and fades</b>Tell your barber what you want. They'll ask questions before they start cutting.</td></tr>
+        <tr><td>B</td><td><b>The VIP haircut</b>A haircut with a hot towel, eyebrow cleanup, a facial and a facial massage.</td></tr>
+        <tr><td>C</td><td><b>Kids' cuts</b>Bring them in. The shop is good with kids.</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Call the shop for prices and to book.</p>
+  </section>
+
+  <section class="card" id="reviews">
+    <h2>From our Google reviews</h2>
+    <p class="sub">4.9 on Google from 78 reviews.</p>
+    <figure class="said"><blockquote>"The attention to detail is on point, and you can tell the barbers actually care about how you look walking out the door."</blockquote><figcaption>Google review</figcaption></figure>
+    <figure class="said"><blockquote>"Very much a chill laid back environment with a bunch of young talented barbers!"</blockquote><figcaption>Google review</figcaption></figure>
+    <figure class="said"><blockquote>"I've been going to Omar for the past two years, and I actually drive an extra 20 minutes just to get my haircut from him."</blockquote><figcaption>Google review</figcaption></figure>
+  </section>
+
+  <section class="card" id="visit">
     <h2>Hours and location</h2>
     <div class="visit">
       <div>
-        <table>
+        <table class="sched">
           <tr data-d="1"><td>Monday</td><td>10 am to 5 pm</td></tr>
           <tr data-d="2"><td>Tuesday</td><td>10 am to 5 pm</td></tr>
           <tr data-d="3"><td>Wednesday</td><td>9 am to 7 pm</td></tr>
@@ -141,7 +154,7 @@ footer p{margin:0 0 6px}
           <tr data-d="6"><td>Saturday</td><td>9 am to 5 pm</td></tr>
           <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
         </table>
-        <p class="small">1841 S San Gabriel Blvd, Unit B, San Gabriel, CA 91776. We take debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+        <p class="note">1841 S San Gabriel Blvd, Unit B, San Gabriel, CA 91776. We take debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
         <p style="margin:16px 0 0"><a class="btn y" href="https://www.google.com/maps/dir/?api=1&destination=Tier+1+Barbers+1841+S+San+Gabriel+Blvd+San+Gabriel+CA+91776">Get directions</a></p>
       </div>
       <iframe class="map" title="Map to Tier 1 Barbers" src="https://www.google.com/maps?q=Tier+1+Barbers+1841+S+San+Gabriel+Blvd+San+Gabriel+CA+91776&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

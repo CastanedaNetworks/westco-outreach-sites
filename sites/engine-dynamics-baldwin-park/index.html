@@ -10,52 +10,64 @@
 <meta property="og:title" content="Engine Dynamics" />
 <meta property="og:description" content="Engine work and tuning in Baldwin Park" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Saira:wght@400;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Saira+Extra+Condensed:wght@600;800&family=Albert+Sans:wght@400;600&display=swap" />
 <style>
+/* A 1960s speed shop decal: turquoise and racing orange on cream, oval badge, pinstripes, one checkered edge. */
+:root{--teal:#12797f;--deep:#0d3b4a;--orange:#e8581c;--cream:#f7f1df;--paper:#fffaf0;--line:#d9cdb0;
+--script:Yellowtail,"Brush Script MT",cursive;--cond:"Saira Extra Condensed","Arial Narrow",sans-serif;--body:"Albert Sans",Helvetica,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#17150f;color:#f1ecdf;font:400 17px/1.6 Saira,Arial,sans-serif;padding-bottom:60px}
+body{margin:0;background:var(--cream);color:var(--deep);font:400 17px/1.6 var(--body);padding-bottom:60px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:920px;margin:0 auto;padding-left:20px;padding-right:20px}
-.bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px}
-.brand{font:400 20px/1 "Saira Stencil One",Impact,sans-serif;text-transform:uppercase;color:#e9a13b;text-decoration:none}
-.tel{flex:none;border:2px solid #e9a13b;color:#e9a13b;font-weight:600;text-decoration:none;padding:8px 12px;white-space:nowrap;font-size:15px}
-.shot{width:100%;height:220px;object-fit:cover;border-top:3px solid #e9a13b;border-bottom:3px solid #e9a13b}
-.lead{padding-top:26px}
-h1{font:400 34px/1.02 "Saira Stencil One",Impact,sans-serif;text-transform:uppercase;margin:0 0 12px}
-.lead p{margin:0 0 18px;max-width:34em;font-size:18px}
-.btn{display:inline-block;text-decoration:none;font-weight:600;padding:14px 22px;border:2px solid #e9a13b;margin:0 8px 8px 0}
-.btn.f{background:#e9a13b;color:#17150f}
-.status{margin:18px 0 0;padding:14px 0;border-top:1px solid #34301f;border-bottom:1px solid #34301f;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:15px}
+.w{max-width:900px;margin:0 auto;padding-left:20px;padding-right:20px}
+.bar{background:var(--deep);color:var(--cream)}
+.bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px}
+.brand{font:400 26px/1 var(--script);color:var(--cream);text-decoration:none}
+.tel{flex:none;font:800 22px/1 var(--cond);letter-spacing:.04em;color:var(--deep);background:var(--cream);text-decoration:none;padding:11px 12px;white-space:nowrap}
+.hero{background:var(--teal);color:var(--cream);text-align:center;padding:30px 0 34px}
+.decal{display:inline-block;border:3px solid var(--cream);border-radius:50%;padding:22px 34px 20px;box-shadow:0 0 0 5px var(--teal),0 0 0 7px var(--orange);max-width:100%}
+.decal b{display:block;font:400 54px/.9 var(--script);transform:rotate(-4deg)}
+.decal span{display:block;margin-top:8px;font:800 17px/1 var(--cond);letter-spacing:.24em;text-transform:uppercase}
+h1{font:800 34px/1 var(--cond);text-transform:uppercase;letter-spacing:.02em;margin:26px auto 10px;max-width:15em}
+.hero p{margin:0 auto 18px;max-width:32em}
+.btn{display:inline-block;text-decoration:none;font:800 22px/1 var(--cond);letter-spacing:.06em;text-transform:uppercase;padding:14px 22px;border:2px solid var(--cream);margin:0 4px 8px;transform:skewX(-8deg)}
+.btn.f{background:var(--orange);border-color:var(--orange);color:#fff}
+.btn.d{border-color:var(--deep)}
+.check{height:18px;background:repeating-conic-gradient(var(--deep) 0 25%,var(--cream) 0 50%) 0 0/18px 18px}
+.shot{width:100%;height:210px;object-fit:cover}
+.status{display:flex;flex-wrap:wrap;gap:6px 26px;padding:14px 0;font-size:15px}
 .status b{font-weight:600}
-#open.on{color:#7bd48f}#open.off{color:#ff8a7a}
-h2{font:400 23px/1.1 "Saira Stencil One",Impact,sans-serif;text-transform:uppercase;color:#e9a13b;margin:46px 0 10px}
+#open.on{color:#1c7a43}#open.off{color:#b3261e}
+.pin{height:7px;border-top:2px solid var(--orange);border-bottom:1px solid var(--teal);margin:0}
+h2{font:400 40px/1 var(--script);color:var(--orange);margin:40px 0 6px}
+h3{font:800 18px/1.1 var(--cond);letter-spacing:.14em;text-transform:uppercase;margin:16px 0 4px;color:var(--teal)}
 .split{display:grid;gap:8px 40px}
 .jobs,.cars{margin:0;padding:0;list-style:none}
-.jobs li,.cars li{padding:9px 0;border-bottom:1px solid #34301f}
-.cars li{color:#c9c1ae}
-h3{font:600 14px/1.2 Saira,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#c9c1ae;margin:18px 0 4px}
+.jobs li,.cars li{padding:9px 0;border-bottom:1px solid var(--line)}
+.jobs li{font-weight:600}
+.small{font-size:15px;color:#3d5a63}
 .quotes{display:grid;gap:14px}
-blockquote{margin:0;border:1px solid #4a442d;padding:18px}
+blockquote{margin:0;background:var(--paper);border:2px solid var(--deep);border-radius:14px;padding:16px 18px;box-shadow:4px 4px 0 var(--teal)}
 blockquote p{margin:0 0 8px}
-blockquote cite{font-style:normal;font-size:14px;color:#e9a13b}
+blockquote cite{font:800 15px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:var(--orange)}
 .visit{display:grid;gap:22px}
 table{border-collapse:collapse;width:100%;max-width:360px}
-td{padding:8px 0;border-bottom:1px solid #34301f}
+td{padding:8px 0;border-bottom:1px solid var(--line)}
 td+td{text-align:right}
-tr.today td{font-weight:600;color:#fff}
-.map{width:100%;height:300px;border:0}
-.small{font-size:15px;color:#c9c1ae}
-footer{margin-top:50px;border-top:1px solid #34301f;padding:20px 0 28px;color:#a59d88;font-size:14px}
+tr.today td{font-weight:600;color:var(--orange)}
+.map{width:100%;height:300px;border:2px solid var(--deep);border-radius:14px}
+footer{margin-top:46px;background:var(--deep);color:#b9cdd0;padding:20px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#17150f;border-top:2px solid #e9a13b}
-.dock a{text-align:center;text-decoration:none;font-weight:600;padding:16px 6px}
-.dock a.f{background:#e9a13b;color:#17150f}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--deep)}
+.dock a{text-align:center;text-decoration:none;font:800 21px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;padding:18px 6px;color:var(--cream)}
+.dock a.f{background:var(--orange);color:#fff}
+a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
 @media(min-width:720px){
   body{padding-bottom:0}.dock{display:none}
-  .shot{height:380px}
-  h1{font-size:52px}
+  .decal{padding:30px 60px 26px}.decal b{font-size:84px}.decal span{font-size:20px}
+  h1{font-size:50px}
+  .shot{height:340px}
   .split{grid-template-columns:1fr 1fr}
   .quotes{grid-template-columns:1fr 1fr}
   .visit{grid-template-columns:360px 1fr}
@@ -74,20 +86,24 @@ footer p{margin:0 0 6px}
   <a class="brand" href="#top">Engine Dynamics</a>
   <a class="tel" href="tel:+16263374614">(626) 337-4614</a>
 </div></header>
+
+<section class="hero" id="top"><div class="w">
+  <div class="decal" aria-hidden="true"><b>Engine Dynamics</b><span>Baldwin Park · Calif.</span></div>
+  <h1>Engine work for classic cars and hot rods</h1>
+  <p>We're on Puente Ave in Baldwin Park. Most of what we see is older V8s that need a carburetor sorted out, the timing set or a proper tune. Ask for John.</p>
+  <a class="btn f" href="tel:+16263374614">Call (626) 337-4614</a>
+  <a class="btn" href="#visit">Hours and map</a>
+</div></section>
+<div class="check" aria-hidden="true"></div>
 <img class="shot" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
 
-<main class="w" id="top">
-  <section class="lead">
-    <h1>Engine work for classic cars and hot rods</h1>
-    <p>We're on Puente Ave in Baldwin Park. Most of what we see is older V8s that need a carburetor sorted out, the timing set or a proper tune. Ask for John.</p>
-    <a class="btn f" href="tel:+16263374614">Call (626) 337-4614</a>
-    <a class="btn" href="#visit">Hours and map</a>
-    <div class="status">
-      <span><b id="open">Monday to Friday, 8 to 5</b></span>
-      <span>4.9 on Google from 17 reviews</span>
-      <span>Credit cards accepted</span>
-    </div>
-  </section>
+<main class="w">
+  <div class="status">
+    <span><b id="open">Monday to Friday, 8 to 5</b></span>
+    <span>4.9 on Google from 17 reviews</span>
+    <span>Credit cards accepted</span>
+  </div>
+  <div class="pin" aria-hidden="true"></div>
 
   <h2>What we do</h2>
   <div class="split">
@@ -134,7 +150,7 @@ footer p{margin:0 0 6px}
       </table>
       <p>4152 Puente Ave, Unit B<br />Baldwin Park, CA 91706</p>
       <p class="small">The entrance and parking are wheelchair accessible.</p>
-      <a class="btn f" href="https://www.google.com/maps/dir/?api=1&destination=Engine+Dynamics+4152+Puente+Ave+Baldwin+Park+CA+91706">Get directions</a>
+      <a class="btn f" style="margin-left:6px" href="https://www.google.com/maps/dir/?api=1&destination=Engine+Dynamics+4152+Puente+Ave+Baldwin+Park+CA+91706">Get directions</a>
     </div>
     <iframe class="map" title="Map to Engine Dynamics" src="https://www.google.com/maps?q=Engine+Dynamics+4152+Puente+Ave+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>

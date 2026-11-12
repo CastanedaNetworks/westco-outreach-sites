@@ -10,61 +10,66 @@
 <meta property="og:title" content="Erik's Tires" />
 <meta property="og:description" content="Tire shop in Baldwin Park, open 7 days" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@400;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Squada+One&family=Barlow:wght@400;600&display=swap" />
 <style>
+/* A race pit board: black board, slotted fluorescent tiles for the status, hours and times. */
+:root{--tar:#17191c;--board:#0b0c0d;--slot:#26292d;--yel:#e6ff2e;--org:#ff7a1a;--txt:#eef0f2;--dim:#a8adb3;
+--num:"Squada One",Impact,"Arial Narrow",sans-serif;--body:Barlow,Helvetica,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:#141414;font:400 18px/1.55 Hind,Arial,sans-serif;padding-bottom:62px}
+body{margin:0;background:var(--tar);color:var(--txt);font:400 17px/1.6 var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:1000px;margin:0 auto;padding-left:20px;padding-right:20px}
-.top{background:#141414;color:#fff}
-.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:10px}
-.brand{font:400 30px/1 Anton,Impact,sans-serif;text-transform:uppercase;text-decoration:none}
-.brand span{color:#ff3b30}
-.tel{flex:none;background:#ff3b30;color:#fff;text-decoration:none;font:400 20px/1 Anton,Impact,sans-serif;padding:10px 12px 8px;white-space:nowrap}
-.hero{display:grid}
-.hero img{width:100%;height:210px;object-fit:cover}
-.hero .txt{background:#141414;color:#fff;padding:26px 20px 28px}
-h1{font:400 44px/.98 Anton,Impact,sans-serif;text-transform:uppercase;margin:0 0 12px}
-.hero p{margin:0 0 18px;max-width:28em}
-.btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 22px;border:2px solid #ff3b30;margin:0 8px 8px 0}
-.btn.r{background:#ff3b30;color:#fff}
-.now{background:#f2f2f2;font-size:16px}
-.now .w{padding-top:12px;padding-bottom:12px;display:flex;flex-wrap:wrap;gap:4px 22px}
-#open{font-weight:600}
-#open.on{color:#147a3d}#open.off{color:#c1271d}
-h2{font:400 30px/1 Anton,Impact,sans-serif;text-transform:uppercase;margin:46px 0 12px}
+.w{max-width:900px;margin:0 auto;padding-left:16px;padding-right:16px}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.brand{font:400 30px/1 var(--num);text-transform:uppercase;letter-spacing:.03em;text-decoration:none}
+.brand span{color:var(--yel)}
+.tel{flex:none;font:400 22px/1 var(--num);letter-spacing:.04em;background:var(--yel);color:#000;text-decoration:none;padding:12px 12px;white-space:nowrap}
+.board{background:var(--board);border:3px solid #3a3e44;border-radius:6px;padding:12px;position:relative}
+.board::before{content:"";position:absolute;left:50%;top:-22px;width:6px;height:22px;background:#3a3e44;transform:translateX(-50%)}
+.row{display:flex;align-items:stretch;gap:8px;background:var(--slot);padding:6px;margin-bottom:6px}
+.row:last-child{margin-bottom:0}
+.row > span{flex:none;width:74px;display:flex;align-items:center;font:600 12px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.tile{flex:1;min-width:0;background:var(--yel);color:#000;font:400 30px/1 var(--num);letter-spacing:.03em;text-transform:uppercase;padding:9px 10px 7px}
+.tile.off{background:var(--org)}
+.tile.sm{font-size:22px;padding-top:11px}
+.hero{padding-top:26px}
+h1{font:400 44px/.95 var(--num);text-transform:uppercase;letter-spacing:.01em;margin:22px 0 10px}
+.hero p{margin:0 0 16px;max-width:32em;font-size:18px}
+.btn{display:inline-block;text-decoration:none;font:400 22px/1 var(--num);letter-spacing:.06em;text-transform:uppercase;padding:14px 20px;border:2px solid var(--yel);margin:0 8px 8px 0}
+.btn.r{background:var(--yel);color:#000}
+.pic{width:100%;height:210px;object-fit:cover;margin-top:14px;border-radius:6px}
+h2{font:400 34px/1 var(--num);text-transform:uppercase;letter-spacing:.03em;margin:46px 0 12px}
+h2 i{font-style:normal;color:var(--yel)}
 .svc{width:100%;border-collapse:collapse}
-.svc th{display:block;text-align:left;font-weight:600;padding:12px 0 0}
-.svc td{display:block;padding:2px 0 12px;border-bottom:1px solid #e3e3e3;color:#444}
-.said{background:#141414;color:#fff;margin-top:46px;padding:10px 0 40px}
-.said h2{color:#fff}
-.said .grid{display:grid;gap:22px}
-.said blockquote{margin:0}
-.said p{margin:0 0 6px}
-.said cite{font-style:normal;font-size:15px;color:#ff7a72;font-weight:600}
-.visit{display:grid;gap:24px}
-.hrs{border-collapse:collapse;width:100%;max-width:380px}
-.hrs td{padding:8px 0;border-bottom:1px solid #e3e3e3}
-.hrs td+td{text-align:right}
-.hrs tr.today td{font-weight:600}
-.map{width:100%;height:300px;border:0}
-.small{font-size:16px;color:#555}
-footer{margin-top:48px;background:#141414;color:#bdbdbd;padding:22px 0 28px;font-size:14px}
+.svc th{display:block;text-align:left;font:400 24px/1.1 var(--num);letter-spacing:.04em;text-transform:uppercase;color:var(--yel);padding:14px 0 2px}
+.svc td{display:block;padding:0 0 14px;border-bottom:1px solid #30343a;color:#d9dce0}
+.lap{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;margin:0 0 12px;background:var(--board);border:1px solid #30343a;padding:12px}
+.lap b{font:400 26px/1 var(--num);background:var(--org);color:#000;padding:8px 8px 6px;white-space:nowrap;text-transform:uppercase}
+.lap p{margin:0 0 4px}
+.lap cite{font-style:normal;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.visit{display:grid;gap:22px}
+.hrs{width:100%;border-collapse:separate;border-spacing:0 5px;background:var(--board);border:3px solid #3a3e44;border-radius:6px;padding:6px 10px}
+.hrs td{padding:7px 8px;background:var(--slot)}
+.hrs td:first-child{font:600 13px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.hrs td+td{text-align:right;font:400 22px/1 var(--num);letter-spacing:.03em;color:var(--yel)}
+.hrs tr.today td{background:var(--yel);color:#000}
+.hrs tr.today td+td{color:#000}
+.map{width:100%;height:300px;border:0;border-radius:6px}
+.small{font-size:15px;color:var(--dim)}
+footer{margin-top:46px;border-top:1px solid #30343a;padding:20px 0 28px;color:var(--dim);font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#141414}
-.dock a{text-align:center;text-decoration:none;font-weight:600;padding:17px 6px;color:#fff}
-.dock a.r{background:#ff3b30}
-@media(min-width:760px){
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:var(--board);border-top:2px solid var(--yel)}
+.dock a{text-align:center;text-decoration:none;font:400 22px/1 var(--num);letter-spacing:.06em;text-transform:uppercase;padding:18px 6px}
+.dock a.r{background:var(--yel);color:#000}
+a:focus-visible{outline:3px solid var(--org);outline-offset:3px}
+@media(min-width:720px){
   body{padding-bottom:0}.dock{display:none}
-  .hero{grid-template-columns:5fr 4fr}
-  .hero img{height:100%;min-height:400px;order:2}
-  .hero .txt{padding:60px 40px 60px max(20px,calc((100vw - 1000px)/2 + 20px));display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-  h1{font-size:66px}
-  .svc th{display:table-cell;padding:12px 24px 12px 0;border-bottom:1px solid #e3e3e3;vertical-align:top;white-space:nowrap}
-  .svc td{display:table-cell;padding:12px 0}
-  .said .grid{grid-template-columns:1fr 1fr 1fr}
+  .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:start;padding-top:40px}
+  h1{font-size:68px;margin-top:0}
+  .tile{font-size:38px}
+  .svc th{display:table-cell;width:220px;vertical-align:top;padding:16px 20px 16px 0;border-bottom:1px solid #30343a}
+  .svc td{display:table-cell;padding:16px 0}
   .visit{grid-template-columns:380px 1fr}
 }
 </style>
@@ -82,26 +87,26 @@ footer p{margin:0 0 6px}
   <a class="tel" href="tel:+16269624654">(626) 962-4654</a>
 </div></header>
 
-<div class="hero" id="top">
-  <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=72&w=1400&fit=crop" alt="Stacks of tires at a tire shop" />
-  <div class="txt">
+<div class="w hero" id="top">
+  <div>
     <h1>Tires and flat repair on Ramona Blvd</h1>
     <p>New tires, used tires and flats fixed while you wait. We're open every day of the week.</p>
-    <div>
-      <a class="btn r" href="tel:+16269624654">Call the shop</a>
-      <a class="btn" href="#visit">Hours and map</a>
+    <a class="btn r" href="tel:+16269624654">Call the shop</a>
+    <a class="btn" href="#visit">Hours and map</a>
+  </div>
+  <div>
+    <div class="board">
+      <div class="row"><span>Status</span><div class="tile" id="open">Open 7 days</div></div>
+      <div class="row"><span>Pit lane</span><div class="tile sm">13900 Ramona Blvd, Baldwin Park</div></div>
+      <div class="row"><span>Google</span><div class="tile sm">4.7 from 209 reviews</div></div>
     </div>
+    <img class="pic" src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?fm=jpg&q=72&w=1400&fit=crop" alt="Stacks of tires at a tire shop" />
   </div>
 </div>
-<div class="now"><div class="w">
-  <span id="open">Open 7 days</span>
-  <span>13900 Ramona Blvd, Baldwin Park</span>
-  <span>4.7 on Google from 209 reviews</span>
-</div></div>
 
 <main>
   <div class="w">
-    <h2>What we do</h2>
+    <h2>What <i>we do</i></h2>
     <table class="svc">
       <tr><th>Flat repair</th><td>Pull in and we'll look at it. If it can be patched we patch it. If it can't, we'll show you the damage and tell you what we have in your size.</td></tr>
       <tr><th>New tires</th><td>Call with your size, or tell us what you drive, and we'll give you a price.</td></tr>
@@ -110,19 +115,13 @@ footer p{margin:0 0 6px}
       <tr><th>Alignments</th><td>If the car pulls to one side, have us check it.</td></tr>
       <tr><th>Smog checks</th><td>Call and ask about getting your smog check done here.</td></tr>
     </table>
-  </div>
 
-  <section class="said"><div class="w">
-    <h2>What customers say</h2>
-    <div class="grid">
-      <blockquote><p>"Getting a tire patch, showed me the damage, installing the new tire, and being on my way was total about 15 minutes!"</p><cite>Google review</cite></blockquote>
-      <blockquote><p>"Went in with four brand new tires asked to have a mounted and balanced done in under a half hour."</p><cite>Google review</cite></blockquote>
-      <blockquote><p>"I should have timed it, but it probably took like 10 minutes. It was pretty fast. I'm happy."</p><cite>Google review</cite></blockquote>
-    </div>
-  </div></section>
+    <h2>What <i>customers say</i></h2>
+    <blockquote class="lap"><b>15 min</b><div><p>"Getting a tire patch, showed me the damage, installing the new tire, and being on my way was total about 15 minutes!"</p><cite>Google review</cite></div></blockquote>
+    <blockquote class="lap"><b>&lt; 30 min</b><div><p>"Went in with four brand new tires asked to have a mounted and balanced done in under a half hour."</p><cite>Google review</cite></div></blockquote>
+    <blockquote class="lap"><b>10 min</b><div><p>"I should have timed it, but it probably took like 10 minutes. It was pretty fast. I'm happy."</p><cite>Google review</cite></div></blockquote>
 
-  <div class="w">
-    <h2 id="visit">Hours and location</h2>
+    <h2 id="visit">Hours <i>and location</i></h2>
     <div class="visit">
       <div>
         <table class="hrs">
@@ -160,8 +159,8 @@ footer p{margin:0 0 6px}
   var d = now.getDay(), t = now.getHours() + now.getMinutes() / 60, h = H[d];
   var row = document.querySelector('.hrs tr[data-d="' + d + '"]'); if (row) row.className = "today";
   var el = document.getElementById("open");
-  if (h && t >= h[0] && t < h[1]) { el.textContent = "Open now"; el.className = "on"; }
-  else { el.textContent = "Closed right now"; el.className = "off"; }
+  if (h && t >= h[0] && t < h[1]) { el.textContent = "Open now"; el.className = "tile on"; }
+  else { el.textContent = "Closed right now"; el.className = "tile off"; }
 })();
 </script>
 </body>

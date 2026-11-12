@@ -10,55 +10,75 @@
 <meta property="og:title" content="Daniel's Auto Center Repair" />
 <meta property="og:description" content="Auto repair in La Puente" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;800&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Albert+Sans:wght@400;600&family=VT323&display=swap" />
 <style>
+/* Concept: the handheld scan tool a shop plugs in to find the problem. The top of the page is the tool: a
+   green LCD showing only real facts (status, phone, address, rating) with two keys under it. Lists further
+   down use the tool's menu rows. */
+:root{--case:#1f262d;--case2:#2c353e;--lcd:#b7c8a3;--px:#18240f;--bg:#eef1f3;--ink:#161d24;--soft:#57636e;--line:#cfd6dc;--key:#0f6fb5;
+  --disp:"Chakra Petch","Arial Narrow",sans-serif;--body:"Albert Sans",Verdana,sans-serif;--lcdf:VT323,"Courier New",monospace}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:#18222d;font:400 17px/1.6 Rubik,Arial,sans-serif;padding-bottom:74px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);padding-bottom:64px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:900px;margin:0 auto;padding:0 20px}
-.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px;padding-bottom:14px}
-.top b{font-weight:800;font-size:19px;line-height:1.15}
-.top a{flex:none;background:#0f6fb5;color:#fff;text-decoration:none;font-weight:500;padding:10px 14px;border-radius:99px;white-space:nowrap;font-size:15px}
-.hero{padding-top:18px}
-.pill{display:inline-block;background:#e8f1f8;border-radius:99px;padding:5px 14px;font-weight:500;font-size:15px}
-.pill.on{background:#e3f4ea;color:#12613a}.pill.off{background:#fbe9e7;color:#9c2a1f}
-h1{font-weight:800;font-size:33px;line-height:1.12;margin:14px 0 10px}
-.hero p{margin:0 0 20px;font-size:18px;max-width:32em}
-.cta{display:flex;flex-wrap:wrap;gap:10px}
-.cta a{text-decoration:none;font-weight:800;padding:15px 22px;border-radius:12px;background:#0f6fb5;color:#fff}
-.cta a+a{background:#e8f1f8;color:#0f6fb5}
-.ph{width:100%;height:230px;object-fit:cover;border-radius:16px;margin-top:26px}
-h2{font-weight:800;font-size:24px;margin:44px 0 10px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-.tags li{border:1.5px solid #c9d6e2;border-radius:99px;padding:6px 14px;font-weight:500}
-.say{display:grid;gap:14px}
-.say blockquote{margin:0;background:#f3f6f9;border-radius:16px 16px 16px 4px;padding:18px 20px}
-.say blockquote:nth-child(even){border-radius:16px 16px 4px 16px;background:#e8f1f8}
-.say p{margin:0 0 6px}
-.say cite{font-style:normal;font-size:14px;color:#52606d}
-.box{background:#f3f6f9;border-radius:16px;padding:20px}
-table{border-collapse:collapse;width:100%}
-td{padding:8px 0;border-bottom:1px solid #dbe3ea}
-tr:last-child td{border:0}
+.w{max-width:940px;margin:0 auto;padding:0 18px}
+.top{background:var(--case);color:#fff}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.top b{font:700 18px/1.15 var(--disp)}
+.top a{flex:none;font:700 17px/1 var(--disp);text-decoration:none;background:var(--key);padding:11px 13px;border-radius:4px;white-space:nowrap}
+.tool{background:var(--case);color:#fff;padding:14px 0 28px}
+.tool .w{display:grid;gap:20px}
+h1{font:700 32px/1.1 var(--disp);margin:0 0 10px}
+.tool p{margin:0;font-size:18px;max-width:30em;color:#cbd4db}
+.unit{background:var(--case2);border-radius:14px;padding:14px;max-width:560px;width:100%;box-shadow:inset 0 0 0 1px #3d4853}
+.lcd{background:var(--lcd);color:var(--px);border-radius:6px;padding:12px 12px 10px;font:400 18px/1.2 var(--lcdf);box-shadow:inset 0 2px 6px rgba(0,0,0,.35)}
+.lcd dl{margin:0}
+.lcd div{display:grid;grid-template-columns:4.2em minmax(0,1fr);gap:8px;padding:3px 0;border-bottom:1px dashed rgba(24,36,15,.35)}
+.lcd div:last-child{border-bottom:0}
+.lcd dt{text-transform:uppercase;opacity:.75}
+.lcd dd{margin:0;text-transform:uppercase;overflow-wrap:anywhere}
+.lcd a{text-decoration:none}
+@media (prefers-reduced-motion:no-preference){.lcd dd#open::after{content:"_";animation:blink 1s steps(1) infinite}}
+@keyframes blink{50%{opacity:0}}
+.keys{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.keys a{text-align:center;text-decoration:none;font:700 16px/1.15 var(--disp);letter-spacing:.03em;text-transform:uppercase;padding:15px 6px;border-radius:8px;background:var(--key);color:#fff;box-shadow:0 3px 0 #0a4b7c}
+.keys a+a{background:#59636d;box-shadow:0 3px 0 #3b434b}
+.ph{width:100%;height:220px;object-fit:cover;border-radius:6px;margin-top:26px}
+h2{font:700 24px/1.15 var(--disp);margin:44px 0 10px}
+.menu{list-style:none;margin:14px 0 0;padding:0;background:#fff;border:1px solid var(--line);border-radius:6px}
+.menu li{padding:11px 14px;border-bottom:1px solid var(--line);font-weight:600;display:flex;gap:10px}
+.menu li:last-child{border-bottom:0}
+.menu li::before{content:">";font:400 22px/1.15 var(--lcdf);color:var(--key)}
+.soft{color:var(--soft)}
+.say blockquote{margin:0;padding:14px 0;border-top:1px solid var(--line)}
+.say p{margin:0 0 4px;font-size:18px;line-height:1.5}
+.say cite{font:500 13px/1 var(--disp);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.visit{display:grid;gap:22px}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid var(--line)}
+td{padding:9px 14px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
 td+td{text-align:right}
-tr.today td{font-weight:800;color:#0f6fb5}
-.map{width:100%;height:300px;border:0;border-radius:16px;margin-top:14px}
-.soft{color:#52606d;font-size:15px}
-footer{margin-top:48px;background:#f3f6f9;padding:22px 0 28px;color:#52606d;font-size:14px}
+tr.today td{background:var(--case);color:#fff;font-weight:600}
+.map{width:100%;height:290px;border:1px solid var(--line);border-radius:6px;margin-top:12px}
+footer{margin-top:50px;background:var(--case);color:#b9c3cc;padding:20px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.dock a{text-align:center;text-decoration:none;font-weight:800;padding:15px 6px;border-radius:12px;background:#0f6fb5;color:#fff;box-shadow:0 4px 14px rgba(15,40,70,.25)}
-.dock a+a{background:#fff;color:#0f6fb5}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--case)}
+.dock a{text-align:center;text-decoration:none;color:#fff;font:700 17px/1 var(--disp);letter-spacing:.05em;text-transform:uppercase;padding:19px 6px}
+.dock a:first-child{background:var(--key)}
+a:focus-visible{outline:3px solid #ffb703;outline-offset:2px}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding-top:30px}
-  h1{font-size:46px}
-  .ph{height:360px;margin-top:0}
-  .say{grid-template-columns:1fr 1fr}
-  .visit{display:grid;grid-template-columns:360px 1fr;gap:30px;align-items:start}
-  .map{margin-top:0;height:340px}
+  .top b{font-size:22px}
+  .tool{padding:34px 0 46px}
+  .tool .w{grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  h1{font-size:44px}
+  .lcd{font-size:26px}
+  .ph{height:320px;margin-top:40px}
+  .menu{columns:2;column-gap:0}
+  .menu li{break-inside:avoid}
+  .say{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+  .visit{grid-template-columns:1fr 1fr;gap:40px}
 }
 </style>
 </head>
@@ -75,23 +95,32 @@ footer p{margin:0 0 6px}
   <a href="tel:+16268144694">(626) 814-4694</a>
 </div></header>
 
-<div class="w hero">
+<div class="tool"><div class="w">
   <div>
-    <span class="pill" id="open">Open Monday to Saturday</span>
     <h1>Auto repair on Amar Rd in La Puente</h1>
     <p>Call or stop by and tell us what the car is doing. We'll look at it and tell you what we found before we do any work.</p>
-    <div class="cta">
+  </div>
+  <div class="unit">
+    <div class="lcd"><dl>
+      <div><dt>Shop</dt><dd>Daniel's Auto Center Repair</dd></div>
+      <div><dt>Status</dt><dd id="open">Open Monday to Saturday</dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+16268144694">(626) 814-4694</a></dd></div>
+      <div><dt>Address</dt><dd>13931 Amar Rd, La Puente</dd></div>
+      <div><dt>Google</dt><dd>4.7 from 68 reviews</dd></div>
+    </dl></div>
+    <div class="keys cta">
       <a href="tel:+16268144694">Call (626) 814-4694</a>
       <a href="#visit">Hours and map</a>
     </div>
   </div>
-  <img class="ph" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=72&w=1400&fit=crop" alt="Technician leaning in under the open hood of a car" />
-</div>
+</div></div>
 
 <main class="w">
+  <img class="ph" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=72&w=1400&fit=crop" alt="Technician leaning in under the open hood of a car" />
+
   <h2>What we work on</h2>
   <p>Cars and trucks, including heavy-duty pickups. These are some of the jobs our customers have written about.</p>
-  <ul class="tags">
+  <ul class="menu tags">
     <li>Diagnosis</li>
     <li>No-start problems</li>
     <li>Fuel pumps</li>

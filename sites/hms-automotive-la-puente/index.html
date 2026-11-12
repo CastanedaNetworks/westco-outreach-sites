@@ -10,55 +10,78 @@
 <meta property="og:title" content="HMS Automotive" />
 <meta property="og:description" content="Auto repair and transmission specialists" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap" />
 <style>
+/* Concept: a page from a parts catalog. A title block, lettered sections, numbered reference callouts and an
+   index table, in black ink with the gold from the HMS logo. */
+:root{--paper:#f5f5f2;--ink:#141414;--soft:#5c5c58;--line:#141414;--hair:#c9c9c2;--gold:#b08a2c;
+  --disp:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;--body:"IBM Plex Sans",Verdana,sans-serif;--mono:"IBM Plex Mono","Courier New",monospace}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:#1a1a1a;font:400 17px/1.6 Archivo,Arial,sans-serif;padding-bottom:60px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);padding-bottom:64px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:980px;margin:0 auto;padding:0 20px}
-.top .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px}
+.w{max-width:960px;margin:0 auto;padding:0 18px}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
 .top img{width:120px;height:auto}
-.top a{flex:none;text-decoration:none;font-weight:700;border-bottom:2px solid #b8912f;padding-bottom:2px;white-space:nowrap}
-.rule{height:4px;background:linear-gradient(90deg,#b8912f,#f4e39a,#b8912f)}
-.hero{padding-block:34px 30px}
-h1{font-weight:700;font-size:33px;line-height:1.1;margin:0 0 10px}
-.hero p{margin:0 0 6px;font-size:18px;max-width:32em}
-#open{display:block;font-weight:500;margin:14px 0 18px}
-#open.on{color:#177245}#open.off{color:#b3261e}
-.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 22px;background:#1a1a1a;color:#fff;margin:0 8px 8px 0}
-.btn.o{background:#fff;color:#1a1a1a;box-shadow:inset 0 0 0 2px #1a1a1a}
-.ph{width:100%;height:230px;object-fit:cover}
+.top a{flex:none;font:700 19px/1 var(--disp);letter-spacing:.03em;text-decoration:none;border:2px solid var(--ink);padding:10px 12px;white-space:nowrap}
+.rule{height:5px;background:var(--gold)}
+/* title block */
+.block{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--line);margin-top:22px}
+.block div{padding:8px 10px;border-bottom:1px solid var(--line);min-width:0}
+.block div:nth-child(odd){border-right:1px solid var(--line)}
+.block div.full{grid-column:1 / -1;border-right:0}
+.block div:last-child{border-bottom:0}
+.k{display:block;font:500 11px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.block b{font:700 18px/1.25 var(--disp)}
+#open.on{color:#17683a}#open.off{color:#b3261e}
+h1{font:700 44px/1 var(--disp);text-transform:uppercase;letter-spacing:.01em;margin:26px 0 10px}
+.lead{margin:0 0 18px;max-width:32em;font-size:18px}
+.btn{display:inline-block;font:700 18px/1 var(--disp);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:15px 20px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);margin:0 8px 8px 0}
+.btn.o{background:none;color:var(--ink)}
+figure{margin:24px 0 0}
+figure img{width:100%;height:220px;object-fit:cover;border:2px solid var(--line)}
+figcaption{font:500 12px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-top:6px}
 section{padding-top:44px}
-h2{font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:#8a6b1c;margin:0 0 14px}
-.svc{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
-.svc li{padding:9px 0;border-bottom:1px solid #e3e3e3;font-weight:500}
-.big{font-size:21px;line-height:1.45;max-width:30em;margin:0 0 12px}
-.revs blockquote{margin:0;padding:18px 0;border-top:1px solid #e3e3e3}
-.revs blockquote:last-child{border-bottom:1px solid #e3e3e3}
-.revs p{margin:0 0 6px;font-size:18px}
-.revs cite{font-style:normal;font-size:14px;color:#666}
-table{border-collapse:collapse;width:100%}
-td{padding:8px 0;border-bottom:1px solid #e3e3e3}
-td+td{text-align:right}
-tr.today td{font-weight:700}
-.map{width:100%;height:300px;border:0;margin-top:16px}
-.soft{color:#555;font-size:15px}
-footer{margin-top:50px;background:#1a1a1a;color:#c9c9c9;padding:22px 0 28px;font-size:14px}
+h2{display:flex;align-items:center;gap:12px;font:700 24px/1.1 var(--disp);text-transform:uppercase;letter-spacing:.03em;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h2 i{flex:none;font:500 15px/1 var(--mono);font-style:normal;background:var(--gold);color:#fff;width:30px;height:30px;display:grid;place-items:center}
+.idx{list-style:none;margin:0;padding:0;counter-reset:n}
+.idx li{counter-increment:n;display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--hair);font-weight:600}
+.idx li::before{content:counter(n,decimal-leading-zero);flex:none;font:500 13px/1 var(--mono);width:30px;height:30px;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+.big{font-size:20px;line-height:1.5;margin:0 0 12px;max-width:34em}
+.revs blockquote{margin:0;padding:14px 0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:30px 1fr;gap:12px}
+.revs blockquote::before{content:"";width:30px;height:30px;border:1.5px solid var(--gold);border-radius:50%}
+.revs p{margin:0 0 4px;font-size:18px;line-height:1.5}
+.revs cite{font:500 12px/1 var(--mono);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.revs blockquote > div{min-width:0}
+.soft{color:var(--soft);font-size:15px}
+.two{display:grid;gap:22px}
+table{border-collapse:collapse;width:100%;border:2px solid var(--line)}
+td{padding:8px 10px;border-bottom:1px solid var(--hair)}
+tr:last-child td{border-bottom:0}
+td+td{text-align:right;font-family:var(--mono);font-size:15px}
+tr.today td{background:var(--ink);color:var(--paper)}
+.map{width:100%;height:290px;border:2px solid var(--line);margin-top:12px}
+footer{margin-top:50px;border-top:5px solid var(--gold);background:var(--ink);color:#c8c8c2;padding:20px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#1a1a1a;border-top:3px solid #b8912f}
-.dock a{text-align:center;text-decoration:none;color:#fff;font-weight:700;padding:17px 6px}
-.dock a+a{border-left:1px solid #444}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--ink);border-top:4px solid var(--gold)}
+.dock a{text-align:center;text-decoration:none;color:#fff;font:700 18px/1 var(--disp);letter-spacing:.05em;text-transform:uppercase;padding:18px 6px}
+.dock a:first-child{background:var(--gold);color:#111}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
   .top img{width:150px}
-  .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-block:50px}
-  .hero .ph2{display:block}
-  h1{font-size:46px}
-  .ph{height:340px;border-radius:2px}
-  .svc{grid-template-columns:repeat(3,1fr)}
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+  .block{grid-template-columns:repeat(4,1fr)}
+  .block div{border-right:1px solid var(--line);border-bottom:0}
+  .block div.full{grid-column:auto;border-right:0}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  h1{font-size:64px;margin-top:36px}
+  figure{margin-top:36px}
+  figure img{height:300px}
+  .idx{columns:3;column-gap:34px}
+  .idx li{break-inside:avoid}
+  .two{grid-template-columns:1fr 1fr;gap:40px}
+  .map{margin-top:0;height:100%;min-height:330px}
 }
 </style>
 </head>
@@ -76,21 +99,31 @@ footer p{margin:0 0 6px}
 </div></header>
 <div class="rule"></div>
 
-<div class="w hero">
-  <div>
-    <h1>HMS Automotive</h1>
-    <p>Full-service auto repair and transmission specialists at 161 4th Ave in La Puente.</p>
-    <span id="open">Open Monday to Saturday</span>
-    <a class="btn" href="tel:+16263330984">Call the shop</a>
-    <a class="btn o" href="#visit">Hours and map</a>
+<div class="w">
+  <div class="block">
+    <div><span class="k">Shop</span><b>HMS Automotive</b></div>
+    <div><span class="k">Location</span><b>161 4th Ave, La Puente</b></div>
+    <div><span class="k">Phone</span><b><a href="tel:+16263330984">(626) 333-0984</a></b></div>
+    <div class="full"><span class="k">Status</span><b id="open">Open Monday to Saturday</b></div>
   </div>
-  <img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
+  <div class="hero">
+    <div>
+      <h1>HMS Automotive</h1>
+      <p class="lead">Full-service auto repair and transmission specialists at 161 4th Ave in La Puente.</p>
+      <a class="btn" href="tel:+16263330984">Call the shop</a>
+      <a class="btn o" href="#visit">Hours and map</a>
+    </div>
+    <figure>
+      <img class="ph" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
+      <figcaption>Fig. 1 · stand-in photo</figcaption>
+    </figure>
+  </div>
 </div>
 
 <main class="w">
   <section>
-    <h2>Services</h2>
-    <ul class="svc">
+    <h2><i>A</i>Services</h2>
+    <ul class="idx">
       <li>Transmissions</li>
       <li>Brakes</li>
       <li>Tune ups</li>
@@ -106,21 +139,21 @@ footer p{margin:0 0 6px}
   </section>
 
   <section>
-    <h2>How we work</h2>
+    <h2><i>B</i>How we work</h2>
     <p class="big">Call or come in and tell us what's going on with your car. We'll give you an estimate and go through it with you.</p>
     <p>We explain what we found and what your options are, and we get the work done in the time we tell you.</p>
   </section>
 
   <section class="revs">
-    <h2>From our Google reviews</h2>
-    <blockquote><p>"Hugo was very helpful and broke down the estimate for me. I brought in my vehicle and the work was done in the time frame stated."</p><cite>Google review</cite></blockquote>
-    <blockquote><p>"I also appreciated that they didn't try to sell me any fixes I didn't need. The price was very reasonable."</p><cite>Google review</cite></blockquote>
-    <blockquote><p>"They go above and beyond to explain the issues and your possible options, I never feel like they are pushing an upsell or unnecessary services"</p><cite>Google review</cite></blockquote>
+    <h2><i>C</i>From our Google reviews</h2>
+    <blockquote><div><p>"Hugo was very helpful and broke down the estimate for me. I brought in my vehicle and the work was done in the time frame stated."</p><cite>Google review</cite></div></blockquote>
+    <blockquote><div><p>"I also appreciated that they didn't try to sell me any fixes I didn't need. The price was very reasonable."</p><cite>Google review</cite></div></blockquote>
+    <blockquote><div><p>"They go above and beyond to explain the issues and your possible options, I never feel like they are pushing an upsell or unnecessary services"</p><cite>Google review</cite></div></blockquote>
     <p class="soft" style="margin-top:12px">Rated 4.8 on Google from 43 reviews.</p>
   </section>
 
   <section id="visit">
-    <h2>Hours and location</h2>
+    <h2><i>D</i>Hours and location</h2>
     <div class="two">
       <div>
         <table>
@@ -133,9 +166,9 @@ footer p{margin:0 0 6px}
           <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
         </table>
         <p class="soft">We accept credit cards, debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+        <p style="margin:0">161 4th Ave, La Puente, CA 91746<br /><a href="https://www.google.com/maps/dir/?api=1&destination=HMS+Automotive+161+4th+Ave+La+Puente+CA+91746">Get directions</a></p>
       </div>
       <div>
-        <p style="margin:0">161 4th Ave, La Puente, CA 91746<br /><a href="https://www.google.com/maps/dir/?api=1&destination=HMS+Automotive+161+4th+Ave+La+Puente+CA+91746">Get directions</a></p>
         <iframe class="map" title="Map to HMS Automotive" src="https://www.google.com/maps?q=HMS+Automotive+161+4th+Ave+La+Puente+CA+91746&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>

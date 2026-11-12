@@ -10,61 +10,71 @@
 <meta property="og:title" content="A Transmission and Auto Repair" />
 <meta property="og:description" content="Transmission and auto repair in Baldwin Park" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Encode+Sans:wght@400;600&display=swap" />
 <style>
+/* The gear selector: a P R N D L quadrant is the navigation, and each section lights its own letter. */
+:root{--alu:#e7e9ea;--panel:#f6f7f7;--k:#14171a;--dim:#6d747b;--lit:#e8480f;--line:#c4c9cd;
+--dial:Michroma,"Arial Black",sans-serif;--body:"Encode Sans",Helvetica,sans-serif}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:#14181d;font:400 17px/1.6 Barlow,Arial,sans-serif;padding-bottom:62px}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--alu);color:var(--k);font:400 17px/1.6 var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:960px;margin:0 auto;padding-left:20px;padding-right:20px}
-.bar{border-bottom:4px solid #e03131}
+.w{max-width:900px;margin:0 auto;padding-left:16px;padding-right:16px}
 .bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
-.brand{font:800 18px/1.05 "Barlow Condensed",Arial,sans-serif;text-transform:uppercase;text-decoration:none;max-width:8em;min-width:0}
-.tel{flex:none;background:#14181d;color:#fff;font:800 17px/1 "Barlow Condensed",Arial,sans-serif;text-decoration:none;padding:10px 10px;white-space:nowrap}
-.hero{display:grid;gap:22px;padding-top:28px;align-items:center}
-.hero>div{min-width:0}
-h1{font:800 32px/1 "Barlow Condensed",Arial,sans-serif;text-transform:uppercase;margin:0 0 12px;overflow-wrap:anywhere}
-h1 em{font-style:normal;color:#e03131}
-.hero p{margin:0 0 18px;font-size:18px;max-width:30em}
-.btn{display:inline-block;text-decoration:none;font:800 19px/1 "Barlow Condensed",Arial,sans-serif;letter-spacing:.02em;text-transform:uppercase;padding:14px 16px;border:2px solid #14181d;margin:0 8px 8px 0}
-.btn.r{background:#e03131;border-color:#e03131;color:#fff}
-.hero img{width:100%;height:230px;object-fit:cover}
-.line{margin:24px 0 0;padding:12px 0;border-top:1px solid #dfe3e7;border-bottom:1px solid #dfe3e7;font-size:16px}
-#open{font-weight:500}
-#open.on{color:#17753f}#open.off{color:#c22a2a}
-h2{font:800 28px/1.05 "Barlow Condensed",Arial,sans-serif;text-transform:uppercase;margin:46px 0 10px}
-.two{display:grid;gap:26px}
-.two h3{font:600 20px/1.1 "Barlow Condensed",Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#e03131;margin:0 0 6px}
-.two p{margin:0 0 10px}
-.big{margin:0;font:600 26px/1.25 "Barlow Condensed",Arial,sans-serif}
-.who{font-size:15px;color:#5a626b;margin:8px 0 26px}
-.more{display:grid;gap:18px}
-.more blockquote{margin:0;padding-top:14px;border-top:2px solid #14181d}
-.more p{margin:0 0 6px}
-.more cite{font-style:normal;font-size:15px;color:#5a626b}
-.visit{display:grid;gap:24px}
-table{border-collapse:collapse;width:100%;max-width:380px}
-td{padding:8px 0;border-bottom:1px solid #dfe3e7}
+.brand{font:400 13px/1.35 var(--dial);text-transform:uppercase;letter-spacing:.04em;text-decoration:none;max-width:12em}
+.tel{flex:none;background:var(--k);color:#fff;font:600 15px/1 var(--body);text-decoration:none;padding:14px 12px;white-space:nowrap;border-radius:3px}
+.quad{position:sticky;top:0;z-index:30;background:var(--k);border-top:3px solid #8f979d;border-bottom:3px solid #8f979d}
+.quad .w{display:grid;grid-template-columns:repeat(5,1fr);padding-left:6px;padding-right:6px}
+.quad a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:54px;text-decoration:none;color:#c2c8cd;font:400 20px/1 var(--dial);position:relative}
+.quad a small{font:600 9px/1 var(--body);letter-spacing:.1em;text-transform:uppercase}
+.quad a:hover,.quad a:focus-visible{color:#fff;outline:0}
+.quad a:hover::after,.quad a:focus-visible::after{content:"";position:absolute;bottom:0;left:50%;width:0;height:0;border:6px solid transparent;border-bottom-color:var(--lit);transform:translateX(-50%)}
+.sec{background:var(--panel);border:1px solid var(--line);border-radius:4px;margin-top:16px;padding:18px 16px 20px}
+.gear{display:flex;align-items:center;gap:12px;margin:0 0 14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.gear ol{display:flex;gap:2px;list-style:none;margin:0;padding:5px 8px;background:var(--k);border-radius:3px;flex:none}
+.gear li{font:400 13px/1 var(--dial);color:#5b6168;width:17px;text-align:center}
+.gear li.on{color:#ff7a3d}
+h2{font:400 15px/1.3 var(--dial);text-transform:uppercase;letter-spacing:.04em;margin:0}
+h1{font:400 23px/1.3 var(--dial);text-transform:uppercase;margin:0 0 12px}
+h1 em{font-style:normal;color:var(--lit)}
+h3{font:600 18px/1.2 var(--body);margin:0 0 4px}
+.btn{display:inline-block;text-decoration:none;font:600 16px/1 var(--body);padding:15px 20px;border:2px solid var(--k);border-radius:3px;margin:4px 8px 4px 0}
+.btn.r{background:var(--lit);border-color:var(--lit);color:#fff}
+.hero img{width:100%;height:210px;object-fit:cover;border-radius:3px;margin-top:14px}
+.line{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:15px}
+#open{font-weight:600}#open.on{color:#177245}#open.off{color:#b3261e}
+.two{display:grid;gap:18px}
+.big{font-size:20px;line-height:1.5;margin:0 0 4px}
+.who{font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:0 0 16px}
+.more{display:grid;gap:14px}
+blockquote{margin:0;padding-top:12px;border-top:1px solid var(--line)}
+blockquote p{margin:0 0 4px}
+blockquote cite{font:600 12px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;font-style:normal;color:var(--dim)}
+.visit{display:grid;gap:20px}
+table{border-collapse:collapse;width:100%}
+td{padding:8px 0;border-bottom:1px solid var(--line)}
 td+td{text-align:right}
-tr.today td{font-weight:500;color:#e03131}
-.map{width:100%;height:300px;border:0}
-.small{font-size:15px;color:#5a626b}
-footer{margin-top:48px;background:#f1f3f5;padding:22px 0 28px;color:#555e68;font-size:14px}
+tr.today td{font-weight:600;color:var(--lit)}
+.map{width:100%;height:290px;border:1px solid var(--line);border-radius:3px}
+.small{font-size:15px;color:#4e555c}
+footer{margin-top:22px;background:var(--k);color:#aab1b7;padding:22px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:2fr 1fr;background:#14181d}
-.dock a{text-align:center;text-decoration:none;font:800 18px/1 "Barlow Condensed",Arial,sans-serif;text-transform:uppercase;padding:19px 4px;color:#fff;min-width:0}
-.dock a.r{background:#e03131}
-@media(min-width:740px){
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:var(--k)}
+.dock a{text-align:center;text-decoration:none;font:600 16px/1 var(--body);padding:20px 6px;color:#fff}
+.dock a.r{background:var(--lit)}
+.btn:focus-visible,.tel:focus-visible,.dock a:focus-visible{outline:3px solid var(--lit);outline-offset:3px}
+@media(min-width:720px){
   body{padding-bottom:0}.dock{display:none}
-  .brand{max-width:none;font-size:24px}
-  .tel{font-size:20px;padding:11px 14px}
-  .hero{grid-template-columns:1fr 1fr;padding-top:50px}
-  h1{font-size:62px}
-  .hero img{height:380px}
-  .two{grid-template-columns:3fr 2fr;gap:50px}
-  .more{grid-template-columns:1fr 1fr}
-  .visit{grid-template-columns:380px 1fr}
+  .brand{font-size:16px;max-width:none}
+  .quad a{font-size:26px;min-height:64px}.quad a small{font-size:11px}
+  .sec{padding:28px 30px 30px}
+  h1{font-size:34px}h2{font-size:19px}
+  .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
+  .hero img{height:300px;margin:0}
+  .two{grid-template-columns:1fr 1fr;gap:34px}
+  .more{grid-template-columns:1fr 1fr;gap:30px}
+  .visit{grid-template-columns:360px 1fr}
 }
 </style>
 </head>
@@ -81,61 +91,80 @@ footer p{margin:0 0 6px}
   <a class="tel" href="tel:+16269601139">(626) 960-1139</a>
 </div></header>
 
-<main class="w" id="top">
-  <div class="hero">
-    <div>
-      <h1>Transmission rebuilds <em>and auto repair</em> in Baldwin Park</h1>
-      <p>Jorge and the team rebuild transmissions here at the shop on Baldwin Park Blvd, and we handle general repair and smog checks too.</p>
-      <a class="btn r" href="tel:+16269601139">Call (626) 960-1139</a>
-      <a class="btn" href="#visit">Hours and map</a>
-    </div>
-    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
-  </div>
-  <p class="line"><span id="open">Monday to Friday, 8 am to 5 pm.</span> 3099 Baldwin Park Blvd. Rated 4.3 on Google from 104 reviews.</p>
+<nav class="quad" aria-label="Sections"><div class="w">
+  <a href="#top">P<small>Phone</small></a>
+  <a href="#work">R<small>Rebuilds</small></a>
+  <a href="#shop">N<small>The shop</small></a>
+  <a href="#reviews">D<small>Drivers</small></a>
+  <a href="#visit">L<small>Location</small></a>
+</div></nav>
 
-  <h2>What we do</h2>
-  <div class="two">
-    <div>
-      <h3>Transmissions</h3>
-      <p>If yours is slipping, shifting rough or cutting out at stops, bring it in. We'll tell you whether a rebuild makes sense or whether a remanufactured unit is the better way to go.</p>
-      <p>We've rebuilt everything from a 1965 Mustang to the CVT in a 2013 Nissan Rogue.</p>
+<main class="w">
+  <section class="sec" id="top">
+    <div class="gear"><ol aria-hidden="true"><li class="on">P</li><li>R</li><li>N</li><li>D</li><li>L</li></ol><h2>Phone the shop</h2></div>
+    <div class="hero">
+      <div>
+        <h1>Transmission rebuilds <em>and auto repair</em> in Baldwin Park</h1>
+        <p>Jorge and the team rebuild transmissions here at the shop on Baldwin Park Blvd, and we handle general repair and smog checks too.</p>
+        <a class="btn r" href="tel:+16269601139">Call (626) 960-1139</a>
+        <a class="btn" href="#visit">Hours and map</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?fm=jpg&q=72&w=1400&fit=crop" alt="Close view of an engine and belts" />
     </div>
-    <div>
-      <h3>Everything else</h3>
-      <p>We do regular service and general repair as well. Call and tell us what the car is doing.</p>
-      <p>Customers have also had their smog checks done here, so ask about that when you call.</p>
+    <p class="line"><span id="open">Monday to Friday, 8 am to 5 pm.</span> 3099 Baldwin Park Blvd. Rated 4.3 on Google from 104 reviews.</p>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="gear"><ol aria-hidden="true"><li>P</li><li class="on">R</li><li>N</li><li>D</li><li>L</li></ol><h2>What we do</h2></div>
+    <div class="two">
+      <div>
+        <h3>Transmissions</h3>
+        <p>If yours is slipping, shifting rough or cutting out at stops, bring it in. We'll tell you whether a rebuild makes sense or whether a remanufactured unit is the better way to go.</p>
+        <p style="margin-bottom:0">We've rebuilt everything from a 1965 Mustang to the CVT in a 2013 Nissan Rogue.</p>
+      </div>
+      <div>
+        <h3>Everything else</h3>
+        <p>We do regular service and general repair as well. Call and tell us what the car is doing.</p>
+        <p style="margin-bottom:0">Customers have also had their smog checks done here, so ask about that when you call.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <h2>About the shop</h2>
-  <p>Some of our customers have been bringing their cars to Jorge since the 90s. Call us with the year, make and model and what's going on. One customer wrote that his bill came in under the quote because the part cost less than expected.</p>
+  <section class="sec" id="shop">
+    <div class="gear"><ol aria-hidden="true"><li>P</li><li>R</li><li class="on">N</li><li>D</li><li>L</li></ol><h2>About the shop</h2></div>
+    <p style="margin:0">Some of our customers have been bringing their cars to Jorge since the 90s. Call us with the year, make and model and what's going on. One customer wrote that his bill came in under the quote because the part cost less than expected.</p>
+  </section>
 
-  <h2>From our Google reviews</h2>
-  <p class="big">"They rebuilt my 1965 mustang transmission, and is now working like a new, very responsive team, and job well done, they did it within 3 days."</p>
-  <p class="who">Google review</p>
-  <div class="more">
-    <blockquote><p>"I opted with the rebuild and the quality has been excellent, very happy I brought it here. It drives extremely smooth."</p><cite>Google review · 2013 Nissan Rogue</cite></blockquote>
-    <blockquote><p>"My family and I have been coming to Don Jorge since the 90s and still he's our go-to and reliable mechanic."</p><cite>Google review</cite></blockquote>
-  </div>
-
-  <h2 id="visit">Hours and location</h2>
-  <div class="visit">
-    <div>
-      <table>
-        <tr data-d="1"><td>Monday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="2"><td>Tuesday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="3"><td>Wednesday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="4"><td>Thursday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="5"><td>Friday</td><td>8 am to 5 pm</td></tr>
-        <tr data-d="6"><td>Saturday</td><td>Closed</td></tr>
-        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
-      </table>
-      <p>3099 Baldwin Park Blvd<br />Baldwin Park, CA 91706</p>
-      <p class="small">We take credit cards, debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
-      <a class="btn r" href="https://www.google.com/maps/dir/?api=1&destination=A+Transmission+and+Auto+Repair+3099+Baldwin+Park+Blvd+Baldwin+Park+CA+91706">Get directions</a>
+  <section class="sec" id="reviews">
+    <div class="gear"><ol aria-hidden="true"><li>P</li><li>R</li><li>N</li><li class="on">D</li><li>L</li></ol><h2>From our Google reviews</h2></div>
+    <p class="big">"They rebuilt my 1965 mustang transmission, and is now working like a new, very responsive team, and job well done, they did it within 3 days."</p>
+    <p class="who">Google review</p>
+    <div class="more">
+      <blockquote><p>"I opted with the rebuild and the quality has been excellent, very happy I brought it here. It drives extremely smooth."</p><cite>Google review · 2013 Nissan Rogue</cite></blockquote>
+      <blockquote><p>"My family and I have been coming to Don Jorge since the 90s and still he's our go-to and reliable mechanic."</p><cite>Google review</cite></blockquote>
     </div>
-    <iframe class="map" title="Map to A Transmission and Auto Repair" src="https://www.google.com/maps?q=A+Transmission+and+Auto+Repair+3099+Baldwin+Park+Blvd+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+  </section>
+
+  <section class="sec" id="visit">
+    <div class="gear"><ol aria-hidden="true"><li>P</li><li>R</li><li>N</li><li>D</li><li class="on">L</li></ol><h2>Hours and location</h2></div>
+    <div class="visit">
+      <div>
+        <table>
+          <tr data-d="1"><td>Monday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>8 am to 5 pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>Closed</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p>3099 Baldwin Park Blvd<br />Baldwin Park, CA 91706</p>
+        <p class="small">We take credit cards, debit cards and tap to pay. The entrance and parking are wheelchair accessible.</p>
+        <a class="btn r" href="https://www.google.com/maps/dir/?api=1&destination=A+Transmission+and+Auto+Repair+3099+Baldwin+Park+Blvd+Baldwin+Park+CA+91706">Get directions</a>
+      </div>
+      <iframe class="map" title="Map to A Transmission and Auto Repair" src="https://www.google.com/maps?q=A+Transmission+and+Auto+Repair+3099+Baldwin+Park+Blvd+Baldwin+Park+CA+91706&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
 </main>
 
 <footer><div class="w">

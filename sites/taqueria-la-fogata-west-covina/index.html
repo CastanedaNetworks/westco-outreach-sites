@@ -10,56 +10,72 @@
 <meta property="og:title" content="Taqueria La Fogata" />
 <meta property="og:description" content="Mexican food in West Covina" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Nunito+Sans:wght@400;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;800&display=swap" />
 <style>
+/* Concept: the comal. A black iron griddle over the fire, with round tortillas on it. Circles carry the page; the colors are char, ember and masa. */
+:root{
+  --char:#17120f; --iron:#241c17; --ring:#3a2e26; --ember:#f0612b; --flame:#f6b63a; --masa:#f1dfb6; --ash:#efe8dc; --soft:#bfb3a3; --red:#b3311b;
+  --disp:"Young Serif",Georgia,serif; --body:Figtree,"Segoe UI",sans-serif;
+}
 *{box-sizing:border-box}
-body{margin:0;background:#fff9f0;color:#2a1a12;font:400 18px/1.6 "Nunito Sans",Arial,sans-serif;padding-bottom:62px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--char);color:var(--ash);font:400 17px/1.6 var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:980px;margin:0 auto;padding:0 20px}
-.hd{display:flex;align-items:center;gap:14px;padding-top:16px;padding-bottom:16px}
-.hd img{width:76px;height:76px;border-radius:10px;flex:none}
-.hd div{flex:1;min-width:0}
-h1{font:900 23px/1.1 Merriweather,Georgia,serif;margin:0;color:#b3311b}
-.hd p{margin:2px 0 0;font-size:15px}
-.hd a{display:none}
-.photo{position:relative}
-.photo img{width:100%;height:230px;object-fit:cover}
-.float{background:#fff;border:1px solid #ead9bf;border-radius:10px;margin:-34px 20px 0;padding:18px 18px 14px;position:relative}
-.float p{margin:0 0 10px}
-.float .st{font-weight:700}
-.st .on{color:#27794a}.st .off{color:#b3311b}
-.btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 20px;border-radius:6px;background:#b3311b;color:#fff;margin:0 8px 6px 0}
-.btn.o{background:none;color:#b3311b;border:2px solid #b3311b}
-section{padding-top:44px}
-h2{font:700 25px/1.2 Merriweather,Georgia,serif;color:#b3311b;margin:0 0 10px}
-.dish{margin:0;padding:0;list-style:none}
-.dish li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px dotted #d9c3a5}
-.dish b{font-size:19px}
-.dish span{font-size:15px;color:#6b5646;text-align:right}
-.say{border-top:3px double #d9c3a5;border-bottom:3px double #d9c3a5;padding:20px 0;margin:0}
-.say p{font:700 20px/1.5 Merriweather,Georgia,serif;margin:0 0 6px}
-.say cite{font-style:normal;font-size:14px;color:#6b5646;display:block;margin-bottom:18px}
-.say cite:last-child{margin-bottom:0}
-.hours{background:#fff;border:1px solid #ead9bf;border-radius:10px;padding:6px 18px}
-.hours div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f1e6d3}
-.hours div:last-child{border:0}
-.hours .today{font-weight:700;color:#b3311b}
-.map{width:100%;height:300px;border:0;border-radius:10px}
-.fine{color:#6b5646;font-size:16px}
-footer{margin-top:50px;background:#2a1a12;color:#e2d5c2;padding:20px 0 28px;font-size:14px}
+.w{max-width:940px;margin:0 auto;padding:0 18px}
+.hd{display:flex;align-items:center;gap:12px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.hd img{width:76px;height:76px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--masa)}
+.hd div{flex:1;min-width:150px}
+h1{font:400 26px/1.08 var(--disp);margin:0;color:var(--masa)}
+.hd p{margin:3px 0 0;color:var(--soft);font-size:15px}
+.hd a{flex:none;text-decoration:none;font-weight:800;border:2px solid var(--ember);color:var(--flame);padding:11px 14px;border-radius:99px;white-space:nowrap}
+
+/* the comal */
+.fire{background:radial-gradient(ellipse at 50% 108%,rgba(240,97,43,.55),rgba(240,97,43,0) 62%);padding:10px 18px 30px;text-align:center}
+.comal{width:min(84vw,360px);aspect-ratio:1;margin:0 auto;border-radius:50%;background:var(--iron);border:10px solid #0d0a08;box-shadow:0 0 0 3px var(--ring),0 22px 50px -12px rgba(240,97,43,.6);padding:16px}
+.comal img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.float{max-width:600px;margin:24px auto 0;text-align:left}
+.float p{margin:0 0 12px}
+.st{font-weight:800}
+.st .on{color:var(--flame)}.st .off{color:#ff9d86}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:99px;background:var(--ember);color:#1b0d05;border:2px solid var(--ember);margin:0 8px 8px 0;min-height:48px}
+.btn.o{background:transparent;color:var(--flame)}
+.btn:focus-visible,.hd a:focus-visible,.dock a:focus-visible{outline:3px solid var(--masa);outline-offset:2px}
+
+section{padding-top:42px}
+h2{font:400 27px/1.1 var(--disp);margin:0 0 14px;color:var(--masa)}
+.cols{display:grid;gap:4px}
+/* dishes sit on tortillas */
+.dish{list-style:none;margin:0;padding:0}
+.dish li{display:flex;align-items:center;gap:14px;padding:9px 0}
+.dish li::before{content:"";flex:none;width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#c79a55 0 3px,transparent 4px),radial-gradient(circle at 66% 62%,#c79a55 0 4px,transparent 5px),radial-gradient(circle at 42% 74%,#b8884a 0 2px,transparent 3px),var(--masa);box-shadow:inset 0 0 0 2px #dcc48f}
+.dish b{font:400 21px/1.2 var(--disp);color:var(--ash)}
+.dish span{display:block;color:var(--soft);font-size:15px}
+.fine{font-size:15px;color:var(--soft)}
+.say{margin:0}
+.say p{margin:0 0 4px;font-size:19px;line-height:1.5}
+.say cite{display:block;font-style:normal;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--flame);margin-bottom:18px}
+.vis{display:grid;gap:24px}
+.hours{border-top:1px solid var(--ring)}
+.hours div{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--ring)}
+.hours div.today{color:var(--flame);font-weight:800}
+.hours div.today span:first-child::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ember);margin-right:9px}
+.map{width:100%;height:300px;border:0;border-radius:18px}
+footer{margin-top:46px;border-top:1px solid var(--ring);padding:20px 0 28px;color:var(--soft);font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a1a12}
-.dock a{text-align:center;text-decoration:none;font-weight:700;padding:17px 6px;background:#b3311b;color:#fff}
-.dock a+a{background:#fff9f0;color:#b3311b}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.2fr 1fr;background:var(--char);border-top:2px solid var(--ember)}
+.dock a{text-align:center;text-decoration:none;font-weight:800;color:var(--ash);padding:18px 6px}
+.dock a:first-child{background:var(--ember);color:#1b0d05}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  .hd img{width:104px;height:104px}h1{font-size:34px}
-  .hd a{display:inline-block;text-decoration:none;font-weight:700;background:#b3311b;color:#fff;padding:11px 18px;border-radius:6px;white-space:nowrap}
-  .photo img{height:400px}
-  .float{max-width:520px;margin:-120px 0 0 max(20px,calc((100vw - 980px)/2 + 20px))}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start}
-  .vis{display:grid;grid-template-columns:400px 1fr;gap:36px;align-items:start}
+  .hd img{width:104px;height:104px}
+  h1{font-size:40px}
+  .fire{display:grid;grid-template-columns:400px 1fr;gap:44px;align-items:center;max-width:940px;margin:0 auto;padding:20px 18px 50px;background:radial-gradient(closest-side at 218px 58%,rgba(240,97,43,.42),rgba(240,97,43,0))}
+  .comal{width:400px}
+  .float{margin:0}
+  .float p:first-child{font-size:20px}
+  .cols{grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+  .vis{grid-template-columns:400px 1fr;gap:36px;align-items:start}
 }
 </style>
 </head>
@@ -77,8 +93,8 @@ footer p{margin:0 0 6px}
   <a href="tel:+16269749398">(626) 974-9398</a>
 </header>
 
-<div class="photo">
-  <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?fm=jpg&q=72&w=1400&fit=crop" alt="Row of beef tacos topped with onion and cilantro" />
+<div class="fire photo">
+  <div class="comal"><img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?fm=jpg&q=72&w=1000&fit=crop" alt="Row of beef tacos topped with onion and cilantro" /></div>
   <div class="float">
     <p>We're open from 8 in the morning to 9 at night, seven days a week. Come in and sit down, or call your order in and pick it up.</p>
     <p class="st"><span id="open">Open every day</span> <span id="openline">· 8 am to 9 pm</span></p>
@@ -92,11 +108,11 @@ footer p{margin:0 0 6px}
     <section>
       <h2>What people order</h2>
       <ul class="dish">
-        <li><b>Birria de res</b><span>soft and tender</span></li>
-        <li><b>Handmade tortillas</b><span>made here</span></li>
-        <li><b>Menudo</b></li>
-        <li><b>Enchiladas</b></li>
-        <li><b>Flautas</b></li>
+        <li><div><b>Birria de res</b><span>soft and tender</span></div></li>
+        <li><div><b>Handmade tortillas</b><span>made here</span></div></li>
+        <li><div><b>Menudo</b></div></li>
+        <li><div><b>Enchiladas</b></div></li>
+        <li><div><b>Flautas</b></div></li>
       </ul>
       <p class="fine">We serve breakfast, lunch and dinner, and we have beer. Ask for the full menu at the counter.</p>
     </section>
@@ -126,7 +142,7 @@ footer p{margin:0 0 6px}
         </div>
         <p>314 N Azusa Ave, West Covina, CA 91791</p>
         <p class="fine">There's a parking lot. We take credit and debit cards and tap to pay. The entrance, seating and restroom are wheelchair accessible.</p>
-        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Taqueria+La+Fogata+314+N+Azusa+Ave+West+Covina+CA">Get directions</a>
+        <p style="margin:14px 0 0"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Taqueria+La+Fogata+314+N+Azusa+Ave+West+Covina+CA">Get directions</a></p>
       </div>
       <iframe class="map" title="Map to Taqueria La Fogata" src="https://www.google.com/maps?q=Taqueria+La+Fogata+314+N+Azusa+Ave+West+Covina+CA+91791&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>

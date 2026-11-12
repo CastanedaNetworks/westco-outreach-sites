@@ -10,61 +10,76 @@
 <meta property="og:title" content="Taqueria Rosa &amp; Sul" />
 <meta property="og:description" content="Taqueria on Garvey Ave in El Monte" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;800&display=swap" />
 <style>
+/* Papel picado: strings of cut-paper flags in the colors of their storefront (pink trim, teal sign, painted flowers) hang between sections. */
+:root{--rosa:#d1206f;--teal:#17877f;--sun:#f2a81d;--leaf:#1c3a31;--wall:#fffaf3;--ink:#22201c;--soft:#6a655c;--line:#ead9cf;
+  --d:"Young Serif",Georgia,serif;--b:Figtree,Verdana,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:#17302d;font:400 16.5px/1.65 Poppins,Arial,sans-serif;padding-bottom:62px}
+body{margin:0;background:var(--wall);color:var(--ink);font:400 17px/1.6 var(--b);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:900px;margin:0 auto;padding-left:20px;padding-right:20px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px}
-.top b{font-weight:700;font-size:18px}
-.top a{flex:none;background:#c2185b;color:#fff;text-decoration:none;font-weight:700;padding:9px 14px;border-radius:6px;white-space:nowrap;font-size:15px}
+.w{max-width:900px;margin:0 auto;padding-left:16px;padding-right:16px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:11px;padding-bottom:11px}
+.top b{font:400 21px/1 var(--d);color:var(--rosa)}
+.top a{flex:none;background:var(--rosa);color:#fff;text-decoration:none;font-weight:800;padding:11px 14px;white-space:nowrap;font-size:15px;border-radius:4px}
+/* the string of flags */
+.picado{display:flex;gap:5px;height:54px;border-top:2px solid var(--leaf);padding:0 6px;overflow:hidden}
+.picado i{flex:1;min-width:0;
+  -webkit-mask:radial-gradient(circle 7px at 50% 100%,transparent 96%,#000) 50% 0/14px 100%,radial-gradient(circle 3px,transparent 94%,#000) 50% 6px/14px 15px;-webkit-mask-composite:source-in;
+  mask:radial-gradient(circle 7px at 50% 100%,transparent 96%,#000) 50% 0/14px 100%,radial-gradient(circle 3px,transparent 94%,#000) 50% 6px/14px 15px;mask-composite:intersect}
+.picado i:nth-child(4n+1){background:var(--rosa)}.picado i:nth-child(4n+2){background:var(--teal)}.picado i:nth-child(4n+3){background:var(--sun)}.picado i:nth-child(4n){background:#7d3fa0}
+.picado i:nth-child(n+6){display:none}
 .cover{width:100%;height:auto;max-height:440px;object-fit:cover;object-position:center 22%}
-.name{background:#17302d;color:#fff;padding-top:24px;padding-bottom:26px}
-h1{font-weight:700;font-size:31px;line-height:1.15;margin:0 0 4px}
-.name p{margin:0;color:#cfe0dd}
-.now{margin-top:12px!important;font-weight:500;color:#fff!important}
-#st.on{color:#8fe0a8}#st.off{color:#ffaaa2}
+.name{background:var(--leaf);color:#fff;padding:22px 0 26px}
+h1{font:400 36px/1.08 var(--d);margin:0 0 6px}
+.name p{margin:0}
+.now{margin-top:10px!important;font-weight:600}
+#st.on{color:#8fe0b2}#st.off{color:#ffaa9c}
 .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.btns a{text-decoration:none;font-weight:700;padding:13px 20px;border-radius:6px;border:2px solid #fff}
-.btns a.p{background:#c2185b;border-color:#c2185b}
-section{padding-top:42px}
-h2{font-weight:700;font-size:24px;line-height:1.2;margin:0 0 8px}
-h2 small{display:block;font-weight:500;font-size:14px;color:#c2185b;letter-spacing:.08em;text-transform:uppercase}
-.menu{display:grid;gap:26px}
-.menu h3{margin:0 0 6px;font-size:16px;font-weight:700;color:#c2185b}
-.menu ul{margin:0;padding:0;list-style:none;columns:2;column-gap:20px}
-.menu li{padding:7px 0;border-bottom:1px solid #cfdcd9;break-inside:avoid}
-.ways{margin:18px 0 0;color:#526b67}
-.big{margin:0;font-size:20px;line-height:1.5;font-weight:500}
-.by{margin:8px 0 0;font-size:14px;color:#526b67}
-.more{display:grid;gap:18px;margin-top:26px;padding-top:22px;border-top:1px solid #cfdcd9}
-.more p{margin:0}
-.pics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:34px}
-.pics img{width:100%;height:160px;object-fit:cover;border-radius:6px}
-table{border-collapse:collapse;width:100%;max-width:420px}
-td{padding:8px 0;border-bottom:1px solid #cfdcd9}
+.btns a{text-decoration:none;font-weight:800;padding:15px 22px;border:2px solid #fff;border-radius:4px}
+.btns a.p{background:var(--rosa);border-color:var(--rosa)}
+a:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+section{padding-top:34px}
+h2{font:400 28px/1.15 var(--d);margin:0 0 12px;color:var(--leaf)}
+h2 small{display:block;font:800 13px/1 var(--b);letter-spacing:.2em;text-transform:uppercase;color:var(--rosa);margin-bottom:8px}
+.menu{display:grid;gap:22px}
+.menu h3{font:800 14px/1.2 var(--b);letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 6px}
+.menu ul{list-style:none;margin:0;padding:0;columns:2;column-gap:22px}
+.menu li{padding:8px 0;border-bottom:1px solid var(--line);break-inside:avoid;font:400 18px/1.25 var(--d)}
+.ways{margin:16px 0 0;color:var(--soft)}
+.big{font:400 23px/1.4 var(--d);margin:0 0 6px;color:var(--leaf)}
+.by{font:800 12px/1 var(--b);letter-spacing:.18em;text-transform:uppercase;color:var(--rosa);margin:0}
+.more{display:grid;gap:0;margin-top:18px;border-top:1px solid var(--line)}
+.more div{padding:14px 0;border-bottom:1px solid var(--line)}
+.more p:first-child{margin:0 0 6px}
+.soft{color:var(--soft);font-size:15px}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.pics img{width:100%;height:150px;object-fit:cover;border-radius:4px}
+table{width:100%;border-collapse:collapse}
+td{padding:9px 0;border-bottom:1px solid var(--line)}
 td+td{text-align:right}
-tr.today td{font-weight:700;color:#c2185b}
-.soft{color:#526b67;font-size:15px}
-.map{width:100%;height:300px;border:0;border-radius:6px;margin-top:16px}
-footer{margin-top:52px;background:#17302d;color:#cfe0dd;padding:24px 0 28px;font-size:14px}
+tr.today td{font-weight:800;color:var(--rosa)}
+.map{width:100%;height:290px;border:0;border-radius:4px;margin-top:18px}
+footer{margin-top:44px;background:var(--leaf);color:#d5e2dc;padding:24px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-footer .nm{font-weight:700;font-size:17px;color:#fff}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.3fr 1fr;background:#fff;border-top:1px solid #cfdcd9}
-.dock a{text-align:center;text-decoration:none;font-weight:700;padding:17px 6px}
-.dock a.p{background:#c2185b;color:#fff}
+footer .nm{font:400 20px/1.2 var(--d);color:#fff}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:#fff;border-top:3px solid var(--rosa)}
+.dock a{text-align:center;text-decoration:none;font-weight:800;padding:18px 6px;color:var(--leaf)}
+.dock a.p{background:var(--rosa);color:#fff}
+@media(min-width:560px){.picado i:nth-child(n+6){display:block}.picado i:nth-child(n+10){display:none}}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:44px}
-  .menu{grid-template-columns:1fr 1fr}
-  .more{grid-template-columns:1fr 1fr}
-  .pics img{height:260px}
-  .visit{display:grid;grid-template-columns:420px 1fr;gap:34px}
+  .picado{height:66px;gap:7px}
+  .picado i:nth-child(n+10){display:block}
+  h1{font-size:56px}
+  .menu{grid-template-columns:1fr 1fr;gap:40px}
+  .more{grid-template-columns:1fr 1fr;column-gap:36px}
+  .pics img{height:240px}
+  .visit{display:grid;grid-template-columns:390px 1fr;gap:32px}
   .map{margin-top:0;height:100%;min-height:330px}
-  section{padding-top:60px}
+  section{padding-top:46px}
 }
 </style>
 </head>
@@ -77,6 +92,7 @@ footer .nm{font-weight:700;font-size:17px;color:#fff}
 <!-- PREVIEW BANNER END -->
 
 <header class="w top"><b>Rosa &amp; Sul</b><a href="tel:+16265349680">(626) 534-9680</a></header>
+<div class="picado" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <img class="cover" src="cover.jpg" alt="The front of Taqueria Rosa &amp; Sul on Garvey Avenue" />
 
 <div class="name"><div class="w">
@@ -88,6 +104,7 @@ footer .nm{font-weight:700;font-size:17px;color:#fff}
     <a href="https://www.google.com/maps/dir/?api=1&destination=Taqueria+Rosa+%26+Sul+9853+Garvey+Ave+El+Monte+CA+91733">Directions</a>
   </div>
 </div></div>
+<div class="picado" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
 <main class="w">
   <section>
@@ -110,8 +127,12 @@ footer .nm{font-weight:700;font-size:17px;color:#fff}
     </div>
     <p class="ways">Dine in, takeout or delivery. We take credit cards, debit cards and tap to pay. Call the restaurant for today's prices.</p>
   </section>
+</main>
 
-  <section>
+<div class="picado" aria-hidden="true" style="margin-top:34px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<main class="w">
+  <section style="padding-top:8px">
     <h2>From our Google reviews</h2>
     <p class="big">"The mole was rich and flavorful, with just the right balance of spice and sweetness from the chocolate."</p>
     <p class="by">Google review</p>

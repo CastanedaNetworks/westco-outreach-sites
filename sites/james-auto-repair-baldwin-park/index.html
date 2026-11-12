@@ -10,55 +10,73 @@
 <meta property="og:title" content="James Auto Repair" />
 <meta property="og:description" content="Auto repair in Baldwin Park" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Source+Sans+3:wght@400;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&family=Karla:wght@400;600;700&display=swap" />
 <style>
+/* Concept: the key tag board by the shop counter. Every car that's in gets a numbered tag on a hook. The key
+   facts hang on the board up top, and each kind of work gets its own numbered tag. */
+:root{--board:#23272c;--page:#f0eee8;--ink:#1b1d21;--soft:#5d6168;--line:#d5d1c7;--y:#f2c230;--r:#d33d2a;--b:#2d6cae;--g:#2f8a57;--w:#f6f3ec;
+  --disp:Staatliches,"Arial Narrow",sans-serif;--body:Karla,Verdana,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fbfaf7;color:#1e1b18;font:400 18px/1.6 "Source Sans 3",Arial,sans-serif;padding-bottom:62px}
+body{margin:0;background:var(--page);color:var(--ink);font:400 18px/1.55 var(--body);padding-bottom:64px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:880px;margin:0 auto;padding:0 20px}
-.mast{border-bottom:5px double #1e1b18}
-.mast .w{padding-top:22px;padding-bottom:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px 20px}
-h1{font:400 36px/1 "Alfa Slab One",Georgia,serif;margin:0;color:#0d3b66}
-.mast p{margin:6px 0 0;font-weight:600}
-.mast a.t{background:#0d3b66;color:#fff;text-decoration:none;font-weight:600;padding:10px 16px;border-radius:3px;white-space:nowrap}
-.sub{border-bottom:1px solid #d9d4ca;font-size:16px}
-.sub .w{padding-top:9px;padding-bottom:9px;display:flex;flex-wrap:wrap;gap:2px 18px}
-#open{font-weight:600}#open.on{color:#177245}#open.off{color:#b3261e}
-.lead{font-size:21px;line-height:1.5;margin:28px 0 20px;max-width:30em}
-.go a{display:inline-block;text-decoration:none;font-weight:600;font-size:19px;padding:14px 24px;border-radius:3px;background:#0d3b66;color:#fff;margin:0 10px 10px 0}
-.go a+a{background:none;color:#0d3b66;border:2px solid #0d3b66}
-.ph{width:100%;height:230px;object-fit:cover;margin-top:24px;border:1px solid #d9d4ca}
-h2{font:400 24px/1.2 "Alfa Slab One",Georgia,serif;color:#0d3b66;margin:46px 0 10px}
-dl.work{margin:0;display:grid;gap:0;border-top:1px solid #1e1b18}
-dl.work div{padding:12px 0;border-bottom:1px solid #d9d4ca}
-dl.work dt{font-weight:600}
-dl.work dd{margin:0;color:#514a41}
-.revs{columns:1;column-gap:36px}
-.revs blockquote{margin:0 0 20px;break-inside:avoid}
+.w{max-width:940px;margin:0 auto;padding:0 18px}
+.mast{background:var(--board);color:#fff}
+.mast .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;padding-bottom:6px}
+h1{font:400 38px/.95 var(--disp);letter-spacing:.02em;margin:0}
+.mast p{margin:4px 0 0;color:#b8bec6;font-size:16px}
+.t{flex:none;font:400 22px/1 var(--disp);letter-spacing:.04em;text-decoration:none;background:var(--r);padding:11px 12px 9px;border-radius:3px;white-space:nowrap}
+/* the board with hooks and tags */
+.boardrow{background:var(--board);padding:26px 0 30px;border-bottom:6px solid #15181c}
+.tags{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:26px 12px}
+.tag{position:relative;background:var(--w);color:var(--ink);border-radius:8px 8px 14px 14px;padding:30px 10px 14px;text-align:center;font-weight:700;line-height:1.25;min-height:104px;display:flex;flex-direction:column;justify-content:center}
+.tag::before{content:"";position:absolute;top:9px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--board)}
+.tag::after{content:"";position:absolute;top:-14px;left:50%;width:4px;height:26px;margin-left:-2px;border-radius:2px;background:#9aa1a9}
+.tag i{display:block;font:400 15px/1 var(--disp);font-style:normal;letter-spacing:.12em;opacity:.7;margin-bottom:4px}
+.tag.y{background:var(--y)}.tag.r{background:var(--r);color:#fff}.tag.b{background:var(--b);color:#fff}.tag.g{background:var(--g);color:#fff}
+.tag a{text-decoration:none}
+.lead{font-size:21px;margin:28px 0 18px;max-width:30em}
+.go{display:flex;flex-wrap:wrap;gap:10px}
+.go a{text-decoration:none;font-weight:700;padding:15px 20px;border-radius:3px;border:2px solid var(--ink)}
+.go a:first-child{background:var(--ink);color:#fff}
+.ph{width:100%;height:230px;object-fit:cover;margin-top:26px;border-radius:3px}
+h2{font:400 34px/1 var(--disp);letter-spacing:.02em;margin:46px 0 14px}
+.work{margin:0;display:grid;gap:12px}
+.work div{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.work div::before{content:attr(data-n);font:400 30px/1 var(--disp);text-align:center;padding:16px 0 8px;border-radius:6px 6px 12px 12px;background:var(--y);box-shadow:inset 0 0 0 0 transparent}
+.work div:nth-child(2)::before{background:var(--b);color:#fff}
+.work div:nth-child(3)::before{background:var(--r);color:#fff}
+.work div:nth-child(4)::before{background:var(--g);color:#fff}
+.work dt{font-weight:700;font-size:20px}
+.work dd{margin:0;color:var(--soft)}
+.work span{display:block}
+.soft{color:var(--soft);font-size:16px}
+.revs blockquote{margin:0;padding:14px 0;border-top:1px solid var(--line)}
 .revs p{margin:0 0 4px;font-size:19px;line-height:1.5}
-.revs p::before{content:"";display:block;width:36px;height:3px;background:#0d3b66;margin-bottom:10px}
-.revs cite{font-style:normal;font-size:15px;color:#6b6358}
-table{border-collapse:collapse;width:100%;max-width:420px}
-td{padding:8px 0;border-bottom:1px solid #d9d4ca}
+cite{font:400 15px/1 var(--disp);font-style:normal;letter-spacing:.12em;color:var(--soft)}
+.visit{display:grid;gap:22px}
+table{border-collapse:collapse;width:100%}
+td{padding:9px 0;border-bottom:1px solid var(--line)}
 td+td{text-align:right}
-tr.today td{font-weight:600;color:#0d3b66}
-.map{width:100%;height:300px;border:0;margin-top:14px}
-.soft{color:#6b6358;font-size:16px}
-footer{margin-top:48px;border-top:5px double #1e1b18;padding:20px 0 28px;color:#5e574e;font-size:14px}
+tr.today td{font-weight:700}
+tr.today td:first-child::before{content:"";display:inline-block;width:12px;height:16px;border-radius:3px 3px 5px 5px;background:var(--r);margin-right:8px;vertical-align:-2px}
+.map{width:100%;height:300px;border:0;border-radius:3px}
+footer{margin-top:50px;background:var(--board);color:#b8bec6;padding:20px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#fbfaf7;border-top:2px solid #1e1b18}
-.dock a{text-align:center;text-decoration:none;font-weight:600;padding:18px 6px}
-.dock a:first-child{background:#0d3b66;color:#fff}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--board)}
+.dock a{text-align:center;text-decoration:none;color:#fff;font:400 22px/1 var(--disp);letter-spacing:.05em;padding:18px 6px 16px}
+.dock a:first-child{background:var(--r)}
+a:focus-visible{outline:3px solid var(--b);outline-offset:2px}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:50px}
-  .ph{height:330px}
-  dl.work{grid-template-columns:1fr 1fr;column-gap:40px}
-  .revs{columns:2}
-  .visit{display:grid;grid-template-columns:420px 1fr;gap:36px}
-  .map{margin-top:0;height:340px}
+  h1{font-size:60px}
+  .tags{grid-template-columns:repeat(4,1fr);gap:18px}
+  .ph{height:340px}
+  .work{grid-template-columns:1fr 1fr;gap:16px 40px}
+  .revs{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+  .visit{grid-template-columns:1fr 1fr;gap:40px}
+  .map{height:100%;min-height:360px}
 }
 </style>
 </head>
@@ -74,7 +92,14 @@ footer p{margin:0 0 6px}
   <div><h1>James Auto Repair</h1><p>5122 Maine Ave · Baldwin Park</p></div>
   <a class="t" href="tel:+16269629721">(626) 962-9721</a>
 </div></header>
-<div class="sub"><div class="w"><span id="open">Open Monday to Saturday</span><span>Se habla español</span></div></div>
+<div class="boardrow"><div class="w">
+  <ul class="tags">
+    <li class="tag g"><i>Shop</i><span id="open">Open Monday to Saturday</span></li>
+    <li class="tag y"><i>Idioma</i>Se habla español</li>
+    <li class="tag r"><i>Call</i><a href="tel:+16269629721">(626) 962-9721</a></li>
+    <li class="tag"><i>Find us</i>5122 Maine Ave</li>
+  </ul>
+</div></div>
 
 <main class="w">
   <p class="lead">James Sr. and James Jr. work on the cars here. Call, or just drive in and tell us what's wrong.</p>
@@ -86,10 +111,10 @@ footer p{margin:0 0 6px}
 
   <h2>What we work on</h2>
   <dl class="work">
-    <div><dt>Cars, trucks and SUVs</dt><dd>Daily drivers and older cars, imports and domestics.</dd></div>
-    <div><dt>Fleet and work vehicles</dt><dd>We keep company trucks and vans maintained and running.</dd></div>
-    <div><dt>Noises and squeaks</dt><dd>Belts, pulleys and the sounds that are hard to track down.</dd></div>
-    <div><dt>General repair and maintenance</dt><dd>Tell us what the car is doing and when it happens.</dd></div>
+    <div data-n="01"><span><dt>Cars, trucks and SUVs</dt><dd>Daily drivers and older cars, imports and domestics.</dd></span></div>
+    <div data-n="02"><span><dt>Fleet and work vehicles</dt><dd>We keep company trucks and vans maintained and running.</dd></span></div>
+    <div data-n="03"><span><dt>Noises and squeaks</dt><dd>Belts, pulleys and the sounds that are hard to track down.</dd></span></div>
+    <div data-n="04"><span><dt>General repair and maintenance</dt><dd>Tell us what the car is doing and when it happens.</dd></span></div>
   </dl>
   <p class="soft" style="margin-top:12px">Some of our customers bring us every vehicle they own.</p>
 
@@ -134,12 +159,12 @@ footer p{margin:0 0 6px}
 <script>
 (function(){var H={1:[8.5,18],2:[8.5,18],3:[8.5,18],4:[8.5,18],5:[8.5,18],6:[8.5,18]};var now;try{now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Los_Angeles"}));}catch(e){return;}
 var d=now.getDay(),t=now.getHours()+now.getMinutes()/60,r=document.querySelector('[data-d="'+d+'"]');if(r)r.className+=" today";
-var el=document.getElementById("open");if(!el)return;var h=H[d];
+var el=document.getElementById("open");if(!el)return;var h=H[d];var tag=el.parentNode;
 function f(x){var hh=Math.floor(x),m=Math.round((x-hh)*60);return (hh>12?hh-12:hh)+(m?":"+(m<10?"0":"")+m:"")+(hh>=12?" pm":" am");}
-if(h&&t>=h[0]&&t<h[1]){el.textContent="Open now until "+f(h[1]);el.className+=" on";}
+if(h&&t>=h[0]&&t<h[1]){el.textContent="Open now until "+f(h[1]);tag.className="tag g";}
 else{var n=d,k=0;if(!(h&&t<h[0])){do{n=(n+1)%7;k++;}while(!H[n]&&k<8);}
 var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-el.textContent="Closed right now. Opens "+(k===0?"today":k===1?"tomorrow":days[n])+" at "+f(H[n][0]);el.className+=" off";}})();
+el.textContent="Closed right now. Opens "+(k===0?"today":k===1?"tomorrow":days[n])+" at "+f(H[n][0]);tag.className="tag b";}})();
 </script>
 </body>
 </html>

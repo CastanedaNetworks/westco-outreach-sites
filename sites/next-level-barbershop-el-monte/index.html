@@ -10,57 +10,61 @@
 <meta property="og:title" content="Next Level Barbershop" />
 <meta property="og:description" content="Barbershop in El Monte, open 7 days" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Inter:wght@400;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" />
 <style>
+/* The shop's appointment book: a ruled page, a red margin line, time slots down the gutter, entries written in. */
+:root{--cover:#1d3a33;--foil:#d8b765;--page:#fbfaf2;--rule:#c5d6e8;--margin:#d9695f;--ink:#1b2a4a;--mint:#8fe0c1;--hand:Caveat,"Segoe Print",cursive;--body:Newsreader,Georgia,serif;--lh:32px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#0e0e11;color:#f2f2f5;font:400 17px/1.65 Inter,Arial,sans-serif;padding-bottom:64px}
+body{margin:0;background:var(--cover);color:var(--ink);font:400 18px/var(--lh) var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:940px;margin:0 auto;padding-left:20px;padding-right:20px}
-.bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px}
-.brand{font:800 15px/1.2 Unbounded,Arial,sans-serif;text-decoration:none;max-width:8em}
-.bk{flex:none;background:#8de0c0;color:#0e0e11;font-weight:600;text-decoration:none;padding:10px 16px;border-radius:99px;font-size:15px;white-space:nowrap}
-.hero{display:grid;gap:20px;padding-top:10px}
-.hero img{width:100%;height:260px;object-fit:cover;border-radius:16px}
-.kick{letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:#8de0c0;font-weight:600;margin:0 0 8px}
-h1{font:800 30px/1.1 Unbounded,Arial,sans-serif;margin:0 0 12px}
-.hero p.l{margin:0 0 18px;max-width:30em}
-.btn{display:inline-block;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:99px;border:1.5px solid #8de0c0;margin:0 8px 8px 0}
-.btn.f{background:#8de0c0;color:#0e0e11}
-#open{display:inline-block;margin-top:10px;font-weight:600;font-size:15px}
-#open.on{color:#8de0c0}#open.off{color:#ff9d8f}
-h2{font:500 20px/1.2 Unbounded,Arial,sans-serif;margin:50px 0 12px}
-.opts{display:grid;gap:14px}
-.opts div{background:#18181d;border-radius:16px;padding:20px}
-.opts h3{margin:0 0 4px;font:600 18px/1.3 Inter,Arial,sans-serif}
-.opts p{margin:0;color:#c3c3cc}
-.about{display:grid;gap:22px;align-items:center}
-.about img{border-radius:16px;width:100%;height:auto}
-.rev{columns:1;column-gap:20px}
-.rev blockquote{margin:0 0 16px;background:#18181d;border-radius:16px;padding:20px;break-inside:avoid}
-.rev p{margin:0 0 8px}
-.rev cite{font-style:normal;font-size:14px;color:#8de0c0}
-.visit{display:grid;gap:24px}
-.row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #26262c;max-width:380px}
-.row.today{font-weight:600;color:#8de0c0}
-.map{width:100%;height:300px;border:0;border-radius:16px}
-.small{font-size:15px;color:#9a9aa3}
-footer{margin-top:50px;border-top:1px solid #26262c;padding:22px 0 28px;color:#9a9aa3;font-size:14px}
+.cover{color:var(--foil)}
+.cover div{max-width:860px;margin:0 auto;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font:600 19px/1.15 var(--body);letter-spacing:.02em;text-decoration:none}
+.brand small{display:block;font:400 11px/1.6 var(--body);letter-spacing:.24em;text-transform:uppercase}
+.bk{flex:none;border:1.5px solid var(--foil);font:600 15px/1 var(--body);text-decoration:none;padding:14px 14px;white-space:nowrap}
+.page{max-width:860px;margin:0 auto;background:var(--page) repeating-linear-gradient(transparent 0 31px,var(--rule) 31px 32px);position:relative;padding:0 14px 32px 58px}
+.page::before{content:"";position:absolute;top:0;bottom:0;left:48px;width:2px;background:var(--margin);opacity:.75}
+.slot{position:relative}
+.slot > time{position:absolute;left:-58px;width:44px;text-align:right;font:600 12px/var(--lh) var(--body);color:#6b7892}
+.kick{margin:0;padding-top:32px;font:600 13px/var(--lh) var(--body);letter-spacing:.16em;text-transform:uppercase;color:#6b7892}
+h1{font:700 40px/48px var(--hand);margin:0 0 16px;padding-top:0;color:var(--ink)}
+h1 span{display:block}
+h2{font:700 34px/var(--lh) var(--hand);margin:32px 0 0;color:var(--ink)}
+h3{font:600 18px/var(--lh) var(--body);margin:0}
+p{margin:0}
+.hl{background:var(--mint);padding:0 4px;margin:0 -4px}
+.btns{display:flex;flex-wrap:wrap;gap:0 10px;padding:8px 0}
+.btn{display:inline-block;text-decoration:none;font:600 17px/1 var(--body);padding:15px 18px;border:2px solid var(--ink);background:var(--page);margin:0 0 16px}
+.btn.f{background:var(--ink);color:#fff}
+#open{font-weight:600}#open.on{color:#177245}#open.off{color:#b3261e}
+.snap{margin:16px 0;padding:8px;background:#fff;border:1px solid #d7d5c8;box-shadow:0 2px 0 rgba(0,0,0,.1)}
+.snap img{width:100%;height:176px;object-fit:cover}
+.opts{display:grid}
+.small{font-size:16px;color:#3f4d6b}
+blockquote{margin:0;padding:0 0 0 0}
+blockquote p::before{content:"";}
+blockquote cite{display:block;font:600 12px/var(--lh) var(--body);letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:#6b7892}
+.row{display:flex;justify-content:space-between;gap:10px}
+.row.today{font-weight:600}
+.row.today span:last-child{background:var(--mint);padding:0 4px}
+.map{width:100%;height:288px;border:1px solid #9fb0c6;margin:16px 0}
+footer{max-width:860px;margin:0 auto;padding:20px 16px 28px;color:#b8cbc5;font:400 14px/1.5 Georgia,serif}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:10px;right:10px;bottom:10px;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.dock a{text-align:center;text-decoration:none;font-weight:600;padding:14px 6px;border-radius:99px;background:#26262c;color:#fff}
-.dock a.f{background:#8de0c0;color:#0e0e11}
-@media(min-width:740px){
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:var(--cover);border-top:2px solid var(--foil)}
+.dock a{text-align:center;text-decoration:none;font:600 17px/1 var(--body);padding:20px 6px;color:var(--foil)}
+.dock a.f{background:var(--foil);color:var(--cover)}
+a:focus-visible{outline:3px solid var(--margin);outline-offset:3px}
+@media(min-width:720px){
   body{padding-bottom:0}.dock{display:none}
-  .brand{max-width:none;font-size:17px}
-  .hero{grid-template-columns:1fr 1fr;align-items:center;padding-top:30px}
-  .hero img{height:440px;order:2}
-  h1{font-size:44px}
-  .opts{grid-template-columns:1fr 1fr}
-  .about{grid-template-columns:2fr 3fr}
-  .rev{columns:2}
-  .visit{grid-template-columns:380px 1fr}
+  .page{padding:0 40px 64px 110px}
+  .page::before{left:92px}
+  .slot > time{left:-110px;width:80px;font-size:14px}
+  h1{font-size:60px;line-height:64px}h1 span{padding:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+  .snap img{height:208px}
+  .opts{grid-template-columns:1fr 1fr;gap:0 40px}
 }
 </style>
 </head>
@@ -72,69 +76,80 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header class="bar"><div class="w">
-  <a class="brand" href="#top">Next Level Barbershop</a>
+<header class="cover"><div>
+  <a class="brand" href="#top">Next Level Barbershop<small>Appointments</small></a>
   <a class="bk" href="https://chairplug.com/book/next-level-barbershop" rel="noopener">Book online</a>
 </div></header>
 
-<main class="w" id="top">
-  <div class="hero">
-    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpg&q=72&w=1400&fit=crop" alt="Barbershop interior with a row of chairs and mirrors" />
-    <div>
-      <p class="kick">El Monte · open 7 days</p>
-      <h1>Haircuts for men and kids on Mountain View Rd</h1>
-      <p class="l">Jose owns the shop and still cuts hair here. Book a time with your barber online, or walk in and we'll get you in a chair.</p>
+<main class="page" id="top">
+  <section class="slot">
+    <time aria-hidden="true">10:00</time>
+    <p class="kick">El Monte · open 7 days</p>
+    <h1><span>Haircuts for men and kids on Mountain View Rd</span></h1>
+    <p>Jose owns the shop and still cuts hair here. Book a time with your barber online, or walk in and we'll get you in a chair.</p>
+    <div class="btns">
       <a class="btn f" href="https://chairplug.com/book/next-level-barbershop" rel="noopener">Book online</a>
       <a class="btn" href="tel:+16265390142">Call (626) 539-0142</a>
-      <br /><span id="open">Open every day</span>
     </div>
-  </div>
+    <p><span id="open">Open every day</span></p>
+    <figure class="snap" style="margin-left:0;margin-right:0"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?fm=jpg&q=72&w=1400&fit=crop" alt="Barbershop interior with a row of chairs and mirrors" /></figure>
+  </section>
 
-  <h2>Two ways to get a cut</h2>
-  <div class="opts">
-    <div><h3>Book ahead</h3><p>We get busy, so an appointment is the surest way to get the barber and the time you want. Booking takes a minute on ChairPlug.</p></div>
-    <div><h3>Walk in</h3><p>Walk-ins are always welcome. We have a lot of chairs, so the wait is usually short.</p></div>
-  </div>
-
-  <h2>About the shop</h2>
-  <div class="about">
-    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?fm=jpg&q=72&w=1000&fit=crop" alt="Barber finishing a fade with clippers" width="1000" height="667" loading="lazy" />
-    <div>
-      <p>We're a neighborhood barbershop and a lot of families come in together. Dads who've been getting cut by Jose for years now bring their sons, and parents tell us their kids like coming here.</p>
-      <p class="small">4.9 on Google from 46 reviews. We take credit cards, debit cards and tap to pay.</p>
+  <section class="slot">
+    <time aria-hidden="true">11:00</time>
+    <h2>Two ways to get a cut</h2>
+    <div class="opts">
+      <div><h3><span class="hl">Book ahead</span></h3><p>We get busy, so an appointment is the surest way to get the barber and the time you want. Booking takes a minute on ChairPlug.</p></div>
+      <div><h3><span class="hl">Walk in</span></h3><p>Walk-ins are always welcome. We have a lot of chairs, so the wait is usually short.</p></div>
     </div>
-  </div>
+  </section>
 
-  <h2>From our Google reviews</h2>
-  <div class="rev">
+  <section class="slot">
+    <time aria-hidden="true">12:00</time>
+    <h2>About the shop</h2>
+    <div class="two">
+      <div>
+        <p>We're a neighborhood barbershop and a lot of families come in together. Dads who've been getting cut by Jose for years now bring their sons, and parents tell us their kids like coming here.</p>
+        <p class="small">4.9 on Google from 46 reviews. We take credit cards, debit cards and tap to pay.</p>
+      </div>
+      <figure class="snap" style="margin-left:0;margin-right:0"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?fm=jpg&q=72&w=1000&fit=crop" alt="Barber finishing a fade with clippers" width="1000" height="667" loading="lazy" /></figure>
+    </div>
+  </section>
+
+  <section class="slot">
+    <time aria-hidden="true">1:00</time>
+    <h2>From our Google reviews</h2>
     <blockquote><p>"I've been getting my haircut from Jose for almost 15 years now and trust me when I say, him and his staff are the best in the area."</p><cite>Google review</cite></blockquote>
     <blockquote><p>"Came in 1 hour before closing with my 3 kids, they took care of us professionally. My kids came out happy and I was satisfied with their service."</p><cite>Google review</cite></blockquote>
     <blockquote><p>"He takes his time, pays close attention to detail, and makes sure my haircut looks exactly how I want it."</p><cite>Google review</cite></blockquote>
     <blockquote><p>"There hasn't been a visit where I have walked out disappointed with my haircut."</p><cite>Google review</cite></blockquote>
-  </div>
+  </section>
 
-  <h2 id="visit">Hours and location</h2>
-  <div class="visit">
-    <div>
-      <div class="row" data-d="1"><span>Monday</span><span>10 am to 7 pm</span></div>
-      <div class="row" data-d="2"><span>Tuesday</span><span>10 am to 7 pm</span></div>
-      <div class="row" data-d="3"><span>Wednesday</span><span>10 am to 7 pm</span></div>
-      <div class="row" data-d="4"><span>Thursday</span><span>10 am to 7 pm</span></div>
-      <div class="row" data-d="5"><span>Friday</span><span>9 am to 7 pm</span></div>
-      <div class="row" data-d="6"><span>Saturday</span><span>8 am to 5 pm</span></div>
-      <div class="row" data-d="0"><span>Sunday</span><span>10 am to 3 pm</span></div>
-      <p>2859 Mountain View Rd<br />El Monte, CA 91732</p>
-      <p class="small">The entrance and parking are wheelchair accessible.</p>
-      <a class="btn f" href="https://www.google.com/maps/dir/?api=1&destination=Next+Level+Barbershop+2859+Mountain+View+Rd+El+Monte+CA+91732">Get directions</a>
+  <section class="slot" id="visit">
+    <time aria-hidden="true">2:00</time>
+    <h2>Hours and location</h2>
+    <div class="two">
+      <div>
+        <div class="row" data-d="1"><span>Monday</span><span>10 am to 7 pm</span></div>
+        <div class="row" data-d="2"><span>Tuesday</span><span>10 am to 7 pm</span></div>
+        <div class="row" data-d="3"><span>Wednesday</span><span>10 am to 7 pm</span></div>
+        <div class="row" data-d="4"><span>Thursday</span><span>10 am to 7 pm</span></div>
+        <div class="row" data-d="5"><span>Friday</span><span>9 am to 7 pm</span></div>
+        <div class="row" data-d="6"><span>Saturday</span><span>8 am to 5 pm</span></div>
+        <div class="row" data-d="0"><span>Sunday</span><span>10 am to 3 pm</span></div>
+        <p style="padding-top:32px">2859 Mountain View Rd<br />El Monte, CA 91732</p>
+        <p class="small">The entrance and parking are wheelchair accessible.</p>
+        <div class="btns" style="padding-top:16px"><a class="btn f" href="https://www.google.com/maps/dir/?api=1&destination=Next+Level+Barbershop+2859+Mountain+View+Rd+El+Monte+CA+91732">Get directions</a></div>
+      </div>
+      <iframe class="map" title="Map to Next Level Barbershop" src="https://www.google.com/maps?q=Next+level+barbershop+2859+Mountain+View+Rd+El+Monte+CA+91732&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <iframe class="map" title="Map to Next Level Barbershop" src="https://www.google.com/maps?q=Next+level+barbershop+2859+Mountain+View+Rd+El+Monte+CA+91732&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+  </section>
 </main>
 
-<footer><div class="w">
+<footer>
   <p>© 2026 Next Level Barbershop · 2859 Mountain View Rd, El Monte, CA · <a href="tel:+16265390142">(626) 539-0142</a></p>
   <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photos are stand-ins until the owner sends their own.</p>
-</div></footer>
+</footer>
 
 <div class="dock">
   <a class="f" href="https://chairplug.com/book/next-level-barbershop" rel="noopener">Book online</a>

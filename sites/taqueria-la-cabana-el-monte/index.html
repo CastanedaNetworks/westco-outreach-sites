@@ -10,50 +10,73 @@
 <meta property="og:title" content="Taqueria La Cabaña E&amp;E" />
 <meta property="og:description" content="Taqueria in El Monte" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&family=Libre+Franklin:wght@400;600;800&family=IBM+Plex+Mono:wght@400;600&display=swap" />
 <style>
+/* Concept: the takeout bag. Kraft paper, the house logo rubber-stamped on the front, a folded top, and the receipt stapled on. */
+:root{
+  --kraft:#c8a472; --kraft2:#b8935f; --fold:#a9834f; --ink:#1a1612; --soft:#3d3226; --receipt:#fbfaf6; --counter:#2b2622;
+  --stamp:"Stardos Stencil",Impact,sans-serif; --body:"Libre Franklin","Trebuchet MS",sans-serif; --mono:"IBM Plex Mono","Courier New",monospace;
+}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:#1a1a1a;font:400 17px/1.65 Montserrat,Arial,sans-serif;padding-bottom:58px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--counter);color:var(--ink);font:400 17px/1.6 var(--body);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:860px;margin:0 auto;padding:0 22px}
-.top{border-bottom:1px solid #1a1a1a}
-.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
-.top a{text-decoration:none;font-weight:800;letter-spacing:0;text-transform:none;font-size:16px;white-space:nowrap}
-.mast{text-align:center;padding:30px 0 26px}
-.mast img{width:230px;height:auto;margin:0 auto}
-h1{font-weight:800;font-size:27px;line-height:1.15;margin:14px 0 6px}
-.mast p{margin:0}
-.state{margin-top:12px !important;font-weight:500}
-.state .on::before,.state .off::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;background:#1b8a4b}
-.state .off::before{background:#c0392b}
+.bag{max-width:820px;margin:0 auto;background:var(--kraft);background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.035) 0 1px,transparent 1px 7px),repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,transparent 2px 11px)}
+.w{padding:0 20px}
+/* folded top with a pinked edge */
+.fold{background:var(--fold);padding:12px 20px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px;position:relative;font-weight:600}
+.fold::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:linear-gradient(135deg,var(--fold) 5.6px,transparent 0) 0 0/11px 8px repeat-x,linear-gradient(225deg,var(--fold) 5.6px,transparent 0) 0 0/11px 8px repeat-x}
+.fold a{font:800 17px/1 var(--body);text-decoration:none;border:2px solid var(--ink);padding:11px 12px;white-space:nowrap}
+
+.front{text-align:center;padding:38px 20px 28px}
+.front img{width:210px;height:auto;margin:0 auto;mix-blend-mode:multiply;transform:rotate(-2deg);opacity:.92}
+h1{font:700 30px/1.1 var(--stamp);letter-spacing:.03em;text-transform:uppercase;margin:16px 0 4px}
+.front p{margin:0}
+.state{margin-top:12px !important;font-weight:800}
+.state .off{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
 .acts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
-.btn{display:inline-block;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:14px 20px;border:2px solid #1a1a1a}
-.btn.k{background:#1a1a1a;color:#fff}
-.wide{width:100%;height:230px;object-fit:cover}
-section{padding-top:44px}
-h2{font-weight:800;font-size:14px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 14px;padding-bottom:10px;border-bottom:3px solid #1a1a1a}
-.dishes{margin:0;padding:0;list-style:none}
-.dishes li{font-weight:800;font-size:24px;line-height:1.2;padding:12px 0;border-bottom:1px solid #d9d9d9}
-.dishes span{display:block;font-weight:400;font-size:15px;color:#555;margin-top:2px}
-.cash{border:2px solid #1a1a1a;padding:14px 16px;margin-top:18px;font-weight:500}
-.cash b{font-weight:800;text-transform:uppercase;letter-spacing:.06em}
-.voices p{margin:0;font-style:italic;font-size:19px;line-height:1.5}
-.voices cite{display:block;font-style:normal;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#555;margin:6px 0 18px;padding-bottom:18px;border-bottom:1px solid #d9d9d9}
-.hours{margin:0;padding:0;list-style:none}
-.hours li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #d9d9d9}
-.hours li.today{font-weight:800}
-.map{width:100%;height:290px;border:0;margin-top:16px;filter:grayscale(1)}
-.soft{color:#555;font-size:15px}
-footer{margin-top:50px;border-top:1px solid #d9d9d9;padding:22px 0 30px;font-size:13px;color:#555}
+.btn{display:inline-block;text-decoration:none;font:800 16px/1 var(--body);letter-spacing:.04em;text-transform:uppercase;padding:16px 20px;border:2px solid var(--ink)}
+.btn.k{background:var(--ink);color:var(--kraft)}
+.btn:focus-visible,.fold a:focus-visible,.dock a:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.cashstamp{display:inline-block;margin:22px auto 0;padding:9px 16px 7px;border:4px solid var(--ink);font:700 26px/1 var(--stamp);letter-spacing:.08em;text-transform:uppercase;transform:rotate(3deg);opacity:.9}
+.wide{width:100%;height:220px;object-fit:cover;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+
+section{padding-top:34px}
+h2{font:700 23px/1.1 var(--stamp);letter-spacing:.05em;text-transform:uppercase;margin:0 0 10px;padding-bottom:6px;border-bottom:3px solid var(--ink)}
+.two{display:grid;gap:4px}
+.dishes{list-style:none;margin:0;padding:0}
+.dishes li{padding:10px 0;border-bottom:1px dashed rgba(26,22,18,.55);font-weight:800;font-size:19px}
+.dishes span{display:block;font-weight:400;font-size:15px;color:var(--soft)}
+.soft{color:var(--soft);font-size:15px}
+.cash{margin:14px 0 0;border:3px solid var(--ink);padding:12px 14px;font-size:17px}
+.voices p.qt{margin:0 0 2px;font-size:18px;line-height:1.5}
+.voices cite{display:block;margin:0 0 14px;font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;font-style:normal}
+
+/* the stapled receipt */
+.receipt{position:relative;background:var(--receipt);font-family:var(--mono);padding:26px 18px 20px;max-width:380px;box-shadow:0 2px 0 rgba(0,0,0,.25);margin-top:6px}
+.receipt::before{content:"";position:absolute;top:8px;left:50%;width:34px;height:6px;margin-left:-17px;border:2px solid #8f949a;border-bottom:0;border-radius:2px 2px 0 0}
+.receipt::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:linear-gradient(135deg,var(--receipt) 5.6px,transparent 0) 0 0/11px 8px repeat-x,linear-gradient(225deg,var(--receipt) 5.6px,transparent 0) 0 0/11px 8px repeat-x}
+.receipt h2{font:600 16px/1.2 var(--mono);letter-spacing:.14em;text-align:center;border-bottom:1px dashed var(--ink)}
+.hours{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;font-size:16px}
+.hours li.today{font-weight:600;background:#ffef9a;margin:0 -8px;padding-left:8px;padding-right:8px}
+.receipt .end{margin:10px 0 0;padding-top:8px;border-top:1px dashed var(--ink);text-align:center;font-size:14px}
+.map{width:100%;height:290px;border:3px solid var(--ink);margin:30px 0 0}
+.bottom{height:26px;background:var(--kraft2);margin-top:34px}
+footer{max-width:820px;margin:0 auto;padding:18px 20px 26px;color:#cbbfae;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#fff;border-top:2px solid #1a1a1a}
-.dock a{text-align:center;text-decoration:none;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:18px 6px}
-.dock a:first-child{background:#1a1a1a;color:#fff}
-@media(min-width:740px){
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--ink)}
+.dock a{text-align:center;text-decoration:none;font:800 16px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--kraft);padding:19px 6px}
+.dock a:first-child{background:var(--kraft);color:var(--ink)}
+@media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:36px}.wide{height:360px}
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  main{padding-top:26px}
+  .w,.front,.fold{padding-left:44px;padding-right:44px}
+  .front img{width:260px}
+  h1{font-size:44px}
+  .wide{height:330px}
+  .two{grid-template-columns:1fr 1fr;gap:46px;align-items:start}
 }
 </style>
 </head>
@@ -65,70 +88,79 @@ footer p{margin:0 0 6px}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<div class="top"><div class="w">
-  <span>El Monte, CA</span>
-  <a href="tel:+16269567122">(626) 956-7122</a>
-</div></div>
-
-<header class="mast"><div class="w">
-  <img src="logo.jpg" alt="Taqueria La Cabaña E&amp;E logo" width="230" />
-  <h1>Taqueria La Cabaña E&amp;E</h1>
-  <p>3402 Cogswell Rd, Suite A</p>
-  <p class="state"><span id="open">Open 9 am to 9 pm</span> <span id="openline">· closed Wednesday</span></p>
-  <div class="acts">
-    <a class="btn k" href="tel:+16269567122">Call in an order</a>
-    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Taqueria+La+Caba%C3%B1a+E%26E+3402+Cogswell+Rd%2C+Suite+A%2C+El+Monte%2C+CA+91732">Directions</a>
-  </div>
-</div></header>
-
-<img class="wide" src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?fm=jpg&q=72&w=1400&fit=crop" alt="Tacos with salsa roja and lime on a tiled table" />
-
-<main class="w">
-  <div class="two">
-    <section>
-      <h2>What to order</h2>
-      <ul class="dishes">
-        <li>Torta de asada<span>Our best seller</span></li>
-        <li>Pozole<span>Here or to go</span></li>
-        <li>Fish tacos</li>
-        <li>Seafood plates and soups</li>
-      </ul>
-      <p class="soft">We open at 9, so you can come in for breakfast too. The full menu is at the counter.</p>
-      <p class="cash"><b>Cash only.</b> We don't take cards, so stop at the ATM first.</p>
-    </section>
-
-    <section class="voices">
-      <h2>Google reviews</h2>
-      <p>"Very good authentic Mexican food number 1 in the bario. Highly recommend this spot everything is amazing."</p><cite>Google review</cite>
-      <p>"I ordered a pozole to go. It was really good."</p><cite>Google review</cite>
-      <p>"The variety of food is more than Good, nice staff. Great for fast food, you also can get seafood dishes and soup."</p><cite>Google review</cite>
-      <p class="soft" style="font-style:normal;font-size:15px">4.5 on Google from 146 reviews.</p>
-    </section>
+<main>
+<div class="bag">
+  <div class="fold">
+    <span>El Monte, CA</span>
+    <a href="tel:+16269567122">(626) 956-7122</a>
   </div>
 
-  <div class="two">
-    <section id="visit">
-      <h2>Hours</h2>
-      <ul class="hours" id="hours">
-        <li data-d="1"><span>Monday</span><span>9 am to 9 pm</span></li>
-        <li data-d="2"><span>Tuesday</span><span>9 am to 9 pm</span></li>
-        <li data-d="3"><span>Wednesday</span><span>Closed</span></li>
-        <li data-d="4"><span>Thursday</span><span>9 am to 9 pm</span></li>
-        <li data-d="5"><span>Friday</span><span>9 am to 9 pm</span></li>
-        <li data-d="6"><span>Saturday</span><span>9 am to 9 pm</span></li>
-        <li data-d="0"><span>Sunday</span><span>9 am to 9 pm</span></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Location</h2>
-      <p>3402 Cogswell Rd, Suite A, El Monte, CA 91732</p>
-      <p class="soft">Eat inside, at the tables outside, or call your order in for pickup. There's a parking lot, and the entrance, seating and restroom are wheelchair accessible.</p>
-    </section>
+  <header class="front">
+    <img src="logo.jpg" alt="Taqueria La Cabaña E&amp;E logo" width="260" />
+    <h1>Taqueria La Cabaña E&amp;E</h1>
+    <p>3402 Cogswell Rd, Suite A</p>
+    <p class="state"><span id="open">Open 9 am to 9 pm</span> <span id="openline">· closed Wednesday</span></p>
+    <div class="acts">
+      <a class="btn k" href="tel:+16269567122">Call in an order</a>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Taqueria+La+Caba%C3%B1a+E%26E+3402+Cogswell+Rd%2C+Suite+A%2C+El+Monte%2C+CA+91732">Directions</a>
+    </div>
+    <div><span class="cashstamp">Cash only</span></div>
+  </header>
+
+  <img class="wide" src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?fm=jpg&q=72&w=1400&fit=crop" alt="Tacos with salsa roja and lime on a tiled table" />
+
+  <div class="w">
+    <div class="two">
+      <section>
+        <h2>What to order</h2>
+        <ul class="dishes">
+          <li>Torta de asada<span>Our best seller</span></li>
+          <li>Pozole<span>Here or to go</span></li>
+          <li>Fish tacos</li>
+          <li>Seafood plates and soups</li>
+        </ul>
+        <p class="soft">We open at 9, so you can come in for breakfast too. The full menu is at the counter.</p>
+        <p class="cash"><b>Cash only.</b> We don't take cards, so stop at the ATM first.</p>
+      </section>
+
+      <section class="voices">
+        <h2>Google reviews</h2>
+        <p class="qt">"Very good authentic Mexican food number 1 in the bario. Highly recommend this spot everything is amazing."</p><cite>Google review</cite>
+        <p class="qt">"I ordered a pozole to go. It was really good."</p><cite>Google review</cite>
+        <p class="qt">"The variety of food is more than Good, nice staff. Great for fast food, you also can get seafood dishes and soup."</p><cite>Google review</cite>
+        <p class="soft">4.5 on Google from 146 reviews.</p>
+      </section>
+    </div>
+
+    <div class="two">
+      <section id="visit">
+        <div class="receipt">
+          <h2>Hours</h2>
+          <ul class="hours" id="hours">
+            <li data-d="1"><span>Monday</span><span>9 am to 9 pm</span></li>
+            <li data-d="2"><span>Tuesday</span><span>9 am to 9 pm</span></li>
+            <li data-d="3"><span>Wednesday</span><span>Closed</span></li>
+            <li data-d="4"><span>Thursday</span><span>9 am to 9 pm</span></li>
+            <li data-d="5"><span>Friday</span><span>9 am to 9 pm</span></li>
+            <li data-d="6"><span>Saturday</span><span>9 am to 9 pm</span></li>
+            <li data-d="0"><span>Sunday</span><span>9 am to 9 pm</span></li>
+          </ul>
+          <p class="end">(626) 956-7122</p>
+        </div>
+      </section>
+      <section>
+        <h2>Location</h2>
+        <p>3402 Cogswell Rd, Suite A, El Monte, CA 91732</p>
+        <p class="soft">Eat inside, at the tables outside, or call your order in for pickup. There's a parking lot, and the entrance, seating and restroom are wheelchair accessible.</p>
+      </section>
+    </div>
+    <iframe class="map" title="Map to Taqueria La Cabaña E&amp;E" src="https://www.google.com/maps?q=Taqueria+La+Caba%C3%B1a+3402+Cogswell+Rd+El+Monte+CA+91732&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  <iframe class="map" title="Map to Taqueria La Cabaña E&amp;E" src="https://www.google.com/maps?q=Taqueria+La+Caba%C3%B1a+3402+Cogswell+Rd+El+Monte+CA+91732&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="bottom" aria-hidden="true"></div>
+</div>
 </main>
 
-<footer class="foot"><div class="w"><p>© 2026 Taqueria La Cabaña E&amp;E · El Monte, CA · <a href="tel:+16269567122">(626) 956-7122</a></p><p class="pv">Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p></div></footer>
+<footer class="foot"><p>© 2026 Taqueria La Cabaña E&amp;E · El Monte, CA · <a href="tel:+16269567122">(626) 956-7122</a></p><p class="pv">Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photo is a stand-in until the owner sends their own.</p></footer>
 
 <div class="dock">
   <a href="tel:+16269567122">Call</a>

@@ -10,60 +10,79 @@
 <meta property="og:title" content="Tacos El Chaparrito" />
 <meta property="og:description" content="Tacos in South El Monte" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titan+One&family=Rubik:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chango&family=Barlow:wght@400;500;700&display=swap" />
 <style>
+/* The page is the side of the truck: a yellow panel with a service window, riveted trim and a painted menu board. */
+:root{--yel:#f7b51c;--blk:#121110;--pan:#1b1a18;--cream:#fff3d2;--red:#d2321f;--soft:#b9b3a6;
+  --d:Chango,"Arial Black",Impact,sans-serif;--b:Barlow,Verdana,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#111;color:#fbf5e6;font:400 17px/1.6 Rubik,Arial,sans-serif;padding-bottom:62px}
+body{margin:0;background:var(--blk);color:var(--cream);font:400 17px/1.6 var(--b);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:940px;margin:0 auto;padding-left:20px;padding-right:20px}
+.w{max-width:880px;margin:0 auto;padding-left:14px;padding-right:14px}
 .top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px}
-.top b{font:400 19px/1.05 "Titan One",Impact,sans-serif;color:#ffb21e}
-.top a{flex:none;border:2px solid #ffb21e;color:#ffb21e;text-decoration:none;font-weight:700;padding:8px 13px;border-radius:8px;white-space:nowrap;font-size:15px}
-.photo{width:100%;height:250px;object-fit:cover}
-.lead{padding-top:26px}
-h1{font:400 42px/1 "Titan One",Impact,sans-serif;margin:0 0 8px;color:#ffb21e}
-.lead p{margin:0 0 6px}
-.now{font-weight:500;margin-top:12px!important}
-#st.on{color:#7ddc9d}#st.off{color:#ff9288}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;max-width:460px}
-.btns a{text-align:center;text-decoration:none;font-weight:700;padding:15px 8px;border-radius:8px;border:2px solid #ffb21e}
-.btns a.f{background:#ffb21e;color:#111}
-section{padding-top:44px}
-h2{font:400 27px/1.1 "Titan One",Impact,sans-serif;color:#ffb21e;margin:0 0 10px}
-.where{display:grid;gap:14px}
-.where div{background:#1c1c1c;border-radius:10px;padding:18px}
-.where h3{margin:0 0 4px;font-size:19px;font-weight:700}
-.where p{margin:0;color:#d5cebd}
-.order{margin:0;padding:0;list-style:none}
-.order li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed #3b3b3b}
-.order span{color:#b3ac9c;text-align:right;font-size:15px}
-.ways{margin:14px 0 0;color:#d5cebd}
-.rev{display:grid;gap:14px}
-.rev p{margin:0;padding:16px 18px;border:1px solid #3b3b3b;border-radius:10px}
-.rev small{display:block;margin-top:6px;color:#b3ac9c}
-table{border-collapse:collapse;width:100%;max-width:440px}
-td{padding:8px 0;border-bottom:1px solid #2b2b2b}
+.top b{font:400 17px/1.1 var(--d);color:var(--yel)}
+.top a{flex:none;border:2px solid var(--yel);color:var(--yel);text-decoration:none;font-weight:700;padding:10px 13px;border-radius:6px;white-space:nowrap;font-size:15px}
+/* truck panel */
+.truck{background:var(--yel);color:var(--blk);border-radius:26px 26px 0 0;padding:16px 16px 0;position:relative;border:4px solid var(--blk);outline:3px solid var(--yel)}
+.rivets{height:8px;background:radial-gradient(circle,#8a6408 0 2.5px,transparent 3px) 0 0/22px 8px repeat-x;margin-bottom:12px}
+.window{background:var(--blk);border-radius:10px;overflow:hidden;border:4px solid var(--blk)}
+.awning{height:22px;background:repeating-linear-gradient(90deg,var(--red) 0 24px,var(--cream) 24px 48px)}
+.window img{width:100%;height:200px;object-fit:cover}
+.sign{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;background:var(--blk);color:var(--cream);padding:10px 12px;font-weight:700}
+#st{font:400 16px/1.1 var(--d);color:var(--yel)}
+#st.on{color:#7ee2a4}#st.off{color:#ff8f7c}
+h1{font:400 38px/1.02 var(--d);margin:18px 0 6px}
+.truck p{margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btns a{text-decoration:none;font:400 16px/1 var(--d);padding:16px 18px;border-radius:8px;border:3px solid var(--blk);color:var(--blk)}
+.btns a.f{background:var(--blk);color:var(--yel)}
+a:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.skirt{height:44px;margin:22px -16px 0;background:var(--blk);position:relative;overflow:hidden}
+.skirt::before,.skirt::after{content:"";position:absolute;bottom:-46px;width:92px;height:92px;border-radius:50%;background:#2c2a27;border:12px solid #050505;box-shadow:0 0 0 6px var(--yel)}
+.skirt::before{left:12%}.skirt::after{right:12%}
+section{padding-top:42px}
+h2{font:400 25px/1.1 var(--d);color:var(--yel);margin:0 0 12px}
+.where{display:grid;gap:12px}
+.where div{border:3px solid var(--yel);border-radius:10px;padding:16px}
+.where h3{font:400 18px/1 var(--d);margin:0 0 6px;color:var(--yel)}
+.where p{margin:0}
+.ways{margin:14px 0 0;color:var(--soft)}
+/* painted menu board */
+.board{background:var(--pan);border:6px solid #3a2b12;border-radius:6px;padding:8px 16px 12px}
+.order{list-style:none;margin:0;padding:0}
+.order li{padding:12px 0;border-bottom:2px dashed #4a4538;font:400 21px/1.15 var(--d);color:var(--yel)}
+.order li:last-child{border:0}
+.order span{display:block;font:500 15px/1.3 var(--b);color:var(--cream);margin-top:3px}
+.soft{color:var(--soft);font-size:15px}
+.rev{display:grid;gap:0}
+.rev p{margin:0;padding:14px 0;border-bottom:1px solid #35322b;font-size:18px}
+.rev small{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--yel);margin-top:5px;font-weight:700}
+table{width:100%;border-collapse:collapse;border:3px solid var(--yel);border-radius:10px}
+td{padding:9px 12px;border-bottom:1px solid #35322b}
+tr:last-child td{border:0}
 td+td{text-align:right}
-tr.late td+td{color:#ffb21e;font-weight:500}
-tr.today td{font-weight:700}
-.soft{color:#b3ac9c;font-size:15px}
-.map{width:100%;height:300px;border:0;border-radius:10px;margin-top:16px}
-footer{margin-top:50px;border-top:1px solid #2b2b2b;padding:22px 0 28px;color:#a8a294;font-size:14px}
+tr.late td+td{color:var(--yel);font-weight:700}
+tr.today td{background:var(--yel);color:var(--blk)!important;font-weight:700}
+.map{width:100%;height:290px;border:3px solid var(--yel);margin-top:18px}
+footer{margin-top:48px;border-top:8px solid var(--yel);padding:20px 0 26px;font-size:14px;color:var(--soft)}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#111;border-top:2px solid #ffb21e}
-.dock a{text-align:center;text-decoration:none;font-weight:700;padding:17px 6px}
-.dock a.f{background:#ffb21e;color:#111}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:var(--blk);border-top:4px solid var(--yel)}
+.dock a{text-align:center;text-decoration:none;font:400 15px/1 var(--d);padding:20px 6px;color:var(--yel)}
+.dock a.f{background:var(--yel);color:var(--blk)}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  .photo{height:400px}
-  h1{font-size:62px}
+  .truck{padding:22px 30px 0}
+  .cab{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .window img{height:260px}
+  h1{font-size:54px;margin-top:0}
+  .skirt{margin:30px -30px 0;height:56px}
   .where{grid-template-columns:1fr 1fr}
-  .rev{grid-template-columns:1fr 1fr}
-  .visit{display:grid;grid-template-columns:440px 1fr;gap:34px}
+  .rev{grid-template-columns:1fr 1fr;column-gap:34px}
+  .visit{display:grid;grid-template-columns:390px 1fr;gap:30px}
   .map{margin-top:0;height:100%;min-height:330px}
-  section{padding-top:62px}
+  section{padding-top:58px}
 }
 </style>
 </head>
@@ -76,17 +95,26 @@ footer p{margin:0 0 6px}
 <!-- PREVIEW BANNER END -->
 
 <header class="w top"><b>Tacos El Chaparrito</b><a href="tel:+16264012991">(626) 401-2991</a></header>
-<img class="photo" src="https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?fm=jpg&q=72&w=1400&fit=crop" alt="Tacos al pastor with salsa, limes and a soda" />
 
 <main class="w">
-  <div class="lead">
-    <h1>Tacos El Chaparrito</h1>
-    <p>9611 Garvey Ave, South El Monte</p>
-    <p class="now"><span id="st">Open every day from 9 am</span>, <span id="stl">till midnight Friday and Saturday</span></p>
-    <div class="btns">
-      <a class="f" href="tel:+16264012991">Call to order</a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Tacos+El+Chaparrito+9611+Garvey+Ave+South+El+Monte+CA+91733">Directions</a>
+  <div class="truck">
+    <div class="rivets"></div>
+    <div class="cab">
+      <div class="window">
+        <div class="awning"></div>
+        <img src="https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?fm=jpg&q=72&w=1400&fit=crop" alt="Tacos al pastor with salsa, limes and a soda" />
+        <p class="sign"><span id="st">Open every day from 9 am</span><span id="stl">till midnight Friday and Saturday</span></p>
+      </div>
+      <div class="lead">
+        <h1>Tacos El Chaparrito</h1>
+        <p>9611 Garvey Ave, South El Monte</p>
+        <div class="btns">
+          <a class="f" href="tel:+16264012991">Call to order</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Tacos+El+Chaparrito+9611+Garvey+Ave+South+El+Monte+CA+91733">Directions</a>
+        </div>
+      </div>
     </div>
+    <div class="skirt"></div>
   </div>
 
   <section>
@@ -100,11 +128,13 @@ footer p{margin:0 0 6px}
 
   <section>
     <h2>What people order</h2>
-    <ul class="order">
-      <li>Tacos de tripa <span>the one reviews mention most</span></li>
-      <li>Tacos <span>inside or at the truck</span></li>
-      <li>Burritos <span>a favorite at the truck</span></li>
-    </ul>
+    <div class="board">
+      <ul class="order">
+        <li>Tacos de tripa <span>the one reviews mention most</span></li>
+        <li>Tacos <span>inside or at the truck</span></li>
+        <li>Burritos <span>a favorite at the truck</span></li>
+      </ul>
+    </div>
     <p class="soft" style="margin:12px 0 0">Ask for the full menu when you come in. We'll add it to this page.</p>
   </section>
 

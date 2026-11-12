@@ -10,59 +10,70 @@
 <meta property="og:title" content="David's Auto Tech" />
 <meta property="og:description" content="Auto repair in La Puente, foreign and domestic" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patua+One&family=Source+Sans+3:wght@400;600&family=Share+Tech+Mono&display=swap" />
 <style>
+/* Concept: the pegboard tool wall in a father and son shop. The page background is the board. Content hangs on
+   it as panels on hooks, and the short labels are embossed label-maker tape. */
+:root{--board:#b68d5c;--hole:#6d4c28;--panel:#fbf7ee;--ink:#211a12;--soft:#6a5d4d;--line:#dccfb9;--tape:#1c1c1c;--red:#c4161c;
+  --disp:"Patua One",Georgia,serif;--body:"Source Sans 3",Verdana,sans-serif;--label:"Share Tech Mono","Courier New",monospace}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:#1a1a1a;font:400 17px/1.6 Roboto,Arial,sans-serif;padding-bottom:60px}
+body{margin:0;color:var(--ink);font:400 18px/1.55 var(--body);padding-bottom:64px;
+  background:var(--board) radial-gradient(circle,var(--hole) 0 2.5px,transparent 3px) 0 0/26px 26px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:940px;margin:0 auto;padding:0 20px}
-.top{border-bottom:1px solid #d9d9d9}
-.top .w{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:13px;padding-bottom:13px}
-.top b{font:700 22px/1.1 "Roboto Condensed",Arial,sans-serif;text-transform:uppercase}
-.top a{flex:none;background:#1c4e9c;color:#fff;text-decoration:none;font-weight:500;padding:9px 13px;border-radius:3px;white-space:nowrap}
-.hero{background:#1c4e9c;color:#fff;padding:34px 0 32px}
-.hero small{display:block;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#cfdcf1;margin-bottom:8px}
-h1{font:700 36px/1.08 "Roboto Condensed",Arial,sans-serif;text-transform:uppercase;margin:0 0 12px}
-.hero p{margin:0 0 20px;max-width:32em;font-size:18px}
-.hero a.b{display:inline-block;background:#fff;color:#1c4e9c;text-decoration:none;font-weight:500;font-size:18px;padding:14px 22px;border-radius:3px;margin:0 8px 8px 0}
-.hero a.o{background:none;color:#fff;border:1.5px solid #fff}
-.now{border-bottom:1px solid #d9d9d9;font-size:15px}
-.now .w{padding-top:10px;padding-bottom:10px;display:flex;flex-wrap:wrap;gap:4px 18px}
-#open{font-weight:500}#open.on{color:#177245}#open.off{color:#b3261e}
-section{padding-top:42px}
-h2{font:700 25px/1.15 "Roboto Condensed",Arial,sans-serif;text-transform:uppercase;margin:0 0 10px}
-.svc{margin:0;padding:0;list-style:none;columns:2;column-gap:28px;border-top:2px solid #1a1a1a}
-.svc li{padding:10px 0;border-bottom:1px solid #d9d9d9;break-inside:avoid;font-weight:500}
+.w{max-width:900px;margin:0 auto;padding:0 14px}
+.top{background:var(--tape);color:#fff}
+.top .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.top b{font:400 22px/1.05 var(--disp)}
+.top a{flex:none;font-weight:600;text-decoration:none;background:var(--red);padding:10px 13px;border-radius:3px;white-space:nowrap}
+/* a panel hanging on two hooks */
+.hang{position:relative;background:var(--panel);border-radius:4px;padding:26px 18px 22px;margin-top:30px;box-shadow:0 3px 0 rgba(60,38,14,.35)}
+.hang::before,.hang::after{content:"";position:absolute;top:-9px;width:12px;height:20px;border-radius:6px;background:#8e959b;box-shadow:inset -2px 0 0 #5d646a}
+.hang::before{left:24px}.hang::after{right:24px}
+/* label-maker tape */
+.tape{display:inline-block;background:var(--tape);color:#fff;font:400 14px/1 var(--label);letter-spacing:.2em;text-transform:uppercase;padding:8px 10px 7px;border-radius:2px}
+.tape.on{background:#17683a}.tape.off{background:var(--red)}
+h1{font:400 34px/1.08 var(--disp);margin:14px 0 10px}
+.hero p{margin:0 0 18px;max-width:30em}
+.b{display:inline-block;text-decoration:none;font-weight:600;padding:14px 20px;border-radius:3px;background:var(--ink);color:#fff;border:2px solid var(--ink);margin:0 8px 8px 0}
+.b.o{background:none;color:var(--ink)}
+.now{margin:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;color:var(--soft)}
+h2{font:400 26px/1.1 var(--disp);margin:0 0 14px}
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.svc li{background:var(--tape);color:#fff;font:400 14px/1.3 var(--label);letter-spacing:.14em;text-transform:uppercase;padding:13px 10px 12px;border-radius:2px;text-align:center}
+.soft{color:var(--soft)}
 .about{display:grid;gap:20px}
-.about figure{margin:0}
-.about img{width:100%;max-width:420px;height:auto;border-radius:3px}
-.about figcaption{font-size:14px;color:#555;margin-top:6px}
-.revs{display:grid;gap:12px}
-.revs blockquote{margin:0;background:#eef3fa;border-radius:3px;padding:18px}
-.revs p{margin:0 0 6px}
-.revs cite{font-style:normal;font-size:14px;color:#555}
-table{border-collapse:collapse;width:100%;max-width:400px}
-td{padding:8px 0;border-bottom:1px solid #d9d9d9}
+.about p{margin:0 0 12px}
+figure{margin:0}
+figure img{width:100%;height:auto;border:8px solid #fff;box-shadow:0 2px 0 rgba(60,38,14,.3)}
+figcaption{font-size:15px;color:var(--soft);margin-top:8px}
+blockquote{margin:0;padding:14px 0;border-top:1px solid var(--line)}
+blockquote:last-child{padding-bottom:0}
+blockquote p{margin:0 0 6px;font-size:19px;line-height:1.45}
+cite{font:400 13px/1 var(--label);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.visit{display:grid;gap:22px}
+table{border-collapse:collapse;width:100%}
+td{padding:9px 0;border-bottom:1px solid var(--line)}
 td+td{text-align:right}
-tr.today td{font-weight:500;color:#1c4e9c}
-.map{width:100%;height:300px;border:0;margin-top:14px}
-.soft{color:#555;font-size:15px}
-footer{margin-top:48px;background:#1a1a1a;color:#c9c9c9;padding:22px 0 28px;font-size:14px}
+tr.today td{font-weight:600}
+tr.today td:first-child::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--red);margin-right:8px}
+.map{width:100%;height:290px;border:0}
+footer{margin-top:40px;background:var(--tape);color:#c9c4bb;padding:20px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#1a1a1a}
-.dock a{text-align:center;text-decoration:none;color:#fff;font-weight:500;padding:18px 6px}
-.dock a:first-child{background:#1c4e9c}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--tape)}
+.dock a{text-align:center;text-decoration:none;color:#fff;font-weight:600;padding:18px 6px}
+.dock a:first-child{background:var(--red)}
+a:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 5px var(--ink)}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:54px}
-  .hero{padding:60px 0 54px}
-  .svc{columns:3}
-  .about{grid-template-columns:1fr 420px;align-items:start;gap:40px}
-  .revs{grid-template-columns:repeat(3,1fr)}
-  .visit{display:grid;grid-template-columns:400px 1fr;gap:40px}
-  .map{margin-top:0;height:340px}
+  .w{padding:0 24px}
+  .hang{padding:38px 40px 34px;margin-top:40px}
+  h1{font-size:52px}
+  .svc{grid-template-columns:repeat(3,1fr)}
+  .about{grid-template-columns:1fr 320px;gap:40px;align-items:start}
+  .visit{grid-template-columns:1fr 1fr;gap:40px}
+  .map{height:100%;min-height:340px}
 }
 </style>
 </head>
@@ -79,17 +90,17 @@ footer p{margin:0 0 6px}
   <a href="tel:+16263302536">(626) 330-2536</a>
 </div></header>
 
-<div class="hero"><div class="w">
-  <small>Turnbull Canyon Rd · La Puente</small>
-  <h1>Auto repair, foreign and domestic</h1>
-  <p>Maintenance and repair on all vehicles. Call the shop and tell us what's going on with your car.</p>
-  <a class="b" href="tel:+16263302536">Call the shop</a>
-  <a class="b o" href="#visit">Hours and directions</a>
-</div></div>
-<div class="now"><div class="w"><span id="open">Open Monday to Saturday</span><span>4.9 on Google from 145 reviews</span></div></div>
-
 <main class="w">
-  <section>
+  <section class="hang hero">
+    <span class="tape">Turnbull Canyon Rd · La Puente</span>
+    <h1>Auto repair, foreign and domestic</h1>
+    <p>Maintenance and repair on all vehicles. Call the shop and tell us what's going on with your car.</p>
+    <a class="b" href="tel:+16263302536">Call the shop</a>
+    <a class="b o" href="#visit">Hours and directions</a>
+    <p class="now"><span class="tape" id="open">Open Monday to Saturday</span><span>4.9 on Google from 145 reviews</span></p>
+  </section>
+
+  <section class="hang">
     <h2>Work we do a lot of</h2>
     <ul class="svc">
       <li>Brakes</li>
@@ -99,10 +110,10 @@ footer p{margin:0 0 6px}
       <li>Radiators</li>
       <li>General maintenance</li>
     </ul>
-    <p class="soft" style="margin-top:12px">That's what our customers mention most. If your problem isn't on the list, call anyway.</p>
+    <p class="soft" style="margin:14px 0 0">That's what our customers mention most. If your problem isn't on the list, call anyway.</p>
   </section>
 
-  <section class="about">
+  <section class="hang about">
     <div>
       <h2>A father and son shop</h2>
       <p>David and his son run the shop and work on the cars. We look the whole car over, tell you what it needs and what it doesn't, and give you a fair price for the work.</p>
@@ -114,7 +125,7 @@ footer p{margin:0 0 6px}
     </figure>
   </section>
 
-  <section>
+  <section class="hang">
     <h2>From our Google reviews</h2>
     <div class="revs">
       <blockquote><p>"Father and son take care of you. They analyse everything make sure your car is good."</p><cite>Google review</cite></blockquote>
@@ -123,7 +134,7 @@ footer p{margin:0 0 6px}
     </div>
   </section>
 
-  <section id="visit">
+  <section class="hang" id="visit">
     <h2>Hours and location</h2>
     <div class="visit">
       <div>

@@ -10,56 +10,75 @@
 <meta property="og:title" content="Délave Studios" />
 <meta property="og:description" content="Barbershop in Rosemead" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;800&family=DM+Sans:wght@400;500&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,500&family=Instrument+Sans:wght@400;600&display=swap" />
 <style>
+/* A magazine spread: black on white, a masthead, folios, a drop cap, pull quotes, a strict column grid. */
+:root{--k:#0c0c0c;--w:#fff;--g:#6a6a6a;--hair:#0c0c0c;--serif:"Bodoni Moda","Didot",Georgia,serif;--sans:"Instrument Sans",Helvetica,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#efede8;color:#151515;font:400 17px/1.65 "DM Sans",Arial,sans-serif;padding-bottom:62px}
+body{margin:0;background:var(--w);color:var(--k);font:400 17px/1.65 var(--sans);padding-bottom:62px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:880px;margin:0 auto;padding-left:22px;padding-right:22px}
-.bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;padding-bottom:16px}
-.brand{font:800 18px/1 Syne,Arial,sans-serif;text-decoration:none}
-.tel{flex:none;font:500 15px/1 Syne,Arial,sans-serif;letter-spacing:.04em;text-decoration:none;background:#151515;color:#efede8;padding:11px 14px;white-space:nowrap}
-.hero{padding-top:26px;padding-bottom:30px}
-h1{font:800 40px/.95 Syne,Arial,sans-serif;letter-spacing:-.02em;margin:0 0 16px;overflow-wrap:anywhere}
-.hero p{margin:0 0 6px;max-width:30em}
-.hero p.tag{letter-spacing:.14em;text-transform:uppercase;font-size:12px;font-weight:500;margin:0 0 20px}
-#open{font-weight:500}
-#open.on{color:#1c6b3c}#open.off{color:#9a2b22}
-.wide{width:100%;height:280px;object-fit:cover;filter:grayscale(1)}
-h2{font:800 22px/1.1 Syne,Arial,sans-serif;margin:54px 0 10px}
-.cols{display:grid;gap:10px 50px}
-.cols p{margin:0 0 12px}
-.list{margin:0;padding:0;list-style:none}
-.list li{padding:10px 0;border-bottom:1px solid #cfccc4}
-.list li:first-child{border-top:1px solid #151515}
-.words{background:#151515;color:#efede8;margin-top:54px;padding:8px 0 44px}
-.words h2{color:#efede8}
-.words blockquote{margin:0;padding:18px 0;border-bottom:1px solid #3a3936}
-.words blockquote:last-child{border:0}
-.words p{margin:0 0 6px;font:500 20px/1.4 Syne,Arial,sans-serif}
-.words cite{font-style:normal;font-size:14px;color:#a9a69f}
+.w{max-width:1060px;margin:0 auto;padding-left:20px;padding-right:20px}
+.bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px;border-bottom:1px solid var(--hair)}
+.brand{font:600 12px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;text-decoration:none}
+.tel{flex:none;font:600 14px/1 var(--sans);letter-spacing:.06em;text-decoration:none;padding:14px 0 14px 12px;white-space:nowrap}
+.mast{text-align:center;padding-top:26px}
+h1{font:800 clamp(52px,17vw,200px)/.82 var(--serif);letter-spacing:-.03em;margin:0;text-transform:uppercase}
+h1 span{display:block;font:500 italic clamp(26px,7vw,70px)/1 var(--serif);letter-spacing:0;text-transform:none;margin-top:6px}
+.tag{margin:16px 0 0;padding:10px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);font:600 11px/1.5 var(--sans);letter-spacing:.22em;text-transform:uppercase}
+.wide{width:100%;height:300px;object-fit:cover;filter:grayscale(1) contrast(1.1);margin-top:18px}
+.feature{display:grid;gap:18px;padding-top:26px}
+.folio{font:600 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--g);margin:0 0 10px}
+.deck{font:500 italic 27px/1.25 var(--serif);margin:0 0 14px}
+#open{font-weight:600}#open.on{color:#0c6b3a}#open.off{color:#a11d1d}
+.btn{display:inline-block;text-decoration:none;font:600 13px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;padding:18px 22px;border:1px solid var(--k);margin:6px 8px 0 0}
+.btn.k{background:var(--k);color:var(--w)}
+h2{font:800 34px/1 var(--serif);letter-spacing:-.01em;margin:0 0 14px}
+section.blk{padding-top:54px}
+.cols{display:grid;gap:22px}
+.cols p{margin:0 0 14px}
+.drop::first-letter{float:left;font:800 74px/.78 var(--serif);padding:6px 10px 0 0}
+.list{margin:0;padding:0;list-style:none;border-top:1px solid var(--hair)}
+.list li{padding:14px 0;border-bottom:1px solid var(--hair);font:500 italic 24px/1.2 var(--serif)}
+.words{background:var(--k);color:var(--w);margin-top:54px;padding:48px 0 44px}
+.words .folio{color:#a8a8a8}
+.words h2{color:var(--w)}
+.words blockquote{margin:0 0 28px}
+.words blockquote:last-child{margin-bottom:0}
+.words blockquote p{font:500 italic 26px/1.28 var(--serif);margin:0 0 8px}
+.words cite{font:600 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;font-style:normal;color:#a8a8a8}
 .visit{display:grid;gap:24px}
-dl{display:grid;grid-template-columns:1fr auto;gap:0;max-width:360px;margin:0}
-dl dt,dl dd{margin:0;padding:8px 0;border-bottom:1px solid #cfccc4}
-dl dd{text-align:right}
-dl .today{font-weight:500;background:#e2dfd8}
-.btn{display:inline-block;text-decoration:none;font:500 16px/1 Syne,Arial,sans-serif;letter-spacing:.05em;padding:16px 24px;background:#151515;color:#efede8;margin-top:6px}
+dl{margin:0;display:grid;grid-template-columns:1fr auto;border-top:1px solid var(--hair)}
+dt,dd{margin:0;padding:10px 0;border-bottom:1px solid #d5d5d5}
+dd{text-align:right}
+dt.today,dd.today{font-weight:600;border-bottom-color:var(--k)}
 .map{width:100%;height:300px;border:0;filter:grayscale(1)}
-.small{font-size:15px;color:#55524c}
-footer{margin-top:50px;border-top:1px solid #151515;padding:22px 0 28px;color:#55524c;font-size:14px}
+.small{font-size:15px;color:var(--g)}
+footer{margin-top:54px;border-top:1px solid var(--hair);padding:20px 0 28px;color:var(--g);font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#efede8;border-top:1px solid #151515}
-.dock a{text-align:center;text-decoration:none;font:500 15px/1 Syne,Arial,sans-serif;letter-spacing:.05em;padding:20px 6px}
-.dock a.b{background:#151515;color:#efede8}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:var(--w);border-top:1px solid var(--k)}
+.dock a{text-align:center;text-decoration:none;font:600 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:21px 6px}
+.dock a.b{background:var(--k);color:var(--w)}
+a:focus-visible{outline:2px solid var(--k);outline-offset:4px}
 @media(min-width:740px){
   body{padding-bottom:0}.dock{display:none}
-  h1{font-size:84px}
-  .hero{padding-top:50px;padding-bottom:44px}
-  .wide{height:440px}
-  .cols{grid-template-columns:3fr 2fr}
-  .visit{grid-template-columns:360px 1fr}
+  .mast{padding-top:40px}
+  .wide{height:470px}
+  .feature{grid-template-columns:repeat(12,1fr);gap:0 24px;padding-top:40px}
+  .feature .a{grid-column:1 / span 2}
+  .feature .b{grid-column:4 / span 8}
+  .deck{font-size:40px}
+  h2{font-size:54px}
+  .cols{grid-template-columns:repeat(12,1fr);gap:0 24px}
+  .cols > div{grid-column:1 / span 6}
+  .cols > ul{grid-column:9 / span 4}
+  .words .in{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px}
+  .words .in > div:first-child{grid-column:1 / span 3}
+  .words .in > div:last-child{grid-column:4 / span 9;columns:2;column-gap:40px}
+  .words blockquote{break-inside:avoid}
+  .words blockquote p{font-size:30px}
+  .visit{grid-template-columns:5fr 7fr;gap:40px}
 }
 </style>
 </head>
@@ -76,20 +95,30 @@ footer p{margin:0 0 6px}
   <a class="tel" href="tel:+16267475687">(626) 747-5687</a>
 </div></header>
 
-<section class="hero w" id="top">
-  <p class="tag">Barbershop · 8940 Valley Blvd · Rosemead</p>
-  <h1>Délave Studios</h1>
-  <p>Manny cuts hair here Tuesday through Sunday. Call to book a time with him.</p>
-  <p><span id="open">Closed Mondays.</span> 5.0 on Google from 10 reviews.</p>
+<section class="w" id="top">
+  <div class="mast">
+    <h1>Délave <span>Studios</span></h1>
+    <p class="tag">Barbershop · 8940 Valley Blvd · Rosemead</p>
+  </div>
+  <img class="wide" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?fm=jpg&q=72&w=1400&fit=crop" alt="Clippers, shears and combs laid out on a mat" />
+  <div class="feature">
+    <p class="folio a">01 · Manny</p>
+    <div class="b">
+      <p class="deck">Manny cuts hair here Tuesday through Sunday. Call to book a time with him.</p>
+      <p style="margin:0 0 10px"><span id="open">Closed Mondays.</span> 5.0 on Google from 10 reviews.</p>
+      <a class="btn k" href="tel:+16267475687">Call (626) 747-5687</a>
+      <a class="btn" href="#visit">Hours and map</a>
+    </div>
+  </div>
 </section>
-<img class="wide" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?fm=jpg&q=72&w=1400&fit=crop" alt="Clippers, shears and combs laid out on a mat" />
 
 <main>
-  <div class="w">
+  <section class="w blk">
+    <p class="folio">02 · The work</p>
     <h2>What we do</h2>
     <div class="cols">
       <div>
-        <p>Fades and tapers are what people come to Manny for, and he'll cut whatever style you ask for. He takes his time on every cut.</p>
+        <p class="drop">Fades and tapers are what people come to Manny for, and he'll cut whatever style you ask for. He takes his time on every cut.</p>
         <p>Some of his customers have been with him for more than ten years. If you need to get in on short notice, call and he'll try to fit you in.</p>
       </div>
       <ul class="list">
@@ -98,17 +127,23 @@ footer p{margin:0 0 6px}
         <li>Other styles, just ask</li>
       </ul>
     </div>
-  </div>
+  </section>
 
-  <section class="words"><div class="w">
-    <h2>From our Google reviews</h2>
-    <blockquote><p>"Manny is very detailed and thorough."</p><cite>Google review</cite></blockquote>
-    <blockquote><p>"Best fades around and he's been my barber for over 3 years."</p><cite>Google review</cite></blockquote>
-    <blockquote><p>"Manny is very professional and is all about quality of the haircut. One of the best cuts I've ever gotten."</p><cite>Google review</cite></blockquote>
-    <blockquote><p>"Takes his time making sure your fade/taper looks incredible, while having a laid back and positive demeanor."</p><cite>Google review</cite></blockquote>
+  <section class="words"><div class="w in">
+    <div>
+      <p class="folio">03 · Letters</p>
+      <h2>From our Google reviews</h2>
+    </div>
+    <div>
+      <blockquote><p>"Manny is very detailed and thorough."</p><cite>Google review</cite></blockquote>
+      <blockquote><p>"Best fades around and he's been my barber for over 3 years."</p><cite>Google review</cite></blockquote>
+      <blockquote><p>"Manny is very professional and is all about quality of the haircut. One of the best cuts I've ever gotten."</p><cite>Google review</cite></blockquote>
+      <blockquote><p>"Takes his time making sure your fade/taper looks incredible, while having a laid back and positive demeanor."</p><cite>Google review</cite></blockquote>
+    </div>
   </div></section>
 
-  <div class="w">
+  <section class="w blk">
+    <p class="folio">04 · Visit</p>
     <h2 id="visit">Hours and location</h2>
     <div class="visit">
       <div>
@@ -123,11 +158,11 @@ footer p{margin:0 0 6px}
         </dl>
         <p>8940 Valley Blvd<br />Rosemead, CA 91770</p>
         <p class="small">The entrance and parking are wheelchair accessible.</p>
-        <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=D%C3%A9lave+Studios+8940+Valley+Blvd+Rosemead+CA+91770">Get directions</a>
+        <a class="btn k" href="https://www.google.com/maps/dir/?api=1&destination=D%C3%A9lave+Studios+8940+Valley+Blvd+Rosemead+CA+91770">Get directions</a>
       </div>
       <iframe class="map" title="Map to Délave Studios" src="https://www.google.com/maps?q=D%C3%A9lave+Studios+8940+Valley+Blvd+Rosemead+CA+91770&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </div>
+  </section>
 </main>
 
 <footer><div class="w">

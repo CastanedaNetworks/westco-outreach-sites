@@ -10,78 +10,95 @@
 <meta property="og:title" content="Vic's Auto Repair &amp; Tire Center" />
 <meta property="og:description" content="Auto repair and tires in West Covina" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Archivo+Narrow:wght@600;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@600;800&family=Sofia+Sans:wght@400;600&family=Kalam:wght@700&display=swap" />
 <style>
+/* Concept: the service-reminder sticker a shop leaves in the corner of your windshield. The sticker carries the
+   live status and key facts; everything else is laid out like a tidy service record. */
+:root{--glass:#e9eff1;--ink:#17222c;--soft:#51606d;--rule:#c5d0d6;--red:#cf2e27;--pen:#1b3fa8;--paper:#fff;
+  --disp:"Sofia Sans Condensed","Arial Narrow",sans-serif;--body:"Sofia Sans",Verdana,sans-serif;--hand:Kalam,"Comic Sans MS",cursive}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:#16202b;font:400 17px/1.6 Archivo,Arial,sans-serif;padding-bottom:64px}
+body{margin:0;background:var(--glass);color:var(--ink);font:400 17px/1.6 var(--body);padding-bottom:64px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:1040px;margin:0 auto;padding:0 20px}
-/* header */
-.bar{background:#0f2238;color:#fff}
-.bar .w{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px}
-.brand{font:700 21px/1.05 "Archivo Narrow",Arial,sans-serif;text-transform:uppercase;letter-spacing:.02em;text-decoration:none}
-.brand span{display:block;font:500 12px/1.3 Archivo,Arial,sans-serif;letter-spacing:.14em;color:#f2b705}
-.nav{display:none;gap:26px;font-weight:500;font-size:15px}
+.w{max-width:1000px;margin:0 auto;padding:0 20px}
+.bar{background:var(--ink);color:#fff}
+.bar .w{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.brand{font:800 22px/1 var(--disp);text-transform:uppercase;letter-spacing:.02em;text-decoration:none}
+.brand span{display:block;font:600 13px/1.3 var(--body);letter-spacing:.08em;color:#b9c6cf;margin-top:3px}
+.nav{display:none;gap:24px;font-weight:600;font-size:15px}
 .nav a{text-decoration:none}
 .nav a:hover{text-decoration:underline;text-underline-offset:4px}
-.tel{flex:none;background:#f2b705;color:#0f2238;text-decoration:none;font-weight:800;padding:10px 14px;border-radius:4px;font-size:15px;white-space:nowrap}
-/* hero */
-.hero{position:relative;background:#0f2238;color:#fff}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
-.hero .in{position:relative;display:flex;align-items:flex-end;min-height:340px}
-.hero .w{width:100%;padding-top:70px;padding-bottom:26px}
-h1{font:800 34px/1.08 Archivo,Arial,sans-serif;margin:0 0 10px;max-width:15em}
-.hero p{margin:0 0 18px;max-width:30em;font-size:18px}
-.cta{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:4px;border:2px solid #f2b705}
-.btn.y{background:#f2b705;color:#0f2238}
-/* facts row */
-.facts{background:#f4f6f8;border-bottom:1px solid #dfe4ea}
-.facts ul{list-style:none;margin:0;padding:14px 0;display:grid;gap:10px}
-.facts li{font-size:15px}
-.facts b{display:block;font-size:16px}
-#open.on{color:#177245}#open.off{color:#b3261e}
-/* sections */
-section{padding:44px 0 0}
-h2{font:800 27px/1.15 Archivo,Arial,sans-serif;margin:0 0 6px}
-.sub{margin:0 0 20px;color:#4b5967;max-width:38em}
-.svc{display:grid;gap:0 40px;margin:0;padding:0;list-style:none;border-top:2px solid #16202b}
-.svc li{border-bottom:1px solid #dfe4ea;padding:14px 0}
-.svc b{display:block;font-size:18px;margin-bottom:2px}
-.svc span{color:#4b5967}
-.note{margin:16px 0 0;font-size:15px;color:#4b5967}
-.about{display:grid;gap:24px;align-items:center}
-.about img{border-radius:4px;width:100%;height:auto}
+.tel{flex:none;font:800 19px/1 var(--disp);letter-spacing:.03em;text-decoration:none;background:var(--red);padding:11px 13px;border-radius:3px;white-space:nowrap}
+
+.top{display:grid;gap:26px;padding-top:30px;padding-bottom:10px}
+h1{font:800 42px/.98 var(--disp);text-transform:uppercase;margin:0 0 12px;letter-spacing:.005em}
+.top p{margin:0 0 18px;font-size:18px;max-width:28em}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;font:800 19px/1 var(--disp);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:15px 20px;border:2px solid var(--ink);border-radius:3px}
+.btn.f{background:var(--ink);color:#fff}
+
+/* the sticker */
+.sticker{position:relative;background:var(--paper);border-radius:14px;max-width:360px;width:100%;box-shadow:0 1px 0 #b8c4ca,0 10px 22px -14px rgba(23,34,44,.5);overflow:hidden;justify-self:start}
+.sticker .band{background:var(--red);color:#fff;font:800 17px/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;padding:10px 16px 9px;display:flex;justify-content:space-between;gap:8px}
+.sticker dl{margin:0;padding:6px 16px 4px}
+.sticker dt{font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-top:10px}
+.sticker dd{margin:0;font:700 23px/1.25 var(--hand);color:var(--pen);border-bottom:1.5px dotted #8794a0;padding:2px 0 1px;min-height:32px}
+.sticker dd a{text-decoration:none}
+.sticker .on{color:#15733a}.sticker .off{color:var(--red)}
+.sticker small{display:block;padding:9px 16px 12px;font:600 12px/1.3 var(--body);letter-spacing:.06em;color:var(--soft)}
+@media (prefers-reduced-motion:no-preference){.sticker{animation:stick .45s ease-out .15s both}}
+@keyframes stick{from{transform:translateY(-10px) rotate(-3deg);opacity:0}to{transform:none;opacity:1}}
+
+.hood{width:100%;height:220px;object-fit:cover;margin-top:26px}
+.rec{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.rec ul{list-style:none;margin:0;padding:12px 0;display:grid;gap:6px}
+.rec li{font-size:15px}
+.rec b{font-weight:600}
+
+section{padding-top:46px}
+h2{font:800 30px/1 var(--disp);text-transform:uppercase;letter-spacing:.01em;margin:0 0 6px}
+.sub{margin:0 0 16px;color:var(--soft);max-width:38em}
+.log{background:var(--paper);border:1px solid var(--rule);border-radius:6px;margin:0;padding:0 18px;list-style:none}
+.log li{padding:14px 0;border-bottom:1px solid var(--rule);display:grid;gap:2px}
+.log li:last-child{border-bottom:0}
+.log b{font:800 21px/1.1 var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.log span{color:var(--soft)}
+.note{margin:14px 0 0;font-size:15px;color:var(--soft)}
+.about{display:grid;gap:22px;align-items:center}
+.about img{border-radius:6px;width:100%;height:auto}
 .about p{margin:0 0 12px}
-.quotes{display:grid;gap:14px}
-blockquote{margin:0;background:#0f2238;color:#fff;border-radius:4px;padding:20px}
-blockquote p{margin:0 0 10px;font-size:17px;line-height:1.5}
-blockquote cite{font-style:normal;font-size:14px;color:#f2b705;font-weight:600}
-.visit{display:grid;gap:26px}
-table{border-collapse:collapse;width:100%;max-width:380px}
-td{padding:8px 0;border-bottom:1px solid #dfe4ea}
+.said{margin:0;padding:0;list-style:none;display:grid;gap:0 36px}
+.said li{padding:16px 0;border-top:1px solid var(--rule)}
+.said p{margin:0 0 6px;font-size:18px;line-height:1.5}
+.said cite{font-style:normal;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.visit{display:grid;gap:24px}
+table{border-collapse:collapse;width:100%;max-width:380px;background:var(--paper);border:1px solid var(--rule)}
+td{padding:9px 14px;border-bottom:1px solid var(--rule)}
+tr:last-child td{border-bottom:0}
 td+td{text-align:right}
-tr.today td{font-weight:800}
-.map{width:100%;height:320px;border:0;border-radius:4px}
-.pay{margin:14px 0 0;color:#4b5967;font-size:15px}
-footer{margin-top:54px;background:#0f2238;color:#b8c4d1;padding:24px 0 30px;font-size:14px}
+tr.today td{font-weight:600}
+tr.today td:first-child::after{content:" today";font:700 17px/1 var(--hand);color:var(--pen);margin-left:6px}
+.pay{margin:14px 0 0;color:var(--soft);font-size:15px;max-width:380px}
+.map{width:100%;height:320px;border:1px solid var(--rule);border-radius:6px}
+footer{margin-top:54px;background:var(--ink);color:#b9c6cf;padding:22px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-/* sticky call bar on phones */
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#0f2238;border-top:2px solid #f2b705}
-.dock a{text-align:center;text-decoration:none;color:#fff;font-weight:800;padding:17px 6px}
-.dock a.y{background:#f2b705;color:#0f2238}
-@media(min-width:700px){
-  body{padding-bottom:0}
-  .dock{display:none}
-  .nav{display:flex}
-  .hero .in{min-height:460px}
-  h1{font-size:50px}
-  .facts ul{grid-template-columns:repeat(4,1fr);padding:18px 0}
-  .svc{grid-template-columns:1fr 1fr}
-  .about{grid-template-columns:1fr 1fr}
-  .quotes{grid-template-columns:1fr 1fr}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:var(--ink)}
+.dock a{text-align:center;text-decoration:none;color:#fff;font:800 19px/1 var(--disp);letter-spacing:.05em;text-transform:uppercase;padding:19px 6px 18px}
+.dock a:first-child{background:var(--red)}
+a:focus-visible{outline:3px solid var(--pen);outline-offset:2px}
+@media(min-width:760px){
+  body{padding-bottom:0}.dock{display:none}.nav{display:flex}
+  .top{grid-template-columns:1fr 360px;align-items:center;padding-top:54px}
+  h1{font-size:68px}
+  .sticker{transform:rotate(2deg);justify-self:end}
+  @keyframes stick{from{transform:translateY(-10px) rotate(-3deg);opacity:0}to{transform:rotate(2deg);opacity:1}}
+  .hood{height:300px;margin-top:44px}
+  .rec ul{grid-template-columns:repeat(3,auto);justify-content:space-between;gap:8px 36px}
+  .log{columns:2;column-gap:40px;padding:6px 26px}
+  .log li{break-inside:avoid}
+  .about{grid-template-columns:1fr 1fr;gap:40px}
+  .said{grid-template-columns:1fr 1fr}
   .visit{grid-template-columns:380px 1fr}
   section{padding-top:64px}
 }
@@ -106,30 +123,39 @@ footer p{margin:0 0 6px}
   <a class="tel" href="tel:+16263383252">(626) 338-3252</a>
 </div></header>
 
-<div class="hero" id="top">
-  <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=75&w=1800&fit=crop" alt="Technician leaning in under the open hood of a car" />
-  <div class="in"><div class="w">
+<div class="w top" id="top">
+  <div>
     <h1>Auto repair and tires on Glendora Ave.</h1>
     <p>Vic looks at your car himself and tells you what it needs before any work starts.</p>
-    <div class="cta">
-      <a class="btn y" href="tel:+16263383252">Call (626) 338-3252</a>
+    <div class="btns">
+      <a class="btn f" href="tel:+16263383252">Call (626) 338-3252</a>
       <a class="btn" href="#visit">Hours and directions</a>
     </div>
-  </div></div>
+  </div>
+  <aside class="sticker" aria-label="Shop status">
+    <div class="band"><span>Service reminder</span><span>Vic's</span></div>
+    <dl>
+      <dt>Shop is</dt><dd id="open">Open Monday to Saturday</dd>
+      <dt>Hours</dt><dd id="openline">Weekdays 8 to 5, Saturday 8 to 1</dd>
+      <dt>Call</dt><dd><a href="tel:+16263383252">(626) 338-3252</a></dd>
+      <dt>Bring it to</dt><dd>936 S Glendora Ave, #1</dd>
+    </dl>
+    <small>Vic's Auto Repair &amp; Tire Center · West Covina, CA 91790</small>
+  </aside>
 </div>
 
-<div class="facts"><div class="w"><ul>
-  <li><b id="open">Open Monday to Saturday</b><span id="openline">Weekdays 8 to 5, Saturday 8 to 1</span></li>
-  <li><b>4.7 on Google</b>36 customer reviews</li>
-  <li><b>936 S Glendora Ave, #1</b>West Covina, CA 91790</li>
-  <li><b>Cards accepted</b>Credit, debit and tap to pay</li>
+<img class="hood" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?fm=jpg&q=75&w=1800&fit=crop" alt="Technician leaning in under the open hood of a car" />
+<div class="rec"><div class="w"><ul>
+  <li><b>4.7 on Google</b> · 36 customer reviews</li>
+  <li><b>936 S Glendora Ave, #1</b> · West Covina, CA 91790</li>
+  <li><b>Cards accepted</b> · Credit, debit and tap to pay</li>
 </ul></div></div>
 
 <main>
   <section id="services"><div class="w">
     <h2>What we work on</h2>
     <p class="sub">If you don't see your problem here, call anyway. If it's something we don't do, Vic will tell you who does.</p>
-    <ul class="svc">
+    <ul class="log">
       <li><b>Engine problems</b><span>Rough running, stalling, noises, loss of power. We find the cause before we replace anything.</span></li>
       <li><b>Check engine light</b><span>We read the code, confirm what's actually wrong and fix it. Oxygen sensors are a common one.</span></li>
       <li><b>Used car inspections</b><span>Buying a used car or van? Bring it by first. We go through it and give you a full rundown of what we find.</span></li>
@@ -152,12 +178,12 @@ footer p{margin:0 0 6px}
   <section id="reviews"><div class="w">
     <h2>From our Google reviews</h2>
     <p class="sub">These are real reviews from our Google listing.</p>
-    <div class="quotes">
-      <blockquote><p>"They were very professional, refreshingly honest, and charged a very fair price."</p><cite>Google review · Lexus with engine issues</cite></blockquote>
-      <blockquote><p>"He replaced both o2 sensors in a timely fashion at a very reasonable price. He was professional and courteous."</p><cite>Google review · 2012 Toyota Prius</cite></blockquote>
-      <blockquote><p>"Vic himself greeted us and fit us in immediately without any notice, did a thorough job inspecting the van."</p><cite>Google review · used vehicle inspection</cite></blockquote>
-      <blockquote><p>"He is 110% the most honest mechanic I've encountered."</p><cite>Google review</cite></blockquote>
-    </div>
+    <ul class="said">
+      <li><p>"They were very professional, refreshingly honest, and charged a very fair price."</p><cite>Google review · Lexus with engine issues</cite></li>
+      <li><p>"He replaced both o2 sensors in a timely fashion at a very reasonable price. He was professional and courteous."</p><cite>Google review · 2012 Toyota Prius</cite></li>
+      <li><p>"Vic himself greeted us and fit us in immediately without any notice, did a thorough job inspecting the van."</p><cite>Google review · used vehicle inspection</cite></li>
+      <li><p>"He is 110% the most honest mechanic I've encountered."</p><cite>Google review</cite></li>
+    </ul>
   </div></section>
 
   <section id="visit"><div class="w">
@@ -175,7 +201,7 @@ footer p{margin:0 0 6px}
           <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
         </table>
         <p class="pay">We take credit cards, debit cards and tap to pay. The entrance is wheelchair accessible.</p>
-        <p style="margin:18px 0 0"><a class="btn y" href="https://www.google.com/maps/dir/?api=1&destination=Vic%27s+Auto+Repair+%26+Tire+Center+936+S+Glendora+Ave+West+Covina+CA+91790">Get directions</a></p>
+        <p style="margin:18px 0 0"><a class="btn f" href="https://www.google.com/maps/dir/?api=1&destination=Vic%27s+Auto+Repair+%26+Tire+Center+936+S+Glendora+Ave+West+Covina+CA+91790">Get directions</a></p>
       </div>
       <iframe class="map" title="Map to Vic's Auto Repair and Tire Center" src="https://www.google.com/maps?q=Vic%27s+Auto+Repair+%26+Tire+Center+936+S+Glendora+Ave+West+Covina+CA+91790&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -188,12 +214,12 @@ footer p{margin:0 0 6px}
 </div></footer>
 
 <div class="dock">
-  <a class="y" href="tel:+16263383252">Call the shop</a>
+  <a href="tel:+16263383252">Call the shop</a>
   <a href="https://www.google.com/maps/dir/?api=1&destination=Vic%27s+Auto+Repair+%26+Tire+Center+936+S+Glendora+Ave+West+Covina+CA+91790">Directions</a>
 </div>
 
 <script>
-// Marks today's row and shows whether the shop is open right now (Pacific time).
+// Fills in the sticker: open or closed right now (Pacific time), and marks today's row in the hours table.
 (function () {
   var H = { 1: [8, 17], 2: [8, 17], 3: [8, 17], 4: [8, 17], 5: [8, 17], 6: [8, 13] };
   var now;

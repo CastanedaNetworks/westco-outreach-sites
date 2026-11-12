@@ -10,60 +10,64 @@
 <meta property="og:title" content="Family Barber &amp; Hair Design" />
 <meta property="og:description" content="Barber and hair salon in Rosemead" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;700;900&family=Kalam:wght@400;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" />
 <style>
+/* The page is the appointment card the shop hands you: printed in teal on white card stock, with the blanks filled in by pen. */
+:root{--teal:#1f6f6b;--deep:#154f4c;--card:#fffdf8;--ink:#17302e;--pen:#1b3fa0;--line:#9fc4c1;--soft:#557470;--mint:#e3f1ef;
+  --d:Gabarito,"Trebuchet MS",sans-serif;--h:Kalam,"Comic Sans MS",cursive;--b:"Atkinson Hyperlegible",Verdana,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#f3f8f7;color:#1c2b2a;font:500 17px/1.65 Quicksand,Arial,sans-serif;padding-bottom:70px}
+body{margin:0;background:var(--teal);color:var(--ink);font:400 17px/1.6 var(--b);padding-bottom:64px}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:920px;margin:0 auto;padding-left:18px;padding-right:18px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px;padding-bottom:14px}
-.top b{font-weight:700;font-size:18px;line-height:1.15;color:#1f6f6b}
-.top a{flex:none;background:#1f6f6b;color:#fff;text-decoration:none;font-weight:700;padding:10px 16px;border-radius:99px;font-size:15px;white-space:nowrap}
-.hero{background:#1f6f6b;color:#fff;border-radius:24px;overflow:hidden;display:grid}
-.hero .t{padding:28px 22px 26px}
-h1{font-weight:700;font-size:33px;line-height:1.12;margin:0 0 10px}
-.hero p{margin:0;color:#d6ebe9}
-.pill{display:inline-block;margin-top:16px;background:#fff;color:#1c2b2a;border-radius:99px;padding:6px 16px;font-size:15px;font-weight:700}
-#st.on{color:#177245}#st.off{color:#b3261e}
+.w{max-width:820px;margin:0 auto;padding-left:14px;padding-right:14px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px;color:#fff}
+.top b{font:700 19px/1.1 var(--d)}
+.top a{background:#fff;color:var(--deep);text-decoration:none;font:700 16px/1 var(--d);padding:13px 16px;border-radius:99px;white-space:nowrap}
+.card{background:var(--card);border-radius:18px;padding:22px 18px;margin-bottom:14px}
+.card.front{border:2px solid var(--deep);box-shadow:inset 0 0 0 6px var(--card),inset 0 0 0 7px var(--line)}
+.kicker{font:700 13px/1 var(--d);letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin:0 0 8px}
+h1{font:900 34px/1.08 var(--d);margin:0 0 10px;color:var(--deep)}
+.card p{margin:0 0 12px}
+/* the fill-in lines */
+.fill{margin:16px 0 4px;padding:0;list-style:none}
+.fill li{display:flex;align-items:baseline;gap:10px;border-bottom:2px dotted var(--line);padding:9px 0 3px}
+.fill span{flex:none;font:700 13px/1 var(--d);letter-spacing:.14em;text-transform:uppercase;color:var(--soft);min-width:58px}
+.fill b{font:700 23px/1.15 var(--h);color:var(--pen);min-width:0}
+#st.on{color:#177a44}#st.off{color:#b3261e}
 .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.btns a{text-decoration:none;font-weight:700;padding:13px 22px;border-radius:99px;border:2px solid #fff}
-.btns a.f{background:#fff;color:#1f6f6b}
-.hero img{width:100%;height:230px;object-fit:cover}
-section{padding-top:42px}
-h2{font-weight:700;font-size:25px;margin:0 0 8px;color:#1f6f6b}
-.panel{background:#fff;border-radius:20px;padding:22px}
-.panel p:last-child{margin-bottom:0}
-.does{margin:12px 0 0;padding-left:20px}
-.does li{margin:6px 0}
-.q{margin:0;padding:22px 0;border-bottom:2px dotted #b9d6d3}
-.q:first-of-type{padding-top:6px}
-.q p{margin:0 0 6px;font-size:19px;line-height:1.5}
-.q cite{font-style:normal;font-size:14px;color:#5b706e}
-.week{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0;padding:0;list-style:none}
-.week li{background:#fff;border-radius:14px;padding:11px 12px}
-.week b{display:block;font-size:15px;color:#1f6f6b}
-.week li.off{background:none;border:2px dashed #b9d6d3;color:#5b706e}
-.week li.today{background:#1f6f6b;color:#fff}
-.week li.today b{color:#fff}
-.soft{color:#5b706e;font-size:15px}
-.map{width:100%;height:300px;border:0;border-radius:20px;margin-top:16px}
-footer{padding:30px 0 28px;color:#566a68;font-size:14px}
+.btns a{text-decoration:none;font:700 17px/1 var(--d);padding:15px 22px;border-radius:99px;border:2px solid var(--deep);color:var(--deep)}
+.btns a.f{background:var(--deep);color:#fff}
+a:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.snap{width:100%;height:220px;object-fit:cover;border-radius:12px;margin-top:18px}
+h2{font:900 25px/1.15 var(--d);margin:0 0 10px;color:var(--deep)}
+.does{margin:6px 0 0;padding:0;list-style:none}
+.does li{position:relative;padding:8px 0 8px 30px;border-bottom:1px solid var(--mint)}
+.does li::before{content:"";position:absolute;left:2px;top:13px;width:14px;height:8px;border-left:3px solid var(--pen);border-bottom:3px solid var(--pen);transform:rotate(-48deg)}
+.q{margin:0;padding:14px 0;border-bottom:2px dotted var(--line)}
+.q p{margin:0 0 4px;font-size:18px}
+.q cite{font:500 14px/1 var(--d);font-style:normal;color:var(--soft)}
+.soft{color:var(--soft);font-size:15px}
+.week{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.week li{border:2px solid var(--mint);border-radius:12px;padding:10px 12px;font-size:15px}
+.week b{display:block;font:700 17px/1.2 var(--d)}
+.week li.off{color:var(--soft)}
+.week li.today{border-color:var(--pen);border-radius:60% 40% 55% 45% / 45% 55% 40% 60%;border-width:3px}
+.week li.today b{font:700 21px/1.1 var(--h);color:var(--pen)}
+.map{width:100%;height:290px;border:0;border-radius:12px;margin-top:6px}
+footer{color:#d6ebe9;padding:10px 0 26px;font-size:14px}
 footer p{margin:0 0 6px}
-.dock{position:fixed;left:10px;right:10px;bottom:10px;z-index:40;display:flex;gap:8px}
-.dock a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:15px 6px;border-radius:99px;background:#fff;color:#1f6f6b;box-shadow:0 2px 10px rgba(0,0,0,.18)}
-.dock a.f{background:#1f6f6b;color:#fff;flex:1.5}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;gap:8px;padding:8px;background:var(--deep)}
+.dock a{text-align:center;text-decoration:none;font:700 17px/1 var(--d);padding:15px 6px;border-radius:99px;border:2px solid #fff;color:#fff}
+.dock a.f{background:#fff;color:var(--deep)}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
-  .top b{font-size:21px}
-  .hero{grid-template-columns:1.1fr .9fr}
-  .hero .t{padding:48px 40px}
-  h1{font-size:44px}
-  .hero img{height:100%}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .card{padding:32px 34px}
+  .front{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+  h1{font-size:46px}
+  .snap{height:100%;min-height:340px;margin-top:0}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
   .week{grid-template-columns:repeat(4,1fr)}
-  section{padding-top:60px}
 }
 </style>
 </head>
@@ -77,24 +81,27 @@ footer p{margin:0 0 6px}
 
 <header class="w top"><b>Family Barber<br />&amp; Hair Design</b><a href="tel:+16262882737">(626) 288-2737</a></header>
 
-<div class="w">
-  <div class="hero">
-    <div class="t">
+<main class="w">
+  <section class="card front">
+    <div>
+      <p class="kicker">Your next haircut</p>
       <h1>Haircuts for the whole family on Garvey Ave</h1>
       <p>7940 Garvey Ave, #104, Rosemead. Come in for a cut, a fade or a trim.</p>
-      <span class="pill"><span id="st">Open six days</span> · <span id="stl">closed Tuesday</span></span>
+      <ul class="fill">
+        <li><span>With</span><b>Susan</b></li>
+        <li><span>Today</span><b id="st">Open six days</b></li>
+        <li><span>Note</span><b id="stl">closed Tuesday</b></li>
+      </ul>
       <div class="btns">
         <a class="f" href="tel:+16262882737">Call (626) 288-2737</a>
         <a href="#visit">Hours and map</a>
       </div>
     </div>
-    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=72&w=1200&fit=crop" alt="Barber combing and cutting a client's hair" />
-  </div>
-</div>
+    <img class="snap" src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=72&w=1200&fit=crop" alt="Barber combing and cutting a client's hair" />
+  </section>
 
-<main class="w">
-  <section class="cols">
-    <div class="panel">
+  <div class="cols">
+    <section class="card">
       <h2>Susan cuts your hair</h2>
       <p>Most people who come here ask for Susan. She takes her time, and she'll make sure she understands what you want before she starts.</p>
       <ul class="does">
@@ -102,17 +109,17 @@ footer p{margin:0 0 6px}
         <li>Kids' haircuts</li>
         <li>Hair wash with a scalp massage</li>
       </ul>
-    </div>
-    <div>
-      <h2 style="margin-top:28px">What customers say</h2>
+    </section>
+    <section class="card">
+      <h2>What customers say</h2>
       <blockquote class="q"><p>"Susan is a professional and takes her time to get it right."</p><cite>Google review</cite></blockquote>
       <blockquote class="q"><p>"She's very kind and fun to talk to. She also washes and massages your hair."</p><cite>Google review</cite></blockquote>
       <blockquote class="q"><p>"Susan really understands me what I need."</p><cite>Google review, from a visitor from Thailand</cite></blockquote>
       <p class="soft" style="margin:14px 0 0">4.8 on Google from 35 reviews.</p>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <section id="visit">
+  <section class="card" id="visit">
     <h2>Hours</h2>
     <ul class="week" id="week">
       <li data-d="1"><b>Monday</b>10 am to 7 pm</li>
@@ -126,7 +133,7 @@ footer p{margin:0 0 6px}
     <p class="soft" style="margin:14px 0 0">We're open until 7 every evening, weekends included.</p>
   </section>
 
-  <section>
+  <section class="card">
     <h2>Where we are</h2>
     <p>7940 Garvey Ave, #104, Rosemead, CA 91770. The entrance and parking are wheelchair accessible. <a href="https://www.google.com/maps/dir/?api=1&destination=Family+Barber+%26+Hair+Design+7940+Garvey+Ave+Rosemead+CA+91770"><b>Get directions</b></a></p>
     <iframe class="map" title="Map to Family Barber and Hair Design" src="https://www.google.com/maps?q=Family+Barber+%26+Hair+Design+7940+Garvey+Ave+Rosemead+CA+91770&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

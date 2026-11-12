@@ -10,66 +10,78 @@
 <meta property="og:title" content="Taqueria Periban" />
 <meta property="og:description" content="Donde se hacen las mejores carnitas" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=Roboto:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Work+Sans:wght@400;500;700&family=Cutive+Mono&display=swap" />
 <style>
+/* Butcher paper: carnitas wrapped in pink paper, marked up in grease pencil, with a counter ticket for the cuts. */
+:root{--paper:#f0c9b6;--fold:#e6b9a3;--ink:#1c1512;--red:#c63a17;--tick:#fffdf7;--soft:#5c4439;
+  --d:"Permanent Marker","Segoe Print","Bradley Hand",cursive;--b:"Work Sans",Verdana,sans-serif;--m:"Cutive Mono","Courier New",monospace}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#111;color:#f6f1e7;font:400 17px/1.65 Roboto,Arial,sans-serif;padding-bottom:60px}
+body{margin:0;color:var(--ink);font:400 17px/1.6 var(--b);padding-bottom:62px;
+  background:var(--paper) repeating-linear-gradient(98deg,rgba(255,255,255,.07) 0 2px,transparent 2px 9px)}
 a{color:inherit}
 img{max-width:100%;display:block}
-.w{max-width:960px;margin:0 auto;padding-left:20px;padding-right:20px}
+.w{max-width:900px;margin:0 auto;padding-left:16px;padding-right:16px}
 .top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px}
-.top b{font:700 18px/1.1 "Roboto Slab",Georgia,serif}
-.top nav{display:none;gap:22px;font-size:15px}
+.top b{font:400 19px/1 var(--d)}
+.top nav{display:none;gap:22px;font-weight:500;font-size:15px}
 .top nav a{text-decoration:none}
-.top .tel{flex:none;font-weight:700;white-space:nowrap}
-.hero{text-align:center;padding-top:20px;padding-bottom:30px}
-.hero img{width:190px;height:auto;border-radius:50%;margin:0 auto}
-h1{font:700 38px/1.1 "Roboto Slab",Georgia,serif;margin:16px 0 4px}
-.tag{font:500 19px/1.3 "Roboto Slab",Georgia,serif;color:#e4572e;margin:0}
-.addr{margin:8px 0 0;color:#b9b2a4}
-.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
-.btns a{text-decoration:none;font-weight:700;padding:14px 22px;border-radius:4px;border:2px solid #e4572e;min-width:150px}
-.btns a.f{background:#e4572e;color:#fff}
-.strip{background:#e4572e;color:#fff;text-align:center;font-weight:500;padding:11px 14px}
-.strip b{font-weight:700}
-section{padding-top:46px}
-h2{font:700 27px/1.15 "Roboto Slab",Georgia,serif;margin:0 0 10px}
-.carn{display:grid;gap:22px}
-.carn img{width:100%;height:240px;object-fit:cover;border-radius:4px}
-.cuts{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px}
-.cuts li{font:500 18px/1.3 "Roboto Slab",Georgia,serif;color:#e4572e}
-.menu{margin:0;padding:0;list-style:none;columns:2;column-gap:28px}
-.menu li{padding:9px 0;border-bottom:1px solid #333;break-inside:avoid}
-.soft{color:#b9b2a4;font-size:15px}
-.party{margin-top:26px;border:1px solid #e4572e;border-radius:4px;padding:18px 20px}
-.party h3{margin:0 0 4px;font:700 20px/1.2 "Roboto Slab",Georgia,serif}
+.tel{flex:none;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;padding:11px 14px;white-space:nowrap;font-size:15px}
+.hero{text-align:center;padding-top:14px;padding-bottom:10px}
+.hero img{width:176px;height:auto;border-radius:50%;margin:0 auto;border:6px solid var(--tick);box-shadow:0 2px 0 rgba(0,0,0,.25);transform:rotate(-3deg)}
+h1{font:400 40px/1.02 var(--d);margin:18px 0 6px;transform:rotate(-1.2deg)}
+.tag{font:400 21px/1.2 var(--d);color:var(--red);margin:0 0 8px;transform:rotate(-1.2deg)}
+.addr{margin:0}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+.btns a{text-decoration:none;font-weight:700;padding:15px 22px;border:2.5px solid var(--ink)}
+.btns a.f{background:var(--ink);color:var(--paper)}
+a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+/* twine with a tag for the open status */
+.strip{position:relative;margin:26px 0 0;border-top:3px double #8a6a45;text-align:center}
+.strip p{position:relative;top:-15px;display:inline-block;margin:0;background:var(--tick);border:1px solid #c9b9a3;padding:6px 12px;font:400 15px/1.3 var(--m);font-weight:700;max-width:92%}
+section{padding-top:30px}
+h2{font:400 27px/1.1 var(--d);margin:0 0 12px}
+.carn{display:grid;gap:20px}
+.carn img{width:100%;height:220px;object-fit:cover;border:8px solid var(--tick)}
+/* the counter ticket */
+.ticket{background:var(--tick);margin:16px 0 0;padding:6px 16px 14px;max-width:340px;font-family:var(--m);border-top:2px dashed #b9a48d;box-shadow:0 2px 0 rgba(0,0,0,.14)}
+.ticket p{margin:8px 0 6px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between}
+.cuts{list-style:none;margin:0;padding:0}
+.cuts li{position:relative;padding:8px 0 8px 30px;border-top:1px solid #d8cbb8;font-size:19px;font-weight:700}
+.cuts li::before{content:"";position:absolute;left:2px;top:12px;width:15px;height:15px;border:1.5px solid var(--ink)}
+.cuts li:first-child::after{content:"";position:absolute;left:5px;top:9px;width:16px;height:9px;border-left:3px solid var(--red);border-bottom:3px solid var(--red);transform:rotate(-48deg)}
+.soft{color:var(--soft);font-size:15px}
+.menu{list-style:none;margin:0;padding:0;columns:2;column-gap:24px}
+.menu li{padding:8px 0;border-bottom:2px solid rgba(28,21,18,.22);break-inside:avoid;font:400 21px/1.2 var(--d)}
+.party{margin-top:22px;background:var(--fold);border:2.5px solid var(--ink);padding:16px;transform:rotate(-.4deg)}
+.party h3{font:400 22px/1 var(--d);color:var(--red);margin:0 0 6px}
 .party p{margin:0}
-.q{margin:0;padding:18px 0;border-top:1px solid #333}
-.q:last-of-type{border-bottom:1px solid #333}
-.q p{margin:0 0 4px;font-size:18px;line-height:1.5}
-.q cite{font-style:normal;font-size:14px;color:#b9b2a4}
-.hrs{margin:0;padding:0;list-style:none;max-width:440px}
-.hrs li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #333}
-.hrs li.today{font-weight:700;color:#fff}
-.map{width:100%;height:300px;border:0;border-radius:4px;margin-top:16px}
-footer{margin-top:54px;background:#e4572e;color:#fff;padding:24px 0 28px;font-size:14px}
+.q{margin:0;padding:14px 0;border-bottom:2px solid rgba(28,21,18,.22)}
+.q p{margin:0 0 4px;font-size:18px}
+.q cite{font:700 13px/1 var(--m);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.hrs{list-style:none;margin:0;padding:6px 16px;background:var(--tick);font-family:var(--m);max-width:440px;box-shadow:0 2px 0 rgba(0,0,0,.14)}
+.hrs li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed #b9a48d}
+.hrs li:last-child{border:0}
+.hrs li.today{font-weight:700;color:var(--red)}
+.map{width:100%;height:290px;border:8px solid var(--tick);margin-top:18px}
+footer{margin-top:44px;background:var(--ink);color:#e2cfc3;padding:24px 0 28px;font-size:14px}
 footer p{margin:0 0 6px}
-footer .nm{font:700 18px/1.2 "Roboto Slab",Georgia,serif}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.4fr 1fr;background:#111;border-top:1px solid #444}
-.dock a{text-align:center;text-decoration:none;font-weight:700;padding:16px 6px}
-.dock a.f{background:#e4572e;color:#fff}
+footer .nm{font:400 22px/1.2 var(--d);color:var(--paper)}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:3fr 2fr;background:var(--paper);border-top:3px solid var(--ink)}
+.dock a{text-align:center;text-decoration:none;font-weight:700;padding:18px 6px}
+.dock a.f{background:var(--ink);color:var(--paper)}
 @media(min-width:760px){
   body{padding-bottom:0}.dock{display:none}
   .top nav{display:flex}
-  .hero img{width:230px}
-  h1{font-size:56px}
-  .carn{grid-template-columns:1fr 1fr;align-items:center}
-  .carn img{height:340px}
-  .menu{columns:3}
-  .visit{display:grid;grid-template-columns:440px 1fr;gap:34px}
+  .hero img{width:220px}
+  h1{font-size:64px}
+  .tag{font-size:28px}
+  .carn{grid-template-columns:1fr 1fr;align-items:center;gap:36px}
+  .carn img{height:340px;transform:rotate(1.2deg)}
+  .menu{columns:4}
+  .visit{display:grid;grid-template-columns:440px 1fr;gap:32px}
   .map{margin-top:0;height:100%;min-height:300px}
-  section{padding-top:64px}
+  section{padding-top:44px}
 }
 </style>
 </head>
@@ -97,16 +109,19 @@ footer .nm{font:700 18px/1.2 "Roboto Slab",Georgia,serif}
     <a href="https://www.google.com/maps/dir/?api=1&destination=Taqueria+Periban+2129+Chico+Ave+South+El+Monte+CA+91733">Directions</a>
   </div>
 </div>
-<div class="strip" lang="en"><b id="st">Open every day</b> <span id="stl">for breakfast and lunch</span></div>
+<div class="w"><div class="strip" lang="en"><p><b id="st">Open every day</b> <span id="stl">for breakfast and lunch</span></p></div></div>
 
 <main class="w" lang="en">
-  <section id="carnitas">
+  <section id="carnitas" style="padding-top:8px">
     <div class="carn">
       <div>
         <h2>Carnitas are what we're known for</h2>
         <p>Most people who walk in are here for the carnitas. Order them by the taco, in a burrito or on a plate, and tell us which cuts you want.</p>
-        <ul class="cuts" lang="es"><li>Carnitas</li><li>Surtido</li><li>Buche</li><li>Chicharrón</li></ul>
-        <p class="soft" style="margin:14px 0 0">We open at 7 on weekdays, so you can come in for breakfast. We serve beer and micheladas too.</p>
+        <div class="ticket">
+          <p><span>Cortes</span><span>Periban</span></p>
+          <ul class="cuts" lang="es"><li>Carnitas</li><li>Surtido</li><li>Buche</li><li>Chicharrón</li></ul>
+        </div>
+        <p class="soft" style="margin:16px 0 0">We open at 7 on weekdays, so you can come in for breakfast. We serve beer and micheladas too.</p>
       </div>
       <img src="https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?fm=jpg&q=72&w=1200&fit=crop" alt="Tacos with lime and cilantro on butcher paper" loading="lazy" />
     </div>
