@@ -3,91 +3,126 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>B & C Headliners Barber & Hair | La Verne</title>
-<meta name="description" content="B & C Headliners Barber & Hair, 2497 Foothill Blvd in La Verne. Barbers up front, stylists in the back. Fades, beard trims, kids cuts and styling. (909) 392-2370." />
+<title>B & C Headliners Barber Shop and Hair Salon | La Verne</title>
+<meta name="description" content="B & C Headliners Barber Shop and Hair Salon, 2497 Foothill Blvd in La Verne. Men, women and children. Fades, tapers, braids, color and more. Walk-ins welcome, open 7 days. (909) 392-2370." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/b-and-c-headliners-la-verne/" />
-<meta property="og:title" content="B & C Headliners Barber & Hair" />
-<meta property="og:description" content="Barbers up front, stylists in the back. La Verne." />
+<meta property="og:title" content="B & C Headliners Barber Shop and Hair Salon" />
+<meta property="og:description" content="Men, women and children. Walk-ins welcome. La Verne." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Karla:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Karla:wght@400;500;700&family=Pirata+One&display=swap" />
 <style>
-/* The shop is two rooms: barbers up front, stylists in the back. The page is split the same way, with a pole stripe between. */
+/* Built from the storefront: the white blackletter "headliners" sign on a dark fascia, the cream window panel with its
+   orange band, and the barber pole decal. The shop is two rooms, barbers up front and stylists in the back, so the page is too. */
 :root{
-  --cream:#f6f1e7; --paper:#fffdf8; --navy:#14213d; --red:#c1272d; --soft:#5b6072; --rule:#d9d2c2;
-  --disp:"Big Shoulders Display","Arial Narrow",Impact,sans-serif; --body:"Karla",Verdana,sans-serif;
+  --night:#17120f; --night2:#241c17; --cream:#f4ecdc; --paper:#fffaf0; --orange:#d9772b; --soft:#6a5f55; --rule:#dccfb8; --red:#c1272d; --blue:#1d3f8f;
+  --sign:"Pirata One","Old English Text MT",Georgia,serif; --disp:"Big Shoulders Display","Arial Narrow",Impact,sans-serif; --body:"Karla",Verdana,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--navy);font:400 18px/1.6 var(--body);padding-bottom:70px}
+body{margin:0;background:var(--cream);color:var(--night);font:400 18px/1.6 var(--body);padding-bottom:70px}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .w{max-width:1040px;margin-inline:auto;padding-inline:18px}
-.pole{height:16px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,#fff 14px 28px,var(--navy) 28px 42px,#fff 42px 56px)}
-.eye{font:700 13px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:0 0 10px}
+.pole{height:14px;background:repeating-linear-gradient(-45deg,var(--red) 0 12px,#fff 12px 24px,var(--blue) 24px 36px,#fff 36px 48px)}
+.eye{font:700 13px/1.4 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin:0 0 10px}
 
-.top{background:var(--navy);color:#fff}
-.top .w{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
-.top b{font:900 24px/1 var(--disp);letter-spacing:.03em;text-transform:uppercase}
-.top b span{display:block;font:500 12px/1.4 var(--body);letter-spacing:.14em;color:#c9cfdd}
-.top a{display:none;align-items:center;min-height:46px;padding:0 16px;background:#fff;color:var(--navy);font:700 16px/1 var(--body);text-decoration:none;white-space:nowrap}
+.top{background:var(--night);color:#fff}
+.top .w{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.mark{text-decoration:none;line-height:1}
+.mark b{display:block;font:400 34px/1 var(--sign);letter-spacing:.02em;text-shadow:0 0 14px rgba(255,255,255,.35)}
+.mark span{display:block;margin-top:4px;font:500 11px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#d8cdbd}
+.top .call{display:none;align-items:center;min-height:46px;padding:0 16px;background:var(--orange);color:#fff;font:700 16px/1 var(--body);text-decoration:none;white-space:nowrap}
 
-.hero .w{padding-block:38px 42px}
-h1{font:900 clamp(48px,14.5vw,112px)/.9 var(--disp);text-transform:uppercase;letter-spacing:.005em;margin:0 0 18px}
-h1 span{display:block;color:var(--red)}
-.lead{font-size:20px;max-width:30em;margin:0 0 22px}
+.hero{position:relative;isolation:isolate;background:var(--night);color:#fff}
+.hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(23,18,15,.78),rgba(23,18,15,.9))}
+.hero .w{padding-block:40px 44px}
+h1{font:900 clamp(46px,14vw,108px)/.9 var(--disp);text-transform:uppercase;margin:0 0 18px}
+h1 span{display:block;color:var(--orange)}
+.lead{font-size:20px;max-width:30em;margin:0 0 22px;color:#efe6d6}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 22px;background:var(--navy);color:#fff;font:700 17px/1 var(--body);text-decoration:none;border:2px solid var(--navy)}
-.btn.o{background:transparent;color:var(--navy)}
-.stars{margin:22px 0 0;font:700 16px/1.4 var(--body)}
-.stars span{color:var(--red);letter-spacing:.1em}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 22px;background:var(--orange);color:#fff;font:700 17px/1 var(--body);text-decoration:none;border:2px solid var(--orange)}
+.btn.o{background:transparent;color:#fff;border-color:#fff}
+.btn.d{background:var(--night);border-color:var(--night)}
+.btn.do{background:transparent;color:var(--night);border-color:var(--night)}
+
+/* the window panel */
+.panel{background:var(--paper);border-bottom:1px solid var(--rule)}
+.panel .w{display:grid;gap:0;padding-block:0}
+.panel p{margin:0;padding:14px 0;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.panel p:last-child{border-bottom:0}
+.panel b{font:900 24px/1.1 var(--disp);text-transform:uppercase}
+.panel span{color:var(--soft);text-align:right}
+.panel .on{color:#1c7a45;font-weight:700}
+.panel .off{color:var(--red);font-weight:700}
 
 section{padding-block:48px}
 h2{font:900 clamp(36px,10vw,64px)/.95 var(--disp);text-transform:uppercase;margin:0 0 10px}
 .sub{margin:0 0 24px;max-width:32em;color:var(--soft)}
 
 /* the two rooms */
-.rooms{display:grid;border:3px solid var(--navy);background:var(--paper)}
+.rooms{display:grid;border:3px solid var(--night);background:var(--paper)}
 .room{padding:24px 20px 26px}
-.room + .room{border-top:3px solid var(--navy);background:var(--navy);color:#fff}
+.room + .room{border-top:3px solid var(--night);background:var(--night);color:#fff}
 .room .eye{margin-bottom:6px}
-.room + .room .eye{color:#ffb4b4}
 .room h3{font:900 clamp(34px,9vw,52px)/.95 var(--disp);text-transform:uppercase;margin:0 0 6px}
 .room p{margin:0 0 14px;max-width:26em}
-.room ul{list-style:none;margin:0;padding:0;border-top:2px solid currentColor}
-.room li{padding:11px 0;border-bottom:1px solid var(--rule);font-weight:700;font-size:19px}
-.room + .room li{border-bottom-color:#3b486b}
+.room ul{list-style:none;margin:0;padding:0;border-top:2px solid currentColor;columns:2;column-gap:20px}
+.room li{break-inside:avoid;padding:10px 0;border-bottom:1px solid var(--rule);font-weight:700}
+.room + .room li{border-bottom-color:#4a3d33}
+
+/* work */
+.work{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.work figure{margin:0}
+.work img{width:100%;aspect-ratio:1;object-fit:cover;border:3px solid var(--night)}
+.work figcaption{margin-top:6px;font-size:15px;color:var(--soft)}
+.signrow{margin-top:26px;background:var(--night);padding:18px;display:grid;gap:14px;align-items:center;color:#fff}
+.signrow img{width:100%;max-width:520px}
+.signrow p{margin:0;color:#efe6d6;max-width:26em}
 
 /* reviews */
 .said{background:var(--paper);border-block:1px solid var(--rule)}
 .quotes{display:grid;gap:26px}
-blockquote{margin:0;padding-top:16px;border-top:3px solid var(--red)}
+blockquote{margin:0;padding-top:16px;border-top:3px solid var(--orange)}
 blockquote p{margin:0 0 8px;font-size:19px}
 blockquote cite{display:block;font:500 14px/1.4 var(--body);font-style:normal;color:var(--soft);letter-spacing:.04em}
 
 /* visit */
 .visit{display:grid;gap:22px}
-.card{background:var(--paper);border:3px solid var(--navy);padding:22px 20px}
-address{font-style:normal;font:900 30px/1.05 var(--disp);text-transform:uppercase;margin-bottom:14px}
+.card{background:var(--paper);border:3px solid var(--night);padding:22px 20px}
+address{font-style:normal;font:900 30px/1.05 var(--disp);text-transform:uppercase;margin-bottom:6px}
+.center{margin:0 0 14px;color:var(--soft)}
+table{width:100%;border-collapse:collapse;margin-bottom:14px}
+td{padding:9px 0;border-top:1px solid var(--rule)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.today td{font-weight:700}
+tr.today td:first-child::after{content:"today";margin-left:8px;font:700 11px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;background:var(--orange);color:#fff;padding:4px 6px;vertical-align:2px}
 .facts{list-style:none;margin:0 0 18px;padding:0}
 .facts li{padding:10px 0;border-top:1px solid var(--rule)}
-.facts b{display:block;font:700 13px/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
-iframe{width:100%;height:300px;border:3px solid var(--navy);display:block}
+.facts b{display:block;font:700 13px/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
+iframe{width:100%;height:300px;border:3px solid var(--night);display:block}
 
-footer{background:var(--navy);color:#d6dbe8;font-size:14px;padding:22px 0 26px}
-footer p{margin:0 0 8px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.2fr 1fr;border-top:3px solid var(--navy)}
-.dock a{display:grid;place-items:center;min-height:56px;font:700 17px/1 var(--body);text-decoration:none;background:var(--red);color:#fff}
-.dock a + a{background:#fff;color:var(--navy)}
+footer.site{background:var(--night);color:#d8cdbd;font-size:14px;padding:22px 0 26px}
+footer.site p{margin:0 0 8px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.2fr 1fr;border-top:3px solid var(--night)}
+.dock a{display:grid;place-items:center;min-height:56px;font:700 17px/1 var(--body);text-decoration:none;background:var(--orange);color:#fff}
+.dock a + a{background:#fff;color:var(--night)}
 
-@media (min-width:480px){.top a{display:inline-flex}}
+@media (min-width:480px){.top .call{display:inline-flex}.mark b{font-size:40px}}
 @media (min-width:800px){
   body{padding-bottom:0}
   .dock{display:none}
-  .hero .w{padding-block:70px 74px}
+  .hero .w{padding-block:84px 88px}
+  .panel .w{grid-template-columns:repeat(3,1fr);gap:0 34px}
+  .panel p{border-bottom:0;display:block;padding:18px 0}
+  .panel span{display:block;text-align:left}
   .rooms{grid-template-columns:1fr 1fr}
   .room{padding:38px 34px 40px}
-  .room + .room{border-top:0;border-left:3px solid var(--navy)}
-  .quotes{grid-template-columns:repeat(3,1fr);gap:34px}
+  .room + .room{border-top:0;border-left:3px solid var(--night)}
+  .work{grid-template-columns:1fr 1fr;max-width:720px}
+  .signrow{grid-template-columns:auto 1fr;gap:30px;padding:26px}
+  .quotes{grid-template-columns:1fr 1fr;gap:34px 44px}
   .visit{grid-template-columns:.9fr 1.1fr}
   iframe{height:100%;min-height:360px}
 }
@@ -103,23 +138,31 @@ footer p{margin:0 0 8px}
 
 <header class="top">
   <div class="w">
-    <b>B &amp; C Headliners<span>BARBER &amp; HAIR · LA VERNE</span></b>
-    <a href="tel:+19093922370">(909) 392-2370</a>
+    <a class="mark" href="#top" aria-label="B and C Headliners"><b>headliners</b><span>B&amp;C · Barber Shop and Hair Salon</span></a>
+    <a class="call" href="tel:+19093922370">(909) 392-2370</a>
   </div>
 </header>
 <div class="pole" aria-hidden="true"></div>
 
-<main>
+<main id="top">
   <div class="hero">
+    <img src="storefront.jpg" alt="" width="894" height="504" />
     <div class="w">
-      <p class="eye">2497 Foothill Blvd · La Verne</p>
+      <p class="eye">Men · Women · Children</p>
       <h1>Barbers up front. <span>Stylists in the back.</span></h1>
-      <p class="lead">One shop for the whole family. Fades and beard trims in the barber chairs, hairstyles in the salon, and kids are welcome in both.</p>
+      <p class="lead">B&amp;C Headliners is a barber shop and a hair salon under one sign on Foothill in La Verne. Walk in, or call ahead for your barber or stylist.</p>
       <div class="btns">
         <a class="btn" href="tel:+19093922370">Call (909) 392-2370</a>
         <a class="btn o" href="https://www.google.com/maps/dir/?api=1&destination=2497+Foothill+Blvd+A+La+Verne+CA+91750">Get directions</a>
       </div>
-      <p class="stars"><span>★★★★★</span> 4.8 from 74 Google reviews</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="w">
+      <p><b>Open 7 days</b><span id="status">Mon 9 to 5 · Tue to Sat 9 to 7 · Sun 9 to 3</span></p>
+      <p><b>Walk-ins welcome</b><span>Appointments too</span></p>
+      <p><b>4.8 on Google</b><span>74 reviews</span></p>
     </div>
   </div>
 
@@ -127,26 +170,47 @@ footer p{margin:0 0 8px}
     <div class="rooms">
       <div class="room">
         <p class="eye">Up front</p>
-        <h3>The barber chairs</h3>
-        <p>Clean fades, sharp line ups and beard work, for men and kids.</p>
+        <h3>The barber shop</h3>
+        <p>All types of barber cuts, for men and kids.</p>
         <ul>
           <li>Fades</li>
+          <li>Tapers</li>
           <li>Line ups</li>
           <li>Beard trims</li>
+          <li>Shaves</li>
           <li>Kids cuts</li>
+          <li>Hair designs</li>
         </ul>
       </div>
       <div class="room">
         <p class="eye">In the back</p>
-        <h3>The salon</h3>
-        <p>Cuts and styling for women, with stylists who take their time.</p>
+        <h3>The hair salon</h3>
+        <p>Hair styling for women, done by stylists who take their time.</p>
         <ul>
-          <li>Haircuts</li>
-          <li>Hairstyles</li>
-          <li>Reasonable prices</li>
-          <li>Call to ask for your stylist</li>
+          <li>Braids</li>
+          <li>Press and curl</li>
+          <li>Flat iron</li>
+          <li>Hair extensions</li>
+          <li>Color</li>
+          <li>Short cuts</li>
+          <li>Perms</li>
+          <li>Relaxers</li>
+          <li>Up dos</li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <section class="w" style="padding-top:0">
+    <p class="eye">From the chair</p>
+    <h2>Our work</h2>
+    <div class="work">
+      <figure><img src="cut-1.jpg" alt="Back view of a fresh fade with the top combed over" width="504" height="504" loading="lazy" /><figcaption>A clean fade.</figcaption></figure>
+      <figure><img src="cut-2.jpg" alt="Back view of a faded cut with a line design" width="504" height="504" loading="lazy" /><figcaption>A fade with a design.</figcaption></figure>
+    </div>
+    <div class="signrow">
+      <img src="sign.jpg" alt="The lit headliners sign above the shop at night" width="720" height="195" loading="lazy" />
+      <p>Look for the white headliners sign at La Verne Towne Center. We're in Suite A.</p>
     </div>
   </section>
 
@@ -155,6 +219,7 @@ footer p{margin:0 0 8px}
       <p class="eye">From our Google reviews</p>
       <h2>What people say</h2>
       <div class="quotes">
+        <blockquote><p>"Great place to get a cut. Especially for curly heads."</p><cite>Google review, 5 stars</cite></blockquote>
         <blockquote><p>"The fade was seamless, and the beard trim was expertly done. His attention to detail and skill in creating a clean, sharp line up truly set him apart."</p><cite>Google review, 5 stars</cite></blockquote>
         <blockquote><p>"Sade does a fabulous job at surprisingly reasonable prices. The other stylists do really great work also. Chris the owner is super cool."</p><cite>Google review, 5 stars</cite></blockquote>
         <blockquote><p>"Everyone is extremely friendly and makes sure you are satisfied. I have been there 3 times and every time I came out with an amazing look."</p><cite>Google review, 5 stars</cite></blockquote>
@@ -168,14 +233,23 @@ footer p{margin:0 0 8px}
     <div class="visit">
       <div class="card">
         <address>2497 Foothill Blvd, Suite A<br />La Verne, CA 91750</address>
+        <p class="center">La Verne Towne Center. Park in the lot.</p>
+        <table id="hours">
+          <tr data-d="1"><td>Monday</td><td>9am to 5pm</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>9am to 7pm</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>9am to 7pm</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>9am to 7pm</td></tr>
+          <tr data-d="5"><td>Friday</td><td>9am to 7pm</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>9am to 7pm</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>9am to 3pm</td></tr>
+        </table>
         <ul class="facts">
-          <li><b>Hours</b>Call the shop for today's hours.</li>
-          <li><b>Payment</b>Cards accepted.</li>
-          <li><b>Access</b>Wheelchair accessible parking, entrance and restroom.</li>
+          <li><b>Payment</b>Cash and cards.</li>
+          <li><b>Access</b>Wheelchair accessible entrance.</li>
         </ul>
         <div class="btns">
-          <a class="btn" href="tel:+19093922370">Call the shop</a>
-          <a class="btn o" href="https://www.google.com/maps/dir/?api=1&destination=2497+Foothill+Blvd+A+La+Verne+CA+91750">Directions</a>
+          <a class="btn d" href="tel:+19093922370">Call the shop</a>
+          <a class="btn do" href="https://www.google.com/maps/dir/?api=1&destination=2497+Foothill+Blvd+A+La+Verne+CA+91750">Directions</a>
         </div>
       </div>
       <iframe title="Map to B and C Headliners" loading="lazy" src="https://www.google.com/maps?q=2497+Foothill+Blvd+A,+La+Verne,+CA+91750&output=embed"></iframe>
@@ -184,10 +258,10 @@ footer p{margin:0 0 8px}
 </main>
 
 <div class="pole" aria-hidden="true"></div>
-<footer>
+<footer class="site">
   <div class="w">
-    <p>© 2026 B &amp; C Headliners Barber &amp; Hair · 2497 Foothill Blvd, Suite A, La Verne, CA 91750 · <a href="tel:+19093922370">(909) 392-2370</a></p>
-    <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Address, rating and reviews are from the shop's Google listing.</p>
+    <p>© 2026 B &amp; C Headliners Barber Shop and Hair Salon · 2497 Foothill Blvd, Suite A, La Verne, CA 91750 · <a href="tel:+19093922370">(909) 392-2370</a></p>
+    <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Photos, hours, services and reviews are from the shop's Google and Yelp listings.</p>
   </div>
 </footer>
 
@@ -195,5 +269,20 @@ footer p{margin:0 0 8px}
   <a href="tel:+19093922370">Call the shop</a>
   <a href="https://www.google.com/maps/dir/?api=1&destination=2497+Foothill+Blvd+A+La+Verne+CA+91750">Directions</a>
 </div>
+
+<script>
+// Open or closed from the posted hours (Pacific time), and today's row in the table.
+(function () {
+  var H = { 0: [9, 15], 1: [9, 17], 2: [9, 19], 3: [9, 19], 4: [9, 19], 5: [9, 19], 6: [9, 19] };
+  try {
+    var now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+    var d = now.getDay(), t = now.getHours() + now.getMinutes() / 60, s = document.getElementById("status");
+    var row = document.querySelector('#hours tr[data-d="' + d + '"]');
+    if (row) row.className = "today";
+    if (t >= H[d][0] && t < H[d][1]) { s.textContent = "Open now till " + (H[d][1] - 12) + "pm"; s.className = "on"; }
+    else { s.textContent = "Closed now · opens 9am"; s.className = "off"; }
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
