@@ -10,104 +10,159 @@
 <meta property="og:title" content="JL Processing Solutions" />
 <meta property="og:description" content="Helping Inland Empire businesses reduce processing costs" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&family=Spline+Sans+Mono:wght@400;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" />
 <style>
-/* The whole pitch is "let me read your statement", so the page is a statement: ledger paper, a highlighter over the
-   fee line, and a receipt that prints your own numbers. Navy and gold come from the logo. */
+/* Plain and exact, like a good statement should be. White page, navy type, the logo's blue for actions and its gold only to mark the fee. */
 :root{
-  --paper:#fbfaf6; --desk:#e9e6de; --ink:#0f1d3a; --soft:#56607a; --rule:#c9cfdd; --gold:#f4c430; --navy:#0b2a6b;
-  --f:"Familjen Grotesk","Trebuchet MS",sans-serif; --mono:"Spline Sans Mono","Courier New",monospace;
+  --bg:#fff; --wash:#f4f6fb; --ink:#0b1730; --soft:#55607a; --rule:#dfe4ee; --blue:#1746c7; --blue2:#113aa8; --navy:#0a1c45; --gold:#f0b90b;
+  --f:"Schibsted Grotesk","Segoe UI",Verdana,sans-serif; --mono:"DM Mono","Courier New",monospace;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--desk);color:var(--ink);font:400 18px/1.6 var(--f);padding-bottom:70px}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f);padding-bottom:64px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
-.w{max-width:1000px;margin-inline:auto;padding-inline:18px}
-.m{font:600 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin:0}
-mark{background:linear-gradient(transparent 12%,var(--gold) 12% 88%,transparent 88%);color:inherit;padding:0 .12em;margin:0 -.06em}
+.w{max-width:1120px;margin-inline:auto;padding-inline:18px}
+.eye{font:500 13px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--blue);margin:0 0 12px}
+h1{font:800 clamp(34px,9.4vw,60px)/1.04 var(--f);letter-spacing:-.025em;margin:0 0 16px}
+h2{font:800 clamp(26px,6.6vw,40px)/1.1 var(--f);letter-spacing:-.02em;margin:0 0 12px}
+.sub{margin:0 0 26px;max-width:36em;color:var(--soft)}
+section{padding-block:52px}
+.wash{background:var(--wash);border-block:1px solid var(--rule)}
 
-.top{background:var(--ink);color:#fff}
-.top .w{display:flex;align-items:center;gap:12px;padding-block:10px}
-.top img{width:56px;height:56px;border-radius:50%}
-.top b{font:700 18px/1.15 var(--f)}
-.top b span{display:block;font:400 12px/1.4 var(--mono);color:#b9c2d8}
-.lang{margin-left:auto;display:flex;border:1px solid #fff}
-.lang button{min-width:46px;min-height:44px;border:0;background:transparent;color:#fff;font:600 14px/1 var(--mono);cursor:pointer}
-.lang button[aria-pressed=true]{background:#fff;color:var(--ink)}
-
-.sheet{background:var(--paper);margin-block:18px;border:1px solid var(--rule);box-shadow:0 1px 0 #cfcabd,0 10px 24px -18px rgba(15,29,58,.5)}
-.sheet .in{padding:26px 20px 30px}
-h1{font:700 clamp(36px,10.6vw,72px)/1 var(--f);letter-spacing:-.02em;margin:12px 0 16px}
-.lead{font-size:20px;max-width:28em;margin:0 0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:8px;background:var(--blue);color:#fff;font:700 16px/1.2 var(--f);text-decoration:none;border:1px solid var(--blue);text-align:center}
+.btn:hover{background:var(--blue2)}
+.btn.o{background:#fff;color:var(--ink);border-color:#b9c2d6}
+.btn.o:hover{border-color:var(--ink);background:#fff}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 20px;background:var(--navy);color:#fff;font:700 17px/1 var(--f);text-decoration:none;border:2px solid var(--navy);cursor:pointer}
-.btn.o{background:transparent;color:var(--navy)}
-h2{font:700 clamp(27px,7.4vw,44px)/1.05 var(--f);letter-spacing:-.015em;margin:8px 0 12px}
-.sub{margin:0 0 22px;max-width:32em;color:var(--soft)}
 
-/* statement lines */
-.stmt{width:100%;border-collapse:collapse;font:400 15px/1.4 var(--mono);margin-top:26px}
-.stmt td{padding:11px 0;border-bottom:1px solid var(--rule)}
-.stmt td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:10px}
-.stmt tr.hl td{border-bottom:2px solid var(--ink);font-size:17px}
-.stmt caption{caption-side:top;text-align:left;font:600 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--soft);padding-bottom:6px;border-bottom:2px solid var(--ink)}
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.nav .w{display:flex;align-items:center;gap:10px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand img{width:42px;height:42px;border-radius:50%;flex:none}
+.brand b{font:800 16px/1.15 var(--f);letter-spacing:-.01em}
+.links{display:none;gap:26px;margin-left:34px;font:500 15px/1 var(--f)}
+.links a{text-decoration:none;color:var(--soft)}
+.links a:hover{color:var(--ink)}
+.lang{margin-left:auto;display:flex;border:1px solid #b9c2d6;border-radius:8px;overflow:hidden;flex:none}
+.lang button{min-width:44px;min-height:44px;border:0;background:#fff;color:var(--soft);font:500 13px/1 var(--mono);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--navy);color:#fff}
+.nav .btn{display:none;min-height:44px;padding:0 16px;font-size:15px}
+
+/* hero */
+.hero{padding-block:36px 48px}
+.hero .w{display:grid;gap:34px}
+.lead{font-size:19px;color:var(--soft);max-width:31em;margin:0 0 24px}
+.facts{list-style:none;margin:26px 0 0;padding:18px 0 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font:500 15px/1.35 var(--f)}
+.facts li{padding-left:22px;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:.28em;width:12px;height:7px;border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(-45deg)}
+
+/* example panel */
+.panel{border:1px solid var(--rule);border-radius:14px;background:#fff;box-shadow:0 1px 2px rgba(11,23,48,.05),0 18px 40px -24px rgba(11,23,48,.35);overflow:hidden}
+.panel header{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--rule);font:500 13px/1.3 var(--mono);color:var(--soft);text-transform:uppercase;letter-spacing:.04em}
+.panel .body{padding:20px 18px 22px}
+.kv{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;font-size:16px}
+.kv span:last-child,.kv b{font:500 16px/1 var(--mono);white-space:nowrap}
+.kv.fee{margin-top:6px;padding:14px 12px;background:#fff8dc;border:1px solid #f1dc8f;border-radius:8px;font-weight:700}
+.kv.fee b{font-size:22px}
+.bar{height:10px;border-radius:5px;background:#e6eaf3;margin:14px 0 4px;overflow:hidden}
+.bar i{display:block;height:100%;width:3%;min-width:10px;background:var(--gold)}
+.cap{font:400 13px/1.4 var(--mono);color:var(--soft);margin:0 0 14px}
+.split{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule);margin-top:6px}
+.split div{padding:14px 0 0}
+.split div + div{padding-left:18px;border-left:1px solid var(--rule)}
+.split small{display:block;font:500 12px/1.3 var(--mono);color:var(--soft);text-transform:uppercase;letter-spacing:.04em}
+.split b{font:800 26px/1.2 var(--f);letter-spacing:-.02em}
+
+/* statement reader */
+.reader{display:grid;gap:22px}
+.stmt{border:1px solid var(--rule);border-radius:14px;background:#fff;overflow:hidden}
+.stmt .hd{padding:14px 18px;border-bottom:1px solid var(--rule);font:500 13px/1.4 var(--mono);color:var(--soft)}
+.stmt .hd b{display:block;color:var(--ink);font:700 16px/1.3 var(--f)}
+.line{display:grid;grid-template-columns:1fr auto;gap:10px;width:100%;padding:14px 18px;border:0;border-bottom:1px solid var(--rule);background:#fff;color:var(--ink);font:400 16px/1.3 var(--f);text-align:left;cursor:pointer;min-height:52px;align-items:center}
+.line span:last-child{font:500 15px/1 var(--mono)}
+.line[aria-pressed=true]{background:#eef3ff;box-shadow:inset 3px 0 0 var(--blue);font-weight:700}
+.line:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.tot{display:flex;justify-content:space-between;gap:10px;padding:16px 18px;font-weight:800}
+.tot span:last-child{font:500 17px/1 var(--mono)}
+.stmt .ft{padding:0 18px 16px;margin:0;font:400 13px/1.45 var(--mono);color:var(--soft)}
+.note{padding:4px 0}
+.note h3{margin:0 0 8px;font:800 22px/1.2 var(--f);letter-spacing:-.01em}
+.note p{margin:0 0 10px;max-width:30em}
+.note .who{font:500 13px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.04em;color:var(--blue);margin-bottom:8px}
+.note > div{display:none}
+.note > div.on{display:block}
 
 /* calculator */
 .calc{display:grid;gap:26px}
-.field{margin-bottom:22px}
-.field label{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-weight:700;margin-bottom:6px}
-.field output{font:600 20px/1 var(--mono)}
-input[type=range]{width:100%;height:44px;accent-color:var(--navy);margin:0}
-.receipt{background:#fff;font:400 15px/1.5 var(--mono);padding:22px 18px 30px;position:relative;border:1px solid var(--rule);max-width:400px;width:100%;justify-self:center;
-  -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50% 100%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50% 100%/14px 100%}
-.receipt h3{margin:0 0 2px;text-align:center;font:700 19px/1.2 var(--f)}
-.receipt .c{text-align:center;color:var(--soft);font-size:12px;margin:0 0 12px}
-.receipt dl{margin:0;border-top:1px dashed var(--ink)}
-.receipt dl div{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed var(--rule)}
-.receipt dt{color:var(--soft)}
-.receipt dd{margin:0;font-weight:600}
-.receipt .big{border-bottom:0;padding-top:14px;font-size:18px}
-.receipt .big dt{color:var(--ink);font-weight:600}
-.receipt .ft{margin:12px 0 0;font:400 14px/1.5 var(--f);color:var(--soft)}
+.field{margin-bottom:24px}
+.field label{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-weight:700;margin-bottom:8px}
+.field output{font:500 20px/1 var(--mono)}
+input[type=range]{width:100%;height:44px;accent-color:var(--blue);margin:0}
+.small{font-size:15px;color:var(--soft);margin:0;max-width:34em}
+.res{background:var(--navy);color:#fff;border-radius:14px;padding:24px 20px}
+.res small{display:block;font:500 12px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:#aebbd8}
+.res .big{font:800 clamp(44px,13vw,64px)/1.05 var(--f);letter-spacing:-.03em;margin:4px 0 16px}
+.res dl{margin:0;border-top:1px solid rgba(255,255,255,.2)}
+.res dl div{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.res dt{color:#cdd6ea}
+.res dd{margin:0;font:500 16px/1.5 var(--mono)}
+.res p{margin:16px 0 0;font-size:15px;color:#cdd6ea}
 
-/* meeting */
+/* steps */
+.meet{display:grid;gap:28px}
 .steps{list-style:none;margin:0;padding:0;counter-reset:s}
-.steps li{counter-increment:s;display:grid;grid-template-columns:52px 1fr;gap:4px 10px;padding:16px 0;border-bottom:1px solid var(--rule)}
-.steps li::before{content:"0" counter(s);font:600 22px/1.3 var(--mono);color:var(--navy)}
-.steps b{display:block;font:700 20px/1.25 var(--f)}
+.steps li{counter-increment:s;position:relative;padding:0 0 26px 54px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;border:1px solid #b9c2d6;background:#fff;display:grid;place-items:center;font:500 15px/1 var(--mono);color:var(--blue)}
+.steps li::after{content:"";position:absolute;left:18px;top:40px;bottom:4px;width:1px;background:#b9c2d6}
+.steps li:last-child{padding-bottom:0}
+.steps li:last-child::after{display:none}
+.steps b{display:block;font:700 19px/1.3 var(--f);padding-top:4px}
 .steps span{color:var(--soft)}
+.term{margin:0;max-width:340px}
+.term img{width:100%;border-radius:14px;border:1px solid var(--rule)}
+.term figcaption{font:400 13px/1.4 var(--mono);color:var(--soft);margin-top:8px}
 
-.meet{display:grid;gap:24px}
-.term{margin:0;max-width:306px}
-.term img{width:100%;border:1px solid var(--rule)}
-.term figcaption{font:400 13px/1.4 var(--mono);color:var(--soft);margin-top:6px}
-.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
-.dark .m{color:#b9c2d8}
-.dark p{max-width:30em}
-.dark mark{color:var(--ink)}
-.dark .btn{background:var(--gold);border-color:var(--gold);color:var(--ink)}
-.dark .btn.o{background:transparent;color:#fff;border-color:#fff}
-.tags{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 22px;padding:0;list-style:none;font:600 14px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase}
-.tags li::before{content:"+ ";color:var(--gold)}
+/* faq */
+.faq{border-top:1px solid var(--rule);max-width:780px}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:18px 0;min-height:56px;font:700 18px/1.3 var(--f);cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 26px/1 var(--mono);color:var(--blue);flex:none}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:0 0 20px;max-width:36em;color:var(--soft)}
 
-footer{font-size:14px;color:var(--soft);padding:8px 0 28px}
+.end{background:var(--navy);color:#fff}
+.end p{color:#cdd6ea;max-width:32em;margin:0 0 24px}
+.end .btn{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.end .btn.o{background:transparent;color:#fff;border-color:#7f8db0}
+
+footer{font-size:14px;color:var(--soft);padding:26px 0 30px}
 footer p{margin:0 0 8px}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.3fr 1fr;border-top:2px solid var(--ink)}
-.dock a{display:grid;place-items:center;min-height:56px;font:700 16px/1 var(--f);text-decoration:none;background:var(--gold);color:var(--ink)}
-.dock a + a{background:#fff}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.4fr 1fr;border-top:1px solid var(--rule);background:#fff}
+.dock a{display:grid;place-items:center;min-height:56px;font:700 15px/1.2 var(--f);text-decoration:none;background:var(--blue);color:#fff;text-align:center;padding:0 8px}
+.dock a + a{background:#fff;color:var(--ink)}
+
 [data-es]{display:none}
 html[lang=es] [data-es]{display:revert}
 html[lang=es] [data-en]{display:none}
 
-@media (min-width:800px){
+@media (min-width:520px){.nav .btn{display:inline-flex}.brand b{font-size:17px}}
+@media (min-width:860px){
   body{padding-bottom:0}
   .dock{display:none}
-  .sheet .in{padding:46px 48px 50px}
-  .hero .in{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
-  .stmt{margin-top:0}
-  .calc{grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
-  .meet{grid-template-columns:1fr 306px;gap:48px;align-items:start}
+  .links{display:flex}
+  section{padding-block:84px}
+  .hero{padding-block:72px 84px}
+  .hero .w{grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .facts{max-width:460px}
+  .reader{grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .note{position:sticky;top:96px;padding-top:20px}
+  .calc{grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .meet{grid-template-columns:1fr 340px;gap:60px;align-items:start}
+  .panel .body{padding:24px 24px 26px}
+  .panel header{padding:14px 24px}
 }
 </style>
 </head>
@@ -119,45 +174,110 @@ html[lang=es] [data-en]{display:none}
 </div>
 <!-- PREVIEW BANNER END -->
 
-<header class="top">
+<div class="nav">
   <div class="w">
-    <img src="logo.png" alt="JL Processing Solutions logo" width="56" height="56" />
-    <b>JL Processing Solutions<span>SIMPLE · SECURE · LOCAL</span></b>
+    <a class="brand" href="#top"><img src="logo.png" alt="" width="42" height="42" /><b>JL Processing Solutions</b></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#statement"><span data-en>Your statement</span><span data-es>Tu estado de cuenta</span></a>
+      <a href="#calc"><span data-en>Calculator</span><span data-es>Calculadora</span></a>
+      <a href="#how"><span data-en>How it works</span><span data-es>Cómo funciona</span></a>
+      <a href="#faq"><span data-en>Questions</span><span data-es>Preguntas</span></a>
+    </nav>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" id="en" aria-pressed="true">EN</button>
       <button type="button" id="es" aria-pressed="false">ES</button>
     </div>
+    <a class="btn" href="https://ig.me/m/jlprocessingsolutions"><span data-en>Free review</span><span data-es>Revisión gratis</span></a>
   </div>
-</header>
+</div>
 
-<main class="w">
-  <section class="sheet hero">
-    <div class="in">
+<main id="top">
+  <div class="hero">
+    <div class="w">
       <div>
-        <p class="m"><span data-en>Your local agent · Inland Empire</span><span data-es>Tu agente local · Inland Empire</span></p>
-        <h1 data-en>Do you know what your <mark>card fees</mark> cost you?</h1>
-        <h1 data-es>¿Sabes cuánto pagas en <mark>comisiones</mark> de tarjeta?</h1>
-        <p class="lead" data-en>Most owners don't, because the statement is hard to read. I'll read yours for free and show you where the money is going.</p>
-        <p class="lead" data-es>La mayoría no lo sabe, porque el estado de cuenta es difícil de leer. Yo reviso el tuyo gratis y te enseño a dónde se va el dinero.</p>
+        <p class="eye"><span data-en>Merchant services · Inland Empire</span><span data-es>Servicios para comerciantes · Inland Empire</span></p>
+        <h1 data-en>Lower card processing costs, from a local agent who has your back.</h1>
+        <h1 data-es>Paga menos por aceptar tarjetas, con un agente local que te respalda.</h1>
+        <p class="lead" data-en>I read your processing statement for free, show you what you're really paying, and set up your terminal myself.</p>
+        <p class="lead" data-es>Reviso tu estado de cuenta gratis, te enseño lo que de verdad pagas, y yo mismo instalo tu terminal.</p>
         <div class="btns">
-          <a class="btn" href="https://ig.me/m/jlprocessingsolutions"><span data-en>DM "SAVE" to set up a meeting</span><span data-es>Manda "SAVE" por DM</span></a>
+          <a class="btn" href="https://ig.me/m/jlprocessingsolutions"><span data-en>Get a free statement review</span><span data-es>Pide tu revisión gratis</span></a>
           <a class="btn o" href="#calc"><span data-en>Run your numbers</span><span data-es>Haz tu cuenta</span></a>
         </div>
+        <ul class="facts">
+          <li><span data-en>Free statement review</span><span data-es>Revisión gratis</span></li>
+          <li><span data-en>Terminal installed at no charge</span><span data-es>Instalación sin costo</span></li>
+          <li><span data-en>Local to the IE</span><span data-es>Local del IE</span></li>
+          <li>Hablo español</li>
+        </ul>
       </div>
-      <table class="stmt">
-        <caption><span data-en>Real life example</span><span data-es>Ejemplo real</span></caption>
-        <tr><td><span data-en>Monthly card sales</span><span data-es>Ventas con tarjeta al mes</span></td><td>$100,000</td></tr>
-        <tr><td><span data-en>Rate being charged</span><span data-es>Cargo que te cobran</span></td><td>3%</td></tr>
-        <tr class="hl"><td><mark><span data-en>Processing fees, monthly</span><span data-es>Comisiones al mes</span></mark></td><td><mark>$3,000</mark></td></tr>
-        <tr><td><span data-en>Yearly</span><span data-es>Anual</span></td><td>$36,000</td></tr>
-        <tr><td><span data-en>In 3 years</span><span data-es>En 3 años</span></td><td>$108,000</td></tr>
-      </table>
+
+      <div class="panel">
+        <header><span data-en>Real life example</span><span data-es>Ejemplo real</span><span>3%</span></header>
+        <div class="body">
+          <div class="kv"><span><span data-en>Monthly card sales</span><span data-es>Ventas con tarjeta al mes</span></span><span>$100,000</span></div>
+          <div class="bar" aria-hidden="true"><i></i></div>
+          <p class="cap"><span data-en>The gold sliver is what goes to processing.</span><span data-es>La parte dorada es lo que se va en comisiones.</span></p>
+          <div class="kv fee"><span><span data-en>Processing fees, every month</span><span data-es>Comisiones, cada mes</span></span><b>$3,000</b></div>
+          <div class="split">
+            <div><small><span data-en>In a year</span><span data-es>En un año</span></small><b>$36,000</b></div>
+            <div><small><span data-en>In 3 years</span><span data-es>En 3 años</span></small><b>$108,000</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="wash" id="statement">
+    <div class="w">
+      <p class="eye"><span data-en>Your statement</span><span data-es>Tu estado de cuenta</span></p>
+      <h2 data-en>What the lines on your statement mean</h2>
+      <h2 data-es>Qué significa cada línea de tu estado de cuenta</h2>
+      <p class="sub" data-en>Most statements are hard to read. Tap a line on this sample to see who gets that money.</p>
+      <p class="sub" data-es>Casi todos son difíciles de leer. Toca una línea de este ejemplo para ver a quién le llega ese dinero.</p>
+      <div class="reader">
+        <div class="stmt">
+          <div class="hd"><b><span data-en>Sample processing statement</span><span data-es>Estado de cuenta de ejemplo</span></b><span data-en>Card sales this month: $30,000</span><span data-es>Ventas con tarjeta este mes: $30,000</span></div>
+          <button type="button" class="line" data-k="ic" aria-pressed="true"><span><span data-en>Interchange</span><span data-es>Intercambio (interchange)</span></span><span>$540.00</span></button>
+          <button type="button" class="line" data-k="as" aria-pressed="false"><span><span data-en>Card brand assessments</span><span data-es>Cuotas de las marcas</span></span><span>$42.00</span></button>
+          <button type="button" class="line" data-k="mk" aria-pressed="false"><span><span data-en>Processor markup</span><span data-es>Margen del procesador</span></span><span>$255.00</span></button>
+          <button type="button" class="line" data-k="fx" aria-pressed="false"><span><span data-en>Monthly, PCI and batch fees</span><span data-es>Cuotas mensuales, PCI y de cierre</span></span><span>$42.45</span></button>
+          <div class="tot"><span><span data-en>Total fees</span><span data-es>Total de comisiones</span></span><span>$879.45</span></div>
+          <p class="ft"><span data-en>Made-up numbers for illustration. Yours will be different, and that's why I read the real one.</span><span data-es>Números inventados como ejemplo. Los tuyos son distintos, y por eso reviso el de verdad.</span></p>
+        </div>
+        <div class="note" aria-live="polite">
+          <div id="n-ic" class="on">
+            <p class="who"><span data-en>Goes to the customer's bank</span><span data-es>Va al banco del cliente</span></p>
+            <h3 data-en>Interchange</h3><h3 data-es>Intercambio</h3>
+            <p data-en>The biggest piece. It goes to the bank that issued your customer's card, and the card networks set the rates. Rewards cards and keyed-in sales cost more than a debit card that's tapped.</p>
+            <p data-es>La parte más grande. Va al banco que emitió la tarjeta de tu cliente, y las redes de tarjetas ponen las tarifas. Las tarjetas de recompensas y las ventas tecleadas cuestan más que una de débito.</p>
+          </div>
+          <div id="n-as">
+            <p class="who"><span data-en>Goes to the card brands</span><span data-es>Va a las marcas de tarjeta</span></p>
+            <h3 data-en>Card brand assessments</h3><h3 data-es>Cuotas de las marcas</h3>
+            <p data-en>A small percentage that goes to Visa, Mastercard and the other brands for using their networks.</p>
+            <p data-es>Un porcentaje chico que va a Visa, Mastercard y las otras marcas por usar sus redes.</p>
+          </div>
+          <div id="n-mk">
+            <p class="who"><span data-en>Stays with your processor</span><span data-es>Se queda con tu procesador</span></p>
+            <h3 data-en>Processor markup</h3><h3 data-es>Margen del procesador</h3>
+            <p data-en>What your processor adds on top. This is the part that changes from one processor to the next, and the first thing I look for when I read a statement.</p>
+            <p data-es>Lo que tu procesador cobra encima. Es la parte que cambia de un procesador a otro, y lo primero que busco cuando reviso un estado de cuenta.</p>
+          </div>
+          <div id="n-fx">
+            <p class="who"><span data-en>Stays with your processor</span><span data-es>Se queda con tu procesador</span></p>
+            <h3 data-en>Flat fees</h3><h3 data-es>Cuotas fijas</h3>
+            <p data-en>Monthly fees, PCI fees, batch fees. They're small one at a time, they show up in different places on the statement, and they add up over a year.</p>
+            <p data-es>Cuotas mensuales, de PCI, de cierre. Son chicas una por una, salen en distintas partes del estado de cuenta, y en un año se juntan.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="sheet" id="calc">
-    <div class="in">
-      <p class="m"><span data-en>Your numbers</span><span data-es>Tus números</span></p>
+  <section id="calc">
+    <div class="w">
+      <p class="eye"><span data-en>Calculator</span><span data-es>Calculadora</span></p>
       <h2 data-en>What are you paying now?</h2>
       <h2 data-es>¿Cuánto estás pagando hoy?</h2>
       <p class="sub" data-en>Slide to your monthly card sales and the rate you think you're charged. If you don't know the rate, that's the first thing I'll find on your statement.</p>
@@ -172,69 +292,86 @@ html[lang=es] [data-en]{display:none}
             <label for="rate"><span data-en>Rate you're charged</span><span data-es>Cargo que te cobran</span><output id="rateo">3.0%</output></label>
             <input type="range" id="rate" min="1.5" max="4.5" step="0.1" value="3" />
           </div>
-          <p class="sub" style="margin:0" data-en>This is plain math on what you pay today. What you could save depends on your statement, and I won't guess at it before I've read it.</p>
-          <p class="sub" style="margin:0" data-es>Esto es solo la cuenta de lo que pagas hoy. Lo que puedes ahorrar depende de tu estado de cuenta, y no lo adivino antes de leerlo.</p>
+          <p class="small" data-en>This is plain math on what you pay today. What you could save depends on your statement, and I won't guess at it before I've read it.</p>
+          <p class="small" data-es>Esto es solo la cuenta de lo que pagas hoy. Lo que puedes ahorrar depende de tu estado de cuenta, y no lo adivino antes de leerlo.</p>
         </div>
-        <div class="receipt" aria-live="polite">
-          <h3>JL Processing Solutions</h3>
-          <p class="c"><span data-en>FEES AT YOUR CURRENT RATE</span><span data-es>COMISIONES CON TU CARGO ACTUAL</span></p>
+        <div class="res" aria-live="polite">
+          <small><span data-en>Fees at your current rate, per year</span><span data-es>Comisiones con tu cargo actual, al año</span></small>
+          <div class="big" id="r-yr">$10,800</div>
           <dl>
-            <div><dt><span data-en>Card sales / mo</span><span data-es>Ventas / mes</span></dt><dd id="r-vol">$30,000</dd></div>
-            <div><dt><span data-en>Rate</span><span data-es>Cargo</span></dt><dd id="r-rate">3.0%</dd></div>
-            <div><dt><span data-en>Fees / month</span><span data-es>Comisiones / mes</span></dt><dd id="r-mo">$900</dd></div>
-            <div><dt><span data-en>Fees / year</span><span data-es>Comisiones / año</span></dt><dd id="r-yr">$10,800</dd></div>
-            <div class="big"><dt><span data-en>In 3 years</span><span data-es>En 3 años</span></dt><dd><mark id="r-3">$32,400</mark></dd></div>
+            <div><dt><span data-en>Per month</span><span data-es>Al mes</span></dt><dd id="r-mo">$900</dd></div>
+            <div><dt><span data-en>In 3 years</span><span data-es>En 3 años</span></dt><dd id="r-3">$32,400</dd></div>
           </dl>
-          <p class="ft" data-en>Bring your last statement and we'll check this against the real thing.</p>
-          <p class="ft" data-es>Trae tu último estado de cuenta y lo comparamos con lo real.</p>
+          <p data-en>Bring your last statement and we'll check this against the real thing.</p>
+          <p data-es>Trae tu último estado de cuenta y lo comparamos con lo real.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sheet">
-    <div class="in">
-      <p class="m"><span data-en>10 to 30 minutes</span><span data-es>De 10 a 30 minutos</span></p>
-      <h2 data-en>How the meeting works</h2>
-      <h2 data-es>Cómo funciona la reunión</h2>
+  <section class="wash" id="how">
+    <div class="w">
+      <p class="eye"><span data-en>How it works</span><span data-es>Cómo funciona</span></p>
+      <h2 data-en>One meeting, 10 to 30 minutes</h2>
+      <h2 data-es>Una reunión, de 10 a 30 minutos</h2>
+      <p class="sub" data-en>Here is what happens from the first message to the day your terminal is running.</p>
+      <p class="sub" data-es>Esto es lo que pasa desde el primer mensaje hasta el día que tu terminal está funcionando.</p>
       <div class="meet">
-      <div>
-      <ol class="steps" data-en>
-        <li><div><b>Set up a date and time with me</b><span>Plan on 10 to 30 minutes.</span></div></li>
-        <li><div><b>We get to know you</b><span>Your pain points, and a strategy together to help you save more money.</span></div></li>
-        <li><div><b>We review your statement</b><span>Right there, or send it in to get it professionally reviewed.</span></div></li>
-        <li><div><b>I follow up with the results</b><span>You see what the statement review found.</span></div></li>
-        <li><div><b>I install your terminal myself</b><span>At no charge. And I'll be your main point of contact after that.</span></div></li>
-      </ol>
-      <ol class="steps" data-es>
-        <li><div><b>Agenda un día y una hora conmigo</b><span>Calcula de 10 a 30 minutos.</span></div></li>
-        <li><div><b>Nos conocemos</b><span>Vemos tus problemas y armamos juntos una estrategia para que ahorres más.</span></div></li>
-        <li><div><b>Revisamos tu estado de cuenta</b><span>Ahí mismo, o lo mandamos a una revisión profesional.</span></div></li>
-        <li><div><b>Te doy los resultados</b><span>Ves lo que encontró la revisión.</span></div></li>
-        <li><div><b>Yo mismo instalo tu terminal</b><span>Sin costo. Y sigo siendo tu contacto principal.</span></div></li>
-      </ol>
-      </div>
-      <figure class="term"><img src="terminal.jpg" alt="A card terminal held up outside a customer's business before an install" width="306" height="280" loading="lazy" /><figcaption><span data-en>On the way to install one.</span><span data-es>En camino a una instalación.</span></figcaption></figure>
+        <div>
+          <ol class="steps" data-en>
+            <li><b>Set up a date and time with me</b><span>Plan on 10 to 30 minutes.</span></li>
+            <li><b>We get to know you</b><span>Your pain points, and a strategy together to help you save more money.</span></li>
+            <li><b>We review your statement</b><span>Right there, or send it in to get it professionally reviewed.</span></li>
+            <li><b>I follow up with the results</b><span>You see what the statement review found.</span></li>
+            <li><b>I install your terminal myself</b><span>At no charge. And I'll be your main point of contact after that.</span></li>
+          </ol>
+          <ol class="steps" data-es>
+            <li><b>Agenda un día y una hora conmigo</b><span>Calcula de 10 a 30 minutos.</span></li>
+            <li><b>Nos conocemos</b><span>Vemos tus problemas y armamos juntos una estrategia para que ahorres más.</span></li>
+            <li><b>Revisamos tu estado de cuenta</b><span>Ahí mismo, o lo mandamos a una revisión profesional.</span></li>
+            <li><b>Te doy los resultados</b><span>Ves lo que encontró la revisión.</span></li>
+            <li><b>Yo mismo instalo tu terminal</b><span>Sin costo. Y sigo siendo tu contacto principal.</span></li>
+          </ol>
+        </div>
+        <figure class="term"><img src="terminal.jpg" alt="A card terminal held up outside a customer's business before an install" width="306" height="280" loading="lazy" /><figcaption><span data-en>On the way to an install.</span><span data-es>En camino a una instalación.</span></figcaption></figure>
       </div>
     </div>
   </section>
 
-  <section class="sheet dark">
-    <div class="in">
-      <p class="m"><span data-en>Free statement review</span><span data-es>Revisión gratis</span></p>
-      <h2 data-en>Have your statement read <mark>free.</mark></h2>
-      <h2 data-es>Te leo tu estado de cuenta <mark>gratis.</mark></h2>
-      <p data-en>I'm local to the Inland Empire, I come to your shop, and I speak Spanish. Send me a DM with the word SAVE and we'll pick a time.</p>
-      <p data-es>Soy local del Inland Empire, voy a tu negocio y hablo español. Mándame un DM con la palabra SAVE y escogemos una hora.</p>
-      <ul class="tags">
-        <li><span data-en>Simple</span><span data-es>Simple</span></li>
-        <li><span data-en>Secure</span><span data-es>Seguro</span></li>
-        <li><span data-en>Local</span><span data-es>Local</span></li>
-        <li>Hablo español</li>
-      </ul>
+  <section id="faq">
+    <div class="w">
+      <p class="eye"><span data-en>Questions</span><span data-es>Preguntas</span></p>
+      <h2 data-en>Before you message me</h2>
+      <h2 data-es>Antes de escribirme</h2>
+      <div class="faq" data-en>
+        <details><summary>What does the statement review cost?</summary><p>Nothing. The review is free of charge.</p></details>
+        <details><summary>Will I save money?</summary><p>I can't tell you until I've read your statement. Any number before that is an estimate, not a guaranteed saving.</p></details>
+        <details><summary>What do I need to bring?</summary><p>Your most recent processing statement. We can go over it right there, or you can send it in.</p></details>
+        <details><summary>How long does the meeting take?</summary><p>10 to 30 minutes.</p></details>
+        <details><summary>Who sets up the terminal?</summary><p>I do, at no charge. After that I'm your main point of contact, so you're not left waiting when you need to be making money.</p></details>
+        <details><summary>Where do you work?</summary><p>The Inland Empire, including Perris and Riverside.</p></details>
+        <details><summary>¿Hablas español?</summary><p>Sí. Todo lo podemos hacer en español.</p></details>
+      </div>
+      <div class="faq" data-es>
+        <details><summary>¿Cuánto cuesta la revisión?</summary><p>Nada. La revisión es sin costo.</p></details>
+        <details><summary>¿Voy a ahorrar dinero?</summary><p>No te lo puedo decir hasta leer tu estado de cuenta. Cualquier número antes de eso es un estimado, no un ahorro garantizado.</p></details>
+        <details><summary>¿Qué necesito llevar?</summary><p>Tu estado de cuenta más reciente. Lo vemos ahí mismo, o me lo mandas.</p></details>
+        <details><summary>¿Cuánto dura la reunión?</summary><p>De 10 a 30 minutos.</p></details>
+        <details><summary>¿Quién instala la terminal?</summary><p>Yo, sin costo. Después sigo siendo tu contacto principal, para que no te quedes esperando cuando necesitas estar vendiendo.</p></details>
+        <details><summary>¿Dónde trabajas?</summary><p>En el Inland Empire, incluyendo Perris y Riverside.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="end">
+    <div class="w">
+      <h2 data-en>Have your statement read free.</h2>
+      <h2 data-es>Te leo tu estado de cuenta gratis.</h2>
+      <p data-en>Send me a DM on Instagram with the word SAVE and we'll pick a time.</p>
+      <p data-es>Mándame un DM por Instagram con la palabra SAVE y escogemos una hora.</p>
       <div class="btns">
         <a class="btn" href="https://ig.me/m/jlprocessingsolutions"><span data-en>DM "SAVE" on Instagram</span><span data-es>Manda "SAVE" por Instagram</span></a>
-        <a class="btn o" href="https://www.threads.net/@jlprocessingsolutions">Threads</a>
+        <a class="btn o" href="https://www.threads.com/@jlprocessingsolutions">Threads</a>
       </div>
     </div>
   </section>
@@ -243,27 +380,37 @@ html[lang=es] [data-en]{display:none}
 <footer>
   <div class="w">
     <p>© 2026 JL Processing Solutions · Inland Empire, CA · <a href="https://www.instagram.com/jlprocessingsolutions/">@jlprocessingsolutions</a></p>
+    <p><span data-en>The calculator and the sample statement are illustrations, not a quote or a guaranteed saving.</span><span data-es>La calculadora y el estado de cuenta de ejemplo son ilustraciones, no una cotización ni un ahorro garantizado.</span></p>
     <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Logo, photo, example numbers and meeting steps are from the business's Instagram.</p>
   </div>
 </footer>
 
 <div class="dock">
-  <a href="https://ig.me/m/jlprocessingsolutions">DM "SAVE"</a>
+  <a href="https://ig.me/m/jlprocessingsolutions"><span data-en>Free statement review</span><span data-es>Revisión gratis</span></a>
   <a href="#calc"><span data-en>My numbers</span><span data-es>Mi cuenta</span></a>
 </div>
 
 <script>
-// Language switch and the fee arithmetic (sales x rate, nothing else).
+// Language switch, the sample statement notes, and the fee arithmetic (sales x rate, nothing else).
 (function () {
   var en = document.getElementById("en"), es = document.getElementById("es");
   function lang(l) { document.documentElement.lang = l; en.setAttribute("aria-pressed", l === "en"); es.setAttribute("aria-pressed", l === "es"); }
   en.onclick = function () { lang("en"); }; es.onclick = function () { lang("es"); };
+
+  var lines = document.querySelectorAll(".line");
+  [].forEach.call(lines, function (b) {
+    b.onclick = function () {
+      [].forEach.call(lines, function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      [].forEach.call(document.querySelectorAll(".note > div"), function (n) { n.className = n.id === "n-" + b.dataset.k ? "on" : ""; });
+    };
+  });
+
   var vol = document.getElementById("vol"), rate = document.getElementById("rate");
   function usd(n) { return "$" + Math.round(n).toLocaleString("en-US"); }
   function draw() {
     var v = +vol.value, r = +rate.value, mo = v * r / 100;
-    document.getElementById("volo").textContent = document.getElementById("r-vol").textContent = usd(v);
-    document.getElementById("rateo").textContent = document.getElementById("r-rate").textContent = r.toFixed(1) + "%";
+    document.getElementById("volo").textContent = usd(v);
+    document.getElementById("rateo").textContent = r.toFixed(1) + "%";
     document.getElementById("r-mo").textContent = usd(mo);
     document.getElementById("r-yr").textContent = usd(mo * 12);
     document.getElementById("r-3").textContent = usd(mo * 36);
