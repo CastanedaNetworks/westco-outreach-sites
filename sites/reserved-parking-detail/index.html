@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Reserved Parking Car Detailing | Mobile detailing, SGV, IE and OC</title>
-<meta name="description" content="Reserved Parking Car Detailing. Mobile detailing in the San Gabriel Valley, Inland Empire and Orange County. Interior, exterior, ceramic coating, scratch removal. Call or text (626) 290-7644." />
+<meta name="description" content="Reserved Parking Car Detailing. Mobile detailing in the San Gabriel Valley, Inland Empire and Orange County. Interior, exterior, ceramic coating, scratch removal. 5.0 on Google. Call or text (626) 290-7644." />
 <meta name="robots" content="noindex,nofollow" />
 <link rel="canonical" href="https://castanedanetworks.github.io/westco-outreach-sites/sites/reserved-parking-detail/" />
 <meta property="og:title" content="Reserved Parking Car Detailing" />
@@ -18,64 +18,88 @@
   --st:"Stardos Stencil","Archivo",sans-serif; --f:"Archivo","Segoe UI",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;background:var(--asphalt);color:var(--paint);font:400 17px/1.55 var(--f);padding-bottom:56px;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .055 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .w{max-width:1120px;margin-inline:auto;padding-inline:16px}
-h1,h2,h3,p{margin:0}
+h1,h2,h3,p,figure,blockquote{margin:0}
 h2{font:700 clamp(28px,7.4vw,46px)/1.02 var(--st);text-transform:uppercase;letter-spacing:.01em}
 .kick{font:700 13px/1.3 var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.lead{margin-top:12px;color:var(--dim);max-width:36em}
 section{padding-block:52px}
+.band{background:var(--lot);border-block:1px solid var(--seam)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:4px;font:800 17px/1 var(--f);text-decoration:none;border:2px solid var(--paint);background:var(--paint);color:var(--asphalt);cursor:pointer}
 .btn.blue{background:var(--blue);border-color:var(--blue);color:var(--blue-ink)}
 .btn.line{background:none;color:var(--paint)}
-a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 
-header.top{border-bottom:1px solid var(--seam)}
-header.top .w{display:flex;align-items:center;gap:12px;padding-block:10px}
-header.top img{width:52px;height:52px;border-radius:50%;flex:none}
-.name{flex:1;min-width:0;font:700 17px/1.1 var(--st);text-transform:uppercase}
+header.top{position:sticky;top:0;z-index:40;background:rgba(17,19,22,.96);border-bottom:1px solid var(--seam)}
+header.top .w{display:flex;align-items:center;gap:12px;padding-block:8px}
+header.top img{width:48px;height:48px;border-radius:50%;flex:none}
+.name{flex:1;min-width:0;font:700 16px/1.1 var(--st);text-transform:uppercase;text-decoration:none}
 .name span{display:block;font:500 11px/1.3 var(--f);letter-spacing:.2em;color:var(--blue);margin-top:3px}
-header.top a.tel{display:none}
+header.top nav{display:none}
+header.top .btn{min-height:44px;padding:0 16px;font-size:15px}
 
-.hero{padding-block:34px 44px}
+.hero{padding-block:30px 40px}
+.stars{display:inline-flex;align-items:center;gap:8px;font:700 14px/1.3 var(--f);color:var(--paint);text-decoration:none;margin-bottom:16px}
+.stars i{font-style:normal;color:#ffc94a;letter-spacing:2px}
 .hero h1{font:700 clamp(40px,12.6vw,104px)/.92 var(--st);text-transform:uppercase}
 .hero h1 em{font-style:normal;color:var(--blue)}
-.hero .say{margin-top:18px;max-width:34em;font-size:18px;color:var(--paint)}
-.hero .say b{font-weight:700}
+.hero .say{margin-top:18px;max-width:34em;font-size:18px}
 .cta{display:grid;gap:10px;margin-top:22px}
-.where{margin-top:16px;font:700 14px/1.4 var(--f);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.where{margin-top:16px;font:700 14px/1.5 var(--f);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.where b{color:var(--paint)}
 
 /* a stall: painted lines on three sides, the car parked inside, stencil on the ground in front of it */
 .stall{border:5px solid var(--paint);border-bottom:0;padding:10px 10px 0;position:relative}
 .stall img{width:100%;aspect-ratio:var(--ar,1/1);object-fit:cover}
 .stall figcaption,.stall .curb{display:block;text-align:center;font:700 20px/1 var(--st);text-transform:uppercase;letter-spacing:.14em;padding:14px 0 4px}
-.stall .curb small{display:block;font:500 12px/1.4 var(--f);letter-spacing:.14em;color:var(--dim);margin-top:6px}
-figure{margin:0}
 .hero .stall{margin-top:30px;--ar:5/4}
 
-.do{background:var(--lot);border-block:1px solid var(--seam)}
-.do ul{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:0}
-.do li{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:baseline;padding:16px 0;border-top:2px dashed var(--seam)}
-.do li:last-child{border-bottom:2px dashed var(--seam)}
-.do li i{font:700 22px/1 var(--st);font-style:normal;color:var(--blue)}
-.do li b{font:700 20px/1.2 var(--f)}
-.do .quote{margin-top:26px;font:700 clamp(22px,5.6vw,30px)/1.15 var(--st);text-transform:uppercase}
-.do .quote span{color:var(--blue)}
-.do .four{margin-top:14px;color:var(--dim);font-size:16px}
+.trust{background:var(--blue);color:var(--blue-ink);padding-block:0}
+.trust ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr}
+.trust li{padding:14px 8px;text-align:center;font:800 14px/1.25 var(--f);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid rgba(7,19,29,.25)}
+.trust li:nth-child(odd){border-right:1px solid rgba(7,19,29,.25)}
+.trust li:nth-last-child(-n+2){border-bottom:0}
 
-.build .lead{margin-top:12px;color:var(--dim);max-width:36em}
-.grid{display:grid;gap:26px;margin-top:26px}
+.makes{padding-block:26px;border-bottom:1px solid var(--seam)}
+.makes p{font:700 12px/1.3 var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
+.makes ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 22px;font:700 clamp(20px,5.6vw,30px)/1.1 var(--st);text-transform:uppercase;letter-spacing:.06em}
+.makes li:nth-child(even){color:var(--blue)}
+
+.tiles{display:grid;gap:12px;margin-top:26px}
+.tile{background:var(--asphalt);border:1px solid var(--seam);border-top:4px solid var(--blue);padding:18px 16px;border-radius:2px}
+.tile i{font:700 20px/1 var(--st);font-style:normal;color:var(--blue)}
+.tile h3{font:800 20px/1.2 var(--f);margin:10px 0 6px}
+.tile p{color:var(--dim);font-size:16px}
+
+.pkg{margin-top:26px;border:5px solid var(--paint);border-bottom:0;padding:20px 14px 0}
+.pkg .tag{font:700 12px/1.3 var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.pkg h3{font:700 clamp(34px,10vw,56px)/1 var(--st);text-transform:uppercase;margin:6px 0 8px}
+.pkg > p{color:var(--dim);max-width:34em}
+.sizes{display:grid;margin-top:18px;border-top:2px dashed var(--seam)}
+.sizes div{padding:14px 0 16px}
+.sizes div + div{border-top:2px dashed var(--seam)}
+.sizes span{display:block;font:700 12px/1.3 var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.sizes b{display:block;font:700 clamp(22px,6.6vw,34px)/1.1 var(--st);margin-top:6px;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.grid{display:grid;gap:26px;margin-top:34px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 legend{padding:0;font:700 13px/1.3 var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
-.opt{display:grid;grid-template-columns:26px 1fr auto;gap:10px;align-items:center;min-height:54px;padding:8px 12px;border:2px solid var(--seam);border-radius:4px;margin-bottom:8px;cursor:pointer;background:var(--lot)}
+.opt{display:grid;grid-template-columns:26px 1fr auto;gap:10px;align-items:center;min-height:54px;padding:10px 12px;border:2px solid var(--seam);border-radius:4px;margin-bottom:8px;cursor:pointer;background:var(--lot)}
 .opt input{width:22px;height:22px;margin:0;accent-color:var(--blue)}
 .opt span{font-weight:700;line-height:1.25}
+.opt span small{display:block;font:400 14px/1.35 var(--f);color:var(--dim);margin-top:3px}
 .opt em{font:500 15px/1.2 var(--f);font-style:normal;color:var(--dim);white-space:nowrap;font-variant-numeric:tabular-nums}
 .opt:has(input:checked){border-color:var(--blue)}
 fieldset + fieldset{margin-top:22px}
+.field{display:block;margin-bottom:10px}
+.field span{display:block;font:700 14px/1.3 var(--f);margin-bottom:6px}
+.field input{width:100%;min-height:50px;padding:0 12px;border:2px solid var(--seam);border-radius:4px;background:var(--lot);color:var(--paint);font:400 17px/1 var(--f)}
+.field input::placeholder{color:#7d848c}
 .ticket{background:var(--paint);color:var(--asphalt);border-radius:4px;padding:18px 16px}
 .ticket .lab{font:700 12px/1.3 var(--f);letter-spacing:.16em;text-transform:uppercase;color:#4c5560}
 .ticket .sum{font:700 clamp(34px,10vw,48px)/1 var(--st);margin:6px 0 4px;font-variant-numeric:tabular-nums}
@@ -84,17 +108,40 @@ fieldset + fieldset{margin-top:22px}
 .ticket .btn{width:100%;border-color:var(--asphalt);background:var(--asphalt);color:var(--paint)}
 .ticket .btn + .btn{margin-top:8px;background:none;color:var(--asphalt)}
 
+.steps{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:54px 1fr;gap:12px;padding:18px 0;border-top:2px dashed var(--seam)}
+.steps li::before{content:"0" counter(s);font:700 30px/1 var(--st);color:var(--blue)}
+.steps h3{font:800 20px/1.2 var(--f)}
+.steps p{color:var(--dim);margin-top:4px}
+
+.revs{display:grid;gap:14px;margin-top:26px}
+.rev{background:var(--lot);border:1px solid var(--seam);border-left:5px solid var(--paint);padding:18px 16px}
+.rev .s{color:#ffc94a;letter-spacing:3px;font-size:15px}
+.rev p{margin-top:8px;font-size:17px;line-height:1.5}
+.rev cite{display:block;margin-top:10px;font:700 12px/1.3 var(--f);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.gl{margin-top:22px}
+.gl a{font-weight:700;text-underline-offset:3px}
+
 .work .lot{display:grid;gap:22px;margin-top:26px}
 .work .more{margin-top:24px;color:var(--dim)}
 .work .more a{color:var(--paint);font-weight:700;text-underline-offset:3px}
 
-.area{background:var(--lot);border-block:1px solid var(--seam)}
 .area .rows{display:grid;gap:14px;margin-top:26px}
 .area .stall{padding:18px 10px 6px}
 .area .stall b{display:block;text-align:center;font:700 clamp(40px,13vw,64px)/1 var(--st);color:var(--blue)}
-.area p.note{margin-top:22px;max-width:34em}
+.hours{margin-top:26px;display:grid;gap:4px}
+.hours b{font:700 clamp(22px,6vw,30px)/1.15 var(--st);text-transform:uppercase}
+.hours span{color:var(--dim)}
+#open{color:var(--blue);font-weight:700}
 
-.book{text-align:left}
+.faq .list{margin-top:22px;border-top:2px dashed var(--seam)}
+details{border-bottom:2px dashed var(--seam)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 24px;gap:12px;align-items:center;min-height:60px;padding:12px 0;font:800 18px/1.3 var(--f)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:700 26px/1 var(--st);color:var(--blue);text-align:center}
+details[open] summary::after{content:"\2212"}
+details p{padding:0 0 18px;color:var(--dim);max-width:40em}
+
 .book h2{font-size:clamp(34px,9.6vw,72px)}
 .book p{margin-top:14px;max-width:32em;color:var(--dim)}
 .book .num{display:inline-block;margin-top:18px;font:700 clamp(34px,10.4vw,64px)/1 var(--st);text-decoration:none;color:var(--blue)}
@@ -107,8 +154,14 @@ footer.site p + p{margin-top:8px}
 .dock a{display:grid;place-items:center;min-height:56px;font:800 15px/1 var(--f);text-decoration:none;background:var(--blue);color:var(--blue-ink)}
 .dock a + a{background:var(--paint);color:var(--asphalt);border-left:1px solid #c9c6bd}
 
+@media (max-width:359px){header.top .btn{padding:0 12px;font-size:14px}.name{font-size:14px}}
 @media (min-width:600px){
   .cta{grid-template-columns:auto auto;justify-content:start}
+  .trust ul{grid-template-columns:repeat(4,1fr)}
+  .trust li{border-bottom:0;border-right:1px solid rgba(7,19,29,.25)}
+  .trust li:last-child{border-right:0}
+  .tiles{grid-template-columns:1fr 1fr}
+  .revs{grid-template-columns:1fr 1fr}
   .work .lot{grid-template-columns:1fr 1fr}
   .area .rows{grid-template-columns:repeat(3,1fr);gap:0}
   .area .rows .stall + .stall{border-left:0}
@@ -118,19 +171,31 @@ footer.site p + p{margin-top:8px}
   .dock{display:none}
   .w{padding-inline:32px}
   section{padding-block:84px}
-  header.top a.tel{display:inline-flex;min-height:44px;font-size:16px}
-  header.top img{width:60px;height:60px}
-  .name{font-size:20px}
+  .trust,.makes{padding-block:0}
+  .makes{padding-block:34px}
+  .trust li{padding:20px 8px;font-size:15px}
+  header.top nav{display:flex;gap:26px;font:700 15px/1 var(--f)}
+  header.top nav a{text-decoration:none;padding:14px 0}
+  header.top nav a:hover{color:var(--blue)}
+  .name{font-size:19px}
+  .hero{padding-block:56px 64px}
   .hero .w{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:end}
   .hero h1{font-size:clamp(64px,7vw,88px)}
   .hero .stall{margin-top:0}
-  .do .w{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
-  .do ul{margin-top:0}
+  .tiles{grid-template-columns:repeat(4,1fr)}
+  .pkg{padding:30px 30px 0;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+  .sizes{margin-top:0;border-top:0;grid-template-columns:1fr 1fr}
+  .sizes div + div{border-top:0;border-left:2px dashed var(--seam);padding-left:20px}
   .grid{grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
-  .ticket{position:sticky;top:20px;padding:26px 24px}
+  .ticket{position:sticky;top:96px;padding:26px 24px}
+  .steps{grid-template-columns:repeat(3,1fr);gap:40px}
+  .steps li{grid-template-columns:1fr;border-top:5px solid var(--paint);padding-top:20px}
+  .revs{grid-template-columns:1fr 1fr;gap:18px}
   .work .lot{grid-template-columns:repeat(4,1fr);gap:0}
   .work .lot .stall + .stall{border-left:0}
   .work .lot .stall{--ar:3/4}
+  .faq .w{display:grid;grid-template-columns:.7fr 1.3fr;gap:64px;align-items:start}
+  .faq .list{margin-top:0}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -146,22 +211,30 @@ footer.site p + p{margin-top:8px}
 <header class="top">
   <div class="w">
     <img src="logo.png" alt="Reserved Parking Car Detailing logo" width="344" height="344" />
-    <p class="name">Reserved Parking<span>CAR DETAILING</span></p>
-    <a class="btn blue tel" href="tel:+16262907644">(626) 290-7644</a>
+    <a class="name" href="#top">Reserved Parking<span>CAR DETAILING</span></a>
+    <nav aria-label="Sections">
+      <a href="#services">Services</a>
+      <a href="#build">Prices</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#work">Our work</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <a class="btn blue" href="#build">Book now</a>
   </div>
 </header>
 
-<main>
+<main id="top">
 <section class="hero">
   <div class="w">
     <div>
+      <a class="stars" href="#reviews"><i aria-hidden="true">★★★★★</i> 5.0 on Google · 22 reviews</a>
       <h1>Details that make the <em>difference.</em></h1>
       <p class="say">We don't just clean cars, we restore them. <b>Mobile detailing, and we come to you.</b> Park it where it sits and we take it from there.</p>
       <div class="cta">
         <a class="btn blue" href="#build">Build my detail</a>
         <a class="btn line" href="sms:+16262907644">Text (626) 290-7644</a>
       </div>
-      <p class="where">SGV · IE · OC · 2+ years of experience</p>
+      <p class="where"><b>SGV · IE · OC</b><br />Open 7 days, 7 AM to 7 PM</p>
     </div>
     <figure class="stall">
       <img src="mclaren.jpg" alt="Orange McLaren after a detail, parked on the street" width="656" height="724" />
@@ -170,20 +243,33 @@ footer.site p + p{margin-top:8px}
   </div>
 </section>
 
-<section class="do">
+<section class="trust" aria-label="What you can count on">
+  <ul>
+    <li>Premium quality</li>
+    <li>Satisfaction guaranteed</li>
+    <li>On time, every time</li>
+    <li>Customer focused</li>
+  </ul>
+</section>
+
+<section class="makes">
   <div class="w">
-    <div>
-      <p class="kick">Our services</p>
-      <h2>Inside and out, at your spot</h2>
-      <p class="quote">Premium quality. <span>On time, every time.</span></p>
-      <p class="four">Satisfaction guaranteed. Customer focused.</p>
+    <p>Lately in the stall</p>
+    <ul><li>McLaren</li><li>Lamborghini</li><li>Porsche 911</li><li>Audi</li><li>And your daily driver</li></ul>
+  </div>
+</section>
+
+<section class="band" id="services">
+  <div class="w">
+    <p class="kick">Our services</p>
+    <h2>Inside and out, at your spot</h2>
+    <p class="lead">Gage brings the detail to you, so you can stay home or stay at work while the car gets done.</p>
+    <div class="tiles">
+      <div class="tile"><i>01</i><h3>Exterior wash and decontamination</h3><p>A hand wash that gets the stuck on grime off the paint, not just the dust.</p></div>
+      <div class="tile"><i>02</i><h3>Interior cleaning and detailing</h3><p>Seats, carpet, dash and door panels. Stains and smells included.</p></div>
+      <div class="tile"><i>03</i><h3>Wheel and tire cleaning</h3><p>Brake dust off the wheels and the tires cleaned up to match.</p></div>
+      <div class="tile"><i>04</i><h3>Paint protection and wax</h3><p>Wax, clay and ceramic coating to keep the shine after we leave.</p></div>
     </div>
-    <ul>
-      <li><i>01</i><b>Exterior wash and decontamination</b></li>
-      <li><i>02</i><b>Interior cleaning and detailing</b></li>
-      <li><i>03</i><b>Wheel and tire cleaning</b></li>
-      <li><i>04</i><b>Paint protection and wax</b></li>
-    </ul>
   </div>
 </section>
 
@@ -191,24 +277,42 @@ footer.site p + p{margin-top:8px}
   <div class="w">
     <p class="kick">Prices</p>
     <h2>Build your detail</h2>
-    <p class="lead">Pick what the car needs and see the range before you text us. We also have smaller packages, just ask and we'll send the full menu.</p>
+    <p class="lead">Real prices, up front. Pick what the car needs and see the range before you text us.</p>
+
+    <div class="pkg">
+      <div>
+        <p class="tag">Our full detail</p>
+        <h3>Reset Detail</h3>
+        <p>The one that takes the car back to how it should look. We also have smaller packages and regular maintenance washes, just ask and we'll send the full menu.</p>
+      </div>
+      <div class="sizes">
+        <div><span>Cars</span><b>$400 to $450</b></div>
+        <div><span>Trucks and SUVs</span><b>$500 to $550</b></div>
+      </div>
+    </div>
+
     <div class="grid">
       <form id="f" onsubmit="return false">
         <fieldset>
-          <legend>Start with</legend>
+          <legend>1. Start with</legend>
           <label class="opt"><input type="radio" name="base" value="car" checked /><span>Reset Detail, car</span><em>$400 to $450</em></label>
           <label class="opt"><input type="radio" name="base" value="truck" /><span>Reset Detail, truck or SUV</span><em>$500 to $550</em></label>
           <label class="opt"><input type="radio" name="base" value="none" /><span>Just the add ons below</span><em></em></label>
         </fieldset>
         <fieldset>
-          <legend>Add to it</legend>
-          <label class="opt"><input type="checkbox" value="plastic restoration" data-lo="50" data-hi="50" /><span>Plastic restoration</span><em>$50</em></label>
-          <label class="opt"><input type="checkbox" value="engine bay" data-lo="75" data-hi="100" /><span>Engine bay</span><em>$75 to $100</em></label>
-          <label class="opt"><input type="checkbox" value="shampoo" data-lo="100" data-hi="100" /><span>Shampoo</span><em>$100</em></label>
-          <label class="opt"><input type="checkbox" value="headlight restoration" data-lo="150" data-hi="150" /><span>Headlight restoration</span><em>$150</em></label>
-          <label class="opt"><input type="checkbox" value="clay and wax" data-lo="150" data-hi="200" /><span>Clay and wax</span><em>$150 to $200</em></label>
-          <label class="opt"><input type="checkbox" value="scratch removal" data-lo="100" data-hi="300" /><span>Scratch removal</span><em>$100 to $300</em></label>
-          <label class="opt"><input type="checkbox" value="ceramic coating" data-lo="400" data-hi="600" /><span>Ceramic coating</span><em>$400 to $600</em></label>
+          <legend>2. Add to it</legend>
+          <label class="opt"><input type="checkbox" value="plastic restoration" data-lo="50" data-hi="50" /><span>Plastic restoration<small>Faded gray trim back to black</small></span><em>$50</em></label>
+          <label class="opt"><input type="checkbox" value="engine bay" data-lo="75" data-hi="100" /><span>Engine bay<small>Degreased, cleaned and dressed</small></span><em>$75 to $100</em></label>
+          <label class="opt"><input type="checkbox" value="shampoo" data-lo="100" data-hi="100" /><span>Shampoo<small>For stains and smells in seats and carpet</small></span><em>$100</em></label>
+          <label class="opt"><input type="checkbox" value="headlight restoration" data-lo="150" data-hi="150" /><span>Headlight restoration<small>Clears up yellow, cloudy lenses</small></span><em>$150</em></label>
+          <label class="opt"><input type="checkbox" value="clay and wax" data-lo="150" data-hi="200" /><span>Clay and wax<small>Smooth paint, then sealed</small></span><em>$150 to $200</em></label>
+          <label class="opt"><input type="checkbox" value="scratch removal" data-lo="100" data-hi="300" /><span>Scratch removal<small>Depends how many and how deep</small></span><em>$100 to $300</em></label>
+          <label class="opt"><input type="checkbox" value="ceramic coating" data-lo="400" data-hi="600" /><span>Ceramic coating<small>Longer lasting gloss and protection than wax</small></span><em>$400 to $600</em></label>
+        </fieldset>
+        <fieldset>
+          <legend>3. Your car</legend>
+          <label class="field"><span>Year, make and model</span><input id="car" type="text" autocomplete="off" placeholder="2021 Honda Accord" /></label>
+          <label class="field"><span>City where it's parked</span><input id="city" type="text" autocomplete="address-level2" placeholder="West Covina" /></label>
         </fieldset>
       </form>
       <div class="ticket" aria-live="polite">
@@ -223,7 +327,33 @@ footer.site p + p{margin-top:8px}
   </div>
 </section>
 
-<section class="work">
+<section class="band how">
+  <div class="w">
+    <p class="kick">How it works</p>
+    <h2>Three steps, no drive</h2>
+    <ol class="steps">
+      <li><div><h3>Text us the car</h3><p>Build your detail above or just text what you need to (626) 290-7644.</p></div></li>
+      <li><div><h3>We set the price and the time</h3><p>You get a price for your vehicle and a time that works with your schedule.</p></div></li>
+      <li><div><h3>We come to you</h3><p>Home or work. The car gets detailed where it's parked.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="w">
+    <p class="kick">Reviews</p>
+    <h2>5.0 on Google, 22 reviews</h2>
+    <div class="revs">
+      <blockquote class="rev"><div class="s" aria-label="5 stars">★★★★★</div><p>Amazing experience! Mobile service arrived in under two hours and saved my leather seats from a tough stain and smell. Exceptional quality and super convenient.</p><cite>Google review</cite></blockquote>
+      <blockquote class="rev"><div class="s" aria-label="5 stars">★★★★★</div><p>This guy knows his stuff. Honestly I don't think I'll ever go back to a regular car wash.</p><cite>Google review</cite></blockquote>
+      <blockquote class="rev"><div class="s" aria-label="5 stars">★★★★★</div><p>I love the fact that he's mobile and comes to you so you can be in the comfort of your own home. He does an amazing job and really puts love and detail into each car.</p><cite>Google review</cite></blockquote>
+      <blockquote class="rev"><div class="s" aria-label="5 stars">★★★★★</div><p>Best detailer by far. My car looks amazing after every wash or wax. He cares about your car. Always works with my schedule, which is very helpful, and comes to my work.</p><cite>Google review</cite></blockquote>
+    </div>
+    <p class="gl"><a href="https://maps.google.com/?cid=3698354329194268762">Read all 22 reviews on Google</a></p>
+  </div>
+</section>
+
+<section class="work band" id="work">
   <div class="w">
     <p class="kick">Recent work</p>
     <h2>Parked and finished</h2>
@@ -237,7 +367,7 @@ footer.site p + p{margin-top:8px}
   </div>
 </section>
 
-<section class="area">
+<section class="area" id="area">
   <div class="w">
     <p class="kick">Where we work</p>
     <h2>We come to you</h2>
@@ -246,7 +376,27 @@ footer.site p + p{margin-top:8px}
       <div class="stall"><b>IE</b><span class="curb">Inland Empire</span></div>
       <div class="stall"><b>OC</b><span class="curb">Orange County</span></div>
     </div>
-    <p class="note">Not sure if we cover your city? Text us where the car is and we'll tell you.</p>
+    <div class="hours">
+      <b>Open 7 days, 7 AM to 7 PM</b>
+      <span><span id="open"></span> Not sure if we cover your city? Text us where the car is and we'll tell you.</span>
+    </div>
+  </div>
+</section>
+
+<section class="faq band" id="faq">
+  <div class="w">
+    <div>
+      <p class="kick">Questions</p>
+      <h2>Before you book</h2>
+    </div>
+    <div class="list">
+      <details><summary>Do you really come to me?</summary><p>Yes. We're mobile, so the detail happens at your home or your work. You don't have to drop the car off anywhere.</p></details>
+      <details><summary>How much is a full detail?</summary><p>The Reset Detail is $400 to $450 for cars and $500 to $550 for trucks and SUVs. Use the builder above to add things like shampoo, headlights or ceramic coating and see your range.</p></details>
+      <details><summary>Do you have something smaller than the Reset Detail?</summary><p>Yes. We have smaller packages and regular maintenance washes. Text us and we'll send the full menu.</p></details>
+      <details><summary>Can you fix scratches and cloudy headlights?</summary><p>Yes. Scratch removal runs $100 to $300 depending on the scratches, and headlight restoration is $150.</p></details>
+      <details><summary>Do you do ceramic coating?</summary><p>Yes, $400 to $600. Text us the vehicle and we'll give you the exact price.</p></details>
+      <details><summary>How do I book?</summary><p>Call or text (626) 290-7644, or message us on Instagram. We're open 7 days a week, 7 AM to 7 PM.</p></details>
+    </div>
   </div>
 </section>
 
@@ -266,8 +416,8 @@ footer.site p + p{margin-top:8px}
 
 <footer class="site">
   <div class="w">
-    <p>© 2026 Reserved Parking Car Detailing · Mobile detailing · <a href="tel:+16262907644">(626) 290-7644</a> · <a href="https://www.instagram.com/reservedparking_detail/">@reservedparking_detail</a></p>
-    <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Logo, photos and prices are from the business's Instagram.</p>
+    <p>© 2026 Reserved Parking Car Detailing · Mobile detailing · Open 7 days, 7 AM to 7 PM · <a href="tel:+16262907644">(626) 290-7644</a> · <a href="https://www.instagram.com/reservedparking_detail/">@reservedparking_detail</a></p>
+    <p>Website preview · not the official site. Built by WestCo App Studio, <a href="tel:+12135229136">(213) 522-9136</a>. Logo, photos and prices are from the business's Instagram. Reviews and hours are from its Google listing.</p>
   </div>
 </footer>
 
@@ -281,28 +431,39 @@ footer.site p + p{margin-top:8px}
 // Adds up the price range from the choices and writes the text message that goes with it.
 (function () {
   var f = document.getElementById("f"), sum = document.getElementById("sum"), msg = document.getElementById("msg"),
-      send = document.getElementById("send"), copy = document.getElementById("copy");
-  var BASE = { car: [400, 450, "a Reset Detail on my car"], truck: [500, 550, "a Reset Detail on my truck/SUV"], none: [0, 0, ""] };
+      send = document.getElementById("send"), copy = document.getElementById("copy"),
+      car = document.getElementById("car"), city = document.getElementById("city");
+  var BASE = { car: [400, 450, "a Reset Detail"], truck: [500, 550, "a Reset Detail (truck/SUV)"], none: [0, 0, ""] };
   function money(lo, hi) { return lo === hi ? "$" + lo : "$" + lo.toLocaleString("en-US") + " to $" + hi.toLocaleString("en-US"); }
   function list(a) { return a.length < 2 ? a.join("") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1]; }
+  var text = "";
   function draw() {
     var b = BASE[f.querySelector('input[name="base"]:checked').value], lo = b[0], hi = b[1], adds = [];
     [].forEach.call(f.querySelectorAll("input[type=checkbox]:checked"), function (c) { lo += +c.dataset.lo; hi += +c.dataset.hi; adds.push(c.value); });
     var want = b[2];
     if (adds.length) want += (want ? " with " : "") + list(adds);
-    var t;
-    if (!want) { sum.textContent = "$0"; t = "Hi, I'd like a price on a detail."; }
-    else { sum.textContent = money(lo, hi); t = "Hi, I'd like to book " + want + ". Your site shows " + money(lo, hi) + ". My car is a "; }
-    msg.textContent = want ? t + "(year, make, model) and it's in (city)." : t;
-    send.href = "sms:+16262907644?&body=" + encodeURIComponent(t);
-    copy.onclick = function () {
-      function done(s) { copy.textContent = s; setTimeout(function () { copy.textContent = "Copy the message"; }, 1600); }
-      try { navigator.clipboard.writeText(t).then(function () { done("Copied"); }, function () { done("Press and hold the message to copy"); }); }
-      catch (e) { done("Press and hold the message to copy"); }
-    };
+    var c = car.value.trim(), w = city.value.trim();
+    if (!want) { sum.textContent = "$0"; text = "Hi Gage, I'd like a price on a detail."; }
+    else { sum.textContent = money(lo, hi); text = "Hi Gage, I'd like to book " + want + ". Your site shows " + money(lo, hi) + "."; }
+    text += " My car is a " + (c || "(year, make, model)") + " and it's in " + (w || "(city)") + ".";
+    msg.textContent = text;
+    send.href = "sms:+16262907644?&body=" + encodeURIComponent(text);
   }
+  copy.onclick = function () {
+    function done(s) { copy.textContent = s; setTimeout(function () { copy.textContent = "Copy the message"; }, 1600); }
+    try { navigator.clipboard.writeText(text).then(function () { done("Copied"); }, function () { done("Press and hold the message to copy"); }); }
+    catch (e) { done("Press and hold the message to copy"); }
+  };
   f.addEventListener("change", draw);
+  f.addEventListener("input", draw);
   draw();
+})();
+// Open now or not, by Los Angeles time. Hours are 7 AM to 7 PM every day.
+(function () {
+  try {
+    var h = +new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", hour: "numeric", hourCycle: "h23" }).format(new Date());
+    document.getElementById("open").textContent = h >= 7 && h < 19 ? "Open now until 7 PM." : "Closed now, opens 7 AM.";
+  } catch (e) {}
 })();
 </script>
 </body>
