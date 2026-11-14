@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Rosales Drywall & Taping Inc. · San Diego Drywall Contractor</title>
+<meta name="description" content="Drywall hanging, taping and finishing across San Diego County. Custom homes, ADUs and multi-unit buildings. 20+ years, licensed and insured. Free estimates: (619) 513-1707." />
+<meta name="robots" content="noindex,nofollow" />
+<meta property="og:title" content="Rosales Drywall & Taping Inc." />
+<meta property="og:description" content="Drywall and taping for San Diego builders and homeowners. 20+ years, licensed and insured." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="img/curved-home.jpg" />
+<link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Barlow', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          display: ['"Barlow Condensed"', 'Impact', 'sans-serif'],
+        },
+        colors: {
+          navy: '#16233f',
+          navy2: '#0f1930',
+          sky: '#3aa5dc',
+          board: '#eef0f2',   /* drywall sheet grey */
+          mud: '#d9dcdf',     /* joint compound */
+          ink: '#1a1f29',
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  .display { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 700; text-transform: uppercase; line-height: .95; letter-spacing: .005em; }
+  /* the blue diagonal from their logo */
+  .cut { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), 0 100%); }
+  .btn { transition: background-color .15s ease, transform .15s ease; }
+  .btn:active { transform: translateY(1px); }
+  /* taped seam between sections */
+  .seam { height: 10px; background: repeating-linear-gradient(90deg, #d9dcdf 0 46px, #c9cdd1 46px 48px); }
+  .job img { width: 100%; height: 100%; object-fit: cover; }
+  input, textarea, select { font: inherit; }
+</style>
+</head>
+
+<body class="font-sans bg-white text-ink">
+
+<header class="bg-white sticky top-0 z-50 border-b border-mud">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5 min-w-0">
+      <img src="img/logo.jpg" alt="Rosales Drywall &amp; Taping Inc. logo" width="44" height="44" class="h-11 w-11 shrink-0 border border-mud" />
+      <span class="display text-navy text-[22px] sm:text-2xl leading-none whitespace-nowrap">Rosales <span class="hidden min-[400px]:inline font-semibold text-ink/60">Drywall &amp; Taping</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-[15px] font-medium text-ink/70">
+      <a class="hover:text-navy" href="#jobs">Recent jobs</a>
+      <a class="hover:text-navy" href="#services">What we do</a>
+      <a class="hover:text-navy" href="#estimate">Free estimate</a>
+    </nav>
+    <a href="tel:+16195131707" class="btn bg-navy hover:bg-navy2 text-white font-semibold text-[15px] px-4 py-2.5 shrink-0">
+      <span class="min-[480px]:hidden">Call</span><span class="hidden min-[480px]:inline">(619) 513-1707</span>
+    </a>
+  </div>
+</header>
+
+<!-- hero: their Encinitas curved-wall job, full bleed -->
+<section id="top" class="relative bg-navy2">
+  <img src="img/curved-home.jpg" alt="Curved three-story home in Encinitas where Rosales Drywall finished round ceilings and curved walls" class="absolute inset-0 w-full h-full object-cover object-[60%_45%]" />
+  <div class="absolute inset-0 bg-gradient-to-t from-navy2 via-navy2/55 to-navy2/5"></div>
+  <div class="relative max-w-[1160px] mx-auto px-4 sm:px-6 pt-[46vw] sm:pt-64 lg:pt-80 pb-10 sm:pb-14">
+    <h1 class="display text-white text-[13.5vw] sm:text-7xl lg:text-[88px] max-w-[11ch]">
+      Drywall hung, taped and finished right.
+    </h1>
+    <p class="mt-5 text-white/90 text-[17px] sm:text-xl max-w-[34rem] leading-snug">
+      We work all over San Diego County on custom homes, ADUs and multi-unit buildings. Over 20 years in the trade, licensed and insured.
+    </p>
+    <div class="mt-7 flex flex-col min-[420px]:flex-row gap-3">
+      <a href="tel:+16195131707" class="btn bg-sky hover:bg-white text-navy2 font-semibold text-[17px] px-6 py-3.5 text-center">Call (619) 513-1707</a>
+      <a href="#estimate" class="btn border-2 border-white/80 hover:bg-white hover:text-navy2 text-white font-semibold text-[17px] px-6 py-3 text-center">Get a free estimate</a>
+    </div>
+    <p class="mt-6 text-white/60 text-sm">Photo: our Encinitas job. No straight lines on this one, round ceilings and curved walls all the way through.</p>
+  </div>
+</section>
+<div class="seam"></div>
+
+<!-- recent jobs: real before/after pairs from their own posts -->
+<section id="jobs" class="bg-white">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-6">
+    <h2 class="display text-navy text-5xl sm:text-6xl">Recent jobs</h2>
+    <p class="mt-3 text-lg text-ink/70 max-w-[38rem]">A few we've wrapped up lately. Builders call us back because the crew shows up, keeps the schedule and leaves clean walls.</p>
+  </div>
+
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 pb-16 sm:pb-24 space-y-14 sm:space-y-20">
+
+    <article class="job grid md:grid-cols-12 gap-5 md:gap-8 items-end">
+      <div class="md:col-span-8 grid grid-cols-2 gap-2">
+        <figure class="aspect-square bg-board"><img src="img/hillside-framing.jpg" alt="Hillside home in Rancho San Diego during framing, crew on the roof" /></figure>
+        <figure class="aspect-square bg-board"><img src="img/hillside-finished.jpg" alt="The same Rancho San Diego home finished with stucco and tile roof" /></figure>
+      </div>
+      <div class="md:col-span-4 md:pb-2">
+        <p class="text-sky font-semibold">Rancho San Diego</p>
+        <h3 class="display text-navy text-3xl sm:text-4xl mt-1">Hillside home, start to finish</h3>
+        <p class="mt-3 text-ink/75 leading-relaxed">Same house, same angle. Left is where we started and right is where it ended up. It's always a good feeling to look back at one like this.</p>
+      </div>
+    </article>
+
+    <article class="job grid md:grid-cols-12 gap-5 md:gap-8 items-end">
+      <div class="md:col-span-4 md:pb-2 order-2 md:order-1">
+        <p class="text-sky font-semibold">San Diego</p>
+        <h3 class="display text-navy text-3xl sm:text-4xl mt-1">8-unit project, completed</h3>
+        <p class="mt-3 text-ink/75 leading-relaxed">Eight units on a tight lot with neighbors on every side. We handle 8, 10 and 12-unit buildings and keep a crew big enough to stay on the builder's schedule.</p>
+      </div>
+      <div class="md:col-span-8 grid grid-cols-2 gap-2 order-1 md:order-2">
+        <figure class="aspect-[3/4] bg-board"><img src="img/eight-unit-framing.jpg" alt="8-unit building during framing seen from above" /></figure>
+        <figure class="aspect-[3/4] bg-board"><img src="img/eight-unit-finished.jpg" alt="The finished 8-unit building seen from above" /></figure>
+      </div>
+    </article>
+
+    <article class="job grid md:grid-cols-12 gap-5 md:gap-8 items-end">
+      <div class="md:col-span-8 grid grid-cols-2 gap-2">
+        <figure class="aspect-[3/4] bg-board"><img src="img/four-homes-slab.jpg" alt="Empty lot with slab forms and a Rosales Drywall jobsite sign on the fence" /></figure>
+        <figure class="aspect-[3/4] bg-board"><img src="img/four-homes-framed.jpg" alt="The same lot with new homes framed and scaffolded" /></figure>
+      </div>
+      <div class="md:col-span-4 md:pb-2">
+        <p class="text-sky font-semibold">San Diego</p>
+        <h3 class="display text-navy text-3xl sm:text-4xl mt-1">Four homes from an empty lot</h3>
+        <p class="mt-3 text-ink/75 leading-relaxed">This was dirt in March. Now it's four finished homes that are on the market. Thank you to the builders and contractors who keep trusting us with their projects.</p>
+      </div>
+    </article>
+
+    <article class="job grid md:grid-cols-12 gap-5 md:gap-8 items-end">
+      <div class="md:col-span-4 md:pb-2 order-2 md:order-1">
+        <p class="text-sky font-semibold">Encinitas</p>
+        <h3 class="display text-navy text-3xl sm:text-4xl mt-1">Curved walls, round ceilings</h3>
+        <p class="mt-3 text-ink/75 leading-relaxed">The kind of job that sharpens your skills. Radius walls and custom details in every room, which is the detail work our team is good at.</p>
+      </div>
+      <div class="md:col-span-8 order-1 md:order-2">
+        <figure class="aspect-[4/3] sm:aspect-[16/9] bg-board"><img src="img/curved-home-2.jpg" alt="Curved white home in Encinitas above the lagoon" /></figure>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- what we do -->
+<section id="services" class="bg-navy text-white cut pb-8">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-14 sm:py-20 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <h2 class="display text-5xl sm:text-6xl">What we do</h2>
+      <p class="mt-4 text-white/80 text-lg leading-relaxed max-w-[30rem]">
+        Drywall and taping is all we do, and we've been doing it for more than 20 years. Over 700 customers served across San Diego County, from a single patch to a 12-unit building.
+      </p>
+      <p class="mt-4 text-white/80 text-lg leading-relaxed max-w-[30rem]">Rosales Drywall &amp; Taping Inc. is licensed and insured.</p>
+    </div>
+    <dl class="lg:col-span-7 divide-y divide-white/15 border-y border-white/15">
+      <div class="py-4 grid sm:grid-cols-[11rem_1fr] gap-1 sm:gap-6">
+        <dt class="display text-2xl text-sky">Hanging</dt>
+        <dd class="text-white/85">New construction, additions, ADUs and remodels. Residential and commercial.</dd>
+      </div>
+      <div class="py-4 grid sm:grid-cols-[11rem_1fr] gap-1 sm:gap-6">
+        <dt class="display text-2xl text-sky">Taping &amp; finishing</dt>
+        <dd class="text-white/85">Clean joints and corners, ready for paint.</dd>
+      </div>
+      <div class="py-4 grid sm:grid-cols-[11rem_1fr] gap-1 sm:gap-6">
+        <dt class="display text-2xl text-sky">Texture</dt>
+        <dd class="text-white/85">New texture or matching what's already on your walls.</dd>
+      </div>
+      <div class="py-4 grid sm:grid-cols-[11rem_1fr] gap-1 sm:gap-6">
+        <dt class="display text-2xl text-sky">Patching &amp; plaster</dt>
+        <dd class="text-white/85">Holes, water damage, cracks and plaster repair.</dd>
+      </div>
+      <div class="py-4 grid sm:grid-cols-[11rem_1fr] gap-1 sm:gap-6">
+        <dt class="display text-2xl text-sky">Multi-unit</dt>
+        <dd class="text-white/85">8, 10 and 12-unit projects for builders and general contractors.</dd>
+      </div>
+      <div class="py-4 grid sm:grid-cols-[11rem_1fr] gap-1 sm:gap-6">
+        <dt class="display text-2xl text-sky">Custom work</dt>
+        <dd class="text-white/85">Curved walls, round ceilings and office remodels.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- estimate -->
+<section id="estimate" class="bg-board">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-14 sm:py-20 grid lg:grid-cols-12 gap-10 lg:gap-14">
+    <div class="lg:col-span-5">
+      <h2 class="display text-navy text-5xl sm:text-6xl">Free estimates</h2>
+      <p class="mt-4 text-lg text-ink/75 leading-relaxed">Call, text or send the form. Tell us what the job is and where, and send plans or photos if you have them.</p>
+      <div class="mt-7 space-y-1 text-lg">
+        <a href="tel:+16195131707" class="block py-2 font-semibold text-navy underline underline-offset-4 decoration-sky decoration-2">(619) 513-1707</a>
+        <a href="mailto:info@rosales-drywall.com" class="block py-2 font-semibold text-navy underline underline-offset-4 decoration-sky decoration-2 break-all">info@rosales-drywall.com</a>
+        <a href="https://www.instagram.com/rosales.drywall/" target="_blank" rel="noopener" class="block py-2 font-semibold text-navy underline underline-offset-4 decoration-sky decoration-2">@rosales.drywall on Instagram</a>
+      </div>
+      <p class="mt-6 text-ink/70 leading-relaxed">
+        1668 National Ave, San Diego, CA 92113<br />
+        Monday to Saturday, 5 AM to 7 PM
+      </p>
+    </div>
+
+    <form id="estForm" class="lg:col-span-7 bg-white border border-mud p-5 sm:p-8 space-y-4">
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Name</span>
+          <input name="name" required autocomplete="name" class="w-full border border-ink/25 px-3 py-3 focus:outline-none focus:border-navy focus:ring-2 focus:ring-sky/40" /></label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Phone</span>
+          <input name="phone" required type="tel" autocomplete="tel" class="w-full border border-ink/25 px-3 py-3 focus:outline-none focus:border-navy focus:ring-2 focus:ring-sky/40" /></label>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">City or neighborhood</span>
+          <input name="city" class="w-full border border-ink/25 px-3 py-3 focus:outline-none focus:border-navy focus:ring-2 focus:ring-sky/40" /></label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Type of job</span>
+          <select name="type" class="w-full border border-ink/25 px-3 py-3 bg-white focus:outline-none focus:border-navy focus:ring-2 focus:ring-sky/40">
+            <option>New home or addition</option>
+            <option>ADU</option>
+            <option>Multi-unit building</option>
+            <option>Commercial or office</option>
+            <option>Remodel</option>
+            <option>Patch or repair</option>
+          </select></label>
+      </div>
+      <label class="block"><span class="block text-sm font-semibold mb-1.5">About the job</span>
+        <textarea name="details" rows="4" placeholder="Square footage, number of units, timeline, anything else we should know" class="w-full border border-ink/25 px-3 py-3 focus:outline-none focus:border-navy focus:ring-2 focus:ring-sky/40"></textarea></label>
+      <button class="btn w-full sm:w-auto bg-navy hover:bg-navy2 text-white font-semibold text-[17px] px-8 py-3.5">Send request</button>
+      <p class="text-sm text-ink/55">This opens your email app with the details filled in.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="bg-navy2 text-white/70">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+    <div>
+      <p class="display text-white text-2xl">Rosales Drywall &amp; Taping Inc.</p>
+      <p class="mt-2 text-sm leading-relaxed">San Diego and surrounding areas · Licensed and insured<br />
+        <a class="inline-block py-1.5 underline underline-offset-2 hover:text-white" href="tel:+16195131707">(619) 513-1707</a></p>
+    </div>
+    <div class="text-[13px] sm:text-right">
+      <p>Preview by <span class="text-white font-semibold">WestCo App Studio</span></p>
+      <p class="mt-1">
+        <a class="inline-block py-1.5 underline underline-offset-2 hover:text-white" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
+        · <a class="inline-block py-1.5 underline underline-offset-2 hover:text-white" href="tel:+12135229136">(213) 522-9136</a>
+      </p>
+      <p class="mt-2 text-white/40 text-xs">Website preview · not the official site</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('estForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(this);
+    var body = 'Name: ' + f.get('name') + '\nPhone: ' + f.get('phone') + '\nCity: ' + f.get('city') +
+               '\nType of job: ' + f.get('type') + '\n\n' + f.get('details');
+    location.href = 'mailto:info@rosales-drywall.com?subject=' + encodeURIComponent('Estimate request from ' + f.get('name')) +
+                    '&body=' + encodeURIComponent(body);
+  });
+</script>
+
+<!-- All photos and the logo are from @rosales.drywall's own Instagram grid.
+     Job descriptions are adapted from their captions. Contact details from
+     their IG, Yelp and email domain. No reviews shown because none exist yet. -->
+</body>
+</html>
