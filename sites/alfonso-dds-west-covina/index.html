@@ -3,121 +3,275 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Emmanuel Alfonso, DDS · Dentist · West Covina, CA</title>
-<meta name="description" content="Emmanuel Alfonso, DDS. General and family dentistry at 3634 S Nogales St, West Covina. Call (626) 336-3404 for an appointment." />
+<title>Dentist in West Covina, CA · Emmanuel Alfonso, DDS</title>
+<meta name="description" content="Emmanuel Alfonso, DDS. General, family and cosmetic dentistry at 3634 S Nogales St, West Covina. New patients welcome. Call (626) 336-3404." />
 <meta name="robots" content="noindex,nofollow" />
-<meta property="og:title" content="Emmanuel Alfonso, DDS · West Covina" />
-<meta property="og:description" content="General and family dentistry at 3634 S Nogales St, West Covina." />
+<meta property="og:title" content="Emmanuel Alfonso, DDS · Dentist in West Covina" />
+<meta property="og:description" content="General, family and cosmetic dentistry at 3634 S Nogales St, West Covina." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="img/room.jpg" />
+<meta property="og:image" content="img/hero.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
         fontFamily: {
-          sans: ['"Public Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          serif: ['Newsreader', 'Georgia', 'serif'],
+          sans: ['"Work Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          serif: ['Marcellus', 'Georgia', 'serif'],
         },
         colors: {
-          ink: '#14282b',
-          teal: '#1c6f6a',
-          teal2: '#135450',
-          paper: '#f4f1ea',
-          line: '#d9d3c5',
+          navy: '#12324a',
+          navy2: '#0b2233',
+          aqua: '#1f8a99',
+          aqua2: '#176e7a',
+          sand: '#f5f1e9',
+          line: '#dcd5c6',
         },
       },
     },
   }
 </script>
 <style>
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
   body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-  .btn { transition: background-color .15s ease, color .15s ease; }
+  .btn { transition: background-color .15s ease, color .15s ease; letter-spacing: .06em; text-transform: uppercase; font-size: 14px; font-weight: 700; }
+  .eyebrow { letter-spacing: .2em; text-transform: uppercase; font-size: 12.5px; font-weight: 700; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  .plus { transition: transform .15s ease; }
+  input, select, textarea { font: inherit; }
 </style>
 </head>
 
-<body class="font-sans bg-paper text-ink text-[18px]">
+<body class="font-sans bg-white text-navy text-[17px]">
 
-<a href="#visit" class="block bg-teal text-white text-center font-semibold px-4 py-2.5 text-[15px]">Now seeing patients at 3634 S Nogales St, West Covina</a>
+<!-- utility bar -->
+<div class="bg-navy text-white text-sm">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+    <span class="max-sm:hidden">Welcoming new patients in West Covina</span>
+    <span class="flex flex-wrap items-center gap-x-5 gap-y-1">
+      <a href="tel:+16263363404" class="font-semibold hover:underline py-1">(626) 336-3404</a>
+      <a href="#visit" class="hover:underline py-1">3634 S Nogales St, West Covina</a>
+    </span>
+  </div>
+</div>
 
-<header class="bg-paper sticky top-0 z-50 border-b border-line">
-  <div class="max-w-[1120px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
-    <a href="#top" class="font-serif text-[22px] sm:text-[26px] leading-none whitespace-nowrap">Emmanuel Alfonso, <span class="text-teal">DDS</span></a>
-    <a href="tel:+16263363404" class="btn bg-ink hover:bg-teal text-white font-bold px-4 py-2.5 shrink-0">
-      <span class="min-[560px]:hidden">Call</span><span class="hidden min-[560px]:inline">(626) 336-3404</span>
+<header class="bg-white sticky top-0 z-50 border-b border-line">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+    <a href="#top" class="leading-tight min-w-0">
+      <span class="block font-serif text-[18px] min-[380px]:text-[21px] sm:text-2xl whitespace-nowrap">Emmanuel Alfonso, DDS</span>
+      <span class="block eyebrow text-aqua !text-[10.5px]">Family &amp; General Dentistry</span>
     </a>
+    <nav class="hidden lg:flex items-center gap-7 text-[15px] font-medium">
+      <a class="hover:text-aqua" href="#about">About</a>
+      <a class="hover:text-aqua" href="#services">Services</a>
+      <a class="hover:text-aqua" href="#new-patients">New Patients</a>
+      <a class="hover:text-aqua" href="#faq">FAQ</a>
+      <a class="hover:text-aqua" href="#visit">Contact</a>
+    </nav>
+    <a href="#appointment" class="btn bg-aqua hover:bg-aqua2 text-white px-4 sm:px-5 py-3 rounded shrink-0"><span class="sm:hidden">Book</span><span class="hidden sm:inline">Book an appointment</span></a>
   </div>
 </header>
 
-<section id="top">
-  <div class="max-w-[1120px] mx-auto grid md:grid-cols-12 items-stretch">
-    <div class="md:col-span-7 px-4 sm:px-6 py-12 sm:py-20 md:pr-12 flex flex-col justify-center">
-      <h1 class="font-serif text-[12vw] sm:text-7xl lg:text-[80px] leading-[1.03]">A dentist who takes the time to explain.</h1>
-      <p class="mt-6 text-ink/75 text-xl leading-snug max-w-[31rem]">
-        General and family dentistry on Nogales Street. Checkups, cleanings, fillings, crowns and help when a tooth hurts and can't wait.
-      </p>
-      <div class="mt-8 flex flex-col min-[430px]:flex-row gap-3">
-        <a href="tel:+16263363404" class="btn bg-teal hover:bg-teal2 text-white font-bold text-lg px-6 py-3.5 text-center">Call (626) 336-3404</a>
-        <a href="#visit" class="btn border-2 border-ink hover:bg-ink hover:text-white font-bold text-lg px-6 py-3 text-center">Find the office</a>
-      </div>
-      <p class="mt-6 text-ink/60">New patients welcome. Ask about your insurance when you call.</p>
+<!-- hero -->
+<section id="top" class="relative bg-navy2 overflow-hidden">
+  <img src="img/hero.jpg" alt="A dental professional caring for a patient in a bright treatment room" class="absolute inset-0 w-full h-full object-cover object-[60%_30%]" />
+  <div class="absolute inset-0 bg-gradient-to-r from-navy2/95 via-navy2/75 to-navy2/20"></div>
+  <div class="relative max-w-[1160px] mx-auto px-4 sm:px-6 py-16 sm:py-28">
+    <p class="eyebrow text-white/80">Emmanuel Alfonso, DDS</p>
+    <h1 class="mt-4 font-serif text-white text-[11.5vw] sm:text-6xl lg:text-7xl leading-[1.06] max-w-[14ch]">Dentist in West Covina, CA</h1>
+    <p class="mt-5 text-white/90 text-lg sm:text-xl leading-relaxed max-w-[34rem]">
+      Gentle, thorough dental care for the whole family. Cleanings, fillings, crowns, cosmetic work and same-week visits when something hurts.
+    </p>
+    <div class="mt-8 flex flex-col min-[430px]:flex-row gap-3">
+      <a href="#appointment" class="btn bg-aqua hover:bg-aqua2 text-white px-7 py-4 rounded text-center">Book an appointment</a>
+      <a href="tel:+16263363404" class="btn bg-white hover:bg-sand text-navy px-7 py-4 rounded text-center">Call (626) 336-3404</a>
     </div>
-    <figure class="md:col-span-5">
-      <img src="img/room.jpg" alt="A clean dental treatment room with a patient chair" class="w-full h-full max-md:aspect-[4/3] object-cover" />
-    </figure>
   </div>
 </section>
 
-<section id="care" class="bg-white border-y border-line">
-  <div class="max-w-[1120px] mx-auto px-4 sm:px-6 py-14 sm:py-20 grid md:grid-cols-12 gap-10">
-    <div class="md:col-span-4">
-      <h2 class="font-serif text-5xl sm:text-6xl leading-[1.03]">What we take care of</h2>
+<!-- quick info strip -->
+<section class="bg-sand border-b border-line">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-7 grid sm:grid-cols-3 gap-6">
+    <div><p class="eyebrow text-aqua">Location</p><p class="mt-1.5 font-medium">3634 S Nogales St<br />West Covina, CA 91792</p></div>
+    <div><p class="eyebrow text-aqua">Phone</p><p class="mt-1.5 font-medium"><a class="hover:underline" href="tel:+16263363404">(626) 336-3404</a></p></div>
+    <div><p class="eyebrow text-aqua">Office hours</p><p class="mt-1.5 font-medium">By appointment.<br />Call for this week's schedule.</p></div>
+  </div>
+</section>
+
+<!-- welcome -->
+<section class="max-w-[1160px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid md:grid-cols-12 gap-10 lg:gap-16 items-center">
+  <figure class="md:col-span-5">
+    <img src="img/room.jpg" alt="A clean, modern dental treatment room" class="w-full aspect-[4/5] object-cover rounded-t-[999px] rounded-b-lg" />
+  </figure>
+  <div class="md:col-span-7">
+    <p class="eyebrow text-aqua">Welcome</p>
+    <h2 class="mt-3 font-serif text-4xl sm:text-5xl leading-tight">Comfortable, honest dental care close to home</h2>
+    <p class="mt-6 leading-relaxed text-navy/80">Welcome to the office of Emmanuel Alfonso, DDS. We care for children, adults and seniors, and we believe a good dental visit starts with listening. You will always know what we found, what your options are and what each one costs before any treatment begins.</p>
+    <p class="mt-4 leading-relaxed text-navy/80">Whether you are due for a routine checkup, want a brighter smile or need a tooth looked at right away, our team is here to make the visit calm and straightforward.</p>
+    <div class="mt-8 flex flex-col min-[430px]:flex-row gap-3">
+      <a href="#appointment" class="btn bg-navy hover:bg-aqua text-white px-6 py-3.5 rounded text-center">Book an appointment</a>
+      <a href="#services" class="btn border-2 border-navy hover:bg-navy hover:text-white px-6 py-3 rounded text-center">Our services</a>
     </div>
-    <dl class="md:col-span-8 divide-y divide-line border-y border-line">
-      <div class="py-5 grid sm:grid-cols-3 gap-1 sm:gap-6"><dt class="font-bold">Checkups and cleanings</dt><dd class="sm:col-span-2 text-ink/75">Exams, X-rays and a thorough cleaning, for kids and adults.</dd></div>
-      <div class="py-5 grid sm:grid-cols-3 gap-1 sm:gap-6"><dt class="font-bold">Fillings</dt><dd class="sm:col-span-2 text-ink/75">Tooth-colored fillings that fix a cavity before it turns into something bigger.</dd></div>
-      <div class="py-5 grid sm:grid-cols-3 gap-1 sm:gap-6"><dt class="font-bold">Crowns and bridges</dt><dd class="sm:col-span-2 text-ink/75">For cracked, worn or missing teeth.</dd></div>
-      <div class="py-5 grid sm:grid-cols-3 gap-1 sm:gap-6"><dt class="font-bold">Extractions</dt><dd class="sm:col-span-2 text-ink/75">Done gently, with clear instructions for after.</dd></div>
-      <div class="py-5 grid sm:grid-cols-3 gap-1 sm:gap-6"><dt class="font-bold">Toothaches</dt><dd class="sm:col-span-2 text-ink/75">In pain? Call first thing and we'll do our best to see you the same day.</dd></div>
+  </div>
+</section>
+
+<!-- meet the doctor -->
+<section id="about" class="bg-sand">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid md:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="md:col-span-7 md:order-1 order-2">
+      <p class="eyebrow text-aqua">Meet your dentist</p>
+      <h2 class="mt-3 font-serif text-4xl sm:text-5xl leading-tight">Emmanuel Alfonso, DDS</h2>
+      <p class="mt-6 leading-relaxed text-navy/80">Dr. Alfonso is a general dentist serving West Covina and the surrounding San Gabriel Valley communities. His approach is simple: explain everything clearly, recommend only what you need and treat every patient the way he would want his own family treated.</p>
+      <ul class="mt-6 space-y-2.5 text-navy/85">
+        <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 rounded-full bg-aqua shrink-0"></span>Doctor of Dental Surgery (DDS)</li>
+        <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 rounded-full bg-aqua shrink-0"></span>General, family and cosmetic dentistry</li>
+        <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 rounded-full bg-aqua shrink-0"></span>Now seeing patients on Nogales Street in West Covina</li>
+      </ul>
+    </div>
+    <div class="md:col-span-5 md:order-2 order-1">
+      <div class="aspect-[4/5] rounded-lg border-2 border-dashed border-navy/30 bg-white flex items-center justify-center text-center p-8">
+        <p class="text-navy/55 text-[15px] leading-relaxed"><strong class="block text-navy/75 mb-1">Dr. Alfonso's photo goes here</strong>A friendly portrait in the office works best. We will also add his dental school and years in practice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- services -->
+<section id="services" class="max-w-[1160px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+  <div class="text-center max-w-[40rem] mx-auto">
+    <p class="eyebrow text-aqua">Our services</p>
+    <h2 class="mt-3 font-serif text-4xl sm:text-5xl leading-tight">Dental services in West Covina</h2>
+    <p class="mt-5 text-navy/75 leading-relaxed">Most of what your family needs can be done right here in one office.</p>
+  </div>
+  <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <article class="border border-line rounded-lg p-6 flex flex-col">
+      <h3 class="font-serif text-2xl text-aqua2">Preventive care</h3>
+      <p class="mt-3 text-navy/75 text-[16px] leading-relaxed">Regular visits keep small problems small.</p>
+      <ul class="mt-4 space-y-1.5 text-[16px]"><li>Exams and digital X-rays</li><li>Teeth cleanings</li><li>Deep cleanings for gum health</li><li>Fluoride and sealants</li></ul>
+    </article>
+    <article class="border border-line rounded-lg p-6 flex flex-col">
+      <h3 class="font-serif text-2xl text-aqua2">Restorative dentistry</h3>
+      <p class="mt-3 text-navy/75 text-[16px] leading-relaxed">Repairing teeth so you can eat and smile comfortably.</p>
+      <ul class="mt-4 space-y-1.5 text-[16px]"><li>Tooth-colored fillings</li><li>Crowns and bridges</li><li>Root canal treatment</li><li>Dentures and partials</li></ul>
+    </article>
+    <article class="border border-line rounded-lg p-6 flex flex-col">
+      <h3 class="font-serif text-2xl text-aqua2">Cosmetic dentistry</h3>
+      <p class="mt-3 text-navy/75 text-[16px] leading-relaxed">Small changes that make a big difference in photos.</p>
+      <ul class="mt-4 space-y-1.5 text-[16px]"><li>Teeth whitening</li><li>Bonding</li><li>Veneers</li><li>Smile consultations</li></ul>
+    </article>
+    <article class="border border-line rounded-lg p-6 flex flex-col bg-navy text-white border-navy">
+      <h3 class="font-serif text-2xl">Emergency visits</h3>
+      <p class="mt-3 text-white/80 text-[16px] leading-relaxed">Toothache, broken tooth or lost filling? Call as early in the day as you can.</p>
+      <ul class="mt-4 space-y-1.5 text-[16px]"><li>Tooth pain and swelling</li><li>Chipped or broken teeth</li><li>Extractions</li></ul>
+      <a href="tel:+16263363404" class="btn mt-auto pt-6 text-white underline underline-offset-4">Call (626) 336-3404</a>
+    </article>
+  </div>
+</section>
+
+<!-- smile band -->
+<section class="relative bg-navy2">
+  <img src="img/smile.jpg" alt="Close-up of a healthy white smile" class="absolute inset-0 w-full h-full object-cover opacity-45" />
+  <div class="relative max-w-[1160px] mx-auto px-4 sm:px-6 py-20 sm:py-28 text-center">
+    <p class="font-serif text-white text-4xl sm:text-6xl leading-tight max-w-[18ch] mx-auto">Your smile is our priority.</p>
+    <a href="#appointment" class="btn mt-8 inline-block bg-white hover:bg-sand text-navy px-7 py-4 rounded">Schedule your visit</a>
+  </div>
+</section>
+
+<!-- new patients + insurance -->
+<section id="new-patients" class="max-w-[1160px] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+  <div class="grid md:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <figure class="md:col-span-5"><img src="img/care.jpg" alt="A patient being examined during a dental visit" class="w-full aspect-[4/3] md:aspect-[4/5] object-cover rounded-lg" /></figure>
+    <div class="md:col-span-7">
+      <p class="eyebrow text-aqua">New patients</p>
+      <h2 class="mt-3 font-serif text-4xl sm:text-5xl leading-tight">What to expect at your first visit</h2>
+      <ol class="mt-7 space-y-5">
+        <li class="flex gap-4"><span class="font-serif text-3xl text-aqua leading-none w-7 shrink-0">1</span><p><strong>A full exam.</strong> We review your health history, take any X-rays you need and look at every tooth and your gums.</p></li>
+        <li class="flex gap-4"><span class="font-serif text-3xl text-aqua leading-none w-7 shrink-0">2</span><p><strong>A clear plan.</strong> Dr. Alfonso walks you through what he sees and what, if anything, needs attention.</p></li>
+        <li class="flex gap-4"><span class="font-serif text-3xl text-aqua leading-none w-7 shrink-0">3</span><p><strong>Costs up front.</strong> We go over your insurance and your share before any treatment is scheduled.</p></li>
+      </ol>
+      <p class="mt-6 text-navy/70">Please bring a photo ID, your insurance card and a list of your current medications.</p>
+    </div>
+  </div>
+  <div class="mt-14 grid md:grid-cols-2 gap-5">
+    <div class="bg-sand rounded-lg p-7 sm:p-9">
+      <h3 class="font-serif text-3xl">Insurance</h3>
+      <p class="mt-3 text-navy/80 leading-relaxed">We work with most dental PPO plans. Call the office with your member ID and we will check your coverage before your visit.</p>
+    </div>
+    <div class="bg-sand rounded-lg p-7 sm:p-9">
+      <h3 class="font-serif text-3xl">No insurance? No problem.</h3>
+      <p class="mt-3 text-navy/80 leading-relaxed">Ask about our pricing for patients without insurance and about spreading larger treatment into payments.</p>
+    </div>
+  </div>
+</section>
+
+<!-- faq -->
+<section id="faq" class="bg-sand">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-4">
+      <p class="eyebrow text-aqua">Questions</p>
+      <h2 class="mt-3 font-serif text-4xl sm:text-5xl leading-tight">How can we help?</h2>
+      <p class="mt-5 text-navy/75">Don't see your question? Call us at <a class="font-semibold underline underline-offset-2" href="tel:+16263363404">(626) 336-3404</a>.</p>
+    </div>
+    <div class="lg:col-span-8 space-y-3">
+      <details class="bg-white rounded-lg border-l-4 border-aqua"><summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold">Are you accepting new patients?<span class="plus text-2xl leading-none text-aqua">+</span></summary><p class="px-5 pb-5 text-navy/80">Yes. New patients of all ages are welcome at our West Covina office.</p></details>
+      <details class="bg-white rounded-lg border-l-4 border-aqua"><summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold">Where is the office?<span class="plus text-2xl leading-none text-aqua">+</span></summary><p class="px-5 pb-5 text-navy/80">We are at 3634 S Nogales St, West Covina, CA 91792. If an older listing shows a City of Industry address, please use the Nogales Street address.</p></details>
+      <details class="bg-white rounded-lg border-l-4 border-aqua"><summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold">Can I be seen today for a toothache?<span class="plus text-2xl leading-none text-aqua">+</span></summary><p class="px-5 pb-5 text-navy/80">Call as early as you can. We do our best to see patients in pain the same day or the next available opening.</p></details>
+      <details class="bg-white rounded-lg border-l-4 border-aqua"><summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold">Do you take my insurance?<span class="plus text-2xl leading-none text-aqua">+</span></summary><p class="px-5 pb-5 text-navy/80">We work with most dental PPO plans. Call with your member ID and we will verify your benefits for you.</p></details>
+      <details class="bg-white rounded-lg border-l-4 border-aqua"><summary class="flex items-center justify-between gap-4 px-5 py-4 font-semibold">How often should I have a cleaning?<span class="plus text-2xl leading-none text-aqua">+</span></summary><p class="px-5 pb-5 text-navy/80">For most patients, every six months. If you have gum concerns, Dr. Alfonso may suggest a different schedule.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- appointment + contact -->
+<section id="appointment" class="max-w-[1160px] mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-12 gap-10 lg:gap-14">
+  <div class="lg:col-span-6">
+    <p class="eyebrow text-aqua">Appointments</p>
+    <h2 class="mt-3 font-serif text-4xl sm:text-5xl leading-tight">Book your dental visit in West Covina</h2>
+    <p class="mt-5 text-navy/75 leading-relaxed">Send us your details and the office will call you back to confirm a time. For anything urgent, please call instead.</p>
+    <form id="apptForm" class="mt-8 space-y-4">
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Full name</span><input name="name" required autocomplete="name" class="w-full border border-navy/30 rounded px-3 py-3 focus:outline-none focus:border-aqua focus:ring-2 focus:ring-aqua/30" /></label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Phone</span><input name="phone" required type="tel" inputmode="tel" autocomplete="tel" class="w-full border border-navy/30 rounded px-3 py-3 focus:outline-none focus:border-aqua focus:ring-2 focus:ring-aqua/30" /></label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">I am a</span><select name="type" class="w-full border border-navy/30 rounded px-3 py-3 bg-white focus:outline-none focus:border-aqua focus:ring-2 focus:ring-aqua/30"><option>New patient</option><option>Returning patient</option></select></label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Reason for visit</span><select name="reason" class="w-full border border-navy/30 rounded px-3 py-3 bg-white focus:outline-none focus:border-aqua focus:ring-2 focus:ring-aqua/30"><option>Checkup and cleaning</option><option>Tooth pain</option><option>Cosmetic consultation</option><option>Something else</option></select></label>
+      </div>
+      <label class="block"><span class="block text-sm font-semibold mb-1.5">Best day and time</span><input name="when" placeholder="Weekday mornings" class="w-full border border-navy/30 rounded px-3 py-3 focus:outline-none focus:border-aqua focus:ring-2 focus:ring-aqua/30" /></label>
+      <button class="btn w-full bg-aqua hover:bg-aqua2 text-white px-7 py-4 rounded">Request appointment</button>
+      <p id="formNote" hidden class="text-sm bg-sand border border-line rounded px-4 py-3">Preview only: on the live site this request goes straight to the front desk.</p>
+    </form>
+  </div>
+  <div id="visit" class="lg:col-span-6">
+    <div class="rounded-lg overflow-hidden border border-line">
+      <iframe title="Map to 3634 S Nogales St, West Covina" src="https://www.google.com/maps?q=3634+S+Nogales+St,+West+Covina,+CA+91792&output=embed" loading="lazy" class="w-full h-[300px] sm:h-[340px] block" style="border:0"></iframe>
+    </div>
+    <dl class="mt-6 grid sm:grid-cols-2 gap-6">
+      <div><dt class="eyebrow text-aqua">Address</dt><dd class="mt-1.5">3634 S Nogales St<br />West Covina, CA 91792<br /><a class="inline-block py-1.5 font-semibold underline underline-offset-2" href="https://www.google.com/maps/search/?api=1&query=3634+S+Nogales+St+West+Covina+CA+91792" target="_blank" rel="noopener">Get directions</a></dd></div>
+      <div><dt class="eyebrow text-aqua">Call the office</dt><dd class="mt-1.5"><a class="font-semibold text-xl hover:underline" href="tel:+16263363404">(626) 336-3404</a><br /><span class="text-navy/70">By appointment. Call for this week's hours.</span></dd></div>
     </dl>
   </div>
 </section>
 
-<section class="max-w-[1120px] mx-auto px-4 sm:px-6 py-14 sm:py-20 grid md:grid-cols-12 gap-10 items-center">
-  <figure class="md:col-span-6"><img src="img/care.jpg" loading="lazy" alt="A dental professional examining a patient" class="w-full aspect-[3/2] object-cover" /></figure>
-  <div class="md:col-span-6">
-    <h2 class="font-serif text-4xl sm:text-5xl leading-[1.05]">Your first visit</h2>
-    <p class="mt-5 text-ink/80 leading-relaxed">Bring your ID, your insurance card if you have one, and a list of any medicines you take. We'll look at everything, tell you what we see, and go over what it costs before any work starts.</p>
-    <p class="mt-4 text-ink/80 leading-relaxed">No lectures. If it has been a while since your last visit, that's fine. We just start from where you are.</p>
-  </div>
-</section>
-
-<section id="visit" class="bg-ink text-white">
-  <div class="max-w-[1120px] mx-auto px-4 sm:px-6 py-14 sm:py-20 grid md:grid-cols-2 gap-10 items-center">
+<footer class="bg-navy2 text-white/70">
+  <div class="max-w-[1160px] mx-auto px-4 sm:px-6 py-12 grid md:grid-cols-3 gap-8">
     <div>
-      <h2 class="font-serif text-5xl sm:text-6xl">Find the office</h2>
-      <p class="mt-6 text-2xl leading-snug">3634 S Nogales St<br />West Covina, CA 91792</p>
-      <p class="mt-3 text-white/75">Call for hours and to set up an appointment.</p>
-    </div>
-    <div class="flex flex-col gap-3 md:items-end">
-      <a href="tel:+16263363404" class="btn bg-white hover:bg-paper text-ink font-bold text-lg px-6 py-3.5 text-center md:w-72">(626) 336-3404</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=3634+S+Nogales+St+West+Covina+CA+91792" target="_blank" rel="noopener" class="btn border-2 border-white hover:bg-white hover:text-ink font-bold text-lg px-6 py-3 text-center md:w-72">Get directions</a>
-    </div>
-  </div>
-</section>
-
-<footer class="bg-[#0c1b1d] text-white/65">
-  <div class="max-w-[1120px] mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
-    <div>
-      <p class="font-serif text-white text-3xl">Emmanuel Alfonso, DDS</p>
-      <p class="mt-2 text-sm">West Covina, CA ·
+      <p class="font-serif text-white text-2xl">Emmanuel Alfonso, DDS</p>
+      <p class="mt-2 text-sm">Family &amp; General Dentistry<br />3634 S Nogales St, West Covina, CA 91792<br />
         <a class="inline-block py-1.5 underline underline-offset-2 hover:text-white" href="tel:+16263363404">(626) 336-3404</a></p>
     </div>
-    <div class="text-[13px] sm:text-right">
+    <nav class="text-sm grid grid-cols-2 gap-x-6 content-start">
+      <a class="py-1.5 hover:text-white" href="#about">About Dr. Alfonso</a>
+      <a class="py-1.5 hover:text-white" href="#services">Services</a>
+      <a class="py-1.5 hover:text-white" href="#new-patients">New patients</a>
+      <a class="py-1.5 hover:text-white" href="#faq">FAQ</a>
+      <a class="py-1.5 hover:text-white" href="#appointment">Book a visit</a>
+      <a class="py-1.5 hover:text-white" href="#visit">Directions</a>
+    </nav>
+    <div class="text-[13px] md:text-right">
       <p>Preview by <span class="text-white font-bold">WestCo App Studio</span></p>
       <p class="mt-1">
         <a class="inline-block py-1.5 underline underline-offset-2 hover:text-white" href="https://castanedanetworks.com" target="_blank" rel="noopener">castanedanetworks.com</a>
@@ -128,11 +282,22 @@
   </div>
 </footer>
 
-<!-- Both photos are STOCK stand-ins from Pexels (photos 7422520 and 8413334); they are
-     not Dr. Alfonso's office or staff. The address is from his new West Covina business
-     license. The phone number (626) 336-3404 is from his older City of Industry Google
-     listing and MUST be confirmed before this goes live. The services list, "same
-     day" toothache line, insurance line and first-visit text are reasonable defaults
-     for a general dentist, NOT confirmed by the doctor. -->
+<script>
+  document.getElementById('apptForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('formNote').hidden = false;
+  });
+</script>
+
+<!-- Structure modeled on local dental practice sites (utility bar, nav, "Dentist in
+     West Covina" hero, welcome, meet the doctor, service cards, new patients,
+     insurance, FAQ, appointment form, map). All four photos are STOCK stand-ins from
+     Pexels (5622235, 7422520, 3762453, 8413334); none show Dr. Alfonso, his staff or
+     his office. The doctor photo is a marked placeholder on purpose. The address is
+     from his West Covina business license. The phone (626) 336-3404 is from his older
+     City of Industry Google listing and MUST be confirmed. NOT confirmed by the
+     doctor: the bio wording, the full services list, "most dental PPO plans", the
+     no-insurance and payment lines, same-day emergency visits, all FAQ answers and
+     office hours. The appointment form does not send anywhere yet. -->
 </body>
 </html>
