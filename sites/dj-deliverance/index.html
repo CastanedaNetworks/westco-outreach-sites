@@ -11,32 +11,20 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pdxweddingdj.com/" />
 <meta property="og:image" content="https://pdxweddingdj.com/img/wedding-tent.jpg" />
+<meta property="og:image:width" content="1100" />
+<meta property="og:image:height" content="1012" />
+<meta property="og:image:alt" content="DJ Deliverance's booth at an outdoor tented wedding reception at dusk" />
+<meta property="og:site_name" content="DJ Deliverance" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#09090c" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Knewave&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['Barlow', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          block: ['Anton', 'Impact', 'sans-serif'],
-          brush: ['Knewave', 'Impact', 'cursive'],
-        },
-        colors: {
-          ink: '#09090c',
-          deck: '#13131a',
-          line: '#2a2a35',
-          gold: '#f5b90f',     /* the brush yellow of his wordmark */
-          neon: '#2f8cff',     /* blue stage light from the flyers */
-          heat: '#ff3b30',     /* red stage light from the flyers */
-          chalk: '#f4f1ea',
-        },
-      },
-    },
-  }
-</script>
+<link rel="stylesheet" href="css/site.css" />
 <style>
   html { scroll-behavior: smooth; }
   body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
@@ -49,6 +37,20 @@
   input, select, textarea { color-scheme: dark; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EntertainmentBusiness",
+  "name": "DJ Deliverance",
+  "url": "https://pdxweddingdj.com/",
+  "telephone": "+1-503-739-3309",
+  "image": "https://pdxweddingdj.com/img/wedding-tent.jpg",
+  "logo": "https://pdxweddingdj.com/apple-touch-icon.png",
+  "description": "Open format DJ booking weddings, corporate events, holiday and New Year's Eve parties, clubs and private events.",
+  "sameAs": ["https://www.instagram.com/djdeliverance/"],
+  "knowsAbout": ["Wedding DJ", "Corporate event DJ", "Holiday party DJ", "New Year's Eve DJ", "Club DJ", "Hip hop", "Open format"]
+}
+</script>
 </head>
 
 <body class="font-sans bg-ink text-chalk text-[17px] leading-relaxed">
@@ -87,7 +89,7 @@
       </div>
     </div>
     <figure class="md:col-span-5">
-      <img src="img/night.jpg" width="1100" height="1100" alt="DJ Deliverance flyer: Turn up the night. Viral vibes, live DJ sets, hip hop, open format." class="poster w-full max-w-[460px] mx-auto rounded-lg md:rotate-2" />
+      <img src="img/night.webp" fetchpriority="high" decoding="async" width="920" height="920" alt="DJ Deliverance flyer: Turn up the night. Viral vibes, live DJ sets, hip hop, open format." class="poster w-full max-w-[460px] mx-auto rounded-lg md:rotate-2" />
     </figure>
   </div>
 </section>
@@ -101,7 +103,7 @@
 
     <article id="weddings" class="grid md:grid-cols-12 gap-7 md:gap-12 items-center scroll-mt-24">
       <figure class="md:col-span-5">
-        <img src="img/wedding-tent.jpg" width="1100" height="1012" alt="DJ Deliverance's setup at an outdoor tented wedding reception at dusk, string lights over the tables and the dance floor." class="poster w-full max-w-[460px] rounded-lg" />
+        <img src="img/wedding-tent.webp" loading="lazy" decoding="async" width="920" height="846" alt="DJ Deliverance's setup at an outdoor tented wedding reception at dusk, string lights over the tables and the dance floor." class="poster w-full max-w-[460px] rounded-lg" />
         <figcaption class="mt-3 text-sm text-chalk/60">From the booth at a recent wedding reception.</figcaption>
       </figure>
       <div class="md:col-span-7">
@@ -116,7 +118,7 @@
     </article>
 
     <article id="corporate" class="grid md:grid-cols-12 gap-7 md:gap-12 items-center scroll-mt-24">
-      <img src="img/corporate.jpg" width="1100" height="1100" alt="DJ Deliverance flyer: Now booking corporate events. Company parties, product launches, conferences, networking events." class="poster md:col-span-5 md:order-2 w-full max-w-[460px] md:ml-auto rounded-lg" />
+      <img src="img/corporate.webp" loading="lazy" decoding="async" width="920" height="920" alt="DJ Deliverance flyer: Now booking corporate events. Company parties, product launches, conferences, networking events." class="poster md:col-span-5 md:order-2 w-full max-w-[460px] md:ml-auto rounded-lg" />
       <div class="md:col-span-7">
         <h3 class="font-block uppercase text-3xl sm:text-5xl leading-none">Corporate events</h3>
         <p class="mt-4 text-lg">Take your event to the next level with custom vibes for your brand. Professional, reliable, unforgettable.</p>
@@ -130,7 +132,7 @@
     </article>
 
     <article id="holiday" class="grid md:grid-cols-12 gap-7 md:gap-12 items-center scroll-mt-24">
-      <img src="img/nye.jpg" width="1100" height="1100" alt="DJ Deliverance flyer: Now booking holiday parties and New Year's Eve events." class="poster md:col-span-5 w-full max-w-[460px] rounded-lg" />
+      <img src="img/nye.webp" loading="lazy" decoding="async" width="920" height="920" alt="DJ Deliverance flyer: Now booking holiday parties and New Year's Eve events." class="poster md:col-span-5 w-full max-w-[460px] rounded-lg" />
       <div class="md:col-span-7">
         <h3 class="font-block uppercase text-3xl sm:text-5xl leading-none">Holiday parties and New Year's Eve</h3>
         <p class="mt-4 text-lg">Make midnight unforgettable. December dates go first, so reach out early if you already know your night.</p>
@@ -143,7 +145,7 @@
     </article>
 
     <article id="parties" class="grid md:grid-cols-12 gap-7 md:gap-12 items-center scroll-mt-24">
-      <img src="img/booking.jpg" width="1100" height="1100" alt="DJ Deliverance flyer: Now booking private events, clubs and parties." class="poster md:col-span-5 md:order-2 w-full max-w-[460px] md:ml-auto rounded-lg" />
+      <img src="img/booking.webp" loading="lazy" decoding="async" width="920" height="920" alt="DJ Deliverance flyer: Now booking private events, clubs and parties." class="poster md:col-span-5 md:order-2 w-full max-w-[460px] md:ml-auto rounded-lg" />
       <div class="md:col-span-7">
         <h3 class="font-block uppercase text-3xl sm:text-5xl leading-none">Clubs and parties</h3>
         <p class="mt-4 text-lg">Live DJ sets, hip hop and open format. Book the vibe, I'll bring the energy and turn up the party.</p>
